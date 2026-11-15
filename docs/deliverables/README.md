@@ -1,31 +1,31 @@
-# RK3568项目阅读与开题材料
+# 当前阅读与演示成品
 
-[项目手册](项目手册.html)包含第一次阅读路线、系统关系图和完整操作手册。用浏览器直接打开，左侧目录可跳转，顶部可打印或另存为PDF。
+本目录只保留当前成品，工程状态以[项目交付说明](../项目交付说明.md)为准。旧初版及 v2–v6 PPT 已移入[历史归档](../archive/README.md)，原始文件大小与 SHA256 见[归档清单](../archive/archive-manifest.json)。
 
-[当前可编辑PowerPoint v7](开题报告-RK3568-v7.pptx)包含12页、6张原生表格和逐页演讲备注，已通过Artifact Tool结构/版式校验并导出全部页面预览。学校指定模板和姓名、学号、学院、指导教师需填写。[HTML开题演示](开题演示.html)支持左右键、按钮、N备注和全屏，正文约8分钟。
+## 打开与使用
 
-最新正文依据[11月15日阶段总结](../experiments/2026-11-15/阶段总结.md)、[v4-r2 Phase 2终验](../experiments/2026-11-15/native-app-usability-v4-phase2-1/report.md)与[原生App30分钟中文报告](../experiments/2026-11-15/原生App30分钟验证报告.md)：v4-r2已完成正式图标、全屏、常驻、双入口复用、UI退出和196.67秒连续检测；历史30分钟回放组合为1800.051066秒、19,806检测/19,805输出、11.0030283/11.0024728FPS。两者条件不同，不能互换。GUI95.6123%为采样比例，长期连续显示、无泄漏、独立质量与现场仍未验。
+| 文件 | 内容 | 使用方式 |
+| --- | --- | --- |
+| [项目手册.html](项目手册.html) | 阅读顺序、系统关系图和完整技术手册 | 在电脑浏览器直接打开；左侧目录跳转，顶部可打印/另存 PDF |
+| [开题演示.html](开题演示.html) | 12 页、约 8 分钟陈述及演讲备注 | 左右键或按钮翻页，`N` 切换备注，可全屏 |
+| [开题报告-RK3568-v7.pptx](开题报告-RK3568-v7.pptx) | 当前可编辑 PPT，12 页、6 张原生表格和逐页备注 | 在 PowerPoint 打开，填学校模板和个人信息，使用演讲者备注 |
 
-这两份HTML在本机加载，不需要联网下载字体、脚本或图片。打开原始代码、实验或Markdown引用时，请保留项目原目录；只复制单个HTML仍可阅读正文和进行演示，但引用文件不会随之复制。
+HTML 自带字体回退、样式、脚本和嵌入图片，无需联网加载资源。在 GitHub 页面先下载 HTML，再本地打开；GitHub 文件预览不运行演示脚本。只复制单个 HTML 仍可阅读和演讲，正文中的代码/报告链接需要保留相应仓库文件。
 
-[v4-r2 Phase 2终验](../experiments/2026-11-15/native-app-usability-v4-phase2-1/report.md)补正式入口迁移、resident单实例、隐藏期间帧号继续增长、180秒短跑和完整退出。WiFi已有SSID列表与密码键盘证据，真实认证/DHCP/保存仍需现场验收。v1至v6 PowerPoint草稿保留历史，当前使用上方v7链接。
+学校正式题目、姓名、学号、学院、导师、日期和提交格式按实际要求填写。开题方向与正文见[学术材料目录](../proposal/README.md)，演讲内容来源为[逐页讲稿](../proposal/开题PPT逐页内容与演讲稿.md)。
 
-维护正文时先修改[完整手册](../项目蓝图与完整手册.md)、[阅读导航](../阅读导航.md)或[逐页讲稿](../proposal/开题PPT逐页内容与演讲稿.md)，再运行生成脚本：
+## 版本与证据
+
+本次维护刷新 HTML 手册；v7 PPT 保持原始字节及当前内容。PPT 已有结构、版式、原生表格和备注校验记录，12 页曾在 PowerPoint 中导出预览。
+
+v4-r2 的全屏预览、拔线 TTL、常驻复用、完整退出和 196.67 秒真实相机短跑按[Phase 1/2 终验](../experiments/README.md)引用；历史 v2 30 分钟回放属于另一入口与输入条件。真实 WiFi、独立供电、长期现场和独立质量仍保留限制。演示排版与文件可打开不增加现场验收结论。
+
+## 维护正文与生成 HTML
+
+先修改[阅读导航](../阅读导航.md)、[完整手册](../项目蓝图与完整手册.md)或[逐页讲稿](../proposal/开题PPT逐页内容与演讲稿.md)，再从仓库根运行现有脚本：
 
 ```powershell
 node docs/tools/build_reading_materials.mjs
-
-$env:RUNTIME_NODE_MODULES='<codex-primary-runtime>/dependencies/node/node_modules'
-$env:PRESENTATION_SKILL_DIR='<codex-primary-runtime>/presentations/<version>/skills/presentations'
-$env:RUNTIME_PYTHON='<codex-primary-runtime>/dependencies/python/python.exe'
-& '<codex-primary-runtime>/dependencies/node/bin/node.exe' `
-  docs/tools/build_proposal_pptx.mjs --revision=v8
-
-& .runtime/proposal-pptx-v1/inspect_in_powerpoint.ps1 `
-  -DeckPath docs/deliverables/开题报告-RK3568-v8.pptx `
-  -OutputDirectory .runtime/proposal-pptx-v8/powerpoint-previews-final
 ```
 
-HTML生成脚本只使用Node内置模块。PPT生成脚本必须使用已安装的Artifact Tool运行时、Presentation skill和可验证中文字体，并选择不存在的revision；它会执行包结构、版式、原生表格和逐页备注校验。PowerPoint QA脚本再以只读方式打开最终文件并导出12页。生成后重新检查页面、实验数值和备注。运行包的离线部署边界见[离线包说明](../experiments/2026-11-14/offline-bundle.md)；阅读材料与板端运行包分别维护。
-
-[当前原生v4-r2运行包](../../dist/helmet-native-app-20261115-v4-r2.zip)与[发布清单](../experiments/2026-11-15/native-app/bundle-manifest-v4-r2.json)已冻结，39,227,461B/35 entries，SHA `14b56543f7aca0b26c61b663770f8bf54729d0ba61a1ac5069f4f1143e084251`。正式根与两个图标入口已核验；systemui重启后的手指操作、独立供电、真实WiFi和长期现场仍待验。416的30分钟性能继续按原v2运行引用。
+脚本使用 Node 内置模块，生成两份 HTML；生成后检查页面、目录、链接和实验数字。PPT 另行维护，HTML 导出不会改动 v7 PPT 或板端应用包。本次资料整理记录见[资料整理记录](../资料整理记录.md)。

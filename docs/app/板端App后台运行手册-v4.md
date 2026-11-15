@@ -1,6 +1,6 @@
 # 板端App后台运行手册 v4-r2（已验收运行包）
 
-2026年11月15日。本手册对应当前[v4-r2 Phase 2终验](../experiments/2026-11-15/native-app-usability-v4-phase2-1/report.md)和已冻结的[v4-r2发布清单](../experiments/2026-11-15/native-app/bundle-manifest-v4-r2.json)。日常操作摘要见[板端App使用手册](板端App使用手册.md)，安装和入口迁移见[离线更新与图标安装 v4-r2](离线更新与图标安装-v4.md)。历史v3包和安装记录保留原身份。
+2026年11月15日。本手册对应已冻结的 v4-r2，交付状态见[项目交付说明](../项目交付说明.md)，实测见[Phase 2 终验](../experiments/2026-11-15/native-app-usability-v4-phase2-1/report.md)和[发布清单](../experiments/2026-11-15/native-app/bundle-manifest-v4-r2.json)。日常操作见[板端 App 使用手册](板端App使用手册.md)，安装和入口迁移见[v4-r2 整包指南](离线更新与图标安装-v4.md)。
 
 这是 RK3568 Linux 上的 Qt 本地应用，不是 Android APK。目标日常方式是板屏点击图标、本地模型检测，不需要浏览器、外网或永久连接电脑。它仍需要兼容 Linux、Python、OpenCV、NumPy、RKNNLite、Qt/qmlscene，以及供电、显示和实际输入条件；应用级离线与空白板卡系统安装不同。断 USB 后独立供电、触摸和实际屏幕体验仍待现场确认。
 
@@ -22,7 +22,7 @@ v4-r2正式安装根为 `/userdata/helmet-validation/20261115-native-app-v4-r2-l
 
 ## 2 手动开始与回到桌面
 
-1. 点击“安全帽检测”，等待本地模型和输入列表。选择明确的模型及输入；“回放演示”是安装的图片或录像，“未验收设备”仅表示发现节点。
+1. 点击“安全帽检测”，等待本地模型和输入列表。“回放演示”是安装的图片或录像，“实时摄像头 UNIQUESKY_CAR_CAMERA”是本次 USB 相机；新设备枚举后仍需确认真实采集能力。
 2. 选择回放/响应配置，再点击“开始检测”。回放请求节奏 10 FPS、响应请求节奏 20 FPS，不能当作相机、检测或屏幕的实测 FPS。默认列表第一项可能是原 640 模型，不代表最终模型已经选定。
 3. 核对界面实际模型、输入、运行状态和画面。`person` 表示裸头，`hat` 表示戴帽头部。App 工作点为 conf 0.35、NMS 0.45、skip 0、TTL 1 秒；相机默认请求 640×480。CLI 诊断运行的 conf 0.25 属于另一工作点。
 4. 点击“回到桌面”或关闭窗口。检测继续，隐藏期间不维持预览解码。再次点击任一图标时恢复当前实际配置和同一检测 generation；界面先清除旧预览，再等新鲜匹配结果，不把旧图呈为刚采集的帧。
@@ -60,7 +60,7 @@ v4-r2已用`/dev/video10`完成App连续画面、720×1280全屏、运行中物�
 | 版本/项目 | 已有材料或保留门槛 | 能支持的范围 |
 | --- | --- | --- |
 | v3 图标/正常入口 | [历史图标注册](../experiments/2026-11-15/native-app/icon-install.log)、[v3 普通 wrapper 短验](../experiments/2026-11-15/native-app/20261115-native-launch-checks/v3-wrapper-wifi-1/manifest.json) | 原日志图标注册属 v1；v3 普通 wrapper/launch 30 秒退出，不证明人工点击或后台运行 |
-| v3 扫描/键盘 | [v3 Qt 内容图](../experiments/2026-11-15/native-app/board-sessions/session-frbzytg2/screen.png) | 可见至少三个 SSID 和键盘；未实际连接新网络 |
+| v3 扫描/键盘 | [v3 Qt 内容图（仅本机）](../experiments/2026-11-15/native-app/board-sessions/session-frbzytg2/screen.png) | 可见至少三个 SSID 和键盘；未实际连接新网络 |
 | v3 应用级离线 | [短验](../experiments/2026-11-15/native-app/20261115-native-launch-checks/v3-wrapper-offline-1/manifest.json)、[网络记录](../experiments/2026-11-15/native-app/20261115-native-launch-checks/v3-wrapper-offline-1/network.json) | 正常 wrapper/NPU/Qt，child 仅 lo UP；非空白系统安装、独立供电或后台长跑 |
 | v2 私有路径 30 分钟 | [原生 App 长跑报告](../experiments/2026-11-15/原生App30分钟验证报告.md) | 416/单照片录像/响应配置，直接 controller/服务及私有 QML wrapper；非正常图标路径、非相机、非 v4 |
 | v4-r2发布/图标迁移 | [v4-r2发布清单](../experiments/2026-11-15/native-app/bundle-manifest-v4-r2.json)与[图标迁移收据](../experiments/2026-11-15/native-app-usability-v4-phase2-1/formal-1/icon-migration-result.json) | ZIP 39,227,461B/35 entries；正式根、四链接与两desktop已核验，cfg未改并备份；systemui未重启 |

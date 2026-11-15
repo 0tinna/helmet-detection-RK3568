@@ -1,0 +1,74 @@
+{
+  "kind": "project-document-archive",
+  "date": "2026-11-15",
+  "baseline_commit": "d5db80e0ed1bcf554b705b43b359ad1ea92e3956",
+  "encoding_and_line_endings": "Original archived bytes preserved; docs/archive/.gitattributes disables normalization.",
+  "historical_link_base": "Resolve internal relative references from original_path, not archived_path.",
+  "private_templates": "Kept locally; excluded by existing .gitignore.",
+  "files": [
+    {
+      "original_path": "毕业设计-初步文档.md",
+      "archived_path": "docs/archive/early-proposals/毕业设计-初步文档.md",
+      "bytes": 18442,
+      "sha256": "8f38b2bb4ce2d72e55d179a716e2e2a08983322ea79d5c7293f3b71077fc4c63",
+      "bytes_preserved": true
+    },
+    {
+      "original_path": "开题报告.txt",
+      "archived_path": "docs/archive/early-proposals/开题报告.txt",
+      "bytes": 2488,
+      "sha256": "5219c648594fee5ab5b2fedad96889c5aedf9bf2b277562fc7fc02437d08c136",
+      "bytes_preserved": true,
+      "encoding_hint": "GBK; original bytes and line endings preserved."
+    },
+    {
+      "original_path": "docs/app/离线更新与图标安装.md",
+      "archived_path": "docs/archive/app-v3/离线更新与图标安装.md",
+      "bytes": 12244,
+      "sha256": "dd440c02241f97c2cfbc02b84f7e209099a179059446c3273b84392cd341a212",
+      "bytes_preserved": true
+    },
+    {
+      "original_path": "docs/deliverables/开题报告-RK3568.pptx",
+      "archived_path": "docs/archive/presentations/开题报告-RK3568.pptx",
+      "bytes": 544775,
+      "sha256": "2d670560930055d38da848a7867d3203c907f4b9581a4c6b6bebd2027be55bd2",
+      "bytes_preserved": true
+    },
+    {
+      "original_path": "docs/deliverables/开题报告-RK3568-v2.pptx",
+      "archived_path": "docs/archive/presentations/开题报告-RK3568-v2.pptx",
+      "bytes": 544907,
+      "sha256": "d922aa777d3d50a802722c2835ea95daeb2ebb6c3d424f23758b2fc37894d3fe",
+      "bytes_preserved": true
+    },
+    {
+      "original_path": "docs/deliverables/开题报告-RK3568-v3.pptx",
+      "archived_path": "docs/archive/presentations/开题报告-RK3568-v3.pptx",
+      "bytes": 545055,
+      "sha256": "90ba51d8dcd9eff70321a6d21a5181503a5013fb893d24f5493e3142f17b2fe7",
+      "bytes_preserved": true
+    },
+    {
+      "original_path": "docs/deliverables/开题报告-RK3568-v4.pptx",
+      "archived_path": "docs/archive/presentations/开题报告-RK3568-v4.pptx",
+      "bytes": 545054,
+      "sha256": "29e09fd4176a4cbab105b36f19ede55ffde2e6706882f51f0ad7cca022ce6bf1",
+      "bytes_preserved": true
+    },
+    {
+      "original_path": "docs/deliverables/开题报告-RK3568-v5.pptx",
+      "archived_path": "docs/archive/presentations/开题报告-RK3568-v5.pptx",
+      "bytes": 545103,
+      "sha256": "4433637e79ca4d4f9c88bc75ab0e33db0509551c0b056046cb96b0ec9d93fa73",
+      "bytes_preserved": true
+    },
+    {
+      "original_path": "docs/deliverables/开题报告-RK3568-v6.pptx",
+      "archived_path": "docs/archive/presentations/开题报告-RK3568-v6.pptx",
+      "bytes": 545079,
+      "sha256": "d5e8839247e27ebac973b7f350c532cef12221406afdbbb0be6eff14514e4797",
+      "bytes_preserved": true
+    }
+  ]
+}

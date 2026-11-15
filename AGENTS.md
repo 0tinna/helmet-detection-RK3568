@@ -4,16 +4,18 @@
 
 This project implements RK3568 helmet detection with existing community models. The approved [graduation scope](docs/superpowers/plans/2026-11-14-graduation-scope.md) supersedes older proposal training objectives: no training, fine-tuning, pruning or distillation. Preserve original proposals and experiment records as history; do not restore training as an implied pending requirement.
 
-Use the [current handbook](docs/项目蓝图与完整手册.md), [stage summary](docs/experiments/2026-11-14/项目阶段总结.md) and raw manifests to reconcile status. Replay, software tests, real NPU inference, physical camera capture, display, long runs and codec/quantization comparisons have distinct acceptance gates. Do not infer camera or 30-minute acceptance from a short replay.
+The application code is frozen at the v4-r2 delivery. Use the [delivery statement](docs/项目交付说明.md), [current handbook](docs/项目蓝图与完整手册.md), [2026-11-15 stage record](docs/experiments/2026-11-15/阶段总结.md) and raw manifests to reconcile status. The [2026-11-14 summary](docs/experiments/2026-11-14/项目阶段总结.md) remains historical evidence. Replay, software tests, real NPU inference, physical camera capture, display, long runs and codec/quantization comparisons have distinct acceptance gates. Do not infer camera or 30-minute acceptance from a short replay. Documentation maintenance does not start new development or complete untested field gates.
 
 ## Project Structure & Module Organization
 
 - `helmet/`: `helmet_realtime.py` CLI; `pipeline_runtime.py`, `sources.py`, `alarm.py`, `telemetry.py`, `output_sinks.py`; shared `yolo_post.py`; benchmark, checked deployment and board detection dump.
+- `helmet/app/`: `launch.py`, `resident.py`, `service.py`, `wifi.py` and `qml/Main.qml` provide the native Qt application and resident lifecycle.
 - `helmet/pc/`: ONNX/RKNN conversion, `dataset_tools.py`, `eval_map.py`, `analyze_errors.py`.
 - `helmet/models/`: existing variants named `helmet_<width>x<height>.rknn`; `models/` contains the original baseline, samples and source-model provenance.
 - `tests/` and `helmet/tests/`: meaningful unittest regressions; `tools_ai/ref/test.py` is an upstream inference reference, not a test suite.
 - `datasets/raw/`, `datasets/provenance/`, `datasets/evaluation/`: immutable raw sources, acquisition/semantic/overlap evidence and canonical fixed diagnostic subsets.
 - `docs/experiments/`: raw measurements, manifests and reports; `.superpowers/sdd/` holds scoped implementation/review records.
+- `docs/README.md`: current documentation index. `docs/app/`, `docs/proposal/` and `docs/deliverables/` hold maintained usage and academic materials; `docs/archive/` preserves superseded originals and their move/hash manifest. Keep raw experiments and historical plans at their original paths.
 - `.runtime/` and `.venv/`: isolated host runtime/conversion infrastructure, not trained model deliverables.
 - `.codebuddy/tools/`: serial fallback helpers; prefer SSH.
 
@@ -46,7 +48,7 @@ The current two 200-image sources have unknown training overlap and one confirme
 
 ## Commit & Pull Request Guidelines
 
-No Git metadata is present in this checkout; historical commit conventions are unavailable. Use imperative titles when a Git-backed copy is used. Describe the concrete behavior, bottleneck, reference, validation, before/after metrics and material acceptance limits. Attach annotated images for detection changes. Final model choice requires combined quality, real source/display and stability gates, not speed alone.
+This checkout is Git-backed and saved to `0tinna/helmet-detection-RK3568`. Use imperative commit titles and keep documentation maintenance separate from runtime changes. For documentation-only work, verify code, models, dependencies, original experiment records and release packages remain byte-identical; record archive moves and fix current links. For implementation changes, describe the concrete behavior, bottleneck, reference, validation, before/after metrics and material acceptance limits. Attach annotated images for detection changes. Final model choice requires combined quality, real source/display and stability gates, not speed alone.
 
 ## Experiment & Configuration Practices
 
