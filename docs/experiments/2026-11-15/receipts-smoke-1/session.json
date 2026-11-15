@@ -1,0 +1,336 @@
+{
+  "elapsed_seconds": 12.07623008399969,
+  "counters": {
+    "captured": 232,
+    "consumed": 151,
+    "detected": 151,
+    "overwritten": 80,
+    "active_skip": 0,
+    "read_failure": 0,
+    "displayed": 0,
+    "output": 150,
+    "output_overwritten": 0,
+    "detection_failure": 0,
+    "pending_capture": 1,
+    "pending_output": 1
+  },
+  "full_session": {
+    "prep_ms": {
+      "p50": 10.569997000857256,
+      "p95": 15.077681997354375,
+      "p99": 19.38904999769875,
+      "count": 151,
+      "mean": 11.401271106243914,
+      "mean_method": "all_samples",
+      "sample_count": 151,
+      "percentile_method": "exact_linear_disk_spool"
+    },
+    "infer_ms": {
+      "p50": 41.038620001927484,
+      "p95": 45.560597001895076,
+      "p99": 55.548036496475106,
+      "count": 151,
+      "mean": 41.758964529339245,
+      "mean_method": "all_samples",
+      "sample_count": 151,
+      "percentile_method": "exact_linear_disk_spool"
+    },
+    "post_ms": {
+      "p50": 24.28774600411998,
+      "p95": 31.22376800092752,
+      "p99": 39.05479400418699,
+      "count": 151,
+      "mean": 24.426714967177265,
+      "mean_method": "all_samples",
+      "sample_count": 151,
+      "percentile_method": "exact_linear_disk_spool"
+    },
+    "capture_to_output_ms": {
+      "p50": 128.4006274981948,
+      "p95": 151.05463765321474,
+      "p99": 161.28337548121635,
+      "count": 150,
+      "mean": 125.8757388330802,
+      "mean_method": "all_samples",
+      "sample_count": 150,
+      "percentile_method": "exact_linear_disk_spool"
+    },
+    "sink_ms": {
+      "p50": 0.023917997168609872,
+      "p95": 0.035802901402348625,
+      "p99": 0.0713790008740032,
+      "count": 150,
+      "mean": 0.026196279698827613,
+      "mean_method": "all_samples",
+      "sample_count": 150,
+      "percentile_method": "exact_linear_disk_spool"
+    },
+    "capture_to_sink_complete_ms": {
+      "p50": 128.69303149636835,
+      "p95": 151.39659699998447,
+      "p99": 161.65349916023843,
+      "count": 150,
+      "mean": 126.19837764636031,
+      "mean_method": "all_samples",
+      "sample_count": 150,
+      "percentile_method": "exact_linear_disk_spool"
+    }
+  },
+  "timing_retention": {
+    "method": "disk_spool",
+    "live_sample_limit_per_timing": 2048,
+    "reservoir_seed": 0,
+    "raw_log": "/userdata/helmet-validation/20261114-continuation/receipts-smoke-1/frames.jsonl"
+  },
+  "full_session_fps": {
+    "captured": 19.211293457168114,
+    "consumed": 12.503902207036145,
+    "detected": 12.503902207036145,
+    "displayed": 0.0,
+    "output": 12.4210949076518
+  },
+  "sliding_window": {
+    "seconds": 5.0,
+    "observed_seconds": 5.0,
+    "fps": {
+      "captured": 19.0,
+      "consumed": 12.6,
+      "detected": 12.8,
+      "displayed": 0.0,
+      "output": 12.6
+    },
+    "timings": {
+      "prep_ms": {
+        "count": 64,
+        "mean": 11.357850328181485,
+        "p50": 10.52230750065064,
+        "p95": 15.64187479998509,
+        "p99": 18.708138588917787
+      },
+      "infer_ms": {
+        "count": 64,
+        "mean": 41.4811308123717,
+        "p50": 40.896719499869505,
+        "p95": 44.22544615372316,
+        "p99": 49.53780004929283
+      },
+      "post_ms": {
+        "count": 64,
+        "mean": 23.845789250117377,
+        "p50": 23.443348502041772,
+        "p95": 30.26243834974593,
+        "p99": 35.78100037986584
+      },
+      "capture_to_output_ms": {
+        "count": 63,
+        "mean": 126.5075748091303,
+        "p50": 128.83622299705166,
+        "p95": 152.8243442022358,
+        "p99": 158.5255677223904
+      },
+      "sink_ms": {
+        "count": 63,
+        "mean": 0.027273951831924183,
+        "p50": 0.02420899545541033,
+        "p95": 0.04275990067981183,
+        "p99": 0.08244495984399691
+      },
+      "capture_to_sink_complete_ms": {
+        "count": 63,
+        "mean": 126.83788474555874,
+        "p50": 129.13023099827114,
+        "p95": 153.1447775043489,
+        "p99": 158.8489946811751
+      }
+    }
+  },
+  "runtime_samples": [
+    {
+      "monotonic": 57486.189339113,
+      "cpu_percent": 98.32845204441296,
+      "rss_bytes": 118284288,
+      "temperature_c": {
+        "/sys/class/thermal/thermal_zone0/temp": 47.777,
+        "/sys/class/thermal/thermal_zone1/temp": 45.555
+      },
+      "npu_frequency_hz": {
+        "/sys/class/devfreq/fde40000.npu/cur_freq": 900000000
+      },
+      "npu_load": "NPU load:  0%"
+    },
+    {
+      "monotonic": 57487.208433043,
+      "cpu_percent": 112.64383185943562,
+      "rss_bytes": 133513216,
+      "temperature_c": {
+        "/sys/class/thermal/thermal_zone0/temp": 47.777,
+        "/sys/class/thermal/thermal_zone1/temp": 46.111
+      },
+      "npu_frequency_hz": {
+        "/sys/class/devfreq/fde40000.npu/cur_freq": 900000000
+      },
+      "npu_load": "NPU load: 17%"
+    },
+    {
+      "monotonic": 57488.22443693,
+      "cpu_percent": 122.49150558593266,
+      "rss_bytes": 134324224,
+      "temperature_c": {
+        "/sys/class/thermal/thermal_zone0/temp": 47.777,
+        "/sys/class/thermal/thermal_zone1/temp": 46.111
+      },
+      "npu_frequency_hz": {
+        "/sys/class/devfreq/fde40000.npu/cur_freq": 900000000
+      },
+      "npu_load": "NPU load: 37%"
+    },
+    {
+      "monotonic": 57489.24672203,
+      "cpu_percent": 124.63570866876293,
+      "rss_bytes": 133689344,
+      "temperature_c": {
+        "/sys/class/thermal/thermal_zone0/temp": 48.333,
+        "/sys/class/thermal/thermal_zone1/temp": 46.111
+      },
+      "npu_frequency_hz": {
+        "/sys/class/devfreq/fde40000.npu/cur_freq": 900000000
+      },
+      "npu_load": "NPU load: 37%"
+    },
+    {
+      "monotonic": 57490.259625914,
+      "cpu_percent": 121.74708622265088,
+      "rss_bytes": 133689344,
+      "temperature_c": {
+        "/sys/class/thermal/thermal_zone0/temp": 47.777,
+        "/sys/class/thermal/thermal_zone1/temp": 46.666
+      },
+      "npu_frequency_hz": {
+        "/sys/class/devfreq/fde40000.npu/cur_freq": 900000000
+      },
+      "npu_load": "NPU load: 35%"
+    },
+    {
+      "monotonic": 57491.27298702,
+      "cpu_percent": 120.13890002196813,
+      "rss_bytes": 132792320,
+      "temperature_c": {
+        "/sys/class/thermal/thermal_zone0/temp": 48.333,
+        "/sys/class/thermal/thermal_zone1/temp": 46.666
+      },
+      "npu_frequency_hz": {
+        "/sys/class/devfreq/fde40000.npu/cur_freq": 900000000
+      },
+      "npu_load": "NPU load: 39%"
+    },
+    {
+      "monotonic": 57492.29151539,
+      "cpu_percent": 121.03627785981118,
+      "rss_bytes": 134103040,
+      "temperature_c": {
+        "/sys/class/thermal/thermal_zone0/temp": 48.333,
+        "/sys/class/thermal/thermal_zone1/temp": 46.666
+      },
+      "npu_frequency_hz": {
+        "/sys/class/devfreq/fde40000.npu/cur_freq": 900000000
+      },
+      "npu_load": "NPU load: 38%"
+    },
+    {
+      "monotonic": 57493.306715128,
+      "cpu_percent": 123.24591439235483,
+      "rss_bytes": 134914048,
+      "temperature_c": {
+        "/sys/class/thermal/thermal_zone0/temp": 48.333,
+        "/sys/class/thermal/thermal_zone1/temp": 46.666
+      },
+      "npu_frequency_hz": {
+        "/sys/class/devfreq/fde40000.npu/cur_freq": 900000000
+      },
+      "npu_load": "NPU load: 36%"
+    },
+    {
+      "monotonic": 57494.317784919,
+      "cpu_percent": 125.55210879529041,
+      "rss_bytes": 134914048,
+      "temperature_c": {
+        "/sys/class/thermal/thermal_zone0/temp": 48.333,
+        "/sys/class/thermal/thermal_zone1/temp": 46.666
+      },
+      "npu_frequency_hz": {
+        "/sys/class/devfreq/fde40000.npu/cur_freq": 900000000
+      },
+      "npu_load": "NPU load: 39%"
+    },
+    {
+      "monotonic": 57495.327405337,
+      "cpu_percent": 125.2496414952703,
+      "rss_bytes": 134914048,
+      "temperature_c": {
+        "/sys/class/thermal/thermal_zone0/temp": 48.333,
+        "/sys/class/thermal/thermal_zone1/temp": 46.666
+      },
+      "npu_frequency_hz": {
+        "/sys/class/devfreq/fde40000.npu/cur_freq": 900000000
+      },
+      "npu_load": "NPU load: 36%"
+    },
+    {
+      "monotonic": 57496.328712236,
+      "cpu_percent": 122.85651763982204,
+      "rss_bytes": 134914048,
+      "temperature_c": {
+        "/sys/class/thermal/thermal_zone0/temp": 48.888,
+        "/sys/class/thermal/thermal_zone1/temp": 46.666
+      },
+      "npu_frequency_hz": {
+        "/sys/class/devfreq/fde40000.npu/cur_freq": 900000000
+      },
+      "npu_load": "NPU load: 36%"
+    },
+    {
+      "monotonic": 57497.33233553,
+      "cpu_percent": 119.64535659686338,
+      "rss_bytes": 134914048,
+      "temperature_c": {
+        "/sys/class/thermal/thermal_zone0/temp": 48.888,
+        "/sys/class/thermal/thermal_zone1/temp": 47.222
+      },
+      "npu_frequency_hz": {
+        "/sys/class/devfreq/fde40000.npu/cur_freq": 900000000
+      },
+      "npu_load": "NPU load: 38%"
+    }
+  ],
+  "runtime_sample_retention": {
+    "method": "latest_samples",
+    "limit": 1024,
+    "total_count": 12,
+    "retained_count": 12,
+    "raw_log": "/userdata/helmet-validation/20261114-continuation/receipts-smoke-1/frames.jsonl.resources.jsonl"
+  },
+  "state": "stop",
+  "reason": "session stopped",
+  "model": "/userdata/helmet-validation/20261114-continuation/models/helmet_416x416.rknn",
+  "model_sha256": "7e0eefe4bfe86627bb6b58161cacca10912e0dbe1ba2513f58d091c40b26cd48",
+  "source": "/userdata/helmet-validation/20261114-continuation/input/construction-replay.avi",
+  "class_order": [
+    "person",
+    "hat"
+  ],
+  "input_size": [
+    416,
+    416
+  ],
+  "thresholds": {
+    "conf": 0.35,
+    "nms": 0.45
+  },
+  "replay_fps": 20.0,
+  "result_ttl": 1,
+  "runtime": {
+    "python": "3.10.5 (main, Jul  5 2024, 11:06:31) [GCC 10.4.0]",
+    "opencv": "4.5.4",
+    "numpy": "1.21.2"
+  }
+}

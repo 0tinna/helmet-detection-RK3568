@@ -1,0 +1,12 @@
+test_complete_comparison_succeeds (test_comparison.ComparisonRegressions) ... ok
+test_invalid_latency_is_rejected (test_comparison.ComparisonRegressions) ... ok
+test_missing_model_is_rejected (test_comparison.ComparisonRegressions) ... ok
+test_duration_exits_without_frames (test_regressions.CLIRegressions) ... ok
+test_empty_detections_keep_all_test_images (test_regressions.CLIRegressions) ... ok
+test_missing_detection_counts_as_missed_object (test_regressions.CLIRegressions) ... ok
+test_realtime_help_starts (test_regressions.CLIRegressions) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 12.702s
+
+OK

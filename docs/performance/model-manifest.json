@@ -1,0 +1,79 @@
+{
+    "schema_version":  1,
+    "review_date":  "2026-11-13",
+    "scope":  "Local file inventory; no board verification or performance measurements",
+    "models":  [
+                   {
+                       "path":  "helmet/models/helmet_416x416.rknn",
+                       "bytes":  8110065,
+                       "sha256":  "7e0eefe4bfe86627bb6b58161cacca10912e0dbe1ba2513f58d091c40b26cd48",
+                       "input_size_verified":  false
+                   },
+                   {
+                       "path":  "helmet/models/helmet_512x288.rknn",
+                       "bytes":  8118576,
+                       "sha256":  "4b8d428aede96897590ed143200412beed882908e3b30ec63a5eae38f0deb6af",
+                       "input_size_verified":  false
+                   },
+                   {
+                       "path":  "helmet/models/helmet_512x512.rknn",
+                       "bytes":  8279345,
+                       "sha256":  "82e43f1fe1dc755ab8d421c819fdef311efdd1b64a7b1913901f6aef2b9460d3",
+                       "input_size_verified":  false
+                   },
+                   {
+                       "path":  "helmet/models/helmet_640x384.rknn",
+                       "bytes":  8261425,
+                       "sha256":  "ba951c5b824e66a660c08daa6f6779cf4119130c4c2106f365ee337e3c92f272",
+                       "input_size_verified":  false
+                   },
+                   {
+                       "path":  "helmet/models/helmet_640x640.rknn",
+                       "bytes":  8439921,
+                       "sha256":  "2c0df64c4e12440e4e84c16294df53e440c263d9570f4447b2d26b0f5916edf3",
+                       "input_size_verified":  false
+                   }
+               ],
+    "baseline_model":  {
+                           "path":  "models/helmet-640-640.rknn",
+                           "bytes":  7808448,
+                           "sha256":  "23dac43065664447272b8a032f7c35a00269e5b7d63e210ae10d8181a7a3bb32"
+                       },
+    "sources":  [
+                    {
+                        "path":  "helmet/helmet_realtime.py",
+                        "bytes":  18675,
+                        "sha256":  "eb10cb58a6db2a6fe92776443ce63bdbc336bc0ce341ede6762032b43aa6ed95"
+                    },
+                    {
+                        "path":  "helmet/yolo_post.py",
+                        "bytes":  5642,
+                        "sha256":  "b708fa95f4d71dd9b4ecb656d9626ac9fd2c78f4a7b46add3091ae5ed38e6903"
+                    },
+                    {
+                        "path":  "helmet/benchmark.py",
+                        "bytes":  5526,
+                        "sha256":  "2dc6426c077f524579942933422a619a9a1859feb1ff3a8eda843fc9b7bfc32c"
+                    },
+                    {
+                        "path":  "helmet/pc/convert.py",
+                        "bytes":  4104,
+                        "sha256":  "86d6fa0e865123995b122edec3d490ccf005467c28ca244cda0493621b718c7b"
+                    },
+                    {
+                        "path":  "helmet/pc/eval_map.py",
+                        "bytes":  6666,
+                        "sha256":  "df653f5dafde8d014882a07a2f9dd822e31e455419f94760ebd3ea50f19c5260"
+                    },
+                    {
+                        "path":  "helmet/deploy.cmd",
+                        "bytes":  1531,
+                        "sha256":  "e27a4527fa46b28c97cd15992eef5ff66986e944a27bbf1939d1ef6725313106"
+                    },
+                    {
+                        "path":  "helmet/deploy.sh",
+                        "bytes":  2570,
+                        "sha256":  "b11c6cf2acbe3f0951918a3ea00237bbc15b9dfa866eff4b7bf1237b47b71f04"
+                    }
+                ]
+}

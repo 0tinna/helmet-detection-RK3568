@@ -1,0 +1,8 @@
+{
+  "source_url": "https://www.kaggle.com/datasets/andrewmvd/hard-hat-detection",
+  "license": "CC0 declared by dataset version1 metadata; source image lineage overlaps SHWD",
+  "origin": "first200 original annotation filenames in fixed Kaggle API listing, selected before inference",
+  "independence": "unknown",
+  "interpretation": "cross-distribution diagnostic; training overlap unknown; one known shared photo",
+  "scene_evidence": "no scene IDs; fixed sample held as one unknown-scene group; no artificial scene split"
+}

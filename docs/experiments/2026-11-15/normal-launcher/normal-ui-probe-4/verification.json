@@ -1,0 +1,23 @@
+{
+  "kind": "normal-launcher-offline-verification-v1",
+  "directory": "/userdata/helmet-validation/normal-ui-probe-4",
+  "passed": false,
+  "failures": [
+    "recorded observer failure: normal_stop_failed,normal_stop_not_confirmed"
+  ],
+  "gates": {
+    "thirty_minutes_observed": false
+  },
+  "scope": "unverified normal-launcher observation",
+  "run_id": "normal-ui-probe-4",
+  "mode": "probe",
+  "unverified": [
+    "physical camera",
+    "human touch",
+    "independent 85% accuracy",
+    "continuous physical display",
+    "WiFi authentication/DHCP/save",
+    "independent direct SDK release receipt",
+    "no-leak acceptance"
+  ]
+}

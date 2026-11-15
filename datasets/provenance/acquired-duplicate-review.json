@@ -1,0 +1,14 @@
+{
+  "exact_duplicates": [],
+  "dhash_candidates": [
+    {
+      "images": [
+        "datasets/raw/shwd/JPEGImages/000764.jpg",
+        "datasets/raw/hard-hat-workers/images/hard_hat_workers1137.png"
+      ],
+      "dhash_distance": 4,
+      "label": "candidate only; manually inspect before scene grouping"
+    }
+  ],
+  "limitation": "Absence of matches in these acquired subsets does not establish training independence or full-source disjointness."
+}

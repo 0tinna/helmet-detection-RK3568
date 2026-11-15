@@ -1,0 +1,45 @@
+{
+  "kind": "actual-v2-vendor-launcher-verification",
+  "run_id": "v2-wrapper-wifi-trace-1",
+  "mode": "wifi",
+  "command": [
+    "/opt/ui/src/apps/helmet_wifi",
+    "--verify-keyboard",
+    "--verify-scan",
+    "--smoke-seconds",
+    "20"
+  ],
+  "wrapper": "/opt/ui/src/apps/helmet_wifi",
+  "wrapper_target": "/userdata/helmet-validation/20261115-native-app-v2/vendor-entry/helmet_wifi",
+  "wrapper_sha256": "c155f609cfde0d881fae281599a2352e3e03ffaf2eb08d9b28bbdc4b25a5b796",
+  "service_sha256": "9a2f7454db6fb48ebcf7f5fd301a831817374c2be2fc5c9036af60feb40df1f7",
+  "launch_py_executed": true,
+  "elapsed_including_startup_cleanup_seconds": 25.93622754199896,
+  "exit_code": 0,
+  "session": "/userdata/helmet-validation/20261115-native-app-v2/app-state/session-sffs1yo3",
+  "exit_receipt": {
+    "service_exit": 0,
+    "ui_exit": 0,
+    "cleanup_completed": true
+  },
+  "screen": {
+    "path": "/userdata/helmet-validation/20261115-native-app-v2/app-state/session-sffs1yo3/screen.png",
+    "sha256": "ae447abcac2ff19b727f4b376b914b37ee09b4e014f231b0ea8a0f8a52e14841",
+    "size": [
+      968,
+      720,
+      3
+    ]
+  },
+  "private_material_cleaned": true,
+  "host_namespace_preserved": true,
+  "network_namespace_isolated": false,
+  "governor_before": "rknpu_ondemand",
+  "governor_after": "rknpu_ondemand",
+  "wifi_connect_attempted": false,
+  "physical_camera_tested": false,
+  "human_icon_tap": false,
+  "human_touch_verified": false,
+  "screen_scope": "Qt screenRoot contents; excludes top header; not a physical screen photo",
+  "acceptance_scope": "bounded actual wrapper/launch.py/service/Qt verification; not a new30-minute performance run"
+}

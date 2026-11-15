@@ -1,0 +1,68 @@
+{
+  "session": "d9fce8dd35d54c8e9f00ef2219b8a12f",
+  "manager": {
+    "pid": 10681,
+    "starttime": 10136567,
+    "uid": 0
+  },
+  "service": {
+    "pid": 10683,
+    "starttime": 10136643,
+    "uid": 0
+  },
+  "ui": {
+    "pid": 10707,
+    "starttime": 10136858,
+    "uid": 0
+  },
+  "resident_exit": null,
+  "workspace_exit": {
+    "cleanup_completed": true,
+    "code_id": "7cad142a4c5610dca2110fe7c22342c870317e322f28817ee1ccf9199b312302",
+    "kind": "resident-terminal-v4",
+    "manager": {
+      "pid": 10681,
+      "starttime": 10136567,
+      "uid": 0
+    },
+    "normal_stop": "http_quit",
+    "phase": "completed",
+    "resource_lease_released": true,
+    "root": "/userdata/helmet-validation/20261115-native-app-v4-r2-local-2",
+    "service": {
+      "pid": 10683,
+      "starttime": 10136643,
+      "uid": 0
+    },
+    "service_exit": 0,
+    "session": "d9fce8dd35d54c8e9f00ef2219b8a12f",
+    "terminal_at": 101598.394565497,
+    "ui": {
+      "pid": 10707,
+      "starttime": 10136858,
+      "uid": 0
+    },
+    "version": "resident-v4"
+  },
+  "manager_alive": false,
+  "service_alive": false,
+  "ui_alive": false,
+  "lock_files_remaining": [
+    "client-start-0f26dae0e1044c7b8f80830bf12b7cd2.log",
+    "client-start-28d22b5c89be45ce8453ffdc053eb9e3.log",
+    "client-start-36e6635da20c4df8a3054e230832f55e.log",
+    "client-start-44d3eac2e649443586e8103e9ce60285.log",
+    "client-start-7a1ae24bc3c94d1581c3ffc34d271661.log",
+    "client-start-7bb6fa25bce749e7b08c7dba2f233261.log",
+    "client-start-7dfb7495463440d5a3188dc4a551b9c1.log",
+    "client-start-90af34d39ffd41c2b406cc921a3c938e.log",
+    "client-start-91ade476d501421ba499d2f45037359b.log",
+    "client-start-a6018d74f4504b19a25735a9845d727b.log",
+    "client-start-c776870baea24a1dafb626ade7c6db0c.log",
+    "client-start-ca716834df4f49f48a794336201b4dd9.log",
+    "manager.lock",
+    "record.json",
+    "resource.lock",
+    "startup.lock"
+  ]
+}

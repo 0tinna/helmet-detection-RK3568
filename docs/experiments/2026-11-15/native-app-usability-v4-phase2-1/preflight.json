@@ -1,0 +1,52 @@
+{
+  "app_mode": "0o700",
+  "app_processes": [],
+  "archive_bytes": 39226506,
+  "archive_sha256": "b5adcd71f2252997d0831f317e3891aa138fcc3d5987f854bb24ca748ea70654",
+  "camera_nodes": {
+    "video10": true,
+    "video11": true
+  },
+  "captured_at": "2026-11-15T04:25:46Z",
+  "cfg_sha256": "f64a8e2f751ff777b98a36a13a0ad062e0812f2bd6ebd7914a512b772f507b11",
+  "code_files": {
+    "launch.py": "4428774d243396a4c2994a13460ec5f46ec9c2c1f8542a2d182f3f74c642fc52",
+    "qml/Main.qml": "7ed2edc4c37cd5067e1785dc4f06d8c7ecc6d716c9cdfaebf1aa7e92951bb93e",
+    "resident.py": "a8490e30eff245158b789b824b6c76f8653b70debc04fdda52fb41d4e431ce3b",
+    "service.py": "d22000a1060a8c4a584661719b3825715a19b855267ab7772b376f3ad43e8c8f",
+    "wifi.py": "648b714137b18538f8f8e6a355565b07aec8fb01270c3deed5c01eba30249468"
+  },
+  "code_identity": "3134e8672cf03c410404c8c5a3c577346b8600be9cff19c92adffe597e78e42b",
+  "coordinator_files": [],
+  "coordinator_record": {},
+  "models": {
+    "helmet-640-640.rknn": "23dac43065664447272b8a032f7c35a00269e5b7d63e210ae10d8181a7a3bb32",
+    "helmet_416x416.rknn": "7e0eefe4bfe86627bb6b58161cacca10912e0dbe1ba2513f58d091c40b26cd48",
+    "helmet_512x288.rknn": "4b8d428aede96897590ed143200412beed882908e3b30ec63a5eae38f0deb6af",
+    "helmet_512x512.rknn": "82e43f1fe1dc755ab8d421c819fdef311efdd1b64a7b1913901f6aef2b9460d3",
+    "helmet_640x384.rknn": "ba951c5b824e66a660c08daa6f6779cf4119130c4c2106f365ee337e3c92f272",
+    "helmet_640x640.rknn": "2c0df64c4e12440e4e84c16294df53e440c263d9570f4447b2d26b0f5916edf3"
+  },
+  "npu_load": "NPU load:  0%",
+  "payload_files": 31,
+  "protocol_files": {
+    "alarm.py": "d3e6d68c7b17f5508f0d697e96998f556f224f9f5067169d66c35972b3a023d2",
+    "output_sinks.py": "c2f65642d38f8994200503b242ca93c8f0af105dc5ad3b13650e9ff83c7003cf",
+    "pipeline_runtime.py": "dee30d6b71c9e8d3e697657fb309fb22e8fb47fafd366d60b555466cf56152e9",
+    "sources.py": "ea89d66fdefb2bc429ca74efa0437a3c0a8aab672a856078fc15afccfe3b31c9",
+    "telemetry.py": "da4522206053712484a21f80bb26d6424649a263f606f35fa16070be51a83b9e",
+    "yolo_post.py": "fae57bbfa1d47d5ab16ef444096fab4fe8e14701c5ec10d87b1ec518282b0505"
+  },
+  "root": "/userdata/helmet-validation/20261115-native-app-v4-local",
+  "root_mode": "0o700",
+  "vendor_links": {
+    "/opt/ui/src/appicons/helmet_app.svg": "/userdata/helmet-validation/20261115-native-app-v2/src/app/icons/helmet.svg",
+    "/opt/ui/src/appicons/helmet_wifi.svg": "/userdata/helmet-validation/20261115-native-app-v2/src/app/icons/wifi.svg",
+    "/opt/ui/src/apps/helmet_app": "/userdata/helmet-validation/20261115-native-app-v2/vendor-entry/helmet_app",
+    "/opt/ui/src/apps/helmet_wifi": "/userdata/helmet-validation/20261115-native-app-v2/vendor-entry/helmet_wifi"
+  },
+  "vendor_wrappers": {
+    "helmet_app": "b7a9335e659f197114ecebe6e3031c3303d26421e3071ef9a4352f8531a2de7d",
+    "helmet_wifi": "a568436653dde0235f8ee53885928d07ec7f99e68a66ddc1bbe7ede03989dfe4"
+  }
+}

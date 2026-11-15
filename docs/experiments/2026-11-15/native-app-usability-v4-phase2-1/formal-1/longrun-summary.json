@@ -1,0 +1,37 @@
+{
+  "session": "cce9979a86c5499fb43d456353290f75",
+  "samples": 181,
+  "elapsed_seconds": 196.667612928999,
+  "frame_start": 527,
+  "frame_end": 6312,
+  "frame_decreases": 0,
+  "running_false": 0,
+  "valid_false": 0,
+  "generation_values": [
+    "74fe0e2721254d2d9c43dc87dfe467e5"
+  ],
+  "source_epoch_values": [
+    "0"
+  ],
+  "process_alive_start": {
+    "manager": true,
+    "service": true,
+    "ui": true
+  },
+  "process_changes": 0,
+  "manager": {
+    "pid": 12880,
+    "starttime": 10160956,
+    "uid": 0
+  },
+  "service": {
+    "pid": 12882,
+    "starttime": 10161039,
+    "uid": 0
+  },
+  "ui": {
+    "pid": 12906,
+    "starttime": 10161265,
+    "uid": 0
+  }
+}

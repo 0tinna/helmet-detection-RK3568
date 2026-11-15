@@ -1,0 +1,91 @@
+{
+  "detection": {
+    "state": "no-detection",
+    "reason": "fresh detections",
+    "alarm_state": "unknown",
+    "frame_id": 109,
+    "valid": true,
+    "model": "/userdata/helmet-validation/20261115-native-app-v2/models/helmet_416x416.rknn",
+    "model_sha256": "7e0eefe4bfe86627bb6b58161cacca10912e0dbe1ba2513f58d091c40b26cd48",
+    "source": "/dev/video10",
+    "monotonic": 94988.11088678,
+    "counters": {
+      "captured": 113,
+      "consumed": 59,
+      "detected": 58,
+      "overwritten": 53,
+      "active_skip": 0,
+      "read_failure": 0,
+      "displayed": 0,
+      "output": 58,
+      "output_overwritten": 0,
+      "detection_failure": 0
+    },
+    "fps": {
+      "captured": 22.6,
+      "consumed": 11.8,
+      "detected": 11.6,
+      "displayed": 0.0,
+      "output": 11.6
+    },
+    "latency": {
+      "prep_ms": {
+        "count": 58,
+        "mean": 15.278761828336302,
+        "p50": 13.913312490331009,
+        "p95": 22.176218599634005,
+        "p99": 50.23050789633997
+      },
+      "infer_ms": {
+        "count": 58,
+        "mean": 42.40596674233153,
+        "p50": 40.937541001767386,
+        "p95": 52.9758386532194,
+        "p99": 71.88486207684035
+      },
+      "post_ms": {
+        "count": 58,
+        "mean": 4.381942136989955,
+        "p50": 2.6974064894602634,
+        "p95": 11.91942539589945,
+        "p99": 14.047114963032072
+      },
+      "capture_to_output_ms": {
+        "count": 58,
+        "mean": 88.68329918989511,
+        "p50": 83.47200050775427,
+        "p95": 139.8604168512975,
+        "p99": 160.37827039253898
+      },
+      "sink_ms": {
+        "count": 58,
+        "mean": 34.546886914227045,
+        "p50": 32.784071008791216,
+        "p95": 52.57583625279948,
+        "p99": 62.99032356997486
+      },
+      "capture_to_sink_complete_ms": {
+        "count": 58,
+        "mean": 123.42997822445889,
+        "p50": 119.95187999855261,
+        "p95": 174.70935470119002,
+        "p99": 192.9183589258173
+      }
+    },
+    "source_epoch": 0,
+    "running": true,
+    "selection": {
+      "model": "helmet_416x416.rknn",
+      "source": "/dev/video10",
+      "profile": "responsive"
+    },
+    "generation": "909b84de55bd4c1597ad9225ae15dded"
+  },
+  "wifi_action": {
+    "id": 0,
+    "kind": null,
+    "busy": false,
+    "status": "idle",
+    "result": null
+  }
+}

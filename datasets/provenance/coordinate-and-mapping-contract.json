@@ -1,0 +1,21 @@
+{
+  "output_class_order": ["person", "hat"],
+  "output_geometry": "COCO zero-based [x,y,width,height] continuous image coordinates",
+  "shwd": {
+    "raw_format": "Original Pascal VOC XML from upstream VOC2028.zip",
+    "class_mapping": {"person": "person", "hat": "hat"},
+    "semantic_note": "person is a bare-head box, not a full person; upstream README explicitly calls negative objects normal heads",
+    "coordinate_policy": "Use canonical VOC 1-based inclusive convention: x=xmin-1, y=ymin-1, width=xmax-xmin+1, height=ymax-ymin+1",
+    "observed_evidence": "All 998 acquired boxes have integer coordinates, xmin/ymin >= 1. This supports canonical VOC handling; the XML format itself does not prove an annotator's exact pixel convention.",
+    "image_extension": "Original members include .jpg and .JPG; match case-insensitively on Windows and preserve original member name"
+  },
+  "hardhat": {
+    "raw_format": "Original Kaggle Hard Hat Workers XML/PNG version1",
+    "class_mapping": {"head": "person", "helmet": "hat", "person": null},
+    "semantic_note": "head is a bare-head box; original person is a full-body box and must be ignored, never mapped to bare head",
+    "coordinate_policy": "Treat exported coordinates as 0-based continuous edges: x=xmin, y=ymin, width=xmax-xmin, height=ymax-ymin",
+    "observed_evidence": "143 of991 acquired boxes have xmin or ymin=0, so canonical VOC subtract1 is incompatible. Original source export does not explicitly document inclusive versus exclusive max edge; choose this common zero-based edge convention and keep it fixed in every model comparison.",
+    "annotation_quality_limit": "No effort is made to infer whether every full-body person also has a labeled head. Preserve original boxes and disclose the source export geometry assumption."
+  },
+  "fair_comparison": "Use one fixed source-specific transformation for every model. Do not tune geometry or thresholds from predictions. Retain original XML and image bytes for audit."
+}

@@ -1,0 +1,62 @@
+[
+ {
+  "model": "helmet-640-640.rknn",
+  "size": "640x640",
+  "infer_ms": 121.92,
+  "post_ms": 12.61,
+  "e2e_ms": 137.83,
+  "fps": 7.3,
+  "temp": 49.4,
+  "loops": 50
+ },
+ {
+  "model": "helmet_416x416.rknn",
+  "size": "416x416",
+  "infer_ms": 41.92,
+  "post_ms": 11.79,
+  "e2e_ms": 62.82,
+  "fps": 15.9,
+  "temp": 50.0,
+  "loops": 50
+ },
+ {
+  "model": "helmet_512x288.rknn",
+  "size": "512x288",
+  "infer_ms": 53.86,
+  "post_ms": 11.87,
+  "e2e_ms": 73.15,
+  "fps": 13.7,
+  "temp": 49.4,
+  "loops": 50
+ },
+ {
+  "model": "helmet_512x512.rknn",
+  "size": "512x512",
+  "infer_ms": 67.86,
+  "post_ms": 12.35,
+  "e2e_ms": 100.82,
+  "fps": 9.9,
+  "temp": 50.0,
+  "loops": 50
+ },
+ {
+  "model": "helmet_640x384.rknn",
+  "size": "640x384",
+  "infer_ms": 84.35,
+  "post_ms": 12.39,
+  "e2e_ms": 98.04,
+  "fps": 10.2,
+  "temp": 50.6,
+  "loops": 50
+ },
+ {
+  "model": "helmet_640x640.rknn",
+  "size": "640x640",
+  "infer_ms": 81.78,
+  "post_ms": 12.85,
+  "e2e_ms": 111.5,
+  "fps": 9.0,
+  "temp": 51.2,
+  "loops": 50
+ }
+]

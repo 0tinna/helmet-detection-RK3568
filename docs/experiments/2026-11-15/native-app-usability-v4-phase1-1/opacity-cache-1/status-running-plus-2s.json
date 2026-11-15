@@ -1,0 +1,91 @@
+{
+  "detection": {
+    "state": "healthy",
+    "reason": "fresh detections",
+    "alarm_state": "active",
+    "frame_id": 277,
+    "valid": true,
+    "model": "/userdata/helmet-validation/20261115-native-app-v2/models/helmet_416x416.rknn",
+    "model_sha256": "7e0eefe4bfe86627bb6b58161cacca10912e0dbe1ba2513f58d091c40b26cd48",
+    "source": "/dev/video10",
+    "monotonic": 95642.186003154,
+    "counters": {
+      "captured": 280,
+      "consumed": 133,
+      "detected": 132,
+      "overwritten": 146,
+      "active_skip": 0,
+      "read_failure": 0,
+      "displayed": 0,
+      "output": 132,
+      "output_overwritten": 0,
+      "detection_failure": 0
+    },
+    "fps": {
+      "captured": 29.8,
+      "consumed": 14.2,
+      "detected": 14.2,
+      "displayed": 0.0,
+      "output": 14.4
+    },
+    "latency": {
+      "prep_ms": {
+        "count": 71,
+        "mean": 13.945779732418654,
+        "p50": 13.921332996687852,
+        "p95": 19.195390508684795,
+        "p99": 20.25037740095285
+      },
+      "infer_ms": {
+        "count": 71,
+        "mean": 42.469369041574396,
+        "p50": 41.260275000240654,
+        "p95": 57.011865501408465,
+        "p99": 61.047794597106964
+      },
+      "post_ms": {
+        "count": 71,
+        "mean": 11.732422113197225,
+        "p50": 7.597828996949829,
+        "p95": 26.755157006846275,
+        "p99": 39.446818607393645
+      },
+      "capture_to_output_ms": {
+        "count": 72,
+        "mean": 98.74105627669552,
+        "p50": 94.05058999254834,
+        "p95": 140.86014770073234,
+        "p99": 155.58386554446778
+      },
+      "sink_ms": {
+        "count": 72,
+        "mean": 39.80474273602239,
+        "p50": 35.70854300050996,
+        "p95": 67.81125995184993,
+        "p99": 73.72519643424312
+      },
+      "capture_to_sink_complete_ms": {
+        "count": 72,
+        "mean": 138.7473258465535,
+        "p50": 133.66932150529465,
+        "p95": 179.9566217996471,
+        "p99": 193.5231115212084
+      }
+    },
+    "source_epoch": 0,
+    "running": true,
+    "selection": {
+      "model": "helmet_416x416.rknn",
+      "source": "/dev/video10",
+      "profile": "responsive"
+    },
+    "generation": "f351b9b0b3d846f9b8c6ac886b767787"
+  },
+  "wifi_action": {
+    "id": 0,
+    "kind": null,
+    "busy": false,
+    "status": "idle",
+    "result": null
+  }
+}

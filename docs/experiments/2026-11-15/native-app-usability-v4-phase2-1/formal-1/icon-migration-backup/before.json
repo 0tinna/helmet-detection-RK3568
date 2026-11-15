@@ -1,0 +1,42 @@
+{
+  "kind": "native-app-v4-r2-icon-before",
+  "config": {
+    "path": "/opt/ui/src/ATK-DLRK3568/apk3.cfg",
+    "sha256": "f64a8e2f751ff777b98a36a13a0ad062e0812f2bd6ebd7914a512b772f507b11",
+    "bytes": 269
+  },
+  "links": {
+    "/opt/ui/src/apps/helmet_app": {
+      "target": "/userdata/helmet-validation/20261115-native-app-v2/vendor-entry/helmet_app",
+      "device": 45830,
+      "inode": 14969
+    },
+    "/opt/ui/src/apps/helmet_wifi": {
+      "target": "/userdata/helmet-validation/20261115-native-app-v2/vendor-entry/helmet_wifi",
+      "device": 45830,
+      "inode": 14965
+    },
+    "/opt/ui/src/appicons/helmet_app.svg": {
+      "target": "/userdata/helmet-validation/20261115-native-app-v2/src/app/icons/helmet.svg",
+      "device": 45830,
+      "inode": 14967
+    },
+    "/opt/ui/src/appicons/helmet_wifi.svg": {
+      "target": "/userdata/helmet-validation/20261115-native-app-v2/src/app/icons/wifi.svg",
+      "device": 45830,
+      "inode": 14966
+    }
+  },
+  "desktops": {
+    "/root/.local/share/applications/helmet-detection.desktop": {
+      "bytes": 351,
+      "sha256": "19a6129bd875629cb98ebfbe74ecf000546c515e8226d97b334f42f92a231477",
+      "mode": 420
+    },
+    "/root/.local/share/applications/helmet-wifi.desktop": {
+      "bytes": 341,
+      "sha256": "85cc3fb210d91de4bdd1659d20fd1ae54355bebd5510598993a4a073daed3e34",
+      "mode": 420
+    }
+  }
+}

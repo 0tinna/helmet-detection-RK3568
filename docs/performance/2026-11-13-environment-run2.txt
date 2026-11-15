@@ -1,0 +1,15 @@
+Linux ATK-DLRK3568 5.10.160 #1 SMP Fri Jul 5 10:49:28 CST 2024 aarch64 GNU/Linux
+Python 3.10.5
+original_npu_governor=rknpu_ondemand
+npu_frequency_before=900000000
+temperature_before=46111
+23dac43065664447272b8a032f7c35a00269e5b7d63e210ae10d8181a7a3bb32  /userdata/helmet-validation/20261113/models/helmet-640-640.rknn
+7e0eefe4bfe86627bb6b58161cacca10912e0dbe1ba2513f58d091c40b26cd48  /userdata/helmet-validation/20261113/models/helmet_416x416.rknn
+4b8d428aede96897590ed143200412beed882908e3b30ec63a5eae38f0deb6af  /userdata/helmet-validation/20261113/models/helmet_512x288.rknn
+82e43f1fe1dc755ab8d421c819fdef311efdd1b64a7b1913901f6aef2b9460d3  /userdata/helmet-validation/20261113/models/helmet_512x512.rknn
+ba951c5b824e66a660c08daa6f6779cf4119130c4c2106f365ee337e3c92f272  /userdata/helmet-validation/20261113/models/helmet_640x384.rknn
+2c0df64c4e12440e4e84c16294df53e440c263d9570f4447b2d26b0f5916edf3  /userdata/helmet-validation/20261113/models/helmet_640x640.rknn
+benchmark_npu_governor=performance
+npu_frequency_after=900000000
+temperature_after=52500
+restored_npu_governor=rknpu_ondemand

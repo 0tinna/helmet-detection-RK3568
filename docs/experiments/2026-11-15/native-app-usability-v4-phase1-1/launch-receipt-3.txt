@@ -1,0 +1,3 @@
+launcher_pid=7846
+service_session=session-utwm8swv
+ready=/userdata/helmet-validation/20261115-native-app-v2/app-state/session-utwm8swv/ready.json

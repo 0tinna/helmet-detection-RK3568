@@ -1,0 +1,553 @@
+I rknn-toolkit2 version: 2.3.2
+[1;33mW[0m [1;33mload_onnx: If you don't need to crop the model, don't set 'inputs'/'input_size_list'/'outputs'![0m
+I Loading :   0%|                                                           | 0/130 [00:00<?, ?it/s]I Loading :  79%|█████████████████████████████████████▏         | 103/130 [00:00<00:00, 1020.70it/s]I Loading : 100%|████████████████████████████████████████████████| 130/130 [00:00<00:00, 787.71it/s]
+D base_optimize ...
+D base_optimize done.
+D 
+D fold_constant ...
+D fold_constant done.
+D Fixed the shape information of some tensor!
+D 
+D correct_ops ...
+D correct_ops done.
+D 
+D fuse_ops ...
+D fuse_ops results:
+D     replace_exswish: remove node = ['Sigmoid_6', 'Mul_7'], add node = ['Sigmoid_6_2swish']
+D     replace_exswish: remove node = ['Sigmoid_9', 'Mul_10'], add node = ['Sigmoid_9_2swish']
+D     replace_exswish: remove node = ['Sigmoid_12', 'Mul_13'], add node = ['Sigmoid_12_2swish']
+D     replace_exswish: remove node = ['Sigmoid_15', 'Mul_16'], add node = ['Sigmoid_15_2swish']
+D     replace_exswish: remove node = ['Sigmoid_18', 'Mul_19'], add node = ['Sigmoid_18_2swish']
+D     replace_exswish: remove node = ['Sigmoid_22', 'Mul_23'], add node = ['Sigmoid_22_2swish']
+D     replace_exswish: remove node = ['Sigmoid_26', 'Mul_27'], add node = ['Sigmoid_26_2swish']
+D     replace_exswish: remove node = ['Sigmoid_29', 'Mul_30'], add node = ['Sigmoid_29_2swish']
+D     replace_exswish: remove node = ['Sigmoid_32', 'Mul_33'], add node = ['Sigmoid_32_2swish']
+D     replace_exswish: remove node = ['Sigmoid_35', 'Mul_36'], add node = ['Sigmoid_35_2swish']
+D     replace_exswish: remove node = ['Sigmoid_38', 'Mul_39'], add node = ['Sigmoid_38_2swish']
+D     replace_exswish: remove node = ['Sigmoid_42', 'Mul_43'], add node = ['Sigmoid_42_2swish']
+D     replace_exswish: remove node = ['Sigmoid_45', 'Mul_46'], add node = ['Sigmoid_45_2swish']
+D     replace_exswish: remove node = ['Sigmoid_49', 'Mul_50'], add node = ['Sigmoid_49_2swish']
+D     replace_exswish: remove node = ['Sigmoid_52', 'Mul_53'], add node = ['Sigmoid_52_2swish']
+D     replace_exswish: remove node = ['Sigmoid_56', 'Mul_57'], add node = ['Sigmoid_56_2swish']
+D     replace_exswish: remove node = ['Sigmoid_60', 'Mul_61'], add node = ['Sigmoid_60_2swish']
+D     replace_exswish: remove node = ['Sigmoid_63', 'Mul_64'], add node = ['Sigmoid_63_2swish']
+D     replace_exswish: remove node = ['Sigmoid_66', 'Mul_67'], add node = ['Sigmoid_66_2swish']
+D     replace_exswish: remove node = ['Sigmoid_69', 'Mul_70'], add node = ['Sigmoid_69_2swish']
+D     replace_exswish: remove node = ['Sigmoid_72', 'Mul_73'], add node = ['Sigmoid_72_2swish']
+D     replace_exswish: remove node = ['Sigmoid_76', 'Mul_77'], add node = ['Sigmoid_76_2swish']
+D     replace_exswish: remove node = ['Sigmoid_79', 'Mul_80'], add node = ['Sigmoid_79_2swish']
+D     replace_exswish: remove node = ['Sigmoid_83', 'Mul_84'], add node = ['Sigmoid_83_2swish']
+D     replace_exswish: remove node = ['Sigmoid_86', 'Mul_87'], add node = ['Sigmoid_86_2swish']
+D     replace_exswish: remove node = ['Sigmoid_90', 'Mul_91'], add node = ['Sigmoid_90_2swish']
+D     replace_exswish: remove node = ['Sigmoid_94', 'Mul_95'], add node = ['Sigmoid_94_2swish']
+D     replace_exswish: remove node = ['Sigmoid_97', 'Mul_98'], add node = ['Sigmoid_97_2swish']
+D     replace_exswish: remove node = ['Sigmoid_100', 'Mul_101'], add node = ['Sigmoid_100_2swish']
+D     replace_exswish: remove node = ['Sigmoid_107', 'Mul_108'], add node = ['Sigmoid_107_2swish']
+D     replace_exswish: remove node = ['Sigmoid_110', 'Mul_111'], add node = ['Sigmoid_110_2swish']
+D     replace_exswish: remove node = ['Sigmoid_113', 'Mul_114'], add node = ['Sigmoid_113_2swish']
+D     replace_exswish: remove node = ['Sigmoid_116', 'Mul_117'], add node = ['Sigmoid_116_2swish']
+D     replace_exswish: remove node = ['Sigmoid_119', 'Mul_120'], add node = ['Sigmoid_119_2swish']
+D     replace_exswish: remove node = ['Sigmoid_123', 'Mul_124'], add node = ['Sigmoid_123_2swish']
+D     replace_exswish: remove node = ['Sigmoid_126', 'Mul_127'], add node = ['Sigmoid_126_2swish']
+D     replace_exswish: remove node = ['Sigmoid_131', 'Mul_132'], add node = ['Sigmoid_131_2swish']
+D     replace_exswish: remove node = ['Sigmoid_134', 'Mul_135'], add node = ['Sigmoid_134_2swish']
+D     replace_exswish: remove node = ['Sigmoid_137', 'Mul_138'], add node = ['Sigmoid_137_2swish']
+D     replace_exswish: remove node = ['Sigmoid_140', 'Mul_141'], add node = ['Sigmoid_140_2swish']
+D     replace_exswish: remove node = ['Sigmoid_144', 'Mul_145'], add node = ['Sigmoid_144_2swish']
+D     replace_exswish: remove node = ['Sigmoid_147', 'Mul_148'], add node = ['Sigmoid_147_2swish']
+D     replace_exswish: remove node = ['Sigmoid_152', 'Mul_153'], add node = ['Sigmoid_152_2swish']
+D     replace_exswish: remove node = ['Sigmoid_155', 'Mul_156'], add node = ['Sigmoid_155_2swish']
+D     replace_exswish: remove node = ['Sigmoid_158', 'Mul_159'], add node = ['Sigmoid_158_2swish']
+D     replace_exswish: remove node = ['Sigmoid_161', 'Mul_162'], add node = ['Sigmoid_161_2swish']
+D     replace_exswish: remove node = ['Sigmoid_165', 'Mul_166'], add node = ['Sigmoid_165_2swish']
+D     replace_exswish: remove node = ['Sigmoid_168', 'Mul_169'], add node = ['Sigmoid_168_2swish']
+D     replace_exswish: remove node = ['Sigmoid_172', 'Mul_173'], add node = ['Sigmoid_172_2swish']
+D     replace_exswish: remove node = ['Sigmoid_175', 'Mul_176'], add node = ['Sigmoid_175_2swish']
+D     replace_exswish: remove node = ['Sigmoid_178', 'Mul_179'], add node = ['Sigmoid_178_2swish']
+D     replace_exswish: remove node = ['Sigmoid_181', 'Mul_182'], add node = ['Sigmoid_181_2swish']
+D     replace_exswish: remove node = ['Sigmoid_185', 'Mul_186'], add node = ['Sigmoid_185_2swish']
+D     replace_exswish: remove node = ['Sigmoid_188', 'Mul_189'], add node = ['Sigmoid_188_2swish']
+D     replace_exswish: remove node = ['Sigmoid_192', 'Mul_193'], add node = ['Sigmoid_192_2swish']
+D     replace_exswish: remove node = ['Sigmoid_195', 'Mul_196'], add node = ['Sigmoid_195_2swish']
+D     replace_exswish: remove node = ['Sigmoid_198', 'Mul_199'], add node = ['Sigmoid_198_2swish']
+D     replace_exswish: remove node = ['Sigmoid_201', 'Mul_202'], add node = ['Sigmoid_201_2swish']
+D     replace_exswish: remove node = ['Sigmoid_205', 'Mul_206'], add node = ['Sigmoid_205_2swish']
+D     tiling_maxpool: remove node = ['MaxPool_103'], add node = ['240_0_1', '240_0', '240_1', '240']
+D     tiling_maxpool: remove node = ['MaxPool_104'], add node = ['241_0_1', '241_0', '241_1', '241']
+D     fold_constant ...
+D     fold_constant done.
+D fuse_ops done.
+D 
+D sparse_weight ...
+D sparse_weight done.
+D 
+I rknn building ...
+I RKNN: [07:22:57.237] compress = 0, conv_eltwise_activation_fuse = 1, global_fuse = 1, multi-core-model-mode = 7, output_optimize = 1, layout_match = 1, enable_argb_group = 0, op_group_sram_opt = 0, enable_flash_attention = 0, op_group_nbuf_opt = 0, safe_fuse = 0
+I RKNN: librknnc version: 2.3.2 (e045de294f@2025-04-07T19:48:25)
+D RKNN: [07:22:57.918] RKNN is invoked
+W RKNN: [07:22:59.467] Model initializer tensor data is empty, name: Resize_128_roi
+W RKNN: [07:22:59.467] Model initializer tensor data is empty, name: Resize_149_roi
+D RKNN: [07:22:59.818] >>>>>> start: rknn::RKNNExtractCustomOpAttrs
+D RKNN: [07:22:59.835] <<<<<<<< end: rknn::RKNNExtractCustomOpAttrs
+D RKNN: [07:22:59.836] >>>>>> start: rknn::RKNNSetOpTargetPass
+D RKNN: [07:22:59.837] <<<<<<<< end: rknn::RKNNSetOpTargetPass
+D RKNN: [07:22:59.837] >>>>>> start: rknn::RKNNBindNorm
+D RKNN: [07:22:59.847] <<<<<<<< end: rknn::RKNNBindNorm
+D RKNN: [07:22:59.848] >>>>>> start: rknn::RKNNEliminateQATDataConvert
+D RKNN: [07:22:59.857] <<<<<<<< end: rknn::RKNNEliminateQATDataConvert
+D RKNN: [07:22:59.858] >>>>>> start: rknn::RKNNConvStrideFixPass
+D RKNN: [07:22:59.860] <<<<<<<< end: rknn::RKNNConvStrideFixPass
+D RKNN: [07:22:59.860] >>>>>> start: rknn::RKNNTileGroupConv
+D RKNN: [07:22:59.862] <<<<<<<< end: rknn::RKNNTileGroupConv
+D RKNN: [07:22:59.863] >>>>>> start: rknn::RKNNTileFcBatchFuse
+D RKNN: [07:22:59.864] <<<<<<<< end: rknn::RKNNTileFcBatchFuse
+D RKNN: [07:22:59.865] >>>>>> start: rknn::RKNNAddConvBias
+D RKNN: [07:22:59.871] <<<<<<<< end: rknn::RKNNAddConvBias
+D RKNN: [07:22:59.871] >>>>>> start: rknn::RKNNTileChannel
+D RKNN: [07:22:59.878] <<<<<<<< end: rknn::RKNNTileChannel
+D RKNN: [07:22:59.879] >>>>>> start: rknn::RKNNDuplicateWeightPass
+D RKNN: [07:22:59.880] <<<<<<<< end: rknn::RKNNDuplicateWeightPass
+D RKNN: [07:22:59.881] >>>>>> start: rknn::RKNNInitRNNConst
+D RKNN: [07:22:59.882] <<<<<<<< end: rknn::RKNNInitRNNConst
+D RKNN: [07:22:59.883] >>>>>> start: rknn::RKNNPerChannelPrep
+D RKNN: [07:22:59.885] <<<<<<<< end: rknn::RKNNPerChannelPrep
+D RKNN: [07:22:59.887] >>>>>> start: rknn::RKNNBnQuant
+D RKNN: [07:22:59.888] <<<<<<<< end: rknn::RKNNBnQuant
+D RKNN: [07:22:59.889] >>>>>> start: rknn::RKNNFuseOptimizerPass
+D RKNN: [07:23:00.195] <<<<<<<< end: rknn::RKNNFuseOptimizerPass
+D RKNN: [07:23:00.197] >>>>>> start: rknn::RKNNTurnAutoPad
+D RKNN: [07:23:00.199] <<<<<<<< end: rknn::RKNNTurnAutoPad
+D RKNN: [07:23:00.199] >>>>>> start: rknn::RKNNInitCastConst
+D RKNN: [07:23:00.201] <<<<<<<< end: rknn::RKNNInitCastConst
+D RKNN: [07:23:00.201] >>>>>> start: rknn::RKNNMultiSurfacePass
+D RKNN: [07:23:00.202] <<<<<<<< end: rknn::RKNNMultiSurfacePass
+D RKNN: [07:23:00.203] >>>>>> start: rknn::RKNNReplaceConstantTensorPass
+D RKNN: [07:23:00.208] <<<<<<<< end: rknn::RKNNReplaceConstantTensorPass
+D RKNN: [07:23:00.209] >>>>>> start: rknn::RKNNSubgraphManager
+D RKNN: [07:23:00.211] <<<<<<<< end: rknn::RKNNSubgraphManager
+D RKNN: [07:23:00.211] >>>>>> start: OpEmit
+D RKNN: [07:23:00.264] <<<<<<<< end: OpEmit
+D RKNN: [07:23:00.265] >>>>>> start: rknn::RKNNAddFirstConv
+D RKNN: [07:23:00.274] <<<<<<<< end: rknn::RKNNAddFirstConv
+D RKNN: [07:23:00.275] >>>>>> start: rknn::RKNNLayoutMatchPass
+D RKNN: [07:23:00.292] <<<<<<<< end: rknn::RKNNLayoutMatchPass
+D RKNN: [07:23:00.293] >>>>>> start: rknn::RKNNAddSecondaryNode
+D RKNN: [07:23:00.300] <<<<<<<< end: rknn::RKNNAddSecondaryNode
+D RKNN: [07:23:00.300] >>>>>> start: rknn::RKNNAllocateConvCachePass
+D RKNN: [07:23:00.302] <<<<<<<< end: rknn::RKNNAllocateConvCachePass
+D RKNN: [07:23:00.302] >>>>>> start: OpEmit
+D RKNN: [07:23:01.128] <<<<<<<< end: OpEmit
+D RKNN: [07:23:01.128] >>>>>> start: rknn::RKNNSubGraphMemoryPlanPass
+D RKNN: [07:23:01.128] <<<<<<<< end: rknn::RKNNSubGraphMemoryPlanPass
+D RKNN: [07:23:01.129] >>>>>> start: rknn::RKNNProfileAnalysisPass
+D RKNN: [07:23:01.130] <<<<<<<< end: rknn::RKNNProfileAnalysisPass
+D RKNN: [07:23:01.158] >>>>>> start: rknn::RKNNOperatorIdGenPass
+D RKNN: [07:23:01.159] <<<<<<<< end: rknn::RKNNOperatorIdGenPass
+D RKNN: [07:23:01.160] >>>>>> start: rknn::RKNNWeightTransposePass
+W RKNN: [07:23:01.732] Warning: Tensor 395 need parameter qtype, type is set to float16 by default!
+W RKNN: [07:23:01.733] Warning: Tensor Resize_128_roi need parameter qtype, type is set to float16 by default!
+W RKNN: [07:23:01.734] Warning: Tensor 396 need parameter qtype, type is set to float16 by default!
+W RKNN: [07:23:01.734] Warning: Tensor Resize_149_roi need parameter qtype, type is set to float16 by default!
+D RKNN: [07:23:01.735] <<<<<<<< end: rknn::RKNNWeightTransposePass
+D RKNN: [07:23:01.735] >>>>>> start: rknn::RKNNCPUWeightTransposePass
+D RKNN: [07:23:01.736] <<<<<<<< end: rknn::RKNNCPUWeightTransposePass
+D RKNN: [07:23:01.736] >>>>>> start: rknn::RKNNModelBuildPass
+D RKNN: [07:23:02.656] <<<<<<<< end: rknn::RKNNModelBuildPass
+D RKNN: [07:23:02.658] >>>>>> start: rknn::RKNNModelRegCmdbuildPass
+D RKNN: [07:23:02.822] --------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+D RKNN: [07:23:02.822]                                                         Network Layer Information Table                                                      
+D RKNN: [07:23:02.822] --------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+D RKNN: [07:23:02.822] ID   OpType             DataType Target InputShape                               OutputShape            Cycles(DDR/NPU/Total)    RW(KB)       FullName        
+D RKNN: [07:23:02.822] --------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+D RKNN: [07:23:02.822] 0    InputOperator      FLOAT16  CPU    \                                        (1,3,416,416)          0/0/0                    0            InputOperator:images
+D RKNN: [07:23:02.822] 1    Conv               FLOAT16  NPU    (1,3,416,416),(3,3,1,1)                  (1,3,416,416)          368706/346112/368706     1014                         
+D RKNN: [07:23:02.822] 2    Conv               FLOAT16  NPU    (1,3,416,416),(1,3,2,2)                  (1,3,208,208)          263363/173056/263363     1352         Conv:Conv_0     
+D RKNN: [07:23:02.822] 3    Conv               FLOAT16  NPU    (1,3,416,416),(1,3,2,2)                  (1,3,208,208)          263363/173056/263363     1352         Conv:Conv_1     
+D RKNN: [07:23:02.822] 4    Conv               FLOAT16  NPU    (1,3,416,416),(1,3,2,2)                  (1,3,208,208)          263363/173056/263363     1352         Conv:Conv_2     
+D RKNN: [07:23:02.822] 5    Conv               FLOAT16  NPU    (1,3,416,416),(1,3,2,2)                  (1,3,208,208)          263363/173056/263363     1352         Conv:Conv_3     
+D RKNN: [07:23:02.822] 6    Concat             FLOAT16  NPU    (1,3,208,208),(1,3,208,208),...          (1,12,208,208)         0/0/0                    1352         Concat:Concat_4 
+D RKNN: [07:23:02.822] 7    ConvExSwish        FLOAT16  NPU    (1,12,208,208),(32,12,3,3),(32)          (1,32,208,208)         580812/1557504/1557504   1023         Conv:Conv_5     
+D RKNN: [07:23:02.822] 8    ConvExSwish        FLOAT16  NPU    (1,32,208,208),(64,32,3,3),(64)          (1,64,104,104)         637711/1557504/1557504   2740         Conv:Conv_8     
+D RKNN: [07:23:02.822] 9    ConvExSwish        FLOAT16  NPU    (1,64,104,104),(32,64,1,1),(32)          (1,32,104,104)         316674/173056/316674     1356         Conv:Conv_11    
+D RKNN: [07:23:02.822] 10   ConvExSwish        FLOAT16  NPU    (1,64,104,104),(32,64,1,1),(32)          (1,32,104,104)         316674/173056/316674     1356         Conv:Conv_21    
+D RKNN: [07:23:02.822] 11   ConvExSwish        FLOAT16  NPU    (1,32,104,104),(32,32,1,1),(32)          (1,32,104,104)         211019/86528/211019      678          Conv:Conv_14    
+D RKNN: [07:23:02.822] 12   ConvExSwish        FLOAT16  NPU    (1,32,104,104),(32,32,3,3),(32)          (1,32,104,104)         213512/778752/778752     694          Conv:Conv_17    
+D RKNN: [07:23:02.822] 13   Add                FLOAT16  NPU    (1,32,104,104),(1,32,104,104)            (1,32,104,104)         0/0/0                    1352         Add:Add_20      
+D RKNN: [07:23:02.822] 14   Concat             FLOAT16  NPU    (1,32,104,104),(1,32,104,104)            (1,64,104,104)         0/0/0                    1352         Concat:Concat_24
+D RKNN: [07:23:02.822] 15   ConvExSwish        FLOAT16  NPU    (1,64,104,104),(64,64,1,1),(64)          (1,64,104,104)         422660/346112/422660     1360         Conv:Conv_25    
+D RKNN: [07:23:02.822] 16   ConvExSwish        FLOAT16  NPU    (1,64,104,104),(128,64,3,3),(128)        (1,128,52,52)          338549/1557504/1557504   1496         Conv:Conv_28    
+D RKNN: [07:23:02.822] 17   ConvExSwish        FLOAT16  NPU    (1,128,52,52),(64,128,1,1),(64)          (1,64,52,52)           160548/173056/173056     692          Conv:Conv_31    
+D RKNN: [07:23:02.822] 18   ConvExSwish        FLOAT16  NPU    (1,128,52,52),(64,128,1,1),(64)          (1,64,52,52)           160548/173056/173056     692          Conv:Conv_55    
+D RKNN: [07:23:02.822] 19   ConvExSwish        FLOAT16  NPU    (1,64,52,52),(64,64,1,1),(64)            (1,64,52,52)           106630/86528/106630      346          Conv:Conv_34    
+D RKNN: [07:23:02.822] 20   ConvExSwish        FLOAT16  NPU    (1,64,52,52),(64,64,3,3),(64)            (1,64,52,52)           116603/778752/778752     410          Conv:Conv_37    
+D RKNN: [07:23:02.822] 21   Add                FLOAT16  NPU    (1,64,52,52),(1,64,52,52)                (1,64,52,52)           0/0/0                    676          Add:Add_40      
+D RKNN: [07:23:02.822] 22   ConvExSwish        FLOAT16  NPU    (1,64,52,52),(64,64,1,1),(64)            (1,64,52,52)           106630/86528/106630      346          Conv:Conv_41    
+D RKNN: [07:23:02.822] 23   ConvExSwish        FLOAT16  NPU    (1,64,52,52),(64,64,3,3),(64)            (1,64,52,52)           116603/778752/778752     410          Conv:Conv_44    
+D RKNN: [07:23:02.822] 24   Add                FLOAT16  NPU    (1,64,52,52),(1,64,52,52)                (1,64,52,52)           0/0/0                    676          Add:Add_47      
+D RKNN: [07:23:02.822] 25   ConvExSwish        FLOAT16  NPU    (1,64,52,52),(64,64,1,1),(64)            (1,64,52,52)           106630/86528/106630      346          Conv:Conv_48    
+D RKNN: [07:23:02.822] 26   ConvExSwish        FLOAT16  NPU    (1,64,52,52),(64,64,3,3),(64)            (1,64,52,52)           116603/778752/778752     410          Conv:Conv_51    
+D RKNN: [07:23:02.822] 27   Add                FLOAT16  NPU    (1,64,52,52),(1,64,52,52)                (1,64,52,52)           0/0/0                    676          Add:Add_54      
+D RKNN: [07:23:02.822] 28   Concat             FLOAT16  NPU    (1,64,52,52),(1,64,52,52)                (1,128,52,52)          0/0/0                    676          Concat:Concat_58
+D RKNN: [07:23:02.822] 29   ConvExSwish        FLOAT16  NPU    (1,128,52,52),(128,128,1,1),(128)        (1,128,52,52)          215752/346112/346112     708          Conv:Conv_59    
+D RKNN: [07:23:02.822] 30   ConvExSwish        FLOAT16  NPU    (1,128,52,52),(256,128,3,3),(256)        (1,256,26,26)          247932/1585152/1585152   1253         Conv:Conv_62    
+D RKNN: [07:23:02.822] 31   ConvExSwish        FLOAT16  NPU    (1,256,26,26),(128,256,1,1),(128)        (1,128,26,26)          89059/176128/176128      402          Conv:Conv_65    
+D RKNN: [07:23:02.822] 32   ConvExSwish        FLOAT16  NPU    (1,256,26,26),(128,256,1,1),(128)        (1,128,26,26)          89059/176128/176128      402          Conv:Conv_89    
+D RKNN: [07:23:02.822] 33   ConvExSwish        FLOAT16  NPU    (1,128,26,26),(128,128,1,1),(128)        (1,128,26,26)          57737/88064/88064        201          Conv:Conv_68    
+D RKNN: [07:23:02.822] 34   ConvExSwish        FLOAT16  NPU    (1,128,26,26),(128,128,3,3),(128)        (1,128,26,26)          97630/792576/792576      457          Conv:Conv_71    
+D RKNN: [07:23:02.822] 35   Add                FLOAT16  NPU    (1,128,26,26),(1,128,26,26)              (1,128,26,26)          0/0/0                    338          Add:Add_74      
+D RKNN: [07:23:02.822] 36   ConvExSwish        FLOAT16  NPU    (1,128,26,26),(128,128,1,1),(128)        (1,128,26,26)          57737/88064/88064        201          Conv:Conv_75    
+D RKNN: [07:23:02.822] 37   ConvExSwish        FLOAT16  NPU    (1,128,26,26),(128,128,3,3),(128)        (1,128,26,26)          97630/792576/792576      457          Conv:Conv_78    
+D RKNN: [07:23:02.822] 38   Add                FLOAT16  NPU    (1,128,26,26),(1,128,26,26)              (1,128,26,26)          0/0/0                    338          Add:Add_81      
+D RKNN: [07:23:02.822] 39   ConvExSwish        FLOAT16  NPU    (1,128,26,26),(128,128,1,1),(128)        (1,128,26,26)          57737/88064/88064        201          Conv:Conv_82    
+D RKNN: [07:23:02.822] 40   ConvExSwish        FLOAT16  NPU    (1,128,26,26),(128,128,3,3),(128)        (1,128,26,26)          97630/792576/792576      457          Conv:Conv_85    
+D RKNN: [07:23:02.822] 41   Add                FLOAT16  NPU    (1,128,26,26),(1,128,26,26)              (1,128,26,26)          0/0/0                    338          Add:Add_88      
+D RKNN: [07:23:02.822] 42   Concat             FLOAT16  NPU    (1,128,26,26),(1,128,26,26)              (1,256,26,26)          0/0/0                    338          Concat:Concat_92
+D RKNN: [07:23:02.822] 43   ConvExSwish        FLOAT16  NPU    (1,256,26,26),(256,256,1,1),(256)        (1,256,26,26)          125447/352256/352256     467          Conv:Conv_93    
+D RKNN: [07:23:02.822] 44   ConvExSwish        FLOAT16  NPU    (1,256,26,26),(512,256,3,3),(512)        (1,512,13,13)          438360/1622016/1622016   2644         Conv:Conv_96    
+D RKNN: [07:23:02.822] 45   ConvExSwish        FLOAT16  NPU    (1,512,13,13),(256,512,1,1),(256)        (1,256,13,13)          79554/180224/180224      426          Conv:Conv_99    
+D RKNN: [07:23:02.822] 46   MaxPool            FLOAT16  NPU    (1,256,13,13)                            (1,256,14,14)          0/0/0                    84           MaxPool:241_0_1 
+D RKNN: [07:23:02.822] 47   MaxPool            FLOAT16  NPU    (1,256,14,14)                            (1,256,13,13)          0/0/0                    98           MaxPool:241_0   
+D RKNN: [07:23:02.822] 48   MaxPool            FLOAT16  NPU    (1,256,13,13)                            (1,256,14,14)          0/0/0                    84           MaxPool:241_1   
+D RKNN: [07:23:02.822] 49   MaxPool            FLOAT16  NPU    (1,256,14,14)                            (1,256,13,13)          0/0/0                    98           MaxPool:241     
+D RKNN: [07:23:02.822] 50   MaxPool            FLOAT16  NPU    (1,256,13,13)                            (1,256,13,13)          0/0/0                    84           MaxPool:240_0_1 
+D RKNN: [07:23:02.822] 51   MaxPool            FLOAT16  NPU    (1,256,13,13)                            (1,256,13,13)          0/0/0                    84           MaxPool:240_0   
+D RKNN: [07:23:02.822] 52   MaxPool            FLOAT16  NPU    (1,256,13,13)                            (1,256,13,13)          0/0/0                    84           MaxPool:240_1   
+D RKNN: [07:23:02.822] 53   MaxPool            FLOAT16  NPU    (1,256,13,13)                            (1,256,13,13)          0/0/0                    84           MaxPool:240     
+D RKNN: [07:23:02.822] 54   MaxPool            FLOAT16  NPU    (1,256,13,13)                            (1,256,13,13)          0/0/0                    84           MaxPool:MaxPool_102
+D RKNN: [07:23:02.822] 55   Concat             FLOAT16  NPU    (1,256,13,13),(1,256,13,13),...          (1,1024,13,13)         0/0/0                    338          Concat:Concat_105
+D RKNN: [07:23:02.822] 56   ConvExSwish        FLOAT16  NPU    (1,1024,13,13),(512,1024,1,1),(512)      (1,512,13,13)          238893/720896/720896     1364         Conv:Conv_106   
+D RKNN: [07:23:02.822] 57   ConvExSwish        FLOAT16  NPU    (1,512,13,13),(256,512,1,1),(256)        (1,256,13,13)          79554/180224/180224      426          Conv:Conv_109   
+D RKNN: [07:23:02.822] 58   ConvExSwish        FLOAT16  NPU    (1,512,13,13),(256,512,1,1),(256)        (1,256,13,13)          79554/180224/180224      426          Conv:Conv_118   
+D RKNN: [07:23:02.822] 59   ConvExSwish        FLOAT16  NPU    (1,256,13,13),(256,256,1,1),(256)        (1,256,13,13)          46439/90112/90112        213          Conv:Conv_112   
+D RKNN: [07:23:02.822] 60   ConvExSwish        FLOAT16  NPU    (1,256,13,13),(256,256,3,3),(256)        (1,256,13,13)          206013/811008/811008     1237         Conv:Conv_115   
+D RKNN: [07:23:02.822] 61   Concat             FLOAT16  NPU    (1,256,13,13),(1,256,13,13)              (1,512,13,13)          0/0/0                    169          Concat:Concat_121
+D RKNN: [07:23:02.822] 62   ConvExSwish        FLOAT16  NPU    (1,512,13,13),(512,512,1,1),(512)        (1,512,13,13)          132771/360448/360448     683          Conv:Conv_122   
+D RKNN: [07:23:02.822] 63   ConvExSwish        FLOAT16  NPU    (1,512,13,13),(256,512,1,1),(256)        (1,256,13,13)          79554/180224/180224      426          Conv:Conv_125   
+D RKNN: [07:23:02.822] 64   Resize             FLOAT16  NPU    (1,256,13,13),(0),(4)                    (1,256,26,26)          0/0/0                    84           Resize:Resize_128
+D RKNN: [07:23:02.822] 65   Concat             FLOAT16  NPU    (1,256,26,26),(1,256,26,26)              (1,512,26,26)          0/0/0                    676          Concat:Concat_129
+D RKNN: [07:23:02.822] 66   ConvExSwish        FLOAT16  NPU    (1,512,26,26),(128,512,1,1),(128)        (1,128,26,26)          151705/352256/352256     804          Conv:Conv_130   
+D RKNN: [07:23:02.822] 67   ConvExSwish        FLOAT16  NPU    (1,512,26,26),(128,512,1,1),(128)        (1,128,26,26)          151705/352256/352256     804          Conv:Conv_139   
+D RKNN: [07:23:02.822] 68   ConvExSwish        FLOAT16  NPU    (1,128,26,26),(128,128,1,1),(128)        (1,128,26,26)          57737/88064/88064        201          Conv:Conv_133   
+D RKNN: [07:23:02.822] 69   ConvExSwish        FLOAT16  NPU    (1,128,26,26),(128,128,3,3),(128)        (1,128,26,26)          97630/792576/792576      457          Conv:Conv_136   
+D RKNN: [07:23:02.822] 70   Concat             FLOAT16  NPU    (1,128,26,26),(1,128,26,26)              (1,256,26,26)          0/0/0                    338          Concat:Concat_142
+D RKNN: [07:23:02.822] 71   ConvExSwish        FLOAT16  NPU    (1,256,26,26),(256,256,1,1),(256)        (1,256,26,26)          125447/352256/352256     467          Conv:Conv_143   
+D RKNN: [07:23:02.822] 72   ConvExSwish        FLOAT16  NPU    (1,256,26,26),(128,256,1,1),(128)        (1,128,26,26)          89059/176128/176128      402          Conv:Conv_146   
+D RKNN: [07:23:02.822] 73   Resize             FLOAT16  NPU    (1,128,26,26),(0),(4)                    (1,128,52,52)          0/0/0                    169          Resize:Resize_149
+D RKNN: [07:23:02.822] 74   Concat             FLOAT16  NPU    (1,128,52,52),(1,128,52,52)              (1,256,52,52)          0/0/0                    1352         Concat:Concat_150
+D RKNN: [07:23:02.822] 75   ConvExSwish        FLOAT16  NPU    (1,256,52,52),(64,256,1,1),(64)          (1,64,52,52)           268385/346112/346112     1384         Conv:Conv_151   
+D RKNN: [07:23:02.822] 76   ConvExSwish        FLOAT16  NPU    (1,256,52,52),(64,256,1,1),(64)          (1,64,52,52)           268385/346112/346112     1384         Conv:Conv_160   
+D RKNN: [07:23:02.822] 77   ConvExSwish        FLOAT16  NPU    (1,64,52,52),(64,64,1,1),(64)            (1,64,52,52)           106630/86528/106630      346          Conv:Conv_154   
+D RKNN: [07:23:02.822] 78   ConvExSwish        FLOAT16  NPU    (1,64,52,52),(64,64,3,3),(64)            (1,64,52,52)           116603/778752/778752     410          Conv:Conv_157   
+D RKNN: [07:23:02.822] 79   Concat             FLOAT16  NPU    (1,64,52,52),(1,64,52,52)                (1,128,52,52)          0/0/0                    676          Concat:Concat_163
+D RKNN: [07:23:02.822] 80   ConvExSwish        FLOAT16  NPU    (1,128,52,52),(128,128,1,1),(128)        (1,128,52,52)          215752/346112/346112     708          Conv:Conv_164   
+D RKNN: [07:23:02.822] 81   Conv               FLOAT16  NPU    (1,128,52,52),(21,128,1,1),(21)          (1,21,52,52)           125929/64896/125929      681          Conv:Conv_207   
+D RKNN: [07:23:02.822] 82   ConvExSwish        FLOAT16  NPU    (1,128,52,52),(128,128,3,3),(128)        (1,128,26,26)          176638/792576/792576     964          Conv:Conv_167   
+D RKNN: [07:23:02.822] 83   Concat             FLOAT16  NPU    (1,128,26,26),(1,128,26,26)              (1,256,26,26)          0/0/0                    338          Concat:Concat_170
+D RKNN: [07:23:02.822] 84   ConvExSwish        FLOAT16  NPU    (1,256,26,26),(128,256,1,1),(128)        (1,128,26,26)          89059/176128/176128      402          Conv:Conv_171   
+D RKNN: [07:23:02.822] 85   ConvExSwish        FLOAT16  NPU    (1,256,26,26),(128,256,1,1),(128)        (1,128,26,26)          89059/176128/176128      402          Conv:Conv_180   
+D RKNN: [07:23:02.822] 86   ConvExSwish        FLOAT16  NPU    (1,128,26,26),(128,128,1,1),(128)        (1,128,26,26)          57737/88064/88064        201          Conv:Conv_174   
+D RKNN: [07:23:02.822] 87   ConvExSwish        FLOAT16  NPU    (1,128,26,26),(128,128,3,3),(128)        (1,128,26,26)          97630/792576/792576      457          Conv:Conv_177   
+D RKNN: [07:23:02.822] 88   Concat             FLOAT16  NPU    (1,128,26,26),(1,128,26,26)              (1,256,26,26)          0/0/0                    338          Concat:Concat_183
+D RKNN: [07:23:02.822] 89   ConvExSwish        FLOAT16  NPU    (1,256,26,26),(256,256,1,1),(256)        (1,256,26,26)          125447/352256/352256     467          Conv:Conv_184   
+D RKNN: [07:23:02.822] 90   Conv               FLOAT16  NPU    (1,256,26,26),(21,256,1,1),(21)          (1,21,26,26)           59261/33024/59261        348          Conv:Conv_210   
+D RKNN: [07:23:02.822] 91   ConvExSwish        FLOAT16  NPU    (1,256,26,26),(256,256,3,3),(256)        (1,256,13,13)          245516/811008/811008     1491         Conv:Conv_187   
+D RKNN: [07:23:02.822] 92   Concat             FLOAT16  NPU    (1,256,13,13),(1,256,13,13)              (1,512,13,13)          0/0/0                    169          Concat:Concat_190
+D RKNN: [07:23:02.822] 93   ConvExSwish        FLOAT16  NPU    (1,512,13,13),(256,512,1,1),(256)        (1,256,13,13)          79554/180224/180224      426          Conv:Conv_191   
+D RKNN: [07:23:02.822] 94   ConvExSwish        FLOAT16  NPU    (1,512,13,13),(256,512,1,1),(256)        (1,256,13,13)          79554/180224/180224      426          Conv:Conv_200   
+D RKNN: [07:23:02.822] 95   ConvExSwish        FLOAT16  NPU    (1,256,13,13),(256,256,1,1),(256)        (1,256,13,13)          46439/90112/90112        213          Conv:Conv_194   
+D RKNN: [07:23:02.822] 96   ConvExSwish        FLOAT16  NPU    (1,256,13,13),(256,256,3,3),(256)        (1,256,13,13)          206013/811008/811008     1237         Conv:Conv_197   
+D RKNN: [07:23:02.822] 97   Concat             FLOAT16  NPU    (1,256,13,13),(1,256,13,13)              (1,512,13,13)          0/0/0                    169          Concat:Concat_203
+D RKNN: [07:23:02.822] 98   ConvExSwish        FLOAT16  NPU    (1,512,13,13),(512,512,1,1),(512)        (1,512,13,13)          132771/360448/360448     683          Conv:Conv_204   
+D RKNN: [07:23:02.822] 99   Conv               FLOAT16  NPU    (1,512,13,13),(21,512,1,1),(21)          (1,21,13,13)           30858/16896/30858        190          Conv:Conv_213   
+D RKNN: [07:23:02.822] 100  OutputOperator     FLOAT16  NPU    (1,21,52,52)                             \                      0/0/0                    126          OutputOperator:350
+D RKNN: [07:23:02.822] 101  OutputOperator     FLOAT16  NPU    (1,21,26,26)                             \                      0/0/0                    31           OutputOperator:364
+D RKNN: [07:23:02.822] 102  OutputOperator     FLOAT16  NPU    (1,21,13,13)                             \                      0/0/0                    7            OutputOperator:378
+D RKNN: [07:23:02.822] --------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+D RKNN: [07:23:02.826] <<<<<<<< end: rknn::RKNNModelRegCmdbuildPass
+D RKNN: [07:23:02.831] >>>>>> start: rknn::RKNNModelExportPass
+D RKNN: [07:23:02.838] Export RKNN model to /tmp/tmprpvz2fxy/check.rknn
+D RKNN: [07:23:03.319] <<<<<<<< end: rknn::RKNNModelExportPass
+D RKNN: [07:23:03.320] >>>>>> start: rknn::RKNNMemStatisticsPass
+D RKNN: [07:23:03.344] -----------------------------------------------------------------------------------------------------------------------------
+D RKNN: [07:23:03.344]                                          Feature Tensor Information Table                              
+D RKNN: [07:23:03.344] -------------------------------------------------------------------------------------------+---------------------------------
+D RKNN: [07:23:03.344] ID  User           Tensor           DataType  DataFormat   OrigShape      NativeShape      |     [Start       End)       Size
+D RKNN: [07:23:03.344] -------------------------------------------------------------------------------------------+---------------------------------
+D RKNN: [07:23:03.344] 1   Conv           images           FLOAT16   NC1HWC2      (1,3,416,416)  (1,4,416,416,3)  | 0x00000000 0x000fd800 0x000fd800
+D RKNN: [07:23:03.344] 2   Conv           New_input_images FLOAT16   NC1HWC2      (1,3,416,416)  (1,8,416,416,4)  | 0x000fd800 0x003a1800 0x002a4000
+D RKNN: [07:23:03.344] 3   Conv           New_input_images FLOAT16   NC1HWC2      (1,3,416,416)  (1,8,416,416,4)  | 0x000fd800 0x003a1800 0x002a4000
+D RKNN: [07:23:03.344] 4   Conv           New_input_images FLOAT16   NC1HWC2      (1,3,416,416)  (1,8,416,416,4)  | 0x000fd800 0x003a1800 0x002a4000
+D RKNN: [07:23:03.344] 5   Conv           New_input_images FLOAT16   NC1HWC2      (1,3,416,416)  (1,8,416,416,4)  | 0x000fd800 0x003a1800 0x002a4000
+D RKNN: [07:23:03.344] 6   Concat         136              FLOAT16   NC1HWC2      (1,3,208,208)  (1,16,208,208,4) | 0x003a1800 0x004f3800 0x00152000
+D RKNN: [07:23:03.344] 6   Concat         137              FLOAT16   NC1HWC2      (1,3,208,208)  (1,16,208,208,4) | 0x004f3800 0x00645800 0x00152000
+D RKNN: [07:23:03.344] 6   Concat         138              FLOAT16   NC1HWC2      (1,3,208,208)  (1,16,208,208,4) | 0x00645800 0x00797800 0x00152000
+D RKNN: [07:23:03.344] 6   Concat         139              FLOAT16   NC1HWC2      (1,3,208,208)  (1,16,208,208,4) | 0x00797800 0x008e9800 0x00152000
+D RKNN: [07:23:03.344] 6   Concat         136_exSecondary  FLOAT16   NC1HWC2      (1,12,208,208) (1,16,208,208,4) | 0x00000000 0x00152000 0x00152000
+D RKNN: [07:23:03.344] 7   ConvExSwish    140              FLOAT16   NC1HWC2      (1,12,208,208) (1,16,208,208,4) | 0x00152000 0x002a4000 0x00152000
+D RKNN: [07:23:03.344] 8   ConvExSwish    144              FLOAT16   NC1HWC2      (1,32,208,208) (1,96,208,208,4) | 0x002a4000 0x00a90000 0x007ec000
+D RKNN: [07:23:03.344] 9   ConvExSwish    147              FLOAT16   NC1HWC2      (1,64,104,104) (1,192,104,104,4) | 0x00a90000*0x00e86000 0x003f6000
+D RKNN: [07:23:03.344] 10  ConvExSwish    147              FLOAT16   NC1HWC2      (1,64,104,104) (1,192,104,104,4) | 0x00a90000*0x00e86000 0x003f6000
+D RKNN: [07:23:03.344] 11  ConvExSwish    150              FLOAT16   NC1HWC2      (1,32,104,104) (1,96,104,104,4) | 0x00000000 0x001fb000 0x001fb000
+D RKNN: [07:23:03.344] 12  ConvExSwish    153              FLOAT16   NC1HWC2      (1,32,104,104) (1,96,104,104,4) | 0x003f6000 0x005f1000 0x001fb000
+D RKNN: [07:23:03.344] 13  Add            150              FLOAT16   NC1HWC2      (1,32,104,104) (1,96,104,104,4) | 0x00000000 0x001fb000 0x001fb000
+D RKNN: [07:23:03.344] 13  Add            156              FLOAT16   NC1HWC2      (1,32,104,104) (1,96,104,104,4) | 0x005f1000 0x007ec000 0x001fb000
+D RKNN: [07:23:03.344] 14  Concat         157              FLOAT16   NC1HWC2      (1,32,104,104) (1,32,104,104,4) | 0x003f6000 0x0049f000 0x000a9000
+D RKNN: [07:23:03.344] 14  Concat         160              FLOAT16   NC1HWC2      (1,32,104,104) (1,96,104,104,4) | 0x001fb000 0x003f6000 0x001fb000
+D RKNN: [07:23:03.344] 15  ConvExSwish    161              FLOAT16   NC1HWC2      (1,64,104,104) (1,64,104,104,4) | 0x00000000 0x00152000 0x00152000
+D RKNN: [07:23:03.344] 16  ConvExSwish    164              FLOAT16   NC1HWC2      (1,64,104,104) (1,192,104,104,4) | 0x00152000 0x00548000 0x003f6000
+D RKNN: [07:23:03.344] 17  ConvExSwish    167              FLOAT16   NC1HWC2      (1,128,52,52)  (1,384,52,52,4)  | 0x00548000 0x00743000 0x001fb000
+D RKNN: [07:23:03.344] 18  ConvExSwish    167              FLOAT16   NC1HWC2      (1,128,52,52)  (1,384,52,52,4)  | 0x00548000 0x00743000 0x001fb000
+D RKNN: [07:23:03.344] 19  ConvExSwish    170              FLOAT16   NC1HWC2      (1,64,52,52)   (1,192,52,52,4)  | 0x00000000 0x000fd800 0x000fd800
+D RKNN: [07:23:03.344] 20  ConvExSwish    173              FLOAT16   NC1HWC2      (1,64,52,52)   (1,192,52,52,4)  | 0x001fb000 0x002f8800 0x000fd800
+D RKNN: [07:23:03.344] 21  Add            170              FLOAT16   NC1HWC2      (1,64,52,52)   (1,192,52,52,4)  | 0x00000000 0x000fd800 0x000fd800
+D RKNN: [07:23:03.344] 21  Add            176              FLOAT16   NC1HWC2      (1,64,52,52)   (1,192,52,52,4)  | 0x002f8800 0x003f6000 0x000fd800
+D RKNN: [07:23:03.344] 22  ConvExSwish    177              FLOAT16   NC1HWC2      (1,64,52,52)   (1,64,52,52,4)   | 0x001fb000 0x0024f800 0x00054800
+D RKNN: [07:23:03.344] 23  ConvExSwish    180              FLOAT16   NC1HWC2      (1,64,52,52)   (1,192,52,52,4)  | 0x00000000 0x000fd800 0x000fd800
+D RKNN: [07:23:03.344] 24  Add            177              FLOAT16   NC1HWC2      (1,64,52,52)   (1,64,52,52,4)   | 0x001fb000 0x0024f800 0x00054800
+D RKNN: [07:23:03.344] 24  Add            183              FLOAT16   NC1HWC2      (1,64,52,52)   (1,192,52,52,4)  | 0x0024f800 0x0034d000 0x000fd800
+D RKNN: [07:23:03.344] 25  ConvExSwish    184              FLOAT16   NC1HWC2      (1,64,52,52)   (1,64,52,52,4)   | 0x00000000 0x00054800 0x00054800
+D RKNN: [07:23:03.344] 26  ConvExSwish    187              FLOAT16   NC1HWC2      (1,64,52,52)   (1,192,52,52,4)  | 0x001fb000 0x002f8800 0x000fd800
+D RKNN: [07:23:03.344] 27  Add            184              FLOAT16   NC1HWC2      (1,64,52,52)   (1,64,52,52,4)   | 0x00000000 0x00054800 0x00054800
+D RKNN: [07:23:03.344] 27  Add            190              FLOAT16   NC1HWC2      (1,64,52,52)   (1,192,52,52,4)  | 0x002f8800 0x003f6000 0x000fd800
+D RKNN: [07:23:03.344] 28  Concat         191              FLOAT16   NC1HWC2      (1,64,52,52)   (1,64,52,52,4)   | 0x00054800 0x000a9000 0x00054800
+D RKNN: [07:23:03.344] 28  Concat         194              FLOAT16   NC1HWC2      (1,64,52,52)   (1,192,52,52,4)  | 0x000fd800 0x001fb000 0x000fd800
+D RKNN: [07:23:03.344] 29  ConvExSwish    195              FLOAT16   NC1HWC2      (1,128,52,52)  (1,128,52,52,4)  | 0x001fb000 0x002a4000 0x000a9000
+D RKNN: [07:23:03.344] 30  ConvExSwish    198              FLOAT16   NC1HWC2      (1,128,52,52)  (1,384,52,52,4)  | 0x00000000 0x001fb000 0x001fb000
+D RKNN: [07:23:03.344] 31  ConvExSwish    201              FLOAT16   NC1HWC2      (1,256,26,26)  (1,768,26,26,4)  | 0x001fb000 0x002f8800 0x000fd800
+D RKNN: [07:23:03.344] 32  ConvExSwish    201              FLOAT16   NC1HWC2      (1,256,26,26)  (1,768,26,26,4)  | 0x001fb000 0x002f8800 0x000fd800
+D RKNN: [07:23:03.344] 33  ConvExSwish    204              FLOAT16   NC1HWC2      (1,128,26,26)  (1,384,26,26,4)  | 0x002f8800 0x00377400 0x0007ec00
+D RKNN: [07:23:03.344] 34  ConvExSwish    207              FLOAT16   NC1HWC2      (1,128,26,26)  (1,384,26,26,4)  | 0x001fb000 0x00279c00 0x0007ec00
+D RKNN: [07:23:03.344] 35  Add            204              FLOAT16   NC1HWC2      (1,128,26,26)  (1,384,26,26,4)  | 0x002f8800 0x00377400 0x0007ec00
+D RKNN: [07:23:03.344] 35  Add            210              FLOAT16   NC1HWC2      (1,128,26,26)  (1,384,26,26,4)  | 0x00279c00 0x002f8800 0x0007ec00
+D RKNN: [07:23:03.344] 36  ConvExSwish    211              FLOAT16   NC1HWC2      (1,128,26,26)  (1,128,26,26,4)  | 0x001fb000 0x00225400 0x0002a400
+D RKNN: [07:23:03.344] 37  ConvExSwish    214              FLOAT16   NC1HWC2      (1,128,26,26)  (1,384,26,26,4)  | 0x00225400 0x002a4000 0x0007ec00
+D RKNN: [07:23:03.344] 38  Add            211              FLOAT16   NC1HWC2      (1,128,26,26)  (1,128,26,26,4)  | 0x001fb000 0x00225400 0x0002a400
+D RKNN: [07:23:03.344] 38  Add            217              FLOAT16   NC1HWC2      (1,128,26,26)  (1,384,26,26,4)  | 0x002a4000 0x00322c00 0x0007ec00
+D RKNN: [07:23:03.344] 39  ConvExSwish    218              FLOAT16   NC1HWC2      (1,128,26,26)  (1,128,26,26,4)  | 0x00322c00 0x0034d000 0x0002a400
+D RKNN: [07:23:03.344] 40  ConvExSwish    221              FLOAT16   NC1HWC2      (1,128,26,26)  (1,384,26,26,4)  | 0x001fb000 0x00279c00 0x0007ec00
+D RKNN: [07:23:03.344] 41  Add            218              FLOAT16   NC1HWC2      (1,128,26,26)  (1,128,26,26,4)  | 0x00322c00 0x0034d000 0x0002a400
+D RKNN: [07:23:03.344] 41  Add            224              FLOAT16   NC1HWC2      (1,128,26,26)  (1,384,26,26,4)  | 0x00279c00 0x002f8800 0x0007ec00
+D RKNN: [07:23:03.344] 42  Concat         225              FLOAT16   NC1HWC2      (1,128,26,26)  (1,128,26,26,4)  | 0x002f8800 0x00322c00 0x0002a400
+D RKNN: [07:23:03.344] 42  Concat         228              FLOAT16   NC1HWC2      (1,128,26,26)  (1,384,26,26,4)  | 0x00377400 0x003f6000 0x0007ec00
+D RKNN: [07:23:03.344] 43  ConvExSwish    229              FLOAT16   NC1HWC2      (1,256,26,26)  (1,256,26,26,4)  | 0x00322c00 0x00377400 0x00054800
+D RKNN: [07:23:03.344] 44  ConvExSwish    232              FLOAT16   NC1HWC2      (1,256,26,26)  (1,768,26,26,4)  | 0x001fb000 0x002f8800 0x000fd800
+D RKNN: [07:23:03.344] 45  ConvExSwish    235              FLOAT16   NC1HWC2      (1,512,13,13)  (1,1562,13,13,4) | 0x002f8800 0x00379800 0x00081000
+D RKNN: [07:23:03.344] 46  MaxPool        238              FLOAT16   NC1HWC2      (1,256,13,13)  (1,780,13,13,4)  | 0x00379800 0x003ba000 0x00040800
+D RKNN: [07:23:03.344] 47  MaxPool        241_0_1          FLOAT16   NC1HWC2      (1,256,14,14)  (1,256,14,14,4)  | 0x002f8800 0x00311000 0x00018800
+D RKNN: [07:23:03.344] 48  MaxPool        241_0            FLOAT16   NC1HWC2      (1,256,13,13)  (1,260,13,13,4)  | 0x00311000 0x00326800 0x00015800
+D RKNN: [07:23:03.344] 49  MaxPool        241_1            FLOAT16   NC1HWC2      (1,256,14,14)  (1,256,14,14,4)  | 0x002f8800 0x00311000 0x00018800
+D RKNN: [07:23:03.344] 50  MaxPool        238              FLOAT16   NC1HWC2      (1,256,13,13)  (1,780,13,13,4)  | 0x00379800 0x003ba000 0x00040800
+D RKNN: [07:23:03.344] 51  MaxPool        240_0_1          FLOAT16   NC1HWC2      (1,256,13,13)  (1,260,13,13,4)  | 0x002f8800 0x0030e000 0x00015800
+D RKNN: [07:23:03.344] 52  MaxPool        240_0            FLOAT16   NC1HWC2      (1,256,13,13)  (1,260,13,13,4)  | 0x00326800 0x0033c000 0x00015800
+D RKNN: [07:23:03.344] 53  MaxPool        240_1            FLOAT16   NC1HWC2      (1,256,13,13)  (1,260,13,13,4)  | 0x002f8800 0x0030e000 0x00015800
+D RKNN: [07:23:03.344] 54  MaxPool        238              FLOAT16   NC1HWC2      (1,256,13,13)  (1,780,13,13,4)  | 0x00379800 0x003ba000 0x00040800
+D RKNN: [07:23:03.344] 55  Concat         238              FLOAT16   NC1HWC2      (1,256,13,13)  (1,780,13,13,4)  | 0x00379800 0x003ba000 0x00040800
+D RKNN: [07:23:03.344] 55  Concat         239              FLOAT16   NC1HWC2      (1,256,13,13)  (1,260,13,13,4)  | 0x002f8800 0x0030e000 0x00015800
+D RKNN: [07:23:03.344] 55  Concat         240              FLOAT16   NC1HWC2      (1,256,13,13)  (1,260,13,13,4)  | 0x00326800 0x0033c000 0x00015800
+D RKNN: [07:23:03.344] 55  Concat         241              FLOAT16   NC1HWC2      (1,256,13,13)  (1,260,13,13,4)  | 0x00311000 0x00326800 0x00015800
+D RKNN: [07:23:03.344] 56  ConvExSwish    242              FLOAT16   NC1HWC2      (1,1024,13,13) (1,1042,13,13,4) | 0x003ba000 0x00410000 0x00056000
+D RKNN: [07:23:03.344] 57  ConvExSwish    245              FLOAT16   NC1HWC2      (1,512,13,13)  (1,1562,13,13,4) | 0x002f8800 0x00379800 0x00081000
+D RKNN: [07:23:03.344] 58  ConvExSwish    245              FLOAT16   NC1HWC2      (1,512,13,13)  (1,1562,13,13,4) | 0x002f8800 0x00379800 0x00081000
+D RKNN: [07:23:03.344] 59  ConvExSwish    248              FLOAT16   NC1HWC2      (1,256,13,13)  (1,780,13,13,4)  | 0x00379800 0x003ba000 0x00040800
+D RKNN: [07:23:03.344] 60  ConvExSwish    251              FLOAT16   NC1HWC2      (1,256,13,13)  (1,780,13,13,4)  | 0x002f8800 0x00339000 0x00040800
+D RKNN: [07:23:03.344] 61  Concat         254              FLOAT16   NC1HWC2      (1,256,13,13)  (1,780,13,13,4)  | 0x00339000 0x00379800 0x00040800
+D RKNN: [07:23:03.344] 61  Concat         257              FLOAT16   NC1HWC2      (1,256,13,13)  (1,780,13,13,4)  | 0x003ba000 0x003fa800 0x00040800
+D RKNN: [07:23:03.344] 62  ConvExSwish    258              FLOAT16   NC1HWC2      (1,512,13,13)  (1,520,13,13,4)  | 0x002f8800 0x00323800 0x0002b000
+D RKNN: [07:23:03.344] 63  ConvExSwish    261              FLOAT16   NC1HWC2      (1,512,13,13)  (1,1562,13,13,4) | 0x00323800 0x003a4800 0x00081000
+D RKNN: [07:23:03.344] 64  Resize         264              FLOAT16   NC1HWC2      (1,256,13,13)  (1,780,13,13,4)  | 0x003a4800 0x003e5000 0x00040800
+D RKNN: [07:23:03.344] 65  Concat         268              FLOAT16   NC1HWC2      (1,256,26,26)  (1,256,26,26,4)  | 0x002f8840 0x0034d040 0x00054800
+D RKNN: [07:23:03.344] 65  Concat         232              FLOAT16   NC1HWC2      (1,256,26,26)  (1,768,26,26,4)  | 0x001fb000 0x002f8800 0x000fd800
+D RKNN: [07:23:03.344] 66  ConvExSwish    269              FLOAT16   NC1HWC2      (1,512,26,26)  (1,512,26,26,4)  | 0x003e5000 0x0048e000 0x000a9000
+D RKNN: [07:23:03.344] 67  ConvExSwish    269              FLOAT16   NC1HWC2      (1,512,26,26)  (1,512,26,26,4)  | 0x003e5000 0x0048e000 0x000a9000
+D RKNN: [07:23:03.344] 68  ConvExSwish    272              FLOAT16   NC1HWC2      (1,128,26,26)  (1,384,26,26,4)  | 0x001fb000 0x00279c00 0x0007ec00
+D RKNN: [07:23:03.344] 69  ConvExSwish    275              FLOAT16   NC1HWC2      (1,128,26,26)  (1,384,26,26,4)  | 0x002f8800 0x00377400 0x0007ec00
+D RKNN: [07:23:03.344] 70  Concat         278              FLOAT16   NC1HWC2      (1,128,26,26)  (1,384,26,26,4)  | 0x001fb000 0x00279c00 0x0007ec00
+D RKNN: [07:23:03.344] 70  Concat         281              FLOAT16   NC1HWC2      (1,128,26,26)  (1,384,26,26,4)  | 0x00279c00 0x002f8800 0x0007ec00
+D RKNN: [07:23:03.344] 71  ConvExSwish    282              FLOAT16   NC1HWC2      (1,256,26,26)  (1,256,26,26,4)  | 0x002f8800 0x0034d000 0x00054800
+D RKNN: [07:23:03.344] 72  ConvExSwish    285              FLOAT16   NC1HWC2      (1,256,26,26)  (1,768,26,26,4)  | 0x001fb000 0x002f8800 0x000fd800
+D RKNN: [07:23:03.344] 73  Resize         288              FLOAT16   NC1HWC2      (1,128,26,26)  (1,384,26,26,4)  | 0x002f8800 0x00377400 0x0007ec00
+D RKNN: [07:23:03.344] 74  Concat         292              FLOAT16   NC1HWC2      (1,128,52,52)  (1,128,52,52,4)  | 0x001fb000 0x002a4000 0x000a9000
+D RKNN: [07:23:03.344] 74  Concat         198              FLOAT16   NC1HWC2      (1,128,52,52)  (1,384,52,52,4)  | 0x00000000 0x001fb000 0x001fb000
+D RKNN: [07:23:03.344] 75  ConvExSwish    293              FLOAT16   NC1HWC2      (1,256,52,52)  (1,256,52,52,4)  | 0x003e5000 0x00537000 0x00152000
+D RKNN: [07:23:03.344] 76  ConvExSwish    293              FLOAT16   NC1HWC2      (1,256,52,52)  (1,256,52,52,4)  | 0x003e5000 0x00537000 0x00152000
+D RKNN: [07:23:03.344] 77  ConvExSwish    296              FLOAT16   NC1HWC2      (1,64,52,52)   (1,192,52,52,4)  | 0x00000000 0x000fd800 0x000fd800
+D RKNN: [07:23:03.344] 78  ConvExSwish    299              FLOAT16   NC1HWC2      (1,64,52,52)   (1,192,52,52,4)  | 0x001fb000 0x002f8800 0x000fd800
+D RKNN: [07:23:03.344] 79  Concat         302              FLOAT16   NC1HWC2      (1,64,52,52)   (1,192,52,52,4)  | 0x00000000 0x000fd800 0x000fd800
+D RKNN: [07:23:03.344] 79  Concat         305              FLOAT16   NC1HWC2      (1,64,52,52)   (1,192,52,52,4)  | 0x000fd800 0x001fb000 0x000fd800
+D RKNN: [07:23:03.344] 80  ConvExSwish    306              FLOAT16   NC1HWC2      (1,128,52,52)  (1,128,52,52,4)  | 0x001fb000 0x002a4000 0x000a9000
+D RKNN: [07:23:03.344] 81  Conv           309              FLOAT16   NC1HWC2      (1,128,52,52)  (1,384,52,52,4)  | 0x00000000 0x001fb000 0x001fb000
+D RKNN: [07:23:03.344] 82  ConvExSwish    309              FLOAT16   NC1HWC2      (1,128,52,52)  (1,384,52,52,4)  | 0x00000000 0x001fb000 0x001fb000
+D RKNN: [07:23:03.344] 83  Concat         312              FLOAT16   NC1HWC2      (1,128,26,26)  (1,384,26,26,4)  | 0x001fb000 0x00279c00 0x0007ec00
+D RKNN: [07:23:03.344] 83  Concat         288              FLOAT16   NC1HWC2      (1,128,26,26)  (1,384,26,26,4)  | 0x002f8800 0x00377400 0x0007ec00
+D RKNN: [07:23:03.344] 84  ConvExSwish    313              FLOAT16   NC1HWC2      (1,256,26,26)  (1,256,26,26,4)  | 0x00279c00 0x002ce400 0x00054800
+D RKNN: [07:23:03.344] 85  ConvExSwish    313              FLOAT16   NC1HWC2      (1,256,26,26)  (1,256,26,26,4)  | 0x00279c00 0x002ce400 0x00054800
+D RKNN: [07:23:03.344] 86  ConvExSwish    316              FLOAT16   NC1HWC2      (1,128,26,26)  (1,384,26,26,4)  | 0x002ce400 0x0034d000 0x0007ec00
+D RKNN: [07:23:03.344] 87  ConvExSwish    319              FLOAT16   NC1HWC2      (1,128,26,26)  (1,384,26,26,4)  | 0x0007ec00 0x000fd800 0x0007ec00
+D RKNN: [07:23:03.344] 88  Concat         322              FLOAT16   NC1HWC2      (1,128,26,26)  (1,384,26,26,4)  | 0x000fd800 0x0017c400 0x0007ec00
+D RKNN: [07:23:03.344] 88  Concat         325              FLOAT16   NC1HWC2      (1,128,26,26)  (1,384,26,26,4)  | 0x00000000 0x0007ec00 0x0007ec00
+D RKNN: [07:23:03.344] 89  ConvExSwish    326              FLOAT16   NC1HWC2      (1,256,26,26)  (1,256,26,26,4)  | 0x0007ec00 0x000d3400 0x00054800
+D RKNN: [07:23:03.344] 90  Conv           329              FLOAT16   NC1HWC2      (1,256,26,26)  (1,768,26,26,4)  | 0x000d3400 0x001d0c00 0x000fd800
+D RKNN: [07:23:03.344] 91  ConvExSwish    329              FLOAT16   NC1HWC2      (1,256,26,26)  (1,768,26,26,4)  | 0x000d3400 0x001d0c00 0x000fd800
+D RKNN: [07:23:03.344] 92  Concat         332              FLOAT16   NC1HWC2      (1,256,13,13)  (1,780,13,13,4)  | 0x00000000 0x00040800 0x00040800
+D RKNN: [07:23:03.344] 92  Concat         264              FLOAT16   NC1HWC2      (1,256,13,13)  (1,780,13,13,4)  | 0x003a4800 0x003e5000 0x00040800
+D RKNN: [07:23:03.344] 93  ConvExSwish    333              FLOAT16   NC1HWC2      (1,512,13,13)  (1,520,13,13,4)  | 0x00040800 0x0006b800 0x0002b000
+D RKNN: [07:23:03.344] 94  ConvExSwish    333              FLOAT16   NC1HWC2      (1,512,13,13)  (1,520,13,13,4)  | 0x00040800 0x0006b800 0x0002b000
+D RKNN: [07:23:03.344] 95  ConvExSwish    336              FLOAT16   NC1HWC2      (1,256,13,13)  (1,780,13,13,4)  | 0x00000000 0x00040800 0x00040800
+D RKNN: [07:23:03.344] 96  ConvExSwish    339              FLOAT16   NC1HWC2      (1,256,13,13)  (1,780,13,13,4)  | 0x000ac000 0x000ec800 0x00040800
+D RKNN: [07:23:03.344] 97  Concat         342              FLOAT16   NC1HWC2      (1,256,13,13)  (1,780,13,13,4)  | 0x00000000 0x00040800 0x00040800
+D RKNN: [07:23:03.344] 97  Concat         345              FLOAT16   NC1HWC2      (1,256,13,13)  (1,780,13,13,4)  | 0x0006b800 0x000ac000 0x00040800
+D RKNN: [07:23:03.344] 98  ConvExSwish    346              FLOAT16   NC1HWC2      (1,512,13,13)  (1,520,13,13,4)  | 0x00040800 0x0006b800 0x0002b000
+D RKNN: [07:23:03.344] 99  Conv           349              FLOAT16   NC1HWC2      (1,512,13,13)  (1,1562,13,13,4) | 0x0006b800 0x000ec800 0x00081000
+D RKNN: [07:23:03.344] 100 OutputOperator 350              FLOAT16   NC1HWC2      (1,21,52,52)   (1,24,52,52,4)   | 0x00377400 0x00396f00 0x0001fb00
+D RKNN: [07:23:03.344] 100 OutputOperator 350_exSecondary  FLOAT16   NC1HWC2      (1,52,52,24)   (1,52,52,24,4)   | 0x00002040 0x00021b40 0x0001fb00
+D RKNN: [07:23:03.344] 101 OutputOperator 364              FLOAT16   NC1HWC2      (1,21,26,26)   (1,24,26,26,4)   | 0x00396f00 0x0039edc0 0x00007ec0
+D RKNN: [07:23:03.344] 101 OutputOperator 364_exSecondary  FLOAT16   NC1HWC2      (1,26,26,24)   (1,28,26,24,4)   | 0x00021b40 0x0002a3c0 0x00008880
+D RKNN: [07:23:03.344] 102 OutputOperator 378              FLOAT16   NC1HWC2      (1,21,13,13)   (1,24,13,13,4)   | 0x00000000 0x00002040 0x00002040
+D RKNN: [07:23:03.344] 102 OutputOperator 378_exSecondary  FLOAT16   NC1HWC2      (1,13,13,24)   (1,16,13,24,4)   | 0x0002a3c0 0x0002cac0 0x00002700
+D RKNN: [07:23:03.344] -------------------------------------------------------------------------------------------+---------------------------------
+D RKNN: [07:23:03.344] --------------------------------------------------------------------------------------------------------
+D RKNN: [07:23:03.344]                                   Const Tensor Information Table                      
+D RKNN: [07:23:03.344] ----------------------------------------------------------------------+---------------------------------
+D RKNN: [07:23:03.344] ID  User        Tensor                       DataType  OrigShape      |     [Start       End)       Size
+D RKNN: [07:23:03.344] ----------------------------------------------------------------------+---------------------------------
+D RKNN: [07:23:03.344] 1   Conv        Pre_weightimages             FLOAT16   (3,3,1,1)      | 0x00d7b080 0x00d7b098 0x00000018
+D RKNN: [07:23:03.344] 2   Conv        model.0.conv1.weight         FLOAT16   (1,3,2,2)      | 0x00000000 0x00000020 0x00000020
+D RKNN: [07:23:03.344] 3   Conv        model.0.conv2.weight         FLOAT16   (1,3,2,2)      | 0x00000040 0x00000060 0x00000020
+D RKNN: [07:23:03.344] 4   Conv        model.0.conv3.weight         FLOAT16   (1,3,2,2)      | 0x00000080 0x000000a0 0x00000020
+D RKNN: [07:23:03.344] 5   Conv        model.0.conv4.weight         FLOAT16   (1,3,2,2)      | 0x000000c0 0x000000e0 0x00000020
+D RKNN: [07:23:03.344] 7   ConvExSwish 393                          FLOAT16   (32,12,3,3)    | 0x00d78b80 0x00d7af80 0x00002400
+D RKNN: [07:23:03.344] 7   ConvExSwish 394                          FLOAT     (32)           | 0x00d7af80 0x00d7b000 0x00000080
+D RKNN: [07:23:03.344] 8   ConvExSwish model.1.conv.weight          FLOAT16   (64,32,3,3)    | 0x00000100 0x00009100 0x00009000
+D RKNN: [07:23:03.344] 8   ConvExSwish model.1.conv.bias            FLOAT     (64)           | 0x00009100 0x00009200 0x00000100
+D RKNN: [07:23:03.344] 9   ConvExSwish model.2.cv1.conv.weight      FLOAT16   (32,64,1,1)    | 0x00009200 0x0000a200 0x00001000
+D RKNN: [07:23:03.344] 9   ConvExSwish model.2.cv1.conv.bias        FLOAT     (32)           | 0x0000a200 0x0000a280 0x00000080
+D RKNN: [07:23:03.344] 10  ConvExSwish model.2.cv2.conv.weight      FLOAT16   (32,64,1,1)    | 0x0000a280 0x0000b280 0x00001000
+D RKNN: [07:23:03.344] 10  ConvExSwish model.2.cv2.conv.bias        FLOAT     (32)           | 0x0000b280 0x0000b300 0x00000080
+D RKNN: [07:23:03.344] 11  ConvExSwish model.2.m.0.cv1.conv.weight  FLOAT16   (32,32,1,1)    | 0x0000d400 0x0000dc00 0x00000800
+D RKNN: [07:23:03.344] 11  ConvExSwish model.2.m.0.cv1.conv.bias    FLOAT     (32)           | 0x0000dc00 0x0000dc80 0x00000080
+D RKNN: [07:23:03.344] 12  ConvExSwish model.2.m.0.cv2.conv.weight  FLOAT16   (32,32,3,3)    | 0x0000dc80 0x00012480 0x00004800
+D RKNN: [07:23:03.344] 12  ConvExSwish model.2.m.0.cv2.conv.bias    FLOAT     (32)           | 0x00012480 0x00012500 0x00000080
+D RKNN: [07:23:03.344] 15  ConvExSwish model.2.cv3.conv.weight      FLOAT16   (64,64,1,1)    | 0x0000b300 0x0000d300 0x00002000
+D RKNN: [07:23:03.344] 15  ConvExSwish model.2.cv3.conv.bias        FLOAT     (64)           | 0x0000d300 0x0000d400 0x00000100
+D RKNN: [07:23:03.344] 16  ConvExSwish model.3.conv.weight          FLOAT16   (128,64,3,3)   | 0x00012500 0x00036500 0x00024000
+D RKNN: [07:23:03.344] 16  ConvExSwish model.3.conv.bias            FLOAT     (128)          | 0x00036500 0x00036700 0x00000200
+D RKNN: [07:23:03.344] 17  ConvExSwish model.4.cv1.conv.weight      FLOAT16   (64,128,1,1)   | 0x00036700 0x0003a700 0x00004000
+D RKNN: [07:23:03.344] 17  ConvExSwish model.4.cv1.conv.bias        FLOAT     (64)           | 0x0003a700 0x0003a800 0x00000100
+D RKNN: [07:23:03.344] 18  ConvExSwish model.4.cv2.conv.weight      FLOAT16   (64,128,1,1)   | 0x0003a800 0x0003e800 0x00004000
+D RKNN: [07:23:03.344] 18  ConvExSwish model.4.cv2.conv.bias        FLOAT     (64)           | 0x0003e800 0x0003e900 0x00000100
+D RKNN: [07:23:03.344] 19  ConvExSwish model.4.m.0.cv1.conv.weight  FLOAT16   (64,64,1,1)    | 0x00046b00 0x00048b00 0x00002000
+D RKNN: [07:23:03.344] 19  ConvExSwish model.4.m.0.cv1.conv.bias    FLOAT     (64)           | 0x00048b00 0x00048c00 0x00000100
+D RKNN: [07:23:03.344] 20  ConvExSwish model.4.m.0.cv2.conv.weight  FLOAT16   (64,64,3,3)    | 0x00048c00 0x0005ac00 0x00012000
+D RKNN: [07:23:03.344] 20  ConvExSwish model.4.m.0.cv2.conv.bias    FLOAT     (64)           | 0x0005ac00 0x0005ad00 0x00000100
+D RKNN: [07:23:03.344] 22  ConvExSwish model.4.m.1.cv1.conv.weight  FLOAT16   (64,64,1,1)    | 0x0005ad00 0x0005cd00 0x00002000
+D RKNN: [07:23:03.344] 22  ConvExSwish model.4.m.1.cv1.conv.bias    FLOAT     (64)           | 0x0005cd00 0x0005ce00 0x00000100
+D RKNN: [07:23:03.344] 23  ConvExSwish model.4.m.1.cv2.conv.weight  FLOAT16   (64,64,3,3)    | 0x0005ce00 0x0006ee00 0x00012000
+D RKNN: [07:23:03.344] 23  ConvExSwish model.4.m.1.cv2.conv.bias    FLOAT     (64)           | 0x0006ee00 0x0006ef00 0x00000100
+D RKNN: [07:23:03.344] 25  ConvExSwish model.4.m.2.cv1.conv.weight  FLOAT16   (64,64,1,1)    | 0x0006ef00 0x00070f00 0x00002000
+D RKNN: [07:23:03.344] 25  ConvExSwish model.4.m.2.cv1.conv.bias    FLOAT     (64)           | 0x00070f00 0x00071000 0x00000100
+D RKNN: [07:23:03.344] 26  ConvExSwish model.4.m.2.cv2.conv.weight  FLOAT16   (64,64,3,3)    | 0x00071000 0x00083000 0x00012000
+D RKNN: [07:23:03.344] 26  ConvExSwish model.4.m.2.cv2.conv.bias    FLOAT     (64)           | 0x00083000 0x00083100 0x00000100
+D RKNN: [07:23:03.344] 29  ConvExSwish model.4.cv3.conv.weight      FLOAT16   (128,128,1,1)  | 0x0003e900 0x00046900 0x00008000
+D RKNN: [07:23:03.344] 29  ConvExSwish model.4.cv3.conv.bias        FLOAT     (128)          | 0x00046900 0x00046b00 0x00000200
+D RKNN: [07:23:03.344] 30  ConvExSwish model.5.conv.weight          FLOAT16   (256,128,3,3)  | 0x00083100 0x00113100 0x00090000
+D RKNN: [07:23:03.344] 30  ConvExSwish model.5.conv.bias            FLOAT     (256)          | 0x00113100 0x00113500 0x00000400
+D RKNN: [07:23:03.344] 31  ConvExSwish model.6.cv1.conv.weight      FLOAT16   (128,256,1,1)  | 0x00113500 0x00123500 0x00010000
+D RKNN: [07:23:03.344] 31  ConvExSwish model.6.cv1.conv.bias        FLOAT     (128)          | 0x00123500 0x00123700 0x00000200
+D RKNN: [07:23:03.344] 32  ConvExSwish model.6.cv2.conv.weight      FLOAT16   (128,256,1,1)  | 0x00123700 0x00133700 0x00010000
+D RKNN: [07:23:03.344] 32  ConvExSwish model.6.cv2.conv.bias        FLOAT     (128)          | 0x00133700 0x00133900 0x00000200
+D RKNN: [07:23:03.344] 33  ConvExSwish model.6.m.0.cv1.conv.weight  FLOAT16   (128,128,1,1)  | 0x00153d00 0x0015bd00 0x00008000
+D RKNN: [07:23:03.344] 33  ConvExSwish model.6.m.0.cv1.conv.bias    FLOAT     (128)          | 0x0015bd00 0x0015bf00 0x00000200
+D RKNN: [07:23:03.344] 34  ConvExSwish model.6.m.0.cv2.conv.weight  FLOAT16   (128,128,3,3)  | 0x0015bf00 0x001a3f00 0x00048000
+D RKNN: [07:23:03.344] 34  ConvExSwish model.6.m.0.cv2.conv.bias    FLOAT     (128)          | 0x001a3f00 0x001a4100 0x00000200
+D RKNN: [07:23:03.344] 36  ConvExSwish model.6.m.1.cv1.conv.weight  FLOAT16   (128,128,1,1)  | 0x001a4100 0x001ac100 0x00008000
+D RKNN: [07:23:03.344] 36  ConvExSwish model.6.m.1.cv1.conv.bias    FLOAT     (128)          | 0x001ac100 0x001ac300 0x00000200
+D RKNN: [07:23:03.344] 37  ConvExSwish model.6.m.1.cv2.conv.weight  FLOAT16   (128,128,3,3)  | 0x001ac300 0x001f4300 0x00048000
+D RKNN: [07:23:03.344] 37  ConvExSwish model.6.m.1.cv2.conv.bias    FLOAT     (128)          | 0x001f4300 0x001f4500 0x00000200
+D RKNN: [07:23:03.344] 39  ConvExSwish model.6.m.2.cv1.conv.weight  FLOAT16   (128,128,1,1)  | 0x001f4500 0x001fc500 0x00008000
+D RKNN: [07:23:03.344] 39  ConvExSwish model.6.m.2.cv1.conv.bias    FLOAT     (128)          | 0x001fc500 0x001fc700 0x00000200
+D RKNN: [07:23:03.344] 40  ConvExSwish model.6.m.2.cv2.conv.weight  FLOAT16   (128,128,3,3)  | 0x001fc700 0x00244700 0x00048000
+D RKNN: [07:23:03.344] 40  ConvExSwish model.6.m.2.cv2.conv.bias    FLOAT     (128)          | 0x00244700 0x00244900 0x00000200
+D RKNN: [07:23:03.344] 43  ConvExSwish model.6.cv3.conv.weight      FLOAT16   (256,256,1,1)  | 0x00133900 0x00153900 0x00020000
+D RKNN: [07:23:03.344] 43  ConvExSwish model.6.cv3.conv.bias        FLOAT     (256)          | 0x00153900 0x00153d00 0x00000400
+D RKNN: [07:23:03.344] 44  ConvExSwish model.7.conv.weight          FLOAT16   (512,256,3,3)  | 0x00244900 0x00484900 0x00240000
+D RKNN: [07:23:03.344] 44  ConvExSwish model.7.conv.bias            FLOAT     (512)          | 0x00484900 0x00485100 0x00000800
+D RKNN: [07:23:03.344] 45  ConvExSwish model.8.cv1.conv.weight      FLOAT16   (256,512,1,1)  | 0x00485100 0x004c5100 0x00040000
+D RKNN: [07:23:03.344] 45  ConvExSwish model.8.cv1.conv.bias        FLOAT     (256)          | 0x004c5100 0x004c5500 0x00000400
+D RKNN: [07:23:03.344] 56  ConvExSwish model.8.cv2.conv.weight      FLOAT16   (512,1024,1,1) | 0x004c5500 0x005c5500 0x00100000
+D RKNN: [07:23:03.344] 56  ConvExSwish model.8.cv2.conv.bias        FLOAT     (512)          | 0x005c5500 0x005c5d00 0x00000800
+D RKNN: [07:23:03.344] 57  ConvExSwish model.9.cv1.conv.weight      FLOAT16   (256,512,1,1)  | 0x005c5d00 0x00605d00 0x00040000
+D RKNN: [07:23:03.344] 57  ConvExSwish model.9.cv1.conv.bias        FLOAT     (256)          | 0x00605d00 0x00606100 0x00000400
+D RKNN: [07:23:03.344] 58  ConvExSwish model.9.cv2.conv.weight      FLOAT16   (256,512,1,1)  | 0x00606100 0x00646100 0x00040000
+D RKNN: [07:23:03.344] 58  ConvExSwish model.9.cv2.conv.bias        FLOAT     (256)          | 0x00646100 0x00646500 0x00000400
+D RKNN: [07:23:03.344] 59  ConvExSwish model.9.m.0.cv1.conv.weight  FLOAT16   (256,256,1,1)  | 0x006c6d00 0x006e6d00 0x00020000
+D RKNN: [07:23:03.344] 59  ConvExSwish model.9.m.0.cv1.conv.bias    FLOAT     (256)          | 0x006e6d00 0x006e7100 0x00000400
+D RKNN: [07:23:03.344] 60  ConvExSwish model.9.m.0.cv2.conv.weight  FLOAT16   (256,256,3,3)  | 0x006e7100 0x00807100 0x00120000
+D RKNN: [07:23:03.344] 60  ConvExSwish model.9.m.0.cv2.conv.bias    FLOAT     (256)          | 0x00807100 0x00807500 0x00000400
+D RKNN: [07:23:03.344] 62  ConvExSwish model.9.cv3.conv.weight      FLOAT16   (512,512,1,1)  | 0x00646500 0x006c6500 0x00080000
+D RKNN: [07:23:03.344] 62  ConvExSwish model.9.cv3.conv.bias        FLOAT     (512)          | 0x006c6500 0x006c6d00 0x00000800
+D RKNN: [07:23:03.344] 63  ConvExSwish model.10.conv.weight         FLOAT16   (256,512,1,1)  | 0x00807500 0x00847500 0x00040000
+D RKNN: [07:23:03.344] 63  ConvExSwish model.10.conv.bias           FLOAT     (256)          | 0x00847500 0x00847900 0x00000400
+D RKNN: [07:23:03.344] 64  Resize      Resize_128_roi               FLOAT     (0)            | 0x00d7b080 0x00d7b080 0x00000000
+D RKNN: [07:23:03.344] 64  Resize      395                          FLOAT     (4)            | 0x00d7b000 0x00d7b040 0x00000040
+D RKNN: [07:23:03.344] 66  ConvExSwish model.13.cv1.conv.weight     FLOAT16   (128,512,1,1)  | 0x00847900 0x00867900 0x00020000
+D RKNN: [07:23:03.344] 66  ConvExSwish model.13.cv1.conv.bias       FLOAT     (128)          | 0x00867900 0x00867b00 0x00000200
+D RKNN: [07:23:03.344] 67  ConvExSwish model.13.cv2.conv.weight     FLOAT16   (128,512,1,1)  | 0x00867b00 0x00887b00 0x00020000
+D RKNN: [07:23:03.344] 67  ConvExSwish model.13.cv2.conv.bias       FLOAT     (128)          | 0x00887b00 0x00887d00 0x00000200
+D RKNN: [07:23:03.344] 68  ConvExSwish model.13.m.0.cv1.conv.weight FLOAT16   (128,128,1,1)  | 0x008a8100 0x008b0100 0x00008000
+D RKNN: [07:23:03.344] 68  ConvExSwish model.13.m.0.cv1.conv.bias   FLOAT     (128)          | 0x008b0100 0x008b0300 0x00000200
+D RKNN: [07:23:03.344] 69  ConvExSwish model.13.m.0.cv2.conv.weight FLOAT16   (128,128,3,3)  | 0x008b0300 0x008f8300 0x00048000
+D RKNN: [07:23:03.344] 69  ConvExSwish model.13.m.0.cv2.conv.bias   FLOAT     (128)          | 0x008f8300 0x008f8500 0x00000200
+D RKNN: [07:23:03.344] 71  ConvExSwish model.13.cv3.conv.weight     FLOAT16   (256,256,1,1)  | 0x00887d00 0x008a7d00 0x00020000
+D RKNN: [07:23:03.344] 71  ConvExSwish model.13.cv3.conv.bias       FLOAT     (256)          | 0x008a7d00 0x008a8100 0x00000400
+D RKNN: [07:23:03.344] 72  ConvExSwish model.14.conv.weight         FLOAT16   (128,256,1,1)  | 0x008f8500 0x00908500 0x00010000
+D RKNN: [07:23:03.344] 72  ConvExSwish model.14.conv.bias           FLOAT     (128)          | 0x00908500 0x00908700 0x00000200
+D RKNN: [07:23:03.344] 73  Resize      Resize_149_roi               FLOAT     (0)            | 0x00d7b080 0x00d7b080 0x00000000
+D RKNN: [07:23:03.344] 73  Resize      396                          FLOAT     (4)            | 0x00d7b040 0x00d7b080 0x00000040
+D RKNN: [07:23:03.344] 75  ConvExSwish model.17.cv1.conv.weight     FLOAT16   (64,256,1,1)   | 0x00908700 0x00910700 0x00008000
+D RKNN: [07:23:03.344] 75  ConvExSwish model.17.cv1.conv.bias       FLOAT     (64)           | 0x00910700 0x00910800 0x00000100
+D RKNN: [07:23:03.344] 76  ConvExSwish model.17.cv2.conv.weight     FLOAT16   (64,256,1,1)   | 0x00910800 0x00918800 0x00008000
+D RKNN: [07:23:03.344] 76  ConvExSwish model.17.cv2.conv.bias       FLOAT     (64)           | 0x00918800 0x00918900 0x00000100
+D RKNN: [07:23:03.344] 77  ConvExSwish model.17.m.0.cv1.conv.weight FLOAT16   (64,64,1,1)    | 0x00920b00 0x00922b00 0x00002000
+D RKNN: [07:23:03.344] 77  ConvExSwish model.17.m.0.cv1.conv.bias   FLOAT     (64)           | 0x00922b00 0x00922c00 0x00000100
+D RKNN: [07:23:03.344] 78  ConvExSwish model.17.m.0.cv2.conv.weight FLOAT16   (64,64,3,3)    | 0x00922c00 0x00934c00 0x00012000
+D RKNN: [07:23:03.344] 78  ConvExSwish model.17.m.0.cv2.conv.bias   FLOAT     (64)           | 0x00934c00 0x00934d00 0x00000100
+D RKNN: [07:23:03.344] 80  ConvExSwish model.17.cv3.conv.weight     FLOAT16   (128,128,1,1)  | 0x00918900 0x00920900 0x00008000
+D RKNN: [07:23:03.344] 80  ConvExSwish model.17.cv3.conv.bias       FLOAT     (128)          | 0x00920900 0x00920b00 0x00000200
+D RKNN: [07:23:03.344] 81  Conv        model.24.m.0.weight          FLOAT16   (21,128,1,1)   | 0x00d6f700 0x00d70c00 0x00001500
+D RKNN: [07:23:03.344] 81  Conv        model.24.m.0.bias            FLOAT     (21)           | 0x00d70c00 0x00d70c60 0x00000060
+D RKNN: [07:23:03.344] 82  ConvExSwish model.18.conv.weight         FLOAT16   (128,128,3,3)  | 0x00934d00 0x0097cd00 0x00048000
+D RKNN: [07:23:03.344] 82  ConvExSwish model.18.conv.bias           FLOAT     (128)          | 0x0097cd00 0x0097cf00 0x00000200
+D RKNN: [07:23:03.344] 84  ConvExSwish model.20.cv1.conv.weight     FLOAT16   (128,256,1,1)  | 0x0097cf00 0x0098cf00 0x00010000
+D RKNN: [07:23:03.344] 84  ConvExSwish model.20.cv1.conv.bias       FLOAT     (128)          | 0x0098cf00 0x0098d100 0x00000200
+D RKNN: [07:23:03.344] 85  ConvExSwish model.20.cv2.conv.weight     FLOAT16   (128,256,1,1)  | 0x0098d100 0x0099d100 0x00010000
+D RKNN: [07:23:03.344] 85  ConvExSwish model.20.cv2.conv.bias       FLOAT     (128)          | 0x0099d100 0x0099d300 0x00000200
+D RKNN: [07:23:03.344] 86  ConvExSwish model.20.m.0.cv1.conv.weight FLOAT16   (128,128,1,1)  | 0x009bd700 0x009c5700 0x00008000
+D RKNN: [07:23:03.344] 86  ConvExSwish model.20.m.0.cv1.conv.bias   FLOAT     (128)          | 0x009c5700 0x009c5900 0x00000200
+D RKNN: [07:23:03.344] 87  ConvExSwish model.20.m.0.cv2.conv.weight FLOAT16   (128,128,3,3)  | 0x009c5900 0x00a0d900 0x00048000
+D RKNN: [07:23:03.344] 87  ConvExSwish model.20.m.0.cv2.conv.bias   FLOAT     (128)          | 0x00a0d900 0x00a0db00 0x00000200
+D RKNN: [07:23:03.344] 89  ConvExSwish model.20.cv3.conv.weight     FLOAT16   (256,256,1,1)  | 0x0099d300 0x009bd300 0x00020000
+D RKNN: [07:23:03.344] 89  ConvExSwish model.20.cv3.conv.bias       FLOAT     (256)          | 0x009bd300 0x009bd700 0x00000400
+D RKNN: [07:23:03.344] 90  Conv        model.24.m.1.weight          FLOAT16   (21,256,1,1)   | 0x00d70c80 0x00d73680 0x00002a00
+D RKNN: [07:23:03.344] 90  Conv        model.24.m.1.bias            FLOAT     (21)           | 0x00d73680 0x00d736e0 0x00000060
+D RKNN: [07:23:03.344] 91  ConvExSwish model.21.conv.weight   I rknn building done.
+CONVERSION_COMPLETE fp16 517fb9113337436f89a5129e62beb73156a37122bc1ffac57fd3349600b1ad45
+      FLOAT16   (256,256,3,3)  | 0x00a0db00 0x00b2db00 0x00120000
+D RKNN: [07:23:03.344] 91  ConvExSwish model.21.conv.bias           FLOAT     (256)          | 0x00b2db00 0x00b2df00 0x00000400
+D RKNN: [07:23:03.344] 93  ConvExSwish model.23.cv1.conv.weight     FLOAT16   (256,512,1,1)  | 0x00b2df00 0x00b6df00 0x00040000
+D RKNN: [07:23:03.344] 93  ConvExSwish model.23.cv1.conv.bias       FLOAT     (256)          | 0x00b6df00 0x00b6e300 0x00000400
+D RKNN: [07:23:03.344] 94  ConvExSwish model.23.cv2.conv.weight     FLOAT16   (256,512,1,1)  | 0x00b6e300 0x00bae300 0x00040000
+D RKNN: [07:23:03.344] 94  ConvExSwish model.23.cv2.conv.bias       FLOAT     (256)          | 0x00bae300 0x00bae700 0x00000400
+D RKNN: [07:23:03.344] 95  ConvExSwish model.23.m.0.cv1.conv.weight FLOAT16   (256,256,1,1)  | 0x00c2ef00 0x00c4ef00 0x00020000
+D RKNN: [07:23:03.344] 95  ConvExSwish model.23.m.0.cv1.conv.bias   FLOAT     (256)          | 0x00c4ef00 0x00c4f300 0x00000400
+D RKNN: [07:23:03.344] 96  ConvExSwish model.23.m.0.cv2.conv.weight FLOAT16   (256,256,3,3)  | 0x00c4f300 0x00d6f300 0x00120000
+D RKNN: [07:23:03.344] 96  ConvExSwish model.23.m.0.cv2.conv.bias   FLOAT     (256)          | 0x00d6f300 0x00d6f700 0x00000400
+D RKNN: [07:23:03.344] 98  ConvExSwish model.23.cv3.conv.weight     FLOAT16   (512,512,1,1)  | 0x00bae700 0x00c2e700 0x00080000
+D RKNN: [07:23:03.344] 98  ConvExSwish model.23.cv3.conv.bias       FLOAT     (512)          | 0x00c2e700 0x00c2ef00 0x00000800
+D RKNN: [07:23:03.344] 99  Conv        model.24.m.2.weight          FLOAT16   (21,512,1,1)   | 0x00d73700 0x00d78b00 0x00005400
+D RKNN: [07:23:03.344] 99  Conv        model.24.m.2.bias            FLOAT     (21)           | 0x00d78b00 0x00d78b60 0x00000060
+D RKNN: [07:23:03.344] ----------------------------------------------------------------------+---------------------------------
+D RKNN: [07:23:03.355] ----------------------------------------
+D RKNN: [07:23:03.355] Total Internal Memory Size: 14872KB
+D RKNN: [07:23:03.355] Total Weight Memory Size: 13804.2KB
+D RKNN: [07:23:03.356] ----------------------------------------
+D RKNN: [07:23:03.356] <<<<<<<< end: rknn::RKNNMemStatisticsPass

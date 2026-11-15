@@ -1,0 +1,52 @@
+{
+  "event_id": "66c5e3fef7e342908fa1d6a42297a619",
+  "event": {
+    "type": "alarm",
+    "monotonic": 0.5,
+    "metadata": {
+      "valid": true
+    }
+  },
+  "requested_start": 0.0,
+  "requested_end": 1.0,
+  "state_events": [],
+  "finish_reason": "complete",
+  "file": "event_1794639655605498045_66c5e3fe.mp4",
+  "encoder": "mpp",
+  "fps": 10,
+  "encoded_frames": 10,
+  "encoded_duration": 1.0,
+  "first_output_at": 0.0,
+  "last_output_at": 1.0,
+  "pre_complete": true,
+  "post_complete": true,
+  "source_frame_ids": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
+  "encoded_source_frame_ids": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "masked_frames": 0,
+  "max_annotation_hold_seconds": 0.1,
+  "encoder_input": "JPEG90 parsed to NV12",
+  "invalid_frame_ids": []
+}

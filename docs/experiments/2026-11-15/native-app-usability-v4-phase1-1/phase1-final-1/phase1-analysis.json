@@ -1,0 +1,54 @@
+{
+  "edge_click": {
+    "coordinate": [
+      719,
+      1275
+    ],
+    "processes_file": "processes-after-edge-click.txt",
+    "screenshot": "edge-click-final.png"
+  },
+  "final_video": {
+    "blank_frame_count": 0,
+    "blank_frame_threshold_lt_40": [],
+    "fps": 10.0,
+    "frames": 300,
+    "path": "final-30s.mp4",
+    "preview_crop": [
+      10,
+      138,
+      340,
+      199
+    ],
+    "preview_min_mean_gray": 119.58371268105232,
+    "preview_p1_mean_gray": 119.94578362400236,
+    "sha256": "20845b7b502e1eb39256bdd598ff379afe33ad497a340dd1b8fd76060c6b56e5"
+  },
+  "physical_unplug_attempt": {
+    "result": "NOT_TESTED_DEVICE_REMAINED_PRESENT",
+    "samples": 836,
+    "valid_false_samples": 0,
+    "video": "unplug-45s.mp4",
+    "video10_false_samples": 0
+  },
+  "status_33s": {
+    "errors": 0,
+    "frame_id_decreases": 0,
+    "frame_id_end": 2087,
+    "frame_id_start": 1119,
+    "models": [
+      "/userdata/helmet-validation/20261115-native-app-v2/models/helmet_416x416.rknn"
+    ],
+    "path": "status-sampler-33s.jsonl",
+    "running_false": 0,
+    "samples": 559,
+    "valid_false": 0
+  },
+  "stop_button": {
+    "frame_id_after": 3069,
+    "frame_id_before": 3033,
+    "running_after": false,
+    "running_before": true,
+    "screenshot": "stopped-placeholder-final.png",
+    "state_after": "stop"
+  }
+}

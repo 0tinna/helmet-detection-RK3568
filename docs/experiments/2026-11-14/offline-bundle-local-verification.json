@@ -1,0 +1,35 @@
+[
+  {
+    "command": [
+      "D:\\Workplace\\RK3568\\.venv\\Scripts\\python.exe",
+      "D:\\Workplace\\RK3568\\dist\\offline-bundle-local-validation\\verify_bundle.py",
+      "verify",
+      "D:\\Workplace\\RK3568\\dist\\offline-bundle-local-validation"
+    ],
+    "exit": 0,
+    "stdout": "{\n  \"status\": \"verified\",\n  \"files\": 32,\n  \"models\": 6,\n  \"directory\": \"D:\\\\Workplace\\\\RK3568\\\\dist\\\\offline-bundle-local-validation\",\n  \"manifest_sha256\": \"bfa210a69d6ebe8bcc18e8e9aad1116e24caac4385cdf65a5a8e2373f484dec3\"\n}\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "D:\\Workplace\\RK3568\\.venv\\Scripts\\python.exe",
+      "-m",
+      "compileall",
+      "-q",
+      "D:\\Workplace\\RK3568\\dist\\offline-bundle-local-validation\\src"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "D:\\Workplace\\RK3568\\.venv\\Scripts\\python.exe",
+      "D:\\Workplace\\RK3568\\dist\\offline-bundle-local-validation\\src\\helmet_realtime.py",
+      "--help"
+    ],
+    "exit": 0,
+    "stdout": "usage: helmet_realtime.py [-h] [--source SOURCE] [--model MODEL] [--conf CONF]\n                          [--nms NMS] [--skip SKIP] [--cam-w CAM_W]\n                          [--cam-h CAM_H] [--no-display] [--save-dir SAVE_DIR]\n                          [--save-interval SAVE_INTERVAL] [--alarm-beep]\n                          [--duration DURATION] [--replay-fps REPLAY_FPS]\n                          [--result-ttl RESULT_TTL]\n                          [--shutdown-timeout SHUTDOWN_TIMEOUT]\n                          [--alarm-dwell ALARM_DWELL]\n                          [--alarm-cooldown ALARM_COOLDOWN]\n                          [--alarm-clear ALARM_CLEAR]\n                          [--audio-timeout AUDIO_TIMEOUT] [--jsonl JSONL]\n                          [--session-json SESSION_JSON]\n                          [--stats-window STATS_WINDOW]\n                          [--sample-interval SAMPLE_INTERVAL]\n                          [--web-host WEB_HOST] [--web-port WEB_PORT]\n                          [--clip-dir CLIP_DIR] [--clip-pre CLIP_PRE]\n                          [--clip-post CLIP_POST] [--clip-fps CLIP_FPS]\n                          [--clip-encoder {opencv,mpp}]\n\nRK3568 helmet detection pipeline\n\noptions:\n  -h, --help            show this help message and exit\n  --source SOURCE       camera /dev/videoN, video, image/image folder, glob,\n                        or RTSP URL\n  --model MODEL\n  --conf CONF\n  --nms NMS\n  --skip SKIP           detect every N+1 consumed frames\n  --cam-w CAM_W\n  --cam-h CAM_H\n  --no-display\n  --save-dir SAVE_DIR\n  --save-interval SAVE_INTERVAL\n                        save fresh results every N seconds\n  --alarm-beep\n  --duration DURATION   stop after N seconds, 0 runs continuously\n  --replay-fps REPLAY_FPS\n                        controlled image/video replay rate\n  --result-ttl RESULT_TTL\n                        maximum capture-to-output age in seconds\n  --shutdown-timeout SHUTDOWN_TIMEOUT\n  --alarm-dwell ALARM_DWELL\n  --alarm-cooldown ALARM_COOLDOWN\n  --alarm-clear ALARM_CLEAR\n  --audio-timeout AUDIO_TIMEOUT\n  --jsonl JSONL         exclusive per-frame JSONL output path\n  --session-json SESSION_JSON\n                        session counters, quantiles and runtime samples\n  --stats-window STATS_WINDOW\n  --sample-interval SAMPLE_INTERVAL\n  --web-host WEB_HOST   preview bind address; LAN use 0.0.0.0\n  --web-port WEB_PORT   HTTP preview port, 0 disables\n  --clip-dir CLIP_DIR   event clips and coverage metadata directory\n  --clip-pre CLIP_PRE\n  --clip-post CLIP_POST\n  --clip-fps CLIP_FPS\n  --clip-encoder {opencv,mpp}\n",
+    "stderr": ""
+  }
+]

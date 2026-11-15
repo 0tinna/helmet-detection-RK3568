@@ -1,0 +1,11 @@
+test_clipped_partition_rejects_invalid_classes_scores_nonfinite_and_reversed_boxes (test_dump.DumpTests) ... ok
+test_failed_inference_records_failure_and_releases_engine (test_dump.DumpTests) ... ok
+test_package_api_executes_without_caller_path_changes (test_dump.DumpTests) ... ok
+test_real_padding_candidates_are_discarded_with_trace_after_shared_decode (test_dump.DumpTests) ... ok
+test_shared_decoder_dump_has_hashes_and_complete_per_image_status (test_dump.DumpTests) ... ok
+test_unknown_model_size_fails_without_explicit_size (test_dump.DumpTests) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 3.037s
+
+OK

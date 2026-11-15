@@ -1,0 +1,102 @@
+{
+  "kind": "resident-v4-immutable-base-preparation",
+  "created_at_unix": 1794704903.8457017,
+  "source_root": "/userdata/helmet-validation/20261115-native-app-v2",
+  "target_root": "/userdata/helmet-validation/20261115-native-app-v4",
+  "parent_manifest_sha256": "aed7bf95c48fefbcd31374843d3284db670d69878db3197f8254f11c685e0786",
+  "free_bytes_before": 51060091904,
+  "files": {
+    "input/1.jpg": {
+      "sha256": "a672e54b698710b9ff3081273fced9b32c671976203f568a3ef505dce1c5936e",
+      "bytes": 176224
+    },
+    "models/helmet-640-640.rknn": {
+      "sha256": "23dac43065664447272b8a032f7c35a00269e5b7d63e210ae10d8181a7a3bb32",
+      "bytes": 7808448
+    },
+    "models/helmet_416x416.rknn": {
+      "sha256": "7e0eefe4bfe86627bb6b58161cacca10912e0dbe1ba2513f58d091c40b26cd48",
+      "bytes": 8110065
+    },
+    "models/helmet_512x288.rknn": {
+      "sha256": "4b8d428aede96897590ed143200412beed882908e3b30ec63a5eae38f0deb6af",
+      "bytes": 8118576
+    },
+    "models/helmet_512x512.rknn": {
+      "sha256": "82e43f1fe1dc755ab8d421c819fdef311efdd1b64a7b1913901f6aef2b9460d3",
+      "bytes": 8279345
+    },
+    "models/helmet_640x384.rknn": {
+      "sha256": "ba951c5b824e66a660c08daa6f6779cf4119130c4c2106f365ee337e3c92f272",
+      "bytes": 8261425
+    },
+    "models/helmet_640x640.rknn": {
+      "sha256": "2c0df64c4e12440e4e84c16294df53e440c263d9570f4447b2d26b0f5916edf3",
+      "bytes": 8439921
+    },
+    "src/alarm.py": {
+      "sha256": "d3e6d68c7b17f5508f0d697e96998f556f224f9f5067169d66c35972b3a023d2",
+      "bytes": 4207
+    },
+    "src/app/__init__.py": {
+      "sha256": "3ca294319d48aa183e5822b0c08426253434101d7c1fc85ae21b74b756784cd1",
+      "bytes": 55
+    },
+    "src/app/icons/helmet.svg": {
+      "sha256": "10274b399ae404d159fcd9b2d0f2464e5f8f37b13399c4a8c42c04c7ede08bc1",
+      "bytes": 435
+    },
+    "src/app/icons/wifi.svg": {
+      "sha256": "ffe6f812764ecc8730863294ac89a2b5c1dcd8f6e7902b57950c6169088f2e3d",
+      "bytes": 353
+    },
+    "src/app/wifi.py": {
+      "sha256": "648b714137b18538f8f8e6a355565b07aec8fb01270c3deed5c01eba30249468",
+      "bytes": 24916
+    },
+    "src/benchmark.py": {
+      "sha256": "15dcff515fc9c7332dd5eefd40502f38b0a02e6ab6a62e1d0ec50ce593ab4859",
+      "bytes": 15588
+    },
+    "src/dump_dets.py": {
+      "sha256": "c21b4a1d1c4ee4e0428cb19d16b560c9c7dfdef2c34b52f62195b836fca90e3f",
+      "bytes": 8619
+    },
+    "src/helmet_realtime.py": {
+      "sha256": "15794ebc40fdd1736d9c80d5504d17aa91e1de972bb92bb30a9eeb026309e46d",
+      "bytes": 5503
+    },
+    "src/output_sinks.py": {
+      "sha256": "c2f65642d38f8994200503b242ca93c8f0af105dc5ad3b13650e9ff83c7003cf",
+      "bytes": 23464
+    },
+    "src/pipeline_runtime.py": {
+      "sha256": "dee30d6b71c9e8d3e697657fb309fb22e8fb47fafd366d60b555466cf56152e9",
+      "bytes": 35055
+    },
+    "src/sources.py": {
+      "sha256": "ea89d66fdefb2bc429ca74efa0437a3c0a8aab672a856078fc15afccfe3b31c9",
+      "bytes": 6717
+    },
+    "src/telemetry.py": {
+      "sha256": "da4522206053712484a21f80bb26d6424649a263f606f35fa16070be51a83b9e",
+      "bytes": 14670
+    },
+    "src/validate_comparison.py": {
+      "sha256": "3b65f9e561084aa7f6199cc7cd413b6426f6ac962f39729ac0668e50350c2860",
+      "bytes": 1819
+    },
+    "src/yolo_post.py": {
+      "sha256": "fae57bbfa1d47d5ab16ef444096fab4fe8e14701c5ec10d87b1ec518282b0505",
+      "bytes": 7811
+    },
+    "input/construction-replay.avi": {
+      "sha256": "f22897e1ebb40cc919caab335ee4b436d28ebaf0a138eb8b16c63166184af5cc",
+      "bytes": 82400444,
+      "scope": "extra fixed validation replay, not v3 ZIP payload"
+    }
+  },
+  "production_app_installed": false,
+  "icon_migrated": false,
+  "npu_or_video_opened": false
+}

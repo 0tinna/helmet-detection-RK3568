@@ -1,0 +1,9 @@
+{
+  "status": "visually-confirmed",
+  "pair": [
+    "shwd/000764.jpg",
+    "hardhat/hard_hat_workers1137.png"
+  ],
+  "difference": "resized with reflective padding",
+  "action": "retain fixed samples; disclose overlap; extra metrics exclude filename independent of predictions"
+}

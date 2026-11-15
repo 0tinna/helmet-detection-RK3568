@@ -1,0 +1,52 @@
+{
+  "source_sha256": "7ea304dbfc05a549c3f0c10890a5d20fc9bbd4d34df2680265d78316e6b770a7",
+  "config": {
+    "mean_values": [
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "std_values": [
+      [
+        255,
+        255,
+        255
+      ]
+    ],
+    "target_platform": "rk3568",
+    "quantized_algorithm": "normal",
+    "quantized_method": "channel",
+    "optimization_level": 3
+  },
+  "load_config": {
+    "model": "helmet.onnx",
+    "inputs": [
+      "images"
+    ],
+    "input_size_list": [
+      [
+        1,
+        3,
+        416,
+        416
+      ]
+    ],
+    "outputs": [
+      "350",
+      "364",
+      "378"
+    ]
+  },
+  "do_quantization": false,
+  "dataset": null,
+  "head_layout": "NCHW,21channels=3anchors*(xywh,obj,person,hat)",
+  "started_at": 1794640834.8925695,
+  "expected_toolkit": "2.3.2",
+  "output": "helmet_416x416_same_source_fp16.rknn",
+  "completed_at": 1794640983.5879614,
+  "output_bytes": 15411133,
+  "output_sha256": "517fb9113337436f89a5129e62beb73156a37122bc1ffac57fd3349600b1ad45",
+  "success": true
+}

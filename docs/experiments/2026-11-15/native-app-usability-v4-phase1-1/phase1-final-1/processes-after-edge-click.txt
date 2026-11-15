@@ -1,0 +1,4 @@
+  PID  PPID STAT     ELAPSED CMD
+19483     1 S          05:39 /usr/bin/python3 /userdata/helmet-validation/20261115-native-app-v2/src/app/launch.py --root /userdata/helmet-validation/20261115-native-app-v2 --tab detection
+19492 19483 Sl         05:38 /usr/bin/python3 /userdata/helmet-validation/20261115-native-app-v2/src/app/service.py --root /userdata/helmet-validation/20261115-native-app-v2 --port 0 --token-file /userdata/helmet-validation/20261115-native-app-v2/app-state/session-b_dq_lnd/token --ready-file /userdata/helmet-validation/20261115-native-app-v2/app-state/session-b_dq_lnd/ready.json
+19508 19483 Sl         05:36 /usr/bin/qmlscene /userdata/helmet-validation/20261115-native-app-v2/app-state/session-b_dq_lnd/App.qml

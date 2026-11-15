@@ -1,0 +1,8 @@
+{
+  "source_url": "https://github.com/njvisionpower/Safety-Helmet-Wearing-Dataset",
+  "license": "SHWD repository MIT; constituent SCUT-HEAD academic research use; underlying image rights not blanket MIT",
+  "origin": "first 200 IDs of original VOC2028 ImageSets/Main/test.txt, fixed before inference",
+  "independence": "unknown",
+  "interpretation": "same-distribution diagnostic; community model likely trained on SHWD; not certified holdout",
+  "scene_evidence": "no scene IDs; original test sample held as one unknown-scene group; no artificial scene split"
+}

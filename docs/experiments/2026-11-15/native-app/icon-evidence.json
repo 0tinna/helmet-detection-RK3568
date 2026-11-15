@@ -1,0 +1,20 @@
+{
+  "installed": true,
+  "command": "python3 src/app/install.py --root /userdata/helmet-validation/20261114-native-app --vendor-icons",
+  "config": "/opt/ui/src/ATK-DLRK3568/apk3.cfg",
+  "entries": [
+    {
+      "name": "安全帽检测",
+      "command": "/opt/ui/src/apps/helmet_app"
+    },
+    {
+      "name": "无线网络",
+      "command": "/opt/ui/src/apps/helmet_wifi"
+    }
+  ],
+  "backup": "/userdata/helmet-validation/20261114-native-app/vendor-entry/apk3-20261114T172638777625Z.cfg",
+  "vendor_entry_execution_exit": 0,
+  "actual_human_icon_tap": false,
+  "desktop_restarted": false,
+  "requires_vendor_home_reload": true
+}

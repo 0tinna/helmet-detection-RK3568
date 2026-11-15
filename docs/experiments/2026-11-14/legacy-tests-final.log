@@ -1,0 +1,30 @@
+test_complete_comparison_succeeds (test_comparison.ComparisonRegressions) ... ok
+test_invalid_latency_is_rejected (test_comparison.ComparisonRegressions) ... ok
+test_missing_model_is_rejected (test_comparison.ComparisonRegressions) ... ok
+test_clip_bounded_jitter_coverage_uses_actual_result_expiry (test_outputs.OutputTests) ... ok
+test_clip_finalizes_after_deadline_without_new_packets (test_outputs.OutputTests) ... ok
+test_clip_future_packet_cannot_fill_last_interval_gap (test_outputs.OutputTests) ... ok
+test_clip_marks_early_stop_and_rejects_stale_alarm (test_outputs.OutputTests) ... ok
+test_clip_outage_gap_is_masked_and_not_complete (test_outputs.OutputTests) ... ok
+test_clip_queue_must_have_positive_finite_capacity (test_outputs.OutputTests) ... ok
+test_clip_subframe_fault_in_pre_window_is_incomplete (test_outputs.OutputTests) ... ok
+test_event_clip_has_pre_post_coverage_and_is_playable (test_outputs.OutputTests) ... ok
+test_expiry_preserves_live_fault_reason (test_outputs.OutputTests) ... ok
+test_fault_clears_old_healthy_frame_and_alarm (test_outputs.OutputTests) ... ok
+test_fresh_standalone_web_frame_expires_later (test_outputs.OutputTests) ... ok
+test_header_failure_releases_stream_client_slot (test_outputs.OutputTests) ... ok
+test_http_publishes_actual_jpeg_and_status (test_outputs.OutputTests) ... ok
+test_live_status_provider_expires_stored_frame (test_outputs.OutputTests) ... ok
+test_local_deadline_expires_jpeg_without_state_callback (test_outputs.OutputTests) ... ok
+test_page_hides_pending_and_failed_reconnected_image (test_outputs.OutputTests) ... skipped 'Node required to execute actual page JavaScript'
+test_page_reconnects_stream_after_fault_recovery (test_outputs.OutputTests) ... skipped 'Node required to execute actual page JavaScript'
+test_stream_disconnect_does_not_block_shutdown (test_outputs.OutputTests) ... ok
+test_corrupt_source_is_rejected_within_deadline (test_regressions.CLIRegressions) ... ok
+test_empty_detections_keep_all_test_images (test_regressions.CLIRegressions) ... ok
+test_missing_detection_counts_as_missed_object (test_regressions.CLIRegressions) ... ok
+test_realtime_help_starts (test_regressions.CLIRegressions) ... ok
+
+----------------------------------------------------------------------
+Ran 25 tests in 8.242s
+
+OK (skipped=2)

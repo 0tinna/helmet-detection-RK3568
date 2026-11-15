@@ -1,0 +1,162 @@
+{
+  "elapsed_seconds": 0.5560836639997433,
+  "counters": {
+    "captured": 0,
+    "consumed": 0,
+    "detected": 0,
+    "overwritten": 0,
+    "active_skip": 0,
+    "read_failure": 0,
+    "displayed": 0,
+    "output": 0,
+    "output_overwritten": 0,
+    "detection_failure": 0,
+    "pending_capture": 0,
+    "pending_output": 0
+  },
+  "full_session": {
+    "prep_ms": {
+      "count": 0,
+      "mean": null,
+      "p50": null,
+      "p95": null,
+      "p99": null
+    },
+    "infer_ms": {
+      "count": 0,
+      "mean": null,
+      "p50": null,
+      "p95": null,
+      "p99": null
+    },
+    "post_ms": {
+      "count": 0,
+      "mean": null,
+      "p50": null,
+      "p95": null,
+      "p99": null
+    },
+    "capture_to_output_ms": {
+      "count": 0,
+      "mean": null,
+      "p50": null,
+      "p95": null,
+      "p99": null
+    },
+    "sink_ms": {
+      "count": 0,
+      "mean": null,
+      "p50": null,
+      "p95": null,
+      "p99": null
+    },
+    "capture_to_sink_complete_ms": {
+      "count": 0,
+      "mean": null,
+      "p50": null,
+      "p95": null,
+      "p99": null
+    }
+  },
+  "full_session_fps": {
+    "captured": 0.0,
+    "consumed": 0.0,
+    "detected": 0.0,
+    "displayed": 0.0,
+    "output": 0.0
+  },
+  "sliding_window": {
+    "seconds": 5.0,
+    "observed_seconds": 0.5560836639997433,
+    "fps": {
+      "captured": 0.0,
+      "consumed": 0.0,
+      "detected": 0.0,
+      "displayed": 0.0,
+      "output": 0.0
+    },
+    "timings": {
+      "prep_ms": {
+        "count": 0,
+        "mean": null,
+        "p50": null,
+        "p95": null,
+        "p99": null
+      },
+      "infer_ms": {
+        "count": 0,
+        "mean": null,
+        "p50": null,
+        "p95": null,
+        "p99": null
+      },
+      "post_ms": {
+        "count": 0,
+        "mean": null,
+        "p50": null,
+        "p95": null,
+        "p99": null
+      },
+      "capture_to_output_ms": {
+        "count": 0,
+        "mean": null,
+        "p50": null,
+        "p95": null,
+        "p99": null
+      },
+      "sink_ms": {
+        "count": 0,
+        "mean": null,
+        "p50": null,
+        "p95": null,
+        "p99": null
+      },
+      "capture_to_sink_complete_ms": {
+        "count": 0,
+        "mean": null,
+        "p50": null,
+        "p95": null,
+        "p99": null
+      }
+    }
+  },
+  "runtime_samples": [
+    {
+      "monotonic": 22892.015917584,
+      "cpu_percent": 127.47771777710378,
+      "rss_bytes": 71815168,
+      "temperature_c": {
+        "/sys/class/thermal/thermal_zone0/temp": 51.25,
+        "/sys/class/thermal/thermal_zone1/temp": 48.888
+      },
+      "npu_frequency_hz": {
+        "/sys/class/devfreq/fde40000.npu/cur_freq": 900000000
+      },
+      "npu_load": "NPU load:  0%"
+    }
+  ],
+  "state": "fault",
+  "reason": "pipeline: cannot open video source: /userdata/helmet-validation/20261114/faultsuite-1/bad-source/corrupt.mp4",
+  "model": "/userdata/helmet-validation/20261114/models/helmet_416x416.rknn",
+  "model_sha256": null,
+  "source": "/userdata/helmet-validation/20261114/faultsuite-1/bad-source/corrupt.mp4",
+  "class_order": [
+    "person",
+    "hat"
+  ],
+  "input_size": [
+    416,
+    416
+  ],
+  "thresholds": {
+    "conf": 0.35,
+    "nms": 0.45
+  },
+  "replay_fps": 10.0,
+  "result_ttl": 1.0,
+  "runtime": {
+    "python": "3.10.5 (main, Jul  5 2024, 11:06:31) [GCC 10.4.0]",
+    "opencv": "4.5.4",
+    "numpy": "1.21.2"
+  }
+}

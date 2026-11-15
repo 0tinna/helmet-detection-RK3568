@@ -1,0 +1,108 @@
+{
+  "scope": "existing CLI core real USB camera short run; no resident/UI/physical/human or accuracy acceptance",
+  "raw_run": "camera-npu-short-1/run.json",
+  "raw_session": "camera-npu-short-1/session.json",
+  "passed": true,
+  "errors": [],
+  "elapsed_seconds": 12.071305765988654,
+  "counters": {
+    "captured": 279,
+    "consumed": 174,
+    "detected": 174,
+    "overwritten": 104,
+    "active_skip": 0,
+    "read_failure": 0,
+    "displayed": 0,
+    "output": 173,
+    "output_overwritten": 0,
+    "detection_failure": 0,
+    "pending_capture": 1,
+    "pending_output": 1
+  },
+  "detected_fps": 14.414347823932301,
+  "output_fps": 14.331506744484415,
+  "outputs_with_targets": 7,
+  "raw_inventory": [
+    {
+      "path": "frames.jsonl",
+      "bytes": 303252,
+      "sha256": "977a29f5e249fc0b24f93c814f91a0a46b42e359b615e163c5c5547433cf64f9"
+    },
+    {
+      "path": "frames.jsonl.resources.jsonl",
+      "bytes": 3426,
+      "sha256": "00ebe4865c14a6a9d0c1aba9773e8784ab0f4df81acf1d1e42a1ac40f2ddd605"
+    },
+    {
+      "path": "run.json",
+      "bytes": 1343,
+      "sha256": "9a5a836c4cabf3fcba489de9af6f5a6641fa7875b674c658f2bde57b3bde0906"
+    },
+    {
+      "path": "screens/periodic_127_1794707659869051078_4a8bbea9.jpg",
+      "bytes": 77617,
+      "sha256": "5b35fef1d464e658d26462d0de8813586360e2b89fef68325458297e83d7fe02"
+    },
+    {
+      "path": "screens/periodic_127_1794707659869051078_4a8bbea9.json",
+      "bytes": 1482,
+      "sha256": "5724f8f5bb5a9a144f1da66f595370c3df7843f5d104aac4eb5e1c2377223420"
+    },
+    {
+      "path": "screens/periodic_189_1794707661932662633_8515d996.jpg",
+      "bytes": 77274,
+      "sha256": "f90c279c1693e3e9146f617b43bb007c1e197c252a243fdb8397bbacfdd88650"
+    },
+    {
+      "path": "screens/periodic_189_1794707661932662633_8515d996.json",
+      "bytes": 1485,
+      "sha256": "b4b8688f5f387139ebad4982b02f6578ec09d144e368d79c48142ec1a97ffdce"
+    },
+    {
+      "path": "screens/periodic_1_1794707655766781019_09ef0e6d.jpg",
+      "bytes": 64385,
+      "sha256": "a53e3c68d86e305be71e8220489c3a1f37e22f1c5bb7c37df1b885db2ddd79d9"
+    },
+    {
+      "path": "screens/periodic_1_1794707655766781019_09ef0e6d.json",
+      "bytes": 1482,
+      "sha256": "a284e74f0f5391688e1eca0f5cba847f90e941894fd62633a97b6094219a50b2"
+    },
+    {
+      "path": "screens/periodic_250_1794707663965286386_beeff82c.jpg",
+      "bytes": 77544,
+      "sha256": "404808a1a75936863434308c95360ce04769051330e7c542a4a05c02626713ef"
+    },
+    {
+      "path": "screens/periodic_250_1794707663965286386_beeff82c.json",
+      "bytes": 1483,
+      "sha256": "ffe916088428f91b6cbeac199d971d818f4550fd85df8e2d35f8214704ede9cb"
+    },
+    {
+      "path": "screens/periodic_65_1794707657818987557_e8b4e378.jpg",
+      "bytes": 77457,
+      "sha256": "959f10e664175901a1ad20ca3ac322bf73609756bd96d42d64f1003924416604"
+    },
+    {
+      "path": "screens/periodic_65_1794707657818987557_e8b4e378.json",
+      "bytes": 1484,
+      "sha256": "466786ac64eb6cd2090d9d2fb6685d5c10df368c5d7a6af7831a1516ba1709f9"
+    },
+    {
+      "path": "session.json",
+      "bytes": 9171,
+      "sha256": "282790eccbfa59e70cbe6f09665d8fd668f53a7e7fbcda2b827b78d7e2573bc6"
+    },
+    {
+      "path": "stderr.log",
+      "bytes": 179,
+      "sha256": "ffa7deca734b937096835e6fe52111b2ef5e8955a6a3d4155cda85c688914e56"
+    },
+    {
+      "path": "stdout.log",
+      "bytes": 784,
+      "sha256": "79d57f4a5a4df630493d7b07db2f7256b9ec5dcadbbeb5ce589a6e4bcec7e409"
+    }
+  ],
+  "npu_note": "run retained immediate 25% post-exit sampling; later fresh native SSH observation showed 0%"
+}

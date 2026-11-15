@@ -1,0 +1,2 @@
+launcher_pid=6029
+ready=/userdata/helmet-validation/20261115-native-app-v2/app-state/session-0np0p6oz/ready.json

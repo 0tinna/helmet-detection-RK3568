@@ -1,0 +1,49 @@
+{
+  "session": "cce9979a86c5499fb43d456353290f75",
+  "manager": {
+    "pid": 12880,
+    "starttime": 10160956,
+    "uid": 0
+  },
+  "service": {
+    "pid": 12882,
+    "starttime": 10161039,
+    "uid": 0
+  },
+  "ui": {
+    "pid": 12906,
+    "starttime": 10161265,
+    "uid": 0
+  },
+  "manager_alive": false,
+  "service_alive": false,
+  "ui_alive": false,
+  "exit_receipt": {
+    "cleanup_completed": true,
+    "code_id": "7cad142a4c5610dca2110fe7c22342c870317e322f28817ee1ccf9199b312302",
+    "kind": "resident-terminal-v4",
+    "manager": {
+      "pid": 12880,
+      "starttime": 10160956,
+      "uid": 0
+    },
+    "normal_stop": "normal_term",
+    "phase": "completed",
+    "resource_lease_released": true,
+    "root": "/userdata/helmet-validation/20261115-native-app-v4-r2-local-2",
+    "service": {
+      "pid": 12882,
+      "starttime": 10161039,
+      "uid": 0
+    },
+    "service_exit": 0,
+    "session": "cce9979a86c5499fb43d456353290f75",
+    "terminal_at": 101891.087355662,
+    "ui": {
+      "pid": 12906,
+      "starttime": 10161265,
+      "uid": 0
+    },
+    "version": "resident-v4"
+  }
+}

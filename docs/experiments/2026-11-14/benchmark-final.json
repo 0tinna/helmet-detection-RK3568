@@ -1,0 +1,12 @@
+[
+ {
+  "model": "helmet_416x416.rknn",
+  "size": "416x416",
+  "infer_ms": 42.2,
+  "post_ms": 13.91,
+  "e2e_ms": 65.87,
+  "fps": 15.2,
+  "temp": 50.0,
+  "loops": 50
+ }
+]

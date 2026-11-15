@@ -1,0 +1,181 @@
+{
+  "schema_version": 1,
+  "kind": "longrun",
+  "status": "completed",
+  "run_id": "longrun-1",
+  "pid": 1995,
+  "host": "ATK-DLRK3568",
+  "platform": "Linux-5.10.160-aarch64-with-glibc2.37",
+  "python": "3.10.5 (main, Jul  5 2024, 11:06:31) [GCC 10.4.0]",
+  "command": [
+    "/usr/bin/python3",
+    "/userdata/helmet-validation/20261114/verify_runtime.py",
+    "longrun",
+    "--runtime-dir",
+    "/userdata/helmet-validation/20261114/src",
+    "--model",
+    "/userdata/helmet-validation/20261114/models/helmet_416x416.rknn",
+    "--source",
+    "/userdata/helmet-validation/20261114/input/construction-replay.avi",
+    "--output-root",
+    "/userdata/helmet-validation/20261114",
+    "--run-id",
+    "longrun-1",
+    "--duration",
+    "1800",
+    "--replay-fps",
+    "10",
+    "--save-interval",
+    "30"
+  ],
+  "started_wall_time": "2026-11-14T07:11:16.191500+00:00",
+  "started_monotonic": 20435.462319642,
+  "requested_duration_seconds": 1800.0,
+  "replay_fps": 10.0,
+  "result_ttl": 1,
+  "source_kind": "video-replay",
+  "input_description": "file video replay; camera not tested",
+  "physical_camera_tested": false,
+  "backend": "rknnlite",
+  "exit_code": 0,
+  "governors": [
+    {
+      "path": "/sys/class/devfreq/fde40000.npu/governor",
+      "before": "rknpu_ondemand",
+      "requested": null,
+      "after": "rknpu_ondemand",
+      "restore_success": true
+    }
+  ],
+  "model": {
+    "path": "/userdata/helmet-validation/20261114/models/helmet_416x416.rknn",
+    "sha256": "7e0eefe4bfe86627bb6b58161cacca10912e0dbe1ba2513f58d091c40b26cd48",
+    "bytes": 8110065
+  },
+  "input": {
+    "path": "/userdata/helmet-validation/20261114/input/construction-replay.avi",
+    "sha256": "f22897e1ebb40cc919caab335ee4b436d28ebaf0a138eb8b16c63166184af5cc",
+    "bytes": 82400444
+  },
+  "sources": {
+    "pipeline_runtime.py": {
+      "path": "/userdata/helmet-validation/20261114/src/pipeline_runtime.py",
+      "sha256": "03bf7f4439b33069509d063cc2efc1e4a85776ae1097e531110f48981ab7a2cc",
+      "bytes": 34944
+    },
+    "sources.py": {
+      "path": "/userdata/helmet-validation/20261114/src/sources.py",
+      "sha256": "ea89d66fdefb2bc429ca74efa0437a3c0a8aab672a856078fc15afccfe3b31c9",
+      "bytes": 6717
+    },
+    "telemetry.py": {
+      "path": "/userdata/helmet-validation/20261114/src/telemetry.py",
+      "sha256": "0c9cf57fa3129432b78f2bac6c1bfa9ba091b50cd02760af9be848cf2e1c960e",
+      "bytes": 9089
+    },
+    "alarm.py": {
+      "path": "/userdata/helmet-validation/20261114/src/alarm.py",
+      "sha256": "d3e6d68c7b17f5508f0d697e96998f556f224f9f5067169d66c35972b3a023d2",
+      "bytes": 4207
+    },
+    "yolo_post.py": {
+      "path": "/userdata/helmet-validation/20261114/src/yolo_post.py",
+      "sha256": "b708fa95f4d71dd9b4ecb656d9626ac9fd2c78f4a7b46add3091ae5ed38e6903",
+      "bytes": 5642
+    },
+    "verify_runtime.py": {
+      "path": "/userdata/helmet-validation/20261114/verify_runtime.py",
+      "sha256": "af0926238eed36a279f5871cc4528ece269761e6c66109378c5a17b08af58458",
+      "bytes": 17774
+    }
+  },
+  "input_size": [
+    416,
+    416
+  ],
+  "thresholds": {
+    "conf": 0.35,
+    "nms": 0.45,
+    "skip": 0
+  },
+  "class_order": [
+    "person",
+    "hat"
+  ],
+  "actual_engine_calls": 17559,
+  "finished_wall_time": "2026-11-14T07:41:20.492196+00:00",
+  "elapsed_seconds": 1804.3006976690012,
+  "signal": null,
+  "artifacts": {
+    "frames.jsonl": {
+      "path": "/userdata/helmet-validation/20261114/longrun-1/frames.jsonl",
+      "sha256": "f1a74418754ea98cbf7ed6424b7e8a76c9e3756ab357aadeba620915719f7bbd",
+      "bytes": 65450132
+    },
+    "events.jsonl": {
+      "path": "/userdata/helmet-validation/20261114/longrun-1/events.jsonl",
+      "sha256": "71f8d39e154c25e31ed772125681fffdd39d8c95f4e0dd4968e4f9244b179bb8",
+      "bytes": 25751
+    },
+    "resources.jsonl": {
+      "path": "/userdata/helmet-validation/20261114/longrun-1/resources.jsonl",
+      "sha256": "238b2f16e8da19f8343df1a6ed2f0fac08186301d7ec3a93019e564d5a1492ae",
+      "bytes": 654544
+    },
+    "session.json": {
+      "path": "/userdata/helmet-validation/20261114/longrun-1/session.json",
+      "sha256": "fa74876e9fd19e284bfc4c0854442ce8e95a419e2807cb65ef42321f7ffa47ca",
+      "bytes": 711689
+    }
+  },
+  "validation": {
+    "passed": true,
+    "errors": [],
+    "metrics": {
+      "capture_to_output_ms": {
+        "count": 17559,
+        "mean": 117.7106367660076,
+        "p50": 114.75912399691879,
+        "p95": 166.830043900336,
+        "p99": 201.96468682050133
+      },
+      "sink_ms": {
+        "count": 17559,
+        "mean": 0.025125520884901,
+        "p50": 0.02362500163144432,
+        "p95": 0.03470899901003577,
+        "p99": 0.05374408152419921
+      },
+      "capture_to_sink_complete_ms": {
+        "count": 17559,
+        "mean": 118.06264289141635,
+        "p50": 115.12201099685626,
+        "p95": 167.1262601976195,
+        "p99": 202.26703116139063
+      },
+      "prep_ms": {
+        "count": 17559,
+        "mean": 13.740946605509764,
+        "p50": 13.620288998936303,
+        "p95": 18.32944479829166,
+        "p99": 21.867408420075648
+      },
+      "infer_ms": {
+        "count": 17559,
+        "mean": 49.504067604485684,
+        "p50": 46.59345600157394,
+        "p95": 72.88402290250815,
+        "p99": 80.67260408184664
+      },
+      "post_ms": {
+        "count": 17559,
+        "mean": 29.093606380425435,
+        "p50": 28.50649600077304,
+        "p95": 42.030954500296474,
+        "p99": 53.089668861357474
+      }
+    },
+    "physical_camera_tested": false,
+    "ssh_survival": "not_observed"
+  }
+}

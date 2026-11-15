@@ -1,0 +1,96 @@
+{
+  "files": {
+    "README.md": {
+      "bytes": 19560,
+      "sha256": "39043649bc2db88a3618a36a4a99f35684def59f24a35ebd91399a6828e2c851"
+    },
+    "docs/阅读导航.md": {
+      "bytes": 7073,
+      "sha256": "3f1b431ffdc4bad573358b17226f64969230c90d187fba82d6193e178e7341a2"
+    },
+    "docs/项目蓝图与完整手册.md": {
+      "bytes": 64712,
+      "sha256": "a6315c66eac6476810bb295799d0111883bcd6a8d7c68c40a65e83173364b7b9"
+    },
+    "docs/deliverables/README.md": {
+      "bytes": 2591,
+      "sha256": "64bec78f5bb64bf05df900ad921d6dc41f989a6ef1e118a887e2ddb9bf1efe08"
+    },
+    "docs/experiments/2026-11-15/阶段总结.md": {
+      "bytes": 19211,
+      "sha256": "235d16b5f1f690aefbe445da7692c5d13737738dd34565b6831347b681758dd6"
+    },
+    "docs/proposal/开题报告正文-建议稿.md": {
+      "bytes": 22414,
+      "sha256": "12c80c4727c2c22b860f5f10f6c1c251aae312a53107d994a9ce85503c245cde"
+    },
+    "docs/proposal/2026-11-14-开题方向优化与陈述框架.md": {
+      "bytes": 16371,
+      "sha256": "c8604021c0a0485974cefb0b2d5005064be0b5b88cb61a7ab98ed6579b2b42a9"
+    },
+    "docs/experiments/2026-11-15/原生App30分钟验证报告.md": {
+      "bytes": 12327,
+      "sha256": "2bf4d463899ad35b4816428370461e1c86b9b1be41212482357be532ed4935bd"
+    },
+    "docs/experiments/2026-11-15/原生App安装与独立运行验证.md": {
+      "bytes": 10270,
+      "sha256": "437dea6716f1d4ec5178bd1afe6962751929c0ead7f0a6763d016cdc48832d3d"
+    },
+    "docs/proposal/开题PPT逐页内容与演讲稿.md": {
+      "bytes": 16978,
+      "sha256": "64439622aefcd5fbecbf64e783330c3a723151d1ff566e82fc8942a41bfa347a"
+    },
+    "docs/superpowers/plans/2026-11-14-graduation-scope.md": {
+      "bytes": 15468,
+      "sha256": "1c537f61675fd0191f1bb869b2dd0086fb06854e129af39399354673950df3b8"
+    },
+    "docs/superpowers/plans/2026-11-14-native-board-app.md": {
+      "bytes": 3493,
+      "sha256": "cad4a86f389aa1fe39f69e3451fcade2b78c28a25c0c65bde319d2fdf3004b9a"
+    },
+    ".superpowers/sdd/2026-11-14-graduation-scope/progress.md": {
+      "bytes": 32669,
+      "sha256": "5b49c882b2285b316ee6bc8b58266c05e749782f9e0b89541f00531e5f864512"
+    },
+    "docs/app/板端App使用手册.md": {
+      "bytes": 18114,
+      "sha256": "feba9dbdad0024d2404ef0c3f99884df4d2aeaf9262714a4c0501bf5aaa66cf5"
+    },
+    "docs/app/离线更新与图标安装.md": {
+      "bytes": 12244,
+      "sha256": "dd440c02241f97c2cfbc02b84f7e209099a179059446c3273b84392cd341a212"
+    },
+    "docs/deliverables/项目手册.html": {
+      "bytes": 86448,
+      "sha256": "d578046de518c688fad391d4cf39dfd535374036cbb8476400e09d962a819ab3"
+    },
+    "docs/deliverables/开题演示.html": {
+      "bytes": 118006,
+      "sha256": "eaad9739a789d24718089dde8bbef6d4b16295b441eefb6072728fda13007437"
+    }
+  },
+  "local_links": 787,
+  "fragments": 60,
+  "external_links": 21,
+  "errors": [],
+  "browser": {
+    "passed": true,
+    "slides": 12,
+    "overflowing_slides": [],
+    "keyboard": "slide-2",
+    "notes": "block",
+    "manual": {
+      "h2": 27,
+      "tables": 12,
+      "textLength": 32503,
+      "missingAnchors": [],
+      "horizontalOverflow": false
+    },
+    "mobile": {
+      "horizontalOverflow": false
+    },
+    "external_asset_requests": 0,
+    "console_errors": 0
+  },
+  "passed": true
+}

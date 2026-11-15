@@ -1,0 +1,429 @@
+﻿{
+    "nextPageTokenNullable":  "CfDJ8CXkJvnxKG5Ktgac76JjV5ES8ZjPUKgb4n-bWDKIAR4rqRNOt96QSl3GlF54gVsEKxDWjV3HPR7mJeZv-ewDmfAcfhcoqDgqTYgBPyS2Hj3A6T5w98FGng1fZrjFxW9XvD4Qh7glmN3ukzR4wIHrM3knAEIa2Ic",
+    "datasetFiles":  [
+                         {
+                             "nameNullable":  "VOC2028/Annotations/000000.xml",
+                             "ref":  "",
+                             "datasetRef":  "",
+                             "hasDatasetRef":  false,
+                             "ownerRef":  "",
+                             "hasOwnerRef":  false,
+                             "name":  "VOC2028/Annotations/000000.xml",
+                             "hasName":  true,
+                             "creationDate":  "2024-12-06T11:36:16.12Z",
+                             "description":  "",
+                             "hasDescription":  false,
+                             "fileType":  "",
+                             "hasFileType":  false,
+                             "url":  "",
+                             "hasUrl":  false,
+                             "totalBytes":  508,
+                             "columns":  [
+
+                                         ]
+                         },
+                         {
+                             "nameNullable":  "VOC2028/Annotations/000002.xml",
+                             "ref":  "",
+                             "datasetRef":  "",
+                             "hasDatasetRef":  false,
+                             "ownerRef":  "",
+                             "hasOwnerRef":  false,
+                             "name":  "VOC2028/Annotations/000002.xml",
+                             "hasName":  true,
+                             "creationDate":  "2024-12-06T11:36:16.12Z",
+                             "description":  "",
+                             "hasDescription":  false,
+                             "fileType":  "",
+                             "hasFileType":  false,
+                             "url":  "",
+                             "hasUrl":  false,
+                             "totalBytes":  2777,
+                             "columns":  [
+
+                                         ]
+                         },
+                         {
+                             "nameNullable":  "VOC2028/Annotations/000003.xml",
+                             "ref":  "",
+                             "datasetRef":  "",
+                             "hasDatasetRef":  false,
+                             "ownerRef":  "",
+                             "hasOwnerRef":  false,
+                             "name":  "VOC2028/Annotations/000003.xml",
+                             "hasName":  true,
+                             "creationDate":  "2024-12-06T11:36:16.131Z",
+                             "description":  "",
+                             "hasDescription":  false,
+                             "fileType":  "",
+                             "hasFileType":  false,
+                             "url":  "",
+                             "hasUrl":  false,
+                             "totalBytes":  1897,
+                             "columns":  [
+
+                                         ]
+                         },
+                         {
+                             "nameNullable":  "VOC2028/Annotations/000004.xml",
+                             "ref":  "",
+                             "datasetRef":  "",
+                             "hasDatasetRef":  false,
+                             "ownerRef":  "",
+                             "hasOwnerRef":  false,
+                             "name":  "VOC2028/Annotations/000004.xml",
+                             "hasName":  true,
+                             "creationDate":  "2024-12-06T11:36:16.138Z",
+                             "description":  "",
+                             "hasDescription":  false,
+                             "fileType":  "",
+                             "hasFileType":  false,
+                             "url":  "",
+                             "hasUrl":  false,
+                             "totalBytes":  1002,
+                             "columns":  [
+
+                                         ]
+                         },
+                         {
+                             "nameNullable":  "VOC2028/Annotations/000005.xml",
+                             "ref":  "",
+                             "datasetRef":  "",
+                             "hasDatasetRef":  false,
+                             "ownerRef":  "",
+                             "hasOwnerRef":  false,
+                             "name":  "VOC2028/Annotations/000005.xml",
+                             "hasName":  true,
+                             "creationDate":  "2024-12-06T11:36:16.131Z",
+                             "description":  "",
+                             "hasDescription":  false,
+                             "fileType":  "",
+                             "hasFileType":  false,
+                             "url":  "",
+                             "hasUrl":  false,
+                             "totalBytes":  508,
+                             "columns":  [
+
+                                         ]
+                         },
+                         {
+                             "nameNullable":  "VOC2028/Annotations/000006.xml",
+                             "ref":  "",
+                             "datasetRef":  "",
+                             "hasDatasetRef":  false,
+                             "ownerRef":  "",
+                             "hasOwnerRef":  false,
+                             "name":  "VOC2028/Annotations/000006.xml",
+                             "hasName":  true,
+                             "creationDate":  "2024-12-06T11:36:16.181Z",
+                             "description":  "",
+                             "hasDescription":  false,
+                             "fileType":  "",
+                             "hasFileType":  false,
+                             "url":  "",
+                             "hasUrl":  false,
+                             "totalBytes":  1889,
+                             "columns":  [
+
+                                         ]
+                         },
+                         {
+                             "nameNullable":  "VOC2028/Annotations/000007.xml",
+                             "ref":  "",
+                             "datasetRef":  "",
+                             "hasDatasetRef":  false,
+                             "ownerRef":  "",
+                             "hasOwnerRef":  false,
+                             "name":  "VOC2028/Annotations/000007.xml",
+                             "hasName":  true,
+                             "creationDate":  "2024-12-06T11:36:16.131Z",
+                             "description":  "",
+                             "hasDescription":  false,
+                             "fileType":  "",
+                             "hasFileType":  false,
+                             "url":  "",
+                             "hasUrl":  false,
+                             "totalBytes":  1893,
+                             "columns":  [
+
+                                         ]
+                         },
+                         {
+                             "nameNullable":  "VOC2028/Annotations/000008.xml",
+                             "ref":  "",
+                             "datasetRef":  "",
+                             "hasDatasetRef":  false,
+                             "ownerRef":  "",
+                             "hasOwnerRef":  false,
+                             "name":  "VOC2028/Annotations/000008.xml",
+                             "hasName":  true,
+                             "creationDate":  "2024-12-06T11:36:16.138Z",
+                             "description":  "",
+                             "hasDescription":  false,
+                             "fileType":  "",
+                             "hasFileType":  false,
+                             "url":  "",
+                             "hasUrl":  false,
+                             "totalBytes":  1177,
+                             "columns":  [
+
+                                         ]
+                         },
+                         {
+                             "nameNullable":  "VOC2028/Annotations/000009.xml",
+                             "ref":  "",
+                             "datasetRef":  "",
+                             "hasDatasetRef":  false,
+                             "ownerRef":  "",
+                             "hasOwnerRef":  false,
+                             "name":  "VOC2028/Annotations/000009.xml",
+                             "hasName":  true,
+                             "creationDate":  "2024-12-06T11:36:16.131Z",
+                             "description":  "",
+                             "hasDescription":  false,
+                             "fileType":  "",
+                             "hasFileType":  false,
+                             "url":  "",
+                             "hasUrl":  false,
+                             "totalBytes":  1228,
+                             "columns":  [
+
+                                         ]
+                         },
+                         {
+                             "nameNullable":  "VOC2028/Annotations/000010.xml",
+                             "ref":  "",
+                             "datasetRef":  "",
+                             "hasDatasetRef":  false,
+                             "ownerRef":  "",
+                             "hasOwnerRef":  false,
+                             "name":  "VOC2028/Annotations/000010.xml",
+                             "hasName":  true,
+                             "creationDate":  "2024-12-06T11:36:16.154Z",
+                             "description":  "",
+                             "hasDescription":  false,
+                             "fileType":  "",
+                             "hasFileType":  false,
+                             "url":  "",
+                             "hasUrl":  false,
+                             "totalBytes":  507,
+                             "columns":  [
+
+                                         ]
+                         },
+                         {
+                             "nameNullable":  "VOC2028/Annotations/000011.xml",
+                             "ref":  "",
+                             "datasetRef":  "",
+                             "hasDatasetRef":  false,
+                             "ownerRef":  "",
+                             "hasOwnerRef":  false,
+                             "name":  "VOC2028/Annotations/000011.xml",
+                             "hasName":  true,
+                             "creationDate":  "2024-12-06T11:36:16.143Z",
+                             "description":  "",
+                             "hasDescription":  false,
+                             "fileType":  "",
+                             "hasFileType":  false,
+                             "url":  "",
+                             "hasUrl":  false,
+                             "totalBytes":  950,
+                             "columns":  [
+
+                                         ]
+                         },
+                         {
+                             "nameNullable":  "VOC2028/Annotations/000012.xml",
+                             "ref":  "",
+                             "datasetRef":  "",
+                             "hasDatasetRef":  false,
+                             "ownerRef":  "",
+                             "hasOwnerRef":  false,
+                             "name":  "VOC2028/Annotations/000012.xml",
+                             "hasName":  true,
+                             "creationDate":  "2024-12-06T11:36:16.143Z",
+                             "description":  "",
+                             "hasDescription":  false,
+                             "fileType":  "",
+                             "hasFileType":  false,
+                             "url":  "",
+                             "hasUrl":  false,
+                             "totalBytes":  952,
+                             "columns":  [
+
+                                         ]
+                         },
+                         {
+                             "nameNullable":  "VOC2028/Annotations/000013.xml",
+                             "ref":  "",
+                             "datasetRef":  "",
+                             "hasDatasetRef":  false,
+                             "ownerRef":  "",
+                             "hasOwnerRef":  false,
+                             "name":  "VOC2028/Annotations/000013.xml",
+                             "hasName":  true,
+                             "creationDate":  "2024-12-06T11:36:16.166Z",
+                             "description":  "",
+                             "hasDescription":  false,
+                             "fileType":  "",
+                             "hasFileType":  false,
+                             "url":  "",
+                             "hasUrl":  false,
+                             "totalBytes":  508,
+                             "columns":  [
+
+                                         ]
+                         },
+                         {
+                             "nameNullable":  "VOC2028/Annotations/000014.xml",
+                             "ref":  "",
+                             "datasetRef":  "",
+                             "hasDatasetRef":  false,
+                             "ownerRef":  "",
+                             "hasOwnerRef":  false,
+                             "name":  "VOC2028/Annotations/000014.xml",
+                             "hasName":  true,
+                             "creationDate":  "2024-12-06T11:36:16.143Z",
+                             "description":  "",
+                             "hasDescription":  false,
+                             "fileType":  "",
+                             "hasFileType":  false,
+                             "url":  "",
+                             "hasUrl":  false,
+                             "totalBytes":  776,
+                             "columns":  [
+
+                                         ]
+                         },
+                         {
+                             "nameNullable":  "VOC2028/Annotations/000015.xml",
+                             "ref":  "",
+                             "datasetRef":  "",
+                             "hasDatasetRef":  false,
+                             "ownerRef":  "",
+                             "hasOwnerRef":  false,
+                             "name":  "VOC2028/Annotations/000015.xml",
+                             "hasName":  true,
+                             "creationDate":  "2024-12-06T11:36:16.138Z",
+                             "description":  "",
+                             "hasDescription":  false,
+                             "fileType":  "",
+                             "hasFileType":  false,
+                             "url":  "",
+                             "hasUrl":  false,
+                             "totalBytes":  2804,
+                             "columns":  [
+
+                                         ]
+                         },
+                         {
+                             "nameNullable":  "VOC2028/Annotations/000016.xml",
+                             "ref":  "",
+                             "datasetRef":  "",
+                             "hasDatasetRef":  false,
+                             "ownerRef":  "",
+                             "hasOwnerRef":  false,
+                             "name":  "VOC2028/Annotations/000016.xml",
+                             "hasName":  true,
+                             "creationDate":  "2024-12-06T11:36:16.31Z",
+                             "description":  "",
+                             "hasDescription":  false,
+                             "fileType":  "",
+                             "hasFileType":  false,
+                             "url":  "",
+                             "hasUrl":  false,
+                             "totalBytes":  508,
+                             "columns":  [
+
+                                         ]
+                         },
+                         {
+                             "nameNullable":  "VOC2028/Annotations/000017.xml",
+                             "ref":  "",
+                             "datasetRef":  "",
+                             "hasDatasetRef":  false,
+                             "ownerRef":  "",
+                             "hasOwnerRef":  false,
+                             "name":  "VOC2028/Annotations/000017.xml",
+                             "hasName":  true,
+                             "creationDate":  "2024-12-06T11:36:16.176Z",
+                             "description":  "",
+                             "hasDescription":  false,
+                             "fileType":  "",
+                             "hasFileType":  false,
+                             "url":  "",
+                             "hasUrl":  false,
+                             "totalBytes":  727,
+                             "columns":  [
+
+                                         ]
+                         },
+                         {
+                             "nameNullable":  "VOC2028/Annotations/000019.xml",
+                             "ref":  "",
+                             "datasetRef":  "",
+                             "hasDatasetRef":  false,
+                             "ownerRef":  "",
+                             "hasOwnerRef":  false,
+                             "name":  "VOC2028/Annotations/000019.xml",
+                             "hasName":  true,
+                             "creationDate":  "2024-12-06T11:36:16.188Z",
+                             "description":  "",
+                             "hasDescription":  false,
+                             "fileType":  "",
+                             "hasFileType":  false,
+                             "url":  "",
+                             "hasUrl":  false,
+                             "totalBytes":  13911,
+                             "columns":  [
+
+                                         ]
+                         },
+                         {
+                             "nameNullable":  "VOC2028/Annotations/000020.xml",
+                             "ref":  "",
+                             "datasetRef":  "",
+                             "hasDatasetRef":  false,
+                             "ownerRef":  "",
+                             "hasOwnerRef":  false,
+                             "name":  "VOC2028/Annotations/000020.xml",
+                             "hasName":  true,
+                             "creationDate":  "2024-12-06T11:36:16.188Z",
+                             "description":  "",
+                             "hasDescription":  false,
+                             "fileType":  "",
+                             "hasFileType":  false,
+                             "url":  "",
+                             "hasUrl":  false,
+                             "totalBytes":  508,
+                             "columns":  [
+
+                                         ]
+                         },
+                         {
+                             "nameNullable":  "VOC2028/Annotations/000021.xml",
+                             "ref":  "",
+                             "datasetRef":  "",
+                             "hasDatasetRef":  false,
+                             "ownerRef":  "",
+                             "hasOwnerRef":  false,
+                             "name":  "VOC2028/Annotations/000021.xml",
+                             "hasName":  true,
+                             "creationDate":  "2024-12-06T11:36:16.188Z",
+                             "description":  "",
+                             "hasDescription":  false,
+                             "fileType":  "",
+                             "hasFileType":  false,
+                             "url":  "",
+                             "hasUrl":  false,
+                             "totalBytes":  1886,
+                             "columns":  [
+
+                                         ]
+                         }
+                     ],
+    "errorMessage":  "",
+    "hasErrorMessage":  false,
+    "nextPageToken":  "CfDJ8CXkJvnxKG5Ktgac76JjV5ES8ZjPUKgb4n-bWDKIAR4rqRNOt96QSl3GlF54gVsEKxDWjV3HPR7mJeZv-ewDmfAcfhcoqDgqTYgBPyS2Hj3A6T5w98FGng1fZrjFxW9XvD4Qh7glmN3ukzR4wIHrM3knAEIa2Ic",
+    "hasNextPageToken":  true
+}

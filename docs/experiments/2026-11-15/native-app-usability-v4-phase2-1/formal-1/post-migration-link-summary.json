@@ -1,0 +1,12 @@
+{
+  "same_session": true,
+  "same_manager": true,
+  "same_service": true,
+  "same_ui": true,
+  "session": "ee6aa024fe744b1e8b00d112d3f8e184",
+  "detection_ack_tab": "detection",
+  "wifi_intent_tab": "wifi",
+  "wifi_ack_tab": "wifi",
+  "root": "/userdata/helmet-validation/20261115-native-app-v4-r2-local-2",
+  "code_id": "7cad142a4c5610dca2110fe7c22342c870317e322f28817ee1ccf9199b312302"
+}

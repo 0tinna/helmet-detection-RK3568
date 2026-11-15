@@ -1,0 +1,101 @@
+{
+  "detection": {
+    "state": "no-detection",
+    "reason": "fresh detections",
+    "alarm_state": "unknown",
+    "frame_id": 162,
+    "valid": true,
+    "model": "/userdata/helmet-validation/20261115-native-app-v4-r2-local-2/models/helmet_416x416.rknn",
+    "model_sha256": "7e0eefe4bfe86627bb6b58161cacca10912e0dbe1ba2513f58d091c40b26cd48",
+    "source": "/dev/video10",
+    "monotonic": 101663.205403034,
+    "counters": {
+      "captured": 169,
+      "consumed": 73,
+      "detected": 72,
+      "overwritten": 95,
+      "active_skip": 0,
+      "read_failure": 0,
+      "displayed": 0,
+      "output": 69,
+      "output_overwritten": 2,
+      "detection_failure": 0
+    },
+    "fps": {
+      "captured": 29.8,
+      "consumed": 12.8,
+      "detected": 12.8,
+      "displayed": 0.0,
+      "output": 12.2
+    },
+    "latency": {
+      "prep_ms": {
+        "count": 64,
+        "mean": 14.164397812464813,
+        "p50": 13.878293000743724,
+        "p95": 20.774826288106848,
+        "p99": 24.56926096943788
+      },
+      "infer_ms": {
+        "count": 64,
+        "mean": 48.3120788760516,
+        "p50": 45.686816010857,
+        "p95": 65.78221584350104,
+        "p99": 79.52027134771922
+      },
+      "post_ms": {
+        "count": 64,
+        "mean": 9.463845843356467,
+        "p50": 10.142384999198839,
+        "p95": 21.95639749406835,
+        "p99": 25.975034176663023
+      },
+      "capture_to_output_ms": {
+        "count": 60,
+        "mean": 121.36229706763213,
+        "p50": 114.57922500267159,
+        "p95": 203.54743465941277,
+        "p99": 236.41463301479232
+      },
+      "sink_ms": {
+        "count": 60,
+        "mean": 47.21299080071427,
+        "p50": 41.0095295010251,
+        "p95": 94.13639735284958,
+        "p99": 109.52492645286836
+      },
+      "capture_to_sink_complete_ms": {
+        "count": 60,
+        "mean": 168.80351801761813,
+        "p50": 157.0758549933089,
+        "p95": 282.43748660970596,
+        "p99": 314.1174100614443
+      }
+    },
+    "source_epoch": 0,
+    "running": true,
+    "selection": {
+      "model": "helmet_416x416.rknn",
+      "source": "/dev/video10",
+      "profile": "responsive"
+    },
+    "generation": "74fe0e2721254d2d9c43dc87dfe467e5"
+  },
+  "wifi_action": {
+    "id": 0,
+    "kind": null,
+    "busy": false,
+    "status": "idle",
+    "result": null
+  },
+  "service": {
+    "state": "running",
+    "detection_alive": true,
+    "wifi_alive": false,
+    "detection_stopped": false,
+    "wifi_stopped": false,
+    "http_alive": true,
+    "cleanup_completed": false,
+    "received_at": 101663.24949133
+  }
+}

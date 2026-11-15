@@ -1,0 +1,7 @@
+qt.qpa.wayland: qtvirtualkeyboard currently is not supported at client-side, use QT_IM_MODULE=qtvirtualkeyboard at compositor-side.
+QStandardPaths: runtime directory '/var/run' is not a directory, but a symbolic link to a directory permissions 0755 owned by UID 0 GID 0
+file:///userdata/helmet-validation/20261114-native-app/src/app/qml/Main.qml:196:102: Unable to assign [undefined] to bool
+file:///userdata/helmet-validation/20261114-native-app/src/app/qml/Main.qml:168:21: QML Image: Error transferring http://127.0.0.1:44841/api/frame?token=zCN6yhF2e4rULYon4p-Fux7fIqdXfXvK5dvhziSLYos&nonce=1794669508003 - server replied: Service Unavailable
+file:///userdata/helmet-validation/20261114-native-app/src/app/qml/Main.qml:168:21: QML Image: Error transferring http://127.0.0.1:44841/api/frame?token=zCN6yhF2e4rULYon4p-Fux7fIqdXfXvK5dvhziSLYos&nonce=1794669509026 - server replied: Service Unavailable
+file:///userdata/helmet-validation/20261114-native-app/src/app/qml/Main.qml:168:21: QML Image: Error transferring http://127.0.0.1:44841/api/frame?token=zCN6yhF2e4rULYon4p-Fux7fIqdXfXvK5dvhziSLYos&nonce=1794669509203 - server replied: Service Unavailable
+file:///userdata/helmet-validation/20261114-native-app/src/app/qml/Main.qml:168:21: QML Image: Error transferring http://127.0.0.1:44841/api/frame?token=zCN6yhF2e4rULYon4p-Fux7fIqdXfXvK5dvhziSLYos&nonce=1794669509404 - server replied: Service Unavailable

@@ -1,0 +1,48 @@
+{
+  "cleanup": {
+    "engine_initialized": true,
+    "source_initialized": true,
+    "engine_released": true,
+    "source_released": true,
+    "capture_worker_alive": false,
+    "detect_worker_alive": false,
+    "shutdown_timeout": false,
+    "sdk_resources": [
+      {
+        "created": true,
+        "released": true,
+        "release_error": null
+      }
+    ]
+  },
+  "cleanup_errors": [],
+  "service": {
+    "detection_stopped": true,
+    "wifi_stopped": true,
+    "http_worker_alive": false,
+    "app_worker_alive": false
+  },
+  "gui": {
+    "requested": true,
+    "started": true,
+    "exited": true,
+    "pid": 7938,
+    "started_monotonic": 70819.975311947,
+    "executable": {
+      "path": "/usr/bin/qmlscene",
+      "sha256": "659dda55515abaed90cecb89b8c017085a3f5e3e6020ae1ba3348f5528f3d953",
+      "bytes": 51072
+    },
+    "wayland": {
+      "display": "wayland-0",
+      "runtime_dir": "/var/run",
+      "platform": "wayland"
+    },
+    "ready_monotonic": 70821.403494329,
+    "render_received_monotonic": 70830.634946865,
+    "returncode": 0,
+    "exited_monotonic": 70836.134921606,
+    "log_thread_alive": false,
+    "screen_saved": true
+  }
+}

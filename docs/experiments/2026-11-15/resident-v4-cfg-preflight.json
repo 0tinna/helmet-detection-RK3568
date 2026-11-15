@@ -1,0 +1,7 @@
+{
+  "path": "/opt/ui/src/ATK-DLRK3568/apk3.cfg",
+  "sha256": "f64a8e2f751ff777b98a36a13a0ad062e0812f2bd6ebd7914a512b772f507b11",
+  "method": "native SSH sha256sum; read only",
+  "historical_helper_matches": true,
+  "cfg_written": false
+}

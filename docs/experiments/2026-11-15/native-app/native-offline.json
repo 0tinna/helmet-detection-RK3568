@@ -1,0 +1,35 @@
+{
+  "command": [
+    "python3",
+    "/userdata/helmet-validation/20261114-native-app/src/app/launch.py",
+    "--root",
+    "/userdata/helmet-validation/20261114-native-app",
+    "--auto-demo",
+    "--smoke-seconds",
+    "12"
+  ],
+  "network_namespace_isolated": true,
+  "interfaces": [
+    {
+      "ifindex": 1,
+      "ifname": "lo",
+      "flags": [
+        "LOOPBACK",
+        "UP",
+        "LOWER_UP"
+      ],
+      "mtu": 65536,
+      "qdisc": "noqueue",
+      "operstate": "UNKNOWN",
+      "linkmode": "DEFAULT",
+      "group": "default",
+      "txqlen": 1000,
+      "link_type": "loopback",
+      "address": "00:00:00:00:00:00",
+      "broadcast": "00:00:00:00:00:00"
+    }
+  ],
+  "exit_code": 0,
+  "physical_camera_tested": false,
+  "human_display_verified": false
+}

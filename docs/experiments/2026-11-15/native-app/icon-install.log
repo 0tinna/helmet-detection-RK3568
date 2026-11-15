@@ -1,0 +1,6 @@
+/root/.local/share/applications/helmet-detection.desktop
+/root/.local/share/applications/helmet-wifi.desktop
+Native launcher: python3 /userdata/helmet-validation/20261114-native-app/src/app/launch.py --root /userdata/helmet-validation/20261114-native-app
+Vendor icons registered in /opt/ui/src/ATK-DLRK3568/apk3.cfg
+Configuration backup: /userdata/helmet-validation/20261114-native-app/vendor-entry/apk3-20261114T172638777625Z.cfg
+The vendor home screen reloads the icon list at its next start; no automatic restart was performed.

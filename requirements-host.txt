@@ -1,0 +1,8 @@
+# Windows/Linux host analysis only; no training packages or board installation.
+numpy==1.26.4
+opencv-python==4.10.0.84
+matplotlib==3.10.9
+Pillow==12.3.0
+# Optional ONNX conversion requires a separately prepared Linux x86_64
+# RKNN Toolkit2 2.3.2 environment; not installed by the runtime bundle.
+

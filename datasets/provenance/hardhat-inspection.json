@@ -1,0 +1,27 @@
+{
+  "source": "hardhat",
+  "images": 200,
+  "expected_images": 200,
+  "original_object_counts": {
+    "helmet": 694,
+    "head": 262,
+    "person": 35
+  },
+  "images_with_class": {
+    "head": 45,
+    "helmet": 176,
+    "person": 9
+  },
+  "mapped_classes": {
+    "head": "person",
+    "helmet": "hat",
+    "person": null
+  },
+  "dimensions": {
+    "416x416": 92,
+    "416x415": 96,
+    "415x416": 12
+  },
+  "problems": [],
+  "scene_grouping": "Original filenames and annotations lack camera/video/scene IDs. Exact hashes and dHash candidates are evidence only; singleton image groups do not establish scene independence."
+}

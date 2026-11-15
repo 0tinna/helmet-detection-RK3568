@@ -1,0 +1,2863 @@
+{
+  "schema_version": 2,
+  "kind": "native-app-longrun",
+  "cleanup_contract": "direct-sdk-v1",
+  "run_id": "native-longrun-1",
+  "status": "completed",
+  "pid": 8082,
+  "signal": null,
+  "signal_received_monotonic": null,
+  "started_monotonic": 71501.064004376,
+  "started_wall_time": "2026-11-14T21:22:21.793439+00:00",
+  "requested_duration_seconds": 1800.0,
+  "replay_fps": 20.0,
+  "result_ttl": 1.0,
+  "public_target_fps": 10.0,
+  "profile": "responsive",
+  "thresholds": {
+    "conf": 0.35,
+    "nms": 0.45,
+    "skip": 0
+  },
+  "input_size": [
+    416,
+    416
+  ],
+  "class_order": [
+    "person",
+    "hat"
+  ],
+  "source_kind": "video-replay",
+  "physical_camera_tested": false,
+  "human_display_tested": false,
+  "wifi_switching_tested": false,
+  "wifi_operations": [
+    "status"
+  ],
+  "probe_interval_seconds": 5.0,
+  "gui": {
+    "requested": true,
+    "started": true,
+    "exited": true,
+    "pid": 8095,
+    "started_monotonic": 71503.78303455,
+    "executable": {
+      "path": "/usr/bin/qmlscene",
+      "sha256": "659dda55515abaed90cecb89b8c017085a3f5e3e6020ae1ba3348f5528f3d953",
+      "bytes": 51072
+    },
+    "wayland": {
+      "display": "wayland-0",
+      "runtime_dir": "/var/run",
+      "platform": "wayland"
+    },
+    "ready_monotonic": 71505.197427125,
+    "render_received_monotonic": 73302.499799178,
+    "returncode": 0,
+    "exited_monotonic": 73308.232856579,
+    "log_thread_alive": false,
+    "screen_saved": true
+  },
+  "launch_path": "direct DetectionController/LocalService + private QML wrapper; nonstandard launcher instrumentation; launch.py is not executed",
+  "evidence_configuration": {
+    "duration": 1800.0,
+    "full_jsonl": true,
+    "session_json": true,
+    "save_interval_seconds": 30.0,
+    "additional_load": [
+      "resource-monitor thread",
+      "HTTP observation every 5 seconds",
+      "Qt stdout reader when GUI enabled",
+      "full per-frame disk logs",
+      "periodic annotated saves",
+      "GUI wrapper local control-file poll every .5 seconds",
+      "read-only GUI preview observations every .5 seconds",
+      "ready-signal capture attempts only in final five active seconds"
+    ],
+    "default_app_has_full_logs": false
+  },
+  "governors": [
+    {
+      "path": "/sys/class/devfreq/fde40000.npu/governor",
+      "before": "rknpu_ondemand",
+      "after": "rknpu_ondemand",
+      "restore_success": true,
+      "requested": null
+    }
+  ],
+  "exit_code": 0,
+  "model": {
+    "path": "/userdata/helmet-validation/20261115-native-app-v2/models/helmet_416x416.rknn",
+    "sha256": "7e0eefe4bfe86627bb6b58161cacca10912e0dbe1ba2513f58d091c40b26cd48",
+    "bytes": 8110065
+  },
+  "input": {
+    "path": "/userdata/helmet-validation/20261115-native-app-v2/input/construction-replay.avi",
+    "sha256": "f22897e1ebb40cc919caab335ee4b436d28ebaf0a138eb8b16c63166184af5cc",
+    "bytes": 82400444
+  },
+  "sources": {
+    "alarm.py": {
+      "path": "/userdata/helmet-validation/20261115-native-app-v2/src/alarm.py",
+      "sha256": "d3e6d68c7b17f5508f0d697e96998f556f224f9f5067169d66c35972b3a023d2",
+      "bytes": 4207
+    },
+    "benchmark.py": {
+      "path": "/userdata/helmet-validation/20261115-native-app-v2/src/benchmark.py",
+      "sha256": "15dcff515fc9c7332dd5eefd40502f38b0a02e6ab6a62e1d0ec50ce593ab4859",
+      "bytes": 15588
+    },
+    "dump_dets.py": {
+      "path": "/userdata/helmet-validation/20261115-native-app-v2/src/dump_dets.py",
+      "sha256": "c21b4a1d1c4ee4e0428cb19d16b560c9c7dfdef2c34b52f62195b836fca90e3f",
+      "bytes": 8619
+    },
+    "helmet_realtime.py": {
+      "path": "/userdata/helmet-validation/20261115-native-app-v2/src/helmet_realtime.py",
+      "sha256": "15794ebc40fdd1736d9c80d5504d17aa91e1de972bb92bb30a9eeb026309e46d",
+      "bytes": 5503
+    },
+    "output_sinks.py": {
+      "path": "/userdata/helmet-validation/20261115-native-app-v2/src/output_sinks.py",
+      "sha256": "c2f65642d38f8994200503b242ca93c8f0af105dc5ad3b13650e9ff83c7003cf",
+      "bytes": 23464
+    },
+    "pipeline_runtime.py": {
+      "path": "/userdata/helmet-validation/20261115-native-app-v2/src/pipeline_runtime.py",
+      "sha256": "dee30d6b71c9e8d3e697657fb309fb22e8fb47fafd366d60b555466cf56152e9",
+      "bytes": 35055
+    },
+    "sources.py": {
+      "path": "/userdata/helmet-validation/20261115-native-app-v2/src/sources.py",
+      "sha256": "ea89d66fdefb2bc429ca74efa0437a3c0a8aab672a856078fc15afccfe3b31c9",
+      "bytes": 6717
+    },
+    "telemetry.py": {
+      "path": "/userdata/helmet-validation/20261115-native-app-v2/src/telemetry.py",
+      "sha256": "da4522206053712484a21f80bb26d6424649a263f606f35fa16070be51a83b9e",
+      "bytes": 14670
+    },
+    "validate_comparison.py": {
+      "path": "/userdata/helmet-validation/20261115-native-app-v2/src/validate_comparison.py",
+      "sha256": "3b65f9e561084aa7f6199cc7cd413b6426f6ac962f39729ac0668e50350c2860",
+      "bytes": 1819
+    },
+    "yolo_post.py": {
+      "path": "/userdata/helmet-validation/20261115-native-app-v2/src/yolo_post.py",
+      "sha256": "fae57bbfa1d47d5ab16ef444096fab4fe8e14701c5ec10d87b1ec518282b0505",
+      "bytes": 7811
+    },
+    "app/launch.py": {
+      "path": "/userdata/helmet-validation/20261115-native-app-v2/src/app/launch.py",
+      "sha256": "8db80c3cdb10519812b4d2b943f1542042a75c9bb67f74a2bfa374ee56ebe2ac",
+      "bytes": 6500
+    },
+    "app/service.py": {
+      "path": "/userdata/helmet-validation/20261115-native-app-v2/src/app/service.py",
+      "sha256": "9a2f7454db6fb48ebcf7f5fd301a831817374c2be2fc5c9036af60feb40df1f7",
+      "bytes": 29859
+    },
+    "app/install.py": {
+      "path": "/userdata/helmet-validation/20261115-native-app-v2/src/app/install.py",
+      "sha256": "229e351cf73b6d49ff5ae1bf445e86585b9af22dbbe89cf70759fbf1fdc71ae7",
+      "bytes": 4676
+    },
+    "app/__init__.py": {
+      "path": "/userdata/helmet-validation/20261115-native-app-v2/src/app/__init__.py",
+      "sha256": "3ca294319d48aa183e5822b0c08426253434101d7c1fc85ae21b74b756784cd1",
+      "bytes": 55
+    },
+    "app/wifi.py": {
+      "path": "/userdata/helmet-validation/20261115-native-app-v2/src/app/wifi.py",
+      "sha256": "1e998474293b5499e0cedf5fa57317416ac49dab7a2b9f36fd93b97ec30c20fb",
+      "bytes": 24915
+    },
+    "app/qml/Main.qml": {
+      "path": "/userdata/helmet-validation/20261115-native-app-v2/src/app/qml/Main.qml",
+      "sha256": "6ac6b2e30c2e7ca29a9bc3f1ecb112ac4cc907b33a573664ed7476aeb11d504c",
+      "bytes": 20791
+    },
+    "verify_runtime.py": {
+      "path": "/userdata/helmet-validation/2026-11-14/verify_runtime.py",
+      "sha256": "fdc94bf540d83e8f9a8367d9004d171e60127bb798ba8a6c113999ed888b6217",
+      "bytes": 86641
+    },
+    "verify_native_runtime.py": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/verify_native_runtime.py",
+      "sha256": "222d07022ba746d5fd9bcdb2c5a8924c2b383473585311cf0dce5b0d9fc93997",
+      "bytes": 66884
+    }
+  },
+  "environment": {
+    "python": "3.10.5 (main, Jul  5 2024, 11:06:31) [GCC 10.4.0]",
+    "platform": "Linux-5.10.160-aarch64-with-glibc2.37",
+    "installation": "preinstalled; no package installation performed",
+    "numpy": "1.21.2",
+    "opencv-python": null,
+    "opencv-python-headless": null,
+    "rknn-toolkit-lite2": "2.5.0",
+    "psutil": "5.8.0",
+    "opencv": "4.5.4"
+  },
+  "provenance_copies": {
+    "model": "provenance/model/helmet_416x416.rknn",
+    "input": "provenance/input/construction-replay.avi",
+    "source:alarm.py": "provenance/sources/alarm.py",
+    "source:benchmark.py": "provenance/sources/benchmark.py",
+    "source:dump_dets.py": "provenance/sources/dump_dets.py",
+    "source:helmet_realtime.py": "provenance/sources/helmet_realtime.py",
+    "source:output_sinks.py": "provenance/sources/output_sinks.py",
+    "source:pipeline_runtime.py": "provenance/sources/pipeline_runtime.py",
+    "source:sources.py": "provenance/sources/sources.py",
+    "source:telemetry.py": "provenance/sources/telemetry.py",
+    "source:validate_comparison.py": "provenance/sources/validate_comparison.py",
+    "source:yolo_post.py": "provenance/sources/yolo_post.py",
+    "source:app/launch.py": "provenance/sources/app/launch.py",
+    "source:app/service.py": "provenance/sources/app/service.py",
+    "source:app/install.py": "provenance/sources/app/install.py",
+    "source:app/__init__.py": "provenance/sources/app/__init__.py",
+    "source:app/wifi.py": "provenance/sources/app/wifi.py",
+    "source:app/qml/Main.qml": "provenance/sources/app/qml/Main.qml",
+    "source:verify_runtime.py": "provenance/sources/verify_runtime.py",
+    "source:verify_native_runtime.py": "provenance/sources/verify_native_runtime.py"
+  },
+  "backend": "rknnlite",
+  "wifi_status_read": {
+    "status": 200,
+    "failure": null
+  },
+  "actual_source": {
+    "kind": "VideoSource",
+    "is_file": true,
+    "header_fps": 10.0,
+    "header_frame_count": 1200.0,
+    "decoded_image_size": [
+      640,
+      480
+    ],
+    "requested_replay_fps": 20.0
+  },
+  "app_generation": "80ad1773794e4b9c9d2ed2264000d8e0",
+  "http_start_monotonic": 71505.197640339,
+  "active_worker_finished_monotonic": 73307.208761176,
+  "service_cleanup": {
+    "detection_stopped": true,
+    "wifi_stopped": true,
+    "http_worker_alive": false,
+    "app_worker_alive": false
+  },
+  "cleanup_errors": [],
+  "cleanup": {
+    "engine_initialized": true,
+    "source_initialized": true,
+    "engine_released": true,
+    "source_released": true,
+    "capture_worker_alive": false,
+    "detect_worker_alive": false,
+    "shutdown_timeout": false,
+    "sdk_resources": [
+      {
+        "created": true,
+        "released": true,
+        "release_error": null
+      }
+    ]
+  },
+  "actual_engine_calls": 19806,
+  "actual_source_reads": 34497,
+  "actual_source_read_failures": 0,
+  "finished_wall_time": "2026-11-14T21:52:28.970876+00:00",
+  "elapsed_seconds": 1807.1777147239918,
+  "artifacts": {
+    "resources.jsonl": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/resources.jsonl",
+      "sha256": "b52cca58edd872a566bb84ffef3cb1d9c79f48745e70ef146592165579baa86a",
+      "bytes": 1038713
+    },
+    "events.jsonl": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/events.jsonl",
+      "sha256": "18dc69c0bfa0416612bee672d39c57c253499f55135673b079956919c4bd3dab",
+      "bytes": 29215
+    },
+    "screen.png": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/screen.png",
+      "sha256": "5b7ba6f535a1831be644f022de84eca96898b2ef912d22a7b14e5d805f13a256",
+      "bytes": 411677
+    },
+    "session.json": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/session.json",
+      "sha256": "631c5c2034cbf3935a0be41e066a4ff5c634deec6270060dca79dce4f5cb99a1",
+      "bytes": 412321
+    },
+    "gui-control.json": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/gui-control.json",
+      "sha256": "6dca3613c39d0958f8fadb79695f52214000e3ace05f908da17f5a08ae5cd968",
+      "bytes": 24
+    },
+    "cleanup.json": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/cleanup.json",
+      "sha256": "c9422334978ddc8e91ea72b0d682b717c4d120e23a8924011aa981bd621a4bad",
+      "bytes": 1161
+    },
+    "http.jsonl": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/http.jsonl",
+      "sha256": "5923d69759b6d2f587273d0d1e82b40474e40a1f72b8bfe165cc4b497335e6c9",
+      "bytes": 130389876
+    },
+    "frames.jsonl.resources.jsonl": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/frames.jsonl.resources.jsonl",
+      "sha256": "a80f51153a48c2abee1d5d468e0e2ff32329e3bf24f4bb5a789003f63b04d868",
+      "bytes": 543414
+    },
+    "frames.jsonl": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/frames.jsonl",
+      "sha256": "2c669532b264f8433821513b9511bc7786a74ac1a4a7e8329454475d3440576a",
+      "bytes": 74912576
+    },
+    "gui.log": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/gui.log",
+      "sha256": "7e919d5eda89a6b12174a100703df06d717f85aab61371c8613657c04e5d8fe3",
+      "bytes": 1489293
+    },
+    "qt-cache/qtshadercache-arm64-little_endian-lp64/7d5f9fc417d36376dbfbebf864483aca3a25ac1a": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/qt-cache/qtshadercache-arm64-little_endian-lp64/7d5f9fc417d36376dbfbebf864483aca3a25ac1a",
+      "sha256": "9983adf86597e29dd8816b32a05bb884a43dcde040a8577561ad38ff48473d1f",
+      "bytes": 2784
+    },
+    "qt-cache/qtshadercache-arm64-little_endian-lp64/cba8d1ceb9482bf7ad559bc702b71beca94f54a3": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/qt-cache/qtshadercache-arm64-little_endian-lp64/cba8d1ceb9482bf7ad559bc702b71beca94f54a3",
+      "sha256": "4079c7d29f1f6bcdb15d1dc01125bbfe1eeab706563b6e765f300f0a2d1c76b3",
+      "bytes": 2832
+    },
+    "qt-cache/qtshadercache-arm64-little_endian-lp64/5cc098bc5354d98253495e89cc26ca4ba78a3a15": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/qt-cache/qtshadercache-arm64-little_endian-lp64/5cc098bc5354d98253495e89cc26ca4ba78a3a15",
+      "sha256": "d6653e6359fb175411ffab091b36f78d69f8d309edbff71f955c86f2c287caac",
+      "bytes": 4432
+    },
+    "qt-cache/qtshadercache-arm64-little_endian-lp64/3c597a80b51a24c02510e986e8c27bdb62e99ba6": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/qt-cache/qtshadercache-arm64-little_endian-lp64/3c597a80b51a24c02510e986e8c27bdb62e99ba6",
+      "sha256": "eb6ffb16e7da6379f98417a3fa51c0aab30513ebf26dd2a69c07905d81d3365c",
+      "bytes": 2304
+    },
+    "qt-cache/qtshadercache-arm64-little_endian-lp64/d358096b1c9ad1aa59bd4602c6364cc5509d0fd2": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/qt-cache/qtshadercache-arm64-little_endian-lp64/d358096b1c9ad1aa59bd4602c6364cc5509d0fd2",
+      "sha256": "477c25e7a5b286f090bf7113f1296ffcb41a40fe07b7390915e068d11ea46b0a",
+      "bytes": 3824
+    },
+    "qt-cache/qtshadercache-arm64-little_endian-lp64/60e5c4afb5659975001c08fc1721ef35235bdf6a": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/qt-cache/qtshadercache-arm64-little_endian-lp64/60e5c4afb5659975001c08fc1721ef35235bdf6a",
+      "sha256": "2d1558a6ddaa20fdb597fd5c6a0b8588be51213d074803748266b7e24431235a",
+      "bytes": 4132
+    },
+    "qt-cache/qtshadercache-arm64-little_endian-lp64/151d848f668e8d50cfb6460d73b3d589a041764b": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/qt-cache/qtshadercache-arm64-little_endian-lp64/151d848f668e8d50cfb6460d73b3d589a041764b",
+      "sha256": "4c2967562a75377d0084d40c51c0b668114a735f3486bd9d8d40b05c69a41a7f",
+      "bytes": 3008
+    },
+    "previews/probe-000184.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000184.jpg",
+      "sha256": "71f7b467e0196d567ab082667f63a1d720dda7e15f41414138d154949c1e3c8e",
+      "bytes": 132016
+    },
+    "previews/probe-000241.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000241.jpg",
+      "sha256": "c00f2557ffd777af00bc4ac541f977a75bae6533ed12723bf1e7d4b7e30cb6d7",
+      "bytes": 132247
+    },
+    "previews/probe-000727.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000727.jpg",
+      "sha256": "661b93f6432e35e3cc7908c51299c17d8d21ba001dc16649f5ddeab05b12babe",
+      "bytes": 132246
+    },
+    "previews/probe-000346.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000346.jpg",
+      "sha256": "b567e687f9b8e33a97f9c2bcf433fe2b267ca1b16070b424d43550f7388cc77d",
+      "bytes": 132460
+    },
+    "previews/probe-000094.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000094.jpg",
+      "sha256": "621e22cf27626f69f034e2681ffa0cbc541bd60069c321b206f9fae862849d27",
+      "bytes": 132256
+    },
+    "previews/probe-000898.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000898.jpg",
+      "sha256": "52e8637eb76d69599abd0acee4648bc5de1006cf769cd12ab07d15249a514cec",
+      "bytes": 132444
+    },
+    "previews/probe-000211.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000211.jpg",
+      "sha256": "417585d910ac800eb37e58331444d4876a8aab49da5f6944fac443f347db4769",
+      "bytes": 132220
+    },
+    "previews/probe-000208.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000208.jpg",
+      "sha256": "c363758397f032383f48e13e7bfd749d4a808aab4d2a90fe47e65c73b9187873",
+      "bytes": 131957
+    },
+    "previews/probe-000553.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000553.jpg",
+      "sha256": "bf896d547aff206a88a280e81b0826f2cf6dcc16dc58db60217081ddc46e1e4d",
+      "bytes": 132178
+    },
+    "previews/probe-000880.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000880.jpg",
+      "sha256": "b73f487c1853c4cdd30e6f0d9e6a600754ec77f639bcb19cf6831f7deeba1bda",
+      "bytes": 132217
+    },
+    "previews/probe-000820.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000820.jpg",
+      "sha256": "79bc295aa3c842ba17abef821e30301f532d92c48000c59f8a444a9c3c99b61e",
+      "bytes": 132412
+    },
+    "previews/probe-000169.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000169.jpg",
+      "sha256": "df75a4be6e2c70620b82d85975d6991488328523b38bd6bc67e202bd53c06d2f",
+      "bytes": 132077
+    },
+    "previews/probe-000328.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000328.jpg",
+      "sha256": "c167902ae8af6579eff84dffddad52d59ce4c2bfddb918db2e9b730fd6e4d150",
+      "bytes": 132502
+    },
+    "previews/probe-000274.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000274.jpg",
+      "sha256": "bd58b321b80ad8c34e06245ee9da0de59d9d044c972deeb38e9a0cc4e5f709f2",
+      "bytes": 132175
+    },
+    "previews/probe-000361.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000361.jpg",
+      "sha256": "58ba5033e610e080565e4882bec164ca0e3ab3f201e1238a7fdeaabf059d8e3f",
+      "bytes": 132155
+    },
+    "previews/probe-000916.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000916.jpg",
+      "sha256": "ea93438f831dd6ff990078d5d061e88c42e71ee58baa928a2d17f68e222c9a20",
+      "bytes": 132630
+    },
+    "previews/probe-000046.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000046.jpg",
+      "sha256": "05be0b771104e3cc5c92b25fabff541aa057ec583fbf1c634c541b22e1a8e0a5",
+      "bytes": 132389
+    },
+    "previews/probe-000679.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000679.jpg",
+      "sha256": "6c179eb5d98e9c6444bfc2a5a8cbeb021d5a28dff2ff3f7ab1182e178fa3035b",
+      "bytes": 132271
+    },
+    "previews/probe-000055.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000055.jpg",
+      "sha256": "3397d618f1432a2c1e4863b49729c4ab56f627a11f64a547715342ea910fc187",
+      "bytes": 132118
+    },
+    "previews/probe-000784.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000784.jpg",
+      "sha256": "92108ade1c6f1f62002194d64e1a81e63d2492760a9731530d19efcbb03083d8",
+      "bytes": 132228
+    },
+    "previews/probe-000019.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000019.jpg",
+      "sha256": "555c7f56a9bfb3205ac2237abfe383cbe6a97b02f209d65eb8aa8e3ad67b3e60",
+      "bytes": 132063
+    },
+    "previews/probe-000133.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000133.jpg",
+      "sha256": "c9702ef18be6eb05fb8c4fc15c132220096719ddf4c957190acc42316b352f32",
+      "bytes": 132346
+    },
+    "previews/probe-000265.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000265.jpg",
+      "sha256": "69192fbe218b24a01765936158569a9cd4ba3ae6a8e303d03c9b80dc4b477ccc",
+      "bytes": 131975
+    },
+    "previews/probe-000919.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000919.jpg",
+      "sha256": "8b44ed360a60449a59698afd718494f0d876564df921af215d38210a8578ce8e",
+      "bytes": 132173
+    },
+    "previews/probe-000580.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000580.jpg",
+      "sha256": "67134cdab35b6c663f276c54759378975b53f99f76954a2fca211997f7a389bb",
+      "bytes": 132155
+    },
+    "previews/probe-001033.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-001033.jpg",
+      "sha256": "a6393c22d60d07ed9a2735ba514a178d3a974befae47a0548a9b36ad8b21eaf6",
+      "bytes": 132296
+    },
+    "previews/probe-001069.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-001069.jpg",
+      "sha256": "e2b51bca338a475ab0d98a56942e4e67fd6e05c010daf56bb7cbd6b01246d811",
+      "bytes": 132568
+    },
+    "previews/probe-000496.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000496.jpg",
+      "sha256": "98c04d5826cd349e0f73ff489f2384a5881d60a79ec968d381099f5a9d618100",
+      "bytes": 132078
+    },
+    "previews/probe-000430.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000430.jpg",
+      "sha256": "fdbc27ff9b94929fb3e219c3f19d8865d67f7af33635ab50d9d674781549a3a3",
+      "bytes": 132153
+    },
+    "previews/probe-000325.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000325.jpg",
+      "sha256": "352e252d559dfe8f066e1edd70acd5abace5480ff8fdf7f29846bb01c7c6fd80",
+      "bytes": 132141
+    },
+    "previews/probe-000751.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000751.jpg",
+      "sha256": "4dbf5dcf0942c4e3b00a430187a2ec127f3a3822836779309ce5f6b9500402c4",
+      "bytes": 132401
+    },
+    "previews/probe-000844.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000844.jpg",
+      "sha256": "74029cb40e9f7cb6bfb9a64664652e1ade1c27304c26d36a4b6684fabe96ae4c",
+      "bytes": 132302
+    },
+    "previews/probe-000949.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000949.jpg",
+      "sha256": "6a442c8eed5294262ff04469153f54baf5b9950f54146ede95d4cd73b1fc256b",
+      "bytes": 132031
+    },
+    "previews/probe-000583.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000583.jpg",
+      "sha256": "7792f3b3701ab19fd41cb36c9571181a1305caf0a7a5a32784140e685c1e5724",
+      "bytes": 132239
+    },
+    "previews/probe-000112.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000112.jpg",
+      "sha256": "0b80f8272365aa8b1e632b6fa1285ae995dbe7bbaee20aed3f29139dd9492d0b",
+      "bytes": 132192
+    },
+    "previews/probe-000676.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000676.jpg",
+      "sha256": "0dc1791e3f66fee9274800c37ec8011a66f65a0effc04447fc6705627d93cac2",
+      "bytes": 132460
+    },
+    "previews/probe-000067.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000067.jpg",
+      "sha256": "d9c87145edfdbefdeacb567701cf98e78352a9ad7d3fe513803ae24fb24adae9",
+      "bytes": 132173
+    },
+    "previews/probe-000997.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000997.jpg",
+      "sha256": "6e69c25b593705753f1af43fc372b815e306417d0b352a42e8a9d5f9b05ba76c",
+      "bytes": 132106
+    },
+    "previews/probe-000085.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000085.jpg",
+      "sha256": "b2ef841e261d563a73fda14d3098fce2983ed1d7884571f9f5223361b200dfed",
+      "bytes": 132158
+    },
+    "previews/probe-001054.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-001054.jpg",
+      "sha256": "aa462b71c482579419147f7c62fb6e7be06b07f668dbabf989c4e98e9aef639b",
+      "bytes": 132650
+    },
+    "previews/probe-000850.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000850.jpg",
+      "sha256": "7ad104a8ca46f8ae45e5b58dad05503e6a7c907ad8803ef72a5006622cd8bab0",
+      "bytes": 132270
+    },
+    "previews/probe-001012.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-001012.jpg",
+      "sha256": "8a6dbf9910892ccd99e1aebfe277d0fb5bcda408925b10cc9c6982e0915a2b13",
+      "bytes": 132236
+    },
+    "previews/probe-000502.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000502.jpg",
+      "sha256": "ec7053688469c896f635428d470a5f4ff615e34742ea76fe7bf24017a5fb7a7c",
+      "bytes": 132055
+    },
+    "previews/probe-001066.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-001066.jpg",
+      "sha256": "7dd6b2ae9d0bfba4a97fcb483891b8daaeb30d31735c193784975aac4b2c4898",
+      "bytes": 132394
+    },
+    "previews/probe-000223.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000223.jpg",
+      "sha256": "2a1b274b2cebae46bb1be186d18a7f275fb434306501bc17c318bb5d774cb3e7",
+      "bytes": 132226
+    },
+    "previews/probe-000790.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000790.jpg",
+      "sha256": "a8817dc98f279ef03cce97f3b3855361608af90f4dd3f956694c0b9f63232eaa",
+      "bytes": 132370
+    },
+    "previews/probe-000499.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000499.jpg",
+      "sha256": "f8e0068316e821b2991c83b610459f19e07b1094cb13acf584f248fa27b33e34",
+      "bytes": 132225
+    },
+    "previews/probe-000733.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000733.jpg",
+      "sha256": "8eb16638dfdb2690a68df65eb447821b13662b0ca786bc480a180a76aad95950",
+      "bytes": 132178
+    },
+    "previews/probe-000439.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000439.jpg",
+      "sha256": "c8f58b3d1bda1146359507115d2eee1ddb3fccb4084aee836ae7fb2abbb0219e",
+      "bytes": 132226
+    },
+    "previews/probe-000511.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000511.jpg",
+      "sha256": "e5facd055f1768b0aa91076f54abe8bfe91a982be19d9bebbeed23f2cf9e5545",
+      "bytes": 132138
+    },
+    "previews/probe-000301.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000301.jpg",
+      "sha256": "a81a97f1bc03f673fd51ee1391b8b8ad7802fe3ce6d6b5751d267756504dba33",
+      "bytes": 132265
+    },
+    "previews/probe-001039.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-001039.jpg",
+      "sha256": "eb20dcb74d947460d5dbaf2b51c1f9d5bed84ea80b11da1fc753e08c92511937",
+      "bytes": 132208
+    },
+    "previews/probe-000013.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000013.jpg",
+      "sha256": "6888d29a46281f8ea038d7a47b0f291c542bd4f9f213465e2a8d28ac9da7363a",
+      "bytes": 132173
+    },
+    "previews/probe-000811.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000811.jpg",
+      "sha256": "6f05088317aeb6364c9987c34fe0cc5bc99470f4064f7b8320db8afb41e604cc",
+      "bytes": 132332
+    },
+    "previews/probe-001018.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-001018.jpg",
+      "sha256": "3f2c60af2fd66ff0077f611ded392052abcb64f6f02176bcc1169ce4879797c4",
+      "bytes": 132465
+    },
+    "previews/probe-000841.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000841.jpg",
+      "sha256": "4c41ee219020b2a7b2387dd511011d183edbdc7079ec01438e7d3c442640b53c",
+      "bytes": 132160
+    },
+    "previews/probe-000952.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000952.jpg",
+      "sha256": "9e0d0862b3ca51c0f66816336233e78e84bb978407453ad02b5ebef7d5e1b1d5",
+      "bytes": 132279
+    },
+    "previews/probe-000388.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000388.jpg",
+      "sha256": "8ee19ae4e788e6de10a316ebca3ccea8bbdf4b795f606a2452207a05e4fcf734",
+      "bytes": 132026
+    },
+    "previews/probe-000532.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000532.jpg",
+      "sha256": "da064ab50e0c6bcccbf1f611f86dccd32389c0e077ecaf2ef6f2b660d2ab1f1d",
+      "bytes": 132456
+    },
+    "previews/probe-000457.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000457.jpg",
+      "sha256": "1e783b1fa5d7fea50316a52e26ddaade5ec865b5bd6cfb715241d7590bca697b",
+      "bytes": 132152
+    },
+    "previews/probe-000592.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000592.jpg",
+      "sha256": "0bcf56299f545bf14c71bbc6df576f490b6e9730937fce57ebd762f0f6767556",
+      "bytes": 132266
+    },
+    "previews/probe-000250.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000250.jpg",
+      "sha256": "2fe2c28221931b6b4e533da3c09c22173bf3dd18c0bed8c77f56ab05d96fe7b8",
+      "bytes": 132143
+    },
+    "previews/probe-000079.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000079.jpg",
+      "sha256": "319769d95a061d71b97b1e268b6bc893b3bcfac098b59d941f31e99c1c1a3c58",
+      "bytes": 131874
+    },
+    "previews/probe-000310.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000310.jpg",
+      "sha256": "829d1a4e5e4780dc86142d1a0582a09bc3e4b97b294444f644986d687bb2dba7",
+      "bytes": 132324
+    },
+    "previews/probe-000289.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000289.jpg",
+      "sha256": "64287a7b1052c70a3a4e31b29d7dfd3ed20189956084276e1da893af5a691197",
+      "bytes": 132237
+    },
+    "previews/probe-001081.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-001081.jpg",
+      "sha256": "05b18653c27a45779ea49ae796877053bfc2943cefae71c32bde60fcbb4165d0",
+      "bytes": 132215
+    },
+    "previews/probe-000970.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000970.jpg",
+      "sha256": "abf44e063c12d757937944f3b9e4598946c529f571c9ffafadc9e7c725f2f545",
+      "bytes": 132226
+    },
+    "previews/probe-001075.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-001075.jpg",
+      "sha256": "872195c806e9250d5c43b0659a8976c303adc58b23f64dce29571e9f46da91f0",
+      "bytes": 132554
+    },
+    "previews/probe-000835.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000835.jpg",
+      "sha256": "9637f51c897c3d42b22e8b1699bcbec523c5ac18692e627cc5f03fe3e26f5ca5",
+      "bytes": 132187
+    },
+    "previews/probe-000526.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000526.jpg",
+      "sha256": "62f79d0fdff32a3dc522d3ab6259babdd2624917d9d4e53b45b3e10d44aabaa8",
+      "bytes": 132388
+    },
+    "previews/probe-000874.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000874.jpg",
+      "sha256": "d793ea47b9203485f25d81fe43fa320baca6147cc261ae0384e2608337798161",
+      "bytes": 132376
+    },
+    "previews/probe-001021.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-001021.jpg",
+      "sha256": "4c6c171b52241b4aa9178ff20033298c47795cca10d6b03778b5cb78b74a4d2f",
+      "bytes": 132088
+    },
+    "previews/probe-000028.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000028.jpg",
+      "sha256": "1d5ecfd6ff97879a4e0b1e8ae823390012d45a208c25f1f8c0f74c94c58a1579",
+      "bytes": 132156
+    },
+    "previews/probe-001003.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-001003.jpg",
+      "sha256": "84457986ddd1516c0cadc6c72f108163844b19038c6cbfb11de7e271c16350de",
+      "bytes": 132611
+    },
+    "previews/probe-000229.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000229.jpg",
+      "sha256": "9b8f12f567116d094feff6f3c1d1bf4544abc23131967b69185ebf6843910dbc",
+      "bytes": 132098
+    },
+    "previews/probe-000118.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000118.jpg",
+      "sha256": "d81596a85f81a53ce12f44aa4c797726d98c461d90dea80e4ebcd503a0790779",
+      "bytes": 132112
+    },
+    "previews/probe-000415.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000415.jpg",
+      "sha256": "3b2f760dbe3a21c4ec1f0c4aa231af5c64d658613244f43ef5f6bd169e140cce",
+      "bytes": 132377
+    },
+    "previews/probe-000316.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000316.jpg",
+      "sha256": "35260a5546a599aeb28f1a9dc9537446cef7b1d68c3cbcb66fcced73f21db1b1",
+      "bytes": 132018
+    },
+    "previews/probe-000781.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000781.jpg",
+      "sha256": "4de55b2570d020b819cbc118ba9ec0fe472adad813d8a1cf5e2f0629ced653ce",
+      "bytes": 132260
+    },
+    "previews/probe-000391.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000391.jpg",
+      "sha256": "6e29eeca6adbec2ba12e5a1440e230e10f865c5cbedb7bec096dc0da6ee5e7e4",
+      "bytes": 132378
+    },
+    "previews/probe-000889.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000889.jpg",
+      "sha256": "fc53db1e701072e2f6b5d523b5f4041bc95c747f4764798645e731039bfb8ff0",
+      "bytes": 132397
+    },
+    "previews/probe-000940.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000940.jpg",
+      "sha256": "a85d5ec5faece6eafeb7c08e15bebd6b6c8d68e446524c02bfd76b8e0eaae115",
+      "bytes": 132466
+    },
+    "previews/probe-000520.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000520.jpg",
+      "sha256": "ef80eb39d79745de95a60ad48eb1442b7a16408a5ee90419d66b443d6f0047a1",
+      "bytes": 132141
+    },
+    "previews/probe-000901.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000901.jpg",
+      "sha256": "0cace087c15610de343496505f32a6e285eb114707f2e16f6b784aa4fda4a0b7",
+      "bytes": 132337
+    },
+    "previews/probe-000802.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000802.jpg",
+      "sha256": "3a8d1048a1fae51401cb0ea03ad9bca5516c8b6f99856cb0570309e2ce2964c7",
+      "bytes": 132419
+    },
+    "previews/probe-000529.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000529.jpg",
+      "sha256": "49061468942c7d6c2363b1beb6f6d0a41dcc07cabfb04d80880c496ec2aa2939",
+      "bytes": 132261
+    },
+    "previews/probe-000433.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000433.jpg",
+      "sha256": "f420a811cb198c83a8963a8adf46d445cb35afb840b96fefb373ceb41ec98c62",
+      "bytes": 132548
+    },
+    "previews/probe-000307.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000307.jpg",
+      "sha256": "86561ae350f183fe2240fe7c55ccba60e0500047d1a16de577d48ac3095465e0",
+      "bytes": 132129
+    },
+    "previews/probe-000691.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000691.jpg",
+      "sha256": "a773d8ed93017cdce7930621b4a3c8c27b2e018cc7ca81e5c48768437a689431",
+      "bytes": 132461
+    },
+    "previews/probe-000487.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000487.jpg",
+      "sha256": "889c7eed5abd125136002c6ab9d1ed2da280571b9a11b7aac7adae4e810dcc57",
+      "bytes": 132368
+    },
+    "previews/probe-000757.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000757.jpg",
+      "sha256": "e3d99909721a29b944cae0fa6b03f83ba9d8acb497fef8e106b62cde14a1364b",
+      "bytes": 132336
+    },
+    "previews/probe-000613.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000613.jpg",
+      "sha256": "71c43a53955195b320d76d3f7d14bda9c7a36aa2313636a1e1609cad6a4b4efe",
+      "bytes": 132177
+    },
+    "previews/probe-000187.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000187.jpg",
+      "sha256": "dc2e88e03aedf739c5cc4c5a4ba41e454760ce58beab691643012241b7656284",
+      "bytes": 132242
+    },
+    "previews/probe-000700.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000700.jpg",
+      "sha256": "17f8466b5cb13d20841e4d4e2d9edd5acb6ec966ff972cf12ad00e52379d31b2",
+      "bytes": 132160
+    },
+    "previews/probe-000562.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000562.jpg",
+      "sha256": "a45185d8fe0d85b15eaa2f53d6308149529a3ff30c87c3a4d5a38fa6b118af73",
+      "bytes": 132165
+    },
+    "previews/probe-000409.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000409.jpg",
+      "sha256": "e0bff1eac25e8ff2e6fdf829f9c77d7a48adddbade85ded48ae607d613ecd650",
+      "bytes": 132249
+    },
+    "previews/probe-000550.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000550.jpg",
+      "sha256": "b51b14c82741d42c378439401f146ca070135aecacd48b5b5c1bd66fd5e7f94f",
+      "bytes": 132229
+    },
+    "previews/probe-000637.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000637.jpg",
+      "sha256": "68f426e46e7dd5a2b4943c8277cfa283fad12b8fbeec31db563147ac967ad88b",
+      "bytes": 132316
+    },
+    "previews/probe-000685.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000685.jpg",
+      "sha256": "537a4a070b10361c04b9865183bd4824fcadd654a19b202767c53c30ae728c11",
+      "bytes": 132385
+    },
+    "previews/probe-000280.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000280.jpg",
+      "sha256": "6a2d99e5a73f9771cb910a28948cd05288657f9219c666d548ddb67c50d5dc36",
+      "bytes": 132249
+    },
+    "previews/probe-000508.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000508.jpg",
+      "sha256": "41df622316216a9cd73135c313589859e24d00e95c774b49b06da6fb1c77ad05",
+      "bytes": 132625
+    },
+    "previews/probe-000244.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000244.jpg",
+      "sha256": "0bb64cab8fdb5672368ab0ff59f92c6e892c78a24382e3f8a8c17e13367352cb",
+      "bytes": 132129
+    },
+    "previews/probe-000130.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000130.jpg",
+      "sha256": "81a66758d0651a2ca95732f71729d9784a9c9e5209ab664f7cc72e32832d3401",
+      "bytes": 132146
+    },
+    "previews/probe-000571.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000571.jpg",
+      "sha256": "24759dc50350112f6b53e0bcd36b241d679ae2181fec05f38a604d86a95c73ab",
+      "bytes": 132268
+    },
+    "previews/probe-000217.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000217.jpg",
+      "sha256": "578a3cd67ad7c4898b95745a1d43af48f401a1a0a64f9ac8948733454710f97f",
+      "bytes": 132014
+    },
+    "previews/probe-000643.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000643.jpg",
+      "sha256": "ccc6c22220ad30b5e7c649e2d3ab8e9009dcfa3c23f9eda4ec8a02d4d5217608",
+      "bytes": 132209
+    },
+    "previews/probe-000190.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000190.jpg",
+      "sha256": "b8d841fc73d1e213bc3e98574f7516d65f421194a59401d111fa09033727a430",
+      "bytes": 132433
+    },
+    "previews/probe-000493.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000493.jpg",
+      "sha256": "90a4c0d4953d023e4ab41a64360dc02a5e794626f211a49bdeb852af8046d07b",
+      "bytes": 132246
+    },
+    "previews/probe-000688.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000688.jpg",
+      "sha256": "8001659373eae45036f79970dc26e8db13ffdcdc48efda30ee5a80ed09a135d7",
+      "bytes": 132458
+    },
+    "previews/probe-000505.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000505.jpg",
+      "sha256": "e81520d4483c20e20e8ace309baef87ac6aa6d19bcc36cb7408209595bc528ff",
+      "bytes": 132257
+    },
+    "previews/probe-000199.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000199.jpg",
+      "sha256": "f0e9c6ed52ec1632d763197fc706adc14810f985ba592f9a3dc8bc98384c75f2",
+      "bytes": 132219
+    },
+    "previews/probe-000064.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000064.jpg",
+      "sha256": "7db52d2730fe7652570691a079528fc9840aa728b9c37cb38e5db5eaa243b94a",
+      "bytes": 132145
+    },
+    "previews/probe-000646.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000646.jpg",
+      "sha256": "7d6c568939275d2d63ea3343dc68be0de41378cc1032b157fd58f015ff538f50",
+      "bytes": 132334
+    },
+    "previews/probe-000277.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000277.jpg",
+      "sha256": "4c9a26c174a33dd02336101b3d410eb7b1779f10a11e363edc91a3abaaab5a94",
+      "bytes": 132108
+    },
+    "previews/probe-000052.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000052.jpg",
+      "sha256": "a9cee599f421785402a6431c4b48f4e45cd488ee6d39579f99dc35973cd64556",
+      "bytes": 132526
+    },
+    "previews/probe-000661.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000661.jpg",
+      "sha256": "5f7b22f433343911792bcf8c513e1bbf37e54d9c61cfae8fcc17062d9fc2834e",
+      "bytes": 132493
+    },
+    "previews/probe-000394.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000394.jpg",
+      "sha256": "7449dbf902ed227c7286cc3fffe698dcf8400b2291be07626aa8ad3181fcf4dc",
+      "bytes": 132111
+    },
+    "previews/probe-001030.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-001030.jpg",
+      "sha256": "60d51ba8b9db1293dfe7b537944b92369e7d36f80d351bbff9e516f2cdc39871",
+      "bytes": 132366
+    },
+    "previews/probe-000424.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000424.jpg",
+      "sha256": "c6868d5a71894e45e04b93628e59a05605c2a4afb4e1f2aaf7c33ba213f641c4",
+      "bytes": 132138
+    },
+    "previews/probe-000337.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000337.jpg",
+      "sha256": "fb335338aaccb1b7d8367294a10329ce2df31f824cf3d09bef352dba90e94d8a",
+      "bytes": 132263
+    },
+    "previews/probe-001009.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-001009.jpg",
+      "sha256": "24612d11665645b2ffa23691e160654e133e87b9bff9207e181d99669e55301a",
+      "bytes": 132357
+    },
+    "previews/probe-000538.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000538.jpg",
+      "sha256": "9292361bff2df341f9767156b252ff2691f9b6f4b32f0c0e55e1b50005cda06f",
+      "bytes": 132464
+    },
+    "previews/probe-000193.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000193.jpg",
+      "sha256": "722fa8a14776cc298276cd52a7cb6caf029a35b45c87a1535b249429c7cb7cd5",
+      "bytes": 132043
+    },
+    "previews/probe-000829.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000829.jpg",
+      "sha256": "bd7f464586a9e3d1a3e015858a71e9642c6506da3c62280ea81d130f5778bb3b",
+      "bytes": 132628
+    },
+    "previews/probe-000163.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000163.jpg",
+      "sha256": "30838989d8940a2f7b9c26a55627d459b9caadca8378392ef6ab70ab433a7a64",
+      "bytes": 132111
+    },
+    "previews/probe-000319.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000319.jpg",
+      "sha256": "f5a41f09c96c5a964d9178b522d09e6bec4175c4a6ffc2656592fe6f63336eb7",
+      "bytes": 132013
+    },
+    "previews/probe-000070.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000070.jpg",
+      "sha256": "352c5bd76b90c93ab80ef444a5d0c7bcaaa38613f5037639626ccc7ce65d5409",
+      "bytes": 132116
+    },
+    "previews/probe-000808.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000808.jpg",
+      "sha256": "4f2205d9ca2a505554d045d708cf8fb0b831ecfe59d8c5f324f6c5db1ace8494",
+      "bytes": 132378
+    },
+    "previews/probe-000946.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000946.jpg",
+      "sha256": "b75d299670a291bba47c532835561be6ebf3a4d3d60500fc178091d5a7ab3443",
+      "bytes": 132537
+    },
+    "previews/probe-000061.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000061.jpg",
+      "sha256": "fec714a16affd8befb603799908e8e730c76a9e9c4848c9821c43d85950a1301",
+      "bytes": 132044
+    },
+    "previews/probe-000871.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000871.jpg",
+      "sha256": "453638ab5869ce46114af2fefd505f1b93165c0f2182c8a0c0cae22fd1f17aa8",
+      "bytes": 132577
+    },
+    "previews/probe-000370.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000370.jpg",
+      "sha256": "e0fa13a95501794db10764c88c0d8cdd3df0e01de448a6f2478c004b5ac351d2",
+      "bytes": 132168
+    },
+    "previews/probe-000961.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000961.jpg",
+      "sha256": "842ff95c3201c3f0a2b79df8723d2c5951043987ec53cfe7911d65bee8e72b7f",
+      "bytes": 132111
+    },
+    "previews/probe-000034.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000034.jpg",
+      "sha256": "c7cf601f69c532b0de615a0bd87815b45ef694e0698b5ec3ed2c2465051fe829",
+      "bytes": 132241
+    },
+    "previews/probe-000967.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000967.jpg",
+      "sha256": "bf2b4a4de62242611e452be6f155c8d3abce148f0251d2260d62af4763024e82",
+      "bytes": 132197
+    },
+    "previews/probe-000892.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000892.jpg",
+      "sha256": "9fdbd6a73f0c6d93a94a10f45cc5aeaf76fa2ae0878565ebb86578748ce4ebbb",
+      "bytes": 132384
+    },
+    "previews/probe-000964.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000964.jpg",
+      "sha256": "611bc52d80bee97eedf6e1eedb2df23a999c818eda0a7a120f24c4eb8e7c5082",
+      "bytes": 132168
+    },
+    "previews/probe-000145.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000145.jpg",
+      "sha256": "73375bdb86f33338172b60f547e083df28025cd6c4a02a8715822e897408046e",
+      "bytes": 132276
+    },
+    "previews/probe-000124.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000124.jpg",
+      "sha256": "f67b7339de6a44dea42ccdaac3f1c827e341c2c286b1111df26b752154dd166f",
+      "bytes": 132187
+    },
+    "previews/probe-000697.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000697.jpg",
+      "sha256": "b67b8c93f3a3cf5246ed1a6233daa71db4a9d4c51f20a2e5c5fa9478939fc579",
+      "bytes": 132646
+    },
+    "previews/probe-000139.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000139.jpg",
+      "sha256": "d252e350646d1a865a88ebb902812d76ef88d1bed82bb71f07adcce4d490bf9c",
+      "bytes": 132121
+    },
+    "previews/probe-000535.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000535.jpg",
+      "sha256": "2a13fd9f1536191507827ae7595625822bd3abb182f061595cbf27b6d9b55623",
+      "bytes": 132482
+    },
+    "previews/probe-000805.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000805.jpg",
+      "sha256": "67e95a811883e567db76155cf63a825e859798b5411b09ec440dc33ec1ca9df7",
+      "bytes": 132463
+    },
+    "previews/probe-000421.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000421.jpg",
+      "sha256": "0fb970eb514ba678403675fbd86e576c71182fb94f2b2aa48f493db02874f5c2",
+      "bytes": 132141
+    },
+    "previews/probe-000322.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000322.jpg",
+      "sha256": "1b3a8ff76b7a59a2c83571aeeb9da9da26223df87cc296377dcb5e5cca693853",
+      "bytes": 132461
+    },
+    "previews/probe-001072.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-001072.jpg",
+      "sha256": "bf5b22997372ffc31c26e8591fa16a4fe109f68f5e7eea8c596a9f170dac5050",
+      "bytes": 132365
+    },
+    "previews/probe-000247.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000247.jpg",
+      "sha256": "9a48e0261ed4866125e1b109d49daf3960b098da8353e4864033c6ce9a121818",
+      "bytes": 132237
+    },
+    "previews/probe-000127.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000127.jpg",
+      "sha256": "36cd77fed1721f0a21742e945a7cb4c74c308e83c559a857abf6f6f970f263e6",
+      "bytes": 132210
+    },
+    "previews/probe-001060.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-001060.jpg",
+      "sha256": "e9d87612ab4c8934e1083fc8b39372861fed1d77b3088a9b8bf382110d66c589",
+      "bytes": 132098
+    },
+    "previews/probe-000823.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000823.jpg",
+      "sha256": "aa50e7504cb9d7fc80d6e586a6276c4df1a562c19ab3680e2984b9ea22d376c5",
+      "bytes": 132314
+    },
+    "previews/probe-000547.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000547.jpg",
+      "sha256": "889441dfbacd51724d5846eeee93f4cdfeca45df14c89642680c57f0b535b640",
+      "bytes": 132133
+    },
+    "previews/probe-000718.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000718.jpg",
+      "sha256": "215a18a64268aee1b8260ecec6c63a927d164b5702d7eb8e3ccce2558ae1aa90",
+      "bytes": 132272
+    },
+    "previews/probe-000103.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000103.jpg",
+      "sha256": "fea3c65e831d631b4026f34a7b16af838c1fc87887ba5480facaace6231937ac",
+      "bytes": 132013
+    },
+    "previews/probe-000214.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000214.jpg",
+      "sha256": "e5f49bac9a2cdc71681e76c7ec426a3b934c5a39b01a5f5245f0242cbe296cdf",
+      "bytes": 132177
+    },
+    "previews/probe-000610.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000610.jpg",
+      "sha256": "f1c6ae7c5eb22f7aca9f3de8a4c343d3cf0fb988247e536ba859349e5054dfa3",
+      "bytes": 132234
+    },
+    "previews/probe-000634.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000634.jpg",
+      "sha256": "908c6f3fcce72172c3b31392d15ad7908ffc2bc64ca36f1e5ef69b08161863e2",
+      "bytes": 132366
+    },
+    "previews/probe-000418.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000418.jpg",
+      "sha256": "9bf86d826dfbefe15288b9db9fee3ad207fe80e19d340ee1b2ee3514683079d8",
+      "bytes": 132102
+    },
+    "previews/probe-000115.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000115.jpg",
+      "sha256": "f4f2b94fb834d6398740b106bcc49de4434e87818bcae4715d9983fbaeb64e6e",
+      "bytes": 131986
+    },
+    "previews/probe-000985.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000985.jpg",
+      "sha256": "8c2cb986f667577b6af9c4ea755ccb150ebd6ad564faba2182e420a182975c74",
+      "bytes": 132357
+    },
+    "previews/probe-000007.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000007.jpg",
+      "sha256": "3a60dbf194250f862fe11c851388dcf04dcd79fade241f08fad188f443ce53c0",
+      "bytes": 131855
+    },
+    "previews/probe-000175.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000175.jpg",
+      "sha256": "623416c97dfb76a6e6ad0e0433953234b04a019c05e116f95e58418665995d1d",
+      "bytes": 131975
+    },
+    "previews/probe-000097.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000097.jpg",
+      "sha256": "ecd005dd896fb590ac1efb03bc973bd09ad9141e79b983c9e56827c78d92c3a0",
+      "bytes": 132260
+    },
+    "previews/probe-000742.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000742.jpg",
+      "sha256": "f8614cd4dc15d3dc51c0bcf1e7af2dfd7e5e9796ca64e4e040025d7de467740b",
+      "bytes": 132140
+    },
+    "previews/probe-000544.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000544.jpg",
+      "sha256": "4d9a34678a038d63af3b5fd29ad34fc5b30372781d9d11eb4d405dfcb10175f5",
+      "bytes": 132192
+    },
+    "previews/probe-000589.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000589.jpg",
+      "sha256": "3a09db9f1ac1cf297e8751b78f902ca35b5b6a0dc43372cb173d65f1e49a74c4",
+      "bytes": 132356
+    },
+    "previews/probe-001024.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-001024.jpg",
+      "sha256": "a12e38426bbec78ffba1fbed32e33666390917732479ec1c862b74923cea6683",
+      "bytes": 132318
+    },
+    "previews/probe-000604.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000604.jpg",
+      "sha256": "424c147b7cb21666adb3ecb66fcdd576484af0a46a5ca5d9d47df9ae777979f3",
+      "bytes": 132246
+    },
+    "previews/probe-000088.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000088.jpg",
+      "sha256": "88e1f20c2adfe7941c2fe2c511b9ddd073fcac53dae4c86a6af63198a8663b8c",
+      "bytes": 132283
+    },
+    "previews/probe-000283.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000283.jpg",
+      "sha256": "0e11fae338b610f1201ad7040e1ec24378ba4660cdf44b55ad4d41b8a7419309",
+      "bytes": 132223
+    },
+    "previews/probe-000853.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000853.jpg",
+      "sha256": "302bc374c0416066f1ccd1b5b7dcc166b05a29d015c5df5c19a11abf4e1888a4",
+      "bytes": 132663
+    },
+    "previews/probe-000043.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000043.jpg",
+      "sha256": "c619799fa9326af9e9c5e17ba87baa8a6f0985b380a7a9c320ef083ce767ad9a",
+      "bytes": 132061
+    },
+    "previews/probe-000724.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000724.jpg",
+      "sha256": "f9a7731f15eecf88533dbc781174a2d100b11bd0f91ae36c7633076bfd3bbf0d",
+      "bytes": 132298
+    },
+    "previews/probe-000796.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000796.jpg",
+      "sha256": "b670ef7802bed728cedc1f8b17c751f4fdf599149c3a1753903c45d666edaf1f",
+      "bytes": 132450
+    },
+    "previews/probe-000877.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000877.jpg",
+      "sha256": "289befb2061a579cbc9fa81260f00c970cabe5112afe1fd6649daa71caeb9346",
+      "bytes": 132221
+    },
+    "previews/probe-000340.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000340.jpg",
+      "sha256": "fc31a0f141b6d152b5ca31f25ba08a66ec579fbbc152652e71207cf444e7ac25",
+      "bytes": 132241
+    },
+    "previews/probe-000136.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000136.jpg",
+      "sha256": "5c9f9bcb025e9f70814ae73d2d975ec4f64c02f331562fdb87bc0108ee8987a2",
+      "bytes": 132153
+    },
+    "previews/probe-000649.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000649.jpg",
+      "sha256": "eb1e81e64058eb0c8aa12752495f51719a45adb859198befbaab382eff7c3071",
+      "bytes": 132155
+    },
+    "previews/probe-000748.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000748.jpg",
+      "sha256": "eb6f23dd5891b810c1c449f436c957f289942177ab2382105d423ab7d22893ea",
+      "bytes": 132412
+    },
+    "previews/probe-000868.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000868.jpg",
+      "sha256": "0934dc1635c8bd99c8a95e0563c5d7f554065c795b0960e7d3a20bca65c6735a",
+      "bytes": 132267
+    },
+    "previews/probe-000058.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000058.jpg",
+      "sha256": "b30c251af27be9f0c14c76d2d079061985c466b77a225ea00ed08d86a1ce2048",
+      "bytes": 132077
+    },
+    "previews/probe-000541.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000541.jpg",
+      "sha256": "cdc37911f337ad367e4171417801301aae4feea2d60f5851430ee9ee8a5405bc",
+      "bytes": 132138
+    },
+    "previews/probe-000463.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000463.jpg",
+      "sha256": "5fe65d82fd199b7d19eb21df4c7258ca931b94833b27c1578af7b97faa0930b9",
+      "bytes": 132351
+    },
+    "previews/probe-000799.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000799.jpg",
+      "sha256": "36256033a624ca5b77db28f20b588d84d60485ef51ecda98cc45f3ac11537bb4",
+      "bytes": 132423
+    },
+    "previews/probe-000157.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000157.jpg",
+      "sha256": "7d4b44554704494ac132952fde4990c40acd152e8a8ec97b8ba41e0adc55e782",
+      "bytes": 132024
+    },
+    "previews/probe-000349.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000349.jpg",
+      "sha256": "21b306e802e105aa10fb6a11d0e5c6c5111d244644554403031df376f054a158",
+      "bytes": 132464
+    },
+    "previews/probe-000436.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000436.jpg",
+      "sha256": "58856c94e22e27caf8f7d21dce78f7ca7c2a17991cb4804135b944fb4d138c48",
+      "bytes": 132159
+    },
+    "previews/probe-000475.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000475.jpg",
+      "sha256": "02f8e221ef84d83521f8d9a8821d34a7907799ca33585f7e60f8053af085129d",
+      "bytes": 132200
+    },
+    "previews/probe-000601.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000601.jpg",
+      "sha256": "23be0f50d79cce2ab30403cd2edf4103a37b3bb36fe7a7392dc90e7d1b99b060",
+      "bytes": 132316
+    },
+    "previews/probe-000772.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000772.jpg",
+      "sha256": "8d368b929df54d39938cbfbf60d79aa20d3dff4af3d57d10ea6629932e2d15e0",
+      "bytes": 132430
+    },
+    "previews/probe-000988.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000988.jpg",
+      "sha256": "e3504d2e70a6c2f6c88781b7f74e11ab56f5d589739f7cd04cf6577e9e0b0d02",
+      "bytes": 132297
+    },
+    "previews/probe-000469.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000469.jpg",
+      "sha256": "3254652e6f9c4526108ebe458cdc41cbfcf6f273f0d602cc4f3fc3bbbdbb2237",
+      "bytes": 132213
+    },
+    "previews/probe-000286.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000286.jpg",
+      "sha256": "56fe520b480ba1491cbbf326b0cc55f4fe8154aea1b23572cc6feb888183a091",
+      "bytes": 132274
+    },
+    "previews/probe-000703.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000703.jpg",
+      "sha256": "6698407ab6cc93ac42a1241ad9c4d2bf7c56d1d98712491688c261f02bfbe7eb",
+      "bytes": 132275
+    },
+    "previews/probe-000670.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000670.jpg",
+      "sha256": "06a9589b4ea38b6c77bb92b633ac1cb9f7bc82a412b47a3e995f5ece90dcc18f",
+      "bytes": 132389
+    },
+    "previews/probe-000343.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000343.jpg",
+      "sha256": "8315a95fddefa736585ca030d23ac92a6611d80475a36dff2b531916fc656b22",
+      "bytes": 132032
+    },
+    "previews/probe-000400.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000400.jpg",
+      "sha256": "f23289d2d4a8ad24fb7c04400966b94a9ba5c4950b532c7def387d2c42623621",
+      "bytes": 132188
+    },
+    "previews/probe-000091.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000091.jpg",
+      "sha256": "e1c93601f84cd4ac3f882a681419c39fda4792ad2e9b044e8bd4568f53c3b3ce",
+      "bytes": 132273
+    },
+    "previews/probe-000178.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000178.jpg",
+      "sha256": "2041214a2de6297b69c9375aced28e375cf9a5a2329040b0718a7b3035f895b1",
+      "bytes": 132108
+    },
+    "previews/probe-000196.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000196.jpg",
+      "sha256": "0cf622d354f0358d4ed9b21e21e54d611ea68d1e606028b1900eaf506ddf048d",
+      "bytes": 132236
+    },
+    "previews/probe-000100.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000100.jpg",
+      "sha256": "c3fec2eae564a1f833de8726484a39c53ececfe661c7c910a2bda069e9166e9f",
+      "bytes": 132247
+    },
+    "previews/probe-000460.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000460.jpg",
+      "sha256": "4947e3078c1a45dd2d78ee0e60077ec18917e41af82b64e8346799a6ef001bf2",
+      "bytes": 132083
+    },
+    "previews/probe-000559.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000559.jpg",
+      "sha256": "a58a923988d24b68521751ff7e8d50b6fe89cbad053d3694ddcae60fdbbb6fef",
+      "bytes": 132543
+    },
+    "previews/probe-000817.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000817.jpg",
+      "sha256": "2a1467581050e8465bee628511a739aa9de9e49a32f25364e3303bdceea5d04b",
+      "bytes": 132014
+    },
+    "previews/probe-000721.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000721.jpg",
+      "sha256": "53176dd7baef18c7130f42a21af93c6e0528941ef7834e668221e828544b98d8",
+      "bytes": 132315
+    },
+    "previews/probe-001063.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-001063.jpg",
+      "sha256": "e436d56e85525bb1af085b569b47b9a878bd4f831b15aac1bd88ff8d591bb808",
+      "bytes": 132301
+    },
+    "previews/probe-001057.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-001057.jpg",
+      "sha256": "171616a90f2964f5dc30edde33ab91d93fedd54c301dc89ae60a60b910975a20",
+      "bytes": 132512
+    },
+    "previews/probe-000454.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000454.jpg",
+      "sha256": "cbecabaa0529d71cf8de47a61363d3047b607b78acdf55e97dc1f1b289e46485",
+      "bytes": 132282
+    },
+    "previews/probe-001000.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-001000.jpg",
+      "sha256": "5810c2eb637a9cfc840068cf507f933907a15c764711844acf979234c96e9f9f",
+      "bytes": 132424
+    },
+    "previews/probe-000838.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000838.jpg",
+      "sha256": "05b95df787aa9012f4a51714910452914dc33180bf153f4174cf5ada363dea67",
+      "bytes": 132266
+    },
+    "previews/probe-000991.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000991.jpg",
+      "sha256": "a3f70536db2ee857a4b0f7ae9aaab803141e02d057ec38936a9bc14c94b0088a",
+      "bytes": 132300
+    },
+    "previews/probe-000268.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000268.jpg",
+      "sha256": "1eca3e5f007282fffbb9f62b9e4fdbd3b5729c19f6627a37b66518e265ad81c6",
+      "bytes": 132214
+    },
+    "previews/probe-000658.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000658.jpg",
+      "sha256": "624ccb77dbc8d50b3ae75b522910da0902879e70769f2c68db7e9037f8285b88",
+      "bytes": 132353
+    },
+    "previews/probe-000937.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000937.jpg",
+      "sha256": "431189c575bc8e6c9427cc37d1a18f5f11d9cd83ef6b9f9ba487d1a747b0edde",
+      "bytes": 132336
+    },
+    "previews/probe-000766.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000766.jpg",
+      "sha256": "f0f3f8122493f941f882508f535e8721c227dcb57e0ff02da2c49f33d20c0b23",
+      "bytes": 132415
+    },
+    "previews/probe-000025.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000025.jpg",
+      "sha256": "6665b11d46e20063aa737669cd8bf6a04002ff22db618263f94dbb9f433e92c8",
+      "bytes": 132125
+    },
+    "previews/probe-000928.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000928.jpg",
+      "sha256": "aeaa82da66efe4ae483253d53330282815c2660108f3c2ad879d91ea814d6e81",
+      "bytes": 132422
+    },
+    "previews/probe-000238.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000238.jpg",
+      "sha256": "1b488d8ea0f71ff5d6523c826cc6ce72d09e336bf3d767c012b2f65f9c053779",
+      "bytes": 132210
+    },
+    "previews/probe-000793.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000793.jpg",
+      "sha256": "3f916bec65a6a8f1bbce1fc0580778383f0ae89ac7663aea282ddb4b10d6be0a",
+      "bytes": 132041
+    },
+    "previews/probe-000787.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000787.jpg",
+      "sha256": "210aa1db5c92d97c1c2c1189239f81e8efca3ea6712396fc14318fa465ff1dfd",
+      "bytes": 132291
+    },
+    "previews/probe-000619.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000619.jpg",
+      "sha256": "30714c322712bf4dc0c430bd1d5941f74a5aa8ce81b3066fe183b0ae7de752ae",
+      "bytes": 132028
+    },
+    "previews/probe-000379.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000379.jpg",
+      "sha256": "3abf0b14626f9c6206e38ec1a6b32f0ac0e1a11e186be17fc8581792d5e142b6",
+      "bytes": 132131
+    },
+    "previews/probe-000862.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000862.jpg",
+      "sha256": "c62a39e22fc6b2be338bd1488aee52dcd327d12e3a9657bd8160f6dd07f9d314",
+      "bytes": 132192
+    },
+    "previews/probe-000754.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000754.jpg",
+      "sha256": "58a607f46bdf71d368ed8e681a8e69a693d915a533741b5e6fcfde6d382c8901",
+      "bytes": 132562
+    },
+    "previews/probe-001078.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-001078.jpg",
+      "sha256": "f070102a6959889a20c37cb3ccfee3da0edb553da176b3fb933e5ec70cd3e963",
+      "bytes": 132558
+    },
+    "previews/probe-000931.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000931.jpg",
+      "sha256": "5672eea72d6660d258b48782a93c277637cd157a521c6cea91061f5ecc5312ff",
+      "bytes": 132397
+    },
+    "previews/probe-000574.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000574.jpg",
+      "sha256": "026465f0f0d3a7c01753a4e88bdf39a93047ea87be28282fc8e9e7cdd6d37088",
+      "bytes": 132208
+    },
+    "previews/probe-000154.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000154.jpg",
+      "sha256": "022c23e532ec362db5931a4db641d890c82a8642eab196c81e94bfae640b01f1",
+      "bytes": 132224
+    },
+    "previews/probe-000934.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000934.jpg",
+      "sha256": "a74627ef135dabad638fea4271de24d24c9275bb1dd885ba2855af1d7b14a2eb",
+      "bytes": 132188
+    },
+    "previews/probe-000352.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000352.jpg",
+      "sha256": "008831cfd1c787fe1304c834d4ef57a5e32b2974c0ce56d2ef00bfc3345fe9b3",
+      "bytes": 132173
+    },
+    "previews/probe-000049.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000049.jpg",
+      "sha256": "633215519496b9a5f6def0046f581d58c20352dff343083785e68ca359091192",
+      "bytes": 132307
+    },
+    "previews/probe-000442.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000442.jpg",
+      "sha256": "4be1f3d84bccb3c534ccdeabcdca10af8ca2d18bf8faed326cf9d0aa2c7e884c",
+      "bytes": 132242
+    },
+    "previews/probe-000832.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000832.jpg",
+      "sha256": "3f743943ba964248cb784c79b69beef767dd711af7bafbaeda57fec693d1fa8e",
+      "bytes": 132253
+    },
+    "previews/probe-000568.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000568.jpg",
+      "sha256": "ccfdd0188c2117199bc2c8bd7fd9571f4771601cc3df185b5fed178536a57c76",
+      "bytes": 132142
+    },
+    "previews/probe-000631.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000631.jpg",
+      "sha256": "3fd884a24f5bce60f50db6bd7b0ce6dba221a6d2f5e89bde6ed7f02b07abc454",
+      "bytes": 132405
+    },
+    "previews/probe-000586.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000586.jpg",
+      "sha256": "571e50cd09012b768e8231ad41e87bab8c50058399c9f8588c4c1377342795a7",
+      "bytes": 132138
+    },
+    "previews/probe-000517.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000517.jpg",
+      "sha256": "a7a454bbced0dde3b8b38a12bb8141610b79b09003af0ae56802aba44c2f902e",
+      "bytes": 132386
+    },
+    "previews/probe-000955.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000955.jpg",
+      "sha256": "9afda22a0950b18b6056c7519cdeef20edc0855352c51d83bc7e48772ad7b57a",
+      "bytes": 132485
+    },
+    "previews/probe-000943.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000943.jpg",
+      "sha256": "24f476b6cd6727d97d1371fa117593e276b90c9a00fc4b2f53f7ce4be028f325",
+      "bytes": 132350
+    },
+    "previews/probe-000403.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000403.jpg",
+      "sha256": "f03dd1824f2bbe9871c44fca9a3cdcb60489e8baa49079f4fc2139246d4b1466",
+      "bytes": 132158
+    },
+    "previews/probe-000826.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000826.jpg",
+      "sha256": "feaf841af79ac6779b05d47e6a234c415d30f35046ba139abf1b31d5a87e9909",
+      "bytes": 132492
+    },
+    "previews/probe-001048.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-001048.jpg",
+      "sha256": "2a6357161074a775f68bc8cb64a7f4119d159d5028de8d97f2bbc136501abbc3",
+      "bytes": 132302
+    },
+    "previews/probe-000472.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000472.jpg",
+      "sha256": "8d908c8f13af3f76e2c3bc542ff0e6f7b4d0f2acf05ee3809b5bef42c1bb73f6",
+      "bytes": 132405
+    },
+    "previews/probe-000763.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000763.jpg",
+      "sha256": "45a9f74510f7832ee1001e8819d4eab82dbdac8ad5554905e37588465e2f145f",
+      "bytes": 132383
+    },
+    "previews/probe-000595.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000595.jpg",
+      "sha256": "23e0bf6141eeeb7854fbb663f2412a084c09160ea327b858ce4b27ab8f0ba08b",
+      "bytes": 132281
+    },
+    "previews/probe-000298.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000298.jpg",
+      "sha256": "dc25b77456eb17e953024eac5a998eb070e8cbb40237e1010e3834b159418022",
+      "bytes": 132424
+    },
+    "previews/probe-000313.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000313.jpg",
+      "sha256": "66d3cdfc1f4784e1266959ac2de69def99dee134be97a0556c8349d804995962",
+      "bytes": 132241
+    },
+    "previews/probe-000982.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000982.jpg",
+      "sha256": "4031cd9e7c9919aba215681e3797924ee268a6def016948be8bf68dd80c8c2a2",
+      "bytes": 132282
+    },
+    "previews/probe-000865.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000865.jpg",
+      "sha256": "b3c920aea522bf4449dec478b804dc8b6ed5562a0a8f23bc9e3cd0246ae77699",
+      "bytes": 132402
+    },
+    "previews/probe-000037.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000037.jpg",
+      "sha256": "5884c4a48483d909194c755a92c2024fb8237b68ba071797f9d552b0bd062d96",
+      "bytes": 132253
+    },
+    "previews/probe-000202.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000202.jpg",
+      "sha256": "a34a50b1a1aa06e8312b8b9d741eb7370001b5c6aa6a415b92ef963036a91a25",
+      "bytes": 132132
+    },
+    "previews/probe-000232.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000232.jpg",
+      "sha256": "9bc70d61a721a69d4fb0b99c3ee19f3ed93c9b9d8b9b794de97a1702b3fd94a2",
+      "bytes": 132111
+    },
+    "previews/probe-000121.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000121.jpg",
+      "sha256": "b6ab9785dc7eb939a41a0aab9a67c91eeaa76eb9bc2afa1e5fda59229a3a52f3",
+      "bytes": 132027
+    },
+    "previews/probe-000958.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000958.jpg",
+      "sha256": "308149cae9c3f9f1e1d4297f3d427f86bd595ede390c3737546eeef4abbc2c8a",
+      "bytes": 132272
+    },
+    "previews/probe-000292.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000292.jpg",
+      "sha256": "d3c997c02056ab8f09d07d3dfc197b460a5075d9882ef52dcfbcb6b47e1d0a3f",
+      "bytes": 132253
+    },
+    "previews/probe-000412.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000412.jpg",
+      "sha256": "214e8291c5898ff0e673e0d7ba63888317977f19031be51a145d15041a8ec701",
+      "bytes": 132185
+    },
+    "previews/probe-000994.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000994.jpg",
+      "sha256": "8ba896b1cac99dbb31bcb68e0779cc6813e1809c6fe052fa880c5c806a9dea18",
+      "bytes": 132361
+    },
+    "previews/probe-000082.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000082.jpg",
+      "sha256": "7490b3a501bbc4defb35a46e3e203ef330caba327acbcc3a0ea02f8d68d6e9af",
+      "bytes": 132295
+    },
+    "previews/probe-000481.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000481.jpg",
+      "sha256": "6dbc1fa4d22a566a716bf4c2cec7324f683bacf4d9d7e07903be0890b698d11b",
+      "bytes": 132246
+    },
+    "previews/probe-000607.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000607.jpg",
+      "sha256": "f4d4c9aaf5ad3d7bc22b7e38ebd75e19cfcfad3389118abdc0645c59d20f866a",
+      "bytes": 132448
+    },
+    "previews/probe-000181.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000181.jpg",
+      "sha256": "0f15fffa04024492e0a3bdfa7c16d3fd43e6d0cce5ebc311e30111be15d8542b",
+      "bytes": 132013
+    },
+    "previews/probe-001045.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-001045.jpg",
+      "sha256": "dd6a13e95135e45ff0592597673b9ca56eb39cfa98563781e20b702fc2a27159",
+      "bytes": 132078
+    },
+    "previews/probe-000910.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000910.jpg",
+      "sha256": "2be24be4adceedfbbec28264ee680560d5f1895a32198911f14f56be91efc53f",
+      "bytes": 132447
+    },
+    "previews/probe-000160.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000160.jpg",
+      "sha256": "158d712da084f9f18b459f8bec1bc8912f4c595db1f47dbe60537f97e126e49f",
+      "bytes": 132174
+    },
+    "previews/probe-000814.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000814.jpg",
+      "sha256": "8e088946624425fd2074588040bd15bc87e907a8db2ccd63fa5ad4ebc003ae26",
+      "bytes": 132470
+    },
+    "previews/probe-000895.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000895.jpg",
+      "sha256": "8b5b2bdc971019ded52d6d8be4c09ca42961e97a785bead0f97e5faac8550c64",
+      "bytes": 132210
+    },
+    "previews/probe-000259.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000259.jpg",
+      "sha256": "1f107f46720fcc8bc7f707910b07673062a2e9d622c6073adef7dd92e299044b",
+      "bytes": 132150
+    },
+    "previews/probe-000628.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000628.jpg",
+      "sha256": "a09c06d97eedd6b4b128d7065bc8de8dfcc10846d0116cb68493160262e0c559",
+      "bytes": 132247
+    },
+    "previews/probe-000904.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000904.jpg",
+      "sha256": "c69981bedb454c9c476dce6b96ab74b6512d4143ee609570ab670f39b0ede2a1",
+      "bytes": 132317
+    },
+    "previews/probe-000925.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000925.jpg",
+      "sha256": "c0212787a0aa7e60609151969dccc002ff26443425f57f2385676f414a45af4e",
+      "bytes": 132265
+    },
+    "previews/probe-000664.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000664.jpg",
+      "sha256": "583d08eb486cf01a3b6e48f98c534a42384d6ea6d945ca48adba5e4aae0446b5",
+      "bytes": 132357
+    },
+    "previews/probe-000490.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000490.jpg",
+      "sha256": "3c78bbda6521692b6d60a1f87671b05cd10746a078160a131fbe2971f3e5b688",
+      "bytes": 132312
+    },
+    "previews/probe-000514.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000514.jpg",
+      "sha256": "1f7f3b5168d8d33405e027816276cc1ec8b3946655ceff9e95314630d6fdb2ac",
+      "bytes": 132329
+    },
+    "previews/probe-000673.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000673.jpg",
+      "sha256": "5ca255959e70301cfcd3685b73df7a5e89c82eaba06f9d63fb92accab2e67ab1",
+      "bytes": 132364
+    },
+    "previews/probe-000271.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000271.jpg",
+      "sha256": "4c6cb32280e50571526d84e212ff56dc8fb9d8d9849e8e35da407dfced6869fa",
+      "bytes": 132487
+    },
+    "previews/probe-000397.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000397.jpg",
+      "sha256": "532e18c56298915b38f61fdd6af295c42bc4d20da794d10df3126d9ff7a72b7d",
+      "bytes": 132113
+    },
+    "previews/probe-000976.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000976.jpg",
+      "sha256": "5c55d1964b57b39c09a685b780aa02515aa2bde786e451e195c6947e89a99a65",
+      "bytes": 132336
+    },
+    "previews/probe-000262.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000262.jpg",
+      "sha256": "b77e8a44c5c522ec5172fdd06fc6b34085bc3c4a12f32fce1db79c757e52a340",
+      "bytes": 132103
+    },
+    "previews/probe-001027.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-001027.jpg",
+      "sha256": "44f4cc2379f49f74937a8c83e6ab46f8b35b92075e05c789309688e2a9bb2abb",
+      "bytes": 132348
+    },
+    "previews/probe-000031.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000031.jpg",
+      "sha256": "23b1b8a79c57310c309c1f50e08889dc2afcec8cde80de0c08dafbbd9f57f6c4",
+      "bytes": 132048
+    },
+    "previews/probe-000172.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000172.jpg",
+      "sha256": "bf675d7bc213439150ddbce53970891f89569a28de9eb989833da0b8adae1c36",
+      "bytes": 132015
+    },
+    "previews/probe-000253.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000253.jpg",
+      "sha256": "5f5a1e4d4b0d4467a3c3710e8b6737f1060ec81a96e36d3aa81335329dd76d7b",
+      "bytes": 132030
+    },
+    "previews/probe-000565.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000565.jpg",
+      "sha256": "a9f3fd6b30cc794946372eead468b3eaa2dc70f7428ac6456f46de1e18d7d4a2",
+      "bytes": 132344
+    },
+    "previews/probe-000445.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000445.jpg",
+      "sha256": "c341a83f8c48b1712e8390ea244701a38a08a14d955eeef5b7ae59436184054a",
+      "bytes": 132411
+    },
+    "previews/probe-001006.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-001006.jpg",
+      "sha256": "0cf286770f4be06cafab78c90dd8e7c7c6b37ab77157bb418de377d1531568f5",
+      "bytes": 132245
+    },
+    "previews/probe-000376.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000376.jpg",
+      "sha256": "46c062a41bf120a90bb17e102bdee5b75e27c74d0fbc7fd072419579122d66cf",
+      "bytes": 132193
+    },
+    "previews/probe-000652.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000652.jpg",
+      "sha256": "75d672871de726df00d7cabf91a380f6638dd06a8c5272887f1fc01e804143c0",
+      "bytes": 132159
+    },
+    "previews/probe-000973.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000973.jpg",
+      "sha256": "dcff1a873ba89adcaafdb273a63a59d09231236bd19b8655ae09da5585fb72fb",
+      "bytes": 132090
+    },
+    "previews/probe-000304.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000304.jpg",
+      "sha256": "d0c6f3ac04d6d95f626cded8cd31dcb1776ea33e12f021e0e18ea4298029e3d2",
+      "bytes": 132182
+    },
+    "previews/probe-000856.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000856.jpg",
+      "sha256": "1a4daea25df2e554b2c05d533f97d1aceca4fa92176b20d8ed52aa9d0e9de452",
+      "bytes": 132522
+    },
+    "previews/probe-000913.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000913.jpg",
+      "sha256": "a05a4ba24bf662f8d735c22624f6438f30451129754ce7b056cd909844de47c9",
+      "bytes": 132525
+    },
+    "previews/probe-000256.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000256.jpg",
+      "sha256": "2bfdb42a6397f05bba4ac36f83a9a261fd86c753b4acb5855cb356c56d4b5334",
+      "bytes": 132152
+    },
+    "previews/probe-000151.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000151.jpg",
+      "sha256": "29bbf13febca5d37f93a7b32fa1141e7bf3402ea843fdf4f13cf7516a0d98976",
+      "bytes": 132145
+    },
+    "previews/probe-000226.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000226.jpg",
+      "sha256": "3664163043cde7a2799cefb9f437bf0b7cf3b55c37d3aa509b7edd8139663b13",
+      "bytes": 132200
+    },
+    "previews/probe-000235.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000235.jpg",
+      "sha256": "2454c9191d5a710d6ccdd834b2d4875e588a3b48e655b397839995a9aa620bd0",
+      "bytes": 132354
+    },
+    "previews/probe-000466.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000466.jpg",
+      "sha256": "f0a5fb4af8b530b22984271b74e79a50f0651142f25e7e38e75b2a57f8465b08",
+      "bytes": 132392
+    },
+    "previews/probe-000478.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000478.jpg",
+      "sha256": "15d04e4f71580b14896fd636406d0196bf20128cbbe65ba3409fb1c86a90e59f",
+      "bytes": 132205
+    },
+    "previews/probe-000694.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000694.jpg",
+      "sha256": "0d3ab19c35311672b11fe363e5ba9e4794e5c8e7856aeb5be0ec435a1c39c8d4",
+      "bytes": 132320
+    },
+    "previews/probe-000427.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000427.jpg",
+      "sha256": "53f76dcdf32cf9d1c10c77d5c76759235a9be552724a267b83dee93d53877730",
+      "bytes": 132112
+    },
+    "previews/probe-000883.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000883.jpg",
+      "sha256": "92b62c0a404110cf0116997a8dfd3479d3d21321caac7f40118b1d84bcae856d",
+      "bytes": 132292
+    },
+    "previews/probe-000448.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000448.jpg",
+      "sha256": "07d3af137d6c69af165ca8d0c0532f053404d0b9f930da5e75718e6f189e9597",
+      "bytes": 132346
+    },
+    "previews/probe-000331.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000331.jpg",
+      "sha256": "da5124272202df6f6d5973ccdef5930e220ee48a1562ac7fa66b45879b77d0d0",
+      "bytes": 132492
+    },
+    "previews/probe-000364.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000364.jpg",
+      "sha256": "5cee7ef7bf786c67feaaefbdbc6f587033b8dc1b408fb5385ddf2021f45b9e60",
+      "bytes": 132334
+    },
+    "previews/probe-000076.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000076.jpg",
+      "sha256": "b66d5be4e3fd848bd6429d89910c42d77b0f0be7959a1086a5069208563d23d0",
+      "bytes": 132139
+    },
+    "previews/probe-000886.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000886.jpg",
+      "sha256": "dc1f4b9cb285822e8039f0c13815865a6f765323496fec3f215f5e4b8fb06d50",
+      "bytes": 132262
+    },
+    "previews/probe-000730.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000730.jpg",
+      "sha256": "6c5f6085f3c1136d1b72b80110ebb31e46b85cf3c179aa430619c601d1a23bfc",
+      "bytes": 132149
+    },
+    "previews/probe-000625.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000625.jpg",
+      "sha256": "7816e594a257a10f03380e281889b20dd13b8647fc23112e01d80f879b1b11fc",
+      "bytes": 132277
+    },
+    "previews/probe-000451.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000451.jpg",
+      "sha256": "8032015add93f2ce722a4864ba290a3eaf0db7396d7ba517eedd3251e017b0dc",
+      "bytes": 132406
+    },
+    "previews/probe-000148.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000148.jpg",
+      "sha256": "68fd1c827c8c341beb1ce555821e5352b414c1ac2b8e56cc5db10a60d72cd06d",
+      "bytes": 132125
+    },
+    "previews/probe-000712.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000712.jpg",
+      "sha256": "d7a7201fbf8faa99b448b3a057d07b481b721301ab5661b33122bee50f92c7d4",
+      "bytes": 132465
+    },
+    "previews/probe-000385.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000385.jpg",
+      "sha256": "ca4c6b5c54acdefbf2de05b8beb1d97b8ed9d45b1182af35e9e4f49201cceca9",
+      "bytes": 132263
+    },
+    "previews/probe-000775.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000775.jpg",
+      "sha256": "ea38c9fa9f441f4bc3d23616856ae31cc6354843b5ade11452b707ecf3737295",
+      "bytes": 132182
+    },
+    "previews/probe-000847.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000847.jpg",
+      "sha256": "cab8981ec05326b7efa9a650b9c690b21aa91c9ef75dc9ee9764fae4cf7be2cf",
+      "bytes": 132109
+    },
+    "previews/probe-000682.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000682.jpg",
+      "sha256": "5de3d7ba04815aee75650c2042021750961882ce77f42edeef3bb488f21e7cf7",
+      "bytes": 132300
+    },
+    "previews/probe-000859.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000859.jpg",
+      "sha256": "fdf25baea557d78d46b74c9b51f29f3a58243ddd56e1e664e2d5a47ac0e90fd3",
+      "bytes": 132601
+    },
+    "previews/probe-000166.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000166.jpg",
+      "sha256": "f0ec6afb96890cd485d3a9ed3394558862d82d23989297bcee22e51377af1fc4",
+      "bytes": 132322
+    },
+    "previews/probe-000556.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000556.jpg",
+      "sha256": "5ce0bdf0b8d7b49ef8d0f13980bd34b5c48d34c5a3e02bd469f715eae897ee82",
+      "bytes": 132183
+    },
+    "previews/probe-000745.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000745.jpg",
+      "sha256": "8d05f7122b3f9532daeb23e7027050ee4cbb4372dde8f733d46b3790d2cbbec6",
+      "bytes": 132522
+    },
+    "previews/probe-000484.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000484.jpg",
+      "sha256": "ac4fe83faff7c93d85cd865fd3d66edcbd01b182d2e56c4ab30dada3c8998b76",
+      "bytes": 132184
+    },
+    "previews/probe-000523.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000523.jpg",
+      "sha256": "cab060699131e207327a741f8c91c03256f02573f0e724ac2bae29eff9992dc8",
+      "bytes": 132150
+    },
+    "previews/probe-000622.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000622.jpg",
+      "sha256": "951094522d1cbe347acc9a31c7115bd5e6c4b3525376acccaa04028174f48199",
+      "bytes": 132284
+    },
+    "previews/probe-000205.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000205.jpg",
+      "sha256": "9f85e9907f07d0147c051210292f358771bbda4e2c621c9c6c70730b3ecf7be2",
+      "bytes": 132437
+    },
+    "previews/probe-000142.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000142.jpg",
+      "sha256": "1e5b748aa18490a7caa7f11bb70e3aec2fe08a5050f0ba80499f04fa288a86f6",
+      "bytes": 132051
+    },
+    "previews/probe-000760.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000760.jpg",
+      "sha256": "f19e5709bd976a5546ce65116cf2842da750b1fabbccb66bbd3728467f33ee24",
+      "bytes": 132420
+    },
+    "previews/probe-000709.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000709.jpg",
+      "sha256": "373e9f5335e420369655880eae5adca515f1d7369abbf8c67b6f3d051625d549",
+      "bytes": 132268
+    },
+    "previews/probe-000406.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000406.jpg",
+      "sha256": "1dcafa5bc9e0a9e4d91d9b1f623502de766421ade3170b55206e0c1018262ad4",
+      "bytes": 132379
+    },
+    "previews/probe-000382.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000382.jpg",
+      "sha256": "24c26e0f9c3cd0c8034c0441b2a7170894badfa9c757e3fdfb46cf9c1af2a8e6",
+      "bytes": 132146
+    },
+    "previews/probe-000355.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000355.jpg",
+      "sha256": "8d52644fbaa1bfbb4c5c46b5d038e1ca3e4dde77519f191403e0366c5925635e",
+      "bytes": 132046
+    },
+    "previews/probe-000106.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000106.jpg",
+      "sha256": "5d6635496ca4f72447dcb50c431c519dfec78182272e75231b33f41fdc8175c4",
+      "bytes": 132032
+    },
+    "previews/probe-000769.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000769.jpg",
+      "sha256": "ab7a83dea148fec0b0e4eea60ba421c927ef73b75d9f914e6b5f7c1813f00c91",
+      "bytes": 132231
+    },
+    "previews/probe-000616.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000616.jpg",
+      "sha256": "56777a60cd86a4377e911099705a216313ad7a0513d8d021e0efd7aaec084801",
+      "bytes": 132351
+    },
+    "previews/probe-000778.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000778.jpg",
+      "sha256": "4a8a78864c383f7b59fa17373418db86d874f98d4ec6a857995ac8f101468f04",
+      "bytes": 132178
+    },
+    "previews/probe-000640.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000640.jpg",
+      "sha256": "eb3b124bae83d546501e201b304f98268468451d66141d0dbc07bfb902b763bf",
+      "bytes": 132280
+    },
+    "previews/probe-000922.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000922.jpg",
+      "sha256": "e56332a8366f14c2e6bdfe33cfc738781a77862da5afb79d02e4760c6618713a",
+      "bytes": 132561
+    },
+    "previews/probe-000706.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000706.jpg",
+      "sha256": "c44f170c3e9c3f1b9ec5bc94fe5ea219e5aff5a1c66ec550bd46b8ed59e6c960",
+      "bytes": 132630
+    },
+    "previews/probe-000022.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000022.jpg",
+      "sha256": "065f2e6a678b241c9680dcb3cc0e8e72d3960077a98a6dfafa9efe11cc4a1365",
+      "bytes": 132052
+    },
+    "previews/probe-000334.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000334.jpg",
+      "sha256": "6d54fa14a07b9e1e87a0d45cae00315b0e6b56765da8ac7a1036e916d5c409df",
+      "bytes": 132216
+    },
+    "previews/probe-000736.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000736.jpg",
+      "sha256": "82194bee10d918b69515d0095426b50eea46c8123139b0441cf501a6012cf049",
+      "bytes": 132392
+    },
+    "previews/probe-000367.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000367.jpg",
+      "sha256": "dbb907e8d225e7e5d6189258748d14302417ba217233636cfca02f2c8ecb21d1",
+      "bytes": 132271
+    },
+    "previews/probe-000715.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000715.jpg",
+      "sha256": "54f86ad272aaa6b22e2db4c4c7de4c306f7ff7f2abe4164fffce52d981a3a977",
+      "bytes": 132326
+    },
+    "previews/probe-000979.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000979.jpg",
+      "sha256": "4219eb4b137d9943343494577facc98ffefae0da0538a311e4414f07936490f9",
+      "bytes": 132064
+    },
+    "previews/probe-001036.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-001036.jpg",
+      "sha256": "fcd26024e4b5ceaebefd4143c4d92a4fb55801ce7e564b18529ee653d54bdb79",
+      "bytes": 132387
+    },
+    "previews/probe-000655.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000655.jpg",
+      "sha256": "ed115e3af59ae5ebef65e98147292692822881432c0d5217db035fd0faf27d8f",
+      "bytes": 132159
+    },
+    "previews/probe-000667.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000667.jpg",
+      "sha256": "efa8e7a3c8f6e444c6f31624a10fca1b4a67663a2707e6fc9eedd4ea30cc8754",
+      "bytes": 132252
+    },
+    "previews/probe-000907.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000907.jpg",
+      "sha256": "1cbab8a869bb2e7a4757922450a68373c6d6dd4532fb2c29a49f87b8f5016e7f",
+      "bytes": 131869
+    },
+    "previews/probe-000073.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000073.jpg",
+      "sha256": "da7ea8b02a2fa119d8e27682220ead852ec6cd7fd4f3403e35f58f704c5caa68",
+      "bytes": 132180
+    },
+    "previews/probe-000010.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000010.jpg",
+      "sha256": "e9cba6073e931cade64da35f1420b1f78f96423f658d6a991d8bfce9d55d5685",
+      "bytes": 131914
+    },
+    "previews/probe-000004.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000004.jpg",
+      "sha256": "60f694b2dd09e6c3ac2fddcaed9d5b07c633ac5af680310908336d2710fbfe80",
+      "bytes": 125753
+    },
+    "previews/probe-000040.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000040.jpg",
+      "sha256": "a1fbabbf5b6ff7973e576f906917d7ca695a16603423171f57c34fd12705ab52",
+      "bytes": 132228
+    },
+    "previews/probe-000739.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000739.jpg",
+      "sha256": "629fd962bf471d416e6798466f297a88dbd1b72ca12edc6d1a090c4c24b73112",
+      "bytes": 132416
+    },
+    "previews/probe-000373.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000373.jpg",
+      "sha256": "ede28eb2514ce48a8c03b0318a3a89d688b12feb24fa925f3b4d57eb7d60f2be",
+      "bytes": 132371
+    },
+    "previews/probe-000358.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000358.jpg",
+      "sha256": "09dbbaffc8275755b005c280c10e3ab6166e29f7207f230ee6118cac078f83df",
+      "bytes": 132232
+    },
+    "previews/probe-000598.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000598.jpg",
+      "sha256": "3ea60ce2b90c5f26a781ab59a086ad44820a7bdedb112b02331675bcc2c6366f",
+      "bytes": 132405
+    },
+    "previews/probe-000220.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000220.jpg",
+      "sha256": "eacb01f29d540e063e01d7fd64c9b3315be1f0bea840ba17abc20405e4eb9031",
+      "bytes": 132309
+    },
+    "previews/probe-000295.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000295.jpg",
+      "sha256": "b84a7c7dc81a9fa0f2a5c453c1a56ad739e5b845989538ec3f0df7b436506460",
+      "bytes": 132218
+    },
+    "previews/probe-000109.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000109.jpg",
+      "sha256": "ff4b45ec32b07da89e4e5aa2bd95934971dd659035140044191ae22e1ad8569d",
+      "bytes": 132024
+    },
+    "previews/probe-001051.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-001051.jpg",
+      "sha256": "50da206554b17fe820c57d7cc15b03903b311dfee3ef28afc7edb5327c7c0ac5",
+      "bytes": 132239
+    },
+    "previews/probe-000577.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000577.jpg",
+      "sha256": "ed4142a66d94003822b392343599446668132ab9e227f1159d64ba62b8ab9679",
+      "bytes": 132497
+    },
+    "previews/probe-001015.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-001015.jpg",
+      "sha256": "9935e62d3fcc1e92d09eaa4e75418dafb57dcf9c88587dc6f0834bf2261bd891",
+      "bytes": 132242
+    },
+    "previews/probe-000016.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-000016.jpg",
+      "sha256": "407aca04e0d30c25ad2c5ffce90c8eb4d7eda3124969ee2af9bc882630ed05b6",
+      "bytes": 132011
+    },
+    "previews/probe-001042.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/previews/probe-001042.jpg",
+      "sha256": "b06e80f2dbaaf4c80ee506d19cb1a9883d75353d8336743a43d23a555d973d26",
+      "bytes": 132370
+    },
+    "snapshots/periodic_24266_1794692613830644389_9a231a1c.json": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/snapshots/periodic_24266_1794692613830644389_9a231a1c.json",
+      "sha256": "a23481a4d17295e20e55dfc167686753057b9cac4a07803990a75533071333a4",
+      "bytes": 3059
+    },
+    "snapshots/periodic_19642_1794692372531222904_bc36fe66.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/snapshots/periodic_19642_1794692372531222904_bc36fe66.jpg",
+      "sha256": "e914e258fd0a0a9f89d6c4a6ef1613c1fc33dae5a4568b0a777de1cc3a8f2512",
+      "bytes": 132229
+    },
+    "snapshots/periodic_17910_1794692282047901227_0b40b24b.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/snapshots/periodic_17910_1794692282047901227_0b40b24b.jpg",
+      "sha256": "eaec36f12b0026f533ad70bfeaaed5c8b5d7ca0952b21d13f92e43e248c8ab29",
+      "bytes": 132245
+    },
+    "snapshots/periodic_2881_1794691498171171132_d47dcead.json": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/snapshots/periodic_2881_1794691498171171132_d47dcead.json",
+      "sha256": "398bca2970b05df5c2509f39bbbbe2ef783a15e7f834e44057618067ad2c6c3a",
+      "bytes": 3039
+    },
+    "snapshots/periodic_570_1794691377548371070_60117d4a.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/snapshots/periodic_570_1794691377548371070_60117d4a.jpg",
+      "sha256": "bd44b1ac802c741c139be673c92242eb35ebc33b406879f79a73bac23f8a0532",
+      "bytes": 132154
+    },
+    "snapshots/periodic_1148_1794691407685711327_aabc6fe4.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/snapshots/periodic_1148_1794691407685711327_aabc6fe4.jpg",
+      "sha256": "9891016b1e173011c4678415c366b17895b0f06239070b369c9dfde78c51e4b6",
+      "bytes": 132427
+    },
+    "snapshots/periodic_9241_1794691829853764039_6721d792.json": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/snapshots/periodic_9241_1794691829853764039_6721d792.json",
+      "sha256": "f57c46b507e80b8e526652866a7b28b73cc2521f759897a94932362cced377e3",
+      "bytes": 3043
+    },
+    "snapshots/periodic_3458_1794691528404226323_ec4c1940.json": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/snapshots/periodic_3458_1794691528404226323_ec4c1940.json",
+      "sha256": "1cc1ee97431ecb966295636a706ebb1badaad3a5fa2c1651081690b888e07342",
+      "bytes": 3055
+    },
+    "snapshots/periodic_29463_1794692885028923345_abfd1c11.json": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/snapshots/periodic_29463_1794692885028923345_abfd1c11.json",
+      "sha256": "cf015202deaf127999de31d0496c90fc0c00e3cef7a61a351cde77387a1cad1e",
+      "bytes": 3058
+    },
+    "snapshots/periodic_7511_1794691739537632266_e0e6f4d6.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/snapshots/periodic_7511_1794691739537632266_e0e6f4d6.jpg",
+      "sha256": "229e6015e8efae585e7438b2fe718a237cfd546b7617548fa8f91dd38db3d174",
+      "bytes": 132166
+    },
+    "snapshots/periodic_21953_1794692493086828942_56dbb552.json": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/snapshots/periodic_21953_1794692493086828942_56dbb552.json",
+      "sha256": "95e0991f3ee95490be5bff5264e9d0d7eac0cf335b42955e54da0859fe0bb9d6",
+      "bytes": 3045
+    },
+    "snapshots/periodic_24266_1794692613830644389_9a231a1c.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/snapshots/periodic_24266_1794692613830644389_9a231a1c.jpg",
+      "sha256": "969c3b0af7e13ea18bffd7114350005405105bb3d1f02631aa12ba285a669d6c",
+      "bytes": 132278
+    },
+    "snapshots/periodic_33508_1794693095951197230_30732f1a.json": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/snapshots/periodic_33508_1794693095951197230_30732f1a.json",
+      "sha256": "50ea7f2ab3aa36ee37b51b478e3a9690080e6d11e4d301f11d0a7eee10c0d34a",
+      "bytes": 3048
+    },
+    "snapshots/periodic_31775_1794693005537729259_edbbb6e9.json": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/snapshots/periodic_31775_1794693005537729259_edbbb6e9.json",
+      "sha256": "ae8bcb6f1c79baab46547bb322130b97b2bdccb158c1678ce3f52843c01895df",
+      "bytes": 3059
+    },
+    "snapshots/periodic_17910_1794692282047901227_0b40b24b.json": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/snapshots/periodic_17910_1794692282047901227_0b40b24b.json",
+      "sha256": "8a30e743750cd3e49431e4d6bbeab9d01a7679a8b35b60dfbe613526dc8af0bb",
+      "bytes": 3056
+    },
+    "snapshots/periodic_12132_1794691980552399707_1382d42f.json": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/snapshots/periodic_12132_1794691980552399707_1382d42f.json",
+      "sha256": "e0c26e16416c252cf35868d1f7fd205d598fa3ca146bb57f915600c2f02b3bde",
+      "bytes": 3057
+    },
+    "snapshots/periodic_18488_1794692312210767992_fb9fc08d.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/snapshots/periodic_18488_1794692312210767992_fb9fc08d.jpg",
+      "sha256": "147c11b97bf4662c12b8ae37f10457c02d655373db9b6fdaeb0f48376fd41f87",
+      "bytes": 132118
+    },
+    "snapshots/periodic_2881_1794691498171171132_d47dcead.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/snapshots/periodic_2881_1794691498171171132_d47dcead.jpg",
+      "sha256": "c3f6cb89c29ca19487fad38ec70b0709b3ae5fe4a656a0f3bc48853a80a271d2",
+      "bytes": 132296
+    },
+    "snapshots/periodic_22531_1794692523427179913_a4d5978b.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/snapshots/periodic_22531_1794692523427179913_a4d5978b.jpg",
+      "sha256": "fde2c674bfd0bcbac9a1bf9ce428f426a34bdd59d0ae388c2bbbc1c9c945aae0",
+      "bytes": 132159
+    },
+    "snapshots/periodic_4618_1794691588669160592_3234f16f.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/snapshots/periodic_4618_1794691588669160592_3234f16f.jpg",
+      "sha256": "1448f800feb520f8d34364dd11379ebb161a5108991b259f8c0aad17cbf2ecad",
+      "bytes": 132215
+    },
+    "snapshots/periodic_10398_1794691890199713787_79a1bbfb.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/snapshots/periodic_10398_1794691890199713787_79a1bbfb.jpg",
+      "sha256": "78b197b6df2a60bfaca32d4fcc5a79479a79f2a9fdde5a0ade382a98066fe4cc",
+      "bytes": 132030
+    },
+    "snapshots/periodic_17330_1794692251876960564_383df66b.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/snapshots/periodic_17330_1794692251876960564_383df66b.jpg",
+      "sha256": "d65835b847b1752c19370073d3227134e438b444d9b51bdc3c4906b1b1b7e7dc",
+      "bytes": 132270
+    },
+    "snapshots/periodic_15597_1794692161346687904_8c3ccf1c.json": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/snapshots/periodic_15597_1794692161346687904_8c3ccf1c.json",
+      "sha256": "6b93ab1de90a6af1e4e4284d82b06a022d5ce8c68fb08ab55b9487eb44e93b97",
+      "bytes": 3047
+    },
+    "snapshots/periodic_1727_1794691437853042036_98647a6f.json": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/snapshots/periodic_1727_1794691437853042036_98647a6f.json",
+      "sha256": "303839e01794f6a3232b576653839adcf7b1fbaed180f204ede04c3f02f84c3a",
+      "bytes": 3066
+    },
+    "snapshots/periodic_13287_1794692040824307753_862e2a04.json": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/snapshots/periodic_13287_1794692040824307753_862e2a04.json",
+      "sha256": "7500acfc7c5dd86c93360abee4ffd545073dc556a44830e8a58594032ad1ad85",
+      "bytes": 3047
+    },
+    "snapshots/periodic_25997_1794692704215034136_e264edc3.json": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/snapshots/periodic_25997_1794692704215034136_e264edc3.json",
+      "sha256": "3878846699b3bc8d305c914a316131cc507d65dfb83a81c8c5ba923027776175",
+      "bytes": 3043
+    },
+    "snapshots/periodic_9819_1794691860027013559_009f1ab8.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/snapshots/periodic_9819_1794691860027013559_009f1ab8.jpg",
+      "sha256": "ab16fa1c74480ae25937bd976cfa2087d86d255de1ed4d46d08804bab62b039a",
+      "bytes": 132239
+    },
+    "snapshots/periodic_32929_1794693065823141240_3f9194ce.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/snapshots/periodic_32929_1794693065823141240_3f9194ce.jpg",
+      "sha256": "377bb484eabd03a5b251c3fad7b165a0a084c67f3442124c67e648c789570819",
+      "bytes": 132554
+    },
+    "snapshots/periodic_23112_1794692553559222637_a3e1177c.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/snapshots/periodic_23112_1794692553559222637_a3e1177c.jpg",
+      "sha256": "4d5b0b98d13bbf46637101b0b01eb19f3bf365af90ab61254d34e98bb9caa8f2",
+      "bytes": 132181
+    },
+    "snapshots/periodic_19642_1794692372531222904_bc36fe66.json": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/snapshots/periodic_19642_1794692372531222904_bc36fe66.json",
+      "sha256": "200a6c60550338d17f0d2f89bf24ee5306b8be4bc31434a79c149c54eb9a5f3a",
+      "bytes": 3045
+    },
+    "snapshots/periodic_6357_1794691679266498598_6b849378.json": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/snapshots/periodic_6357_1794691679266498598_6b849378.json",
+      "sha256": "dfd1b9d788d83decb8426846ee06f4dd6514e2ca236ce5317f1684c55044a1a9",
+      "bytes": 3053
+    },
+    "snapshots/periodic_19067_1794692342338124231_7057933d.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/snapshots/periodic_19067_1794692342338124231_7057933d.jpg",
+      "sha256": "139a6e234b5684866f8dfdd940068cb74d30b77d0f81bc0438f48a86520123a6",
+      "bytes": 132354
+    },
+    "snapshots/periodic_7511_1794691739537632266_e0e6f4d6.json": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/snapshots/periodic_7511_1794691739537632266_e0e6f4d6.json",
+      "sha256": "39233713778181af826d02af39f6155dc609b68321197c89367aadbf6d62aaf3",
+      "bytes": 3038
+    },
+    "snapshots/periodic_30619_1794692945310253774_f65c6d66.json": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/snapshots/periodic_30619_1794692945310253774_f65c6d66.json",
+      "sha256": "561b56406628e0552146f369931632258738a13acbad3db56955d407723a0671",
+      "bytes": 3038
+    },
+    "snapshots/periodic_34086_1794693126198855929_c88ea132.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/snapshots/periodic_34086_1794693126198855929_c88ea132.jpg",
+      "sha256": "116394e2158edcaacc6677efd8898155392c8453a932709b5109f5c6af458c19",
+      "bytes": 132355
+    },
+    "snapshots/periodic_32351_1794693035646966243_c64efd93.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/snapshots/periodic_32351_1794693035646966243_c64efd93.jpg",
+      "sha256": "ce59c00f1a01c0907371b7d819d12cd6cbf3373fcad471e955ca402f5e93a5a8",
+      "bytes": 132091
+    },
+    "snapshots/periodic_14439_1794692101077202455_f8b80c18.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/snapshots/periodic_14439_1794692101077202455_f8b80c18.jpg",
+      "sha256": "b6a88029b96099d4fab1ecb77b8b1b8e5a4fd59d0ea959f1127ca8759d55df44",
+      "bytes": 132055
+    },
+    "snapshots/periodic_21376_1794692462940754817_14189c37.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/snapshots/periodic_21376_1794692462940754817_14189c37.jpg",
+      "sha256": "5ca255959e70301cfcd3685b73df7a5e89c82eaba06f9d63fb92accab2e67ab1",
+      "bytes": 132364
+    },
+    "snapshots/periodic_11555_1794691950439076876_e6ead1e2.json": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/snapshots/periodic_11555_1794691950439076876_e6ead1e2.json",
+      "sha256": "c5df53138d3d64c8cb07d9930b28762aabf6ef99893d16f4a45acfce6df23201",
+      "bytes": 3055
+    },
+    "snapshots/periodic_16176_1794692191549921764_e4a9aa9a.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/snapshots/periodic_16176_1794692191549921764_e4a9aa9a.jpg",
+      "sha256": "635b8846640966aaacc179bbb17196faddb4202f18b474d661ad0382b7a12ec1",
+      "bytes": 132390
+    },
+    "snapshots/periodic_20220_1794692402660907162_73f48c33.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/snapshots/periodic_20220_1794692402660907162_73f48c33.jpg",
+      "sha256": "e277ddf54b07896929fa06d012030ca2fd61f70a085329a5597c30222c972d63",
+      "bytes": 132507
+    },
+    "snapshots/periodic_4042_1794691558552888414_2671b5f7.json": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/snapshots/periodic_4042_1794691558552888414_2671b5f7.json",
+      "sha256": "fb80555268672551403d7d302a54b174cec3c92783e8a7fcd3cf0e4548cc4d39",
+      "bytes": 3044
+    },
+    "snapshots/periodic_24843_1794692643955235243_cfd258e9.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/snapshots/periodic_24843_1794692643955235243_cfd258e9.jpg",
+      "sha256": "a26da9d487fb8dccf5b7519d31789a138dd4d77d7a21f7741c5e427668d6add0",
+      "bytes": 132138
+    },
+    "snapshots/periodic_19067_1794692342338124231_7057933d.json": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/snapshots/periodic_19067_1794692342338124231_7057933d.json",
+      "sha256": "c9da50ab898703fafc4c206247bd338f75fca96811af0e13e7c4788cb738e163",
+      "bytes": 3044
+    },
+    "snapshots/periodic_6933_1794691709336872630_e3cd7fa1.json": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/snapshots/periodic_6933_1794691709336872630_e3cd7fa1.json",
+      "sha256": "e628507b37fcc2df3b88254e3f255756aed1d818d62084641b4f2ad2def3f27a",
+      "bytes": 3057
+    },
+    "snapshots/periodic_26573_1794692734313697604_431f31d8.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/snapshots/periodic_26573_1794692734313697604_431f31d8.jpg",
+      "sha256": "8c1f7e7d12defe35475754bf037f566322d030ff91a990d8e5d26fec02985405",
+      "bytes": 132383
+    },
+    "snapshots/periodic_27152_1794692764457052797_b8c26978.json": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/snapshots/periodic_27152_1794692764457052797_b8c26978.json",
+      "sha256": "6579c1979cf84e36b53172c54164cefa8f99f7a4e35445f11e2c215ebf4c14bc",
+      "bytes": 3057
+    },
+    "snapshots/periodic_15019_1794692131232135486_fb9a85b8.json": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/snapshots/periodic_15019_1794692131232135486_fb9a85b8.json",
+      "sha256": "617ea14340735de6505c4bcfcde33f0aee61eacc73f014ee1515ced51c9acd84",
+      "bytes": 3038
+    },
+    "snapshots/periodic_26573_1794692734313697604_431f31d8.json": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/snapshots/periodic_26573_1794692734313697604_431f31d8.json",
+      "sha256": "7f8a72ba03f04d742436a59d5f60ff62baca46c6b71cb0f0bdf54f97ac8cdbc5",
+      "bytes": 3038
+    },
+    "snapshots/periodic_33508_1794693095951197230_30732f1a.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/snapshots/periodic_33508_1794693095951197230_30732f1a.jpg",
+      "sha256": "156a5b3e830e0ff2b137a0b0b07306040b84325e6b9fad6768ee3f7d64400290",
+      "bytes": 132510
+    },
+    "snapshots/periodic_13863_1794692070916321244_d4d9c7b3.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/snapshots/periodic_13863_1794692070916321244_d4d9c7b3.jpg",
+      "sha256": "31489968e0ce53f5d64450d5d2711c5f41aa155962dcba85f6b5b52ff51019f2",
+      "bytes": 132184
+    },
+    "snapshots/periodic_20800_1794692432818837091_4ae277d7.json": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/snapshots/periodic_20800_1794692432818837091_4ae277d7.json",
+      "sha256": "635b4dc212f0da4cbdad15de686320bf7baaa97a7b039e427afa3bf629796414",
+      "bytes": 3042
+    },
+    "snapshots/periodic_6357_1794691679266498598_6b849378.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/snapshots/periodic_6357_1794691679266498598_6b849378.jpg",
+      "sha256": "d06a1379248e087e85c684540de4644e867619816fd4d85876cbdbf8b1e2cce5",
+      "bytes": 132081
+    },
+    "snapshots/periodic_570_1794691377548371070_60117d4a.json": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/snapshots/periodic_570_1794691377548371070_60117d4a.json",
+      "sha256": "8dc46d8fec2d4f47e0dc785be9658796905a8f9105001e62f76ded84c2696a0a",
+      "bytes": 3033
+    },
+    "snapshots/periodic_27729_1794692794608051549_e15333fc.json": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/snapshots/periodic_27729_1794692794608051549_e15333fc.json",
+      "sha256": "1a1940b743df9c035bef5863fb05f7f23f1147482b402d091405ee7cf0268d87",
+      "bytes": 3049
+    },
+    "snapshots/periodic_16754_1794692221737008766_1959f6af.json": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/snapshots/periodic_16754_1794692221737008766_1959f6af.json",
+      "sha256": "36cc3fd7d04e34f91ddca73bc2e9129526f423f609511fb24372b6690faba466",
+      "bytes": 3040
+    },
+    "snapshots/periodic_11555_1794691950439076876_e6ead1e2.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/snapshots/periodic_11555_1794691950439076876_e6ead1e2.jpg",
+      "sha256": "571835af89a849612e4fa07e44bcd10acb12cc63d5150c0a1735b44777258960",
+      "bytes": 132203
+    },
+    "snapshots/periodic_20220_1794692402660907162_73f48c33.json": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/snapshots/periodic_20220_1794692402660907162_73f48c33.json",
+      "sha256": "74f65428055410fc91d47a6f8dbf9ce236b76f9edfa67533f8d6f158c1597c72",
+      "bytes": 3057
+    },
+    "snapshots/periodic_1727_1794691437853042036_98647a6f.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/snapshots/periodic_1727_1794691437853042036_98647a6f.jpg",
+      "sha256": "c5f6879a140a97b33c7bf57d66fd65340dc2a1b1a0dcda1f2e2d3a8fd103bf3f",
+      "bytes": 131927
+    },
+    "snapshots/periodic_29463_1794692885028923345_abfd1c11.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/snapshots/periodic_29463_1794692885028923345_abfd1c11.jpg",
+      "sha256": "d9752ad4a7da6ccf3a3b2998ab5717c2cba3e23ee85d14fee304f6be17c20bca",
+      "bytes": 132290
+    },
+    "snapshots/periodic_28309_1794692824731097646_3ce06781.json": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/snapshots/periodic_28309_1794692824731097646_3ce06781.json",
+      "sha256": "9e74d3d3dabaf570d62ff5818a2df4e083d591c227406b465f1a9852d4be810a",
+      "bytes": 3057
+    },
+    "snapshots/periodic_31775_1794693005537729259_edbbb6e9.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/snapshots/periodic_31775_1794693005537729259_edbbb6e9.jpg",
+      "sha256": "25494f9cebb3161680bf0d9e5e3f47aec9bcf6fcaf9bfbcb6d6274a4a49d0e0a",
+      "bytes": 132272
+    },
+    "snapshots/periodic_5777_1794691649101125613_f92c4ae5.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/snapshots/periodic_5777_1794691649101125613_f92c4ae5.jpg",
+      "sha256": "06db33185f67baa0b52fde3f3785d37c36c0f8e3c791369fe5292b73103a0292",
+      "bytes": 132255
+    },
+    "snapshots/periodic_4618_1794691588669160592_3234f16f.json": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/snapshots/periodic_4618_1794691588669160592_3234f16f.json",
+      "sha256": "966884626ac500f2cd124bf7e07f69212cbf74d617e77914a8c679f27fd148d2",
+      "bytes": 3061
+    },
+    "snapshots/periodic_2306_1794691467937639855_1442dc37.json": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/snapshots/periodic_2306_1794691467937639855_1442dc37.json",
+      "sha256": "527177719499a3af643e806fdf44d1262238578c3e3872e2c3fa0d8166e987d7",
+      "bytes": 3056
+    },
+    "snapshots/periodic_2306_1794691467937639855_1442dc37.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/snapshots/periodic_2306_1794691467937639855_1442dc37.jpg",
+      "sha256": "366b6974e13d56649f136788bd810c7e1e4a75e6fc76f15ac14ddb1ac3c97b86",
+      "bytes": 132179
+    },
+    "snapshots/periodic_27729_1794692794608051549_e15333fc.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/snapshots/periodic_27729_1794692794608051549_e15333fc.jpg",
+      "sha256": "c154c391ea7b47b326c70a192595d80ec2c89c2b47942cd065ffe374355abba6",
+      "bytes": 132686
+    },
+    "snapshots/periodic_30619_1794692945310253774_f65c6d66.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/snapshots/periodic_30619_1794692945310253774_f65c6d66.jpg",
+      "sha256": "c417445bc9e79b4c6a1537a285b9ed5f6415e830388d7f6def038a93282b2ddb",
+      "bytes": 132388
+    },
+    "snapshots/periodic_21376_1794692462940754817_14189c37.json": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/snapshots/periodic_21376_1794692462940754817_14189c37.json",
+      "sha256": "c70d83a77e449439524f6d3672dc3316ad82fb7ecade25de79699e2d6c4a06d6",
+      "bytes": 3058
+    },
+    "snapshots/alarm_11_1794691348325107773_65b85c73.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/snapshots/alarm_11_1794691348325107773_65b85c73.jpg",
+      "sha256": "6ddf534f2cdacacc47bdc511aca2009800222251f9b332abc692de9aa83ca0f7",
+      "bytes": 131696
+    },
+    "snapshots/periodic_8089_1794691769645551048_2c19da36.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/snapshots/periodic_8089_1794691769645551048_2c19da36.jpg",
+      "sha256": "4606f8b3b98d4da3801bfccde712a3b32aac7589940f3df5aa192519bdf5105e",
+      "bytes": 132131
+    },
+    "snapshots/periodic_1148_1794691407685711327_aabc6fe4.json": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/snapshots/periodic_1148_1794691407685711327_aabc6fe4.json",
+      "sha256": "04b119d759319948c1b09d896f603d202d7a7848229044efd6767528a4e16935",
+      "bytes": 3037
+    },
+    "snapshots/periodic_4042_1794691558552888414_2671b5f7.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/snapshots/periodic_4042_1794691558552888414_2671b5f7.jpg",
+      "sha256": "335c5a2a99329fae03d3e8496363897b271d3ca0c31181a9ec7a78b00f488281",
+      "bytes": 132093
+    },
+    "snapshots/periodic_8665_1794691799734129134_10bf6c39.json": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/snapshots/periodic_8665_1794691799734129134_10bf6c39.json",
+      "sha256": "9c8a51d8effcb944f9f3380d7e33d73e98667a7ad18ecd69314e3da71cf75010",
+      "bytes": 3060
+    },
+    "snapshots/periodic_31197_1794692975450447124_d91bb7e7.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/snapshots/periodic_31197_1794692975450447124_d91bb7e7.jpg",
+      "sha256": "e42aca01e1264746115a5dc2575157114d52054c3eb88df79fcc5e8f0969d3b3",
+      "bytes": 132464
+    },
+    "snapshots/periodic_10976_1794691920333825770_0cbdac1d.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/snapshots/periodic_10976_1794691920333825770_0cbdac1d.jpg",
+      "sha256": "f878fb759b7ba03e3100c411a52adabdda65ab9e9de1913b587614cb91a9e0aa",
+      "bytes": 132399
+    },
+    "snapshots/periodic_12132_1794691980552399707_1382d42f.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/snapshots/periodic_12132_1794691980552399707_1382d42f.jpg",
+      "sha256": "770cd513c52b686fda2bf554f207cb82979bcad9c309f26708962535a295a100",
+      "bytes": 132064
+    },
+    "snapshots/periodic_31197_1794692975450447124_d91bb7e7.json": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/snapshots/periodic_31197_1794692975450447124_d91bb7e7.json",
+      "sha256": "fff3759a925cec73f3eefb5062c884013785609c5edb859cc5b4270e21f524f9",
+      "bytes": 3048
+    },
+    "snapshots/periodic_20800_1794692432818837091_4ae277d7.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/snapshots/periodic_20800_1794692432818837091_4ae277d7.jpg",
+      "sha256": "29cd15d72209657940bee97a4cbe4f31192505f5f60d239e5a739da72d892642",
+      "bytes": 132518
+    },
+    "snapshots/periodic_5777_1794691649101125613_f92c4ae5.json": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/snapshots/periodic_5777_1794691649101125613_f92c4ae5.json",
+      "sha256": "6bceb790e9d68169c6bcc2bffb1cae11a9e07cee4f013ee771c488e0b9ffd201",
+      "bytes": 3042
+    },
+    "snapshots/periodic_23689_1794692583701160933_836c7158.json": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/snapshots/periodic_23689_1794692583701160933_836c7158.json",
+      "sha256": "9ff26dc3cda3b9d22a2ce2211879eb3dc751d666df07762965eb63c12ea4c6d1",
+      "bytes": 3050
+    },
+    "snapshots/periodic_13863_1794692070916321244_d4d9c7b3.json": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/snapshots/periodic_13863_1794692070916321244_d4d9c7b3.json",
+      "sha256": "bbe3a992a41454c2d8b86ecf5835f116610e1d3994fa9239d2536560795f1645",
+      "bytes": 3055
+    },
+    "snapshots/periodic_28309_1794692824731097646_3ce06781.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/snapshots/periodic_28309_1794692824731097646_3ce06781.jpg",
+      "sha256": "42bbd617df88ed6cdcc94998235c7730e489a09f7058ca40d3882ace5360e5ee",
+      "bytes": 132406
+    },
+    "snapshots/periodic_25422_1794692674106165679_515ee677.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/snapshots/periodic_25422_1794692674106165679_515ee677.jpg",
+      "sha256": "156b591b45726f3c6d491d12557bcec11357fb9e732f66d9e12bef4445739d38",
+      "bytes": 132277
+    },
+    "snapshots/periodic_13287_1794692040824307753_862e2a04.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/snapshots/periodic_13287_1794692040824307753_862e2a04.jpg",
+      "sha256": "e246ba92a93ed839b8b4e947cef8ce90a6bec2d6e75a794a716ca75844a49b35",
+      "bytes": 132198
+    },
+    "snapshots/periodic_10976_1794691920333825770_0cbdac1d.json": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/snapshots/periodic_10976_1794691920333825770_0cbdac1d.json",
+      "sha256": "9762cae8e320740b35ecb2c47114e4e56120f0f78fe7b9c6d9b3ecc89855f273",
+      "bytes": 3044
+    },
+    "snapshots/periodic_30041_1794692915160309117_eb8c032d.json": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/snapshots/periodic_30041_1794692915160309117_eb8c032d.json",
+      "sha256": "369a09459f99053de7e7240b4e6892430194fac83a35b9660701a54bde7d770c",
+      "bytes": 3054
+    },
+    "snapshots/periodic_21953_1794692493086828942_56dbb552.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/snapshots/periodic_21953_1794692493086828942_56dbb552.jpg",
+      "sha256": "a773d8ed93017cdce7930621b4a3c8c27b2e018cc7ca81e5c48768437a689431",
+      "bytes": 132461
+    },
+    "snapshots/periodic_15019_1794692131232135486_fb9a85b8.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/snapshots/periodic_15019_1794692131232135486_fb9a85b8.jpg",
+      "sha256": "088477cb0d8cdd7abba2c9e74813230ae78dbf67da2ee26111f4961c739c026c",
+      "bytes": 132299
+    },
+    "snapshots/periodic_14439_1794692101077202455_f8b80c18.json": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/snapshots/periodic_14439_1794692101077202455_f8b80c18.json",
+      "sha256": "8496dd52435fc31f30aa2f1e7730fc11946c5c81dacb6530b233fd86ea2de75b",
+      "bytes": 3065
+    },
+    "snapshots/periodic_12710_1794692010681282997_383f64cd.json": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/snapshots/periodic_12710_1794692010681282997_383f64cd.json",
+      "sha256": "89b168932c14bd597b5ef6a5b78af26ae0464ded885991dfc5d93d53b950ea42",
+      "bytes": 3039
+    },
+    "snapshots/periodic_8665_1794691799734129134_10bf6c39.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/snapshots/periodic_8665_1794691799734129134_10bf6c39.jpg",
+      "sha256": "f95b123596cf14f322506f1e2bea484afabc9d0b8ea28ec048d98ffc3026b790",
+      "bytes": 132091
+    },
+    "snapshots/periodic_6933_1794691709336872630_e3cd7fa1.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/snapshots/periodic_6933_1794691709336872630_e3cd7fa1.jpg",
+      "sha256": "bf794764a352db5cc0736697ada4318453d9f5f2a6639d5d0ee88f5df06bc66b",
+      "bytes": 132186
+    },
+    "snapshots/periodic_23689_1794692583701160933_836c7158.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/snapshots/periodic_23689_1794692583701160933_836c7158.jpg",
+      "sha256": "d1f6d1fb3835a0a779b99652dfabeded62833ccdb9936562307a0d1405f3ee1b",
+      "bytes": 132295
+    },
+    "snapshots/periodic_5198_1794691618877728051_4c5e9205.json": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/snapshots/periodic_5198_1794691618877728051_4c5e9205.json",
+      "sha256": "81c34810a080b90c81525c5979afdbb6e2d911966bf477e5dc9d60063a34b2a7",
+      "bytes": 3059
+    },
+    "snapshots/periodic_12710_1794692010681282997_383f64cd.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/snapshots/periodic_12710_1794692010681282997_383f64cd.jpg",
+      "sha256": "f8c9c5aede749fb6b00394f149ba1cd9c17708149e5597bc2fd46a9fb5a8258c",
+      "bytes": 132390
+    },
+    "snapshots/periodic_22531_1794692523427179913_a4d5978b.json": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/snapshots/periodic_22531_1794692523427179913_a4d5978b.json",
+      "sha256": "b8bb48f5ec29a1c91e1187cb7b9ec7be44b1a49bdfb4c914fd74399526b8db2c",
+      "bytes": 3059
+    },
+    "snapshots/periodic_28885_1794692854841394024_710abe9f.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/snapshots/periodic_28885_1794692854841394024_710abe9f.jpg",
+      "sha256": "ca59e5edecfc4ee12c7d174f2da66156fc7561989963b62daed372f52473ec3b",
+      "bytes": 132349
+    },
+    "snapshots/periodic_16754_1794692221737008766_1959f6af.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/snapshots/periodic_16754_1794692221737008766_1959f6af.jpg",
+      "sha256": "c0c8ccf1014e2e00f3bd3ddb01b7c3e6d4e4d2e2d15d733e11d31fae9c7b9f81",
+      "bytes": 132368
+    },
+    "snapshots/periodic_16176_1794692191549921764_e4a9aa9a.json": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/snapshots/periodic_16176_1794692191549921764_e4a9aa9a.json",
+      "sha256": "725af3a9853aaa0917242ca4ac44a726b8342db510b3b4a2776d5b2ce78fc291",
+      "bytes": 3045
+    },
+    "snapshots/alarm_11_1794691348325107773_65b85c73.json": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/snapshots/alarm_11_1794691348325107773_65b85c73.json",
+      "sha256": "b3d0655709d32c29fed44c158c3deda03d633d4f6b85093d9af7287d9342cefd",
+      "bytes": 3048
+    },
+    "snapshots/periodic_30041_1794692915160309117_eb8c032d.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/snapshots/periodic_30041_1794692915160309117_eb8c032d.jpg",
+      "sha256": "d73ecb75485e6b5190f9a60f1a5dfe571a0af8a0ae5a917cd9ad35c2849c48a1",
+      "bytes": 132291
+    },
+    "snapshots/periodic_32929_1794693065823141240_3f9194ce.json": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/snapshots/periodic_32929_1794693065823141240_3f9194ce.json",
+      "sha256": "9f3d445f1ceb15695888e0cdfced1b286645955bb216d9f770e396f0148589c2",
+      "bytes": 3042
+    },
+    "snapshots/periodic_18488_1794692312210767992_fb9fc08d.json": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/snapshots/periodic_18488_1794692312210767992_fb9fc08d.json",
+      "sha256": "a87171416780d8a063fb4a214c750eab6674c90a4cf41b45064c5a2105736a53",
+      "bytes": 3059
+    },
+    "snapshots/periodic_9819_1794691860027013559_009f1ab8.json": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/snapshots/periodic_9819_1794691860027013559_009f1ab8.json",
+      "sha256": "700602b6aea4d35062dbf70621b5c3356dd64058fe49a93f906517080e206027",
+      "bytes": 3043
+    },
+    "snapshots/periodic_9241_1794691829853764039_6721d792.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/snapshots/periodic_9241_1794691829853764039_6721d792.jpg",
+      "sha256": "6980f53f235803934266a5c383461a3cdbdba17236a752f45e8a086485465ac6",
+      "bytes": 132135
+    },
+    "snapshots/periodic_27152_1794692764457052797_b8c26978.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/snapshots/periodic_27152_1794692764457052797_b8c26978.jpg",
+      "sha256": "6b5309a14622b9c67fdab99c124f99e2016a2d04b55cc72f115503f760026da8",
+      "bytes": 132112
+    },
+    "snapshots/periodic_28885_1794692854841394024_710abe9f.json": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/snapshots/periodic_28885_1794692854841394024_710abe9f.json",
+      "sha256": "f703c4c2494733e08b7fbc1af00830d2aefb0593cc98dd7d7654e7f277c2ff74",
+      "bytes": 3054
+    },
+    "snapshots/periodic_10398_1794691890199713787_79a1bbfb.json": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/snapshots/periodic_10398_1794691890199713787_79a1bbfb.json",
+      "sha256": "b503adbfb694531d38e01ccd2cbb6ce3744722a929e59e0d5621a7a8b63082f8",
+      "bytes": 3062
+    },
+    "snapshots/periodic_15597_1794692161346687904_8c3ccf1c.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/snapshots/periodic_15597_1794692161346687904_8c3ccf1c.jpg",
+      "sha256": "6eda9d0ae91e885aeae838d83adc5fcc2eb865d547b3511e42ab59ab54826c5c",
+      "bytes": 132367
+    },
+    "snapshots/periodic_5198_1794691618877728051_4c5e9205.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/snapshots/periodic_5198_1794691618877728051_4c5e9205.jpg",
+      "sha256": "65dd165659df412de8264442f412a0aa305f5b1df41482ea49366863c4e2bbc4",
+      "bytes": 132064
+    },
+    "snapshots/periodic_23112_1794692553559222637_a3e1177c.json": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/snapshots/periodic_23112_1794692553559222637_a3e1177c.json",
+      "sha256": "d1c7bae24c2bf520876edc9151f4bd66a712c797349a4ad35ad9f81f7f14808a",
+      "bytes": 3037
+    },
+    "snapshots/periodic_25422_1794692674106165679_515ee677.json": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/snapshots/periodic_25422_1794692674106165679_515ee677.json",
+      "sha256": "de3392b2aacbda1e5b3adefa5b40d11af24afdf3e4dc1139bde08ce69dad4755",
+      "bytes": 3042
+    },
+    "snapshots/periodic_24843_1794692643955235243_cfd258e9.json": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/snapshots/periodic_24843_1794692643955235243_cfd258e9.json",
+      "sha256": "2c1d513eba8e68b6567ac0afd9b2296b202cb550651763a491526a6ccdc8cd10",
+      "bytes": 3060
+    },
+    "snapshots/periodic_34086_1794693126198855929_c88ea132.json": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/snapshots/periodic_34086_1794693126198855929_c88ea132.json",
+      "sha256": "92a70b27fefe88092a575d33ddff2a5115625ebb883844853f92238917f8ec7f",
+      "bytes": 3044
+    },
+    "snapshots/periodic_8089_1794691769645551048_2c19da36.json": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/snapshots/periodic_8089_1794691769645551048_2c19da36.json",
+      "sha256": "14e74b71b001faeb5063c76036a7af5b9d214973c4f39a1b5cd0038707a8bff3",
+      "bytes": 3047
+    },
+    "snapshots/periodic_3458_1794691528404226323_ec4c1940.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/snapshots/periodic_3458_1794691528404226323_ec4c1940.jpg",
+      "sha256": "c45bcfa256cb78c0afc35251ef7fec9c29a6c801f35aa7241bf2cc42e3aac5bc",
+      "bytes": 132204
+    },
+    "snapshots/periodic_32351_1794693035646966243_c64efd93.json": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/snapshots/periodic_32351_1794693035646966243_c64efd93.json",
+      "sha256": "9e28183a5b6c77e08c87bfba1ae8eb2ba9f35e09b7f8608d7798908ba60bb087",
+      "bytes": 3058
+    },
+    "snapshots/periodic_25997_1794692704215034136_e264edc3.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/snapshots/periodic_25997_1794692704215034136_e264edc3.jpg",
+      "sha256": "44376b426464551a79d66ce6f30fb0ee26fc81fd3a1d0fc0aa7fecd6e424c26d",
+      "bytes": 132384
+    },
+    "snapshots/periodic_17330_1794692251876960564_383df66b.json": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/snapshots/periodic_17330_1794692251876960564_383df66b.json",
+      "sha256": "283e2e2c166546a0bd010f31f46182ef89f82e1e1ffd94baa2fb5acf68793230",
+      "bytes": 3049
+    },
+    "provenance/model/helmet_416x416.rknn": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/provenance/model/helmet_416x416.rknn",
+      "sha256": "7e0eefe4bfe86627bb6b58161cacca10912e0dbe1ba2513f58d091c40b26cd48",
+      "bytes": 8110065
+    },
+    "provenance/sources/verify_native_runtime.py": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/provenance/sources/verify_native_runtime.py",
+      "sha256": "222d07022ba746d5fd9bcdb2c5a8924c2b383473585311cf0dce5b0d9fc93997",
+      "bytes": 66884
+    },
+    "provenance/sources/yolo_post.py": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/provenance/sources/yolo_post.py",
+      "sha256": "fae57bbfa1d47d5ab16ef444096fab4fe8e14701c5ec10d87b1ec518282b0505",
+      "bytes": 7811
+    },
+    "provenance/sources/dump_dets.py": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/provenance/sources/dump_dets.py",
+      "sha256": "c21b4a1d1c4ee4e0428cb19d16b560c9c7dfdef2c34b52f62195b836fca90e3f",
+      "bytes": 8619
+    },
+    "provenance/sources/helmet_realtime.py": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/provenance/sources/helmet_realtime.py",
+      "sha256": "15794ebc40fdd1736d9c80d5504d17aa91e1de972bb92bb30a9eeb026309e46d",
+      "bytes": 5503
+    },
+    "provenance/sources/alarm.py": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/provenance/sources/alarm.py",
+      "sha256": "d3e6d68c7b17f5508f0d697e96998f556f224f9f5067169d66c35972b3a023d2",
+      "bytes": 4207
+    },
+    "provenance/sources/benchmark.py": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/provenance/sources/benchmark.py",
+      "sha256": "15dcff515fc9c7332dd5eefd40502f38b0a02e6ab6a62e1d0ec50ce593ab4859",
+      "bytes": 15588
+    },
+    "provenance/sources/telemetry.py": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/provenance/sources/telemetry.py",
+      "sha256": "da4522206053712484a21f80bb26d6424649a263f606f35fa16070be51a83b9e",
+      "bytes": 14670
+    },
+    "provenance/sources/output_sinks.py": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/provenance/sources/output_sinks.py",
+      "sha256": "c2f65642d38f8994200503b242ca93c8f0af105dc5ad3b13650e9ff83c7003cf",
+      "bytes": 23464
+    },
+    "provenance/sources/verify_runtime.py": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/provenance/sources/verify_runtime.py",
+      "sha256": "fdc94bf540d83e8f9a8367d9004d171e60127bb798ba8a6c113999ed888b6217",
+      "bytes": 86641
+    },
+    "provenance/sources/sources.py": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/provenance/sources/sources.py",
+      "sha256": "ea89d66fdefb2bc429ca74efa0437a3c0a8aab672a856078fc15afccfe3b31c9",
+      "bytes": 6717
+    },
+    "provenance/sources/pipeline_runtime.py": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/provenance/sources/pipeline_runtime.py",
+      "sha256": "dee30d6b71c9e8d3e697657fb309fb22e8fb47fafd366d60b555466cf56152e9",
+      "bytes": 35055
+    },
+    "provenance/sources/validate_comparison.py": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/provenance/sources/validate_comparison.py",
+      "sha256": "3b65f9e561084aa7f6199cc7cd413b6426f6ac962f39729ac0668e50350c2860",
+      "bytes": 1819
+    },
+    "provenance/sources/app/launch.py": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/provenance/sources/app/launch.py",
+      "sha256": "8db80c3cdb10519812b4d2b943f1542042a75c9bb67f74a2bfa374ee56ebe2ac",
+      "bytes": 6500
+    },
+    "provenance/sources/app/service.py": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/provenance/sources/app/service.py",
+      "sha256": "9a2f7454db6fb48ebcf7f5fd301a831817374c2be2fc5c9036af60feb40df1f7",
+      "bytes": 29859
+    },
+    "provenance/sources/app/install.py": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/provenance/sources/app/install.py",
+      "sha256": "229e351cf73b6d49ff5ae1bf445e86585b9af22dbbe89cf70759fbf1fdc71ae7",
+      "bytes": 4676
+    },
+    "provenance/sources/app/__init__.py": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/provenance/sources/app/__init__.py",
+      "sha256": "3ca294319d48aa183e5822b0c08426253434101d7c1fc85ae21b74b756784cd1",
+      "bytes": 55
+    },
+    "provenance/sources/app/wifi.py": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/provenance/sources/app/wifi.py",
+      "sha256": "1e998474293b5499e0cedf5fa57317416ac49dab7a2b9f36fd93b97ec30c20fb",
+      "bytes": 24915
+    },
+    "provenance/sources/app/qml/Main.qml": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/provenance/sources/app/qml/Main.qml",
+      "sha256": "6ac6b2e30c2e7ca29a9bc3f1ecb112ac4cc907b33a573664ed7476aeb11d504c",
+      "bytes": 20791
+    },
+    "provenance/input/construction-replay.avi": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-longrun-1/provenance/input/construction-replay.avi",
+      "sha256": "f22897e1ebb40cc919caab335ee4b436d28ebaf0a138eb8b16c63166184af5cc",
+      "bytes": 82400444
+    }
+  },
+  "intervals": {
+    "initialization_seconds": 5.672014007999678,
+    "active_seconds": 1800.0510664689937,
+    "finalization_seconds": 1.4546342469984666
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "pid": 3782,
+  "alive": true,
+  "start_id": "3652955",
+  "wall_time": "2026-11-14T11:41:12.548464+00:00",
+  "monotonic": 36631.819218683,
+  "operator_asserted_disconnection": true,
+  "note": "final-source-PID3782-survives-launch-SSH-closure",
+  "observed_command": [
+    "python3",
+    "/userdata/helmet-validation/20261114-final/verify_runtime.py",
+    "longrun",
+    "--runtime-dir",
+    "/userdata/helmet-validation/20261114-final/src",
+    "--model",
+    "/userdata/helmet-validation/20261114-final/models/helmet_416x416.rknn",
+    "--source",
+    "/userdata/helmet-validation/20261114-final/input/construction-replay.avi",
+    "--output-root",
+    "/userdata/helmet-validation/20261114-final",
+    "--run-id",
+    "longrun-final",
+    "--duration",
+    "1800",
+    "--replay-fps",
+    "10",
+    "--save-interval",
+    "30"
+  ],
+  "identity_command_matches_manifest": true,
+  "claim_scope": "operator observation; runner cannot observe SSH transport closure"
+}

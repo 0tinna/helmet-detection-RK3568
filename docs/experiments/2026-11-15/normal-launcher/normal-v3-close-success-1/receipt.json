@@ -1,0 +1,109 @@
+{
+  "schema": 1,
+  "kind": "native-v3-normal-titlebar-close",
+  "assessment": "PASS_LIMITED",
+  "observed_at_local": "2026-11-15T11:24:58+08:00",
+  "board_evidence_root": "/userdata/helmet-validation/v3-normal-close-success-20261115T112458Z",
+  "installed_release": {
+    "root": "/userdata/helmet-validation/20261115-native-app-v2",
+    "package_version": "20261115-v3",
+    "package_sha256": "a6ddec8f0d5579a62df261fc84a8f92cbce7b27c54ead79e9579f6e87e11058d",
+    "wrapper": "/opt/ui/src/apps/helmet_app",
+    "wrapper_sha256": "cf5523c368fd518ba879e15e68bef1be20462ecb3fec802d72bf34679fb98c40",
+    "session": "oix00y_8",
+    "launch_path": "vendor wrapper -> launch.py -> resident one-shot -> service.py + qmlscene Main.qml",
+    "launch_method": "desktop icon through the vendor desktop session",
+    "launcher_parent_observation": "system desktop process systemui",
+    "launcher_parent_raw_capture": false
+  },
+  "process_identities": {
+    "launcher": {
+      "pid": 2760,
+      "starttime": 9310944,
+      "raw_starttime_capture": false
+    },
+    "service": {
+      "pid": 2765,
+      "starttime": 9311296,
+      "raw_starttime_capture": false
+    },
+    "qt": {
+      "pid": 2767,
+      "starttime": 9311506,
+      "raw_starttime_capture": false
+    },
+    "scope": "Operator retained /proc observations from the live run; the copied processes.json preserves PIDs but not starttime."
+  },
+  "input_path": {
+    "method": "temporary /dev/uinput absolute pointer through the normal Weston/libinput compositor path",
+    "screen_coordinate": [
+      710,
+      88
+    ],
+    "coordinate_target": "floating window title-bar close button",
+    "pointer_range": [
+      [
+        0,
+        719
+      ],
+      [
+        0,
+        1279
+      ]
+    ],
+    "property": "INPUT_PROP_POINTER",
+    "button": "BTN_LEFT",
+    "synthetic_kernel_input": true,
+    "human_finger_touch": false,
+    "script": "absolute-pointer-probe.py",
+    "script_sha256": "83afba786d26f4271327943e89ab93709a3f8c4bc81ae972021c418059492459",
+    "control_observations": [
+      {
+        "artifact": "touch-calibration-wifi-tab.png",
+        "claim": "Screen-coordinate mapping reached the WiFi tab through a corrected MT-B direct-touch device."
+      },
+      {
+        "artifact": "relative-pointer-minimized.png",
+        "claim": "A relative pointer at title-bar coordinates minimized the same v3 window, proving the normal compositor input path reached that window."
+      }
+    ]
+  },
+  "terminal": {
+    "service_exit": 0,
+    "ui_exit": 0,
+    "cleanup_completed": true,
+    "normal_stop_field_present": false,
+    "all_three_original_processes_exited": true,
+    "raw_exit_file": "exit.json",
+    "raw_exit_sha256": "0156cebfe71769b4b26948f5f4a708f16c032c3376b520a2db1c45d210126bfd",
+    "board_and_local_exit_sha256_match": true
+  },
+  "artifacts": {
+    "processes.json": "b8e9878b13253cdd02c623e79f2109edaf782ad7f08eb47c175a3ba04ca61a52",
+    "ready.json": "da39d169f7968f26a17e3de11d21c3da402708570b6407fb50a59f31fa38b3b0",
+    "service.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "ui.log": "e4834c4bc06f89e6c4e77e31552ed287c33813beb51988729f2318859cd0961a",
+    "before-close.png": "0b2bddf9b9588ff39a2175168e13bec11c89c52c71a542d9408640362bf1f032",
+    "touch-calibration-wifi-tab.png": "7c77e0878bad043b6e5cfadc97f3d7c470dd7f5d458e761697948fb70f499c37",
+    "relative-pointer-minimized.png": "e3908f17a5e1fff81a3820dfc4a5184f82171375c03131b8b06c30c51694c6b9",
+    "touch-calibration-wifi-tab.raw": "0c660f2bd3eff3150dd0040789abe2291613b9af319df870203d4f77a4913a5f",
+    "touch-calibration-after-wifi-tab.raw": "79420d21a0f853a7f9e95fa0c49bf857125db8b78b7924d8577869d6acbc6f73",
+    "relative-pointer-probe.py": "466973d9bc741ba9ac4e7c2f4c010633a24ad172e8c3ec2ac1f31b330635684e"
+  },
+  "supported_claims": [
+    "The actual installed v3 vendor icon path created a normal resident one-shot and QML window in the vendor desktop session.",
+    "A synthetic pointer sent through the normal kernel/compositor input path activated the floating title-bar close control.",
+    "The resulting terminal receipt reports service exit 0, UI exit 0 and cleanup completed, and the three original processes were observed absent.",
+    "This is stronger lifecycle evidence than the earlier session where ui_exit was -15; that failed historical observation remains preserved."
+  ],
+  "not_supported": [
+    "human finger touch or human visual confirmation",
+    "continued detection after window close",
+    "same-instance reuse by a second icon",
+    "independent v4 production acceptance",
+    "physical camera App capture",
+    "WiFi authentication, DHCP persistence or rollback",
+    "unplugged-USB independent power",
+    "1800-second continuous observation"
+  ]
+}

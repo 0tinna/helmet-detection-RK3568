@@ -1,0 +1,429 @@
+﻿{
+    "nextPageTokenNullable":  "CfDJ8CXkJvnxKG5Ktgac76JjV5H9aoGvmEwZhut95048Wruz_TQB_0E5ADbNmTBTPyCT4CRl7p--FwdH6kbps9JPd31B7yeAoayjEhrWe8KYfSms7RsyaiaN4tiMg0N2eNKclo6V8gBJGv3zSt_-XtE66N5IGtVSlONvRnJj",
+    "datasetFiles":  [
+                         {
+                             "nameNullable":  "annotations/hard_hat_workers0.xml",
+                             "ref":  "",
+                             "datasetRef":  "",
+                             "hasDatasetRef":  false,
+                             "ownerRef":  "",
+                             "hasOwnerRef":  false,
+                             "name":  "annotations/hard_hat_workers0.xml",
+                             "hasName":  true,
+                             "creationDate":  "2020-08-11T07:40:39.43Z",
+                             "description":  "",
+                             "hasDescription":  false,
+                             "fileType":  "",
+                             "hasFileType":  false,
+                             "url":  "",
+                             "hasUrl":  false,
+                             "totalBytes":  4584,
+                             "columns":  [
+
+                                         ]
+                         },
+                         {
+                             "nameNullable":  "annotations/hard_hat_workers1.xml",
+                             "ref":  "",
+                             "datasetRef":  "",
+                             "hasDatasetRef":  false,
+                             "ownerRef":  "",
+                             "hasOwnerRef":  false,
+                             "name":  "annotations/hard_hat_workers1.xml",
+                             "hasName":  true,
+                             "creationDate":  "2020-08-11T07:40:39.699Z",
+                             "description":  "",
+                             "hasDescription":  false,
+                             "fileType":  "",
+                             "hasFileType":  false,
+                             "url":  "",
+                             "hasUrl":  false,
+                             "totalBytes":  3253,
+                             "columns":  [
+
+                                         ]
+                         },
+                         {
+                             "nameNullable":  "annotations/hard_hat_workers10.xml",
+                             "ref":  "",
+                             "datasetRef":  "",
+                             "hasDatasetRef":  false,
+                             "ownerRef":  "",
+                             "hasOwnerRef":  false,
+                             "name":  "annotations/hard_hat_workers10.xml",
+                             "hasName":  true,
+                             "creationDate":  "2020-08-11T07:40:41.211Z",
+                             "description":  "",
+                             "hasDescription":  false,
+                             "fileType":  "",
+                             "hasFileType":  false,
+                             "url":  "",
+                             "hasUrl":  false,
+                             "totalBytes":  1243,
+                             "columns":  [
+
+                                         ]
+                         },
+                         {
+                             "nameNullable":  "annotations/hard_hat_workers100.xml",
+                             "ref":  "",
+                             "datasetRef":  "",
+                             "hasDatasetRef":  false,
+                             "ownerRef":  "",
+                             "hasOwnerRef":  false,
+                             "name":  "annotations/hard_hat_workers100.xml",
+                             "hasName":  true,
+                             "creationDate":  "2020-08-11T07:40:41.524Z",
+                             "description":  "",
+                             "hasDescription":  false,
+                             "fileType":  "",
+                             "hasFileType":  false,
+                             "url":  "",
+                             "hasUrl":  false,
+                             "totalBytes":  1903,
+                             "columns":  [
+
+                                         ]
+                         },
+                         {
+                             "nameNullable":  "annotations/hard_hat_workers1000.xml",
+                             "ref":  "",
+                             "datasetRef":  "",
+                             "hasDatasetRef":  false,
+                             "ownerRef":  "",
+                             "hasOwnerRef":  false,
+                             "name":  "annotations/hard_hat_workers1000.xml",
+                             "hasName":  true,
+                             "creationDate":  "2020-08-11T07:40:35.336Z",
+                             "description":  "",
+                             "hasDescription":  false,
+                             "fileType":  "",
+                             "hasFileType":  false,
+                             "url":  "",
+                             "hasUrl":  false,
+                             "totalBytes":  906,
+                             "columns":  [
+
+                                         ]
+                         },
+                         {
+                             "nameNullable":  "annotations/hard_hat_workers1001.xml",
+                             "ref":  "",
+                             "datasetRef":  "",
+                             "hasDatasetRef":  false,
+                             "ownerRef":  "",
+                             "hasOwnerRef":  false,
+                             "name":  "annotations/hard_hat_workers1001.xml",
+                             "hasName":  true,
+                             "creationDate":  "2020-08-11T07:40:34.908Z",
+                             "description":  "",
+                             "hasDescription":  false,
+                             "fileType":  "",
+                             "hasFileType":  false,
+                             "url":  "",
+                             "hasUrl":  false,
+                             "totalBytes":  1573,
+                             "columns":  [
+
+                                         ]
+                         },
+                         {
+                             "nameNullable":  "annotations/hard_hat_workers1002.xml",
+                             "ref":  "",
+                             "datasetRef":  "",
+                             "hasDatasetRef":  false,
+                             "ownerRef":  "",
+                             "hasOwnerRef":  false,
+                             "name":  "annotations/hard_hat_workers1002.xml",
+                             "hasName":  true,
+                             "creationDate":  "2020-08-11T07:40:35.552Z",
+                             "description":  "",
+                             "hasDescription":  false,
+                             "fileType":  "",
+                             "hasFileType":  false,
+                             "url":  "",
+                             "hasUrl":  false,
+                             "totalBytes":  1574,
+                             "columns":  [
+
+                                         ]
+                         },
+                         {
+                             "nameNullable":  "annotations/hard_hat_workers1003.xml",
+                             "ref":  "",
+                             "datasetRef":  "",
+                             "hasDatasetRef":  false,
+                             "ownerRef":  "",
+                             "hasOwnerRef":  false,
+                             "name":  "annotations/hard_hat_workers1003.xml",
+                             "hasName":  true,
+                             "creationDate":  "2020-08-11T07:40:35.958Z",
+                             "description":  "",
+                             "hasDescription":  false,
+                             "fileType":  "",
+                             "hasFileType":  false,
+                             "url":  "",
+                             "hasUrl":  false,
+                             "totalBytes":  2253,
+                             "columns":  [
+
+                                         ]
+                         },
+                         {
+                             "nameNullable":  "annotations/hard_hat_workers1004.xml",
+                             "ref":  "",
+                             "datasetRef":  "",
+                             "hasDatasetRef":  false,
+                             "ownerRef":  "",
+                             "hasOwnerRef":  false,
+                             "name":  "annotations/hard_hat_workers1004.xml",
+                             "hasName":  true,
+                             "creationDate":  "2020-08-11T07:40:36.76Z",
+                             "description":  "",
+                             "hasDescription":  false,
+                             "fileType":  "",
+                             "hasFileType":  false,
+                             "url":  "",
+                             "hasUrl":  false,
+                             "totalBytes":  1912,
+                             "columns":  [
+
+                                         ]
+                         },
+                         {
+                             "nameNullable":  "annotations/hard_hat_workers1005.xml",
+                             "ref":  "",
+                             "datasetRef":  "",
+                             "hasDatasetRef":  false,
+                             "ownerRef":  "",
+                             "hasOwnerRef":  false,
+                             "name":  "annotations/hard_hat_workers1005.xml",
+                             "hasName":  true,
+                             "creationDate":  "2020-08-11T07:40:37.23Z",
+                             "description":  "",
+                             "hasDescription":  false,
+                             "fileType":  "",
+                             "hasFileType":  false,
+                             "url":  "",
+                             "hasUrl":  false,
+                             "totalBytes":  2576,
+                             "columns":  [
+
+                                         ]
+                         },
+                         {
+                             "nameNullable":  "annotations/hard_hat_workers1006.xml",
+                             "ref":  "",
+                             "datasetRef":  "",
+                             "hasDatasetRef":  false,
+                             "ownerRef":  "",
+                             "hasOwnerRef":  false,
+                             "name":  "annotations/hard_hat_workers1006.xml",
+                             "hasName":  true,
+                             "creationDate":  "2020-08-11T07:40:36.554Z",
+                             "description":  "",
+                             "hasDescription":  false,
+                             "fileType":  "",
+                             "hasFileType":  false,
+                             "url":  "",
+                             "hasUrl":  false,
+                             "totalBytes":  6216,
+                             "columns":  [
+
+                                         ]
+                         },
+                         {
+                             "nameNullable":  "annotations/hard_hat_workers1007.xml",
+                             "ref":  "",
+                             "datasetRef":  "",
+                             "hasDatasetRef":  false,
+                             "ownerRef":  "",
+                             "hasOwnerRef":  false,
+                             "name":  "annotations/hard_hat_workers1007.xml",
+                             "hasName":  true,
+                             "creationDate":  "2020-08-11T07:40:36.119Z",
+                             "description":  "",
+                             "hasDescription":  false,
+                             "fileType":  "",
+                             "hasFileType":  false,
+                             "url":  "",
+                             "hasUrl":  false,
+                             "totalBytes":  3253,
+                             "columns":  [
+
+                                         ]
+                         },
+                         {
+                             "nameNullable":  "annotations/hard_hat_workers1008.xml",
+                             "ref":  "",
+                             "datasetRef":  "",
+                             "hasDatasetRef":  false,
+                             "ownerRef":  "",
+                             "hasOwnerRef":  false,
+                             "name":  "annotations/hard_hat_workers1008.xml",
+                             "hasName":  true,
+                             "creationDate":  "2020-08-11T07:40:37.397Z",
+                             "description":  "",
+                             "hasDescription":  false,
+                             "fileType":  "",
+                             "hasFileType":  false,
+                             "url":  "",
+                             "hasUrl":  false,
+                             "totalBytes":  1242,
+                             "columns":  [
+
+                                         ]
+                         },
+                         {
+                             "nameNullable":  "annotations/hard_hat_workers1009.xml",
+                             "ref":  "",
+                             "datasetRef":  "",
+                             "hasDatasetRef":  false,
+                             "ownerRef":  "",
+                             "hasOwnerRef":  false,
+                             "name":  "annotations/hard_hat_workers1009.xml",
+                             "hasName":  true,
+                             "creationDate":  "2020-08-11T07:40:37.998Z",
+                             "description":  "",
+                             "hasDescription":  false,
+                             "fileType":  "",
+                             "hasFileType":  false,
+                             "url":  "",
+                             "hasUrl":  false,
+                             "totalBytes":  1578,
+                             "columns":  [
+
+                                         ]
+                         },
+                         {
+                             "nameNullable":  "annotations/hard_hat_workers101.xml",
+                             "ref":  "",
+                             "datasetRef":  "",
+                             "hasDatasetRef":  false,
+                             "ownerRef":  "",
+                             "hasOwnerRef":  false,
+                             "name":  "annotations/hard_hat_workers101.xml",
+                             "hasName":  true,
+                             "creationDate":  "2020-08-11T07:40:41.056Z",
+                             "description":  "",
+                             "hasDescription":  false,
+                             "fileType":  "",
+                             "hasFileType":  false,
+                             "url":  "",
+                             "hasUrl":  false,
+                             "totalBytes":  1907,
+                             "columns":  [
+
+                                         ]
+                         },
+                         {
+                             "nameNullable":  "annotations/hard_hat_workers1010.xml",
+                             "ref":  "",
+                             "datasetRef":  "",
+                             "hasDatasetRef":  false,
+                             "ownerRef":  "",
+                             "hasOwnerRef":  false,
+                             "name":  "annotations/hard_hat_workers1010.xml",
+                             "hasName":  true,
+                             "creationDate":  "2020-08-11T07:40:36.756Z",
+                             "description":  "",
+                             "hasDescription":  false,
+                             "fileType":  "",
+                             "hasFileType":  false,
+                             "url":  "",
+                             "hasUrl":  false,
+                             "totalBytes":  2242,
+                             "columns":  [
+
+                                         ]
+                         },
+                         {
+                             "nameNullable":  "annotations/hard_hat_workers1011.xml",
+                             "ref":  "",
+                             "datasetRef":  "",
+                             "hasDatasetRef":  false,
+                             "ownerRef":  "",
+                             "hasOwnerRef":  false,
+                             "name":  "annotations/hard_hat_workers1011.xml",
+                             "hasName":  true,
+                             "creationDate":  "2020-08-11T07:40:37.257Z",
+                             "description":  "",
+                             "hasDescription":  false,
+                             "fileType":  "",
+                             "hasFileType":  false,
+                             "url":  "",
+                             "hasUrl":  false,
+                             "totalBytes":  2252,
+                             "columns":  [
+
+                                         ]
+                         },
+                         {
+                             "nameNullable":  "annotations/hard_hat_workers1012.xml",
+                             "ref":  "",
+                             "datasetRef":  "",
+                             "hasDatasetRef":  false,
+                             "ownerRef":  "",
+                             "hasOwnerRef":  false,
+                             "name":  "annotations/hard_hat_workers1012.xml",
+                             "hasName":  true,
+                             "creationDate":  "2020-08-11T07:40:36.577Z",
+                             "description":  "",
+                             "hasDescription":  false,
+                             "fileType":  "",
+                             "hasFileType":  false,
+                             "url":  "",
+                             "hasUrl":  false,
+                             "totalBytes":  1911,
+                             "columns":  [
+
+                                         ]
+                         },
+                         {
+                             "nameNullable":  "annotations/hard_hat_workers1013.xml",
+                             "ref":  "",
+                             "datasetRef":  "",
+                             "hasDatasetRef":  false,
+                             "ownerRef":  "",
+                             "hasOwnerRef":  false,
+                             "name":  "annotations/hard_hat_workers1013.xml",
+                             "hasName":  true,
+                             "creationDate":  "2020-08-11T07:40:36.134Z",
+                             "description":  "",
+                             "hasDescription":  false,
+                             "fileType":  "",
+                             "hasFileType":  false,
+                             "url":  "",
+                             "hasUrl":  false,
+                             "totalBytes":  3580,
+                             "columns":  [
+
+                                         ]
+                         },
+                         {
+                             "nameNullable":  "annotations/hard_hat_workers1014.xml",
+                             "ref":  "",
+                             "datasetRef":  "",
+                             "hasDatasetRef":  false,
+                             "ownerRef":  "",
+                             "hasOwnerRef":  false,
+                             "name":  "annotations/hard_hat_workers1014.xml",
+                             "hasName":  true,
+                             "creationDate":  "2020-08-11T07:40:35.372Z",
+                             "description":  "",
+                             "hasDescription":  false,
+                             "fileType":  "",
+                             "hasFileType":  false,
+                             "url":  "",
+                             "hasUrl":  false,
+                             "totalBytes":  2907,
+                             "columns":  [
+
+                                         ]
+                         }
+                     ],
+    "errorMessage":  "",
+    "hasErrorMessage":  false,
+    "nextPageToken":  "CfDJ8CXkJvnxKG5Ktgac76JjV5H9aoGvmEwZhut95048Wruz_TQB_0E5ADbNmTBTPyCT4CRl7p--FwdH6kbps9JPd31B7yeAoayjEhrWe8KYfSms7RsyaiaN4tiMg0N2eNKclo6V8gBJGv3zSt_-XtE66N5IGtVSlONvRnJj",
+    "hasNextPageToken":  true
+}

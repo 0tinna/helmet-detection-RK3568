@@ -1,0 +1,6 @@
+Model: /userdata/helmet-validation/20261115-native-app-v4/models/helmet_416x416.rknn  Source: /dev/video10  Skip: 0  Conf: 0.35
+Session state: stop; captured=279 detected=174 displayed=0; detection FPS=14.41
+I RKNN: [01:54:15.130] RKNN Runtime Information, librknnrt version: 2.3.2 (429f97ae6b@2025-04-09T09:09:27)
+I RKNN: [01:54:15.130] RKNN Driver Information, version: 0.9.2
+I RKNN: [01:54:15.131] RKNN Model Information, version: 6, toolkit version: 2.3.2(compiler version: 2.3.2 (e045de294f@2025-04-07T19:48:25)), target: RKNPU lite, target platform: rk3568, framework name: ONNX, framework layout: NCHW, model inference type: static_shape
+W RKNN: [01:54:15.183] query RKNN_QUERY_INPUT_DYNAMIC_RANGE error, rknn model is static shape type, please export rknn with dynamic_shapes

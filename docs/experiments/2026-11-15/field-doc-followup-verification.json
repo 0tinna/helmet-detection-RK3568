@@ -1,0 +1,20 @@
+{
+  "local_links": 49,
+  "errors": [],
+  "files": {
+    "docs/field-validation/摄像头接入与现场验收.md": {
+      "sha256": "f034a875b0f8878c1128a3fbda039593a20bf6eb4e15889b8199878fa578300a",
+      "bytes": 20524
+    },
+    "docs/field-validation/论文结构与证据映射.md": {
+      "sha256": "0eb1ee847c1fc966abbc02a7f41a615fbb24f1330a4064d1a7177a9821d28202",
+      "bytes": 6077
+    },
+    "docs/field-validation/field-run-template-v2.json": {
+      "sha256": "12dc26ae559ab93569da31eac2c306a6f13faa99f9f82c2fd6f15be2809734cd",
+      "bytes": 11785
+    }
+  },
+  "prior_v1_template_unchanged": true,
+  "passed": true
+}

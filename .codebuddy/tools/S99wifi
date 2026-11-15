@@ -1,0 +1,67 @@
+#!/bin/sh
+#
+# S99wifi - bring up the on-board WiFi (RTL8852BS / 8852bs) at boot.
+#
+# Why this exists:
+#   * rfkill soft-blocks the wlan radio on this board, so `ifconfig wlan0 up`
+#     fails with "Operation not possible due to RF-kill" until it is unblocked.
+#   * connman grabs wlan0 and makes `iw scan` fail with "Device or resource busy".
+#   * nothing persists an association or a DHCP lease across reboots.
+#
+CONF=/etc/wpa_supplicant.conf
+
+start() {
+    # keep connman away from wlan0 (it blocks scanning and owns the interface)
+    [ -x /etc/init.d/S45connman ] && /etc/init.d/S45connman stop >/dev/null 2>&1
+
+    # the radio is soft-blocked by rfkill on this board
+    rfkill unblock wlan 2>/dev/null
+    sleep 1
+
+    ifconfig wlan0 up
+
+    killall wpa_supplicant >/dev/null 2>&1
+    mkdir -p /var/run/wpa_supplicant
+    wpa_supplicant -B -i wlan0 -c $CONF -D nl80211 >/dev/null 2>&1
+
+    # wait up to 20s for association
+    i=0
+    while [ $i -lt 20 ]; do
+        if iw dev wlan0 link 2>/dev/null | grep -q Connected; then
+            break
+        fi
+        sleep 1
+        i=$((i + 1))
+    done
+
+    udhcpc -i wlan0 -n -q -t 10 >/dev/null 2>&1
+
+    echo -n "wifi: "
+    iw dev wlan0 link 2>/dev/null | grep SSID | head -1 | sed 's/^[ \t]*//'
+    ip -4 addr show wlan0 2>/dev/null | grep -o 'inet [0-9.]*' | head -1
+}
+
+stop() {
+    killall wpa_supplicant 2>/dev/null
+    ifconfig wlan0 down 2>/dev/null
+}
+
+case "$1" in
+    start)
+        start
+        ;;
+    stop)
+        stop
+        ;;
+    restart)
+        stop
+        sleep 1
+        start
+        ;;
+    *)
+        echo "Usage: $0 {start|stop|restart}"
+        exit 1
+        ;;
+esac
+
+exit 0

@@ -1,0 +1,10 @@
+{
+  "source": "models/1.jpg",
+  "source_sha256": "a672e54b698710b9ff3081273fced9b32c671976203f568a3ef505dce1c5936e",
+  "video_sha256": "f22897e1ebb40cc919caab335ee4b436d28ebaf0a138eb8b16c63166184af5cc",
+  "frames": 1200,
+  "fps": 10,
+  "duration_seconds": 120,
+  "physical_camera": false,
+  "purpose": "controlled static-scene continuous replay robustness; not event accuracy or camera quality"
+}

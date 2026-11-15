@@ -1,0 +1,12 @@
+# Recorded working board ABI; this file documents requirements, not a fresh
+# Buildroot installer. NumPy/OpenCV are preinstalled system packages and their
+# matching distribution wheels/system libraries are not included in the bundle.
+# Python == 3.10.*, Linux aarch64, RK3568 kernel/NPU driver required.
+numpy==1.21.2
+# cv2.__version__ == 4.5.4, provided by Buildroot. No opencv-python pip
+# distribution metadata is present; do not replace it with a guessed wheel.
+rknn-toolkit-lite2==2.5.0
+# Lite2 wheel also declares numpy, psutil and ruamel.yaml dependencies.
+psutil==5.8.0
+ruamel.yaml==0.17.31
+

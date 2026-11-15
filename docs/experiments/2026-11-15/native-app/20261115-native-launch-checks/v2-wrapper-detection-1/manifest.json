@@ -1,0 +1,44 @@
+{
+  "kind": "actual-v2-vendor-launcher-verification",
+  "run_id": "v2-wrapper-detection-1",
+  "mode": "detection",
+  "command": [
+    "/opt/ui/src/apps/helmet_app",
+    "--auto-demo",
+    "--smoke-seconds",
+    "12"
+  ],
+  "wrapper": "/opt/ui/src/apps/helmet_app",
+  "wrapper_target": "/userdata/helmet-validation/20261115-native-app-v2/vendor-entry/helmet_app",
+  "wrapper_sha256": "cf5523c368fd518ba879e15e68bef1be20462ecb3fec802d72bf34679fb98c40",
+  "service_sha256": "9a2f7454db6fb48ebcf7f5fd301a831817374c2be2fc5c9036af60feb40df1f7",
+  "launch_py_executed": true,
+  "elapsed_including_startup_cleanup_seconds": 18.631620601998293,
+  "exit_code": 0,
+  "session": "/userdata/helmet-validation/20261115-native-app-v2/app-state/session-qxovl138",
+  "exit_receipt": {
+    "service_exit": 0,
+    "ui_exit": 0,
+    "cleanup_completed": true
+  },
+  "screen": {
+    "path": "/userdata/helmet-validation/20261115-native-app-v2/app-state/session-qxovl138/screen.png",
+    "sha256": "417e1f7bd2dced062575aa60daad7aa5e09612757467d60b68c6acd95022ad70",
+    "size": [
+      968,
+      720,
+      3
+    ]
+  },
+  "private_material_cleaned": true,
+  "host_namespace_preserved": true,
+  "network_namespace_isolated": false,
+  "governor_before": "rknpu_ondemand",
+  "governor_after": "rknpu_ondemand",
+  "wifi_connect_attempted": false,
+  "physical_camera_tested": false,
+  "human_icon_tap": false,
+  "human_touch_verified": false,
+  "screen_scope": "Qt screenRoot contents; excludes top header; not a physical screen photo",
+  "acceptance_scope": "bounded actual wrapper/launch.py/service/Qt verification; not a new30-minute performance run"
+}

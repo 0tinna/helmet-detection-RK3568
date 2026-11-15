@@ -1,0 +1,575 @@
+I rknn-toolkit2 version: 2.3.2
+[1;33mW[0m [1;33mload_onnx: If you don't need to crop the model, don't set 'inputs'/'input_size_list'/'outputs'![0m
+I Loading :   0%|                                                           | 0/130 [00:00<?, ?it/s]I Loading :  68%|█████████████████████████████████▌               | 89/130 [00:00<00:00, 882.81it/s]I Loading : 100%|████████████████████████████████████████████████| 130/130 [00:00<00:00, 667.70it/s]
+D base_optimize ...
+D base_optimize done.
+D 
+D fold_constant ...
+D fold_constant done.
+D Fixed the shape information of some tensor!
+D 
+D correct_ops ...
+D correct_ops done.
+D 
+D fuse_ops ...
+D fuse_ops results:
+D     replace_exswish: remove node = ['Sigmoid_6', 'Mul_7'], add node = ['Sigmoid_6_2swish']
+D     replace_exswish: remove node = ['Sigmoid_9', 'Mul_10'], add node = ['Sigmoid_9_2swish']
+D     replace_exswish: remove node = ['Sigmoid_12', 'Mul_13'], add node = ['Sigmoid_12_2swish']
+D     replace_exswish: remove node = ['Sigmoid_15', 'Mul_16'], add node = ['Sigmoid_15_2swish']
+D     replace_exswish: remove node = ['Sigmoid_18', 'Mul_19'], add node = ['Sigmoid_18_2swish']
+D     replace_exswish: remove node = ['Sigmoid_22', 'Mul_23'], add node = ['Sigmoid_22_2swish']
+D     replace_exswish: remove node = ['Sigmoid_26', 'Mul_27'], add node = ['Sigmoid_26_2swish']
+D     replace_exswish: remove node = ['Sigmoid_29', 'Mul_30'], add node = ['Sigmoid_29_2swish']
+D     replace_exswish: remove node = ['Sigmoid_32', 'Mul_33'], add node = ['Sigmoid_32_2swish']
+D     replace_exswish: remove node = ['Sigmoid_35', 'Mul_36'], add node = ['Sigmoid_35_2swish']
+D     replace_exswish: remove node = ['Sigmoid_38', 'Mul_39'], add node = ['Sigmoid_38_2swish']
+D     replace_exswish: remove node = ['Sigmoid_42', 'Mul_43'], add node = ['Sigmoid_42_2swish']
+D     replace_exswish: remove node = ['Sigmoid_45', 'Mul_46'], add node = ['Sigmoid_45_2swish']
+D     replace_exswish: remove node = ['Sigmoid_49', 'Mul_50'], add node = ['Sigmoid_49_2swish']
+D     replace_exswish: remove node = ['Sigmoid_52', 'Mul_53'], add node = ['Sigmoid_52_2swish']
+D     replace_exswish: remove node = ['Sigmoid_56', 'Mul_57'], add node = ['Sigmoid_56_2swish']
+D     replace_exswish: remove node = ['Sigmoid_60', 'Mul_61'], add node = ['Sigmoid_60_2swish']
+D     replace_exswish: remove node = ['Sigmoid_63', 'Mul_64'], add node = ['Sigmoid_63_2swish']
+D     replace_exswish: remove node = ['Sigmoid_66', 'Mul_67'], add node = ['Sigmoid_66_2swish']
+D     replace_exswish: remove node = ['Sigmoid_69', 'Mul_70'], add node = ['Sigmoid_69_2swish']
+D     replace_exswish: remove node = ['Sigmoid_72', 'Mul_73'], add node = ['Sigmoid_72_2swish']
+D     replace_exswish: remove node = ['Sigmoid_76', 'Mul_77'], add node = ['Sigmoid_76_2swish']
+D     replace_exswish: remove node = ['Sigmoid_79', 'Mul_80'], add node = ['Sigmoid_79_2swish']
+D     replace_exswish: remove node = ['Sigmoid_83', 'Mul_84'], add node = ['Sigmoid_83_2swish']
+D     replace_exswish: remove node = ['Sigmoid_86', 'Mul_87'], add node = ['Sigmoid_86_2swish']
+D     replace_exswish: remove node = ['Sigmoid_90', 'Mul_91'], add node = ['Sigmoid_90_2swish']
+D     replace_exswish: remove node = ['Sigmoid_94', 'Mul_95'], add node = ['Sigmoid_94_2swish']
+D     replace_exswish: remove node = ['Sigmoid_97', 'Mul_98'], add node = ['Sigmoid_97_2swish']
+D     replace_exswish: remove node = ['Sigmoid_100', 'Mul_101'], add node = ['Sigmoid_100_2swish']
+D     replace_exswish: remove node = ['Sigmoid_107', 'Mul_108'], add node = ['Sigmoid_107_2swish']
+D     replace_exswish: remove node = ['Sigmoid_110', 'Mul_111'], add node = ['Sigmoid_110_2swish']
+D     replace_exswish: remove node = ['Sigmoid_113', 'Mul_114'], add node = ['Sigmoid_113_2swish']
+D     replace_exswish: remove node = ['Sigmoid_116', 'Mul_117'], add node = ['Sigmoid_116_2swish']
+D     replace_exswish: remove node = ['Sigmoid_119', 'Mul_120'], add node = ['Sigmoid_119_2swish']
+D     replace_exswish: remove node = ['Sigmoid_123', 'Mul_124'], add node = ['Sigmoid_123_2swish']
+D     replace_exswish: remove node = ['Sigmoid_126', 'Mul_127'], add node = ['Sigmoid_126_2swish']
+D     replace_exswish: remove node = ['Sigmoid_131', 'Mul_132'], add node = ['Sigmoid_131_2swish']
+D     replace_exswish: remove node = ['Sigmoid_134', 'Mul_135'], add node = ['Sigmoid_134_2swish']
+D     replace_exswish: remove node = ['Sigmoid_137', 'Mul_138'], add node = ['Sigmoid_137_2swish']
+D     replace_exswish: remove node = ['Sigmoid_140', 'Mul_141'], add node = ['Sigmoid_140_2swish']
+D     replace_exswish: remove node = ['Sigmoid_144', 'Mul_145'], add node = ['Sigmoid_144_2swish']
+D     replace_exswish: remove node = ['Sigmoid_147', 'Mul_148'], add node = ['Sigmoid_147_2swish']
+D     replace_exswish: remove node = ['Sigmoid_152', 'Mul_153'], add node = ['Sigmoid_152_2swish']
+D     replace_exswish: remove node = ['Sigmoid_155', 'Mul_156'], add node = ['Sigmoid_155_2swish']
+D     replace_exswish: remove node = ['Sigmoid_158', 'Mul_159'], add node = ['Sigmoid_158_2swish']
+D     replace_exswish: remove node = ['Sigmoid_161', 'Mul_162'], add node = ['Sigmoid_161_2swish']
+D     replace_exswish: remove node = ['Sigmoid_165', 'Mul_166'], add node = ['Sigmoid_165_2swish']
+D     replace_exswish: remove node = ['Sigmoid_168', 'Mul_169'], add node = ['Sigmoid_168_2swish']
+D     replace_exswish: remove node = ['Sigmoid_172', 'Mul_173'], add node = ['Sigmoid_172_2swish']
+D     replace_exswish: remove node = ['Sigmoid_175', 'Mul_176'], add node = ['Sigmoid_175_2swish']
+D     replace_exswish: remove node = ['Sigmoid_178', 'Mul_179'], add node = ['Sigmoid_178_2swish']
+D     replace_exswish: remove node = ['Sigmoid_181', 'Mul_182'], add node = ['Sigmoid_181_2swish']
+D     replace_exswish: remove node = ['Sigmoid_185', 'Mul_186'], add node = ['Sigmoid_185_2swish']
+D     replace_exswish: remove node = ['Sigmoid_188', 'Mul_189'], add node = ['Sigmoid_188_2swish']
+D     replace_exswish: remove node = ['Sigmoid_192', 'Mul_193'], add node = ['Sigmoid_192_2swish']
+D     replace_exswish: remove node = ['Sigmoid_195', 'Mul_196'], add node = ['Sigmoid_195_2swish']
+D     replace_exswish: remove node = ['Sigmoid_198', 'Mul_199'], add node = ['Sigmoid_198_2swish']
+D     replace_exswish: remove node = ['Sigmoid_201', 'Mul_202'], add node = ['Sigmoid_201_2swish']
+D     replace_exswish: remove node = ['Sigmoid_205', 'Mul_206'], add node = ['Sigmoid_205_2swish']
+D     tiling_maxpool: remove node = ['MaxPool_103'], add node = ['240_0_1', '240_0', '240_1', '240']
+D     tiling_maxpool: remove node = ['MaxPool_104'], add node = ['241_0_1', '241_0', '241_1', '241']
+D     fold_constant ...
+D     fold_constant done.
+D fuse_ops done.
+D 
+D sparse_weight ...
+D sparse_weight done.
+D 
+I GraphPreparing :   0%|                                                    | 0/157 [00:00<?, ?it/s]I GraphPreparing :  17%|██████▉                                   | 26/157 [00:00<00:00, 254.72it/s]I GraphPreparing :  34%|██████████████▏                           | 53/157 [00:00<00:00, 258.77it/s]I GraphPreparing :  52%|█████████████████████▉                    | 82/157 [00:00<00:00, 270.11it/s]I GraphPreparing :  70%|████████████████████████████▋            | 110/157 [00:00<00:00, 265.79it/s]I GraphPreparing :  87%|███████████████████████████████████▊     | 137/157 [00:00<00:00, 266.25it/s]I GraphPreparing : 100%|█████████████████████████████████████████| 157/157 [00:00<00:00, 264.88it/s]
+I Quantizating 1/2:   0%|                                                   | 0/157 [00:00<?, ?it/s]I Quantizating 1/2:   1%|▎                                          | 1/157 [00:13<34:01, 13.09s/it]I Quantizating 1/2:   1%|▌                                          | 2/157 [00:16<18:23,  7.12s/it]I Quantizating 1/2:   2%|▊                                          | 3/157 [00:18<12:56,  5.04s/it]I Quantizating 1/2:   3%|█                                          | 4/157 [00:21<10:30,  4.12s/it]I Quantizating 1/2:   3%|█▎                                         | 5/157 [00:24<09:56,  3.93s/it]I Quantizating 1/2:   4%|█▌                                       | 6/157 [03:45<2:58:08, 70.79s/it]I Quantizating 1/2:   4%|█▊                                       | 7/157 [04:42<2:45:27, 66.18s/it]I Quantizating 1/2:   5%|██                                      | 8/157 [09:04<5:19:19, 128.59s/it]I Quantizating 1/2:   6%|██▎                                      | 9/157 [09:29<3:57:45, 96.39s/it]I Quantizating 1/2:   6%|██▌                                     | 10/157 [09:59<3:05:30, 75.72s/it]I Quantizating 1/2:   7%|██▊                                     | 11/157 [10:10<2:16:05, 55.93s/it]I Quantizating 1/2:   8%|███                                     | 12/157 [10:27<1:46:51, 44.22s/it]I Quantizating 1/2:   8%|███▎                                    | 13/157 [10:40<1:22:47, 34.49s/it]I Quantizating 1/2:   9%|███▌                                    | 14/157 [12:55<2:34:39, 64.89s/it]I Quantizating 1/2:  10%|███▊                                    | 15/157 [13:06<1:55:24, 48.76s/it]I Quantizating 1/2:  10%|████                                    | 16/157 [13:07<1:21:08, 34.53s/it]I Quantizating 1/2:  11%|████▎                                   | 17/157 [13:37<1:16:59, 33.00s/it]I Quantizating 1/2:  11%|████▌                                   | 18/157 [13:48<1:01:23, 26.50s/it]I Quantizating 1/2:  12%|█████                                     | 19/157 [13:51<44:44, 19.45s/it]I Quantizating 1/2:  13%|█████                                   | 20/157 [14:50<1:11:12, 31.18s/it]I Quantizating 1/2:  13%|█████▎                                  | 21/157 [15:13<1:04:53, 28.63s/it]I Quantizating 1/2:  14%|█████▌                                  | 22/157 [19:33<3:40:53, 98.18s/it]I Quantizating 1/2:  15%|█████▊                                  | 23/157 [19:44<2:41:04, 72.12s/it]I Quantizating 1/2:  15%|██████                                  | 24/157 [20:12<2:10:36, 58.92s/it]I Quantizating 1/2:  16%|██████▎                                 | 25/157 [20:18<1:34:33, 42.98s/it]I Quantizating 1/2:  17%|██████▌                                 | 26/157 [20:34<1:15:48, 34.72s/it]I Quantizating 1/2:  17%|███████▏                                  | 27/157 [20:39<56:23, 26.03s/it]I Quantizating 1/2:  18%|███████▏                                | 28/157 [22:49<2:02:36, 57.03s/it]I Quantizating 1/2:  18%|███████▍                                | 29/157 [22:54<1:28:43, 41.59s/it]I Quantizating 1/2:  19%|███████▋                                | 30/157 [22:55<1:02:09, 29.37s/it]I Quantizating 1/2:  20%|████████▎                                 | 31/157 [23:10<52:37, 25.06s/it]I Quantizating 1/2:  20%|████████▌                                 | 32/157 [23:16<40:11, 19.29s/it]I Quantizating 1/2:  21%|████████▍                               | 33/157 [25:22<1:46:18, 51.44s/it]I Quantizating 1/2:  22%|████████▋                               | 34/157 [25:28<1:17:21, 37.73s/it]I Quantizating 1/2:  22%|█████████▎                                | 35/157 [25:29<54:17, 26.70s/it]I Quantizating 1/2:  23%|█████████▋                                | 36/157 [25:44<46:30, 23.06s/it]I Quantizating 1/2:  24%|█████████▉                                | 37/157 [25:49<35:40, 17.84s/it]I Quantizating 1/2:  24%|█████████▋                              | 38/157 [27:57<1:40:29, 50.67s/it]I Quantizating 1/2:  25%|█████████▉                              | 39/157 [28:02<1:13:05, 37.17s/it]I Quantizating 1/2:  25%|██████████▋                               | 40/157 [28:03<51:15, 26.29s/it]I Quantizating 1/2:  26%|██████████▉                               | 41/157 [28:32<52:15, 27.03s/it]I Quantizating 1/2:  27%|███████████▏                              | 42/157 [28:38<39:32, 20.63s/it]I Quantizating 1/2:  27%|███████████▌                              | 43/157 [28:39<28:15, 14.88s/it]I Quantizating 1/2:  28%|███████████▊                              | 44/157 [29:38<52:59, 28.14s/it]I Quantizating 1/2:  29%|████████████                              | 45/157 [29:50<43:07, 23.10s/it]I Quantizating 1/2:  29%|███████████▋                            | 46/157 [34:03<2:50:51, 92.35s/it]I Quantizating 1/2:  30%|███████████▉                            | 47/157 [34:09<2:01:45, 66.41s/it]I Quantizating 1/2:  31%|████████████▏                           | 48/157 [34:39<1:40:22, 55.25s/it]I Quantizating 1/2:  31%|████████████▍                           | 49/157 [34:42<1:11:29, 39.72s/it]I Quantizating 1/2:  32%|█████████████▍                            | 50/157 [34:57<57:24, 32.19s/it]I Quantizating 1/2:  32%|█████████████▋                            | 51/157 [35:00<41:22, 23.42s/it]I Quantizating 1/2:  33%|█████████████▏                          | 52/157 [37:09<1:36:35, 55.20s/it]I Quantizating 1/2:  34%|█████████████▌                          | 53/157 [37:12<1:08:28, 39.50s/it]I Quantizating 1/2:  34%|██████████████▍                           | 54/157 [37:12<47:42, 27.79s/it]I Quantizating 1/2:  35%|██████████████▋                           | 55/157 [37:27<40:41, 23.94s/it]I Quantizating 1/2:  36%|██████████████▉                           | 56/157 [37:31<29:54, 17.76s/it]I Quantizating 1/2:  36%|██████████████▌                         | 57/157 [39:52<1:31:10, 54.70s/it]I Quantizating 1/2:  37%|██████████████▊                         | 58/157 [39:55<1:04:41, 39.21s/it]I Quantizating 1/2:  38%|███████████████▊                          | 59/157 [39:55<45:05, 27.61s/it]I Quantizating 1/2:  38%|████████████████                          | 60/157 [40:10<38:23, 23.75s/it]I Quantizating 1/2:  39%|████████████████▎                         | 61/157 [40:13<27:59, 17.50s/it]I Quantizating 1/2:  39%|███████████████▊                        | 62/157 [42:22<1:20:51, 51.07s/it]I Quantizating 1/2:  40%|████████████████▊                         | 63/157 [42:25<57:22, 36.63s/it]I Quantizating 1/2:  41%|█████████████████                         | 64/157 [42:25<39:55, 25.76s/it]I Quantizating 1/2:  41%|█████████████████▍                        | 65/157 [42:56<41:52, 27.31s/it]I Quantizating 1/2:  42%|█████████████████▋                        | 66/157 [43:00<30:31, 20.13s/it]I Quantizating 1/2:  43%|█████████████████▉                        | 67/157 [43:01<21:36, 14.40s/it]I Quantizating 1/2:  43%|██████████████████▏                       | 68/157 [43:59<40:44, 27.46s/it]I Quantizating 1/2:  44%|██████████████████▍                       | 69/157 [44:05<30:47, 20.99s/it]I Quantizating 1/2:  45%|█████████████████▊                      | 70/157 [48:25<2:14:31, 92.77s/it]I Quantizating 1/2:  45%|██████████████████                      | 71/157 [48:28<1:34:20, 65.82s/it]I Quantizating 1/2:  46%|██████████████████▎                     | 72/157 [48:57<1:17:33, 54.74s/it]I Quantizating 1/2:  46%|███████████████████▌                      | 73/157 [48:58<54:16, 38.77s/it]I Quantizating 1/2:  47%|███████████████████▊                      | 74/157 [48:59<37:48, 27.33s/it]I Quantizating 1/2:  48%|████████████████████                      | 75/157 [49:00<26:24, 19.32s/it]I Quantizating 1/2:  48%|████████████████████▎                     | 76/157 [49:00<18:31, 13.72s/it]I Quantizating 1/2:  49%|████████████████████▌                     | 77/157 [49:01<13:01,  9.77s/it]I Quantizating 1/2:  50%|████████████████████▊                     | 78/157 [49:01<09:11,  6.98s/it]I Quantizating 1/2:  50%|█████████████████████▏                    | 79/157 [49:02<06:32,  5.03s/it]I Quantizating 1/2:  51%|█████████████████████▍                    | 80/157 [49:02<04:42,  3.67s/it]I Quantizating 1/2:  52%|█████████████████████▋                    | 81/157 [49:03<03:25,  2.70s/it]I Quantizating 1/2:  52%|█████████████████████▉                    | 82/157 [49:03<02:36,  2.09s/it]I Quantizating 1/2:  53%|██████████████████████▏                   | 83/157 [49:04<02:10,  1.76s/it]I Quantizating 1/2:  54%|██████████████████████▍                   | 84/157 [51:00<43:47, 35.99s/it]I Quantizating 1/2:  54%|██████████████████████▋                   | 85/157 [51:03<31:16, 26.06s/it]I Quantizating 1/2:  55%|███████████████████████                   | 86/157 [51:32<31:48, 26.88s/it]I Quantizating 1/2:  55%|███████████████████████▎                  | 87/157 [51:33<22:27, 19.25s/it]I Quantizating 1/2:  56%|███████████████████████▌                  | 88/157 [51:48<20:30, 17.84s/it]I Quantizating 1/2:  57%|███████████████████████▊                  | 89/157 [51:49<14:39, 12.93s/it]I Quantizating 1/2:  57%|████████████████████████                  | 90/157 [54:00<54:01, 48.38s/it]I Quantizating 1/2:  58%|████████████████████████▎                 | 91/157 [54:02<37:45, 34.32s/it]I Quantizating 1/2:  59%|████████████████████████▌                 | 92/157 [54:31<35:23, 32.66s/it]I Quantizating 1/2:  59%|████████████████████████▉                 | 93/157 [54:32<24:51, 23.31s/it]I Quantizating 1/2:  60%|█████████████████████████▏                | 94/157 [54:33<17:15, 16.44s/it]I Quantizating 1/2:  61%|█████████████████████████▍                | 95/157 [55:30<29:43, 28.77s/it]I Quantizating 1/2:  61%|█████████████████████████▋                | 96/157 [55:33<21:20, 21.00s/it]I Quantizating 1/2:  62%|█████████████████████████▉                | 97/157 [56:05<24:14, 24.25s/it]I Quantizating 1/2:  62%|██████████████████████████▏               | 98/157 [56:06<17:10, 17.46s/it]I Quantizating 1/2:  63%|██████████████████████████▍               | 99/157 [56:08<12:12, 12.64s/it]I Quantizating 1/2:  64%|██████████████████████████               | 100/157 [56:09<08:50,  9.30s/it]I Quantizating 1/2:  64%|██████████████████████████▍              | 101/157 [57:06<21:57, 23.52s/it]I Quantizating 1/2:  65%|██████████████████████████▋              | 102/157 [57:09<15:52, 17.32s/it]I Quantizating 1/2:  66%|██████████████████████████▉              | 103/157 [57:23<14:47, 16.44s/it]I Quantizating 1/2:  66%|███████████████████████████▏             | 104/157 [57:26<10:55, 12.36s/it]I Quantizating 1/2:  67%|███████████████████████████▍             | 105/157 [59:35<40:57, 47.26s/it]I Quantizating 1/2:  68%|███████████████████████████▋             | 106/157 [59:38<28:51, 33.95s/it]I Quantizating 1/2:  68%|██████████████████████████▌            | 107/157 [1:00:35<34:05, 40.92s/it]I Quantizating 1/2:  69%|██████████████████████████▊            | 108/157 [1:00:38<24:06, 29.51s/it]I Quantizating 1/2:  69%|███████████████████████████            | 109/157 [1:00:39<16:44, 20.92s/it]I Quantizating 1/2:  70%|███████████████████████████▎           | 110/157 [1:01:36<24:49, 31.70s/it]I Quantizating 1/2:  71%|███████████████████████████▌           | 111/157 [1:01:41<18:19, 23.90s/it]I Quantizating 1/2:  71%|███████████████████████████▊           | 112/157 [1:02:09<18:53, 25.18s/it]I Quantizating 1/2:  72%|████████████████████████████           | 113/157 [1:02:12<13:33, 18.48s/it]I Quantizating 1/2:  73%|████████████████████████████▎          | 114/157 [1:02:15<09:51, 13.75s/it]I Quantizating 1/2:  73%|████████████████████████████▌          | 115/157 [1:02:18<07:19, 10.45s/it]I Quantizating 1/2:  74%|████████████████████████████▊          | 116/157 [1:03:15<16:45, 24.53s/it]I Quantizating 1/2:  75%|█████████████████████████████          | 117/157 [1:03:21<12:35, 18.89s/it]I Quantizating 1/2:  75%|█████████████████████████████▎         | 118/157 [1:03:36<11:33, 17.78s/it]I Quantizating 1/2:  76%|█████████████████████████████▌         | 119/157 [1:03:42<08:59, 14.20s/it]I Quantizating 1/2:  76%|█████████████████████████████▊         | 120/157 [1:05:49<29:42, 48.19s/it]I Quantizating 1/2:  77%|██████████████████████████████         | 121/157 [1:05:55<21:14, 35.41s/it]I Quantizating 1/2:  78%|██████████████████████████████▎        | 122/157 [1:06:52<24:24, 41.85s/it]I Quantizating 1/2:  78%|██████████████████████████████▌        | 123/157 [1:06:58<17:34, 31.01s/it]I Quantizating 1/2:  79%|██████████████████████████████▊        | 124/157 [1:06:59<12:12, 22.18s/it]I Quantizating 1/2:  80%|███████████████████████████████        | 125/157 [1:07:57<17:36, 33.01s/it]I Quantizating 1/2:  80%|███████████████████████████████▎       | 126/157 [1:08:09<13:40, 26.47s/it]I Quantizating 1/2:  81%|███████████████████████████████▌       | 127/157 [1:10:16<28:26, 56.90s/it]I Quantizating 1/2:  82%|███████████████████████████████▊       | 128/157 [1:10:19<19:39, 40.68s/it]I Quantizating 1/2:  82%|████████████████████████████████       | 129/157 [1:10:20<13:23, 28.69s/it]I Quantizating 1/2:  83%|████████████████████████████████▎      | 130/157 [1:10:49<12:52, 28.62s/it]I Quantizating 1/2:  83%|████████████████████████████████▌      | 131/157 [1:10:52<09:04, 20.93s/it]I Quantizating 1/2:  84%|████████████████████████████████▊      | 132/157 [1:11:06<07:56, 19.06s/it]I Quantizating 1/2:  85%|█████████████████████████████████      | 133/157 [1:11:09<05:42, 14.27s/it]I Quantizating 1/2:  85%|█████████████████████████████████▎     | 134/157 [1:13:17<18:31, 48.31s/it]I Quantizating 1/2:  86%|█████████████████████████████████▌     | 135/157 [1:13:20<12:42, 34.67s/it]I Quantizating 1/2:  87%|█████████████████████████████████▊     | 136/157 [1:13:48<11:29, 32.82s/it]I Quantizating 1/2:  87%|██████████████████████████████████     | 137/157 [1:13:51<07:57, 23.87s/it]I Quantizating 1/2:  88%|██████████████████████████████████▎    | 138/157 [1:13:52<05:22, 16.96s/it]I Quantizating 1/2:  89%|██████████████████████████████████▌    | 139/157 [1:14:49<08:42, 29.05s/it]I Quantizating 1/2:  89%|██████████████████████████████████▊    | 140/157 [1:14:55<06:15, 22.07s/it]I Quantizating 1/2:  90%|███████████████████████████████████    | 141/157 [1:17:07<14:41, 55.12s/it]I Quantizating 1/2:  90%|███████████████████████████████████▎   | 142/157 [1:17:09<09:45, 39.04s/it]I Quantizating 1/2:  91%|███████████████████████████████████▌   | 143/157 [1:17:10<06:24, 27.48s/it]I Quantizating 1/2:  92%|███████████████████████████████████▊   | 144/157 [1:17:39<06:03, 27.95s/it]I Quantizating 1/2:  92%|████████████████████████████████████   | 145/157 [1:17:40<04:00, 20.07s/it]I Quantizating 1/2:  93%|████████████████████████████████████▎  | 146/157 [1:17:56<03:25, 18.71s/it]I Quantizating 1/2:  94%|████████████████████████████████████▌  | 147/157 [1:17:57<02:15, 13.54s/it]I Quantizating 1/2:  94%|████████████████████████████████████▊  | 148/157 [1:20:09<07:21, 49.04s/it]I Quantizating 1/2:  95%|█████████████████████████████████████  | 149/157 [1:20:11<04:38, 34.78s/it]I Quantizating 1/2:  96%|█████████████████████████████████████▎ | 150/157 [1:20:40<03:51, 33.06s/it]I Quantizating 1/2:  96%|█████████████████████████████████████▌ | 151/157 [1:20:41<02:21, 23.58s/it]I Quantizating 1/2:  97%|█████████████████████████████████████▊ | 152/157 [1:20:42<01:23, 16.63s/it]I Quantizating 1/2:  97%|██████████████████████████████████████ | 153/157 [1:21:41<01:58, 29.57s/it]I Quantizating 1/2:  98%|██████████████████████████████████████▎| 154/157 [1:21:44<01:04, 21.56s/it]I Quantizating 1/2:  99%|██████████████████████████████████████▌| 155/157 [1:21:47<00:31, 15.85s/it]I Quantizating 1/2:  99%|██████████████████████████████████████▊| 156/157 [1:21:52<00:12, 12.54s/it]I Quantizating 1/2: 100%|███████████████████████████████████████| 157/157 [1:22:01<00:00, 11.65s/it]I Quantizating 1/2: 100%|███████████████████████████████████████| 157/157 [1:22:01<00:00, 31.35s/it]
+I Quantizating 2/2:   0%|                                                   | 0/157 [00:00<?, ?it/s]I Quantizating 2/2:   1%|▎                                          | 1/157 [00:00<01:12,  2.15it/s]I Quantizating 2/2:   2%|▊                                          | 3/157 [00:00<00:26,  5.81it/s]I Quantizating 2/2:   3%|█▎                                         | 5/157 [00:00<00:18,  8.16it/s]I Quantizating 2/2:   4%|█▉                                         | 7/157 [00:10<05:26,  2.18s/it]I Quantizating 2/2:   5%|██▏                                        | 8/157 [00:21<10:14,  4.12s/it]I Quantizating 2/2:   6%|██▍                                        | 9/157 [00:22<08:11,  3.32s/it]I Quantizating 2/2:   6%|██▋                                       | 10/157 [00:23<06:46,  2.77s/it]I Quantizating 2/2:   7%|██▉                                       | 11/157 [00:23<05:13,  2.14s/it]I Quantizating 2/2:   8%|███▏                                      | 12/157 [00:24<04:09,  1.72s/it]I Quantizating 2/2:   8%|███▍                                      | 13/157 [00:24<03:15,  1.36s/it]I Quantizating 2/2:   9%|███▋                                      | 14/157 [00:30<06:05,  2.56s/it]I Quantizating 2/2:  10%|████                                      | 15/157 [00:30<04:38,  1.96s/it]I Quantizating 2/2:  11%|████▌                                     | 17/157 [00:32<03:10,  1.36s/it]I Quantizating 2/2:  11%|████▊                                     | 18/157 [00:32<02:38,  1.14s/it]I Quantizating 2/2:  13%|█████▎                                    | 20/157 [00:35<02:46,  1.22s/it]I Quantizating 2/2:  13%|█████▌                                    | 21/157 [00:36<02:39,  1.17s/it]I Quantizating 2/2:  14%|█████▉                                    | 22/157 [00:47<07:53,  3.50s/it]I Quantizating 2/2:  15%|██████▏                                   | 23/157 [00:47<06:03,  2.71s/it]I Quantizating 2/2:  15%|██████▍                                   | 24/157 [00:48<05:05,  2.30s/it]I Quantizating 2/2:  16%|██████▋                                   | 25/157 [00:48<03:47,  1.72s/it]I Quantizating 2/2:  17%|██████▉                                   | 26/157 [00:49<03:04,  1.41s/it]I Quantizating 2/2:  17%|███████▏                                  | 27/157 [00:49<02:19,  1.07s/it]I Quantizating 2/2:  18%|███████▍                                  | 28/157 [00:55<04:56,  2.30s/it]I Quantizating 2/2:  18%|███████▊                                  | 29/157 [00:55<03:36,  1.69s/it]I Quantizating 2/2:  20%|████████▎                                 | 31/157 [00:55<02:14,  1.07s/it]I Quantizating 2/2:  20%|████████▌                                 | 32/157 [00:56<01:48,  1.16it/s]I Quantizating 2/2:  21%|████████▊                                 | 33/157 [01:01<04:17,  2.08s/it]I Quantizating 2/2:  22%|█████████                                 | 34/157 [01:01<03:14,  1.58s/it]I Quantizating 2/2:  23%|█████████▋                                | 36/157 [01:02<02:05,  1.03s/it]I Quantizating 2/2:  24%|█████████▉                                | 37/157 [01:02<01:41,  1.18it/s]I Quantizating 2/2:  24%|██████████▏                               | 38/157 [01:08<03:57,  2.00s/it]I Quantizating 2/2:  25%|██████████▍                               | 39/157 [01:08<03:00,  1.53s/it]I Quantizating 2/2:  26%|██████████▉                               | 41/157 [01:09<02:12,  1.14s/it]I Quantizating 2/2:  27%|███████████▏                              | 42/157 [01:09<01:46,  1.08it/s]I Quantizating 2/2:  28%|███████████▊                              | 44/157 [01:12<01:57,  1.04s/it]I Quantizating 2/2:  29%|████████████                              | 45/157 [01:12<01:42,  1.10it/s]I Quantizating 2/2:  29%|████████████▎                             | 46/157 [01:23<05:59,  3.24s/it]I Quantizating 2/2:  30%|████████████▌                             | 47/157 [01:23<04:31,  2.47s/it]I Quantizating 2/2:  31%|████████████▊                             | 48/157 [01:24<03:51,  2.12s/it]I Quantizating 2/2:  31%|█████████████                             | 49/157 [01:24<02:49,  1.57s/it]I Quantizating 2/2:  32%|█████████████▍                            | 50/157 [01:25<02:18,  1.29s/it]I Quantizating 2/2:  32%|█████████████▋                            | 51/157 [01:25<01:41,  1.05it/s]I Quantizating 2/2:  33%|█████████████▉                            | 52/157 [01:30<03:52,  2.22s/it]I Quantizating 2/2:  34%|██████████████▏                           | 53/157 [01:31<02:46,  1.60s/it]I Quantizating 2/2:  35%|██████████████▋                           | 55/157 [01:31<01:43,  1.01s/it]I Quantizating 2/2:  36%|██████████████▉                           | 56/157 [01:31<01:20,  1.26it/s]I Quantizating 2/2:  36%|███████████████▏                          | 57/157 [01:37<03:15,  1.95s/it]I Quantizating 2/2:  37%|███████████████▌                          | 58/157 [01:37<02:24,  1.46s/it]I Quantizating 2/2:  38%|████████████████                          | 60/157 [01:37<01:33,  1.04it/s]I Quantizating 2/2:  39%|████████████████▎                         | 61/157 [01:37<01:13,  1.31it/s]I Quantizating 2/2:  39%|████████████████▌                         | 62/157 [01:43<03:01,  1.91s/it]I Quantizating 2/2:  40%|████████████████▊                         | 63/157 [01:43<02:15,  1.44s/it]I Quantizating 2/2:  41%|█████████████████▍                        | 65/157 [01:44<01:39,  1.08s/it]I Quantizating 2/2:  42%|█████████████████▋                        | 66/157 [01:44<01:17,  1.17it/s]I Quantizating 2/2:  43%|██████████████████▏                       | 68/157 [01:47<01:28,  1.00it/s]I Quantizating 2/2:  44%|██████████████████▍                       | 69/157 [01:47<01:12,  1.21it/s]I Quantizating 2/2:  45%|██████████████████▋                       | 70/157 [01:58<04:40,  3.23s/it]I Quantizating 2/2:  45%|██████████████████▉                       | 71/157 [01:58<03:29,  2.43s/it]I Quantizating 2/2:  46%|███████████████████▎                      | 72/157 [01:59<02:59,  2.11s/it]I Quantizating 2/2:  47%|███████████████████▊                      | 74/157 [01:59<01:40,  1.21s/it]I Quantizating 2/2:  49%|████████████████████▌                     | 77/157 [01:59<00:51,  1.54it/s]I Quantizating 2/2:  51%|█████████████████████▍                    | 80/157 [01:59<00:30,  2.51it/s]I Quantizating 2/2:  53%|██████████████████████▏                   | 83/157 [01:59<00:19,  3.77it/s]I Quantizating 2/2:  55%|███████████████████████                   | 86/157 [02:06<01:02,  1.13it/s]I Quantizating 2/2:  56%|███████████████████████▌                  | 88/157 [02:06<00:51,  1.34it/s]I Quantizating 2/2:  57%|████████████████████████                  | 90/157 [02:12<01:25,  1.27s/it]I Quantizating 2/2:  59%|████████████████████████▌                 | 92/157 [02:13<01:11,  1.10s/it]I Quantizating 2/2:  61%|█████████████████████████▍                | 95/157 [02:16<01:02,  1.00s/it]I Quantizating 2/2:  61%|█████████████████████████▋                | 96/157 [02:16<00:53,  1.15it/s]I Quantizating 2/2:  62%|█████████████████████████▉                | 97/157 [02:17<00:56,  1.06it/s]I Quantizating 2/2:  63%|██████████████████████████▍               | 99/157 [02:17<00:37,  1.54it/s]I Quantizating 2/2:  64%|██████████████████████████▍              | 101/157 [02:19<00:45,  1.22it/s]I Quantizating 2/2:  65%|██████████████████████████▋              | 102/157 [02:20<00:37,  1.45it/s]I Quantizating 2/2:  66%|██████████████████████████▉              | 103/157 [02:20<00:36,  1.49it/s]I Quantizating 2/2:  66%|███████████████████████████▏             | 104/157 [02:20<00:28,  1.84it/s]I Quantizating 2/2:  67%|███████████████████████████▍             | 105/157 [02:26<01:30,  1.74s/it]I Quantizating 2/2:  68%|███████████████████████████▋             | 106/157 [02:26<01:07,  1.32s/it]I Quantizating 2/2:  68%|███████████████████████████▉             | 107/157 [02:28<01:20,  1.61s/it]I Quantizating 2/2:  69%|████████████████████████████▏            | 108/157 [02:28<00:58,  1.20s/it]I Quantizating 2/2:  70%|████████████████████████████▋            | 110/157 [02:31<00:56,  1.20s/it]I Quantizating 2/2:  71%|████████████████████████████▉            | 111/157 [02:31<00:44,  1.03it/s]I Quantizating 2/2:  71%|█████████████████████████████▏           | 112/157 [02:32<00:46,  1.02s/it]I Quantizating 2/2:  72%|█████████████████████████████▌           | 113/157 [02:32<00:34,  1.28it/s]I Quantizating 2/2:  73%|██████████████████████████████           | 115/157 [02:32<00:20,  2.08it/s]I Quantizating 2/2:  74%|██████████████████████████████▎          | 116/157 [02:35<00:37,  1.08it/s]I Quantizating 2/2:  75%|██████████████████████████████▌          | 117/157 [02:35<00:30,  1.33it/s]I Quantizating 2/2:  75%|██████████████████████████████▊          | 118/157 [02:36<00:27,  1.40it/s]I Quantizating 2/2:  76%|███████████████████████████████          | 119/157 [02:36<00:22,  1.72it/s]I Quantizating 2/2:  76%|███████████████████████████████▎         | 120/157 [02:41<01:09,  1.88s/it]I Quantizating 2/2:  77%|███████████████████████████████▌         | 121/157 [02:41<00:50,  1.41s/it]I Quantizating 2/2:  78%|███████████████████████████████▊         | 122/157 [02:44<00:58,  1.69s/it]I Quantizating 2/2:  78%|████████████████████████████████         | 123/157 [02:44<00:42,  1.26s/it]I Quantizating 2/2:  80%|████████████████████████████████▋        | 125/157 [02:46<00:39,  1.22s/it]I Quantizating 2/2:  80%|████████████████████████████████▉        | 126/157 [02:47<00:32,  1.04s/it]I Quantizating 2/2:  81%|█████████████████████████████████▏       | 127/157 [02:52<01:04,  2.17s/it]I Quantizating 2/2:  82%|█████████████████████████████████▍       | 128/157 [02:52<00:46,  1.61s/it]I Quantizating 2/2:  83%|█████████████████████████████████▉       | 130/157 [02:53<00:31,  1.18s/it]I Quantizating 2/2:  83%|██████████████████████████████████▏      | 131/157 [02:54<00:24,  1.08it/s]I Quantizating 2/2:  84%|██████████████████████████████████▍      | 132/157 [02:54<00:21,  1.18it/s]I Quantizating 2/2:  85%|██████████████████████████████████▋      | 133/157 [02:54<00:15,  1.53it/s]I Quantizating 2/2:  85%|██████████████████████████████████▉      | 134/157 [03:00<00:43,  1.90s/it]I Quantizating 2/2:  86%|███████████████████████████████████▎     | 135/157 [03:00<00:30,  1.40s/it]I Quantizating 2/2:  87%|███████████████████████████████████▌     | 136/157 [03:01<00:28,  1.34s/it]I Quantizating 2/2:  87%|███████████████████████████████████▊     | 137/157 [03:01<00:19,  1.02it/s]I Quantizating 2/2:  89%|████████████████████████████████████▎    | 139/157 [03:03<00:19,  1.08s/it]I Quantizating 2/2:  89%|████████████████████████████████████▌    | 140/157 [03:04<00:14,  1.14it/s]I Quantizating 2/2:  90%|████████████████████████████████████▊    | 141/157 [03:09<00:34,  2.14s/it]I Quantizating 2/2:  92%|█████████████████████████████████████▌   | 144/157 [03:11<00:16,  1.24s/it]I Quantizating 2/2:  93%|██████████████████████████████████████▏  | 146/157 [03:11<00:10,  1.06it/s]I Quantizating 2/2:  94%|██████████████████████████████████████▋  | 148/157 [03:17<00:13,  1.52s/it]I Quantizating 2/2:  96%|███████████████████████████████████████▏ | 150/157 [03:18<00:08,  1.25s/it]I Quantizating 2/2:  97%|███████████████████████████████████████▉ | 153/157 [03:21<00:04,  1.09s/it]I Quantizating 2/2:  98%|████████████████████████████████████████▏| 154/157 [03:21<00:02,  1.07it/s]I Quantizating 2/2:  99%|████████████████████████████████████████▍| 155/157 [03:21<00:01,  1.28it/s]I Quantizating 2/2:  99%|████████████████████████████████████████▋| 156/157 [03:21<00:00,  1.51it/s]I Quantizating 2/2: 100%|█████████████████████████████████████████| 157/157 [03:22<00:00,  1.65it/s]I Quantizating 2/2: 100%|█████████████████████████████████████████| 157/157 [03:22<00:00,  1.29s/it]
+D 
+D quant_optimizer ...
+D quant_optimizer results:
+D     adjust_no_change_node: ['MaxPool_102', '240', '240_1', '240_0', '240_0_1', '241', '241_1', '241_0', '241_0_1']
+D quant_optimizer done.
+D 
+[1;33mW[0m [1;33mbuild: The default input dtype of 'images' is changed from 'float32' to 'int8' in rknn model for performance!
+                       Please take care of this change when deploy rknn model with Runtime API![0m
+[1;33mW[0m [1;33mbuild: The default output dtype of '350' is changed from 'float32' to 'int8' in rknn model for performance!
+                      Please take care of this change when deploy rknn model with Runtime API![0m
+[1;33mW[0m [1;33mbuild: The default output dtype of '364' is changed from 'float32' to 'int8' in rknn model for performance!
+                      Please take care of this change when deploy rknn model with Runtime API![0m
+[1;33mW[0m [1;33mbuild: The default output dtype of '378' is changed from 'float32' to 'int8' in rknn model for performance!
+                      Please take care of this change when deploy rknn model with Runtime API![0m
+I rknn building ...
+I RKNN: [08:51:29.317] compress = 0, conv_eltwise_activation_fuse = 1, global_fuse = 1, multi-core-model-mode = 7, output_optimize = 1, layout_match = 1, enable_argb_group = 0, op_group_sram_opt = 0, enable_flash_attention = 0, op_group_nbuf_opt = 0, safe_fuse = 0
+I RKNN: librknnc version: 2.3.2 (e045de294f@2025-04-07T19:48:25)
+D RKNN: [08:51:30.085] RKNN is invoked
+W RKNN: [08:51:31.916] Model initializer tensor data is empty, name: Resize_128_roi
+W RKNN: [08:51:31.917] Model initializer tensor data is empty, name: Resize_149_roi
+D RKNN: [08:51:32.447] >>>>>> start: rknn::RKNNExtractCustomOpAttrs
+D RKNN: [08:51:32.466] <<<<<<<< end: rknn::RKNNExtractCustomOpAttrs
+D RKNN: [08:51:32.467] >>>>>> start: rknn::RKNNSetOpTargetPass
+D RKNN: [08:51:32.467] <<<<<<<< end: rknn::RKNNSetOpTargetPass
+D RKNN: [08:51:32.468] >>>>>> start: rknn::RKNNBindNorm
+D RKNN: [08:51:32.488] <<<<<<<< end: rknn::RKNNBindNorm
+D RKNN: [08:51:32.489] >>>>>> start: rknn::RKNNEliminateQATDataConvert
+D RKNN: [08:51:32.506] <<<<<<<< end: rknn::RKNNEliminateQATDataConvert
+D RKNN: [08:51:32.507] >>>>>> start: rknn::RKNNConvStrideFixPass
+D RKNN: [08:51:32.508] <<<<<<<< end: rknn::RKNNConvStrideFixPass
+D RKNN: [08:51:32.509] >>>>>> start: rknn::RKNNTileGroupConv
+D RKNN: [08:51:32.510] <<<<<<<< end: rknn::RKNNTileGroupConv
+D RKNN: [08:51:32.511] >>>>>> start: rknn::RKNNTileFcBatchFuse
+D RKNN: [08:51:32.512] <<<<<<<< end: rknn::RKNNTileFcBatchFuse
+D RKNN: [08:51:32.512] >>>>>> start: rknn::RKNNAddConvBias
+D RKNN: [08:51:32.529] <<<<<<<< end: rknn::RKNNAddConvBias
+D RKNN: [08:51:32.530] >>>>>> start: rknn::RKNNTileChannel
+D RKNN: [08:51:32.534] <<<<<<<< end: rknn::RKNNTileChannel
+D RKNN: [08:51:32.534] >>>>>> start: rknn::RKNNDuplicateWeightPass
+D RKNN: [08:51:32.537] <<<<<<<< end: rknn::RKNNDuplicateWeightPass
+D RKNN: [08:51:32.538] >>>>>> start: rknn::RKNNInitRNNConst
+D RKNN: [08:51:32.539] <<<<<<<< end: rknn::RKNNInitRNNConst
+D RKNN: [08:51:32.540] >>>>>> start: rknn::RKNNPerChannelPrep
+D RKNN: [08:51:32.546] <<<<<<<< end: rknn::RKNNPerChannelPrep
+D RKNN: [08:51:32.546] >>>>>> start: rknn::RKNNBnQuant
+D RKNN: [08:51:32.547] <<<<<<<< end: rknn::RKNNBnQuant
+D RKNN: [08:51:32.549] >>>>>> start: rknn::RKNNFuseOptimizerPass
+D RKNN: [08:51:33.440] <<<<<<<< end: rknn::RKNNFuseOptimizerPass
+D RKNN: [08:51:33.441] >>>>>> start: rknn::RKNNTurnAutoPad
+D RKNN: [08:51:33.443] <<<<<<<< end: rknn::RKNNTurnAutoPad
+D RKNN: [08:51:33.444] >>>>>> start: rknn::RKNNInitCastConst
+D RKNN: [08:51:33.445] <<<<<<<< end: rknn::RKNNInitCastConst
+D RKNN: [08:51:33.446] >>>>>> start: rknn::RKNNMultiSurfacePass
+D RKNN: [08:51:33.447] <<<<<<<< end: rknn::RKNNMultiSurfacePass
+D RKNN: [08:51:33.448] >>>>>> start: rknn::RKNNReplaceConstantTensorPass
+D RKNN: [08:51:33.463] <<<<<<<< end: rknn::RKNNReplaceConstantTensorPass
+D RKNN: [08:51:33.464] >>>>>> start: rknn::RKNNSubgraphManager
+D RKNN: [08:51:33.467] <<<<<<<< end: rknn::RKNNSubgraphManager
+D RKNN: [08:51:33.468] >>>>>> start: OpEmit
+D RKNN: [08:51:33.528] <<<<<<<< end: OpEmit
+D RKNN: [08:51:33.529] >>>>>> start: rknn::RKNNAddFirstConv
+D RKNN: [08:51:33.546] <<<<<<<< end: rknn::RKNNAddFirstConv
+D RKNN: [08:51:33.547] >>>>>> start: rknn::RKNNLayoutMatchPass
+D RKNN: [08:51:33.571] <<<<<<<< end: rknn::RKNNLayoutMatchPass
+D RKNN: [08:51:33.572] >>>>>> start: rknn::RKNNAddSecondaryNode
+D RKNN: [08:51:33.588] <<<<<<<< end: rknn::RKNNAddSecondaryNode
+D RKNN: [08:51:33.589] >>>>>> start: rknn::RKNNAllocateConvCachePass
+D RKNN: [08:51:33.590] <<<<<<<< end: rknn::RKNNAllocateConvCachePass
+D RKNN: [08:51:33.590] >>>>>> start: OpEmit
+D RKNN: [08:51:34.093] <<<<<<<< end: OpEmit
+D RKNN: [08:51:34.093] >>>>>> start: rknn::RKNNSubGraphMemoryPlanPass
+D RKNN: [08:51:34.094] <<<<<<<< end: rknn::RKNNSubGraphMemoryPlanPass
+D RKNN: [08:51:34.094] >>>>>> start: rknn::RKNNProfileAnalysisPass
+D RKNN: [08:51:34.096] <<<<<<<< end: rknn::RKNNProfileAnalysisPass
+D RKNN: [08:51:34.134] >>>>>> start: rknn::RKNNOperatorIdGenPass
+D RKNN: [08:51:34.136] <<<<<<<< end: rknn::RKNNOperatorIdGenPass
+D RKNN: [08:51:34.136] >>>>>> start: rknn::RKNNWeightTransposePass
+W RKNN: [08:51:41.153] Warning: Tensor 395 need parameter qtype, type is set to float16 by default!
+W RKNN: [08:51:41.154] Warning: Tensor Resize_128_roi need parameter qtype, type is set to float16 by default!
+W RKNN: [08:51:41.154] Warning: Tensor 396 need parameter qtype, type is set to float16 by default!
+W RKNN: [08:51:41.154] Warning: Tensor Resize_149_roi need parameter qtype, type is set to float16 by default!
+D RKNN: [08:51:41.155] <<<<<<<< end: rknn::RKNNWeightTransposePass
+D RKNN: [08:51:41.155] >>>>>> start: rknn::RKNNCPUWeightTransposePass
+D RKNN: [08:51:41.156] <<<<<<<< end: rknn::RKNNCPUWeightTransposePass
+D RKNN: [08:51:41.156] >>>>>> start: rknn::RKNNModelBuildPass
+D RKNN: [08:51:41.803] <<<<<<<< end: rknn::RKNNModelBuildPass
+D RKNN: [08:51:41.804] >>>>>> start: rknn::RKNNModelRegCmdbuildPass
+D RKNN: [08:51:41.881] --------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+D RKNN: [08:51:41.881]                                                         Network Layer Information Table                                                      
+D RKNN: [08:51:41.881] --------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+D RKNN: [08:51:41.881] ID   OpType             DataType Target InputShape                               OutputShape            Cycles(DDR/NPU/Total)    RW(KB)       FullName        
+D RKNN: [08:51:41.881] --------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+D RKNN: [08:51:41.881] 0    InputOperator      INT8     CPU    \                                        (1,3,416,416)          0/0/0                    0            InputOperator:images
+D RKNN: [08:51:41.881] 1    Conv               INT8     NPU    (1,3,416,416),(3,3,1,1),(3)              (1,3,416,416)          289709/692224/692224     507                          
+D RKNN: [08:51:41.881] 2    Conv               INT8     NPU    (1,3,416,416),(1,3,2,2),(3)              (1,3,208,208)          263400/173056/263400     1352         Conv:Conv_0     
+D RKNN: [08:51:41.881] 3    Conv               INT8     NPU    (1,3,416,416),(1,3,2,2),(3)              (1,3,208,208)          263400/173056/263400     1352         Conv:Conv_1     
+D RKNN: [08:51:41.881] 4    Conv               INT8     NPU    (1,3,416,416),(1,3,2,2),(3)              (1,3,208,208)          263400/173056/263400     1352         Conv:Conv_2     
+D RKNN: [08:51:41.881] 5    Conv               INT8     NPU    (1,3,416,416),(1,3,2,2),(3)              (1,3,208,208)          263400/173056/263400     1352         Conv:Conv_3     
+D RKNN: [08:51:41.881] 6    Concat             INT8     NPU    (1,3,208,208),(1,3,208,208),...          (1,12,208,208)         0/0/0                    1352         Concat:Concat_4 
+D RKNN: [08:51:41.881] 7    ConvExSwish        INT8     NPU    (1,12,208,208),(32,12,3,3),(32)          (1,32,208,208)         316771/778752/778752     680          Conv:Conv_5     
+D RKNN: [08:51:41.881] 8    ConvExSwish        INT8     NPU    (1,32,208,208),(64,32,3,3),(64)          (1,64,104,104)         318914/389376/389376     1370         Conv:Conv_8     
+D RKNN: [08:51:41.881] 9    ConvExSwish        INT8     NPU    (1,64,104,104),(32,64,1,1),(32)          (1,32,104,104)         158366/86528/158366      678          Conv:Conv_11    
+D RKNN: [08:51:41.881] 10   ConvExSwish        INT8     NPU    (1,64,104,104),(32,64,1,1),(32)          (1,32,104,104)         158366/86528/158366      678          Conv:Conv_21    
+D RKNN: [08:51:41.881] 11   ConvExSwish        INT8     NPU    (1,32,104,104),(32,32,1,1),(32)          (1,32,104,104)         105539/86528/105539      339          Conv:Conv_14    
+D RKNN: [08:51:41.881] 12   ConvExSwish        INT8     NPU    (1,32,104,104),(32,32,3,3),(32)          (1,32,104,104)         106785/194688/194688     347          Conv:Conv_17    
+D RKNN: [08:51:41.881] 13   Add                INT8     NPU    (1,32,104,104),(1,32,104,104)            (1,32,104,104)         0/0/0                    676          Add:Add_20      
+D RKNN: [08:51:41.881] 14   Concat             INT8     NPU    (1,32,104,104),(1,32,104,104)            (1,64,104,104)         0/0/0                    676          Concat:Concat_24
+D RKNN: [08:51:41.881] 15   ConvExSwish        INT8     NPU    (1,64,104,104),(64,64,1,1),(64)          (1,64,104,104)         211389/173056/211389     680          Conv:Conv_25    
+D RKNN: [08:51:41.881] 16   ConvExSwish        INT8     NPU    (1,64,104,104),(128,64,3,3),(128)        (1,128,52,52)          169392/389376/389376     749          Conv:Conv_28    
+D RKNN: [08:51:41.881] 17   ConvExSwish        INT8     NPU    (1,128,52,52),(64,128,1,1),(64)          (1,64,52,52)           80333/43264/80333        346          Conv:Conv_31    
+D RKNN: [08:51:41.881] 18   ConvExSwish        INT8     NPU    (1,128,52,52),(64,128,1,1),(64)          (1,64,52,52)           80333/43264/80333        346          Conv:Conv_55    
+D RKNN: [08:51:41.881] 19   ConvExSwish        INT8     NPU    (1,64,52,52),(64,64,1,1),(64)            (1,64,52,52)           53374/43264/53374        173          Conv:Conv_34    
+D RKNN: [08:51:41.881] 20   ConvExSwish        INT8     NPU    (1,64,52,52),(64,64,3,3),(64)            (1,64,52,52)           58360/194688/194688      205          Conv:Conv_37    
+D RKNN: [08:51:41.881] 21   Add                INT8     NPU    (1,64,52,52),(1,64,52,52)                (1,64,52,52)           0/0/0                    338          Add:Add_40      
+D RKNN: [08:51:41.881] 22   ConvExSwish        INT8     NPU    (1,64,52,52),(64,64,1,1),(64)            (1,64,52,52)           53374/43264/53374        173          Conv:Conv_41    
+D RKNN: [08:51:41.881] 23   ConvExSwish        INT8     NPU    (1,64,52,52),(64,64,3,3),(64)            (1,64,52,52)           58360/194688/194688      205          Conv:Conv_44    
+D RKNN: [08:51:41.881] 24   Add                INT8     NPU    (1,64,52,52),(1,64,52,52)                (1,64,52,52)           0/0/0                    338          Add:Add_47      
+D RKNN: [08:51:41.881] 25   ConvExSwish        INT8     NPU    (1,64,52,52),(64,64,1,1),(64)            (1,64,52,52)           53374/43264/53374        173          Conv:Conv_48    
+D RKNN: [08:51:41.881] 26   ConvExSwish        INT8     NPU    (1,64,52,52),(64,64,3,3),(64)            (1,64,52,52)           58360/194688/194688      205          Conv:Conv_51    
+D RKNN: [08:51:41.881] 27   Add                INT8     NPU    (1,64,52,52),(1,64,52,52)                (1,64,52,52)           0/0/0                    338          Add:Add_54      
+D RKNN: [08:51:41.881] 28   Concat             INT8     NPU    (1,64,52,52),(1,64,52,52)                (1,128,52,52)          0/0/0                    338          Concat:Concat_58
+D RKNN: [08:51:41.881] 29   ConvExSwish        INT8     NPU    (1,128,52,52),(128,128,1,1),(128)        (1,128,52,52)          107993/86528/107993      355          Conv:Conv_59    
+D RKNN: [08:51:41.881] 30   ConvExSwish        INT8     NPU    (1,128,52,52),(256,128,3,3),(256)        (1,256,26,26)          124200/396288/396288     628          Conv:Conv_62    
+D RKNN: [08:51:41.881] 31   ConvExSwish        INT8     NPU    (1,256,26,26),(128,256,1,1),(128)        (1,128,26,26)          44647/44032/44647        202          Conv:Conv_65    
+D RKNN: [08:51:41.881] 32   ConvExSwish        INT8     NPU    (1,256,26,26),(128,256,1,1),(128)        (1,128,26,26)          44647/44032/44647        202          Conv:Conv_89    
+D RKNN: [08:51:41.881] 33   ConvExSwish        INT8     NPU    (1,128,26,26),(128,128,1,1),(128)        (1,128,26,26)          28986/22016/28986        101          Conv:Conv_68    
+D RKNN: [08:51:41.881] 34   ConvExSwish        INT8     NPU    (1,128,26,26),(128,128,3,3),(128)        (1,128,26,26)          48932/198144/198144      229          Conv:Conv_71    
+D RKNN: [08:51:41.881] 35   Add                INT8     NPU    (1,128,26,26),(1,128,26,26)              (1,128,26,26)          0/0/0                    169          Add:Add_74      
+D RKNN: [08:51:41.881] 36   ConvExSwish        INT8     NPU    (1,128,26,26),(128,128,1,1),(128)        (1,128,26,26)          28986/22016/28986        101          Conv:Conv_75    
+D RKNN: [08:51:41.881] 37   ConvExSwish        INT8     NPU    (1,128,26,26),(128,128,3,3),(128)        (1,128,26,26)          48932/198144/198144      229          Conv:Conv_78    
+D RKNN: [08:51:41.881] 38   Add                INT8     NPU    (1,128,26,26),(1,128,26,26)              (1,128,26,26)          0/0/0                    169          Add:Add_81      
+D RKNN: [08:51:41.881] 39   ConvExSwish        INT8     NPU    (1,128,26,26),(128,128,1,1),(128)        (1,128,26,26)          28986/22016/28986        101          Conv:Conv_82    
+D RKNN: [08:51:41.881] 40   ConvExSwish        INT8     NPU    (1,128,26,26),(128,128,3,3),(128)        (1,128,26,26)          48932/198144/198144      229          Conv:Conv_85    
+D RKNN: [08:51:41.881] 41   Add                INT8     NPU    (1,128,26,26),(1,128,26,26)              (1,128,26,26)          0/0/0                    169          Add:Add_88      
+D RKNN: [08:51:41.881] 42   Concat             INT8     NPU    (1,128,26,26),(1,128,26,26)              (1,256,26,26)          0/0/0                    169          Concat:Concat_92
+D RKNN: [08:51:41.881] 43   ConvExSwish        INT8     NPU    (1,256,26,26),(256,256,1,1),(256)        (1,256,26,26)          62957/88064/88064        235          Conv:Conv_93    
+D RKNN: [08:51:41.881] 44   ConvExSwish        INT8     NPU    (1,256,26,26),(512,256,3,3),(512)        (1,512,13,13)          219648/405504/405504     1325         Conv:Conv_96    
+D RKNN: [08:51:41.881] 45   ConvExSwish        INT8     NPU    (1,512,13,13),(256,512,1,1),(256)        (1,256,13,13)          40011/45056/45056        214          Conv:Conv_99    
+D RKNN: [08:51:41.881] 46   MaxPool            INT8     NPU    (1,256,13,13)                            (1,256,14,14)          0/0/0                    42           MaxPool:241_0_1 
+D RKNN: [08:51:41.881] 47   MaxPool            INT8     NPU    (1,256,14,14)                            (1,256,13,13)          0/0/0                    49           MaxPool:241_0   
+D RKNN: [08:51:41.881] 48   MaxPool            INT8     NPU    (1,256,13,13)                            (1,256,14,14)          0/0/0                    42           MaxPool:241_1   
+D RKNN: [08:51:41.881] 49   MaxPool            INT8     NPU    (1,256,14,14)                            (1,256,13,13)          0/0/0                    49           MaxPool:241     
+D RKNN: [08:51:41.881] 50   MaxPool            INT8     NPU    (1,256,13,13)                            (1,256,13,13)          0/0/0                    42           MaxPool:240_0_1 
+D RKNN: [08:51:41.881] 51   MaxPool            INT8     NPU    (1,256,13,13)                            (1,256,13,13)          0/0/0                    42           MaxPool:240_0   
+D RKNN: [08:51:41.881] 52   MaxPool            INT8     NPU    (1,256,13,13)                            (1,256,13,13)          0/0/0                    42           MaxPool:240_1   
+D RKNN: [08:51:41.881] 53   MaxPool            INT8     NPU    (1,256,13,13)                            (1,256,13,13)          0/0/0                    42           MaxPool:240     
+D RKNN: [08:51:41.881] 54   MaxPool            INT8     NPU    (1,256,13,13)                            (1,256,13,13)          0/0/0                    42           MaxPool:MaxPool_102
+D RKNN: [08:51:41.881] 55   Concat             INT8     NPU    (1,256,13,13),(1,256,13,13),...          (1,1024,13,13)         0/0/0                    169          Concat:Concat_105
+D RKNN: [08:51:41.881] 56   ConvExSwish        INT8     NPU    (1,1024,13,13),(512,1024,1,1),(512)      (1,512,13,13)          119914/180224/180224     685          Conv:Conv_106   
+D RKNN: [08:51:41.881] 57   ConvExSwish        INT8     NPU    (1,512,13,13),(256,512,1,1),(256)        (1,256,13,13)          40011/45056/45056        214          Conv:Conv_109   
+D RKNN: [08:51:41.881] 58   ConvExSwish        INT8     NPU    (1,512,13,13),(256,512,1,1),(256)        (1,256,13,13)          40011/45056/45056        214          Conv:Conv_118   
+D RKNN: [08:51:41.881] 59   ConvExSwish        INT8     NPU    (1,256,13,13),(256,256,1,1),(256)        (1,256,13,13)          23453/22528/23453        108          Conv:Conv_112   
+D RKNN: [08:51:41.881] 60   ConvExSwish        INT8     NPU    (1,256,13,13),(256,256,3,3),(256)        (1,256,13,13)          103240/202752/202752     620          Conv:Conv_115   
+D RKNN: [08:51:41.881] 61   Concat             INT8     NPU    (1,256,13,13),(1,256,13,13)              (1,512,13,13)          0/0/0                    84           Concat:Concat_121
+D RKNN: [08:51:41.881] 62   ConvExSwish        INT8     NPU    (1,512,13,13),(512,512,1,1),(512)        (1,512,13,13)          66853/90112/90112        344          Conv:Conv_122   
+D RKNN: [08:51:41.881] 63   ConvExSwish        INT8     NPU    (1,512,13,13),(256,512,1,1),(256)        (1,256,13,13)          40011/45056/45056        214          Conv:Conv_125   
+D RKNN: [08:51:41.881] 64   Resize             INT8     NPU    (1,256,13,13),(0),(4)                    (1,256,26,26)          0/0/0                    42           Resize:Resize_128
+D RKNN: [08:51:41.881] 65   Concat             INT8     NPU    (1,256,26,26),(1,256,26,26)              (1,512,26,26)          0/0/0                    338          Concat:Concat_129
+D RKNN: [08:51:41.881] 66   ConvExSwish        INT8     NPU    (1,512,26,26),(128,512,1,1),(128)        (1,128,26,26)          75969/88064/88064        403          Conv:Conv_130   
+D RKNN: [08:51:41.881] 67   ConvExSwish        INT8     NPU    (1,512,26,26),(128,512,1,1),(128)        (1,128,26,26)          75969/88064/88064        403          Conv:Conv_139   
+D RKNN: [08:51:41.881] 68   ConvExSwish        INT8     NPU    (1,128,26,26),(128,128,1,1),(128)        (1,128,26,26)          28986/22016/28986        101          Conv:Conv_133   
+D RKNN: [08:51:41.881] 69   ConvExSwish        INT8     NPU    (1,128,26,26),(128,128,3,3),(128)        (1,128,26,26)          48932/198144/198144      229          Conv:Conv_136   
+D RKNN: [08:51:41.881] 70   Concat             INT8     NPU    (1,128,26,26),(1,128,26,26)              (1,256,26,26)          0/0/0                    169          Concat:Concat_142
+D RKNN: [08:51:41.881] 71   ConvExSwish        INT8     NPU    (1,256,26,26),(256,256,1,1),(256)        (1,256,26,26)          62957/88064/88064        235          Conv:Conv_143   
+D RKNN: [08:51:41.881] 72   ConvExSwish        INT8     NPU    (1,256,26,26),(128,256,1,1),(128)        (1,128,26,26)          44647/44032/44647        202          Conv:Conv_146   
+D RKNN: [08:51:41.881] 73   Resize             INT8     NPU    (1,128,26,26),(0),(4)                    (1,128,52,52)          0/0/0                    84           Resize:Resize_149
+D RKNN: [08:51:41.881] 74   Concat             INT8     NPU    (1,128,52,52),(1,128,52,52)              (1,256,52,52)          0/0/0                    676          Concat:Concat_150
+D RKNN: [08:51:41.881] 75   ConvExSwish        INT8     NPU    (1,256,52,52),(64,256,1,1),(64)          (1,64,52,52)           134251/86528/134251      692          Conv:Conv_151   
+D RKNN: [08:51:41.881] 76   ConvExSwish        INT8     NPU    (1,256,52,52),(64,256,1,1),(64)          (1,64,52,52)           134251/86528/134251      692          Conv:Conv_160   
+D RKNN: [08:51:41.881] 77   ConvExSwish        INT8     NPU    (1,64,52,52),(64,64,1,1),(64)            (1,64,52,52)           53374/43264/53374        173          Conv:Conv_154   
+D RKNN: [08:51:41.881] 78   ConvExSwish        INT8     NPU    (1,64,52,52),(64,64,3,3),(64)            (1,64,52,52)           58360/194688/194688      205          Conv:Conv_157   
+D RKNN: [08:51:41.881] 79   Concat             INT8     NPU    (1,64,52,52),(1,64,52,52)                (1,128,52,52)          0/0/0                    338          Concat:Concat_163
+D RKNN: [08:51:41.881] 80   ConvExSwish        INT8     NPU    (1,128,52,52),(128,128,1,1),(128)        (1,128,52,52)          107993/86528/107993      355          Conv:Conv_164   
+D RKNN: [08:51:41.881] 81   Conv               INT8     NPU    (1,128,52,52),(21,128,1,1),(21)          (1,21,52,52)           66288/21632/66288        340          Conv:Conv_207   
+D RKNN: [08:51:41.881] 82   ConvExSwish        INT8     NPU    (1,128,52,52),(128,128,3,3),(128)        (1,128,26,26)          88436/198144/198144      483          Conv:Conv_167   
+D RKNN: [08:51:41.881] 83   Concat             INT8     NPU    (1,128,26,26),(1,128,26,26)              (1,256,26,26)          0/0/0                    169          Concat:Concat_170
+D RKNN: [08:51:41.881] 84   ConvExSwish        INT8     NPU    (1,256,26,26),(128,256,1,1),(128)        (1,128,26,26)          44647/44032/44647        202          Conv:Conv_171   
+D RKNN: [08:51:41.881] 85   ConvExSwish        INT8     NPU    (1,256,26,26),(128,256,1,1),(128)        (1,128,26,26)          44647/44032/44647        202          Conv:Conv_180   
+D RKNN: [08:51:41.881] 86   ConvExSwish        INT8     NPU    (1,128,26,26),(128,128,1,1),(128)        (1,128,26,26)          28986/22016/28986        101          Conv:Conv_174   
+D RKNN: [08:51:41.881] 87   ConvExSwish        INT8     NPU    (1,128,26,26),(128,128,3,3),(128)        (1,128,26,26)          48932/198144/198144      229          Conv:Conv_177   
+D RKNN: [08:51:41.881] 88   Concat             INT8     NPU    (1,128,26,26),(1,128,26,26)              (1,256,26,26)          0/0/0                    169          Concat:Concat_183
+D RKNN: [08:51:41.881] 89   ConvExSwish        INT8     NPU    (1,256,26,26),(256,256,1,1),(256)        (1,256,26,26)          62957/88064/88064        235          Conv:Conv_184   
+D RKNN: [08:51:41.881] 90   Conv               INT8     NPU    (1,256,26,26),(21,256,1,1),(21)          (1,21,26,26)           30485/11008/30485        174          Conv:Conv_210   
+D RKNN: [08:51:41.881] 91   ConvExSwish        INT8     NPU    (1,256,26,26),(256,256,3,3),(256)        (1,256,13,13)          122992/202752/202752     747          Conv:Conv_187   
+D RKNN: [08:51:41.881] 92   Concat             INT8     NPU    (1,256,13,13),(1,256,13,13)              (1,512,13,13)          0/0/0                    84           Concat:Concat_190
+D RKNN: [08:51:41.881] 93   ConvExSwish        INT8     NPU    (1,512,13,13),(256,512,1,1),(256)        (1,256,13,13)          40011/45056/45056        214          Conv:Conv_191   
+D RKNN: [08:51:41.881] 94   ConvExSwish        INT8     NPU    (1,512,13,13),(256,512,1,1),(256)        (1,256,13,13)          40011/45056/45056        214          Conv:Conv_200   
+D RKNN: [08:51:41.881] 95   ConvExSwish        INT8     NPU    (1,256,13,13),(256,256,1,1),(256)        (1,256,13,13)          23453/22528/23453        108          Conv:Conv_194   
+D RKNN: [08:51:41.881] 96   ConvExSwish        INT8     NPU    (1,256,13,13),(256,256,3,3),(256)        (1,256,13,13)          103240/202752/202752     620          Conv:Conv_197   
+D RKNN: [08:51:41.881] 97   Concat             INT8     NPU    (1,256,13,13),(1,256,13,13)              (1,512,13,13)          0/0/0                    84           Concat:Concat_203
+D RKNN: [08:51:41.881] 98   ConvExSwish        INT8     NPU    (1,512,13,13),(512,512,1,1),(512)        (1,512,13,13)          66853/90112/90112        344          Conv:Conv_204   
+D RKNN: [08:51:41.881] 99   Conv               INT8     NPU    (1,512,13,13),(21,512,1,1),(21)          (1,21,13,13)           15667/5632/15667         95           Conv:Conv_213   
+D RKNN: [08:51:41.881] 100  OutputOperator     INT8     NPU    (1,21,52,52)                             \                      0/0/0                    84           OutputOperator:350
+D RKNN: [08:51:41.881] 101  OutputOperator     INT8     NPU    (1,21,26,26)                             \                      0/0/0                    21           OutputOperator:364
+D RKNN: [08:51:41.881] 102  OutputOperator     INT8     NPU    (1,21,13,13)                             \                      0/0/0                    5            OutputOperator:378
+D RKNN: [08:51:41.881] --------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+D RKNN: [08:51:41.886] <<<<<<<< end: rknn::RKNNModelRegCmdbuildPass
+D RKNN: [08:51:41.890] >>>>>> start: rknn::RKNNModelExportPass
+D RKNN: [08:51:41.895] Export RKNN model to /tmp/tmpe4aife8a/check.rknn
+D RKNN: [08:51:42.095] <<<<<<<< end: rknn::RKNNModelExportPass
+D RKNN: [08:51:42.096] >>>>>> start: rknn::RKNNMemStatisticsPass
+D RKNN: [08:51:42.111] ----------------------------------------------------------------------------------------------------------------------------
+D RKNN: [08:51:42.111]                                          Feature Tensor Information Table                              
+D RKNN: [08:51:42.111] ------------------------------------------------------------------------------------------+---------------------------------
+D RKNN: [08:51:42.111] ID  User           Tensor           DataType  DataFormat   OrigShape      NativeShape     |     [Start       End)       Size
+D RKNN: [08:51:42.111] ------------------------------------------------------------------------------------------+---------------------------------
+D RKNN: [08:51:42.111] 1   Conv           images           INT8      NC1HWC2      (1,3,416,416)  (1,1,416,416,3) | 0x00000000 0x0007ec00 0x0007ec00
+D RKNN: [08:51:42.111] 2   Conv           New_input_images INT8      NC1HWC2      (1,3,416,416)  (1,2,416,416,8) | 0x0007ec00 0x00322c00 0x002a4000
+D RKNN: [08:51:42.111] 3   Conv           New_input_images INT8      NC1HWC2      (1,3,416,416)  (1,2,416,416,8) | 0x0007ec00 0x00322c00 0x002a4000
+D RKNN: [08:51:42.111] 4   Conv           New_input_images INT8      NC1HWC2      (1,3,416,416)  (1,2,416,416,8) | 0x0007ec00 0x00322c00 0x002a4000
+D RKNN: [08:51:42.111] 5   Conv           New_input_images INT8      NC1HWC2      (1,3,416,416)  (1,2,416,416,8) | 0x0007ec00 0x00322c00 0x002a4000
+D RKNN: [08:51:42.111] 6   Concat         136              INT8      NC1HWC2      (1,3,208,208)  (1,4,208,208,8) | 0x00322c00 0x00474c00 0x00152000
+D RKNN: [08:51:42.111] 6   Concat         137              INT8      NC1HWC2      (1,3,208,208)  (1,4,208,208,8) | 0x00474c00 0x005c6c00 0x00152000
+D RKNN: [08:51:42.111] 6   Concat         138              INT8      NC1HWC2      (1,3,208,208)  (1,4,208,208,8) | 0x005c6c00 0x00718c00 0x00152000
+D RKNN: [08:51:42.111] 6   Concat         139              INT8      NC1HWC2      (1,3,208,208)  (1,4,208,208,8) | 0x00718c00*0x0086ac00 0x00152000
+D RKNN: [08:51:42.111] 6   Concat         136_exSecondary  INT8      NC1HWC2      (1,12,208,208) (1,4,208,208,8) | 0x00000000 0x00152000 0x00152000
+D RKNN: [08:51:42.111] 7   ConvExSwish    140              INT8      NC1HWC2      (1,12,208,208) (1,2,208,208,8) | 0x00152000 0x001fb000 0x000a9000
+D RKNN: [08:51:42.111] 8   ConvExSwish    144              INT8      NC1HWC2      (1,32,208,208) (1,4,208,208,8) | 0x00000000 0x00152000 0x00152000
+D RKNN: [08:51:42.111] 9   ConvExSwish    147              INT8      NC1HWC2      (1,64,104,104) (1,8,104,104,8) | 0x00152000 0x001fb000 0x000a9000
+D RKNN: [08:51:42.111] 10  ConvExSwish    147              INT8      NC1HWC2      (1,64,104,104) (1,8,104,104,8) | 0x00152000 0x001fb000 0x000a9000
+D RKNN: [08:51:42.111] 11  ConvExSwish    150              INT8      NC1HWC2      (1,32,104,104) (1,4,104,104,8) | 0x00000000 0x00054800 0x00054800
+D RKNN: [08:51:42.111] 12  ConvExSwish    153              INT8      NC1HWC2      (1,32,104,104) (1,4,104,104,8) | 0x000a9000 0x000fd800 0x00054800
+D RKNN: [08:51:42.111] 13  Add            150              INT8      NC1HWC2      (1,32,104,104) (1,4,104,104,8) | 0x00000000 0x00054800 0x00054800
+D RKNN: [08:51:42.111] 13  Add            156              INT8      NC1HWC2      (1,32,104,104) (1,4,104,104,8) | 0x000fd800 0x00152000 0x00054800
+D RKNN: [08:51:42.111] 14  Concat         157              INT8      NC1HWC2      (1,32,104,104) (1,4,104,104,8) | 0x000a9000 0x000fd800 0x00054800
+D RKNN: [08:51:42.111] 14  Concat         160              INT8      NC1HWC2      (1,32,104,104) (1,4,104,104,8) | 0x00054800 0x000a9000 0x00054800
+D RKNN: [08:51:42.111] 15  ConvExSwish    161              INT8      NC1HWC2      (1,64,104,104) (1,8,104,104,8) | 0x000fd800 0x001a6800 0x000a9000
+D RKNN: [08:51:42.111] 16  ConvExSwish    164              INT8      NC1HWC2      (1,64,104,104) (1,8,104,104,8) | 0x00000000 0x000a9000 0x000a9000
+D RKNN: [08:51:42.111] 17  ConvExSwish    167              INT8      NC1HWC2      (1,128,52,52)  (1,16,52,52,8)  | 0x000a9000 0x000fd800 0x00054800
+D RKNN: [08:51:42.111] 18  ConvExSwish    167              INT8      NC1HWC2      (1,128,52,52)  (1,16,52,52,8)  | 0x000a9000 0x000fd800 0x00054800
+D RKNN: [08:51:42.111] 19  ConvExSwish    170              INT8      NC1HWC2      (1,64,52,52)   (1,8,52,52,8)   | 0x00000000 0x0002a400 0x0002a400
+D RKNN: [08:51:42.111] 20  ConvExSwish    173              INT8      NC1HWC2      (1,64,52,52)   (1,8,52,52,8)   | 0x00054800 0x0007ec00 0x0002a400
+D RKNN: [08:51:42.111] 21  Add            170              INT8      NC1HWC2      (1,64,52,52)   (1,8,52,52,8)   | 0x00000000 0x0002a400 0x0002a400
+D RKNN: [08:51:42.111] 21  Add            176              INT8      NC1HWC2      (1,64,52,52)   (1,8,52,52,8)   | 0x0007ec00 0x000a9000 0x0002a400
+D RKNN: [08:51:42.111] 22  ConvExSwish    177              INT8      NC1HWC2      (1,64,52,52)   (1,8,52,52,8)   | 0x00054800 0x0007ec00 0x0002a400
+D RKNN: [08:51:42.111] 23  ConvExSwish    180              INT8      NC1HWC2      (1,64,52,52)   (1,8,52,52,8)   | 0x00000000 0x0002a400 0x0002a400
+D RKNN: [08:51:42.111] 24  Add            177              INT8      NC1HWC2      (1,64,52,52)   (1,8,52,52,8)   | 0x00054800 0x0007ec00 0x0002a400
+D RKNN: [08:51:42.111] 24  Add            183              INT8      NC1HWC2      (1,64,52,52)   (1,8,52,52,8)   | 0x0007ec00 0x000a9000 0x0002a400
+D RKNN: [08:51:42.111] 25  ConvExSwish    184              INT8      NC1HWC2      (1,64,52,52)   (1,8,52,52,8)   | 0x00000000 0x0002a400 0x0002a400
+D RKNN: [08:51:42.111] 26  ConvExSwish    187              INT8      NC1HWC2      (1,64,52,52)   (1,8,52,52,8)   | 0x00054800 0x0007ec00 0x0002a400
+D RKNN: [08:51:42.111] 27  Add            184              INT8      NC1HWC2      (1,64,52,52)   (1,8,52,52,8)   | 0x00000000 0x0002a400 0x0002a400
+D RKNN: [08:51:42.111] 27  Add            190              INT8      NC1HWC2      (1,64,52,52)   (1,8,52,52,8)   | 0x0007ec00 0x000a9000 0x0002a400
+D RKNN: [08:51:42.111] 28  Concat         191              INT8      NC1HWC2      (1,64,52,52)   (1,8,52,52,8)   | 0x00054800 0x0007ec00 0x0002a400
+D RKNN: [08:51:42.111] 28  Concat         194              INT8      NC1HWC2      (1,64,52,52)   (1,8,52,52,8)   | 0x0002a400 0x00054800 0x0002a400
+D RKNN: [08:51:42.111] 29  ConvExSwish    195              INT8      NC1HWC2      (1,128,52,52)  (1,16,52,52,8)  | 0x0007ec00 0x000d3400 0x00054800
+D RKNN: [08:51:42.111] 30  ConvExSwish    198              INT8      NC1HWC2      (1,128,52,52)  (1,16,52,52,8)  | 0x00000000 0x00054800 0x00054800
+D RKNN: [08:51:42.111] 31  ConvExSwish    201              INT8      NC1HWC2      (1,256,26,26)  (1,32,26,26,8)  | 0x00054800 0x0007ec00 0x0002a400
+D RKNN: [08:51:42.111] 32  ConvExSwish    201              INT8      NC1HWC2      (1,256,26,26)  (1,32,26,26,8)  | 0x00054800 0x0007ec00 0x0002a400
+D RKNN: [08:51:42.111] 33  ConvExSwish    204              INT8      NC1HWC2      (1,128,26,26)  (1,16,26,26,8)  | 0x0007ec00 0x00093e00 0x00015200
+D RKNN: [08:51:42.111] 34  ConvExSwish    207              INT8      NC1HWC2      (1,128,26,26)  (1,16,26,26,8)  | 0x00054800 0x00069a00 0x00015200
+D RKNN: [08:51:42.111] 35  Add            204              INT8      NC1HWC2      (1,128,26,26)  (1,16,26,26,8)  | 0x0007ec00 0x00093e00 0x00015200
+D RKNN: [08:51:42.111] 35  Add            210              INT8      NC1HWC2      (1,128,26,26)  (1,16,26,26,8)  | 0x00069a00 0x0007ec00 0x00015200
+D RKNN: [08:51:42.111] 36  ConvExSwish    211              INT8      NC1HWC2      (1,128,26,26)  (1,16,26,26,8)  | 0x00054800 0x00069a00 0x00015200
+D RKNN: [08:51:42.111] 37  ConvExSwish    214              INT8      NC1HWC2      (1,128,26,26)  (1,16,26,26,8)  | 0x00069a00 0x0007ec00 0x00015200
+D RKNN: [08:51:42.111] 38  Add            211              INT8      NC1HWC2      (1,128,26,26)  (1,16,26,26,8)  | 0x00054800 0x00069a00 0x00015200
+D RKNN: [08:51:42.111] 38  Add            217              INT8      NC1HWC2      (1,128,26,26)  (1,16,26,26,8)  | 0x0007ec00 0x00093e00 0x00015200
+D RKNN: [08:51:42.111] 39  ConvExSwish    218              INT8      NC1HWC2      (1,128,26,26)  (1,16,26,26,8)  | 0x00069a00 0x0007ec00 0x00015200
+D RKNN: [08:51:42.111] 40  ConvExSwish    221              INT8      NC1HWC2      (1,128,26,26)  (1,16,26,26,8)  | 0x00054800 0x00069a00 0x00015200
+D RKNN: [08:51:42.111] 41  Add            218              INT8      NC1HWC2      (1,128,26,26)  (1,16,26,26,8)  | 0x00069a00 0x0007ec00 0x00015200
+D RKNN: [08:51:42.111] 41  Add            224              INT8      NC1HWC2      (1,128,26,26)  (1,16,26,26,8)  | 0x0007ec00 0x00093e00 0x00015200
+D RKNN: [08:51:42.111] 42  Concat         225              INT8      NC1HWC2      (1,128,26,26)  (1,16,26,26,8)  | 0x00054800 0x00069a00 0x00015200
+D RKNN: [08:51:42.111] 42  Concat         228              INT8      NC1HWC2      (1,128,26,26)  (1,16,26,26,8)  | 0x00093e00 0x000a9000 0x00015200
+D RKNN: [08:51:42.111] 43  ConvExSwish    229              INT8      NC1HWC2      (1,256,26,26)  (1,32,26,26,8)  | 0x00069a00 0x00093e00 0x0002a400
+D RKNN: [08:51:42.111] 44  ConvExSwish    232              INT8      NC1HWC2      (1,256,26,26)  (1,32,26,26,8)  | 0x00093e00 0x000be200 0x0002a400
+D RKNN: [08:51:42.111] 45  ConvExSwish    235              INT8      NC1HWC2      (1,512,13,13)  (1,65,13,13,8)  | 0x00054800 0x0006a000 0x00015800
+D RKNN: [08:51:42.111] 46  MaxPool        238              INT8      NC1HWC2      (1,256,13,13)  (1,32,13,13,8)  | 0x0006a000 0x00074c00 0x0000ac00
+D RKNN: [08:51:42.111] 47  MaxPool        241_0_1          INT8      NC1HWC2      (1,256,14,14)  (1,32,14,14,8)  | 0x00054800 0x00060c00 0x0000c400
+D RKNN: [08:51:42.111] 48  MaxPool        241_0            INT8      NC1HWC2      (1,256,13,13)  (1,32,13,13,8)  | 0x00074c00 0x0007f800 0x0000ac00
+D RKNN: [08:51:42.111] 49  MaxPool        241_1            INT8      NC1HWC2      (1,256,14,14)  (1,32,14,14,8)  | 0x0007f800 0x0008bc00 0x0000c400
+D RKNN: [08:51:42.111] 50  MaxPool        238              INT8      NC1HWC2      (1,256,13,13)  (1,32,13,13,8)  | 0x0006a000 0x00074c00 0x0000ac00
+D RKNN: [08:51:42.111] 51  MaxPool        240_0_1          INT8      NC1HWC2      (1,256,13,13)  (1,32,13,13,8)  | 0x0007f800 0x0008a400 0x0000ac00
+D RKNN: [08:51:42.111] 52  MaxPool        240_0            INT8      NC1HWC2      (1,256,13,13)  (1,32,13,13,8)  | 0x00054800 0x0005f400 0x0000ac00
+D RKNN: [08:51:42.111] 53  MaxPool        240_1            INT8      NC1HWC2      (1,256,13,13)  (1,32,13,13,8)  | 0x0005f400 0x0006a000 0x0000ac00
+D RKNN: [08:51:42.111] 54  MaxPool        238              INT8      NC1HWC2      (1,256,13,13)  (1,32,13,13,8)  | 0x0006a000 0x00074c00 0x0000ac00
+D RKNN: [08:51:42.111] 55  Concat         238              INT8      NC1HWC2      (1,256,13,13)  (1,32,13,13,8)  | 0x0006a000 0x00074c00 0x0000ac00
+D RKNN: [08:51:42.111] 55  Concat         239              INT8      NC1HWC2      (1,256,13,13)  (1,32,13,13,8)  | 0x0005f400 0x0006a000 0x0000ac00
+D RKNN: [08:51:42.111] 55  Concat         240              INT8      NC1HWC2      (1,256,13,13)  (1,32,13,13,8)  | 0x00054800 0x0005f400 0x0000ac00
+D RKNN: [08:51:42.111] 55  Concat         241              INT8      NC1HWC2      (1,256,13,13)  (1,32,13,13,8)  | 0x00074c00 0x0007f800 0x0000ac00
+D RKNN: [08:51:42.111] 56  ConvExSwish    242              INT8      NC1HWC2      (1,1024,13,13) (1,130,13,13,8) | 0x000be200 0x000e9200 0x0002b000
+D RKNN: [08:51:42.111] 57  ConvExSwish    245              INT8      NC1HWC2      (1,512,13,13)  (1,67,13,13,8)  | 0x00054800 0x0006aac0 0x000162c0
+D RKNN: [08:51:42.111] 58  ConvExSwish    245              INT8      NC1HWC2      (1,512,13,13)  (1,67,13,13,8)  | 0x00054800 0x0006aac0 0x000162c0
+D RKNN: [08:51:42.111] 59  ConvExSwish    248              INT8      NC1HWC2      (1,256,13,13)  (1,32,13,13,8)  | 0x0006aac0 0x000756c0 0x0000ac00
+D RKNN: [08:51:42.111] 60  ConvExSwish    251              INT8      NC1HWC2      (1,256,13,13)  (1,32,13,13,8)  | 0x000802c0 0x0008aec0 0x0000ac00
+D RKNN: [08:51:42.111] 61  Concat         254              INT8      NC1HWC2      (1,256,13,13)  (1,32,13,13,8)  | 0x00054800 0x0005f400 0x0000ac00
+D RKNN: [08:51:42.111] 61  Concat         257              INT8      NC1HWC2      (1,256,13,13)  (1,32,13,13,8)  | 0x000756c0 0x000802c0 0x0000ac00
+D RKNN: [08:51:42.111] 62  ConvExSwish    258              INT8      NC1HWC2      (1,512,13,13)  (1,65,13,13,8)  | 0x0005f400 0x00074c00 0x00015800
+D RKNN: [08:51:42.111] 63  ConvExSwish    261              INT8      NC1HWC2      (1,512,13,13)  (1,67,13,13,8)  | 0x00074c00 0x0008aec0 0x000162c0
+D RKNN: [08:51:42.111] 64  Resize         264              INT8      NC1HWC2      (1,256,13,13)  (1,32,13,13,8)  | 0x00054800 0x0005f400 0x0000ac00
+D RKNN: [08:51:42.111] 65  Concat         268              INT8      NC1HWC2      (1,256,26,26)  (1,32,26,26,8)  | 0x0005f440 0x00089840 0x0002a400
+D RKNN: [08:51:42.111] 65  Concat         232              INT8      NC1HWC2      (1,256,26,26)  (1,32,26,26,8)  | 0x00093e00 0x000be200 0x0002a400
+D RKNN: [08:51:42.111] 66  ConvExSwish    269              INT8      NC1HWC2      (1,512,26,26)  (1,64,26,26,8)  | 0x000be200 0x00112a00 0x00054800
+D RKNN: [08:51:42.111] 67  ConvExSwish    269              INT8      NC1HWC2      (1,512,26,26)  (1,64,26,26,8)  | 0x000be200 0x00112a00 0x00054800
+D RKNN: [08:51:42.111] 68  ConvExSwish    272              INT8      NC1HWC2      (1,128,26,26)  (1,18,26,26,8)  | 0x0005f400 0x00077040 0x00017c40
+D RKNN: [08:51:42.111] 69  ConvExSwish    275              INT8      NC1HWC2      (1,128,26,26)  (1,16,26,26,8)  | 0x0008ec80 0x000a3e80 0x00015200
+D RKNN: [08:51:42.111] 70  Concat         278              INT8      NC1HWC2      (1,128,26,26)  (1,16,26,26,8)  | 0x0005f400 0x00074600 0x00015200
+D RKNN: [08:51:42.111] 70  Concat         281              INT8      NC1HWC2      (1,128,26,26)  (1,18,26,26,8)  | 0x00077040 0x0008ec80 0x00017c40
+D RKNN: [08:51:42.111] 71  ConvExSwish    282              INT8      NC1HWC2      (1,256,26,26)  (1,32,26,26,8)  | 0x0008ec80 0x000b9080 0x0002a400
+D RKNN: [08:51:42.111] 72  ConvExSwish    285              INT8      NC1HWC2      (1,256,26,26)  (1,32,26,26,8)  | 0x0005f400 0x00089800 0x0002a400
+D RKNN: [08:51:42.111] 73  Resize         288              INT8      NC1HWC2      (1,128,26,26)  (1,16,26,26,8)  | 0x00089800 0x0009ea00 0x00015200
+D RKNN: [08:51:42.111] 74  Concat         292              INT8      NC1HWC2      (1,128,52,52)  (1,16,52,52,8)  | 0x0009ea00 0x000f3200 0x00054800
+D RKNN: [08:51:42.111] 74  Concat         198              INT8      NC1HWC2      (1,128,52,52)  (1,16,52,52,8)  | 0x00000000 0x00054800 0x00054800
+D RKNN: [08:51:42.111] 75  ConvExSwish    293              INT8      NC1HWC2      (1,256,52,52)  (1,32,52,52,8)  | 0x000f3200 0x0019c200 0x000a9000
+D RKNN: [08:51:42.111] 76  ConvExSwish    293              INT8      NC1HWC2      (1,256,52,52)  (1,32,52,52,8)  | 0x000f3200 0x0019c200 0x000a9000
+D RKNN: [08:51:42.111] 77  ConvExSwish    296              INT8      NC1HWC2      (1,64,52,52)   (1,8,52,52,8)   | 0x0005f400 0x00089800 0x0002a400
+D RKNN: [08:51:42.111] 78  ConvExSwish    299              INT8      NC1HWC2      (1,64,52,52)   (1,8,52,52,8)   | 0x0002a400 0x00054800 0x0002a400
+D RKNN: [08:51:42.111] 79  Concat         302              INT8      NC1HWC2      (1,64,52,52)   (1,8,52,52,8)   | 0x0005f400 0x00089800 0x0002a400
+D RKNN: [08:51:42.111] 79  Concat         305              INT8      NC1HWC2      (1,64,52,52)   (1,8,52,52,8)   | 0x00000000 0x0002a400 0x0002a400
+D RKNN: [08:51:42.111] 80  ConvExSwish    306              INT8      NC1HWC2      (1,128,52,52)  (1,16,52,52,8)  | 0x0009ea00 0x000f3200 0x00054800
+D RKNN: [08:51:42.111] 81  Conv           309              INT8      NC1HWC2      (1,128,52,52)  (1,16,52,52,8)  | 0x00000000 0x00054800 0x00054800
+D RKNN: [08:51:42.111] 82  ConvExSwish    309              INT8      NC1HWC2      (1,128,52,52)  (1,16,52,52,8)  | 0x00000000 0x00054800 0x00054800
+D RKNN: [08:51:42.111] 83  Concat         312              INT8      NC1HWC2      (1,128,26,26)  (1,16,26,26,8)  | 0x00074600 0x00089800 0x00015200
+D RKNN: [08:51:42.111] 83  Concat         288              INT8      NC1HWC2      (1,128,26,26)  (1,16,26,26,8)  | 0x00089800 0x0009ea00 0x00015200
+D RKNN: [08:51:42.111] 84  ConvExSwish    313              INT8      NC1HWC2      (1,256,26,26)  (1,32,26,26,8)  | 0x00000000 0x0002a400 0x0002a400
+D RKNN: [08:51:42.111] 85  ConvExSwish    313              INT8      NC1HWC2      (1,256,26,26)  (1,32,26,26,8)  | 0x00000000 0x0002a400 0x0002a400
+D RKNN: [08:51:42.111] 86  ConvExSwish    316              INT8      NC1HWC2      (1,128,26,26)  (1,16,26,26,8)  | 0x0002a400 0x0003f600 0x00015200
+D RKNN: [08:51:42.111] 87  ConvExSwish    319              INT8      NC1HWC2      (1,128,26,26)  (1,16,26,26,8)  | 0x00000000 0x00015200 0x00015200
+D RKNN: [08:51:42.111] 88  Concat         322              INT8      NC1HWC2      (1,128,26,26)  (1,16,26,26,8)  | 0x00015200 0x0002a400 0x00015200
+D RKNN: [08:51:42.111] 88  Concat         325              INT8      NC1HWC2      (1,128,26,26)  (1,16,26,26,8)  | 0x0003f600 0x00054800 0x00015200
+D RKNN: [08:51:42.111] 89  ConvExSwish    326              INT8      NC1HWC2      (1,256,26,26)  (1,32,26,26,8)  | 0x00074600 0x0009ea00 0x0002a400
+D RKNN: [08:51:42.111] 90  Conv           329              INT8      NC1HWC2      (1,256,26,26)  (1,32,26,26,8)  | 0x00000000 0x0002a400 0x0002a400
+D RKNN: [08:51:42.111] 91  ConvExSwish    329              INT8      NC1HWC2      (1,256,26,26)  (1,32,26,26,8)  | 0x00000000 0x0002a400 0x0002a400
+D RKNN: [08:51:42.111] 92  Concat         332              INT8      NC1HWC2      (1,256,13,13)  (1,32,13,13,8)  | 0x0002f880 0x0003a480 0x0000ac00
+D RKNN: [08:51:42.111] 92  Concat         264              INT8      NC1HWC2      (1,256,13,13)  (1,32,13,13,8)  | 0x00054800 0x0005f400 0x0000ac00
+D RKNN: [08:51:42.111] 93  ConvExSwish    333              INT8      NC1HWC2      (1,512,13,13)  (1,65,13,13,8)  | 0x0003a480 0x0004fc80 0x00015800
+D RKNN: [08:51:42.111] 94  ConvExSwish    333              INT8      NC1HWC2      (1,512,13,13)  (1,65,13,13,8)  | 0x0003a480 0x0004fc80 0x00015800
+D RKNN: [08:51:42.111] 95  ConvExSwish    336              INT8      NC1HWC2      (1,256,13,13)  (1,32,13,13,8)  | 0x0002f880 0x0003a480 0x0000ac00
+D RKNN: [08:51:42.111] 96  ConvExSwish    339              INT8      NC1HWC2      (1,256,13,13)  (1,32,13,13,8)  | 0x0003a480 0x00045080 0x0000ac00
+D RKNN: [08:51:42.111] 97  Concat         342              INT8      NC1HWC2      (1,256,13,13)  (1,32,13,13,8)  | 0x0002f880 0x0003a480 0x0000ac00
+D RKNN: [08:51:42.111] 97  Concat         345              INT8      NC1HWC2      (1,256,13,13)  (1,32,13,13,8)  | 0x0004fc80 0x0005a880 0x0000ac00
+D RKNN: [08:51:42.111] 98  ConvExSwish    346              INT8      NC1HWC2      (1,512,13,13)  (1,65,13,13,8)  | 0x0003a480 0x0004fc80 0x00015800
+D RKNN: [08:51:42.111] 99  Conv           349              INT8      NC1HWC2      (1,512,13,13)  (1,67,13,13,8)  | 0x00000000 0x000162c0 0x000162c0
+D RKNN: [08:51:42.111] 100 OutputOperator 350              INT8      NC1HWC2      (1,21,52,52)   (1,4,52,52,8)   | 0x0005f400 0x00074600 0x00015200
+D RKNN: [08:51:42.111] 100 OutputOperator 350_exSecondary  INT8      NC1HWC2      (1,52,52,24)   (1,7,52,24,8)   | 0x00017840 0x00028940 0x00011100
+D RKNN: [08:51:42.111] 101 OutputOperator 364              INT8      NC1HWC2      (1,21,26,26)   (1,4,26,26,8)   | 0x0002a400 0x0002f880 0x00005480
+D RKNN: [08:51:42.111] 101 OutputOperator 364_exSecondary  INT8      NC1HWC2      (1,26,26,24)   (1,4,26,24,8)   | 0x00000000 0x00004e00 0x00004e00
+D RKNN: [08:51:42.111] 102 OutputOperator 378              INT8      NC1HWC2      (1,21,13,13)   (1,4,13,13,8)   | 0x000162c0 0x00017840 0x00001580
+D RKNN: [08:51:42.111] 102 OutputOperator 378_exSecondary  INT8      NC1HWC2      (1,13,13,24)   (1,2,13,24,8)   | 0x00028940 0x00029cc0 0x00001380
+D RKNN: [08:51:42.111] ------------------------------------------------------------------------------------------+---------------------------------
+D RKNN: [08:51:42.111] --------------------------------------------------------------------------------------------------------
+D RKNN: [08:51:42.111]                                   Const Tensor Information Table                      
+D RKNN: [08:51:42.111] ----------------------------------------------------------------------+---------------------------------
+D RKNN: [08:51:42.111] ID  User        Tensor                       DataType  OrigShape      |     [Start       End)       Size
+D RKNN: [08:51:42.111] ----------------------------------------------------------------------+---------------------------------
+D RKNN: [08:51:42.111] 1   Conv        Pre_weightimages             INT8      (3,3,1,1)      | 0x006cc180 0x006cc198 0x00000018
+D RKNN: [08:51:42.111] 1   Conv        Pre_weightimages_bias_0      INT32     (3)            | 0x006cc1c0*0x006cc200 0x00000040
+D RKNN: [08:51:42.111] 2   Conv        model.0.conv1.weight         INT8      (1,3,2,2)      | 0x00000000 0x00000020 0x00000020
+D RKNN: [08:51:42.111] 2   Conv        model.0.conv1.weight_bias_0  INT32     (3)            | 0x006cbd80 0x006cbe80 0x00000100
+D RKNN: [08:51:42.111] 3   Conv        model.0.conv2.weight         INT8      (1,3,2,2)      | 0x00000040 0x00000060 0x00000020
+D RKNN: [08:51:42.111] 3   Conv        model.0.conv2.weight_bias_0  INT32     (3)            | 0x006cbe80 0x006cbf80 0x00000100
+D RKNN: [08:51:42.111] 4   Conv        model.0.conv3.weight         INT8      (1,3,2,2)      | 0x00000080 0x000000a0 0x00000020
+D RKNN: [08:51:42.111] 4   Conv        model.0.conv3.weight_bias_0  INT32     (3)            | 0x006cbf80 0x006cc080 0x00000100
+D RKNN: [08:51:42.111] 5   Conv        model.0.conv4.weight         INT8      (1,3,2,2)      | 0x000000c0 0x000000e0 0x00000020
+D RKNN: [08:51:42.111] 5   Conv        model.0.conv4.weight_bias_0  INT32     (3)            | 0x006cc080 0x006cc180 0x00000100
+D RKNN: [08:51:42.111] 7   ConvExSwish 393                          INT8      (32,12,3,3)    | 0x006ca980 0x006cbb80 0x00001200
+D RKNN: [08:51:42.111] 7   ConvExSwish 394                          INT32     (32)           | 0x006cbb80 0x006cbc80 0x00000100
+D RKNN: [08:51:42.111] 8   ConvExSwish model.1.conv.weight          INT8      (64,32,3,3)    | 0x00000100 0x00004900 0x00004800
+D RKNN: [08:51:42.111] 8   ConvExSwish model.1.conv.bias            INT32     (64)           | 0x00004900 0x00004b00 0x00000200
+D RKNN: [08:51:42.111] 9   ConvExSwish model.2.cv1.conv.weight      INT8      (32,64,1,1)    | 0x00004b00 0x00005300 0x00000800
+D RKNN: [08:51:42.111] 9   ConvExSwish model.2.cv1.conv.bias        INT32     (32)           | 0x00005300 0x00005400 0x00000100
+D RKNN: [08:51:42.111] 10  ConvExSwish model.2.cv2.conv.weight      INT8      (32,64,1,1)    | 0x00005400 0x00005c00 0x00000800
+D RKNN: [08:51:42.111] 10  ConvExSwish model.2.cv2.conv.bias        INT32     (32)           | 0x00005c00 0x00005d00 0x00000100
+D RKNN: [08:51:42.111] 11  ConvExSwish model.2.m.0.cv1.conv.weight  INT8      (32,32,1,1)    | 0x00006f00 0x00007300 0x00000400
+D RKNN: [08:51:42.111] 11  ConvExSwish model.2.m.0.cv1.conv.bias    INT32     (32)           | 0x00007300 0x00007400 0x00000100
+D RKNN: [08:51:42.111] 12  ConvExSwish model.2.m.0.cv2.conv.weight  INT8      (32,32,3,3)    | 0x00007400 0x00009800 0x00002400
+D RKNN: [08:51:42.111] 12  ConvExSwish model.2.m.0.cv2.conv.bias    INT32     (32)           | 0x00009800 0x00009900 0x00000100
+D RKNN: [08:51:42.111] 15  ConvExSwish model.2.cv3.conv.weight      INT8      (64,64,1,1)    | 0x00005d00 0x00006d00 0x00001000
+D RKNN: [08:51:42.111] 15  ConvExSwish model.2.cv3.conv.bias        INT32     (64)           | 0x00006d00 0x00006f00 0x00000200
+D RKNN: [08:51:42.111] 16  ConvExSwish model.3.conv.weight          INT8      (128,64,3,3)   | 0x00009900 0x0001b900 0x00012000
+D RKNN: [08:51:42.111] 16  ConvExSwish model.3.conv.bias            INT32     (128)          | 0x0001b900 0x0001bd00 0x00000400
+D RKNN: [08:51:42.111] 17  ConvExSwish model.4.cv1.conv.weight      INT8      (64,128,1,1)   | 0x0001bd00 0x0001dd00 0x00002000
+D RKNN: [08:51:42.111] 17  ConvExSwish model.4.cv1.conv.bias        INT32     (64)           | 0x0001dd00 0x0001df00 0x00000200
+D RKNN: [08:51:42.111] 18  ConvExSwish model.4.cv2.conv.weight      INT8      (64,128,1,1)   | 0x0001df00 0x0001ff00 0x00002000
+D RKNN: [08:51:42.111] 18  ConvExSwish model.4.cv2.conv.bias        INT32     (64)           | 0x0001ff00 0x00020100 0x00000200
+D RKNN: [08:51:42.111] 19  ConvExSwish model.4.m.0.cv1.conv.weight  INT8      (64,64,1,1)    | 0x00024500 0x00025500 0x00001000
+D RKNN: [08:51:42.111] 19  ConvExSwish model.4.m.0.cv1.conv.bias    INT32     (64)           | 0x00025500 0x00025700 0x00000200
+D RKNN: [08:51:42.111] 20  ConvExSwish model.4.m.0.cv2.conv.weight  INT8      (64,64,3,3)    | 0x00025700 0x0002e700 0x00009000
+D RKNN: [08:51:42.111] 20  ConvExSwish model.4.m.0.cv2.conv.bias    INT32     (64)           | 0x0002e700 0x0002e900 0x00000200
+D RKNN: [08:51:42.111] 22  ConvExSwish model.4.m.1.cv1.conv.weight  INT8      (64,64,1,1)    | 0x0002e900 0x0002f900 0x00001000
+D RKNN: [08:51:42.111] 22  ConvExSwish model.4.m.1.cv1.conv.bias    INT32     (64)           | 0x0002f900 0x0002fb00 0x00000200
+D RKNN: [08:51:42.111] 23  ConvExSwish model.4.m.1.cv2.conv.weight  INT8      (64,64,3,3)    | 0x0002fb00 0x00038b00 0x00009000
+D RKNN: [08:51:42.111] 23  ConvExSwish model.4.m.1.cv2.conv.bias    INT32     (64)           | 0x00038b00 0x00038d00 0x00000200
+D RKNN: [08:51:42.111] 25  ConvExSwish model.4.m.2.cv1.conv.weight  INT8      (64,64,1,1)    | 0x00038d00 0x00039d00 0x00001000
+D RKNN: [08:51:42.111] 25  ConvExSwish model.4.m.2.cv1.conv.bias    INT32     (64)           | 0x00039d00 0x00039f00 0x00000200
+D RKNN: [08:51:42.111] 26  ConvExSwish model.4.m.2.cv2.conv.weight  INT8      (64,64,3,3)    | 0x00039f00 0x00042f00 0x00009000
+D RKNN: [08:51:42.111] 26  ConvExSwish model.4.m.2.cv2.conv.bias    INT32     (64)           | 0x00042f00 0x00043100 0x00000200
+D RKNN: [08:51:42.111] 29  ConvExSwish model.4.cv3.conv.weight      INT8      (128,128,1,1)  | 0x00020100 0x00024100 0x00004000
+D RKNN: [08:51:42.111] 29  ConvExSwish model.4.cv3.conv.bias        INT32     (128)          | 0x00024100 0x00024500 0x00000400
+D RKNN: [08:51:42.111] 30  ConvExSwish model.5.conv.weight          INT8      (256,128,3,3)  | 0x00043100 0x0008b100 0x00048000
+D RKNN: [08:51:42.111] 30  ConvExSwish model.5.conv.bias            INT32     (256)          | 0x0008b100 0x0008b900 0x00000800
+D RKNN: [08:51:42.111] 31  ConvExSwish model.6.cv1.conv.weight      INT8      (128,256,1,1)  | 0x0008b900 0x00093900 0x00008000
+D RKNN: [08:51:42.111] 31  ConvExSwish model.6.cv1.conv.bias        INT32     (128)          | 0x00093900 0x00093d00 0x00000400
+D RKNN: [08:51:42.111] 32  ConvExSwish model.6.cv2.conv.weight      INT8      (128,256,1,1)  | 0x00093d00 0x0009bd00 0x00008000
+D RKNN: [08:51:42.111] 32  ConvExSwish model.6.cv2.conv.bias        INT32     (128)          | 0x0009bd00 0x0009c100 0x00000400
+D RKNN: [08:51:42.111] 33  ConvExSwish model.6.m.0.cv1.conv.weight  INT8      (128,128,1,1)  | 0x000ac900 0x000b0900 0x00004000
+D RKNN: [08:51:42.111] 33  ConvExSwish model.6.m.0.cv1.conv.bias    INT32     (128)          | 0x000b0900 0x000b0d00 0x00000400
+D RKNN: [08:51:42.111] 34  ConvExSwish model.6.m.0.cv2.conv.weight  INT8      (128,128,3,3)  | 0x000b0d00 0x000d4d00 0x00024000
+D RKNN: [08:51:42.111] 34  ConvExSwish model.6.m.0.cv2.conv.bias    INT32     (128)          | 0x000d4d00 0x000d5100 0x00000400
+D RKNN: [08:51:42.111] 36  ConvExSwish model.6.m.1.cv1.conv.weight  INT8      (128,128,1,1)  | 0x000d5100 0x000d9100 0x00004000
+D RKNN: [08:51:42.111] 36  ConvExSwish model.6.m.1.cv1.conv.bias    INT32     (128)          | 0x000d9100 0x000d9500 0x00000400
+D RKNN: [08:51:42.111] 37  ConvExSwish model.6.m.1.cv2.conv.weight  INT8      (128,128,3,3)  | 0x000d9500 0x000fd500 0x00024000
+D RKNN: [08:51:42.111] 37  ConvExSwish model.6.m.1.cv2.conv.bias    INT32     (128)          | 0x000fd500 0x000fd900 0x00000400
+D RKNN: [08:51:42.111] 39  ConvExSwish model.6.m.2.cv1.conv.weight  INT8      (128,128,1,1)  | 0x000fd900 0x00101900 0x00004000
+D RKNN: [08:51:42.111] 39  ConvExSwish model.6.m.2.cv1.conv.bias    INT32     (128)          | 0x00101900 0x00101d00 0x00000400
+D RKNN: [08:51:42.111] 40  ConvExSwish model.6.m.2.cv2.conv.weight  INT8      (128,128,3,3)  | 0x00101d00 0x00125d00 0x00024000
+D RKNN: [08:51:42.111] 40  ConvExSwish model.6.m.2.cv2.conv.bias    INT32     (128)          | 0x00125d00 0x00126100 0x00000400
+D RKNN: [08:51:42.111] 43  ConvExSwish model.6.cv3.conv.weight      INT8      (256,256,1,1)  | 0x0009c100 0x000ac100 0x00010000
+D RKNN: [08:51:42.111] 43  ConvExSwish model.6.cv3.conv.bias        INT32     (256)          | 0x000ac100 0x000ac900 0x00000800
+D RKNN: [08:51:42.111] 44  ConvExSwish model.7.conv.weight          INT8      (512,256,3,3)  | 0x00126100 0x00246100 0x00120000
+D RKNN: [08:51:42.111] 44  ConvExSwish model.7.conv.bias            INT32     (512)          | 0x00246100 0x00247100 0x00001000
+D RKNN: [08:51:42.111] 45  ConvExSwish model.8.cv1.conv.weight      INT8      (256,512,1,1)  | 0x00247100 0x00267100 0x00020000
+D RKNN: [08:51:42.111] 45  ConvExSwish model.8.cv1.conv.bias        INT32     (256)          | 0x00267100 0x00267900 0x00000800
+D RKNN: [08:51:42.111] 56  ConvExSwish model.8.cv2.conv.weight      INT8      (512,1024,1,1) | 0x00267900 0x002e7900 0x00080000
+D RKNN: [08:51:42.111] 56  ConvExSwish model.8.cv2.conv.bias        INT32     (512)          | 0x002e7900 0x002e8900 0x00001000
+D RKNN: [08:51:42.111] 57  ConvExSwish model.9.cv1.conv.weight      INT8      (256,512,1,1)  | 0x002e8900 0x00308900 0x00020000
+D RKNN: [08:51:42.111] 57  ConvExSwish model.9.cv1.conv.bias        INT32     (256)          | 0x00308900 0x00309100 0x00000800
+D RKNN: [08:51:42.111] 58  ConvExSwish model.9.cv2.conv.weight      INT8      (256,512,1,1)  | 0x00309100 0x00329100 0x00020000
+D RKNN: [08:51:42.111] 58  ConvExSwish model.9.cv2.conv.bias        INT32     (256)          | 0x00329100 0x00329900 0x00000800
+D RKNN: [08:51:42.111] 59  ConvExSwish model.9.m.0.cv1.conv.weight  INT8      (256,256,1,1)  | 0x0036a900 0x0037a900 0x00010000
+D RKNN: [08:51:42.111] 59  ConvExSwish model.9.m.0.cv1.conv.bias    INT32     (256)          | 0x0037a900 0x0037b100 0x00000800
+D RKNN: [08:51:42.111] 60  ConvExSwish model.9.m.0.cv2.conv.weight  INT8      (256,256,3,3)  | 0x0037b100 0x0040b100 0x00090000
+D RKNN: [08:51:42.111] 60  ConvExSwish model.9.m.0.cv2.conv.bias    INT32     (256)          | 0x0040b100 0x0040b900 0x00000800
+D RKNN: [08:51:42.111] 62  ConvExSwish model.9.cv3.conv.weight      INT8      (512,512,1,1)  | 0x00329900 0x00369900 0x00040000
+D RKNN: [08:51:42.111] 62  ConvExSwish model.9.cv3.conv.bias        INT32     (512)          | 0x00369900 0x0036a900 0x00001000
+D RKNN: [08:51:42.111] 63  ConvExSwish model.10.conv.weight         INT8      (256,512,1,1)  | 0x0040b900 0x0042b900 0x00020000
+D RKNN: [08:51:42.111] 63  ConvExSwish model.10.conv.bias           INT32     (256)          | 0x0042b900 0x0042c100 0x00000800
+D RKNN: [08:51:42.111] 64  Resize      Resize_128_roi               FLOAT     (0)            | 0x006cbd80 0x006cbd80 0x00000000
+D RKNN: [08:51:42.111] 64  Resize      395                          FLOAT     (4)            | 0x006cbc80 0x006cbd00 0x00000080
+D RKNN: [08:51:42.111] 66  ConvExSwish model.13.cv1.conv.weight     INT8      (128,512,1,1)  | 0x0042c100 0x0043c100 0x00010000
+D RKNN: [08:51:42.111] 66  ConvExSwish model.13.cv1.conv.bias       INT32     (128)          | 0x0043c100 0x0043c500 0x00000400
+D RKNN: [08:51:42.111] 67  ConvExSwish model.13.cv2.conv.weight     INT8      (128,512,1,1)  | 0x0043c500 0x0044c500 0x00010000
+D RKNN: [08:51:42.111] 67  ConvExSwish model.13.cv2.conv.bias       INT32     (128)          | 0x0044c500 0x0044c900 0x00000400
+D RKNN: [08:51:42.111] 68  ConvExSwish model.13.m.0.cv1.conv.weight INT8      (128,128,1,1)  | 0x0045d100 0x00461100 0x00004000
+D RKNN: [08:51:42.111] 68  ConvExSwish model.13.m.0.cv1.conv.bias   INT32     (128)          | 0x00461100 0x00461500 0x00000400
+D RKNN: [08:51:42.111] 69  ConvExSwish model.13.m.0.cv2.conv.weight INT8      (128,128,3,3)  | 0x00461500 0x00485500 0x00024000
+D RKNN: [08:51:42.111] 69  ConvExSwish model.13.m.0.cv2.conv.bias   INT32     (128)          | 0x00485500 0x00485900 0x00000400
+D RKNN: [08:51:42.111] 71  ConvExSwish model.13.cv3.conv.weight     INT8      (256,256,1,1)  | 0x0044c900 0x0045c900 0x00010000
+D RKNN: [08:51:42.111] 71  ConvExSwish model.13.cv3.conv.bias       INT32     (256)          | 0x0045c900 0x0045d100 0x00000800
+D RKNN: [08:51:42.111] 72  ConvExSwish model.14.conv.weight         INT8      (128,256,1,1)  | 0x00485900 0x0048d900 0x00008000
+D RKNN: [08:51:42.111] 72  ConvExSwish model.14.conv.bias           INT32     (128)          | 0x0048d900 0x0048dd00 0x00000400
+D RKNN: [08:51:42.111] 73  Resize      Resize_149_roi               FLOAT     (0)            | 0x006cbd80 0x006cbd80 0x00000000
+D RKNN: [08:51:42.111] 73  Resize      396                          FLOAT     (4)            | 0x006cbd00 0x006cbd80 0x00000080
+D RKNN: [08:51:42.111] 75  ConvExSwish model.17.cv1.conv.weight     INT8      (64,256,1,1)   | 0x0048dd00 0x00491d00 0x00004000
+D RKNN: [08:51:42.111] 75  ConvExSwish model.17.cv1.conv.bias       INT32     (64)           | 0x00491d00 0x00491f00 0x00000200
+D RKNN: [08:51:42.111] 76  ConvExSwish model.17.cv2.conv.weight     INT8      (64,256,1,1)   | 0x00491f00 0x00495f00 0x00004000
+D RKNN: [08:51:42.111] 76  ConvExSwish model.17.cv2.conv.bias       INT32     (64)           | 0x00495f00 0x00496100 0x00000200
+D RKNN: [08:51:42.111] 77  ConvExSwish model.17.m.0.cv1.conv.weight INT8      (64,64,1,1)    | 0x0049a500 0x0049b500 0x00001000
+D RKNN: [08:51:42.111] 77  ConvExSwish model.17.m.0.cv1.conv.bias   INT32     (64)           | 0x0049b500 0x0049b700 0x00000200
+D RKNN: [08:51:42.111] 78  ConvExSwish model.17.m.0.cv2.conv.weight INT8      (64,64,3,3)    | 0x0049b700 0x004a4700 0x00009000
+D RKNN: [08:51:42.111] 78  ConvExSwish model.17.m.0.cv2.conv.bias   INT32     (64)           | 0x004a4700 0x004a4900 0x00000200
+D RKNN: [08:51:42.111] 80  ConvExSwish model.17.cv3.conv.weight     INT8      (128,128,1,1)  | 0x00496100 0x0049a100 0x00004000
+D RKNN: [08:51:42.111] 80  ConvExSwish model.17.cv3.conv.bias       INT32     (128)          | 0x0049a100 0x0049a500 0x00000400
+D RKNN: [08:51:42.111] 81  Conv        model.24.m.0.weight          INT8      (21,128,1,1)   | 0x006c5d00 0x006c6780 0x00000a80
+D RKNN: [08:51:42.111] 81  Conv        model.24.m.0.bias            INT32     (21)           | 0x006c6780 0x006c6880 0x00000100
+D RKNN: [08:51:42.111] 82  ConvExSwish model.18.conv.weight         INT8      (128,128,3,3)  | 0x004a4900 0x004c8900 0x00024000
+D RKNN: [08:51:42.111] 82  ConvExSwish model.18.conv.bias           INT32     (128)          | 0x004c8900 0x004c8d00 0x00000400
+D RKNN: [08:51:42.111] 84  ConvExSwish model.20.cv1.conv.weight     INT8      (128,256,1,1)  | 0x004c8d00 0x004d0d00 0x00008000
+D RKNN: [08:51:42.111] 84  ConvExSwish model.20.cv1.conv.bias       INT32     (128)          | 0x004d0d00 0x004d1100 0x00000400
+D RKNN: [08:51:42.111] 85  ConvExSwish model.20.cv2.conv.weight     INT8      (128,256,1,1)  | 0x004d1100 0x004d9100 0x00008000
+D RKNN: [08:51:42.111] 85  ConvExSwish model.20.cv2.conv.bias       INT32     (128)          | 0x004d9100 0x004d9500 0x00000400
+D RKNN: [08:51:42.111] 86  ConvExSwish model.20.m.0.cv1.conv.weight INT8      (128,128,1,1)  | 0x004e9d00 0x004edd00 0x00004000
+D RKNN: [08:51:42.111] 86  ConvExSwish model.20.m.0.cv1.conv.bias   INT32     (128)          | 0x004edd00 0x004ee100 0x00000400
+D RKNN: [08:51:42.111] 87  ConvExSwish model.20.m.0.cv2.conv.weight INT8      (128,128,3,3)  | 0x004ee100 0x00512100 0x00024000
+D RKNN: [08:51:42.111] 87  ConvExSwish model.20.m.0.cv2.conv.bias   INT32     (128)          | 0x00512100 0x00512500 0x00000400
+D RKNN: [08:51:42.111] 89  ConvExSwish model.20.cv3.conv.weight     INT8 I rknn building done.
+CONVERSION_COMPLETE int8 c93359dc2b13370b3e5619cf6c27826ccbc6056850dbb8f963cc523996239195
+     (256,256,1,1)  | 0x004d9500 0x004e9500 0x00010000
+D RKNN: [08:51:42.111] 89  ConvExSwish model.20.cv3.conv.bias       INT32     (256)          | 0x004e9500 0x004e9d00 0x00000800
+D RKNN: [08:51:42.111] 90  Conv        model.24.m.1.weight          INT8      (21,256,1,1)   | 0x006c6880 0x006c7d80 0x00001500
+D RKNN: [08:51:42.111] 90  Conv        model.24.m.1.bias            INT32     (21)           | 0x006c7d80 0x006c7e80 0x00000100
+D RKNN: [08:51:42.111] 91  ConvExSwish model.21.conv.weight         INT8      (256,256,3,3)  | 0x00512500 0x005a2500 0x00090000
+D RKNN: [08:51:42.111] 91  ConvExSwish model.21.conv.bias           INT32     (256)          | 0x005a2500 0x005a2d00 0x00000800
+D RKNN: [08:51:42.111] 93  ConvExSwish model.23.cv1.conv.weight     INT8      (256,512,1,1)  | 0x005a2d00 0x005c2d00 0x00020000
+D RKNN: [08:51:42.111] 93  ConvExSwish model.23.cv1.conv.bias       INT32     (256)          | 0x005c2d00 0x005c3500 0x00000800
+D RKNN: [08:51:42.111] 94  ConvExSwish model.23.cv2.conv.weight     INT8      (256,512,1,1)  | 0x005c3500 0x005e3500 0x00020000
+D RKNN: [08:51:42.111] 94  ConvExSwish model.23.cv2.conv.bias       INT32     (256)          | 0x005e3500 0x005e3d00 0x00000800
+D RKNN: [08:51:42.111] 95  ConvExSwish model.23.m.0.cv1.conv.weight INT8      (256,256,1,1)  | 0x00624d00 0x00634d00 0x00010000
+D RKNN: [08:51:42.111] 95  ConvExSwish model.23.m.0.cv1.conv.bias   INT32     (256)          | 0x00634d00 0x00635500 0x00000800
+D RKNN: [08:51:42.111] 96  ConvExSwish model.23.m.0.cv2.conv.weight INT8      (256,256,3,3)  | 0x00635500 0x006c5500 0x00090000
+D RKNN: [08:51:42.111] 96  ConvExSwish model.23.m.0.cv2.conv.bias   INT32     (256)          | 0x006c5500 0x006c5d00 0x00000800
+D RKNN: [08:51:42.111] 98  ConvExSwish model.23.cv3.conv.weight     INT8      (512,512,1,1)  | 0x005e3d00 0x00623d00 0x00040000
+D RKNN: [08:51:42.111] 98  ConvExSwish model.23.cv3.conv.bias       INT32     (512)          | 0x00623d00 0x00624d00 0x00001000
+D RKNN: [08:51:42.111] 99  Conv        model.24.m.2.weight          INT8      (21,512,1,1)   | 0x006c7e80 0x006ca880 0x00002a00
+D RKNN: [08:51:42.111] 99  Conv        model.24.m.2.bias            INT32     (21)           | 0x006ca880 0x006ca980 0x00000100
+D RKNN: [08:51:42.111] ----------------------------------------------------------------------+---------------------------------
+D RKNN: [08:51:42.122] ----------------------------------------
+D RKNN: [08:51:42.122] Total Internal Memory Size: 8619KB
+D RKNN: [08:51:42.122] Total Weight Memory Size: 6960.5KB
+D RKNN: [08:51:42.122] ----------------------------------------
+D RKNN: [08:51:42.122] <<<<<<<< end: rknn::RKNNMemStatisticsPass

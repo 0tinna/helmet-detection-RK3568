@@ -1,0 +1,127 @@
+{
+  "kind": "native-app-v3-and-reading-delivery",
+  "date": "2026-11-15",
+  "application_version": "20261115-v3",
+  "powerpoint_document_version": "v2",
+  "board_root": "/userdata/helmet-validation/20261115-native-app-v2",
+  "proposed_title": "基于RK3568的安全帽佩戴检测系统设计与端侧部署评估",
+  "artifacts": {
+    "native_app": {
+      "path": "dist/helmet-native-app-20261115-v3.zip",
+      "bytes": 39196872,
+      "sha256": "a6ddec8f0d5579a62df261fc84a8f92cbce7b27c54ead79e9579f6e87e11058d"
+    },
+    "native_manifest": {
+      "path": "docs/experiments/2026-11-15/native-app/bundle-manifest-v3.json",
+      "bytes": 4803,
+      "sha256": "aed7bf95c48fefbcd31374843d3284db670d69878db3197f8254f11c685e0786"
+    },
+    "board_install_receipt": {
+      "path": "docs/experiments/2026-11-15/native-app/v3-installed-release.json",
+      "bytes": 10498,
+      "sha256": "b717e429a15d3783e2a9819dd8f22a5306699b7140955cd7cb61f662f1489aa1"
+    },
+    "reading_navigation": {
+      "path": "docs/阅读导航.md",
+      "bytes": 7073,
+      "sha256": "3f1b431ffdc4bad573358b17226f64969230c90d187fba82d6193e178e7341a2"
+    },
+    "manual_source": {
+      "path": "docs/项目蓝图与完整手册.md",
+      "bytes": 64712,
+      "sha256": "a6315c66eac6476810bb295799d0111883bcd6a8d7c68c40a65e83173364b7b9"
+    },
+    "manual_html": {
+      "path": "docs/deliverables/项目手册.html",
+      "bytes": 86448,
+      "sha256": "d578046de518c688fad391d4cf39dfd535374036cbb8476400e09d962a819ab3"
+    },
+    "proposal": {
+      "path": "docs/proposal/开题报告正文-建议稿.md",
+      "bytes": 22414,
+      "sha256": "12c80c4727c2c22b860f5f10f6c1c251aae312a53107d994a9ce85503c245cde"
+    },
+    "presentation_script": {
+      "path": "docs/proposal/开题PPT逐页内容与演讲稿.md",
+      "bytes": 16978,
+      "sha256": "64439622aefcd5fbecbf64e783330c3a723151d1ff566e82fc8942a41bfa347a"
+    },
+    "presentation_html": {
+      "path": "docs/deliverables/开题演示.html",
+      "bytes": 118006,
+      "sha256": "eaad9739a789d24718089dde8bbef6d4b16295b441eefb6072728fda13007437"
+    },
+    "editable_powerpoint": {
+      "path": "docs/deliverables/开题报告-RK3568-v2.pptx",
+      "bytes": 544907,
+      "sha256": "d922aa777d3d50a802722c2835ea95daeb2ebb6c3d424f23758b2fc37894d3fe"
+    },
+    "app_manual": {
+      "path": "docs/app/板端App使用手册.md",
+      "bytes": 18114,
+      "sha256": "feba9dbdad0024d2404ef0c3f99884df4d2aeaf9262714a4c0501bf5aaa66cf5"
+    },
+    "offline_update_manual": {
+      "path": "docs/app/离线更新与图标安装.md",
+      "bytes": 12244,
+      "sha256": "dd440c02241f97c2cfbc02b84f7e209099a179059446c3273b84392cd341a212"
+    },
+    "app_longrun_report": {
+      "path": "docs/experiments/2026-11-15/原生App30分钟验证报告.md",
+      "bytes": 12327,
+      "sha256": "2bf4d463899ad35b4816428370461e1c86b9b1be41212482357be532ed4935bd"
+    },
+    "field_validation": {
+      "path": "docs/field-validation/摄像头接入与现场验收.md",
+      "bytes": 14900,
+      "sha256": "08f5a8adade729ffeda06a2c6cd069356f0f55527db794caed6aa3d14f477951"
+    },
+    "independent_review": {
+      "path": ".superpowers/sdd/2026-11-14-graduation-scope/native-v3-release-installed-evidence-review.md",
+      "bytes": 6311,
+      "sha256": "4e54d2bb23177e5a15701ae005c80a0e95f7e009cabb7f6feb9d245077d3e6ab"
+    }
+  },
+  "offline_scope": "Local application runtime on existing compatible Linux/Qt/Python/OpenCV/NumPy/RKNNLite; child-loopback-only actual launcher verification; not an OS image or physical power test",
+  "installed_payload_files": 28,
+  "models": 6,
+  "actual_v3_ui_run": "v3-wrapper-wifi-1",
+  "actual_v3_offline_run": "v3-wrapper-offline-1",
+  "longrun": {
+    "path": "docs/experiments/2026-11-15/native-longrun-1",
+    "source_revision": "v2",
+    "model": "existing 416x416",
+    "input": "single-photo generated looping video",
+    "launcher_path": "direct DetectionController/LocalService and private QML verification wrapper",
+    "detections": 19806,
+    "outputs": 19805,
+    "active_seconds": 1800.0510664689937,
+    "published_rate_denominator_session_seconds": 1800.0498956889933,
+    "detection_fps": 11.00302833128911,
+    "output_fps": 11.002472791133032,
+    "fixed_10fps_gate_passed": true,
+    "new_v3_whole_package_longrun": false,
+    "model_sha256": "7e0eefe4bfe86627bb6b58161cacca10912e0dbe1ba2513f58d091c40b26cd48",
+    "performance_values_source": "native-longrun-1/session.json and native-longrun-1-verification.json; original counts divided by session elapsed"
+  },
+  "presentation": {
+    "slides": 12,
+    "editable_tables": 6,
+    "source_note_slides": 12,
+    "native_powerpoint_opened": true,
+    "school_template_filled": false,
+    "personal_information_filled": false
+  },
+  "final_documentation_qa": "docs/experiments/2026-11-15/reading-materials-v3-verification.json",
+  "browser_qa": ".runtime/docs-quality-v3-final/browser-check.json",
+  "overall_graduation_acceptance": false,
+  "remaining_gates": [
+    "Physical camera capture, formats and unplug recovery",
+    "Human icon taps, whole screen/touch/keyboard/scroll and independent power without computer USB",
+    "Actual WiFi association, DHCP, persistence and failure rollback",
+    "Independent scene/source data provenance and agreed 85% metric",
+    "S6 joint final model/configuration qualification",
+    "Normal launcher same-configuration 30-minute run, continuous display and predefined memory criteria",
+    "Human audio and phone/LAN demonstration"
+  ]
+}

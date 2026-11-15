@@ -1,0 +1,300 @@
+{
+  "schema_version": 1,
+  "kind": "longrun",
+  "status": "completed",
+  "run_id": "longrun-final",
+  "pid": 3782,
+  "host": "ATK-DLRK3568",
+  "platform": "Linux-5.10.160-aarch64-with-glibc2.37",
+  "python": "3.10.5 (main, Jul  5 2024, 11:06:31) [GCC 10.4.0]",
+  "command": [
+    "/usr/bin/python3",
+    "/userdata/helmet-validation/20261114-final/verify_runtime.py",
+    "longrun",
+    "--runtime-dir",
+    "/userdata/helmet-validation/20261114-final/src",
+    "--model",
+    "/userdata/helmet-validation/20261114-final/models/helmet_416x416.rknn",
+    "--source",
+    "/userdata/helmet-validation/20261114-final/input/construction-replay.avi",
+    "--output-root",
+    "/userdata/helmet-validation/20261114-final",
+    "--run-id",
+    "longrun-final",
+    "--duration",
+    "1800",
+    "--replay-fps",
+    "10",
+    "--save-interval",
+    "30"
+  ],
+  "started_wall_time": "2026-11-14T11:39:30.995543+00:00",
+  "started_monotonic": 36530.266279596,
+  "requested_duration_seconds": 1800.0,
+  "replay_fps": 10.0,
+  "result_ttl": 1,
+  "source_kind": "video-replay",
+  "input_description": "file video replay; camera not tested",
+  "physical_camera_tested": false,
+  "backend": "rknnlite",
+  "exit_code": 0,
+  "governors": [
+    {
+      "path": "/sys/class/devfreq/fde40000.npu/governor",
+      "before": "rknpu_ondemand",
+      "requested": null,
+      "after": "rknpu_ondemand",
+      "restore_success": true
+    }
+  ],
+  "model": {
+    "path": "/userdata/helmet-validation/20261114-final/models/helmet_416x416.rknn",
+    "sha256": "7e0eefe4bfe86627bb6b58161cacca10912e0dbe1ba2513f58d091c40b26cd48",
+    "bytes": 8110065
+  },
+  "input": {
+    "path": "/userdata/helmet-validation/20261114-final/input/construction-replay.avi",
+    "sha256": "f22897e1ebb40cc919caab335ee4b436d28ebaf0a138eb8b16c63166184af5cc",
+    "bytes": 82400444
+  },
+  "sources": {
+    "pipeline_runtime.py": {
+      "path": "/userdata/helmet-validation/20261114-final/src/pipeline_runtime.py",
+      "sha256": "dee30d6b71c9e8d3e697657fb309fb22e8fb47fafd366d60b555466cf56152e9",
+      "bytes": 35055
+    },
+    "sources.py": {
+      "path": "/userdata/helmet-validation/20261114-final/src/sources.py",
+      "sha256": "ea89d66fdefb2bc429ca74efa0437a3c0a8aab672a856078fc15afccfe3b31c9",
+      "bytes": 6717
+    },
+    "telemetry.py": {
+      "path": "/userdata/helmet-validation/20261114-final/src/telemetry.py",
+      "sha256": "da4522206053712484a21f80bb26d6424649a263f606f35fa16070be51a83b9e",
+      "bytes": 14670
+    },
+    "alarm.py": {
+      "path": "/userdata/helmet-validation/20261114-final/src/alarm.py",
+      "sha256": "d3e6d68c7b17f5508f0d697e96998f556f224f9f5067169d66c35972b3a023d2",
+      "bytes": 4207
+    },
+    "yolo_post.py": {
+      "path": "/userdata/helmet-validation/20261114-final/src/yolo_post.py",
+      "sha256": "fae57bbfa1d47d5ab16ef444096fab4fe8e14701c5ec10d87b1ec518282b0505",
+      "bytes": 7811
+    },
+    "verify_runtime.py": {
+      "path": "/userdata/helmet-validation/20261114-final/verify_runtime.py",
+      "sha256": "02a22caf13a6c514f372f41e3d712fbbda03edf99590a6b1e0bb556e23ae9638",
+      "bytes": 85635
+    }
+  },
+  "input_size": [
+    416,
+    416
+  ],
+  "thresholds": {
+    "conf": 0.35,
+    "nms": 0.45,
+    "skip": 0
+  },
+  "class_order": [
+    "person",
+    "hat"
+  ],
+  "actual_engine_calls": 17591,
+  "finished_wall_time": "2026-11-14T12:09:35.071502+00:00",
+  "elapsed_seconds": 1804.0760325480005,
+  "signal": null,
+  "artifacts": {
+    "frames.jsonl": {
+      "path": "/userdata/helmet-validation/20261114-final/longrun-final/frames.jsonl",
+      "sha256": "d58050459a03d988a32c380d8d405aebb80fecf5a471c4f2c53c66ba7073bc60",
+      "bytes": 65987555
+    },
+    "events.jsonl": {
+      "path": "/userdata/helmet-validation/20261114-final/longrun-final/events.jsonl",
+      "sha256": "0bcb362d52d573b2a2d5870a731592cb9b4ab8ac6bc6ced2ad178d2280dbb1bb",
+      "bytes": 26965
+    },
+    "resources.jsonl": {
+      "path": "/userdata/helmet-validation/20261114-final/longrun-final/resources.jsonl",
+      "sha256": "e44d10188a65a7b60a8a43a586dbb15be1060f530ad19239ed59de69913d33a1",
+      "bytes": 656384
+    },
+    "session.json": {
+      "path": "/userdata/helmet-validation/20261114-final/longrun-final/session.json",
+      "sha256": "8cd3c02dd8f44e4f03d6af5fcd03460287fa67eafd11d106b554467aeff20854",
+      "bytes": 412342
+    }
+  },
+  "validation": {
+    "passed": true,
+    "errors": [],
+    "metrics": {
+      "capture_to_output_ms": {
+        "count": 17590,
+        "mean": 115.26307567259818,
+        "p50": 112.34526699990965,
+        "p95": 166.36011835071258,
+        "p99": 203.23449157483995
+      },
+      "sink_ms": {
+        "count": 17590,
+        "mean": 0.025640860781806343,
+        "p50": 0.02420899545541033,
+        "p95": 0.036751000152435154,
+        "p99": 0.06854400271549821
+      },
+      "capture_to_sink_complete_ms": {
+        "count": 17590,
+        "mean": 115.6020609773709,
+        "p50": 112.70337349924375,
+        "p95": 166.6929173032258,
+        "p99": 203.55225608233016
+      },
+      "prep_ms": {
+        "count": 17591,
+        "mean": 12.972709863923617,
+        "p50": 13.192999998864252,
+        "p95": 17.52175849469495,
+        "p99": 20.79604979662689
+      },
+      "infer_ms": {
+        "count": 17591,
+        "mean": 48.39191022950505,
+        "p50": 45.055479000438936,
+        "p95": 72.17350450082449,
+        "p99": 79.77029529574786
+      },
+      "post_ms": {
+        "count": 17591,
+        "mean": 29.55868377516403,
+        "p50": 28.76869199826615,
+        "p95": 43.317369498254266,
+        "p99": 54.31034299836014
+      }
+    },
+    "timeline": {
+      "policy": {
+        "startup_allowance_seconds": 10.0,
+        "finalization_allowance_seconds": 5.0,
+        "session_event_agreement_seconds": 1.0,
+        "duration_rounding_seconds": 0.1,
+        "resource_interval_seconds": 1.0,
+        "resource_gap_periods": 3.0,
+        "frame_gap_periods": 5.0,
+        "minimum_frame_gap_seconds": 1.0,
+        "timing_rounding_ms": 0.02
+      },
+      "streams": {
+        "detector capture": {
+          "count": 17591,
+          "first": 36533.918491634,
+          "last": 38333.838215747,
+          "start_offset_seconds": 0.051084124999761116,
+          "end_offset_seconds": 0.09763557300175307,
+          "max_gap_seconds": 0.262428670997906,
+          "allowed_gap_seconds": 1.0
+        },
+        "detector processed": {
+          "count": 17591,
+          "first": 36534.024229394,
+          "last": 38333.917901988,
+          "start_offset_seconds": 0.1568218850006815,
+          "end_offset_seconds": 0.017949331995623652,
+          "max_gap_seconds": 0.2918285420018947,
+          "allowed_gap_seconds": 1.0
+        },
+        "output dispatch": {
+          "count": 17590,
+          "first": 36534.029742913,
+          "last": 38333.852445652,
+          "start_offset_seconds": 0.1623354039984406,
+          "end_offset_seconds": 0.08340566799597582,
+          "max_gap_seconds": 0.29076626500318525,
+          "allowed_gap_seconds": 1.0
+        },
+        "sink completion": {
+          "count": 17590,
+          "first": 36534.029995503,
+          "last": 38333.852781952,
+          "start_offset_seconds": 0.1625879939965671,
+          "end_offset_seconds": 0.08306936799635878,
+          "max_gap_seconds": 0.2906630130019039,
+          "allowed_gap_seconds": 1.0
+        },
+        "resources": {
+          "count": 1760,
+          "first": 36532.257269523,
+          "last": 38333.712706172,
+          "start_offset_seconds": -1.6101379860047018,
+          "end_offset_seconds": 0.22314514799654717,
+          "max_gap_seconds": 1.162232048001897,
+          "allowed_gap_seconds": 3.0
+        },
+        "resource cpu_percent": {
+          "count": 1760,
+          "first": 36532.257269523,
+          "last": 38333.712706172,
+          "start_offset_seconds": -1.6101379860047018,
+          "end_offset_seconds": 0.22314514799654717,
+          "max_gap_seconds": 1.162232048001897,
+          "allowed_gap_seconds": 3.0
+        },
+        "resource rss_bytes": {
+          "count": 1760,
+          "first": 36532.257269523,
+          "last": 38333.712706172,
+          "start_offset_seconds": -1.6101379860047018,
+          "end_offset_seconds": 0.22314514799654717,
+          "max_gap_seconds": 1.162232048001897,
+          "allowed_gap_seconds": 3.0
+        },
+        "resource temperature_c": {
+          "count": 1760,
+          "first": 36532.257269523,
+          "last": 38333.712706172,
+          "start_offset_seconds": -1.6101379860047018,
+          "end_offset_seconds": 0.22314514799654717,
+          "max_gap_seconds": 1.162232048001897,
+          "allowed_gap_seconds": 3.0
+        },
+        "resource npu_frequency_hz": {
+          "count": 1760,
+          "first": 36532.257269523,
+          "last": 38333.712706172,
+          "start_offset_seconds": -1.6101379860047018,
+          "end_offset_seconds": 0.22314514799654717,
+          "max_gap_seconds": 1.162232048001897,
+          "allowed_gap_seconds": 3.0
+        }
+      },
+      "active_start": 36533.867407509,
+      "active_stop": 38333.93585132,
+      "observed_active_seconds": 1800.0684438109965
+    },
+    "cleanup_evidence": {
+      "direct_recorded": false,
+      "accepted": false,
+      "basis": "legacy normal stop is indirect evidence only",
+      "errors": []
+    },
+    "observed_rates": {
+      "captured_fps": 9.794092858944705,
+      "detected_fps": 9.772426970033823,
+      "output_fps": 9.771871434420722,
+      "displayed_fps": 0.0
+    },
+    "throughput_target_met": false,
+    "actual_thresholds": {
+      "conf": 0.35,
+      "nms": 0.45,
+      "skip": 0
+    },
+    "scope": "continuity/inventory/freshness verification; throughput and physical-camera gates remain separate",
+    "snapshot_integrity": "not in original hashed-core-log inventory; not asserted by this validator",
+    "physical_camera_tested": false,
+    "ssh_survival": "not_observed"
+  }
+}

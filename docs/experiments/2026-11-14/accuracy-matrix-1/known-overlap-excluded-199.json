@@ -1,0 +1,206 @@
+{
+  "images": 199,
+  "excluded": "hard_hat_workers1137.png",
+  "reason": "visually identified resized/padded source overlap before scoring; original fixed200 preserved",
+  "training_independence": "unknown",
+  "metrics": {
+    "helmet-640-640.rknn": {
+      "person": {
+        "ap50": 0.8449320819213968,
+        "npos": 262,
+        "precision": 0.677710843373494,
+        "recall": 0.8587786259541985,
+        "f1": 0.7575757575757576,
+        "true_positives": 225,
+        "false_positives": 107,
+        "false_negatives": 37,
+        "ignored_predictions": 0,
+        "predictions": 2038,
+        "defined": true
+      },
+      "hat": {
+        "ap50": 0.8036427512942756,
+        "npos": 690,
+        "precision": 0.897887323943662,
+        "recall": 0.7391304347826086,
+        "f1": 0.8108108108108107,
+        "true_positives": 510,
+        "false_positives": 58,
+        "false_negatives": 180,
+        "ignored_predictions": 0,
+        "predictions": 2215,
+        "defined": true
+      },
+      "mAP50": 0.8242874166078362,
+      "classes_with_gt": [
+        "person",
+        "hat"
+      ]
+    },
+    "helmet_416x416.rknn": {
+      "person": {
+        "ap50": 0.808070364319462,
+        "npos": 262,
+        "precision": 0.725752508361204,
+        "recall": 0.8282442748091603,
+        "f1": 0.7736185383244206,
+        "true_positives": 217,
+        "false_positives": 82,
+        "false_negatives": 45,
+        "ignored_predictions": 0,
+        "predictions": 1466,
+        "defined": true
+      },
+      "hat": {
+        "ap50": 0.7780675422734264,
+        "npos": 690,
+        "precision": 0.8888888888888888,
+        "recall": 0.7304347826086957,
+        "f1": 0.801909307875895,
+        "true_positives": 504,
+        "false_positives": 63,
+        "false_negatives": 186,
+        "ignored_predictions": 0,
+        "predictions": 2998,
+        "defined": true
+      },
+      "mAP50": 0.7930689532964442,
+      "classes_with_gt": [
+        "person",
+        "hat"
+      ]
+    },
+    "helmet_512x288.rknn": {
+      "person": {
+        "ap50": 0.7757847107626648,
+        "npos": 262,
+        "precision": 0.7428571428571429,
+        "recall": 0.7938931297709924,
+        "f1": 0.7675276752767528,
+        "true_positives": 208,
+        "false_positives": 72,
+        "false_negatives": 54,
+        "ignored_predictions": 0,
+        "predictions": 1208,
+        "defined": true
+      },
+      "hat": {
+        "ap50": 0.74668518565252,
+        "npos": 690,
+        "precision": 0.8500881834215167,
+        "recall": 0.6985507246376812,
+        "f1": 0.7669053301511536,
+        "true_positives": 482,
+        "false_positives": 85,
+        "false_negatives": 208,
+        "ignored_predictions": 0,
+        "predictions": 2987,
+        "defined": true
+      },
+      "mAP50": 0.7612349482075924,
+      "classes_with_gt": [
+        "person",
+        "hat"
+      ]
+    },
+    "helmet_512x512.rknn": {
+      "person": {
+        "ap50": 0.8484353626457964,
+        "npos": 262,
+        "precision": 0.7171052631578947,
+        "recall": 0.8320610687022901,
+        "f1": 0.7703180212014136,
+        "true_positives": 218,
+        "false_positives": 86,
+        "false_negatives": 44,
+        "ignored_predictions": 0,
+        "predictions": 1721,
+        "defined": true
+      },
+      "hat": {
+        "ap50": 0.7905310065179548,
+        "npos": 690,
+        "precision": 0.8964912280701754,
+        "recall": 0.7405797101449275,
+        "f1": 0.8111111111111111,
+        "true_positives": 511,
+        "false_positives": 59,
+        "false_negatives": 179,
+        "ignored_predictions": 0,
+        "predictions": 2441,
+        "defined": true
+      },
+      "mAP50": 0.8194831845818756,
+      "classes_with_gt": [
+        "person",
+        "hat"
+      ]
+    },
+    "helmet_640x384.rknn": {
+      "person": {
+        "ap50": 0.8160489435946919,
+        "npos": 262,
+        "precision": 0.7239057239057239,
+        "recall": 0.8206106870229007,
+        "f1": 0.7692307692307693,
+        "true_positives": 215,
+        "false_positives": 82,
+        "false_negatives": 47,
+        "ignored_predictions": 0,
+        "predictions": 1452,
+        "defined": true
+      },
+      "hat": {
+        "ap50": 0.7634168236099674,
+        "npos": 690,
+        "precision": 0.8677248677248677,
+        "recall": 0.7130434782608696,
+        "f1": 0.782816229116945,
+        "true_positives": 492,
+        "false_positives": 75,
+        "false_negatives": 198,
+        "ignored_predictions": 0,
+        "predictions": 2356,
+        "defined": true
+      },
+      "mAP50": 0.7897328836023296,
+      "classes_with_gt": [
+        "person",
+        "hat"
+      ]
+    },
+    "helmet_640x640.rknn": {
+      "person": {
+        "ap50": 0.838689614974317,
+        "npos": 262,
+        "precision": 0.6818181818181818,
+        "recall": 0.8587786259541985,
+        "f1": 0.7601351351351351,
+        "true_positives": 225,
+        "false_positives": 105,
+        "false_negatives": 37,
+        "ignored_predictions": 0,
+        "predictions": 1969,
+        "defined": true
+      },
+      "hat": {
+        "ap50": 0.7970919234930706,
+        "npos": 690,
+        "precision": 0.8914185639229422,
+        "recall": 0.7376811594202899,
+        "f1": 0.8072957969865187,
+        "true_positives": 509,
+        "false_positives": 62,
+        "false_negatives": 181,
+        "ignored_predictions": 0,
+        "predictions": 2318,
+        "defined": true
+      },
+      "mAP50": 0.8178907692336939,
+      "classes_with_gt": [
+        "person",
+        "hat"
+      ]
+    }
+  }
+}

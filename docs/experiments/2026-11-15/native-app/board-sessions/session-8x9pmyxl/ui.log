@@ -1,0 +1,3 @@
+QStandardPaths: runtime directory '/var/run' is not a directory, but a symbolic link to a directory permissions 0755 owned by UID 0 GID 0
+qml: APP_RENDER {"saved":true,"tab":0,"valid":true,"previewVisible":true,"frameId":67,"keyboardVisible":false,"width":720,"height":1120}
+arm_release_ver: g13p0-01eac0, rk_so_ver: 9

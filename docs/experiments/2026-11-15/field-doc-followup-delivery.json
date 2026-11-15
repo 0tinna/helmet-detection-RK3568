@@ -1,0 +1,31 @@
+{
+  "kind": "field-doc-followup-to-native-v3-handoff",
+  "date": "2026-11-15",
+  "artifacts": {
+    "docs/field-validation/摄像头接入与现场验收.md": {
+      "sha256": "f034a875b0f8878c1128a3fbda039593a20bf6eb4e15889b8199878fa578300a",
+      "bytes": 20524
+    },
+    "docs/field-validation/论文结构与证据映射.md": {
+      "sha256": "0eb1ee847c1fc966abbc02a7f41a615fbb24f1330a4064d1a7177a9821d28202",
+      "bytes": 6077
+    },
+    "docs/field-validation/field-run-template.json": {
+      "sha256": "2daac9a8716684a6c3ba221af7eff0a489b617da67391ca284e02a3aa62b6603",
+      "bytes": 4763
+    },
+    "docs/field-validation/field-run-template-v2.json": {
+      "sha256": "12dc26ae559ab93569da31eac2c306a6f13faa99f9f82c2fd6f15be2809734cd",
+      "bytes": 11785
+    }
+  },
+  "prior_v1_template_preserved": true,
+  "physical_camera_tested": false,
+  "human_ui_power_wifi_tested": false,
+  "normal_launcher_30minute_tested": false,
+  "baseline": "field-doc-followup-baseline",
+  "review_diff": "field-doc-followup.diff",
+  "note": "The original native-v3-handoff.json retains the earlier field manual hash. This separate followup records the new field manual/template; no App package payload changed.",
+  "review": ".superpowers/sdd/2026-11-14-graduation-scope/field-doc-followup-review.md",
+  "minor_R1_fixed": "Current end-of-document field template link now selects v2; v1 explicitly historical and unchanged."
+}

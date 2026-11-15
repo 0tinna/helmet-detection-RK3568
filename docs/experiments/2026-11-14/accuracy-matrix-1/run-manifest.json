@@ -1,0 +1,183 @@
+{
+  "started_utc": "2026-11-14T06:46:05.822507+00:00",
+  "status": "complete",
+  "original_governor": "rknpu_ondemand",
+  "runs": [
+    {
+      "dataset": "shwd",
+      "model": "helmet-640-640.rknn",
+      "status": "complete",
+      "dump_exit": 0,
+      "eval_exit": 0,
+      "elapsed_seconds": 45.31588307199854,
+      "dump_sha256": "8f4fd508d16ae9820ed9ec3a28b7732611f5a0b37fd98fe35a3c14be22a851fa",
+      "metrics_sha256": "3ee1ed2bd1f7e1912c8921d3964032dea4576d56aafd9a62ad1de92aabfeaf0f",
+      "metrics_file": "shwd--helmet-640-640.metrics.json",
+      "dump_file": "shwd--helmet-640-640.dump.json"
+    },
+    {
+      "dataset": "shwd",
+      "model": "helmet_416x416.rknn",
+      "status": "complete",
+      "dump_exit": 0,
+      "eval_exit": 0,
+      "elapsed_seconds": 28.09149355699992,
+      "dump_sha256": "7cc897ba807450287c03ae6b74589766c23901eea27124ee462173fcd4aae95e",
+      "metrics_sha256": "57b47ad172f6ef6d7465da5c5d794531a177101d85df24ec424660701b5ce38e",
+      "metrics_file": "shwd--helmet_416x416.metrics.json",
+      "dump_file": "shwd--helmet_416x416.dump.json"
+    },
+    {
+      "dataset": "shwd",
+      "model": "helmet_512x288.rknn",
+      "status": "complete",
+      "dump_exit": 0,
+      "eval_exit": 0,
+      "elapsed_seconds": 30.052305941000668,
+      "dump_sha256": "5a4494e582d9ec9025c906c8101cd7b9f0ee6921b03744d476b6a71afeb04d83",
+      "metrics_sha256": "4f5fa5f6b3dbd7f9f3375a63972ecd7018f3e85a7c90affaa4525b42b4444a44",
+      "metrics_file": "shwd--helmet_512x288.metrics.json",
+      "dump_file": "shwd--helmet_512x288.dump.json"
+    },
+    {
+      "dataset": "shwd",
+      "model": "helmet_512x512.rknn",
+      "status": "complete",
+      "dump_exit": 0,
+      "eval_exit": 0,
+      "elapsed_seconds": 36.2664564120023,
+      "dump_sha256": "83a83cdc874f5ab76cbba3f9fe8f7c3071b4647a42c9a12701738d563000cf1e",
+      "metrics_sha256": "994d90be36bcf7d01261c194a71945e608ea2e2ba1506f008fa6e7598e954757",
+      "metrics_file": "shwd--helmet_512x512.metrics.json",
+      "dump_file": "shwd--helmet_512x512.dump.json"
+    },
+    {
+      "dataset": "shwd",
+      "model": "helmet_640x384.rknn",
+      "status": "complete",
+      "dump_exit": 0,
+      "eval_exit": 0,
+      "elapsed_seconds": 34.690148850000696,
+      "dump_sha256": "b0614ee8238795cd47791001f2193a60ad5fdb20e8886a7b7a564131f48935e4",
+      "metrics_sha256": "3b4698d22b7ffc17b7c044552366db0571e400c339992a40609989d880cfb113",
+      "metrics_file": "shwd--helmet_640x384.metrics.json",
+      "dump_file": "shwd--helmet_640x384.dump.json"
+    },
+    {
+      "dataset": "shwd",
+      "model": "helmet_640x640.rknn",
+      "status": "complete",
+      "dump_exit": 0,
+      "eval_exit": 0,
+      "elapsed_seconds": 40.07908725000016,
+      "dump_sha256": "026ddf1a693547a02ac0397e339c02a3502ba7ef617d99b329da67ae118b9b48",
+      "metrics_sha256": "c9cf1ad3e58fe73e763ca9634d4d7342f36f77da873baade9943c7e1c35697dc",
+      "metrics_file": "shwd--helmet_640x640.metrics.json",
+      "dump_file": "shwd--helmet_640x640.dump.json"
+    },
+    {
+      "dataset": "hardhat",
+      "model": "helmet-640-640.rknn",
+      "status": "complete",
+      "dump_exit": 0,
+      "eval_exit": 0,
+      "elapsed_seconds": 45.122188812001696,
+      "dump_sha256": "05f3434b54ebe480f529a799cb27b4fa4dbffdf3e95fd22aad1c9a0603ac0ded",
+      "metrics_sha256": "8f3765416d236d087e9ee081e1dcf89c7334a6438548334ada52f77b3f7fe55f",
+      "metrics_file": "hardhat--helmet-640-640.metrics.json",
+      "dump_file": "hardhat--helmet-640-640.dump.json"
+    },
+    {
+      "dataset": "hardhat",
+      "model": "helmet_416x416.rknn",
+      "status": "complete",
+      "dump_exit": 0,
+      "eval_exit": 0,
+      "elapsed_seconds": 25.387563042000693,
+      "dump_sha256": "48d7949bf03dd82b9da7e7bb245847d46d144f0f35201f9f9f3b79a8f7bde6f9",
+      "metrics_sha256": "6c2336aa99480eee6bb65a7b13b256a7fd3c3cb573518ba9a4614d4f968ea77b",
+      "metrics_file": "hardhat--helmet_416x416.metrics.json",
+      "dump_file": "hardhat--helmet_416x416.dump.json"
+    },
+    {
+      "dataset": "hardhat",
+      "model": "helmet_512x288.rknn",
+      "status": "complete",
+      "dump_exit": 0,
+      "eval_exit": 0,
+      "elapsed_seconds": 27.990831112001615,
+      "dump_sha256": "41812923ce91345465f78ecf148edcfb41d1b3a050832c63472afa72c5fe7f40",
+      "metrics_sha256": "119dcf7e9931aa8a9696c976cb3cbe8b55ad844175ffabb902802b2e8813aaa6",
+      "metrics_file": "hardhat--helmet_512x288.metrics.json",
+      "dump_file": "hardhat--helmet_512x288.dump.json"
+    },
+    {
+      "dataset": "hardhat",
+      "model": "helmet_512x512.rknn",
+      "status": "complete",
+      "dump_exit": 0,
+      "eval_exit": 0,
+      "elapsed_seconds": 35.74766560799981,
+      "dump_sha256": "dc94f7926a56c98eb1c233f8bbce7e5cfa42afff56db05c229152e1bef83b583",
+      "metrics_sha256": "b6e2672468ebed3b6def866b34e990a295bc6e0f277094dc76fca6c67fe2e7f0",
+      "metrics_file": "hardhat--helmet_512x512.metrics.json",
+      "dump_file": "hardhat--helmet_512x512.dump.json"
+    },
+    {
+      "dataset": "hardhat",
+      "model": "helmet_640x384.rknn",
+      "status": "complete",
+      "dump_exit": 0,
+      "eval_exit": 0,
+      "elapsed_seconds": 34.04035436999766,
+      "dump_sha256": "d21d8278d41c34004e91153d6069df582af0d6bb5892fb27b188dc1e4c65650f",
+      "metrics_sha256": "5f0466a6bce181eb9756e2d4bdcad29ac76fb3639d94aa600c1d62715c2fc3a3",
+      "metrics_file": "hardhat--helmet_640x384.metrics.json",
+      "dump_file": "hardhat--helmet_640x384.dump.json"
+    },
+    {
+      "dataset": "hardhat",
+      "model": "helmet_640x640.rknn",
+      "status": "complete",
+      "dump_exit": 0,
+      "eval_exit": 0,
+      "elapsed_seconds": 40.402098229998956,
+      "dump_sha256": "2ebf2cc703edd7dbd9b430a69c50836764bf55d68a10c0f7533c06940f5e0b53",
+      "metrics_sha256": "88e3737831193bcac513d016b4f1bc78ce0e337990db75f671c65b7cf6f37af4",
+      "metrics_file": "hardhat--helmet_640x640.metrics.json",
+      "dump_file": "hardhat--helmet_640x640.dump.json"
+    }
+  ],
+  "thresholds": {
+    "conf_min": 0.001,
+    "op_conf": 0.25,
+    "nms_iou": 0.45
+  },
+  "sources": {
+    "dump_dets.py": "c21b4a1d1c4ee4e0428cb19d16b560c9c7dfdef2c34b52f62195b836fca90e3f",
+    "yolo_post.py": "b708fa95f4d71dd9b4ecb656d9626ac9fd2c78f4a7b46add3091ae5ed38e6903",
+    "pc/eval_map.py": "89610e1f3ad99c47a581ee97ca31f21c222d13214bb8a66eca882cd58044a2f1",
+    "pc/dataset_tools.py": "921281aa3e5bd9eb6dc441861bfb2d75c9ea6bb18969e8abf24fe5f122aade19"
+  },
+  "models": {
+    "helmet-640-640.rknn": "23dac43065664447272b8a032f7c35a00269e5b7d63e210ae10d8181a7a3bb32",
+    "helmet_416x416.rknn": "7e0eefe4bfe86627bb6b58161cacca10912e0dbe1ba2513f58d091c40b26cd48",
+    "helmet_512x288.rknn": "4b8d428aede96897590ed143200412beed882908e3b30ec63a5eae38f0deb6af",
+    "helmet_512x512.rknn": "82e43f1fe1dc755ab8d421c819fdef311efdd1b64a7b1913901f6aef2b9460d3",
+    "helmet_640x384.rknn": "ba951c5b824e66a660c08daa6f6779cf4119130c4c2106f365ee337e3c92f272",
+    "helmet_640x640.rknn": "2c0df64c4e12440e4e84c16294df53e440c263d9570f4447b2d26b0f5916edf3"
+  },
+  "benchmark_governor": "performance",
+  "datasets": {
+    "shwd": {
+      "annotation_sha256": "f2ba2731fb7c80faaccbed341cf87ad0c38241063a95faefdf806ad9e2f4dcaa",
+      "manifest_sha256": "d4a2e3309f3c8200781691fcce586bdcf031a76f244de8840584b23dc8876395"
+    },
+    "hardhat": {
+      "annotation_sha256": "48a4cd864131f76e4003e18d79ce71d6cce7b9f533a7d3179b996b2aaf2538e4",
+      "manifest_sha256": "81bd9e4accaecca6b2bee30e10e07044b7a6be295bca971ef972adc86696b397"
+    }
+  },
+  "restored_governor": "rknpu_ondemand",
+  "finished_utc": "2026-11-14T06:53:09.446735+00:00"
+}

@@ -1,0 +1,3 @@
+root     17004     1  0 04:10 ?        00:00:00 /usr/bin/python3 /userdata/helmet-validation/20261115-native-app-v2/src/app/launch.py --root /userdata/helmet-validation/20261115-native-app-v2 --tab detection
+root     17013 17004 99 04:10 ?        00:02:01 /usr/bin/python3 /userdata/helmet-validation/20261115-native-app-v2/src/app/service.py --root /userdata/helmet-validation/20261115-native-app-v2 --port 0 --token-file /userdata/helmet-validation/20261115-native-app-v2/app-state/session-7viz2j2f/token --ready-file /userdata/helmet-validation/20261115-native-app-v2/app-state/session-7viz2j2f/ready.json
+root     17029 17004 26 04:10 ?        00:00:24 /usr/bin/qmlscene /userdata/helmet-validation/20261115-native-app-v2/app-state/session-7viz2j2f/App.qml

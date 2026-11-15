@@ -1,0 +1,54 @@
+{
+  "probe_run_id": "normal-ui-probe-6",
+  "probe_screen_sha256": "5ef72336f307e5541727a14486a2e42a3aaed0b02ecd12654d8d85bedbe02f19",
+  "actions": [
+    {
+      "key": "Escape",
+      "pause_seconds": 2
+    },
+    {
+      "key": "Escape",
+      "pause_seconds": 2
+    },
+    {
+      "key": "Tab",
+      "pause_seconds": 0.2
+    },
+    {
+      "key": "Tab",
+      "pause_seconds": 0.2
+    },
+    {
+      "key": "Tab",
+      "pause_seconds": 0.2
+    },
+    {
+      "key": "Down",
+      "pause_seconds": 0.2
+    },
+    {
+      "key": "Tab",
+      "pause_seconds": 0.2
+    },
+    {
+      "key": "Down",
+      "pause_seconds": 0.2
+    },
+    {
+      "key": "Tab",
+      "pause_seconds": 0.2
+    },
+    {
+      "key": "Down",
+      "pause_seconds": 0.2
+    },
+    {
+      "key": "Tab",
+      "pause_seconds": 0.2
+    },
+    {
+      "key": "Space",
+      "pause_seconds": 2
+    }
+  ]
+}

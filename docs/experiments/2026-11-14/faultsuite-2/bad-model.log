@@ -1,0 +1,14 @@
+W rknn-toolkit-lite2 version: 2.5.0
+E RKNN: [08:54:15.853] parseRKNN: rknn model is too small!
+E RKNN: [08:54:15.854] parseRKNN from buffer: Invalid RKNN format!
+E RKNN: [08:54:15.854] rknn_init, load model failed!
+E Catch exception when init runtime!
+E Traceback (most recent call last):
+  File "/usr/lib/python3.10/site-packages/rknnlite/api/rknn_lite.py", line 177, in init_runtime
+    self.rknn_runtime.build_graph(self.rknn_data, self.load_model_in_npu, self.rknn_user_key)
+  File "rknnlite/api/rknn_runtime.py", line 965, in rknnlite.api.rknn_runtime.RKNNRuntime.build_graph
+Exception: RKNN init failed. error code: RKNN_ERR_MODEL_INVALID
+
+{"run_dir": "/userdata/helmet-validation/20261114/faultsuite-2/bad-model", "exit_code": 1, "validation": {"passed": true, "errors": [], "scenario": "bad-model", "primary_fault_verified": true, "cleanup_evidence": {"direct_recorded": true, "accepted": true, "errors": [], "record": {"engine_initialized": false, "source_initialized": true, "engine_released": null, "source_released": true, "capture_worker_alive": false, "detect_worker_alive": false, "shutdown_timeout": false, "sdk_resources": [{"created": true, "released": true, "release_error": null}]}}, "startup_failure_stage": "runtime-init", "source_reaction_evidence": null, "physical_camera_tested": false, "thread_termination_tested": false, "injection_method": "verification wrapper exception/read interruption; real delegation outside injection"}}
+I RKNN: [08:54:15.853] RKNN Runtime Information, librknnrt version: 2.3.2 (429f97ae6b@2025-04-09T09:09:27)
+I RKNN: [08:54:15.853] RKNN Driver Information, version: 0.9.2

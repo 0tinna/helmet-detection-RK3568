@@ -1,0 +1,175 @@
+{
+  "elapsed_seconds": 1.1260715719981818,
+  "counters": {
+    "captured": 11,
+    "consumed": 11,
+    "detected": 10,
+    "overwritten": 0,
+    "active_skip": 0,
+    "read_failure": 0,
+    "displayed": 0,
+    "output": 10,
+    "output_overwritten": 0,
+    "detection_failure": 1,
+    "pending_capture": 0,
+    "pending_output": 0
+  },
+  "full_session": {
+    "prep_ms": {
+      "count": 10,
+      "mean": 16.91144169999461,
+      "p50": 14.306627001133165,
+      "p95": 34.01794925048304,
+      "p99": 44.80315865112062
+    },
+    "infer_ms": {
+      "count": 10,
+      "mean": 50.39570829976583,
+      "p50": 48.81653750089754,
+      "p95": 66.84413394887085,
+      "p99": 74.64910998776759
+    },
+    "post_ms": {
+      "count": 10,
+      "mean": 28.779613100050483,
+      "p50": 29.550633002145332,
+      "p95": 38.88764640178124,
+      "p99": 38.9377180813608
+    },
+    "capture_to_output_ms": {
+      "count": 10,
+      "mean": 123.11812190018827,
+      "p50": 125.8853409999574,
+      "p95": 150.49883974988913,
+      "p99": 155.6022447504438
+    },
+    "sink_ms": {
+      "count": 10,
+      "mean": 0.028525999368866906,
+      "p50": 0.03062599898839835,
+      "p95": 0.03637164936662884,
+      "p99": 0.0378415300292545
+    },
+    "capture_to_sink_complete_ms": {
+      "count": 10,
+      "mean": 123.48361929980456,
+      "p50": 126.28493500051263,
+      "p95": 150.82447984950701,
+      "p99": 155.94247996992635
+    }
+  },
+  "full_session_fps": {
+    "captured": 9.768473224557845,
+    "consumed": 9.768473224557845,
+    "detected": 8.880430204143495,
+    "displayed": 0.0,
+    "output": 8.880430204143495
+  },
+  "sliding_window": {
+    "seconds": 5.0,
+    "observed_seconds": 1.1260715719981818,
+    "fps": {
+      "captured": 9.768473224557845,
+      "consumed": 9.768473224557845,
+      "detected": 8.880430204143495,
+      "displayed": 0.0,
+      "output": 8.880430204143495
+    },
+    "timings": {
+      "prep_ms": {
+        "count": 10,
+        "mean": 16.91144169999461,
+        "p50": 14.306627001133165,
+        "p95": 34.01794925048304,
+        "p99": 44.80315865112062
+      },
+      "infer_ms": {
+        "count": 10,
+        "mean": 50.39570829976583,
+        "p50": 48.81653750089754,
+        "p95": 66.84413394887085,
+        "p99": 74.64910998776759
+      },
+      "post_ms": {
+        "count": 10,
+        "mean": 28.779613100050483,
+        "p50": 29.550633002145332,
+        "p95": 38.88764640178124,
+        "p99": 38.9377180813608
+      },
+      "capture_to_output_ms": {
+        "count": 10,
+        "mean": 123.11812190018827,
+        "p50": 125.8853409999574,
+        "p95": 150.49883974988913,
+        "p99": 155.6022447504438
+      },
+      "sink_ms": {
+        "count": 10,
+        "mean": 0.028525999368866906,
+        "p50": 0.03062599898839835,
+        "p95": 0.03637164936662884,
+        "p99": 0.0378415300292545
+      },
+      "capture_to_sink_complete_ms": {
+        "count": 10,
+        "mean": 123.48361929980456,
+        "p50": 126.28493500051263,
+        "p95": 150.82447984950701,
+        "p99": 155.94247996992635
+      }
+    }
+  },
+  "runtime_samples": [
+    {
+      "monotonic": 22872.267786841,
+      "cpu_percent": 98.41003643818195,
+      "rss_bytes": 116264960,
+      "temperature_c": {
+        "/sys/class/thermal/thermal_zone0/temp": 50.0,
+        "/sys/class/thermal/thermal_zone1/temp": 47.222
+      },
+      "npu_frequency_hz": {
+        "/sys/class/devfreq/fde40000.npu/cur_freq": 900000000
+      },
+      "npu_load": "NPU load:  0%"
+    },
+    {
+      "monotonic": 22873.276562362,
+      "cpu_percent": 108.28487669055002,
+      "rss_bytes": 130179072,
+      "temperature_c": {
+        "/sys/class/thermal/thermal_zone0/temp": 48.888,
+        "/sys/class/thermal/thermal_zone1/temp": 47.777
+      },
+      "npu_frequency_hz": {
+        "/sys/class/devfreq/fde40000.npu/cur_freq": 900000000
+      },
+      "npu_load": "NPU load:  9%"
+    }
+  ],
+  "state": "fault",
+  "reason": "detection worker: injected inference failure after real RKNN calls",
+  "model": "/userdata/helmet-validation/20261114/models/helmet_416x416.rknn",
+  "model_sha256": "7e0eefe4bfe86627bb6b58161cacca10912e0dbe1ba2513f58d091c40b26cd48",
+  "source": "/userdata/helmet-validation/20261114/input/construction-replay.avi",
+  "class_order": [
+    "person",
+    "hat"
+  ],
+  "input_size": [
+    416,
+    416
+  ],
+  "thresholds": {
+    "conf": 0.35,
+    "nms": 0.45
+  },
+  "replay_fps": 10.0,
+  "result_ttl": 1.0,
+  "runtime": {
+    "python": "3.10.5 (main, Jul  5 2024, 11:06:31) [GCC 10.4.0]",
+    "opencv": "4.5.4",
+    "numpy": "1.21.2"
+  }
+}

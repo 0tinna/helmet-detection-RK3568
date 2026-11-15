@@ -1,0 +1,29 @@
+param(
+    [string]$Board = 'rk',
+    [string]$RemoteRoot = '/userdata/helmet-app',
+    [switch]$VendorIcons
+)
+$ErrorActionPreference = 'Stop'
+if ($RemoteRoot -notmatch '^/userdata/[A-Za-z0-9_/-]+$' -or $RemoteRoot.Contains('..')) {
+    throw 'Use an absolute /userdata path with ordinary directory names.'
+}
+$repoRoot = (Resolve-Path (Join-Path $PSScriptRoot '..\..')).Path
+& (Join-Path $repoRoot 'helmet\deploy.ps1') -Board $Board -RemoteRoot $RemoteRoot
+if ($LASTEXITCODE -ne 0) { throw 'Checked runtime deployment failed' }
+& ssh $Board "mkdir -p $RemoteRoot/src/app"
+if ($LASTEXITCODE -ne 0) { throw 'Application directory creation failed' }
+foreach ($name in @('__init__.py','wifi.py','service.py','resident.py','launch.py','install.py')) {
+    & scp (Join-Path $PSScriptRoot $name) "${Board}:$RemoteRoot/src/app/$name"
+    if ($LASTEXITCODE -ne 0) { throw "Application copy failed: $name" }
+}
+foreach ($name in @('qml','icons')) {
+    & scp -r (Join-Path $PSScriptRoot $name) "${Board}:$RemoteRoot/src/app/"
+    if ($LASTEXITCODE -ne 0) { throw "Asset copy failed: $name" }
+}
+& ssh $Board "python3 -m compileall -q $RemoteRoot/src/app"
+if ($LASTEXITCODE -ne 0) { throw 'Application compilation failed' }
+$installArgs = if ($VendorIcons) { ' --vendor-icons' } else { '' }
+& ssh $Board "python3 $RemoteRoot/src/app/install.py --root $RemoteRoot$installArgs"
+if ($LASTEXITCODE -ne 0) { throw 'Application icon registration failed' }
+Write-Output "Native application installed: $RemoteRoot"
+Write-Output "Launch: python3 $RemoteRoot/src/app/launch.py --root $RemoteRoot"

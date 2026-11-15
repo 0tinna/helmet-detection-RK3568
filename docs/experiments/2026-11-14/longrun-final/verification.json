@@ -1,0 +1,174 @@
+{
+  "passed": true,
+  "errors": [],
+  "metrics": {
+    "capture_to_output_ms": {
+      "count": 17590,
+      "mean": 115.26307567259818,
+      "p50": 112.34526699990965,
+      "p95": 166.36011835071258,
+      "p99": 203.23449157483995
+    },
+    "sink_ms": {
+      "count": 17590,
+      "mean": 0.025640860781806343,
+      "p50": 0.02420899545541033,
+      "p95": 0.036751000152435154,
+      "p99": 0.06854400271549821
+    },
+    "capture_to_sink_complete_ms": {
+      "count": 17590,
+      "mean": 115.6020609773709,
+      "p50": 112.70337349924375,
+      "p95": 166.6929173032258,
+      "p99": 203.55225608233016
+    },
+    "prep_ms": {
+      "count": 17591,
+      "mean": 12.972709863923617,
+      "p50": 13.192999998864252,
+      "p95": 17.52175849469495,
+      "p99": 20.79604979662689
+    },
+    "infer_ms": {
+      "count": 17591,
+      "mean": 48.39191022950505,
+      "p50": 45.055479000438936,
+      "p95": 72.17350450082449,
+      "p99": 79.77029529574786
+    },
+    "post_ms": {
+      "count": 17591,
+      "mean": 29.55868377516403,
+      "p50": 28.76869199826615,
+      "p95": 43.317369498254266,
+      "p99": 54.31034299836014
+    }
+  },
+  "timeline": {
+    "policy": {
+      "startup_allowance_seconds": 10.0,
+      "finalization_allowance_seconds": 5.0,
+      "session_event_agreement_seconds": 1.0,
+      "duration_rounding_seconds": 0.1,
+      "resource_interval_seconds": 1.0,
+      "resource_gap_periods": 3.0,
+      "frame_gap_periods": 5.0,
+      "minimum_frame_gap_seconds": 1.0,
+      "timing_rounding_ms": 0.02
+    },
+    "streams": {
+      "detector capture": {
+        "count": 17591,
+        "first": 36533.918491634,
+        "last": 38333.838215747,
+        "start_offset_seconds": 0.051084124999761116,
+        "end_offset_seconds": 0.09763557300175307,
+        "max_gap_seconds": 0.262428670997906,
+        "allowed_gap_seconds": 1.0
+      },
+      "detector processed": {
+        "count": 17591,
+        "first": 36534.024229394,
+        "last": 38333.917901988,
+        "start_offset_seconds": 0.1568218850006815,
+        "end_offset_seconds": 0.017949331995623652,
+        "max_gap_seconds": 0.2918285420018947,
+        "allowed_gap_seconds": 1.0
+      },
+      "output dispatch": {
+        "count": 17590,
+        "first": 36534.029742913,
+        "last": 38333.852445652,
+        "start_offset_seconds": 0.1623354039984406,
+        "end_offset_seconds": 0.08340566799597582,
+        "max_gap_seconds": 0.29076626500318525,
+        "allowed_gap_seconds": 1.0
+      },
+      "sink completion": {
+        "count": 17590,
+        "first": 36534.029995503,
+        "last": 38333.852781952,
+        "start_offset_seconds": 0.1625879939965671,
+        "end_offset_seconds": 0.08306936799635878,
+        "max_gap_seconds": 0.2906630130019039,
+        "allowed_gap_seconds": 1.0
+      },
+      "resources": {
+        "count": 1760,
+        "first": 36532.257269523,
+        "last": 38333.712706172,
+        "start_offset_seconds": -1.6101379860047018,
+        "end_offset_seconds": 0.22314514799654717,
+        "max_gap_seconds": 1.162232048001897,
+        "allowed_gap_seconds": 3.0
+      },
+      "resource cpu_percent": {
+        "count": 1760,
+        "first": 36532.257269523,
+        "last": 38333.712706172,
+        "start_offset_seconds": -1.6101379860047018,
+        "end_offset_seconds": 0.22314514799654717,
+        "max_gap_seconds": 1.162232048001897,
+        "allowed_gap_seconds": 3.0
+      },
+      "resource rss_bytes": {
+        "count": 1760,
+        "first": 36532.257269523,
+        "last": 38333.712706172,
+        "start_offset_seconds": -1.6101379860047018,
+        "end_offset_seconds": 0.22314514799654717,
+        "max_gap_seconds": 1.162232048001897,
+        "allowed_gap_seconds": 3.0
+      },
+      "resource temperature_c": {
+        "count": 1760,
+        "first": 36532.257269523,
+        "last": 38333.712706172,
+        "start_offset_seconds": -1.6101379860047018,
+        "end_offset_seconds": 0.22314514799654717,
+        "max_gap_seconds": 1.162232048001897,
+        "allowed_gap_seconds": 3.0
+      },
+      "resource npu_frequency_hz": {
+        "count": 1760,
+        "first": 36532.257269523,
+        "last": 38333.712706172,
+        "start_offset_seconds": -1.6101379860047018,
+        "end_offset_seconds": 0.22314514799654717,
+        "max_gap_seconds": 1.162232048001897,
+        "allowed_gap_seconds": 3.0
+      }
+    },
+    "active_start": 36533.867407509,
+    "active_stop": 38333.93585132,
+    "observed_active_seconds": 1800.0684438109965
+  },
+  "cleanup_evidence": {
+    "direct_recorded": false,
+    "accepted": false,
+    "basis": "legacy normal stop is indirect evidence only",
+    "errors": []
+  },
+  "observed_rates": {
+    "captured_fps": 9.794092858944705,
+    "detected_fps": 9.772426970033823,
+    "output_fps": 9.771871434420722,
+    "displayed_fps": 0.0
+  },
+  "throughput_target_met": false,
+  "actual_thresholds": {
+    "conf": 0.35,
+    "nms": 0.45,
+    "skip": 0
+  },
+  "scope": "continuity/inventory/freshness verification; throughput and physical-camera gates remain separate",
+  "snapshot_integrity": "not in original hashed-core-log inventory; not asserted by this validator",
+  "physical_camera_tested": false,
+  "ssh_survival": "operator_observed_alive_after_disconnect",
+  "verifier": {
+    "path": "D:\\Workplace\\RK3568\\docs\\experiments\\2026-11-14\\verify_runtime.py",
+    "sha256": "02a22caf13a6c514f372f41e3d712fbbda03edf99590a6b1e0bb556e23ae9638",
+    "bytes": 85635
+  }
+}

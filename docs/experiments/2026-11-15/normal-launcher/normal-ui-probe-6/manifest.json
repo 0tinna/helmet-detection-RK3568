@@ -1,0 +1,439 @@
+{
+  "kind": "normal-launcher-observation-v1",
+  "run_id": "normal-ui-probe-6",
+  "mode": "probe",
+  "command": [
+    "/opt/ui/src/apps/helmet_app",
+    "--smoke-seconds",
+    "30"
+  ],
+  "wrapper_target": "/userdata/helmet-validation/20261115-native-app-v2/vendor-entry/helmet_app",
+  "source_hashes_before": {
+    "/opt/ui/src/apps/helmet_app": "cf5523c368fd518ba879e15e68bef1be20462ecb3fec802d72bf34679fb98c40",
+    "input/construction-replay.avi": "f22897e1ebb40cc919caab335ee4b436d28ebaf0a138eb8b16c63166184af5cc",
+    "models/helmet-640-640.rknn": "23dac43065664447272b8a032f7c35a00269e5b7d63e210ae10d8181a7a3bb32",
+    "models/helmet_416x416.rknn": "7e0eefe4bfe86627bb6b58161cacca10912e0dbe1ba2513f58d091c40b26cd48",
+    "models/helmet_512x288.rknn": "4b8d428aede96897590ed143200412beed882908e3b30ec63a5eae38f0deb6af",
+    "models/helmet_512x512.rknn": "82e43f1fe1dc755ab8d421c819fdef311efdd1b64a7b1913901f6aef2b9460d3",
+    "models/helmet_640x384.rknn": "ba951c5b824e66a660c08daa6f6779cf4119130c4c2106f365ee337e3c92f272",
+    "models/helmet_640x640.rknn": "2c0df64c4e12440e4e84c16294df53e440c263d9570f4447b2d26b0f5916edf3",
+    "src/alarm.py": "d3e6d68c7b17f5508f0d697e96998f556f224f9f5067169d66c35972b3a023d2",
+    "src/app/__init__.py": "3ca294319d48aa183e5822b0c08426253434101d7c1fc85ae21b74b756784cd1",
+    "src/app/icons/helmet.svg": "10274b399ae404d159fcd9b2d0f2464e5f8f37b13399c4a8c42c04c7ede08bc1",
+    "src/app/icons/wifi.svg": "ffe6f812764ecc8730863294ac89a2b5c1dcd8f6e7902b57950c6169088f2e3d",
+    "src/app/install.py": "229e351cf73b6d49ff5ae1bf445e86585b9af22dbbe89cf70759fbf1fdc71ae7",
+    "src/app/launch.py": "8db80c3cdb10519812b4d2b943f1542042a75c9bb67f74a2bfa374ee56ebe2ac",
+    "src/app/qml/Main.qml": "6ac6b2e30c2e7ca29a9bc3f1ecb112ac4cc907b33a573664ed7476aeb11d504c",
+    "src/app/service.py": "9a2f7454db6fb48ebcf7f5fd301a831817374c2be2fc5c9036af60feb40df1f7",
+    "src/app/wifi.py": "648b714137b18538f8f8e6a355565b07aec8fb01270c3deed5c01eba30249468",
+    "src/benchmark.py": "15dcff515fc9c7332dd5eefd40502f38b0a02e6ab6a62e1d0ec50ce593ab4859",
+    "src/dump_dets.py": "c21b4a1d1c4ee4e0428cb19d16b560c9c7dfdef2c34b52f62195b836fca90e3f",
+    "src/helmet_realtime.py": "15794ebc40fdd1736d9c80d5504d17aa91e1de972bb92bb30a9eeb026309e46d",
+    "src/output_sinks.py": "c2f65642d38f8994200503b242ca93c8f0af105dc5ad3b13650e9ff83c7003cf",
+    "src/pipeline_runtime.py": "dee30d6b71c9e8d3e697657fb309fb22e8fb47fafd366d60b555466cf56152e9",
+    "src/sources.py": "ea89d66fdefb2bc429ca74efa0437a3c0a8aab672a856078fc15afccfe3b31c9",
+    "src/telemetry.py": "da4522206053712484a21f80bb26d6424649a263f606f35fa16070be51a83b9e",
+    "src/validate_comparison.py": "3b65f9e561084aa7f6199cc7cd413b6426f6ac962f39729ac0668e50350c2860",
+    "src/yolo_post.py": "fae57bbfa1d47d5ab16ef444096fab4fe8e14701c5ec10d87b1ec518282b0505"
+  },
+  "selection": null,
+  "failures": [],
+  "identities": {
+    "launcher": {
+      "pid": 23554,
+      "starttime": 8409279,
+      "argv": [
+        "/usr/bin/python3",
+        "/userdata/helmet-validation/20261115-native-app-v2/src/app/launch.py",
+        "--root",
+        "/userdata/helmet-validation/20261115-native-app-v2",
+        "--tab",
+        "detection",
+        "--smoke-seconds",
+        "30"
+      ]
+    },
+    "service": {
+      "pid": 23555,
+      "starttime": 8409311,
+      "argv": [
+        "/usr/bin/python3",
+        "/userdata/helmet-validation/20261115-native-app-v2/src/app/service.py",
+        "--root",
+        "/userdata/helmet-validation/20261115-native-app-v2",
+        "--port",
+        "0",
+        "--token-file",
+        "/userdata/helmet-validation/20261115-native-app-v2/app-state/session-y3y7f4w1/token",
+        "--ready-file",
+        "/userdata/helmet-validation/20261115-native-app-v2/app-state/session-y3y7f4w1/ready.json"
+      ]
+    },
+    "ui": {
+      "pid": 23557,
+      "starttime": 8409526,
+      "argv": [
+        "/usr/bin/qmlscene",
+        "/userdata/helmet-validation/20261115-native-app-v2/app-state/session-y3y7f4w1/App.qml"
+      ]
+    },
+    "observer": {
+      "pid": 23553,
+      "starttime": 8409020
+    }
+  },
+  "keys": {
+    "probe_run_id": "normal-ui-probe-5",
+    "probe_screen_sha256": "ada1bfcb621df6ad1fd546b2139ccf1bccec3eb6b4951bb51c225680177c38d5",
+    "actions": [
+      {
+        "key": "Escape",
+        "pause_seconds": 2
+      },
+      {
+        "key": "Escape",
+        "pause_seconds": 2
+      },
+      {
+        "key": "Tab",
+        "pause_seconds": 0.2
+      },
+      {
+        "key": "Tab",
+        "pause_seconds": 0.2
+      },
+      {
+        "key": "Tab",
+        "pause_seconds": 0.2
+      },
+      {
+        "key": "Down",
+        "pause_seconds": 0.2
+      },
+      {
+        "key": "Tab",
+        "pause_seconds": 0.2
+      },
+      {
+        "key": "Down",
+        "pause_seconds": 0.2
+      },
+      {
+        "key": "Tab",
+        "pause_seconds": 0.2
+      },
+      {
+        "key": "Down",
+        "pause_seconds": 0.2
+      }
+    ]
+  },
+  "probe_evidence": {
+    "kind": "normal-launcher-offline-verification-v1",
+    "directory": "/userdata/helmet-validation/normal-ui-probe-5",
+    "passed": true,
+    "failures": [],
+    "gates": {
+      "thirty_minutes_observed": false,
+      "normal_cleanup": true,
+      "native_render": true,
+      "probe_no_detection": true
+    },
+    "scope": "normal-launcher keyboard navigation probe; no NPU acceptance",
+    "run_id": "normal-ui-probe-5",
+    "mode": "probe",
+    "render": {
+      "sha256": "ada1bfcb621df6ad1fd546b2139ccf1bccec3eb6b4951bb51c225680177c38d5",
+      "dimensions": [
+        720,
+        968
+      ],
+      "scope": "Qt screenRoot only; excludes header and physical display",
+      "receipt": {
+        "saved": true,
+        "tab": 0,
+        "valid": false,
+        "previewVisible": false,
+        "frameId": null,
+        "keyboardVisible": false,
+        "width": 720,
+        "height": 1120
+      }
+    },
+    "resources": {
+      "samples": 35,
+      "observed_max_sample_gap_seconds": 2.0800293119973503,
+      "scope": "descriptive process RSS/CPU/threads/FD; no leak threshold or acceptance claim",
+      "windows": {
+        "first_60_seconds": {
+          "samples": 35,
+          "observed_seconds": 30.26536751499225,
+          "roles": {
+            "launcher": {
+              "rss_bytes": {
+                "first": 10428416,
+                "last": 10428416,
+                "min": 10428416,
+                "max": 10428416
+              },
+              "threads": {
+                "first": 1,
+                "last": 1,
+                "min": 1,
+                "max": 1
+              },
+              "fds": {
+                "first": 6,
+                "last": 6,
+                "min": 6,
+                "max": 6
+              },
+              "cpu_ticks_delta": 17
+            },
+            "service": {
+              "rss_bytes": {
+                "first": 63889408,
+                "last": 63905792,
+                "min": 63889408,
+                "max": 63905792
+              },
+              "threads": {
+                "first": 2,
+                "last": 2,
+                "min": 2,
+                "max": 2
+              },
+              "fds": {
+                "first": 4,
+                "last": 4,
+                "min": 4,
+                "max": 4
+              },
+              "cpu_ticks_delta": 118
+            },
+            "ui": {
+              "rss_bytes": {
+                "first": 28213248,
+                "last": 152719360,
+                "min": 28213248,
+                "max": 159047680
+              },
+              "threads": {
+                "first": 1,
+                "last": 17,
+                "min": 1,
+                "max": 17
+              },
+              "fds": {
+                "first": 7,
+                "last": 32,
+                "min": 7,
+                "max": 33
+              },
+              "cpu_ticks_delta": 424
+            },
+            "observer": {
+              "rss_bytes": {
+                "first": 67256320,
+                "last": 67256320,
+                "min": 67256320,
+                "max": 67256320
+              },
+              "threads": {
+                "first": 1,
+                "last": 1,
+                "min": 1,
+                "max": 1
+              },
+              "fds": {
+                "first": 4,
+                "last": 4,
+                "min": 4,
+                "max": 5
+              },
+              "cpu_ticks_delta": 161
+            }
+          }
+        },
+        "last_300_seconds": {
+          "samples": 35,
+          "observed_seconds": 30.26536751499225,
+          "roles": {
+            "launcher": {
+              "rss_bytes": {
+                "first": 10428416,
+                "last": 10428416,
+                "min": 10428416,
+                "max": 10428416
+              },
+              "threads": {
+                "first": 1,
+                "last": 1,
+                "min": 1,
+                "max": 1
+              },
+              "fds": {
+                "first": 6,
+                "last": 6,
+                "min": 6,
+                "max": 6
+              },
+              "cpu_ticks_delta": 17
+            },
+            "service": {
+              "rss_bytes": {
+                "first": 63889408,
+                "last": 63905792,
+                "min": 63889408,
+                "max": 63905792
+              },
+              "threads": {
+                "first": 2,
+                "last": 2,
+                "min": 2,
+                "max": 2
+              },
+              "fds": {
+                "first": 4,
+                "last": 4,
+                "min": 4,
+                "max": 4
+              },
+              "cpu_ticks_delta": 118
+            },
+            "ui": {
+              "rss_bytes": {
+                "first": 28213248,
+                "last": 152719360,
+                "min": 28213248,
+                "max": 159047680
+              },
+              "threads": {
+                "first": 1,
+                "last": 17,
+                "min": 1,
+                "max": 17
+              },
+              "fds": {
+                "first": 7,
+                "last": 32,
+                "min": 7,
+                "max": 33
+              },
+              "cpu_ticks_delta": 424
+            },
+            "observer": {
+              "rss_bytes": {
+                "first": 67256320,
+                "last": 67256320,
+                "min": 67256320,
+                "max": 67256320
+              },
+              "threads": {
+                "first": 1,
+                "last": 1,
+                "min": 1,
+                "max": 1
+              },
+              "fds": {
+                "first": 4,
+                "last": 4,
+                "min": 4,
+                "max": 5
+              },
+              "cpu_ticks_delta": 161
+            }
+          }
+        }
+      }
+    },
+    "unverified": [
+      "physical camera",
+      "human touch",
+      "independent 85% accuracy",
+      "continuous physical display",
+      "WiFi authentication/DHCP/save",
+      "independent direct SDK release receipt",
+      "no-leak acceptance"
+    ]
+  },
+  "decoder_preparation": {
+    "request_started": 84092.467522064,
+    "response_finished": 84092.468213915,
+    "versions": {
+      "cv2": "4.5.4",
+      "numpy": "1.21.2"
+    },
+    "scope": "actual decoder dependency imports before the vendor process/native Qt timer"
+  },
+  "helper_sha256": {
+    "native_keyboard.py": "de9fd3dadf52fb96acce895f343d5e36dd1c3df381063182ab87d225be32b18b",
+    "verify_normal_launcher.py": "1b960e160e69625922cff00550fb413c1ce640cc4eaf7bce61449aaad124dd57"
+  },
+  "sampling_schedule_seconds": {
+    "status": 1,
+    "preview": 5,
+    "resources": 1
+  },
+  "runtime": {
+    "python": "3.10.5 (main, Jul  5 2024, 11:06:31) [GCC 10.4.0]",
+    "uname": [
+      "Linux",
+      "ATK-DLRK3568",
+      "5.10.160",
+      "#1 SMP Fri Jul 5 10:49:28 CST 2024",
+      "aarch64"
+    ],
+    "clock_ticks_per_second": 100,
+    "page_size": 4096
+  },
+  "screen_scope": "Qt screenRoot only; no physical display or human touch evidence",
+  "observation_load": "normal bounded App telemetry plus external HTTP/proc observer; not comparable as a single optimization to older full-frame logging",
+  "focus_scope": "PID/starttime checks prove session ownership; actual probe screenshot and selected results check UI input; no compositor focus attestation",
+  "npu_concurrency_scope": "normal launcher lock plus known inference argv preflight; root serializes board experiments",
+  "observer_started": 84092.793608965,
+  "session": "/userdata/helmet-validation/20261115-native-app-v2/app-state/session-y3y7f4w1",
+  "uinput_name": "helmet-normal-74eadaf2e6bc4b14b8725fdc4cab7267",
+  "source_hashes_after": {
+    "/opt/ui/src/apps/helmet_app": "cf5523c368fd518ba879e15e68bef1be20462ecb3fec802d72bf34679fb98c40",
+    "input/construction-replay.avi": "f22897e1ebb40cc919caab335ee4b436d28ebaf0a138eb8b16c63166184af5cc",
+    "models/helmet-640-640.rknn": "23dac43065664447272b8a032f7c35a00269e5b7d63e210ae10d8181a7a3bb32",
+    "models/helmet_416x416.rknn": "7e0eefe4bfe86627bb6b58161cacca10912e0dbe1ba2513f58d091c40b26cd48",
+    "models/helmet_512x288.rknn": "4b8d428aede96897590ed143200412beed882908e3b30ec63a5eae38f0deb6af",
+    "models/helmet_512x512.rknn": "82e43f1fe1dc755ab8d421c819fdef311efdd1b64a7b1913901f6aef2b9460d3",
+    "models/helmet_640x384.rknn": "ba951c5b824e66a660c08daa6f6779cf4119130c4c2106f365ee337e3c92f272",
+    "models/helmet_640x640.rknn": "2c0df64c4e12440e4e84c16294df53e440c263d9570f4447b2d26b0f5916edf3",
+    "src/alarm.py": "d3e6d68c7b17f5508f0d697e96998f556f224f9f5067169d66c35972b3a023d2",
+    "src/app/__init__.py": "3ca294319d48aa183e5822b0c08426253434101d7c1fc85ae21b74b756784cd1",
+    "src/app/icons/helmet.svg": "10274b399ae404d159fcd9b2d0f2464e5f8f37b13399c4a8c42c04c7ede08bc1",
+    "src/app/icons/wifi.svg": "ffe6f812764ecc8730863294ac89a2b5c1dcd8f6e7902b57950c6169088f2e3d",
+    "src/app/install.py": "229e351cf73b6d49ff5ae1bf445e86585b9af22dbbe89cf70759fbf1fdc71ae7",
+    "src/app/launch.py": "8db80c3cdb10519812b4d2b943f1542042a75c9bb67f74a2bfa374ee56ebe2ac",
+    "src/app/qml/Main.qml": "6ac6b2e30c2e7ca29a9bc3f1ecb112ac4cc907b33a573664ed7476aeb11d504c",
+    "src/app/service.py": "9a2f7454db6fb48ebcf7f5fd301a831817374c2be2fc5c9036af60feb40df1f7",
+    "src/app/wifi.py": "648b714137b18538f8f8e6a355565b07aec8fb01270c3deed5c01eba30249468",
+    "src/benchmark.py": "15dcff515fc9c7332dd5eefd40502f38b0a02e6ab6a62e1d0ec50ce593ab4859",
+    "src/dump_dets.py": "c21b4a1d1c4ee4e0428cb19d16b560c9c7dfdef2c34b52f62195b836fca90e3f",
+    "src/helmet_realtime.py": "15794ebc40fdd1736d9c80d5504d17aa91e1de972bb92bb30a9eeb026309e46d",
+    "src/output_sinks.py": "c2f65642d38f8994200503b242ca93c8f0af105dc5ad3b13650e9ff83c7003cf",
+    "src/pipeline_runtime.py": "dee30d6b71c9e8d3e697657fb309fb22e8fb47fafd366d60b555466cf56152e9",
+    "src/sources.py": "ea89d66fdefb2bc429ca74efa0437a3c0a8aab672a856078fc15afccfe3b31c9",
+    "src/telemetry.py": "da4522206053712484a21f80bb26d6424649a263f606f35fa16070be51a83b9e",
+    "src/validate_comparison.py": "3b65f9e561084aa7f6199cc7cd413b6426f6ac962f39729ac0668e50350c2860",
+    "src/yolo_post.py": "fae57bbfa1d47d5ab16ef444096fab4fe8e14701c5ec10d87b1ec518282b0505"
+  },
+  "observer_finished": 84128.018224846,
+  "evidence_sha256": {
+    "exit.json": "0156cebfe71769b4b26948f5f4a708f16c032c3376b520a2db1c45d210126bfd",
+    "http.jsonl": "778858fea23a39df00f8b9dd154223d11426463f83837a0bbf4131b6900fc6a4",
+    "input.jsonl": "3865be1c2f1f6c829fd15327ff55c6ada5e197ad2bc384bae9369eaf7e6cd0bb",
+    "launcher.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "processes.json": "277312a0c419c952652ca03652a4dcd2ff23d41828950db54d6b16187b667d48",
+    "ready.json": "7173ff59a72701abc07091b4353c226020e2108778c37777a8f59896f1a39093",
+    "resources.jsonl": "95385f3a250c86d51f29f14458e9654fc051b64251c63232f51bd4071056c426",
+    "screen.png": "5ef72336f307e5541727a14486a2e42a3aaed0b02ecd12654d8d85bedbe02f19",
+    "service.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "terminal.json": "cefcf9b7c02880b8bc98f7032b089eb15f2854b480b63314a67223556b58552e",
+    "ui.log": "157e491e7e87a702e28b6f39aa854f786482e59c8fb6243a88890e1e220a6526"
+  }
+}

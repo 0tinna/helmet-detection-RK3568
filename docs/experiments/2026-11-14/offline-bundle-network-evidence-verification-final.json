@@ -1,0 +1,322 @@
+{
+  "status": "verified",
+  "scope": "final frozen32-file runtime package on prepared board; real NPU replay in temporary network-denied child namespace",
+  "archive": "dist/helmet-offline-20261114-final.zip",
+  "archive_sha256": "480e7b1cc2c2f37697890e80d44defbc084275610506817043e3bed46853fb2b",
+  "archive_bytes": 39764098,
+  "bundle_manifest_sha256": "96c0b592b72773b4392f3bbb664a533a5bfc0b8725e3c040cbd7d21482a29e6e",
+  "payload_files": 32,
+  "models": {
+    "helmet-640-640.rknn": "23dac43065664447272b8a032f7c35a00269e5b7d63e210ae10d8181a7a3bb32",
+    "helmet_416x416.rknn": "7e0eefe4bfe86627bb6b58161cacca10912e0dbe1ba2513f58d091c40b26cd48",
+    "helmet_512x288.rknn": "4b8d428aede96897590ed143200412beed882908e3b30ec63a5eae38f0deb6af",
+    "helmet_512x512.rknn": "82e43f1fe1dc755ab8d421c819fdef311efdd1b64a7b1913901f6aef2b9460d3",
+    "helmet_640x384.rknn": "ba951c5b824e66a660c08daa6f6779cf4119130c4c2106f365ee337e3c92f272",
+    "helmet_640x640.rknn": "2c0df64c4e12440e4e84c16294df53e440c263d9570f4447b2d26b0f5916edf3"
+  },
+  "current_source_comparison": {
+    "src/alarm.py": {
+      "repository_path": "helmet/alarm.py",
+      "sha256": "d3e6d68c7b17f5508f0d697e96998f556f224f9f5067169d66c35972b3a023d2",
+      "matches_current_source": true
+    },
+    "src/benchmark.py": {
+      "repository_path": "helmet/benchmark.py",
+      "sha256": "15dcff515fc9c7332dd5eefd40502f38b0a02e6ab6a62e1d0ec50ce593ab4859",
+      "matches_current_source": true
+    },
+    "src/dump_dets.py": {
+      "repository_path": "helmet/dump_dets.py",
+      "sha256": "c21b4a1d1c4ee4e0428cb19d16b560c9c7dfdef2c34b52f62195b836fca90e3f",
+      "matches_current_source": true
+    },
+    "src/helmet_realtime.py": {
+      "repository_path": "helmet/helmet_realtime.py",
+      "sha256": "15794ebc40fdd1736d9c80d5504d17aa91e1de972bb92bb30a9eeb026309e46d",
+      "matches_current_source": true
+    },
+    "src/output_sinks.py": {
+      "repository_path": "helmet/output_sinks.py",
+      "sha256": "c2f65642d38f8994200503b242ca93c8f0af105dc5ad3b13650e9ff83c7003cf",
+      "matches_current_source": true
+    },
+    "src/pc/analyze_errors.py": {
+      "repository_path": "helmet/pc/analyze_errors.py",
+      "sha256": "863b7115d31d599eb72c5a74748852f39b116e629827a2b9091e16a5be02bc90",
+      "matches_current_source": true
+    },
+    "src/pc/convert.py": {
+      "repository_path": "helmet/pc/convert.py",
+      "sha256": "86d6fa0e865123995b122edec3d490ccf005467c28ca244cda0493621b718c7b",
+      "matches_current_source": true
+    },
+    "src/pc/dataset_tools.py": {
+      "repository_path": "helmet/pc/dataset_tools.py",
+      "sha256": "921281aa3e5bd9eb6dc441861bfb2d75c9ea6bb18969e8abf24fe5f122aade19",
+      "matches_current_source": true
+    },
+    "src/pc/eval_map.py": {
+      "repository_path": "helmet/pc/eval_map.py",
+      "sha256": "81ac033ef0dd61eaacd5c740fbc1e875aa3b43ce98ebfc63e5f59498a9bf1ec8",
+      "matches_current_source": true
+    },
+    "src/pipeline_runtime.py": {
+      "repository_path": "helmet/pipeline_runtime.py",
+      "sha256": "dee30d6b71c9e8d3e697657fb309fb22e8fb47fafd366d60b555466cf56152e9",
+      "matches_current_source": true
+    },
+    "src/sources.py": {
+      "repository_path": "helmet/sources.py",
+      "sha256": "ea89d66fdefb2bc429ca74efa0437a3c0a8aab672a856078fc15afccfe3b31c9",
+      "matches_current_source": true
+    },
+    "src/telemetry.py": {
+      "repository_path": "helmet/telemetry.py",
+      "sha256": "da4522206053712484a21f80bb26d6424649a263f606f35fa16070be51a83b9e",
+      "matches_current_source": true
+    },
+    "src/validate_comparison.py": {
+      "repository_path": "helmet/validate_comparison.py",
+      "sha256": "3b65f9e561084aa7f6199cc7cd413b6426f6ac962f39729ac0668e50350c2860",
+      "matches_current_source": true
+    },
+    "src/yolo_post.py": {
+      "repository_path": "helmet/yolo_post.py",
+      "sha256": "fae57bbfa1d47d5ab16ef444096fab4fe8e14701c5ec10d87b1ec518282b0505",
+      "matches_current_source": true
+    }
+  },
+  "network_namespace": "net:[4026532925]",
+  "interfaces": "lo               DOWN",
+  "unshare": "CLONE_NEWNET",
+  "host_network_changed": false,
+  "command_exits": [
+    0,
+    0,
+    0
+  ],
+  "elapsed_seconds": 10.068886485001713,
+  "counts": {
+    "captured": 79,
+    "consumed": 79,
+    "detected": 79,
+    "overwritten": 0,
+    "active_skip": 0,
+    "read_failure": 0,
+    "displayed": 0,
+    "output": 78,
+    "output_overwritten": 0,
+    "detection_failure": 0,
+    "pending_capture": 0,
+    "pending_output": 1
+  },
+  "record_counts": {
+    "detection": 79,
+    "output": 78
+  },
+  "resource_records": 9,
+  "resources_equal_session": true,
+  "snapshots": [
+    {
+      "file": "snapshots/alarm_6_1794654600623924038_06d8c2de.json",
+      "sha256": "9797561cb0a4ba9963c23ca987a251285fc9b8f3dfee1cb3d824707c8f993fc5",
+      "image_sha256": "1cffa7327b32b15273fa4d82ba8ce24ee1489223d9352ba19ae54452a29ddca1",
+      "reason": "alarm",
+      "frame_id": 6
+    },
+    {
+      "file": "snapshots/periodic_1_1794654600118090147_37137127.json",
+      "sha256": "2cc275eb6249e9f7283a721c6d44705bd484ca604bea48d468f6760fe46e780d",
+      "image_sha256": "2ad5945a7bb7b68e1ac8aaa0d8b796c41ff5a0ca040c22c61fb0c3871c9d1816",
+      "reason": "periodic",
+      "frame_id": 1
+    },
+    {
+      "file": "snapshots/periodic_22_1794654602255061098_3f0b23ab.json",
+      "sha256": "f8bd14cbd5118761e3d8b8a20db27c78c84f30f768acf6d04bc7c6702631ddca",
+      "image_sha256": "860f4c156936ab99f2cceea2dfe0716cda4d5487bbf1972fc4c142e7e53022ee",
+      "reason": "periodic",
+      "frame_id": 22
+    },
+    {
+      "file": "snapshots/periodic_43_1794654604344882156_50ccd6cb.json",
+      "sha256": "9b10f71f45463be86aa74b6da3600bcffc7eb47a456ccfc982bc88d91ece23e1",
+      "image_sha256": "33efc57bb7ca0a52653c4ac0b303dafa1332f8d5a384e6bf8a8fc8c038a74f36",
+      "reason": "periodic",
+      "frame_id": 43
+    },
+    {
+      "file": "snapshots/periodic_64_1794654606461764483_878301d3.json",
+      "sha256": "4e32b0c685278ce645a63c16853048de023581b836f5c5fbc48688b3a53dea48",
+      "image_sha256": "320188b77959438277d20d384283db2cc77a33fcbb990a4b881bc1a03e8437bf",
+      "reason": "periodic",
+      "frame_id": 64
+    }
+  ],
+  "raw_sha256": {
+    "manifest.json": "70a6ff260e9f19e63ae7c99036416c3d3034095fa4272a09b1fa04e696f1bab5",
+    "session.json": "131b1cb5da9b7c76cf1fcb1a3cea0498a39f00d8b715171f4ad02af478861025",
+    "frames.jsonl": "02f63e6a90de81588da7540cf5a89763873cd134eebbd4331d88a4451c7aa5cf",
+    "frames.jsonl.resources.jsonl": "43342827f1dce73959d7964d0becb3fc3ee601db0fb87b6b63c4db369b62c3fb"
+  },
+  "input_sha256": "a672e54b698710b9ff3081273fced9b32c671976203f568a3ef505dce1c5936e",
+  "offline_fresh_board_install_complete": false,
+  "physical_camera_accepted": false,
+  "display_exercised": false,
+  "longrun_accepted": false,
+  "all_repository_payload_comparison": {
+    "input/1.jpg": {
+      "repository_path": "models/1.jpg",
+      "sha256": "a672e54b698710b9ff3081273fced9b32c671976203f568a3ef505dce1c5936e",
+      "matches_current_source": true
+    },
+    "models/helmet-640-640.rknn": {
+      "repository_path": "models/helmet-640-640.rknn",
+      "sha256": "23dac43065664447272b8a032f7c35a00269e5b7d63e210ae10d8181a7a3bb32",
+      "matches_current_source": true
+    },
+    "models/helmet_416x416.rknn": {
+      "repository_path": "helmet/models/helmet_416x416.rknn",
+      "sha256": "7e0eefe4bfe86627bb6b58161cacca10912e0dbe1ba2513f58d091c40b26cd48",
+      "matches_current_source": true
+    },
+    "models/helmet_512x288.rknn": {
+      "repository_path": "helmet/models/helmet_512x288.rknn",
+      "sha256": "4b8d428aede96897590ed143200412beed882908e3b30ec63a5eae38f0deb6af",
+      "matches_current_source": true
+    },
+    "models/helmet_512x512.rknn": {
+      "repository_path": "helmet/models/helmet_512x512.rknn",
+      "sha256": "82e43f1fe1dc755ab8d421c819fdef311efdd1b64a7b1913901f6aef2b9460d3",
+      "matches_current_source": true
+    },
+    "models/helmet_640x384.rknn": {
+      "repository_path": "helmet/models/helmet_640x384.rknn",
+      "sha256": "ba951c5b824e66a660c08daa6f6779cf4119130c4c2106f365ee337e3c92f272",
+      "matches_current_source": true
+    },
+    "models/helmet_640x640.rknn": {
+      "repository_path": "helmet/models/helmet_640x640.rknn",
+      "sha256": "2c0df64c4e12440e4e84c16294df53e440c263d9570f4447b2d26b0f5916edf3",
+      "matches_current_source": true
+    },
+    "provenance/community-model-provenance.json": {
+      "repository_path": "datasets/provenance/community-model-provenance.json",
+      "sha256": "c8cbdf3e6e8548cea97951cbaefc8922ee037ad6510f5c0398427d39dc33ab0f",
+      "matches_current_source": true
+    },
+    "provenance/coordinate-and-mapping-contract.json": {
+      "repository_path": "datasets/provenance/coordinate-and-mapping-contract.json",
+      "sha256": "196a0031289e69f74478f523b2975135aa860c26af690621989d18e05a20f1e6",
+      "matches_current_source": true
+    },
+    "requirements-board.txt": {
+      "repository_path": "requirements-board.txt",
+      "sha256": "a007108f5910d3fc93b76549fa334c71f392bcfd7def7937b96ead778b6fc158",
+      "matches_current_source": true
+    },
+    "requirements-host.txt": {
+      "repository_path": "requirements-host.txt",
+      "sha256": "743e49c4885dd1018cebe897192718366834370503d2c749dd8a3321b472d396",
+      "matches_current_source": true
+    },
+    "src/alarm.py": {
+      "repository_path": "helmet/alarm.py",
+      "sha256": "d3e6d68c7b17f5508f0d697e96998f556f224f9f5067169d66c35972b3a023d2",
+      "matches_current_source": true
+    },
+    "src/benchmark.py": {
+      "repository_path": "helmet/benchmark.py",
+      "sha256": "15dcff515fc9c7332dd5eefd40502f38b0a02e6ab6a62e1d0ec50ce593ab4859",
+      "matches_current_source": true
+    },
+    "src/dump_dets.py": {
+      "repository_path": "helmet/dump_dets.py",
+      "sha256": "c21b4a1d1c4ee4e0428cb19d16b560c9c7dfdef2c34b52f62195b836fca90e3f",
+      "matches_current_source": true
+    },
+    "src/helmet_realtime.py": {
+      "repository_path": "helmet/helmet_realtime.py",
+      "sha256": "15794ebc40fdd1736d9c80d5504d17aa91e1de972bb92bb30a9eeb026309e46d",
+      "matches_current_source": true
+    },
+    "src/output_sinks.py": {
+      "repository_path": "helmet/output_sinks.py",
+      "sha256": "c2f65642d38f8994200503b242ca93c8f0af105dc5ad3b13650e9ff83c7003cf",
+      "matches_current_source": true
+    },
+    "src/pc/analyze_errors.py": {
+      "repository_path": "helmet/pc/analyze_errors.py",
+      "sha256": "863b7115d31d599eb72c5a74748852f39b116e629827a2b9091e16a5be02bc90",
+      "matches_current_source": true
+    },
+    "src/pc/convert.py": {
+      "repository_path": "helmet/pc/convert.py",
+      "sha256": "86d6fa0e865123995b122edec3d490ccf005467c28ca244cda0493621b718c7b",
+      "matches_current_source": true
+    },
+    "src/pc/dataset_tools.py": {
+      "repository_path": "helmet/pc/dataset_tools.py",
+      "sha256": "921281aa3e5bd9eb6dc441861bfb2d75c9ea6bb18969e8abf24fe5f122aade19",
+      "matches_current_source": true
+    },
+    "src/pc/eval_map.py": {
+      "repository_path": "helmet/pc/eval_map.py",
+      "sha256": "81ac033ef0dd61eaacd5c740fbc1e875aa3b43ce98ebfc63e5f59498a9bf1ec8",
+      "matches_current_source": true
+    },
+    "src/pipeline_runtime.py": {
+      "repository_path": "helmet/pipeline_runtime.py",
+      "sha256": "dee30d6b71c9e8d3e697657fb309fb22e8fb47fafd366d60b555466cf56152e9",
+      "matches_current_source": true
+    },
+    "src/sources.py": {
+      "repository_path": "helmet/sources.py",
+      "sha256": "ea89d66fdefb2bc429ca74efa0437a3c0a8aab672a856078fc15afccfe3b31c9",
+      "matches_current_source": true
+    },
+    "src/telemetry.py": {
+      "repository_path": "helmet/telemetry.py",
+      "sha256": "da4522206053712484a21f80bb26d6424649a263f606f35fa16070be51a83b9e",
+      "matches_current_source": true
+    },
+    "src/validate_comparison.py": {
+      "repository_path": "helmet/validate_comparison.py",
+      "sha256": "3b65f9e561084aa7f6199cc7cd413b6426f6ac962f39729ac0668e50350c2860",
+      "matches_current_source": true
+    },
+    "src/yolo_post.py": {
+      "repository_path": "helmet/yolo_post.py",
+      "sha256": "fae57bbfa1d47d5ab16ef444096fab4fe8e14701c5ec10d87b1ec518282b0505",
+      "matches_current_source": true
+    }
+  },
+  "history_comparison": {
+    "helmet-offline-20261114.zip": {
+      "archive_sha256": "ee3e446b85511b353cac101b9548c3edc53bdf0dab9c9535e66dd724b18a5c92",
+      "bundle_manifest_sha256": "bfa210a69d6ebe8bcc18e8e9aad1116e24caac4385cdf65a5a8e2373f484dec3",
+      "model_hashes_unchanged": true,
+      "changed_payloads_vs_final": [
+        "src/benchmark.py",
+        "src/output_sinks.py",
+        "src/pipeline_runtime.py",
+        "src/telemetry.py",
+        "src/yolo_post.py"
+      ],
+      "status": "preserved historical validated package; distinct from final"
+    },
+    "helmet-offline-20261114-v2.zip": {
+      "archive_sha256": "ee3e446b85511b353cac101b9548c3edc53bdf0dab9c9535e66dd724b18a5c92",
+      "bundle_manifest_sha256": "bfa210a69d6ebe8bcc18e8e9aad1116e24caac4385cdf65a5a8e2373f484dec3",
+      "model_hashes_unchanged": true,
+      "changed_payloads_vs_final": [
+        "src/benchmark.py",
+        "src/output_sinks.py",
+        "src/pipeline_runtime.py",
+        "src/telemetry.py",
+        "src/yolo_post.py"
+      ],
+      "status": "preserved historical validated package; distinct from final"
+    }
+  }
+}

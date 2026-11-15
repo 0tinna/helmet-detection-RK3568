@@ -1,0 +1,84 @@
+# Local runtimes and generated build state
+.runtime/
+.venv/
+.tmp/
+.superpowers/
+**/__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Editor and OS files
+.DS_Store
+Thumbs.db
+Desktop.ini
+*.swp
+*.swo
+*~
+~$*
+
+# Credentials and private material
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+*.jks
+*.ovpn
+id_rsa*
+id_ed25519*
+*.token
+secrets/
+credentials/
+
+# Personal submission templates and temporary captures
+*.doc
+*.docx
+tmp_cam_test.jpg
+
+# Raw external datasets and redistributable image payloads
+datasets/raw/
+datasets/evaluation/**/*.jpg
+datasets/evaluation/**/*.jpeg
+datasets/evaluation/**/*.png
+datasets/evaluation/**/*.bmp
+
+# Heavy or reproducible experiment evidence
+docs/experiments/**/*.avi
+docs/experiments/**/*.mp4
+docs/experiments/**/*.webm
+docs/experiments/**/*.jsonl
+docs/experiments/**/*.rknn
+docs/experiments/**/*.raw
+docs/experiments/**/*.npz
+docs/experiments/**/*.pyc
+docs/experiments/**/*.png
+docs/experiments/**/*.jpg
+docs/experiments/**/*.jpeg
+docs/experiments/**/*.bmp
+
+# Keep a compact set of current visual evidence used by the reports and slides.
+!docs/experiments/2026-11-14/web-board-preview.jpg
+!docs/experiments/2026-11-15/camera-capture-1/frame-030.jpg
+!docs/experiments/2026-11-15/native-longrun-1/screen.png
+!docs/experiments/2026-11-15/native-app-usability-v4-phase1-1/stopped-placeholder-final.png
+!docs/experiments/2026-11-15/native-app-usability-v4-phase1-1/edge-click-final.png
+!docs/experiments/2026-11-15/native-app-usability-v4-phase1-1/unplug-physical-1/unplug-transition-contact-sheet.jpg
+!docs/experiments/2026-11-15/native-app-usability-v4-phase2-1/formal-1/screen-after-open-1.png
+!docs/experiments/2026-11-15/native-app-usability-v4-phase2-1/formal-1/screen-after-open-2.png
+!docs/experiments/2026-11-15/native-app-usability-v4-phase2-1/formal-1/screen-wifi-icon.png
+!docs/experiments/2026-11-15/native-app-usability-v4-phase2-1/formal-1/screen-detection-icon-again.png
+!docs/experiments/2026-11-15/native-app-usability-v4-phase2-1/formal-1/longrun-screen-start.png
+!docs/experiments/2026-11-15/native-app-usability-v4-phase2-1/formal-1/longrun-screen-end.png
+!docs/experiments/2026-11-15/native-app-usability-v4-phase2-1/formal-1/post-migration-link-detection.png
+!docs/experiments/2026-11-15/native-app-usability-v4-phase2-1/formal-1/post-migration-link-retry-screen.png
+
+# Release artifacts: retain only the accepted v4-r2 application bundle and checksums.
+dist/*
+!dist/helmet-native-app-20261115-v4-r2.zip
+!dist/*.sha256

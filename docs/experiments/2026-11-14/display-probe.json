@@ -1,0 +1,11 @@
+{
+  "returncode": 0,
+  "stdout": "display roundtrip complete\narm_release_ver: g13p0-01eac0, rk_so_ver: 9\n",
+  "stderr": "QStandardPaths: runtime directory '/var/run' is not a directory, but a symbolic link to a directory permissions 0755 owned by UID 0 GID 0\n",
+  "environment": {
+    "XDG_RUNTIME_DIR": "/var/run",
+    "WAYLAND_DISPLAY": "wayland-0",
+    "QT_QPA_PLATFORM": "wayland"
+  },
+  "scope": "OpenCV Wayland window create/process/close; no physical camera or human visual confirmation"
+}

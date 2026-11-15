@@ -1,0 +1,47 @@
+{
+  "kind": "actual-v2-vendor-launcher-verification",
+  "run_id": "v2-wrapper-offline-2",
+  "mode": "offline",
+  "command": [
+    "/usr/bin/python3",
+    "/userdata/helmet-validation/verify_native_v2_launcher.py",
+    "--child",
+    "--output",
+    "/userdata/helmet-validation/20261115-native-launch-checks/v2-wrapper-offline-2",
+    "--host-namespace",
+    "net:[4026531977]"
+  ],
+  "wrapper": "/opt/ui/src/apps/helmet_app",
+  "wrapper_target": "/userdata/helmet-validation/20261115-native-app-v2/vendor-entry/helmet_app",
+  "wrapper_sha256": "cf5523c368fd518ba879e15e68bef1be20462ecb3fec802d72bf34679fb98c40",
+  "service_sha256": "9a2f7454db6fb48ebcf7f5fd301a831817374c2be2fc5c9036af60feb40df1f7",
+  "launch_py_executed": true,
+  "elapsed_including_startup_cleanup_seconds": 19.00619196999469,
+  "exit_code": 0,
+  "session": "/userdata/helmet-validation/20261115-native-app-v2/app-state/session-q3v0cgi7",
+  "exit_receipt": {
+    "service_exit": 0,
+    "ui_exit": 0,
+    "cleanup_completed": true
+  },
+  "screen": {
+    "path": "/userdata/helmet-validation/20261115-native-app-v2/app-state/session-q3v0cgi7/screen.png",
+    "sha256": "c7076aa0df7da4e8ec5e07deaaa9d15f90893db5eba4ae47ec319c6dc306a190",
+    "size": [
+      968,
+      720,
+      3
+    ]
+  },
+  "private_material_cleaned": true,
+  "host_namespace_preserved": true,
+  "network_namespace_isolated": true,
+  "governor_before": "rknpu_ondemand",
+  "governor_after": "rknpu_ondemand",
+  "wifi_connect_attempted": false,
+  "physical_camera_tested": false,
+  "human_icon_tap": false,
+  "human_touch_verified": false,
+  "screen_scope": "Qt screenRoot contents; excludes top header; not a physical screen photo",
+  "acceptance_scope": "bounded actual wrapper/launch.py/service/Qt verification; not a new30-minute performance run"
+}

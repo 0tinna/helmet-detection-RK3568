@@ -1,0 +1,16 @@
+{
+  "time": 1794640717.5504522,
+  "longrun_pid": 1995,
+  "method": "fresh SSH session after launch SSH returned",
+  "physical_network_disconnected": false,
+  "ps": {
+    "exit": 0,
+    "stdout": "  PID COMMAND\n 1995 python3 /userdata/helmet-validation/20261114/verify_runtime.py longrun --runtime-dir /userdata/helmet-validation/20261114/src --model /userdata/helmet-validation/20261114/models/helmet_416x416.rknn --source /userdata/helmet-validation/20261114/input/construction-replay.avi --output-root /userdata/helmet-validation/20261114 --run-id longrun-1 --duration 1800 --replay-fps 10 --save-interval 30\n",
+    "stderr": ""
+  },
+  "procstat": {
+    "exit": 0,
+    "stdout": "1995 (python3) S 1 1994 1994 0 -1 1077936384 35614 852 2 0 43865 5274 2 2 1 -19 7 0 2043493 737693696 31947 18446744073709551615 367328423936 367328426752 549503753104 0 0 0 0 16781317 16386 0 0 0 17 0 0 0 0 0 0 367328431440 367328432144 368042029056 549503757705 549503758100 549503758100 549503758311 0\n",
+    "stderr": ""
+  }
+}

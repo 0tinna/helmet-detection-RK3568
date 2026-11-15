@@ -1,0 +1,113 @@
+﻿{
+    "sha":  "38eb6541ff71c3cf7160b27a16c2d8d2742500b1",
+    "node_id":  "C_kwDOJBAgONoAKDM4ZWI2NTQxZmY3MWMzY2Y3MTYwYjI3YTE2YzJkOGQyNzQyNTAwYjE",
+    "commit":  {
+                   "author":  {
+                                  "name":  "juanl",
+                                  "email":  "juanl@vmware.com",
+                                  "date":  "2023-03-09T08:22:27Z"
+                              },
+                   "committer":  {
+                                     "name":  "juanl",
+                                     "email":  "juanl@vmware.com",
+                                     "date":  "2023-03-09T08:22:27Z"
+                                 },
+                   "message":  "modify pip package",
+                   "tree":  {
+                                "sha":  "15b81a7896bf6c63ad7504787b87e1f3924e6003",
+                                "url":  "https://api.github.com/repos/harperjuanl/helmet_yolov5_rknn_deploy/git/trees/15b81a7896bf6c63ad7504787b87e1f3924e6003"
+                            },
+                   "url":  "https://api.github.com/repos/harperjuanl/helmet_yolov5_rknn_deploy/git/commits/38eb6541ff71c3cf7160b27a16c2d8d2742500b1",
+                   "comment_count":  0,
+                   "verification":  {
+                                        "verified":  false,
+                                        "reason":  "unsigned",
+                                        "signature":  null,
+                                        "payload":  null,
+                                        "verified_at":  null
+                                    }
+               },
+    "url":  "https://api.github.com/repos/harperjuanl/helmet_yolov5_rknn_deploy/commits/38eb6541ff71c3cf7160b27a16c2d8d2742500b1",
+    "html_url":  "https://github.com/harperjuanl/helmet_yolov5_rknn_deploy/commit/38eb6541ff71c3cf7160b27a16c2d8d2742500b1",
+    "comments_url":  "https://api.github.com/repos/harperjuanl/helmet_yolov5_rknn_deploy/commits/38eb6541ff71c3cf7160b27a16c2d8d2742500b1/comments",
+    "author":  {
+                   "login":  "harperjuanl",
+                   "id":  30314070,
+                   "node_id":  "MDQ6VXNlcjMwMzE0MDcw",
+                   "avatar_url":  "https://avatars.githubusercontent.com/u/30314070?v=4",
+                   "gravatar_id":  "",
+                   "url":  "https://api.github.com/users/harperjuanl",
+                   "html_url":  "https://github.com/harperjuanl",
+                   "followers_url":  "https://api.github.com/users/harperjuanl/followers",
+                   "following_url":  "https://api.github.com/users/harperjuanl/following{/other_user}",
+                   "gists_url":  "https://api.github.com/users/harperjuanl/gists{/gist_id}",
+                   "starred_url":  "https://api.github.com/users/harperjuanl/starred{/owner}{/repo}",
+                   "subscriptions_url":  "https://api.github.com/users/harperjuanl/subscriptions",
+                   "organizations_url":  "https://api.github.com/users/harperjuanl/orgs",
+                   "repos_url":  "https://api.github.com/users/harperjuanl/repos",
+                   "events_url":  "https://api.github.com/users/harperjuanl/events{/privacy}",
+                   "received_events_url":  "https://api.github.com/users/harperjuanl/received_events",
+                   "type":  "User",
+                   "user_view_type":  "public",
+                   "site_admin":  false
+               },
+    "committer":  {
+                      "login":  "harperjuanl",
+                      "id":  30314070,
+                      "node_id":  "MDQ6VXNlcjMwMzE0MDcw",
+                      "avatar_url":  "https://avatars.githubusercontent.com/u/30314070?v=4",
+                      "gravatar_id":  "",
+                      "url":  "https://api.github.com/users/harperjuanl",
+                      "html_url":  "https://github.com/harperjuanl",
+                      "followers_url":  "https://api.github.com/users/harperjuanl/followers",
+                      "following_url":  "https://api.github.com/users/harperjuanl/following{/other_user}",
+                      "gists_url":  "https://api.github.com/users/harperjuanl/gists{/gist_id}",
+                      "starred_url":  "https://api.github.com/users/harperjuanl/starred{/owner}{/repo}",
+                      "subscriptions_url":  "https://api.github.com/users/harperjuanl/subscriptions",
+                      "organizations_url":  "https://api.github.com/users/harperjuanl/orgs",
+                      "repos_url":  "https://api.github.com/users/harperjuanl/repos",
+                      "events_url":  "https://api.github.com/users/harperjuanl/events{/privacy}",
+                      "received_events_url":  "https://api.github.com/users/harperjuanl/received_events",
+                      "type":  "User",
+                      "user_view_type":  "public",
+                      "site_admin":  false
+                  },
+    "parents":  [
+                    {
+                        "sha":  "c2731ddad5641bbe20b4bc35742bbd42eee10ba7",
+                        "url":  "https://api.github.com/repos/harperjuanl/helmet_yolov5_rknn_deploy/commits/c2731ddad5641bbe20b4bc35742bbd42eee10ba7",
+                        "html_url":  "https://github.com/harperjuanl/helmet_yolov5_rknn_deploy/commit/c2731ddad5641bbe20b4bc35742bbd42eee10ba7"
+                    }
+                ],
+    "stats":  {
+                  "total":  10,
+                  "additions":  8,
+                  "deletions":  2
+              },
+    "files":  [
+                  {
+                      "sha":  "c62b74bedad03358d63e4e36b5ad0c8310697e5a",
+                      "filename":  "README.md",
+                      "status":  "modified",
+                      "additions":  4,
+                      "deletions":  2,
+                      "changes":  6,
+                      "blob_url":  "https://github.com/harperjuanl/helmet_yolov5_rknn_deploy/blob/38eb6541ff71c3cf7160b27a16c2d8d2742500b1/README.md",
+                      "raw_url":  "https://github.com/harperjuanl/helmet_yolov5_rknn_deploy/raw/38eb6541ff71c3cf7160b27a16c2d8d2742500b1/README.md",
+                      "contents_url":  "https://api.github.com/repos/harperjuanl/helmet_yolov5_rknn_deploy/contents/README.md?ref=38eb6541ff71c3cf7160b27a16c2d8d2742500b1",
+                      "patch":  "@@ -23,9 +23,11 @@ sudo pip3 install wheel\n \n ```bash\n git clone https://github.com/harperjuanl/helmet_yolov5_rknn_deploy.git\n-cd helmet_yolov5_rknn_deploy/rknn_to_deploy/\n+cd helmet_yolov5_rknn_deploy/rknn_to_deploy/packages\n+sudo pip3 install numpy-1.21.6-cp37-cp37m-manylinux_2_17_aarch64.manylinux2014_aarch64.whl\n+sudo pip3 install onnxruntime-1.14.0-cp37-cp37m-manylinux_2_17_aarch64.manylinux2014_aarch64.whl\n+sudo pip3 install torch-1.13.1-cp37-cp37m-manylinux2014_aarch64.whl\n sudo pip3 install rknn_toolkit_lite2-1.4.0-cp37-cp37m-linux_aarch64.whl\n-sudo pip3 install -r requirements.txt -i https://mirrors.aliyun.com/pypi/simple/\n \n # 检查Toolkit Lite2是否安装成功\n pip3 list | grep rknn-toolkit-lite2"
+                  },
+                  {
+                      "sha":  "0457f8969709003e5744db7e93ff437fb5b10b7d",
+                      "filename":  "rknn_to_deploy/examples/yolov5s/inference.py",
+                      "status":  "modified",
+                      "additions":  4,
+                      "deletions":  0,
+                      "changes":  4,
+                      "blob_url":  "https://github.com/harperjuanl/helmet_yolov5_rknn_deploy/blob/38eb6541ff71c3cf7160b27a16c2d8d2742500b1/rknn_to_deploy%2Fexamples%2Fyolov5s%2Finference.py",
+                      "raw_url":  "https://github.com/harperjuanl/helmet_yolov5_rknn_deploy/raw/38eb6541ff71c3cf7160b27a16c2d8d2742500b1/rknn_to_deploy%2Fexamples%2Fyolov5s%2Finference.py",
+                      "contents_url":  "https://api.github.com/repos/harperjuanl/helmet_yolov5_rknn_deploy/contents/rknn_to_deploy%2Fexamples%2Fyolov5s%2Finference.py?ref=38eb6541ff71c3cf7160b27a16c2d8d2742500b1",
+                      "patch":  "@@ -307,7 +307,11 @@ def display(detections=None, image_src=None, input_size=(640, 640), line_thickne\n \n     # Inference\n     print(\u0027--\u003e Running model\u0027)\n+    start = time.time()\n     outputs = rknn_lite.inference(inputs=[img])\n+    end = time.time()\n+    print(\u0027inference time: \u0027, end - start)\n+    print(\u0027done\u0027)\n \n     image_src = np.array(image_src)\n     detections = onnx_postprocess(outputs, Width, Height)"
+                  }
+              ]
+}

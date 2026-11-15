@@ -1,0 +1,81 @@
+I rknn-toolkit2 version: 2.3.2
+[1;33mW[0m [1;33mload_onnx: If you don't need to crop the model, don't set 'inputs'/'input_size_list'/'outputs'![0m
+I Loading :   0%|                                                           | 0/130 [00:00<?, ?it/s]I Loading : 100%|██████████████████████████████████████████████| 130/130 [00:00<00:00, 11331.95it/s]
+D base_optimize ...
+D base_optimize done.
+D 
+D fold_constant ...
+D fold_constant done.
+D Fixed the shape information of some tensor!
+D 
+D correct_ops ...
+D correct_ops done.
+D 
+D fuse_ops ...
+D fuse_ops results:
+D     replace_exswish: remove node = ['Sigmoid_6', 'Mul_7'], add node = ['Sigmoid_6_2swish']
+D     replace_exswish: remove node = ['Sigmoid_9', 'Mul_10'], add node = ['Sigmoid_9_2swish']
+D     replace_exswish: remove node = ['Sigmoid_12', 'Mul_13'], add node = ['Sigmoid_12_2swish']
+D     replace_exswish: remove node = ['Sigmoid_15', 'Mul_16'], add node = ['Sigmoid_15_2swish']
+D     replace_exswish: remove node = ['Sigmoid_18', 'Mul_19'], add node = ['Sigmoid_18_2swish']
+D     replace_exswish: remove node = ['Sigmoid_22', 'Mul_23'], add node = ['Sigmoid_22_2swish']
+D     replace_exswish: remove node = ['Sigmoid_26', 'Mul_27'], add node = ['Sigmoid_26_2swish']
+D     replace_exswish: remove node = ['Sigmoid_29', 'Mul_30'], add node = ['Sigmoid_29_2swish']
+D     replace_exswish: remove node = ['Sigmoid_32', 'Mul_33'], add node = ['Sigmoid_32_2swish']
+D     replace_exswish: remove node = ['Sigmoid_35', 'Mul_36'], add node = ['Sigmoid_35_2swish']
+D     replace_exswish: remove node = ['Sigmoid_38', 'Mul_39'], add node = ['Sigmoid_38_2swish']
+D     replace_exswish: remove node = ['Sigmoid_42', 'Mul_43'], add node = ['Sigmoid_42_2swish']
+D     replace_exswish: remove node = ['Sigmoid_45', 'Mul_46'], add node = ['Sigmoid_45_2swish']
+D     replace_exswish: remove node = ['Sigmoid_49', 'Mul_50'], add node = ['Sigmoid_49_2swish']
+D     replace_exswish: remove node = ['Sigmoid_52', 'Mul_53'], add node = ['Sigmoid_52_2swish']
+D     replace_exswish: remove node = ['Sigmoid_56', 'Mul_57'], add node = ['Sigmoid_56_2swish']
+D     replace_exswish: remove node = ['Sigmoid_60', 'Mul_61'], add node = ['Sigmoid_60_2swish']
+D     replace_exswish: remove node = ['Sigmoid_63', 'Mul_64'], add node = ['Sigmoid_63_2swish']
+D     replace_exswish: remove node = ['Sigmoid_66', 'Mul_67'], add node = ['Sigmoid_66_2swish']
+D     replace_exswish: remove node = ['Sigmoid_69', 'Mul_70'], add node = ['Sigmoid_69_2swish']
+D     replace_exswish: remove node = ['Sigmoid_72', 'Mul_73'], add node = ['Sigmoid_72_2swish']
+D     replace_exswish: remove node = ['Sigmoid_76', 'Mul_77'], add node = ['Sigmoid_76_2swish']
+D     replace_exswish: remove node = ['Sigmoid_79', 'Mul_80'], add node = ['Sigmoid_79_2swish']
+D     replace_exswish: remove node = ['Sigmoid_83', 'Mul_84'], add node = ['Sigmoid_83_2swish']
+D     replace_exswish: remove node = ['Sigmoid_86', 'Mul_87'], add node = ['Sigmoid_86_2swish']
+D     replace_exswish: remove node = ['Sigmoid_90', 'Mul_91'], add node = ['Sigmoid_90_2swish']
+D     replace_exswish: remove node = ['Sigmoid_94', 'Mul_95'], add node = ['Sigmoid_94_2swish']
+D     replace_exswish: remove node = ['Sigmoid_97', 'Mul_98'], add node = ['Sigmoid_97_2swish']
+D     replace_exswish: remove node = ['Sigmoid_100', 'Mul_101'], add node = ['Sigmoid_100_2swish']
+D     replace_exswish: remove node = ['Sigmoid_107', 'Mul_108'], add node = ['Sigmoid_107_2swish']
+D     replace_exswish: remove node = ['Sigmoid_110', 'Mul_111'], add node = ['Sigmoid_110_2swish']
+D     replace_exswish: remove node = ['Sigmoid_113', 'Mul_114'], add node = ['Sigmoid_113_2swish']
+D     replace_exswish: remove node = ['Sigmoid_116', 'Mul_117'], add node = ['Sigmoid_116_2swish']
+D     replace_exswish: remove node = ['Sigmoid_119', 'Mul_120'], add node = ['Sigmoid_119_2swish']
+D     replace_exswish: remove node = ['Sigmoid_123', 'Mul_124'], add node = ['Sigmoid_123_2swish']
+D     replace_exswish: remove node = ['Sigmoid_126', 'Mul_127'], add node = ['Sigmoid_126_2swish']
+D     replace_exswish: remove node = ['Sigmoid_131', 'Mul_132'], add node = ['Sigmoid_131_2swish']
+D     replace_exswish: remove node = ['Sigmoid_134', 'Mul_135'], add node = ['Sigmoid_134_2swish']
+D     replace_exswish: remove node = ['Sigmoid_137', 'Mul_138'], add node = ['Sigmoid_137_2swish']
+D     replace_exswish: remove node = ['Sigmoid_140', 'Mul_141'], add node = ['Sigmoid_140_2swish']
+D     replace_exswish: remove node = ['Sigmoid_144', 'Mul_145'], add node = ['Sigmoid_144_2swish']
+D     replace_exswish: remove node = ['Sigmoid_147', 'Mul_148'], add node = ['Sigmoid_147_2swish']
+D     replace_exswish: remove node = ['Sigmoid_152', 'Mul_153'], add node = ['Sigmoid_152_2swish']
+D     replace_exswish: remove node = ['Sigmoid_155', 'Mul_156'], add node = ['Sigmoid_155_2swish']
+D     replace_exswish: remove node = ['Sigmoid_158', 'Mul_159'], add node = ['Sigmoid_158_2swish']
+D     replace_exswish: remove node = ['Sigmoid_161', 'Mul_162'], add node = ['Sigmoid_161_2swish']
+D     replace_exswish: remove node = ['Sigmoid_165', 'Mul_166'], add node = ['Sigmoid_165_2swish']
+D     replace_exswish: remove node = ['Sigmoid_168', 'Mul_169'], add node = ['Sigmoid_168_2swish']
+D     replace_exswish: remove node = ['Sigmoid_172', 'Mul_173'], add node = ['Sigmoid_172_2swish']
+D     replace_exswish: remove node = ['Sigmoid_175', 'Mul_176'], add node = ['Sigmoid_175_2swish']
+D     replace_exswish: remove node = ['Sigmoid_178', 'Mul_179'], add node = ['Sigmoid_178_2swish']
+D     replace_exswish: remove node = ['Sigmoid_181', 'Mul_182'], add node = ['Sigmoid_181_2swish']
+D     replace_exswish: remove node = ['Sigmoid_185', 'Mul_186'], add node = ['Sigmoid_185_2swish']
+D     replace_exswish: remove node = ['Sigmoid_188', 'Mul_189'], add node = ['Sigmoid_188_2swish']
+D     replace_exswish: remove node = ['Sigmoid_192', 'Mul_193'], add node = ['Sigmoid_192_2swish']
+D     replace_exswish: remove node = ['Sigmoid_195', 'Mul_196'], add node = ['Sigmoid_195_2swish']
+D     replace_exswish: remove node = ['Sigmoid_198', 'Mul_199'], add node = ['Sigmoid_198_2swish']
+D     replace_exswish: remove node = ['Sigmoid_201', 'Mul_202'], add node = ['Sigmoid_201_2swish']
+D     replace_exswish: remove node = ['Sigmoid_205', 'Mul_206'], add node = ['Sigmoid_205_2swish']
+D     tiling_maxpool: remove node = ['MaxPool_103'], add node = ['240_0_1', '240_0', '240_1', '240']
+D     tiling_maxpool: remove node = ['MaxPool_104'], add node = ['241_0_1', '241_0', '241_1', '241']
+D     fold_constant ...
+D     fold_constant done.
+D fuse_ops done.
+D 
+D sparse_weight ...

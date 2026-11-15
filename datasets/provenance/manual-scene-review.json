@@ -1,0 +1,27 @@
+{
+  "reviewed_at": "2026-11-14",
+  "method": "Inspect original-input SHA256 equality, 64-bit dHash Hamming distance <= 6, then view candidate images. No predictions or detection scores used.",
+  "review_scope": "Acquired fixed 200 SHWD plus fixed 200 Hard Hat Workers images only",
+  "exact_byte_duplicate_pairs": 0,
+  "perceptual_candidate_pairs": 1,
+  "confirmed_groups": [
+    {
+      "group_id": "shared-photo-000764-1137",
+      "members": [
+        "datasets/raw/shwd/JPEGImages/000764.jpg",
+        "datasets/raw/hard-hat-workers/images/hard_hat_workers1137.png"
+      ],
+      "dhash_hamming_distance": 4,
+      "evidence": "Same two construction workers wearing yellow helmets, same plans and phone, same background, hu itu watermark and image identifier. Hard Hat Workers is resized and padded with reflected image bands above and below.",
+      "review_status": "Visually confirmed same photograph",
+      "statistical_rule": "These members belong to one photo/scene group in any pooled analysis. Keep both in the prespecified primary source subsets. An additional cross-source sensitivity subset may exclude hard_hat_workers1137 only, determined from inputs before evaluation. Do not claim removing this known pair establishes independence."
+    }
+  ],
+  "unresolved_scene_provenance": "All other original filenames and XMLs lack camera, video, location and capture-session identifiers. Similar images outside the dHash threshold may exist. Do not assign certified independent scenes from filenames or hash non-equality.",
+  "manual_annotation_review": {
+    "hardhat_contact_sheet": "docs/experiments/2026-11-14/data-acquisition/hardhat-annotation-contact-sheet.jpg",
+    "shwd_contact_sheet": "docs/experiments/2026-11-14/data-acquisition/shwd-annotation-contact-sheet.jpg",
+    "hardhat_findings": "First 12 prespecified images include clear helmet/head boxes. hard_hat_workers0 and1006 show bare-head head boxes; hard_hat_workers1007 contains full-body person boxes. Full-body person is ignored. Some images have source reflection padding, retained exactly as distributed.",
+    "shwd_findings": "First 12 original test-order images include helmet and bare-head annotations and varied dimensions. person identifies bare heads, consistent with upstream README. Manual review is a small semantic check, not reannotation or an exhaustive annotation-quality audit."
+  }
+}

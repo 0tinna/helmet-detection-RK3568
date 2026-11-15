@@ -1,0 +1,6 @@
+﻿{
+    "vm_pid":  30916,
+    "alive":  false,
+    "checked":  "2026-11-14T19:47:36.7113211+08:00",
+    "shutdown_method":  "sudo poweroff in guest; serial log reached Power down; no process remains"
+}

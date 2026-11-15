@@ -1,0 +1,447 @@
+{
+  "browser": {
+    "protocolVersion": "1.3",
+    "product": "Chrome/157.0.8103.78",
+    "revision": "@4b3d0dabb8250b6f152d2d85d79e7706e309d087",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36",
+    "jsVersion": "15.7.112.43"
+  },
+  "url": "http://192.168.1.3:8091/",
+  "observations": [
+    {
+      "at": 1794665313330,
+      "readyState": "complete",
+      "state": "healthy - fresh detections",
+      "valid": true,
+      "frame_id": 455,
+      "src": "http://192.168.1.3:8091/stream.mjpg?reconnect=1794665312871",
+      "visibility": "visible",
+      "naturalWidth": 640,
+      "complete": true,
+      "events": [
+        {
+          "type": "load",
+          "at": 1794665312993,
+          "naturalWidth": 640
+        }
+      ]
+    },
+    {
+      "at": 1794665313844,
+      "readyState": "complete",
+      "state": "healthy - fresh detections",
+      "valid": true,
+      "frame_id": 465,
+      "src": "http://192.168.1.3:8091/stream.mjpg?reconnect=1794665312871",
+      "visibility": "visible",
+      "naturalWidth": 640,
+      "complete": true,
+      "events": [
+        {
+          "type": "load",
+          "at": 1794665312993,
+          "naturalWidth": 640
+        }
+      ]
+    },
+    {
+      "at": 1794665314358,
+      "readyState": "complete",
+      "state": "healthy - fresh detections",
+      "valid": true,
+      "frame_id": 475,
+      "src": "http://192.168.1.3:8091/stream.mjpg?reconnect=1794665312871",
+      "visibility": "visible",
+      "naturalWidth": 640,
+      "complete": true,
+      "events": [
+        {
+          "type": "load",
+          "at": 1794665312993,
+          "naturalWidth": 640
+        }
+      ]
+    },
+    {
+      "at": 1794665314861,
+      "readyState": "complete",
+      "state": "healthy - fresh detections",
+      "valid": true,
+      "frame_id": 486,
+      "src": "http://192.168.1.3:8091/stream.mjpg?reconnect=1794665312871",
+      "visibility": "visible",
+      "naturalWidth": 640,
+      "complete": true,
+      "events": [
+        {
+          "type": "load",
+          "at": 1794665312993,
+          "naturalWidth": 640
+        }
+      ]
+    },
+    {
+      "at": 1794665315378,
+      "readyState": "complete",
+      "state": "healthy - fresh detections",
+      "valid": true,
+      "frame_id": 496,
+      "src": "http://192.168.1.3:8091/stream.mjpg?reconnect=1794665312871",
+      "visibility": "visible",
+      "naturalWidth": 640,
+      "complete": true,
+      "events": [
+        {
+          "type": "load",
+          "at": 1794665312993,
+          "naturalWidth": 640
+        }
+      ]
+    },
+    {
+      "at": 1794665315892,
+      "readyState": "complete",
+      "state": "healthy - fresh detections",
+      "valid": true,
+      "frame_id": 508,
+      "src": "http://192.168.1.3:8091/stream.mjpg?reconnect=1794665312871",
+      "visibility": "visible",
+      "naturalWidth": 640,
+      "complete": true,
+      "events": [
+        {
+          "type": "load",
+          "at": 1794665312993,
+          "naturalWidth": 640
+        }
+      ]
+    },
+    {
+      "at": 1794665316396,
+      "readyState": "complete",
+      "state": "healthy - fresh detections",
+      "valid": true,
+      "frame_id": 519,
+      "src": "http://192.168.1.3:8091/stream.mjpg?reconnect=1794665312871",
+      "visibility": "visible",
+      "naturalWidth": 640,
+      "complete": true,
+      "events": [
+        {
+          "type": "load",
+          "at": 1794665312993,
+          "naturalWidth": 640
+        }
+      ]
+    },
+    {
+      "at": 1794665316900,
+      "readyState": "complete",
+      "state": "healthy - fresh detections",
+      "valid": true,
+      "frame_id": 530,
+      "src": "http://192.168.1.3:8091/stream.mjpg?reconnect=1794665312871",
+      "visibility": "visible",
+      "naturalWidth": 640,
+      "complete": true,
+      "events": [
+        {
+          "type": "load",
+          "at": 1794665312993,
+          "naturalWidth": 640
+        }
+      ]
+    },
+    {
+      "at": 1794665317417,
+      "readyState": "complete",
+      "state": "healthy - fresh detections",
+      "valid": true,
+      "frame_id": 540,
+      "src": "http://192.168.1.3:8091/stream.mjpg?reconnect=1794665312871",
+      "visibility": "visible",
+      "naturalWidth": 640,
+      "complete": true,
+      "events": [
+        {
+          "type": "load",
+          "at": 1794665312993,
+          "naturalWidth": 640
+        }
+      ]
+    },
+    {
+      "at": 1794665317929,
+      "readyState": "complete",
+      "state": "healthy - fresh detections",
+      "valid": true,
+      "frame_id": 549,
+      "src": "http://192.168.1.3:8091/stream.mjpg?reconnect=1794665312871",
+      "visibility": "visible",
+      "naturalWidth": 640,
+      "complete": true,
+      "events": [
+        {
+          "type": "load",
+          "at": 1794665312993,
+          "naturalWidth": 640
+        }
+      ]
+    },
+    {
+      "at": 1794665318433,
+      "readyState": "complete",
+      "state": "healthy - fresh detections",
+      "valid": true,
+      "frame_id": 562,
+      "src": "http://192.168.1.3:8091/stream.mjpg?reconnect=1794665312871",
+      "visibility": "visible",
+      "naturalWidth": 640,
+      "complete": true,
+      "events": [
+        {
+          "type": "load",
+          "at": 1794665312993,
+          "naturalWidth": 640
+        }
+      ]
+    },
+    {
+      "at": 1794665318941,
+      "readyState": "complete",
+      "state": "healthy - fresh detections",
+      "valid": true,
+      "frame_id": 562,
+      "src": "http://192.168.1.3:8091/stream.mjpg?reconnect=1794665312871",
+      "visibility": "visible",
+      "naturalWidth": 640,
+      "complete": true,
+      "events": [
+        {
+          "type": "load",
+          "at": 1794665312993,
+          "naturalWidth": 640
+        }
+      ]
+    },
+    {
+      "at": 1794665319451,
+      "readyState": "complete",
+      "state": "healthy - fresh detections",
+      "valid": true,
+      "frame_id": 570,
+      "src": "http://192.168.1.3:8091/stream.mjpg?reconnect=1794665312871",
+      "visibility": "visible",
+      "naturalWidth": 640,
+      "complete": true,
+      "events": [
+        {
+          "type": "load",
+          "at": 1794665312993,
+          "naturalWidth": 640
+        }
+      ]
+    },
+    {
+      "at": 1794665319961,
+      "readyState": "complete",
+      "state": "healthy - fresh detections",
+      "valid": true,
+      "frame_id": 580,
+      "src": "http://192.168.1.3:8091/stream.mjpg?reconnect=1794665312871",
+      "visibility": "visible",
+      "naturalWidth": 640,
+      "complete": true,
+      "events": [
+        {
+          "type": "load",
+          "at": 1794665312993,
+          "naturalWidth": 640
+        }
+      ]
+    },
+    {
+      "at": 1794665320465,
+      "readyState": "complete",
+      "state": "healthy - fresh detections",
+      "valid": true,
+      "frame_id": 591,
+      "src": "http://192.168.1.3:8091/stream.mjpg?reconnect=1794665312871",
+      "visibility": "visible",
+      "naturalWidth": 640,
+      "complete": true,
+      "events": [
+        {
+          "type": "load",
+          "at": 1794665312993,
+          "naturalWidth": 640
+        }
+      ]
+    },
+    {
+      "at": 1794665320978,
+      "readyState": "complete",
+      "state": "healthy - fresh detections",
+      "valid": true,
+      "frame_id": 601,
+      "src": "http://192.168.1.3:8091/stream.mjpg?reconnect=1794665312871",
+      "visibility": "visible",
+      "naturalWidth": 640,
+      "complete": true,
+      "events": [
+        {
+          "type": "load",
+          "at": 1794665312993,
+          "naturalWidth": 640
+        }
+      ]
+    },
+    {
+      "at": 1794665321483,
+      "readyState": "complete",
+      "state": "healthy - fresh detections",
+      "valid": true,
+      "frame_id": 611,
+      "src": "http://192.168.1.3:8091/stream.mjpg?reconnect=1794665312871",
+      "visibility": "visible",
+      "naturalWidth": 640,
+      "complete": true,
+      "events": [
+        {
+          "type": "load",
+          "at": 1794665312993,
+          "naturalWidth": 640
+        }
+      ]
+    },
+    {
+      "at": 1794665321996,
+      "readyState": "complete",
+      "state": "healthy - fresh detections",
+      "valid": true,
+      "frame_id": 623,
+      "src": "http://192.168.1.3:8091/stream.mjpg?reconnect=1794665312871",
+      "visibility": "visible",
+      "naturalWidth": 640,
+      "complete": true,
+      "events": [
+        {
+          "type": "load",
+          "at": 1794665312993,
+          "naturalWidth": 640
+        }
+      ]
+    },
+    {
+      "at": 1794665322506,
+      "readyState": "complete",
+      "state": "healthy - fresh detections",
+      "valid": true,
+      "frame_id": 633,
+      "src": "http://192.168.1.3:8091/stream.mjpg?reconnect=1794665312871",
+      "visibility": "visible",
+      "naturalWidth": 640,
+      "complete": true,
+      "events": [
+        {
+          "type": "load",
+          "at": 1794665312993,
+          "naturalWidth": 640
+        }
+      ]
+    },
+    {
+      "at": 1794665323012,
+      "readyState": "complete",
+      "state": "healthy - fresh detections",
+      "valid": true,
+      "frame_id": 642,
+      "src": "http://192.168.1.3:8091/stream.mjpg?reconnect=1794665312871",
+      "visibility": "visible",
+      "naturalWidth": 640,
+      "complete": true,
+      "events": [
+        {
+          "type": "load",
+          "at": 1794665312993,
+          "naturalWidth": 640
+        }
+      ]
+    },
+    {
+      "at": 1794665323523,
+      "readyState": "complete",
+      "state": "healthy - fresh detections",
+      "valid": true,
+      "frame_id": 653,
+      "src": "http://192.168.1.3:8091/stream.mjpg?reconnect=1794665312871",
+      "visibility": "visible",
+      "naturalWidth": 640,
+      "complete": true,
+      "events": [
+        {
+          "type": "load",
+          "at": 1794665312993,
+          "naturalWidth": 640
+        }
+      ]
+    },
+    {
+      "at": 1794665324027,
+      "readyState": "complete",
+      "state": "healthy - fresh detections",
+      "valid": true,
+      "frame_id": 664,
+      "src": "http://192.168.1.3:8091/stream.mjpg?reconnect=1794665312871",
+      "visibility": "visible",
+      "naturalWidth": 640,
+      "complete": true,
+      "events": [
+        {
+          "type": "load",
+          "at": 1794665312993,
+          "naturalWidth": 640
+        }
+      ]
+    },
+    {
+      "at": 1794665324531,
+      "readyState": "complete",
+      "state": "healthy - fresh detections",
+      "valid": true,
+      "frame_id": 675,
+      "src": "http://192.168.1.3:8091/stream.mjpg?reconnect=1794665312871",
+      "visibility": "visible",
+      "naturalWidth": 640,
+      "complete": true,
+      "events": [
+        {
+          "type": "load",
+          "at": 1794665312993,
+          "naturalWidth": 640
+        }
+      ]
+    },
+    {
+      "at": 1794665325035,
+      "readyState": "complete",
+      "state": "healthy - fresh detections",
+      "valid": true,
+      "frame_id": 686,
+      "src": "http://192.168.1.3:8091/stream.mjpg?reconnect=1794665312871",
+      "visibility": "visible",
+      "naturalWidth": 640,
+      "complete": true,
+      "events": [
+        {
+          "type": "load",
+          "at": 1794665312993,
+          "naturalWidth": 640
+        }
+      ]
+    }
+  ],
+  "validWithVisibleImage": true,
+  "validButHidden": 0,
+  "scope": "Actual headless Chromium current PAGE over host LAN; no human/phone observation"
+}

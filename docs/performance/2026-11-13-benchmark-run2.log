@@ -1,0 +1,53 @@
+Image: /userdata/models/1.jpg (1280x960)  Loops: 50  Warmup: 5
+
+[NPU governor -> performance]
+Model                             Infer     Post      E2E      FPS   Temp
+-------------------------------------------------------------------------
+  benchmarking helmet-640-640.rknn ...W rknn-toolkit-lite2 version: 2.5.0
+W Query dynamic range failed. Ret code: RKNN_ERR_MODEL_INVALID. (If it is a static shape RKNN model, please ignore the above warning message.)
+helmet-640-640.rknn              119.5ms    12.4ms   137.9ms     7.2   49.4C
+  benchmarking helmet_416x416.rknn ...W rknn-toolkit-lite2 version: 2.5.0
+I RKNN: [15:26:49.363] RKNN Runtime Information, librknnrt version: 2.3.2 (429f97ae6b@2025-04-09T09:09:27)
+I RKNN: [15:26:49.363] RKNN Driver Information, version: 0.9.2
+I RKNN: [15:26:49.366] RKNN Model Information, version: 2, toolkit version: 1.4.0-22dcfef4(compiler version: 1.4.0 (3b4520e4f@2022-09-05T20:52:35)), target: RKNPU lite, target platform: rk3566, framework name: ONNX, framework layout: NCHW, model inference type: static_shape
+W RKNN: [15:26:49.443] query RKNN_QUERY_INPUT_DYNAMIC_RANGE error, rknn model is static shape type, please export rknn with dynamic_shapes
+I RKNN: [15:27:04.217] RKNN Runtime Information, librknnrt version: 2.3.2 (429f97ae6b@2025-04-09T09:09:27)
+I RKNN: [15:27:04.217] RKNN Driver Information, version: 0.9.2
+I RKNN: [15:27:04.218] RKNN Model Information, version: 6, toolkit version: 2.3.2(compiler version: 2.3.2 (e045de294f@2025-04-07T19:48:25)), target: RKNPU lite, target platform: rk3568, framework name: ONNX, framework layout: NCHW, model inference type: static_shape
+W RW Query dynamic range failed. Ret code: RKNN_ERR_MODEL_INVALID. (If it is a static shape RKNN model, please ignore the above warning message.)
+helmet_416x416.rknn               41.5ms    11.8ms    64.2ms    15.6   50.6C
+  benchmarking helmet_512x288.rknn ...W rknn-toolkit-lite2 version: 2.5.0
+W Query dynamic range failed. Ret code: RKNN_ERR_MODEL_INVALID. (If it is a static shape RKNN model, please ignore the above warning message.)
+helmet_512x288.rknn               56.3ms    11.6ms    73.8ms    13.5   50.0C
+  benchmarking helmet_512x512.rknn ...W rknn-toolkit-lite2 version: 2.5.0
+KNN: [15:27:04.269] query RKNN_QUERY_INPUT_DYNAMIC_RANGE error, rknn model is static shape type, please export rknn with dynamic_shapes
+I RKNN: [15:27:11.063] RKNN Runtime Information, librknnrt version: 2.3.2 (429f97ae6b@2025-04-09T09:09:27)
+I RKNN: [15:27:11.063] RKNN Driver Information, version: 0.9.2
+I RKNN: [15:27:11.064] RKNN Model Information, version: 6, toolkit version: 2.3.2(compiler version: 2.3.2 (e045de294f@2025-04-07T19:48:25)), target: RKNPU lite, target platform: rk3568, framework name: ONNX, framework layout: NCHW, model inference type: static_shape
+W RKNN: [15:27:11.114] query RKNN_QUERY_INPUT_DYNAMIC_RANGE error, rknn model is static shape type, please export rknn with dynamic_shapes
+I RKNN: [15:27:19.083] RKNN Runtime Information, librknnrt version: 2.3.2 (429f97ae6b@2025-04-09T09:09:27)
+I RKNN: [15:27:19.083] RKNN Driver Information, version: 0.9.2
+I RKNN: [15:27:19.084] RKNN Model Information, version: 6, toolkit version: 2.3.2(compiler version: 2.3.2 (e045de294f@2025-04-07T19:48:25)), tW Query dynamic range failed. Ret code: RKNN_ERR_MODEL_INVALID. (If it is a static shape RKNN model, please ignore the above warning message.)
+helmet_512x512.rknn               69.2ms    12.8ms   101.3ms     9.9   50.6C
+  benchmarking helmet_640x384.rknn ...W rknn-toolkit-lite2 version: 2.5.0
+W Query dynamic range failed. Ret code: RKNN_ERR_MODEL_INVALID. (If it is a static shape RKNN model, please ignore the above warning message.)
+helmet_640x384.rknn               81.3ms    12.5ms    97.2ms    10.3   50.6C
+  benchmarking helmet_640x640.rknn ...W rknn-toolkit-lite2 version: 2.5.0
+arget: RKNPU lite, target platform: rk3568, framework name: ONNX, framework layout: NCHW, model inference type: static_shape
+W RKNN: [15:27:19.115] query RKNN_QUERY_INPUT_DYNAMIC_RANGE error, rknn model is static shape type, please export rknn with dynamic_shapes
+I RKNN: [15:27:29.324] RKNN Runtime Information, librknnrt version: 2.3.2 (429f97ae6b@2025-04-09T09:09:27)
+I RKNN: [15:27:29.324] RKNN Driver Information, version: 0.9.2
+I RKNN: [15:27:29.326] RKNN Model Information, version: 6, toolkit version: 2.3.2(compiler version: 2.3.2 (e045de294f@2025-04-07T19:48:25)), target: RKNPU lite, target platform: rk3568, framework name: ONNX, framework layout: NCHW, model inference type: static_shape
+W RKNN: [15:27:29.383] query RKNN_QUERY_INPUT_DYNAMIC_RANGE error, rknn model is static shape type, please export rknn with dynamic_shapes
+I RKNN: [15:27:40.058] RKNN Runtime Information, librknnrt version: 2.3.2 (429f97ae6b@2025-04-09T09:09:27)
+I RKNN: [15:27:40.058] RKNN Driver Information, version: 0.9.2
+I RKNN: [15:27W Query dynamic range failed. Ret code: RKNN_ERR_MODEL_INVALID. (If it is a static shape RKNN model, please ignore the above warning message.)
+helmet_640x640.rknn               82.1ms    12.6ms   108.2ms     9.2   51.9C
+
+Saved: /userdata/helmet-validation/20261113/results/comparison.json
+
+Best: helmet_416x416.rknn @ 15.6 FPS (E2E 64.2ms)
+Baseline (old helmet-640-640.rknn): 141ms / 7.1 FPS
+Speedup: 2.20x
+:40.060] RKNN Model Information, version: 6, toolkit version: 2.3.2(compiler version: 2.3.2 (e045de294f@2025-04-07T19:48:25)), target: RKNPU lite, target platform: rk3568, framework name: ONNX, framework layout: NCHW, model inference type: static_shape
+W RKNN: [15:27:40.130] query RKNN_QUERY_INPUT_DYNAMIC_RANGE error, rknn model is static shape type, please export rknn with dynamic_shapes

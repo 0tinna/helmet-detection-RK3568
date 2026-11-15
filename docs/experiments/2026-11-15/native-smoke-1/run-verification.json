@@ -1,0 +1,487 @@
+{
+  "passed": true,
+  "errors": [],
+  "metrics": {
+    "capture_to_output_ms": {
+      "count": 127,
+      "mean": 141.6804215361595,
+      "p50": 138.1494140077848,
+      "p95": 192.67795199848476,
+      "p99": 249.5571774308336
+    },
+    "sink_ms": {
+      "count": 127,
+      "mean": 45.66373829223402,
+      "p50": 39.93835700384807,
+      "p95": 83.94329249713336,
+      "p99": 103.66142040234982
+    },
+    "capture_to_sink_complete_ms": {
+      "count": 127,
+      "mean": 187.60115459117227,
+      "p50": 183.63687000237405,
+      "p95": 249.02041259192626,
+      "p99": 344.71872999507434
+    },
+    "prep_ms": {
+      "count": 128,
+      "mean": 16.01904214885508,
+      "p50": 14.980092499172315,
+      "p95": 25.6244772914215,
+      "p99": 31.514766683685608
+    },
+    "infer_ms": {
+      "count": 128,
+      "mean": 47.93616600773021,
+      "p50": 46.76761449809419,
+      "p95": 63.12404449636232,
+      "p99": 71.8689128244296
+    },
+    "post_ms": {
+      "count": 128,
+      "mean": 26.965434257363086,
+      "p50": 20.945119998941664,
+      "p95": 55.62657544796819,
+      "p99": 89.83090570865906
+    }
+  },
+  "timeline": {
+    "policy": {
+      "startup_allowance_seconds": 10.0,
+      "finalization_allowance_seconds": 5.0,
+      "session_event_agreement_seconds": 1.0,
+      "duration_rounding_seconds": 0.1,
+      "resource_interval_seconds": 1.0,
+      "resource_gap_periods": 3.0,
+      "frame_gap_periods": 5.0,
+      "minimum_frame_gap_seconds": 1.0,
+      "timing_rounding_ms": 0.02
+    },
+    "streams": {
+      "detector capture": {
+        "count": 128,
+        "first": 67576.223892425,
+        "last": 67588.118783285,
+        "start_offset_seconds": 0.058145823000813834,
+        "end_offset_seconds": 0.2633400369959418,
+        "max_gap_seconds": 0.16986789299699012,
+        "allowed_gap_seconds": 1.0
+      },
+      "detector processed": {
+        "count": 128,
+        "first": 67576.308765515,
+        "last": 67588.337549097,
+        "start_offset_seconds": 0.1430189130041981,
+        "end_offset_seconds": 0.044574224986718036,
+        "max_gap_seconds": 0.18258130201138556,
+        "allowed_gap_seconds": 1.0
+      },
+      "output dispatch": {
+        "count": 127,
+        "first": 67576.313546346,
+        "last": 67588.160255555,
+        "start_offset_seconds": 0.14779974400880747,
+        "end_offset_seconds": 0.22186776698799804,
+        "max_gap_seconds": 0.2199095489922911,
+        "allowed_gap_seconds": 1.0
+      },
+      "sink completion": {
+        "count": 127,
+        "first": 67576.333496274,
+        "last": 67588.199110634,
+        "start_offset_seconds": 0.16774967200763058,
+        "end_offset_seconds": 0.1830126879940508,
+        "max_gap_seconds": 0.23750975099392235,
+        "allowed_gap_seconds": 1.0
+      },
+      "resources": {
+        "count": 16,
+        "first": 67573.282307699,
+        "last": 67588.748602334,
+        "start_offset_seconds": -2.883438902994385,
+        "end_offset_seconds": -0.36647901200922206,
+        "max_gap_seconds": 1.0911097820062423,
+        "allowed_gap_seconds": 3.0
+      },
+      "resource cpu_percent": {
+        "count": 16,
+        "first": 67573.282307699,
+        "last": 67588.748602334,
+        "start_offset_seconds": -2.883438902994385,
+        "end_offset_seconds": -0.36647901200922206,
+        "max_gap_seconds": 1.0911097820062423,
+        "allowed_gap_seconds": 3.0
+      },
+      "resource rss_bytes": {
+        "count": 16,
+        "first": 67573.282307699,
+        "last": 67588.748602334,
+        "start_offset_seconds": -2.883438902994385,
+        "end_offset_seconds": -0.36647901200922206,
+        "max_gap_seconds": 1.0911097820062423,
+        "allowed_gap_seconds": 3.0
+      },
+      "resource temperature_c": {
+        "count": 16,
+        "first": 67573.282307699,
+        "last": 67588.748602334,
+        "start_offset_seconds": -2.883438902994385,
+        "end_offset_seconds": -0.36647901200922206,
+        "max_gap_seconds": 1.0911097820062423,
+        "allowed_gap_seconds": 3.0
+      },
+      "resource npu_frequency_hz": {
+        "count": 16,
+        "first": 67573.282307699,
+        "last": 67588.748602334,
+        "start_offset_seconds": -2.883438902994385,
+        "end_offset_seconds": -0.36647901200922206,
+        "max_gap_seconds": 1.0911097820062423,
+        "allowed_gap_seconds": 3.0
+      }
+    },
+    "active_start": 67576.165746602,
+    "active_stop": 67588.382123322,
+    "observed_active_seconds": 12.216376719996333
+  },
+  "cleanup_evidence": {
+    "direct_recorded": true,
+    "accepted": true,
+    "errors": [],
+    "record": {
+      "engine_initialized": true,
+      "source_initialized": true,
+      "engine_released": true,
+      "source_released": true,
+      "capture_worker_alive": false,
+      "detect_worker_alive": false,
+      "shutdown_timeout": false,
+      "sdk_resources": [
+        {
+          "created": true,
+          "released": true,
+          "release_error": null
+        }
+      ]
+    }
+  },
+  "observed_rates": {
+    "captured_fps": 18.666486145586084,
+    "detected_fps": 10.479430818574643,
+    "output_fps": 10.397560265304529,
+    "displayed_fps": 0.0
+  },
+  "throughput_target_met": true,
+  "actual_thresholds": {
+    "conf": 0.35,
+    "nms": 0.45,
+    "skip": 0
+  },
+  "scope": "continuity, original-frame inventory, freshness and automatic native render; fixed 10 FPS is separate; no physical camera, human display/touch, WiFi switching or independent 85% accuracy acceptance",
+  "snapshot_integrity": {
+    "pairs": [
+      {
+        "image": "snapshots/alarm_11_1794687417675788489_85f30c5b.jpg",
+        "metadata": "snapshots/alarm_11_1794687417675788489_85f30c5b.json",
+        "saved_at": 67576.95770343,
+        "reason": "alarm",
+        "frame_id": 11
+      }
+    ],
+    "periodic_count": 0,
+    "errors": []
+  },
+  "physical_camera_tested": false,
+  "ssh_survival": "not_observed",
+  "public_target_fps": 10.0,
+  "requested_replay_fps": 20.0,
+  "requested_supply_target_met": false,
+  "http": {
+    "decoded_previews": 3,
+    "active_observations": 3,
+    "wifi_status_available": false,
+    "wifi_status_receipts": [
+      {
+        "status": 200,
+        "failure": null
+      }
+    ],
+    "latency_ms": {
+      "count": 16,
+      "mean": 164.709416813821,
+      "p50": 58.760525498655625,
+      "p95": 549.6992059997865,
+      "p99": 1391.5312700046338
+    },
+    "errors": []
+  },
+  "native_gui_verified": true,
+  "thirty_minute_app_passed": false,
+  "artifact_inventory": {
+    "resources.jsonl": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-smoke-1/resources.jsonl",
+      "sha256": "1cdf5a16d5eb9042a9fa53c9aed38e5385e2724e1bf125acf4a6638bcc0a3725",
+      "bytes": 9407
+    },
+    "events.jsonl": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-smoke-1/events.jsonl",
+      "sha256": "b752260faf94cf56da9f649804b6b4aa6e7d100e54fb121475a8d8bd963567f4",
+      "bytes": 3422
+    },
+    "screen.png": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-smoke-1/screen.png",
+      "sha256": "e54a1d8133c60de6270c80d012a32a11252326d6df8ef68ee77cb562e300bcb4",
+      "bytes": 408588
+    },
+    "session.json": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-smoke-1/session.json",
+      "sha256": "e3342d057453dcf9c7ab60f575a924d0376062e71a0d28b643d4be14be680504",
+      "bytes": 9655
+    },
+    "gui-control.json": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-smoke-1/gui-control.json",
+      "sha256": "6dca3613c39d0958f8fadb79695f52214000e3ace05f908da17f5a08ae5cd968",
+      "bytes": 24
+    },
+    "cleanup.json": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-smoke-1/cleanup.json",
+      "sha256": "d4fe179eba3583f4778e1aea1a360ea256633234f8a8773b53681a234fc0d75b",
+      "bytes": 1162
+    },
+    "http.jsonl": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-smoke-1/http.jsonl",
+      "sha256": "148a75626367d91a0246d21449864cae46c7e23f86a46b91fffb5ba6e7aabb9e",
+      "bytes": 1081859
+    },
+    "frames.jsonl.resources.jsonl": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-smoke-1/frames.jsonl.resources.jsonl",
+      "sha256": "7c59415ee63978d3ea3caa4590961111278924de6693a0aebea5aa7b16fe17d5",
+      "bytes": 3739
+    },
+    "frames.jsonl": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-smoke-1/frames.jsonl",
+      "sha256": "7b287ef5c49c80b2391d637ca2ec67995feaff8ab5d775957cadd9f331fe6bc6",
+      "bytes": 479305
+    },
+    "gui.log": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-smoke-1/gui.log",
+      "sha256": "bbdb710fb425c7c11e05a62e9c4426ce36dba20b9c228a596514c2684e1e3740",
+      "bytes": 447
+    },
+    "qt-cache/qtshadercache-arm64-little_endian-lp64/7d5f9fc417d36376dbfbebf864483aca3a25ac1a": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-smoke-1/qt-cache/qtshadercache-arm64-little_endian-lp64/7d5f9fc417d36376dbfbebf864483aca3a25ac1a",
+      "sha256": "9983adf86597e29dd8816b32a05bb884a43dcde040a8577561ad38ff48473d1f",
+      "bytes": 2784
+    },
+    "qt-cache/qtshadercache-arm64-little_endian-lp64/cba8d1ceb9482bf7ad559bc702b71beca94f54a3": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-smoke-1/qt-cache/qtshadercache-arm64-little_endian-lp64/cba8d1ceb9482bf7ad559bc702b71beca94f54a3",
+      "sha256": "4079c7d29f1f6bcdb15d1dc01125bbfe1eeab706563b6e765f300f0a2d1c76b3",
+      "bytes": 2832
+    },
+    "qt-cache/qtshadercache-arm64-little_endian-lp64/5cc098bc5354d98253495e89cc26ca4ba78a3a15": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-smoke-1/qt-cache/qtshadercache-arm64-little_endian-lp64/5cc098bc5354d98253495e89cc26ca4ba78a3a15",
+      "sha256": "d6653e6359fb175411ffab091b36f78d69f8d309edbff71f955c86f2c287caac",
+      "bytes": 4432
+    },
+    "qt-cache/qtshadercache-arm64-little_endian-lp64/3c597a80b51a24c02510e986e8c27bdb62e99ba6": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-smoke-1/qt-cache/qtshadercache-arm64-little_endian-lp64/3c597a80b51a24c02510e986e8c27bdb62e99ba6",
+      "sha256": "eb6ffb16e7da6379f98417a3fa51c0aab30513ebf26dd2a69c07905d81d3365c",
+      "bytes": 2304
+    },
+    "qt-cache/qtshadercache-arm64-little_endian-lp64/d358096b1c9ad1aa59bd4602c6364cc5509d0fd2": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-smoke-1/qt-cache/qtshadercache-arm64-little_endian-lp64/d358096b1c9ad1aa59bd4602c6364cc5509d0fd2",
+      "sha256": "477c25e7a5b286f090bf7113f1296ffcb41a40fe07b7390915e068d11ea46b0a",
+      "bytes": 3824
+    },
+    "qt-cache/qtshadercache-arm64-little_endian-lp64/60e5c4afb5659975001c08fc1721ef35235bdf6a": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-smoke-1/qt-cache/qtshadercache-arm64-little_endian-lp64/60e5c4afb5659975001c08fc1721ef35235bdf6a",
+      "sha256": "2d1558a6ddaa20fdb597fd5c6a0b8588be51213d074803748266b7e24431235a",
+      "bytes": 4132
+    },
+    "qt-cache/qtshadercache-arm64-little_endian-lp64/151d848f668e8d50cfb6460d73b3d589a041764b": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-smoke-1/qt-cache/qtshadercache-arm64-little_endian-lp64/151d848f668e8d50cfb6460d73b3d589a041764b",
+      "sha256": "4c2967562a75377d0084d40c51c0b668114a735f3486bd9d8d40b05c69a41a7f",
+      "bytes": 3008
+    },
+    "previews/probe-000007.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-smoke-1/previews/probe-000007.jpg",
+      "sha256": "3a60dbf194250f862fe11c851388dcf04dcd79fade241f08fad188f443ce53c0",
+      "bytes": 131855
+    },
+    "previews/probe-000010.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-smoke-1/previews/probe-000010.jpg",
+      "sha256": "4d184546957790702e2cd1d114297869bfb8c54f58ff8960e52c3af5e240752d",
+      "bytes": 132133
+    },
+    "previews/probe-000004.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-smoke-1/previews/probe-000004.jpg",
+      "sha256": "ed84b755392a45f26dbc8595369993a240e4aa0d6119da2136e61049fe6e8207",
+      "bytes": 125617
+    },
+    "snapshots/alarm_11_1794687417675788489_85f30c5b.json": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-smoke-1/snapshots/alarm_11_1794687417675788489_85f30c5b.json",
+      "sha256": "87c417d15ece65123319c4aff16a883a212ad9815a489aa1c8bf4b8c101dd04a",
+      "bytes": 3042
+    },
+    "snapshots/alarm_11_1794687417675788489_85f30c5b.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-smoke-1/snapshots/alarm_11_1794687417675788489_85f30c5b.jpg",
+      "sha256": "6ddf534f2cdacacc47bdc511aca2009800222251f9b332abc692de9aa83ca0f7",
+      "bytes": 131696
+    },
+    "provenance/model/helmet_416x416.rknn": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-smoke-1/provenance/model/helmet_416x416.rknn",
+      "sha256": "7e0eefe4bfe86627bb6b58161cacca10912e0dbe1ba2513f58d091c40b26cd48",
+      "bytes": 8110065
+    },
+    "provenance/sources/verify_native_runtime.py": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-smoke-1/provenance/sources/verify_native_runtime.py",
+      "sha256": "72be1a987014a3531f0cf5699cbd9eb49febe2d74bd20dd043cca2b9d29edc00",
+      "bytes": 54737
+    },
+    "provenance/sources/yolo_post.py": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-smoke-1/provenance/sources/yolo_post.py",
+      "sha256": "fae57bbfa1d47d5ab16ef444096fab4fe8e14701c5ec10d87b1ec518282b0505",
+      "bytes": 7811
+    },
+    "provenance/sources/dump_dets.py": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-smoke-1/provenance/sources/dump_dets.py",
+      "sha256": "c21b4a1d1c4ee4e0428cb19d16b560c9c7dfdef2c34b52f62195b836fca90e3f",
+      "bytes": 8619
+    },
+    "provenance/sources/helmet_realtime.py": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-smoke-1/provenance/sources/helmet_realtime.py",
+      "sha256": "15794ebc40fdd1736d9c80d5504d17aa91e1de972bb92bb30a9eeb026309e46d",
+      "bytes": 5503
+    },
+    "provenance/sources/alarm.py": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-smoke-1/provenance/sources/alarm.py",
+      "sha256": "d3e6d68c7b17f5508f0d697e96998f556f224f9f5067169d66c35972b3a023d2",
+      "bytes": 4207
+    },
+    "provenance/sources/benchmark.py": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-smoke-1/provenance/sources/benchmark.py",
+      "sha256": "15dcff515fc9c7332dd5eefd40502f38b0a02e6ab6a62e1d0ec50ce593ab4859",
+      "bytes": 15588
+    },
+    "provenance/sources/telemetry.py": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-smoke-1/provenance/sources/telemetry.py",
+      "sha256": "da4522206053712484a21f80bb26d6424649a263f606f35fa16070be51a83b9e",
+      "bytes": 14670
+    },
+    "provenance/sources/output_sinks.py": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-smoke-1/provenance/sources/output_sinks.py",
+      "sha256": "c2f65642d38f8994200503b242ca93c8f0af105dc5ad3b13650e9ff83c7003cf",
+      "bytes": 23464
+    },
+    "provenance/sources/verify_runtime.py": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-smoke-1/provenance/sources/verify_runtime.py",
+      "sha256": "fdc94bf540d83e8f9a8367d9004d171e60127bb798ba8a6c113999ed888b6217",
+      "bytes": 86641
+    },
+    "provenance/sources/sources.py": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-smoke-1/provenance/sources/sources.py",
+      "sha256": "ea89d66fdefb2bc429ca74efa0437a3c0a8aab672a856078fc15afccfe3b31c9",
+      "bytes": 6717
+    },
+    "provenance/sources/pipeline_runtime.py": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-smoke-1/provenance/sources/pipeline_runtime.py",
+      "sha256": "dee30d6b71c9e8d3e697657fb309fb22e8fb47fafd366d60b555466cf56152e9",
+      "bytes": 35055
+    },
+    "provenance/sources/validate_comparison.py": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-smoke-1/provenance/sources/validate_comparison.py",
+      "sha256": "3b65f9e561084aa7f6199cc7cd413b6426f6ac962f39729ac0668e50350c2860",
+      "bytes": 1819
+    },
+    "provenance/sources/app/launch.py": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-smoke-1/provenance/sources/app/launch.py",
+      "sha256": "8db80c3cdb10519812b4d2b943f1542042a75c9bb67f74a2bfa374ee56ebe2ac",
+      "bytes": 6500
+    },
+    "provenance/sources/app/service.py": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-smoke-1/provenance/sources/app/service.py",
+      "sha256": "f602a63928319b1baf4b9272690116d9a536aa65834ce85adbcf5f98c877f588",
+      "bytes": 29071
+    },
+    "provenance/sources/app/install.py": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-smoke-1/provenance/sources/app/install.py",
+      "sha256": "229e351cf73b6d49ff5ae1bf445e86585b9af22dbbe89cf70759fbf1fdc71ae7",
+      "bytes": 4676
+    },
+    "provenance/sources/app/__init__.py": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-smoke-1/provenance/sources/app/__init__.py",
+      "sha256": "3ca294319d48aa183e5822b0c08426253434101d7c1fc85ae21b74b756784cd1",
+      "bytes": 55
+    },
+    "provenance/sources/app/wifi.py": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-smoke-1/provenance/sources/app/wifi.py",
+      "sha256": "1e998474293b5499e0cedf5fa57317416ac49dab7a2b9f36fd93b97ec30c20fb",
+      "bytes": 24915
+    },
+    "provenance/sources/app/qml/Main.qml": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-smoke-1/provenance/sources/app/qml/Main.qml",
+      "sha256": "6ac6b2e30c2e7ca29a9bc3f1ecb112ac4cc907b33a573664ed7476aeb11d504c",
+      "bytes": 20791
+    },
+    "provenance/input/construction-replay.avi": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-smoke-1/provenance/input/construction-replay.avi",
+      "sha256": "f22897e1ebb40cc919caab335ee4b436d28ebaf0a138eb8b16c63166184af5cc",
+      "bytes": 82400444
+    }
+  },
+  "raw_counts": {
+    "frame_rows": 255,
+    "resource_rows": 16,
+    "pipeline_resource_rows": 12,
+    "event_rows": 5,
+    "http_rows": 16
+  },
+  "app_resources": {
+    "rss_start_bytes": 76894208,
+    "rss_end_bytes": 277966848,
+    "rss_peak_bytes": 328044544,
+    "rss_growth_bytes": 201072640
+  },
+  "evidence_configuration": {
+    "duration": 12.0,
+    "full_jsonl": true,
+    "session_json": true,
+    "save_interval_seconds": 30.0,
+    "additional_load": [
+      "resource-monitor thread",
+      "HTTP observation every 5 seconds",
+      "Qt stdout reader when GUI enabled",
+      "full per-frame disk logs",
+      "periodic annotated saves",
+      "GUI wrapper local control-file poll every .5 seconds"
+    ],
+    "default_app_has_full_logs": false
+  },
+  "actual_source": {
+    "kind": "VideoSource",
+    "is_file": true,
+    "header_fps": 10.0,
+    "header_frame_count": 1200.0,
+    "decoded_image_size": [
+      640,
+      480
+    ],
+    "requested_replay_fps": 20.0
+  },
+  "display_evidence": {
+    "qml_preview_request_hz": 5,
+    "qml_status_poll_hz": 2,
+    "actual_display_fps": null,
+    "screen_status_frame_is_exact_preview_identity": false
+  },
+  "verifier": {
+    "path": "/userdata/helmet-validation/20261115-native-runtime-tools/verify_native_runtime.py",
+    "sha256": "72be1a987014a3531f0cf5699cbd9eb49febe2d74bd20dd043cca2b9d29edc00",
+    "bytes": 54737
+  },
+  "shared_verifier": {
+    "path": "/userdata/helmet-validation/2026-11-14/verify_runtime.py",
+    "sha256": "fdc94bf540d83e8f9a8367d9004d171e60127bb798ba8a6c113999ed888b6217",
+    "bytes": 86641
+  }
+}

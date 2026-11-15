@@ -1,0 +1,2805 @@
+{
+  "acquired_at": "2026-11-14T05:27:50.975Z",
+  "files": [
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers0.xml",
+      "source_path": "annotations/hard_hat_workers0.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers0.xml?datasetVersionNumber=1",
+      "bytes": 4584,
+      "sha256": "ca0a563287fa1662b874d95a8ebc15957de3440961f9c7ac0b390cac88269ff7"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers1.xml",
+      "source_path": "annotations/hard_hat_workers1.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers1.xml?datasetVersionNumber=1",
+      "bytes": 3253,
+      "sha256": "6168e9d317aa13346834a91b6faf44c8a83f94beec557a9956a9875f391840bb"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers10.xml",
+      "source_path": "annotations/hard_hat_workers10.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers10.xml?datasetVersionNumber=1",
+      "bytes": 1243,
+      "sha256": "4a6f3a8b6a45e0a1e18789adebf8cb9ab3d21cf5c520fdcb5e81e63dec35daa0"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers100.xml",
+      "source_path": "annotations/hard_hat_workers100.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers100.xml?datasetVersionNumber=1",
+      "bytes": 1903,
+      "sha256": "bf542a446554c68e0ec32ebf3a7386a63fc4104392e927eea97239975e020949"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers1000.xml",
+      "source_path": "annotations/hard_hat_workers1000.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers1000.xml?datasetVersionNumber=1",
+      "bytes": 906,
+      "sha256": "f3b19d3f1f340940dab5e5ba0aaac3bf6ac5ee585dfb1d298aa98975daf19c03"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers1001.xml",
+      "source_path": "annotations/hard_hat_workers1001.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers1001.xml?datasetVersionNumber=1",
+      "bytes": 1573,
+      "sha256": "abbc27fa5c1130f07b813c7a4dd1b6c2c5b8194c92d46c24c998856e4f0c4943"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers1002.xml",
+      "source_path": "annotations/hard_hat_workers1002.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers1002.xml?datasetVersionNumber=1",
+      "bytes": 1574,
+      "sha256": "bc0980cf52c1f1b366d1bde25353ebecf79b6ce5348764e4dabebba548144343"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers1003.xml",
+      "source_path": "annotations/hard_hat_workers1003.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers1003.xml?datasetVersionNumber=1",
+      "bytes": 2253,
+      "sha256": "0bebb611fe578ca89185928867f628ad7a58c38aa262e8052e7b92d85af949f9"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers1004.xml",
+      "source_path": "annotations/hard_hat_workers1004.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers1004.xml?datasetVersionNumber=1",
+      "bytes": 1912,
+      "sha256": "cd8ebb88b3e044d39eec2506b905cac8335489e887f7c4d2bd736478d5ff303f"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers1005.xml",
+      "source_path": "annotations/hard_hat_workers1005.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers1005.xml?datasetVersionNumber=1",
+      "bytes": 2576,
+      "sha256": "a58cc99e5606b926442af048bd827d76a64b2a093c42a9b5d4446569828e29dd"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers1006.xml",
+      "source_path": "annotations/hard_hat_workers1006.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers1006.xml?datasetVersionNumber=1",
+      "bytes": 6216,
+      "sha256": "097cfd1fe2a1dd44a168b2ed95b31de9465fc6ef9718447545f51c2faf5a5221"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers1007.xml",
+      "source_path": "annotations/hard_hat_workers1007.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers1007.xml?datasetVersionNumber=1",
+      "bytes": 3253,
+      "sha256": "059ed13b54ab1896fceaa033eac2b24c06287e25c4330044dd3d6b4bfc8a57e2"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers1008.xml",
+      "source_path": "annotations/hard_hat_workers1008.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers1008.xml?datasetVersionNumber=1",
+      "bytes": 1242,
+      "sha256": "07ed7de84b33551d7a2db64e60cd32fbcf274a9c4447a3780454f7b8211255be"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers1009.xml",
+      "source_path": "annotations/hard_hat_workers1009.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers1009.xml?datasetVersionNumber=1",
+      "bytes": 1578,
+      "sha256": "45da989c2020ac2449ad5e95c6dd80e536daa8e72631ceeb523f3bafadb9afc0"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers101.xml",
+      "source_path": "annotations/hard_hat_workers101.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers101.xml?datasetVersionNumber=1",
+      "bytes": 1907,
+      "sha256": "84bc208bfb4cc71ae8daab750d6ee96b6a0d76396cd3222979bb0f254bf4102b"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers1010.xml",
+      "source_path": "annotations/hard_hat_workers1010.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers1010.xml?datasetVersionNumber=1",
+      "bytes": 2242,
+      "sha256": "98f09ee0676d52496ee36307e370f1edf2461494cc0b460f5607f660fabd0141"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers1011.xml",
+      "source_path": "annotations/hard_hat_workers1011.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers1011.xml?datasetVersionNumber=1",
+      "bytes": 2252,
+      "sha256": "4c37c9448fc1b45d1a8e9dd5ac77e8bc5f4004a545408f3a38cd25d9707a069d"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers1012.xml",
+      "source_path": "annotations/hard_hat_workers1012.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers1012.xml?datasetVersionNumber=1",
+      "bytes": 1911,
+      "sha256": "0a8ae391173bd7a80928247ae21641435b832baabee9ef518917cb9413248aec"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers1013.xml",
+      "source_path": "annotations/hard_hat_workers1013.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers1013.xml?datasetVersionNumber=1",
+      "bytes": 3580,
+      "sha256": "f19c24dada16a0a7d13eb10b6283d2f61da707cfa9a8d00518864ae4d7d62a13"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers1014.xml",
+      "source_path": "annotations/hard_hat_workers1014.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers1014.xml?datasetVersionNumber=1",
+      "bytes": 2907,
+      "sha256": "93ba2947d99565b2bb92b23cf3a82c2e0dde92dd0b8bdc7f1ab3f57198ac19c0"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers1015.xml",
+      "source_path": "annotations/hard_hat_workers1015.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers1015.xml?datasetVersionNumber=1",
+      "bytes": 573,
+      "sha256": "45859a73bc272bee4a3ec2fbb5ca0a8cc7af2a7a1632e7bdea30c93ec5f166c6"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers1016.xml",
+      "source_path": "annotations/hard_hat_workers1016.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers1016.xml?datasetVersionNumber=1",
+      "bytes": 3588,
+      "sha256": "3aefd584d008ce801444d1acf3c7477493b59a2a892286c8141c14c22cbf0713"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers1017.xml",
+      "source_path": "annotations/hard_hat_workers1017.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers1017.xml?datasetVersionNumber=1",
+      "bytes": 1244,
+      "sha256": "8e4f64df276988e1cdf8bca9eee76c2aa16acb3a44addf9751f7ab389b5edde2"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers1018.xml",
+      "source_path": "annotations/hard_hat_workers1018.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers1018.xml?datasetVersionNumber=1",
+      "bytes": 1905,
+      "sha256": "3b9c06807dc67f45e95e5b73c343dc4553f0aa44870fcf7836ab5704b9f55374"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers1019.xml",
+      "source_path": "annotations/hard_hat_workers1019.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers1019.xml?datasetVersionNumber=1",
+      "bytes": 2575,
+      "sha256": "5fe2d8f3b69b4b6e568256b166daf13f1ad046887f8a06c6d8999d10a2e9657a"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers102.xml",
+      "source_path": "annotations/hard_hat_workers102.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers102.xml?datasetVersionNumber=1",
+      "bytes": 1242,
+      "sha256": "ee0ec40dc9e34e10c211bb0125e23d85cbf4be21abd3cdad8ea85c3a4ef00129"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers1020.xml",
+      "source_path": "annotations/hard_hat_workers1020.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers1020.xml?datasetVersionNumber=1",
+      "bytes": 2924,
+      "sha256": "543454c894586e0a44fe35f2813a49f45a0f49fb81619cd2f0952727fa9db13e"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers1021.xml",
+      "source_path": "annotations/hard_hat_workers1021.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers1021.xml?datasetVersionNumber=1",
+      "bytes": 2916,
+      "sha256": "ea4c17c7ce8fd51c3a845b34f5c7346d29d29046c94fffb997ab2a81c99f08eb"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers1022.xml",
+      "source_path": "annotations/hard_hat_workers1022.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers1022.xml?datasetVersionNumber=1",
+      "bytes": 3588,
+      "sha256": "d5dfdb3a086d1d7fdac0784f59b8b9a33b20877524fc0a6fa5e770e21a59b093"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers1023.xml",
+      "source_path": "annotations/hard_hat_workers1023.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers1023.xml?datasetVersionNumber=1",
+      "bytes": 2590,
+      "sha256": "d611aacebbbf55ef668cf484b3070ddad52cd270a218ec4f183ec4eb1eea0a29"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers1024.xml",
+      "source_path": "annotations/hard_hat_workers1024.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers1024.xml?datasetVersionNumber=1",
+      "bytes": 2910,
+      "sha256": "208cf8a69260a40fef8a2412f7333de760ccc1249a93ce587948126fbe013d5f"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers1025.xml",
+      "source_path": "annotations/hard_hat_workers1025.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers1025.xml?datasetVersionNumber=1",
+      "bytes": 906,
+      "sha256": "e3c1e0e591e9bf14e107842cc72ce3eed33101b7e5c0513982a93e62f8dce567"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers1026.xml",
+      "source_path": "annotations/hard_hat_workers1026.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers1026.xml?datasetVersionNumber=1",
+      "bytes": 4598,
+      "sha256": "4194d0a1b5e593c5353231e6b0504da62e299df0cb189d345a13d40c7672ebc0"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers1027.xml",
+      "source_path": "annotations/hard_hat_workers1027.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers1027.xml?datasetVersionNumber=1",
+      "bytes": 1576,
+      "sha256": "0af1516ad85114e5f94166e8c306a3015bb158c50eb4b11f67080efa0587ec4a"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers1028.xml",
+      "source_path": "annotations/hard_hat_workers1028.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers1028.xml?datasetVersionNumber=1",
+      "bytes": 910,
+      "sha256": "e995889efc474d6f8bfd9fc5be514bd60962a2c4b03fb50b62cdd950928f3f20"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers1029.xml",
+      "source_path": "annotations/hard_hat_workers1029.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers1029.xml?datasetVersionNumber=1",
+      "bytes": 1572,
+      "sha256": "b393e5d3cc222c2d61e20fb513b25ba1ae2388857986240172755bf5c1ce4328"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers103.xml",
+      "source_path": "annotations/hard_hat_workers103.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers103.xml?datasetVersionNumber=1",
+      "bytes": 909,
+      "sha256": "6dbfa0009c554d6aa70097d7c67854bcf5442c892fd2603d3d39f152fd01e45a"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers1030.xml",
+      "source_path": "annotations/hard_hat_workers1030.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers1030.xml?datasetVersionNumber=1",
+      "bytes": 4247,
+      "sha256": "fc919f951144866c7032ec6897fc83972f3fc4dfbd445e02ce1b96588760e7fe"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers1031.xml",
+      "source_path": "annotations/hard_hat_workers1031.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers1031.xml?datasetVersionNumber=1",
+      "bytes": 906,
+      "sha256": "be59bce908e0543c5cf558b13cae128feac44f969853a78216638df564ed0d26"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers1032.xml",
+      "source_path": "annotations/hard_hat_workers1032.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers1032.xml?datasetVersionNumber=1",
+      "bytes": 3917,
+      "sha256": "add414c1971e20c096193895bb1474a567840f007d0cb0059601704114cf3e63"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers1033.xml",
+      "source_path": "annotations/hard_hat_workers1033.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers1033.xml?datasetVersionNumber=1",
+      "bytes": 2252,
+      "sha256": "d42cc6bfaadf63cf850ae92dd714cf83ce49fb1821420a84cd018b87a34d128f"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers1034.xml",
+      "source_path": "annotations/hard_hat_workers1034.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers1034.xml?datasetVersionNumber=1",
+      "bytes": 4237,
+      "sha256": "0a9e793ec0aebc02db081ad3a2d2a98175b5413b7b55ac21dc4060cf5fa7f91c"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers1035.xml",
+      "source_path": "annotations/hard_hat_workers1035.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers1035.xml?datasetVersionNumber=1",
+      "bytes": 3907,
+      "sha256": "d687ab754aa8099e7c6cc5fa6a510fa92a3b901411497f38241a67f12855c130"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers1036.xml",
+      "source_path": "annotations/hard_hat_workers1036.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers1036.xml?datasetVersionNumber=1",
+      "bytes": 1245,
+      "sha256": "ef352e7fd5f16738dfdc01704f8ddb44011d667bc15ae38e6fd88ef6114c8f9b"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers1037.xml",
+      "source_path": "annotations/hard_hat_workers1037.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers1037.xml?datasetVersionNumber=1",
+      "bytes": 907,
+      "sha256": "384c9ec7b658b969ac857d97151bc7ffb1239af986f274c87f1361a85fc4c081"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers1038.xml",
+      "source_path": "annotations/hard_hat_workers1038.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers1038.xml?datasetVersionNumber=1",
+      "bytes": 5553,
+      "sha256": "416651107087a5a3f443e0a4565ec0455ec66840dea74d58c409c3efdce9324a"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers1039.xml",
+      "source_path": "annotations/hard_hat_workers1039.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers1039.xml?datasetVersionNumber=1",
+      "bytes": 1242,
+      "sha256": "ac2f863658bb951fa6240a87bfc6292c0494a5675ab03c86378ca67a8afb2f2d"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers104.xml",
+      "source_path": "annotations/hard_hat_workers104.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers104.xml?datasetVersionNumber=1",
+      "bytes": 1905,
+      "sha256": "4d77f84b7a23efe2ee7023156c0c71851eb7b658316a15d8820c7441bd84aafe"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers1040.xml",
+      "source_path": "annotations/hard_hat_workers1040.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers1040.xml?datasetVersionNumber=1",
+      "bytes": 1243,
+      "sha256": "4be3e965e342677fc9dbc407fb7ccd1e9552e58705b46ad17f55fb186b44d1c4"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers1041.xml",
+      "source_path": "annotations/hard_hat_workers1041.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers1041.xml?datasetVersionNumber=1",
+      "bytes": 910,
+      "sha256": "3c48cd0bd25f37f0f15e0f7060592f73a7dd7dad39b79189236d231e50aa9f1a"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers1042.xml",
+      "source_path": "annotations/hard_hat_workers1042.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers1042.xml?datasetVersionNumber=1",
+      "bytes": 908,
+      "sha256": "dedfd719ba5434b2c92d998af3b8ad1f637dad69c45f5486e4f071692909726d"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers1043.xml",
+      "source_path": "annotations/hard_hat_workers1043.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers1043.xml?datasetVersionNumber=1",
+      "bytes": 1576,
+      "sha256": "be0f21ba583007f4cfe6fdc4afb9c00949de2865f0abd4fbdadf7b12f8793526"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers1044.xml",
+      "source_path": "annotations/hard_hat_workers1044.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers1044.xml?datasetVersionNumber=1",
+      "bytes": 910,
+      "sha256": "e0bc97bb3870e326047ff87a9a8f1c57e6027d5670fcab96e503b15c01633de0"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers1045.xml",
+      "source_path": "annotations/hard_hat_workers1045.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers1045.xml?datasetVersionNumber=1",
+      "bytes": 2569,
+      "sha256": "1f124f56f639a543629d4a21b8394b69ea4daf9612c53961ec01e94b9f170dc2"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers1046.xml",
+      "source_path": "annotations/hard_hat_workers1046.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers1046.xml?datasetVersionNumber=1",
+      "bytes": 573,
+      "sha256": "9e2542c5c81451fe944023e83f8919b70a65105b6b0742a165c059b6b0b64c81"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers1047.xml",
+      "source_path": "annotations/hard_hat_workers1047.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers1047.xml?datasetVersionNumber=1",
+      "bytes": 1906,
+      "sha256": "c52ae2fdd1bbc57aa77f5a110274f852e1835d32749d7ab90c60dcd3866d1388"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers1048.xml",
+      "source_path": "annotations/hard_hat_workers1048.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers1048.xml?datasetVersionNumber=1",
+      "bytes": 573,
+      "sha256": "3ea02940a51c7c647f3c545f85ececaf2fb15c015f599f6509e3b98e3871cc1a"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers1049.xml",
+      "source_path": "annotations/hard_hat_workers1049.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers1049.xml?datasetVersionNumber=1",
+      "bytes": 3581,
+      "sha256": "82a02ec884416e820d751ca3d4e282f8847ac01ec1f57c0a247aac88b5195b5a"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers105.xml",
+      "source_path": "annotations/hard_hat_workers105.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers105.xml?datasetVersionNumber=1",
+      "bytes": 2583,
+      "sha256": "12a195ed15565e78f89482cba0ae550138801012de1485497035e0a4c39fb79c"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers1050.xml",
+      "source_path": "annotations/hard_hat_workers1050.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers1050.xml?datasetVersionNumber=1",
+      "bytes": 906,
+      "sha256": "1f5acfdbbe1e528f52df66df60ab953cdf0a9584a55876e367810ccf8490cf5f"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers1051.xml",
+      "source_path": "annotations/hard_hat_workers1051.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers1051.xml?datasetVersionNumber=1",
+      "bytes": 1582,
+      "sha256": "0118c59c6fbc211ffd89922ab6b39cd7419b3f218f0fa0859511689775bda93b"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers1052.xml",
+      "source_path": "annotations/hard_hat_workers1052.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers1052.xml?datasetVersionNumber=1",
+      "bytes": 1578,
+      "sha256": "921a0dbe3aa82f5a26406647ae15751f70a07d0f311ebd718015cbc4ded2e96f"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers1053.xml",
+      "source_path": "annotations/hard_hat_workers1053.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers1053.xml?datasetVersionNumber=1",
+      "bytes": 1573,
+      "sha256": "96e5764166523383329a62d8d0ebcd7da9afacc1e40cc78c277e97154da72aae"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers1054.xml",
+      "source_path": "annotations/hard_hat_workers1054.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers1054.xml?datasetVersionNumber=1",
+      "bytes": 906,
+      "sha256": "5e5ed23641a2d2bd754c7e8d0956f583a23c24c47bf2e4fa3ce87b659da8d66a"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers1055.xml",
+      "source_path": "annotations/hard_hat_workers1055.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers1055.xml?datasetVersionNumber=1",
+      "bytes": 574,
+      "sha256": "bea3bbcb21c42f3c84d2c76aba8cf1c6535d6c63f8c79799bcf44e6e40647aae"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers1056.xml",
+      "source_path": "annotations/hard_hat_workers1056.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers1056.xml?datasetVersionNumber=1",
+      "bytes": 1246,
+      "sha256": "a6e6ebeaaea7c8e83788090730cf9d68c3433827291c173a1089bb03f7230689"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers1057.xml",
+      "source_path": "annotations/hard_hat_workers1057.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers1057.xml?datasetVersionNumber=1",
+      "bytes": 1572,
+      "sha256": "6aad9a65445e95f7879241f6f6a393558b758bd76759f6c2a4085e387b7241f0"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers1058.xml",
+      "source_path": "annotations/hard_hat_workers1058.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers1058.xml?datasetVersionNumber=1",
+      "bytes": 2237,
+      "sha256": "4f4e3db7cc4a5b985cfb748badae34c55d1527e1069c9563293bd4c49d418e39"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers1059.xml",
+      "source_path": "annotations/hard_hat_workers1059.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers1059.xml?datasetVersionNumber=1",
+      "bytes": 1905,
+      "sha256": "f3c429a130c188d136102a7504d68d901233a944f8af49be69ac145ea32de821"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers106.xml",
+      "source_path": "annotations/hard_hat_workers106.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers106.xml?datasetVersionNumber=1",
+      "bytes": 905,
+      "sha256": "c38b61c22f84c3c827203d9168f0916e26da36bb92a7b7c6b59991c4b467d899"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers1060.xml",
+      "source_path": "annotations/hard_hat_workers1060.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers1060.xml?datasetVersionNumber=1",
+      "bytes": 3251,
+      "sha256": "bb8afe091578afb4eb68a1d0ccaecef818a56dee6f957331071e1a4154fcae7a"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers1061.xml",
+      "source_path": "annotations/hard_hat_workers1061.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers1061.xml?datasetVersionNumber=1",
+      "bytes": 1242,
+      "sha256": "26cf1bcc494a7e84e0d2794d57f11584131c5ee482a4f16b75cd5e217bc0e56c"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers1062.xml",
+      "source_path": "annotations/hard_hat_workers1062.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers1062.xml?datasetVersionNumber=1",
+      "bytes": 573,
+      "sha256": "15855458c04ae2de3699f034064c0af9ea6cc4a5f89e867a388e006516154656"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers1063.xml",
+      "source_path": "annotations/hard_hat_workers1063.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers1063.xml?datasetVersionNumber=1",
+      "bytes": 1576,
+      "sha256": "09c035636e83c9bac4f85a2c4b1274e08067581d0eaaa2191fe7604f1155b87b"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers1064.xml",
+      "source_path": "annotations/hard_hat_workers1064.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers1064.xml?datasetVersionNumber=1",
+      "bytes": 1582,
+      "sha256": "9e040ae866b3b2c18e32e0d559236396856fa48c16d73ceec3b44e4f21ca554c"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers1065.xml",
+      "source_path": "annotations/hard_hat_workers1065.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers1065.xml?datasetVersionNumber=1",
+      "bytes": 574,
+      "sha256": "31af8c4a288b20851ffefe4f6278a620f4b31d07bc3c1ecfefa7f320b5fc149e"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers1066.xml",
+      "source_path": "annotations/hard_hat_workers1066.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers1066.xml?datasetVersionNumber=1",
+      "bytes": 2238,
+      "sha256": "7cc96370f86869f8b42b5bd9f8c1d1e74f50a89302a0f725e07ca8ecc9f780b2"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers1067.xml",
+      "source_path": "annotations/hard_hat_workers1067.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers1067.xml?datasetVersionNumber=1",
+      "bytes": 3252,
+      "sha256": "eed763b75f0d657757d53ae60bc4a7e27ffdd3b4af7de63ac7a7c8613f0b78c4"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers1068.xml",
+      "source_path": "annotations/hard_hat_workers1068.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers1068.xml?datasetVersionNumber=1",
+      "bytes": 907,
+      "sha256": "e1c8b2f98a2a35891862eeec1b7d7ec9d6a2fa71afe6518f88134d97af410962"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers1069.xml",
+      "source_path": "annotations/hard_hat_workers1069.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers1069.xml?datasetVersionNumber=1",
+      "bytes": 2254,
+      "sha256": "70f13f9882416b8121741027abbda4c295d115fae2994f8afe5e433d38d7fa29"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers107.xml",
+      "source_path": "annotations/hard_hat_workers107.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers107.xml?datasetVersionNumber=1",
+      "bytes": 909,
+      "sha256": "b055c52f8510e2a13e56fda4589cd4708239180f3d370b1b2565542f595ae349"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers1070.xml",
+      "source_path": "annotations/hard_hat_workers1070.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers1070.xml?datasetVersionNumber=1",
+      "bytes": 2577,
+      "sha256": "1671af82626439877f7ae8ce56d2513c8473c351bea38c41acca852375462959"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers1071.xml",
+      "source_path": "annotations/hard_hat_workers1071.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers1071.xml?datasetVersionNumber=1",
+      "bytes": 2586,
+      "sha256": "0d851a28633c0ba867e6eb35c0b773705a752bf72a89d69895329deae0b3ea9b"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers1072.xml",
+      "source_path": "annotations/hard_hat_workers1072.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers1072.xml?datasetVersionNumber=1",
+      "bytes": 906,
+      "sha256": "0e3ba9501a1d19858081454ffe061b7178eb3bf8819cca6256012a4dc8cd77a3"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers1073.xml",
+      "source_path": "annotations/hard_hat_workers1073.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers1073.xml?datasetVersionNumber=1",
+      "bytes": 3245,
+      "sha256": "1f92fbc1985469aaf172075b23e86647726a8ab9beaf6f8d7f9af29120861ab3"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers1074.xml",
+      "source_path": "annotations/hard_hat_workers1074.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers1074.xml?datasetVersionNumber=1",
+      "bytes": 1911,
+      "sha256": "a8ba12c1e66ee09e376ac8c4be611d0d09054b981f7353efd0fcdc4e18660f73"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers1075.xml",
+      "source_path": "annotations/hard_hat_workers1075.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers1075.xml?datasetVersionNumber=1",
+      "bytes": 1246,
+      "sha256": "d3039b5dccbcf12d593a6ccdd5f6656c82d52f42fcb9304618e4441a2f39dfde"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers1076.xml",
+      "source_path": "annotations/hard_hat_workers1076.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers1076.xml?datasetVersionNumber=1",
+      "bytes": 1245,
+      "sha256": "0e6d1a4657c56c48140fd402de7f5949d041e3bb7d901c03ca47c9a233a71346"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers1077.xml",
+      "source_path": "annotations/hard_hat_workers1077.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers1077.xml?datasetVersionNumber=1",
+      "bytes": 1910,
+      "sha256": "69fb52282cf96388d79f6df0c9e9b687fbc57448e0fe3f69bba58a852b0be498"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers1078.xml",
+      "source_path": "annotations/hard_hat_workers1078.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers1078.xml?datasetVersionNumber=1",
+      "bytes": 2584,
+      "sha256": "8b3574efae34f68acb5b470607724e45feb24c52c28e3d68770a3ebf9ee6c8d6"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers1079.xml",
+      "source_path": "annotations/hard_hat_workers1079.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers1079.xml?datasetVersionNumber=1",
+      "bytes": 5580,
+      "sha256": "8bc3808d58b48ccfa95bcc7423446e685376583f451aac23536f1dececc6b48f"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers108.xml",
+      "source_path": "annotations/hard_hat_workers108.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers108.xml?datasetVersionNumber=1",
+      "bytes": 909,
+      "sha256": "0b22eeb3c1ef95947fcdfda629caa552b26b0f5ef974be452a06b088cec62900"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers1080.xml",
+      "source_path": "annotations/hard_hat_workers1080.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers1080.xml?datasetVersionNumber=1",
+      "bytes": 5256,
+      "sha256": "89630646ccf2ea6ae6fc523fc6134614a4a572c0c2040d4f8b524f85587da3d8"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers1081.xml",
+      "source_path": "annotations/hard_hat_workers1081.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers1081.xml?datasetVersionNumber=1",
+      "bytes": 3586,
+      "sha256": "a8dbd69be1d160e4bc9ff30b0a1df11d14f8ccc720533723051018dc4a05b1f0"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers1082.xml",
+      "source_path": "annotations/hard_hat_workers1082.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers1082.xml?datasetVersionNumber=1",
+      "bytes": 4251,
+      "sha256": "24ab22cbc75c1c1f34e0c6d7fbf2cbe505f5fb7b9b96e0d711c806a4f6dae1d1"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers1083.xml",
+      "source_path": "annotations/hard_hat_workers1083.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers1083.xml?datasetVersionNumber=1",
+      "bytes": 574,
+      "sha256": "b6fd7af6f7ca66019854140542cc384e95650e2cb739f54d55884e079eea5e68"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers1084.xml",
+      "source_path": "annotations/hard_hat_workers1084.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers1084.xml?datasetVersionNumber=1",
+      "bytes": 1244,
+      "sha256": "45d16225e1c9f3fd6222a9637372450af8f549559bcc953e238284430d80c9ee"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers1085.xml",
+      "source_path": "annotations/hard_hat_workers1085.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers1085.xml?datasetVersionNumber=1",
+      "bytes": 908,
+      "sha256": "8ecace663d20ac72d7747913c3d10b71cf5b565c19e89f90fe00b9a886a41e27"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers1086.xml",
+      "source_path": "annotations/hard_hat_workers1086.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers1086.xml?datasetVersionNumber=1",
+      "bytes": 906,
+      "sha256": "c6bdd8ed9684467f3a437d38a1f54be21d534390c68b7215fe8b8bb0ea57c0af"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers1087.xml",
+      "source_path": "annotations/hard_hat_workers1087.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers1087.xml?datasetVersionNumber=1",
+      "bytes": 574,
+      "sha256": "f3815fab40540c2a2ecfab48f76daa979e0ebe854c0960e41f2063c8510a9264"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers1088.xml",
+      "source_path": "annotations/hard_hat_workers1088.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers1088.xml?datasetVersionNumber=1",
+      "bytes": 908,
+      "sha256": "b4f4ea7b88cfa5cf1b405a8b1c97e4d0c5ec83910f2eb509b13292e73d44e76b"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers1089.xml",
+      "source_path": "annotations/hard_hat_workers1089.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers1089.xml?datasetVersionNumber=1",
+      "bytes": 906,
+      "sha256": "70f34f19cef272bc55414842d324cf3b165fda8bc975c945e8745d05d470074b"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers109.xml",
+      "source_path": "annotations/hard_hat_workers109.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers109.xml?datasetVersionNumber=1",
+      "bytes": 1576,
+      "sha256": "e22cc91411fc45dbb768789b62ca1f88802422f89881651e30d20339a3abb5db"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers1090.xml",
+      "source_path": "annotations/hard_hat_workers1090.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers1090.xml?datasetVersionNumber=1",
+      "bytes": 1578,
+      "sha256": "880b675dea7b94599a7d616144f910d03c3ab4d903e7b035acfa57c47dbe5d64"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers1091.xml",
+      "source_path": "annotations/hard_hat_workers1091.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers1091.xml?datasetVersionNumber=1",
+      "bytes": 4562,
+      "sha256": "4b71275fbd4449bbf3065e48da09dde142fcaba1806b51d7e2ae41c8fa5e87b4"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers1092.xml",
+      "source_path": "annotations/hard_hat_workers1092.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers1092.xml?datasetVersionNumber=1",
+      "bytes": 3572,
+      "sha256": "1585d47598b3c8624057b2bc6b1f2135179f735900e983c6a2a688002d154a5c"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers1093.xml",
+      "source_path": "annotations/hard_hat_workers1093.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers1093.xml?datasetVersionNumber=1",
+      "bytes": 1579,
+      "sha256": "d04eb5bf73f8df5fd9a3cb086508711da6e78ec1709ccba009ec0a116cb5f1be"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers1094.xml",
+      "source_path": "annotations/hard_hat_workers1094.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers1094.xml?datasetVersionNumber=1",
+      "bytes": 907,
+      "sha256": "4de2d1d5702c3891eb5ca982ca198e8929085245308037371953cd2f368ca8c6"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers1095.xml",
+      "source_path": "annotations/hard_hat_workers1095.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers1095.xml?datasetVersionNumber=1",
+      "bytes": 2586,
+      "sha256": "29aa89c1387b76041dc906e2fa4f8f85a3434130ba4034109f2d15ca71734a6c"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers1096.xml",
+      "source_path": "annotations/hard_hat_workers1096.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers1096.xml?datasetVersionNumber=1",
+      "bytes": 910,
+      "sha256": "e9312c16e36afd0a90e4b651f65403e8acff667135428fef0a02efb6c60bee5c"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers1097.xml",
+      "source_path": "annotations/hard_hat_workers1097.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers1097.xml?datasetVersionNumber=1",
+      "bytes": 906,
+      "sha256": "32267976b52a742498f4e546f4bb42c56524a09cc305da2c28f7e8e18976bf70"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers1098.xml",
+      "source_path": "annotations/hard_hat_workers1098.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers1098.xml?datasetVersionNumber=1",
+      "bytes": 2574,
+      "sha256": "ea266d626d6999a6f36c41d3f49122354f28ed1c06ba028a34c500e3131953f5"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers1099.xml",
+      "source_path": "annotations/hard_hat_workers1099.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers1099.xml?datasetVersionNumber=1",
+      "bytes": 1573,
+      "sha256": "2f090fe1d83b16caa9f2318eca61f03747b81c0e00a671c8facc1e0596af0f59"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers11.xml",
+      "source_path": "annotations/hard_hat_workers11.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers11.xml?datasetVersionNumber=1",
+      "bytes": 1244,
+      "sha256": "07a3297fb4a8b6d54a8af52f147d00dda1812f5dd634a8ba09314680409340b5"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers110.xml",
+      "source_path": "annotations/hard_hat_workers110.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers110.xml?datasetVersionNumber=1",
+      "bytes": 573,
+      "sha256": "14ba4a8737a00521cc08947204bdd61a9d18651a1d0493e8ee4ec2df604ed47f"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers1100.xml",
+      "source_path": "annotations/hard_hat_workers1100.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers1100.xml?datasetVersionNumber=1",
+      "bytes": 3254,
+      "sha256": "c1deceeead67362f8cccdd3f9c179a23ba080de21b7422d05ed5237f4efbcf40"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers1101.xml",
+      "source_path": "annotations/hard_hat_workers1101.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers1101.xml?datasetVersionNumber=1",
+      "bytes": 1572,
+      "sha256": "56b1a54564caf57c4f91ebc45685b73a7ff29138e574cd5410543eb4cd043891"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers1102.xml",
+      "source_path": "annotations/hard_hat_workers1102.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers1102.xml?datasetVersionNumber=1",
+      "bytes": 1245,
+      "sha256": "f0ec9ded462439dd679daa02d174ae17742d3318ce1b4829266d179825e9faba"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers1103.xml",
+      "source_path": "annotations/hard_hat_workers1103.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers1103.xml?datasetVersionNumber=1",
+      "bytes": 2241,
+      "sha256": "94eebe102affe67edfb15521113ff19c396e4c979d6884f8d3e491a4955d19ca"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers1104.xml",
+      "source_path": "annotations/hard_hat_workers1104.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers1104.xml?datasetVersionNumber=1",
+      "bytes": 574,
+      "sha256": "d68eb2f676c67302241fd5473e62e48b34ccd14738d6472875097d60aba3563d"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers1105.xml",
+      "source_path": "annotations/hard_hat_workers1105.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers1105.xml?datasetVersionNumber=1",
+      "bytes": 910,
+      "sha256": "87b85d07162135e85c5888349dbfae4623d9394b71a52b41e6573c05be2dbe8a"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers1106.xml",
+      "source_path": "annotations/hard_hat_workers1106.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers1106.xml?datasetVersionNumber=1",
+      "bytes": 2913,
+      "sha256": "8572a0151408a350d3596a86d3ecc9adf6ee999e09bedbe41ddfbfcd577d677e"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers1107.xml",
+      "source_path": "annotations/hard_hat_workers1107.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers1107.xml?datasetVersionNumber=1",
+      "bytes": 907,
+      "sha256": "9f7d0b15c875464973f9f5b9ee6af151725bb575a09c15f518200334140a707e"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers1108.xml",
+      "source_path": "annotations/hard_hat_workers1108.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers1108.xml?datasetVersionNumber=1",
+      "bytes": 1908,
+      "sha256": "04cd25634729dac62f3f5d984f97c35ee83d368de2e431758fb14761d694255e"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers1109.xml",
+      "source_path": "annotations/hard_hat_workers1109.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers1109.xml?datasetVersionNumber=1",
+      "bytes": 2244,
+      "sha256": "b527992369fde1d21d9eef124b96062653418178eefe8e42c2611dfca4a4d67f"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers111.xml",
+      "source_path": "annotations/hard_hat_workers111.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers111.xml?datasetVersionNumber=1",
+      "bytes": 905,
+      "sha256": "dca22d8a24b9c85737898a469b8e43b570d428741bed5b4511d5f39aae6c99df"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers1110.xml",
+      "source_path": "annotations/hard_hat_workers1110.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers1110.xml?datasetVersionNumber=1",
+      "bytes": 2581,
+      "sha256": "57454ad190b9df1c2be353ed18615605ea0499e46c650ba45347e5ca5f7d793d"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers1111.xml",
+      "source_path": "annotations/hard_hat_workers1111.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers1111.xml?datasetVersionNumber=1",
+      "bytes": 1246,
+      "sha256": "399317bc625db1861e2db6ab91b8d19703fb566865d4ec7032196cf2f07af49e"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers1112.xml",
+      "source_path": "annotations/hard_hat_workers1112.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers1112.xml?datasetVersionNumber=1",
+      "bytes": 908,
+      "sha256": "30f09732eac3e4ac3a0f64fa7b777ee71d04c22724bd1141a5b8a0a8c15f7ef6"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers1113.xml",
+      "source_path": "annotations/hard_hat_workers1113.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers1113.xml?datasetVersionNumber=1",
+      "bytes": 574,
+      "sha256": "e0e1c945deefd6b41e970b095a603b64adb77d628f831cd5c094fc38b8ec7998"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers1114.xml",
+      "source_path": "annotations/hard_hat_workers1114.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers1114.xml?datasetVersionNumber=1",
+      "bytes": 1242,
+      "sha256": "3f28ff5071716cb0a1229272c4c16cb84ff50f53bbb70140b04b0a662e1fb43b"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers1115.xml",
+      "source_path": "annotations/hard_hat_workers1115.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers1115.xml?datasetVersionNumber=1",
+      "bytes": 3593,
+      "sha256": "3b04f7f95bce7a4f581d3e2b9f4221609c64dc95062e0dfd3579b3a3c8dc7e46"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers1116.xml",
+      "source_path": "annotations/hard_hat_workers1116.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers1116.xml?datasetVersionNumber=1",
+      "bytes": 906,
+      "sha256": "8583e2a62208ed07bf7d0f58fd89701d4ac9573c81121ecf1c333c682a63f47f"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers1117.xml",
+      "source_path": "annotations/hard_hat_workers1117.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers1117.xml?datasetVersionNumber=1",
+      "bytes": 905,
+      "sha256": "1b31d65b10a5c501c5a061909e3636d582dfca9a2dab4e573193fbbc8303483a"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers1118.xml",
+      "source_path": "annotations/hard_hat_workers1118.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers1118.xml?datasetVersionNumber=1",
+      "bytes": 1917,
+      "sha256": "1a214a197430413c301e40e41bfe509b37c9b6433a68246342a7cf5a54d050e5"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers1119.xml",
+      "source_path": "annotations/hard_hat_workers1119.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers1119.xml?datasetVersionNumber=1",
+      "bytes": 2902,
+      "sha256": "313a85dd1032e8b8a1d455d618ce0fdc6bfb28b667034bb8b3b7dcf265a00adb"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers112.xml",
+      "source_path": "annotations/hard_hat_workers112.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers112.xml?datasetVersionNumber=1",
+      "bytes": 573,
+      "sha256": "1b98e8515db09e55fe74c055f0e514d3da119ae7db0e43ee2b5a601d6c88a61d"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers1120.xml",
+      "source_path": "annotations/hard_hat_workers1120.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers1120.xml?datasetVersionNumber=1",
+      "bytes": 4250,
+      "sha256": "7ed7828325b5c27f63e2b7cee5396e41784d9c9973376c52c50bfdc729764f07"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers1121.xml",
+      "source_path": "annotations/hard_hat_workers1121.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers1121.xml?datasetVersionNumber=1",
+      "bytes": 1576,
+      "sha256": "57468f376e19df10a1979ac083b93ee2387f9e8832183c1fb0e57cdc0aebe6a4"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers1122.xml",
+      "source_path": "annotations/hard_hat_workers1122.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers1122.xml?datasetVersionNumber=1",
+      "bytes": 904,
+      "sha256": "46311765a5e7513a988d476d05997019d3de405a6812821a976589d107b6df99"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers1123.xml",
+      "source_path": "annotations/hard_hat_workers1123.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers1123.xml?datasetVersionNumber=1",
+      "bytes": 574,
+      "sha256": "2b7c8f242f041236af08ac6f2603e2875f73142d619fbec242323b2524f94ff5"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers1124.xml",
+      "source_path": "annotations/hard_hat_workers1124.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers1124.xml?datasetVersionNumber=1",
+      "bytes": 908,
+      "sha256": "0f1dd4fab13391551215c93e07abe897efb3a236bc0c2f8c14b38984e09f3fcb"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers1125.xml",
+      "source_path": "annotations/hard_hat_workers1125.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers1125.xml?datasetVersionNumber=1",
+      "bytes": 2249,
+      "sha256": "50ead077cc22bb5a4799ad18ee408c52d07cfbb820259897b909ebd20401c233"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers1126.xml",
+      "source_path": "annotations/hard_hat_workers1126.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers1126.xml?datasetVersionNumber=1",
+      "bytes": 910,
+      "sha256": "9757c1d78cc9aaef144f3020c237abe4ab1617b25c0502685d94eec149970489"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers1127.xml",
+      "source_path": "annotations/hard_hat_workers1127.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers1127.xml?datasetVersionNumber=1",
+      "bytes": 906,
+      "sha256": "79879231fb94e29cc156ed7250986d9a7d9309b1ba288ad352ab6db8d86312c3"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers1128.xml",
+      "source_path": "annotations/hard_hat_workers1128.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers1128.xml?datasetVersionNumber=1",
+      "bytes": 573,
+      "sha256": "b2170aa52f132b38db3723cab055340edd9c7e01337666c8c005344d39e8ba6a"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers1129.xml",
+      "source_path": "annotations/hard_hat_workers1129.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers1129.xml?datasetVersionNumber=1",
+      "bytes": 1907,
+      "sha256": "f703d95a721318ce388efffe317a4acb714578b8171e9881f2e59b9f7af09aa6"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers113.xml",
+      "source_path": "annotations/hard_hat_workers113.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers113.xml?datasetVersionNumber=1",
+      "bytes": 573,
+      "sha256": "9450eea13512f2c4f1e532fef11058368c23c0d4f36a5407ca84e9f7e66f5e8b"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers1130.xml",
+      "source_path": "annotations/hard_hat_workers1130.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers1130.xml?datasetVersionNumber=1",
+      "bytes": 1906,
+      "sha256": "a8c1d230f1a5f1f96b5a6ed596c14bf2ba49e8d5ecf442a359e65f9e3e9a472c"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers1131.xml",
+      "source_path": "annotations/hard_hat_workers1131.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers1131.xml?datasetVersionNumber=1",
+      "bytes": 909,
+      "sha256": "5b31ad74a8239ea667ac0b604959bfd635e8b6209a75b9adb0133e4c2f5b9281"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers1132.xml",
+      "source_path": "annotations/hard_hat_workers1132.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers1132.xml?datasetVersionNumber=1",
+      "bytes": 3592,
+      "sha256": "438f3dba13c72732357c36e3590958a2c065f13fda257092ce6d4f0181d5d389"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers1133.xml",
+      "source_path": "annotations/hard_hat_workers1133.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers1133.xml?datasetVersionNumber=1",
+      "bytes": 2575,
+      "sha256": "08cb980fcbc0fe3fe9c58b55911246ad371565562ccc338dca870fb89a42cd33"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers1134.xml",
+      "source_path": "annotations/hard_hat_workers1134.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers1134.xml?datasetVersionNumber=1",
+      "bytes": 1244,
+      "sha256": "da0859b9c67a08b29c262a7c05cbbaecf907ca1db6cb4c27462daca4f6b20d1a"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers1135.xml",
+      "source_path": "annotations/hard_hat_workers1135.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers1135.xml?datasetVersionNumber=1",
+      "bytes": 910,
+      "sha256": "217e184aa93d077cf9b18bd3e80a7809e0524976b82298b440ab82a7401865ac"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers1136.xml",
+      "source_path": "annotations/hard_hat_workers1136.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers1136.xml?datasetVersionNumber=1",
+      "bytes": 1574,
+      "sha256": "cd4f44bafcdd6e28bf62ad39c48c8f7994c00ef11c7a8d95982ba26edcc155a3"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers1137.xml",
+      "source_path": "annotations/hard_hat_workers1137.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers1137.xml?datasetVersionNumber=1",
+      "bytes": 1572,
+      "sha256": "2799cde9ab39ba349e9650c25a45a2502233b9e291041b4478c2ef034b9a118c"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers1138.xml",
+      "source_path": "annotations/hard_hat_workers1138.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers1138.xml?datasetVersionNumber=1",
+      "bytes": 910,
+      "sha256": "3497c512cc8612f0277e2220c9c7e7377b9d69076ff454835b52dd7bd5736242"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers1139.xml",
+      "source_path": "annotations/hard_hat_workers1139.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers1139.xml?datasetVersionNumber=1",
+      "bytes": 4234,
+      "sha256": "7aeea2247e599bd7f9bbf9fbe515d0f3a215508cc28983272201c1c1ea9eab19"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers114.xml",
+      "source_path": "annotations/hard_hat_workers114.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers114.xml?datasetVersionNumber=1",
+      "bytes": 3908,
+      "sha256": "63227440b0594e24c4b7107717a452e18c7bc01c9231937b59dda8ad9cf40f96"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers1140.xml",
+      "source_path": "annotations/hard_hat_workers1140.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers1140.xml?datasetVersionNumber=1",
+      "bytes": 2254,
+      "sha256": "9bc54e3ae7b28f0d227633cc26dab9b8f8c3d09b59f14c48a46d98f33be2838e"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers1141.xml",
+      "source_path": "annotations/hard_hat_workers1141.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers1141.xml?datasetVersionNumber=1",
+      "bytes": 2586,
+      "sha256": "3c2f7e05c10e4bff1d3449dd0f999cbc1dfe8d714fb8f8bf716311aa435953e2"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers1142.xml",
+      "source_path": "annotations/hard_hat_workers1142.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers1142.xml?datasetVersionNumber=1",
+      "bytes": 2917,
+      "sha256": "3621ae26aca72d9f236b991ae2fe77ae2c047175db41b3f40844efbac9d2734e"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers1143.xml",
+      "source_path": "annotations/hard_hat_workers1143.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers1143.xml?datasetVersionNumber=1",
+      "bytes": 910,
+      "sha256": "9537a39a943f84b1f5913e46f4ef07c8d1afda8b336bb8f6badcaf39db0a537e"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers1144.xml",
+      "source_path": "annotations/hard_hat_workers1144.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers1144.xml?datasetVersionNumber=1",
+      "bytes": 910,
+      "sha256": "1d3ab85860584bf77f4a4df12af961a404525bc16e3fdc417d6e26b9b10f08b8"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers1145.xml",
+      "source_path": "annotations/hard_hat_workers1145.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers1145.xml?datasetVersionNumber=1",
+      "bytes": 907,
+      "sha256": "04838ce049b1ff43186f8f54787252948c9e7c43327ea7140cfe063f03509141"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers1146.xml",
+      "source_path": "annotations/hard_hat_workers1146.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers1146.xml?datasetVersionNumber=1",
+      "bytes": 2573,
+      "sha256": "30bafd4d63516877b3b102b5606fd3316d2053efc105215cc8af26630c886e85"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers1147.xml",
+      "source_path": "annotations/hard_hat_workers1147.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers1147.xml?datasetVersionNumber=1",
+      "bytes": 573,
+      "sha256": "613f0bc0d248db70228b23ccc1402dc8c777fc6429c0ba76d5333e48f127b3ed"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers1148.xml",
+      "source_path": "annotations/hard_hat_workers1148.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers1148.xml?datasetVersionNumber=1",
+      "bytes": 2926,
+      "sha256": "850b166b057630e220983a7f058334b97e22064031f5d90186a9c0771a939867"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers1149.xml",
+      "source_path": "annotations/hard_hat_workers1149.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers1149.xml?datasetVersionNumber=1",
+      "bytes": 1582,
+      "sha256": "496a1f352695a3a1b1350f5f5796b4b81c08a8dc65a1affbc4100bcf9a554434"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers115.xml",
+      "source_path": "annotations/hard_hat_workers115.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers115.xml?datasetVersionNumber=1",
+      "bytes": 573,
+      "sha256": "026403863bc65373aff9e3739323789229a7789878601b05c016356a36a33293"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers1150.xml",
+      "source_path": "annotations/hard_hat_workers1150.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers1150.xml?datasetVersionNumber=1",
+      "bytes": 1582,
+      "sha256": "9cd2762a7027ecff6548341096f9ec32f384d25923f76115c86534cdaab2d5cb"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers1151.xml",
+      "source_path": "annotations/hard_hat_workers1151.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers1151.xml?datasetVersionNumber=1",
+      "bytes": 910,
+      "sha256": "93928f7e363790813a682b25f0cae72d86b52aac4757f6fae10f25d10e980e36"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers1152.xml",
+      "source_path": "annotations/hard_hat_workers1152.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers1152.xml?datasetVersionNumber=1",
+      "bytes": 905,
+      "sha256": "0b6b46b1cb07f6bac1cf279a4513864fd37db36b7d619fdfdb762389ab412eb7"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers1153.xml",
+      "source_path": "annotations/hard_hat_workers1153.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers1153.xml?datasetVersionNumber=1",
+      "bytes": 1918,
+      "sha256": "3a32ed45979b9e452d7c01ed2c2fbe3d8843a06b99b8caa9134cf5626cd3e4d4"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers1154.xml",
+      "source_path": "annotations/hard_hat_workers1154.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers1154.xml?datasetVersionNumber=1",
+      "bytes": 3933,
+      "sha256": "a1d1201151d4b32041d7002b97df6f8d53b06ac61ecf2aee1365ee56240b226a"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers1155.xml",
+      "source_path": "annotations/hard_hat_workers1155.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers1155.xml?datasetVersionNumber=1",
+      "bytes": 574,
+      "sha256": "13976f234c2f2e009b375677427ba7e3a907569421f6f49fc08bec06447e5b16"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers1156.xml",
+      "source_path": "annotations/hard_hat_workers1156.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers1156.xml?datasetVersionNumber=1",
+      "bytes": 910,
+      "sha256": "7d822f7afb03fef0c30f81e535b6a7fd666c8b89ad1807e8afcbc25799432667"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers1157.xml",
+      "source_path": "annotations/hard_hat_workers1157.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers1157.xml?datasetVersionNumber=1",
+      "bytes": 572,
+      "sha256": "06e137e98ab5304e5902dd4415ebba276afde16f86c3c599326875b717f325f4"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers1158.xml",
+      "source_path": "annotations/hard_hat_workers1158.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers1158.xml?datasetVersionNumber=1",
+      "bytes": 573,
+      "sha256": "8a63524ef07bd2dc9311a05c08f755e8bb92f0d6f859718bd4b57b528b3f9530"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers1159.xml",
+      "source_path": "annotations/hard_hat_workers1159.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers1159.xml?datasetVersionNumber=1",
+      "bytes": 910,
+      "sha256": "46ee00c86485d78d2640394e4cb36c240e1b63d9ac6a2f7ff72a4132018c2039"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers116.xml",
+      "source_path": "annotations/hard_hat_workers116.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers116.xml?datasetVersionNumber=1",
+      "bytes": 909,
+      "sha256": "f54ef711db92d579cdfa0ed58574a7ca94a8ba9a48bb883520891b8525509584"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers1160.xml",
+      "source_path": "annotations/hard_hat_workers1160.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers1160.xml?datasetVersionNumber=1",
+      "bytes": 572,
+      "sha256": "50e8c34cd2964e913a5db03e21543be94842db614e68f4b5accdeb927b92735e"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers1161.xml",
+      "source_path": "annotations/hard_hat_workers1161.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers1161.xml?datasetVersionNumber=1",
+      "bytes": 1574,
+      "sha256": "cfc8b76a7ada5929dc1ff0ee385b641ce0fc5d62c8144552df60b158c66b45e9"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers1162.xml",
+      "source_path": "annotations/hard_hat_workers1162.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers1162.xml?datasetVersionNumber=1",
+      "bytes": 1244,
+      "sha256": "8ec895ad75949b4bdb591384ce512017514cdaf510c6487a818c9f7152194ccd"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers1163.xml",
+      "source_path": "annotations/hard_hat_workers1163.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers1163.xml?datasetVersionNumber=1",
+      "bytes": 3933,
+      "sha256": "77786ae71b0a6d23f6cc4dfb3e7de3a004df5287c20d3596ba435ab9489ba2b5"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers1164.xml",
+      "source_path": "annotations/hard_hat_workers1164.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers1164.xml?datasetVersionNumber=1",
+      "bytes": 1575,
+      "sha256": "0bea37260840f30e3780f61466cd68c3c162ee4efa082d9ab7ca491667b4ae63"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers1165.xml",
+      "source_path": "annotations/hard_hat_workers1165.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers1165.xml?datasetVersionNumber=1",
+      "bytes": 904,
+      "sha256": "3334b5783f9dddbc90f4f0af8df00b43b925321650d7257f6dd1ae04191d5da5"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers1166.xml",
+      "source_path": "annotations/hard_hat_workers1166.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers1166.xml?datasetVersionNumber=1",
+      "bytes": 1239,
+      "sha256": "a88880c8e2d7da26e7fbdb4ebb9ab0b15d800632569026fcdc8e4cb696ccbc1f"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers1167.xml",
+      "source_path": "annotations/hard_hat_workers1167.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers1167.xml?datasetVersionNumber=1",
+      "bytes": 1575,
+      "sha256": "2f6b87e3b7720bc19a6cda882f07f2bdfc64fb4c23a4010d327d83d7aa3a1064"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers1168.xml",
+      "source_path": "annotations/hard_hat_workers1168.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers1168.xml?datasetVersionNumber=1",
+      "bytes": 1242,
+      "sha256": "463416d3b50d648560709e257bd35dd2b9e797274f8fafb6441f448183e49095"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers1169.xml",
+      "source_path": "annotations/hard_hat_workers1169.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers1169.xml?datasetVersionNumber=1",
+      "bytes": 574,
+      "sha256": "835ac8f82a341df351f95096672e3eeece93b237ca5231f381d7e99607f20f7a"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers117.xml",
+      "source_path": "annotations/hard_hat_workers117.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers117.xml?datasetVersionNumber=1",
+      "bytes": 907,
+      "sha256": "e08d67513c337a8ddeaf3b363e00528de54e5a6e31c8c85f0bbc37fbb578f8b3"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers1170.xml",
+      "source_path": "annotations/hard_hat_workers1170.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers1170.xml?datasetVersionNumber=1",
+      "bytes": 4224,
+      "sha256": "9be9e61b1efcb135130090a6e06b342ab21a65831f8779a9354e5b8d94410dfa"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers1171.xml",
+      "source_path": "annotations/hard_hat_workers1171.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers1171.xml?datasetVersionNumber=1",
+      "bytes": 2906,
+      "sha256": "3cf9d83cc9123ee97e51c1a735f28f2287d2e475e6eb3ab95a0f7d6b76171003"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers1172.xml",
+      "source_path": "annotations/hard_hat_workers1172.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers1172.xml?datasetVersionNumber=1",
+      "bytes": 3241,
+      "sha256": "d20353470893ca802ad331705c1ceaa2464a349b4d7a15ebb2f874144781bbb7"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers1173.xml",
+      "source_path": "annotations/hard_hat_workers1173.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers1173.xml?datasetVersionNumber=1",
+      "bytes": 1575,
+      "sha256": "d34dde94d767fef43031d2240591a3eff089eed458216f402a648f62ccfcc789"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers1174.xml",
+      "source_path": "annotations/hard_hat_workers1174.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers1174.xml?datasetVersionNumber=1",
+      "bytes": 6250,
+      "sha256": "9b73c249868efd8ecf24358b01f0f1c4e8466f34440998e91e713d55f570e0bf"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers1175.xml",
+      "source_path": "annotations/hard_hat_workers1175.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers1175.xml?datasetVersionNumber=1",
+      "bytes": 1243,
+      "sha256": "6569bca6cc62ce399dc42420bc740befb0aa51af601a818dd183490a05c01479"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers1176.xml",
+      "source_path": "annotations/hard_hat_workers1176.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers1176.xml?datasetVersionNumber=1",
+      "bytes": 573,
+      "sha256": "d655b6d633e31c5a70de9d80d6985fb004d74f4a805e537bd7c911fb572e5066"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/annotations/hard_hat_workers1177.xml",
+      "source_path": "annotations/hard_hat_workers1177.xml",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/annotations%2Fhard_hat_workers1177.xml?datasetVersionNumber=1",
+      "bytes": 2240,
+      "sha256": "64f718841db8e20eb0bd6f55a560f3e17787ee1354c4857358ffb3a0c2ebe28c"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers0.png",
+      "source_path": "images/hard_hat_workers0.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers0.png?datasetVersionNumber=1",
+      "bytes": 215330,
+      "sha256": "3e5c3ab8bf49635f2db296e415834ff74eb13a0ffd94f43d983d2b7eb6ca5b6d"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers1.png",
+      "source_path": "images/hard_hat_workers1.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers1.png?datasetVersionNumber=1",
+      "bytes": 303581,
+      "sha256": "c502866e7e56feafc394624a51559cc846a828acbc8e01aaf5b540c71c999fb2"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers10.png",
+      "source_path": "images/hard_hat_workers10.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers10.png?datasetVersionNumber=1",
+      "bytes": 156273,
+      "sha256": "a62d70f131eebf7a003574034566acd0d363548d8a1f761b297d8ed7e9b15cf0"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers100.png",
+      "source_path": "images/hard_hat_workers100.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers100.png?datasetVersionNumber=1",
+      "bytes": 249516,
+      "sha256": "b68993d32c3fff63cf84e85a5f48ea48c7dcce21d96b10e20c248fe6eef2098f"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers1000.png",
+      "source_path": "images/hard_hat_workers1000.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers1000.png?datasetVersionNumber=1",
+      "bytes": 257579,
+      "sha256": "3675beef87bb2873d0fef5d84c98f7c0c961fa4d61457f9556e23e4abbbe6206"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers1001.png",
+      "source_path": "images/hard_hat_workers1001.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers1001.png?datasetVersionNumber=1",
+      "bytes": 291181,
+      "sha256": "7cc740a0ad7637fee1c53795cc4a446a136277fb0d49758cf9387e75983d194e"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers1002.png",
+      "source_path": "images/hard_hat_workers1002.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers1002.png?datasetVersionNumber=1",
+      "bytes": 221136,
+      "sha256": "d5a6726efadee8496d575eca5eca557aa1b3be32922da323aed075a5c1fc1fca"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers1003.png",
+      "source_path": "images/hard_hat_workers1003.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers1003.png?datasetVersionNumber=1",
+      "bytes": 203837,
+      "sha256": "fede0a34c055b494a6d6dce43ed1ab1540dc959842870dd854638cabd55b2c5d"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers1004.png",
+      "source_path": "images/hard_hat_workers1004.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers1004.png?datasetVersionNumber=1",
+      "bytes": 283588,
+      "sha256": "aad8ab690f7ad2e443ff435fb09751f09e8c25e3465ff416b3d3a5dd1077b2a2"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers1005.png",
+      "source_path": "images/hard_hat_workers1005.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers1005.png?datasetVersionNumber=1",
+      "bytes": 289215,
+      "sha256": "6895e7d30164b680838cf00d0de2ce7c5fd56b2bda675bfc7d1befb978c736e9"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers1006.png",
+      "source_path": "images/hard_hat_workers1006.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers1006.png?datasetVersionNumber=1",
+      "bytes": 270254,
+      "sha256": "27239ab95298c0b9569c8b3411c4ebaa519b8a3219d4bbce9ca404639e6a979f"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers1007.png",
+      "source_path": "images/hard_hat_workers1007.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers1007.png?datasetVersionNumber=1",
+      "bytes": 227848,
+      "sha256": "bb33540d446947f0ea8a9edce7affca4cca072b9de6cce7d7e43ece241db935e"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers1008.png",
+      "source_path": "images/hard_hat_workers1008.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers1008.png?datasetVersionNumber=1",
+      "bytes": 292170,
+      "sha256": "76080d627c0b72cdc33cae8bbb7f6b43a5d51b252a3534e3770a7efaa81050c2"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers1009.png",
+      "source_path": "images/hard_hat_workers1009.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers1009.png?datasetVersionNumber=1",
+      "bytes": 216690,
+      "sha256": "f99ba665d1a9159513e48b877c93564812e6d13bf4e78fa131a7e47198f0b387"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers101.png",
+      "source_path": "images/hard_hat_workers101.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers101.png?datasetVersionNumber=1",
+      "bytes": 181997,
+      "sha256": "232bb68a7d4b5ce6f3dc7035d3faa6073458c08e9d032480747d33e1af234b2c"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers1010.png",
+      "source_path": "images/hard_hat_workers1010.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers1010.png?datasetVersionNumber=1",
+      "bytes": 199707,
+      "sha256": "7d9d1346206eaf237852a9384f3a08293996abc9a222ec9f97b7958c33499546"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers1011.png",
+      "source_path": "images/hard_hat_workers1011.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers1011.png?datasetVersionNumber=1",
+      "bytes": 312911,
+      "sha256": "be97da9099d36f685ad48c9572e14ce65d0ad063a12c75b8292f787dce759ad7"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers1012.png",
+      "source_path": "images/hard_hat_workers1012.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers1012.png?datasetVersionNumber=1",
+      "bytes": 307733,
+      "sha256": "8d4b2a0f2f92fbb638e0baa1371813b6978e4ec7b7891f736c8cdafa539bd54a"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers1013.png",
+      "source_path": "images/hard_hat_workers1013.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers1013.png?datasetVersionNumber=1",
+      "bytes": 255489,
+      "sha256": "1d19700b975f014a26cced1cf16ca13484b871fb98aa7fb03cb5e90b0ac2c80a"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers1014.png",
+      "source_path": "images/hard_hat_workers1014.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers1014.png?datasetVersionNumber=1",
+      "bytes": 221060,
+      "sha256": "ac6658c95995e3cc2340dc371853d2af6fea188e6f9c8a1e0af00f64dce180b1"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers1015.png",
+      "source_path": "images/hard_hat_workers1015.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers1015.png?datasetVersionNumber=1",
+      "bytes": 334473,
+      "sha256": "4f08540aa75480623472ab9a67eeffe530bc573d3f2ca16668eebf4d4ce819a7"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers1016.png",
+      "source_path": "images/hard_hat_workers1016.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers1016.png?datasetVersionNumber=1",
+      "bytes": 322936,
+      "sha256": "ee23f38983c12d2a7a283d8dc09f5354fc81e8412e92d99f7c94775fd5e21bc9"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers1017.png",
+      "source_path": "images/hard_hat_workers1017.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers1017.png?datasetVersionNumber=1",
+      "bytes": 256295,
+      "sha256": "12f9944869df6650a28e486fbbda89676d9dc27c65f32407d7702d771a1ba00a"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers1018.png",
+      "source_path": "images/hard_hat_workers1018.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers1018.png?datasetVersionNumber=1",
+      "bytes": 312713,
+      "sha256": "09584b3f3de44730dd2a99134e49f6f2fec44ed20de1bfe22c2a3a64c3e3efb9"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers1019.png",
+      "source_path": "images/hard_hat_workers1019.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers1019.png?datasetVersionNumber=1",
+      "bytes": 381638,
+      "sha256": "4e85de9065f84d6163ede5341a2fc8fcba22cd82c0f69582676280b8fbcb6881"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers102.png",
+      "source_path": "images/hard_hat_workers102.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers102.png?datasetVersionNumber=1",
+      "bytes": 274609,
+      "sha256": "c65296e2e4b65a27d6d40c60c36e066894e0a4552f79e148fdbb6579bc673d23"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers1020.png",
+      "source_path": "images/hard_hat_workers1020.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers1020.png?datasetVersionNumber=1",
+      "bytes": 203140,
+      "sha256": "2d4c17d1b85253a1a9f328e38b94791f43fbb065082ac40366b4d9908b8e57ce"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers1021.png",
+      "source_path": "images/hard_hat_workers1021.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers1021.png?datasetVersionNumber=1",
+      "bytes": 351561,
+      "sha256": "6c14a4f2d24ba9018dc0a7d17ab7206f918bd2396d0cff2603054cfc0236f0ae"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers1022.png",
+      "source_path": "images/hard_hat_workers1022.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers1022.png?datasetVersionNumber=1",
+      "bytes": 243796,
+      "sha256": "0165edea797d505cc29553d7441627e3164a9416f22ec4ec31531e2ce39d9871"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers1023.png",
+      "source_path": "images/hard_hat_workers1023.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers1023.png?datasetVersionNumber=1",
+      "bytes": 217935,
+      "sha256": "a5bb6aecc04046638576e846c82bd3d702dfa46174c91c422a56890e3595991d"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers1024.png",
+      "source_path": "images/hard_hat_workers1024.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers1024.png?datasetVersionNumber=1",
+      "bytes": 235732,
+      "sha256": "55e1d0f617f5c483fe0a7981fc079cf48e6e2c44ec21ce92932b75d144d71b32"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers1025.png",
+      "source_path": "images/hard_hat_workers1025.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers1025.png?datasetVersionNumber=1",
+      "bytes": 231306,
+      "sha256": "750b8080b9041c10553dc65dc54c82ec4272326b6fb57789b1d39b2c288d4575"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers1026.png",
+      "source_path": "images/hard_hat_workers1026.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers1026.png?datasetVersionNumber=1",
+      "bytes": 314093,
+      "sha256": "36806806abf3eae50e4bf13f212e82da4d358971d141cbc2f61f5d60948eceb4"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers1027.png",
+      "source_path": "images/hard_hat_workers1027.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers1027.png?datasetVersionNumber=1",
+      "bytes": 311110,
+      "sha256": "5d04c6ae65f1077e781bf02cd8f3d1a629123b1450d9712eedb194caf50d4496"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers1028.png",
+      "source_path": "images/hard_hat_workers1028.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers1028.png?datasetVersionNumber=1",
+      "bytes": 228602,
+      "sha256": "bf38d857da986bce23ec523b38bf1acac5597cff665ba48af87691773d6673d6"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers1029.png",
+      "source_path": "images/hard_hat_workers1029.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers1029.png?datasetVersionNumber=1",
+      "bytes": 309807,
+      "sha256": "af1fc6f9ba7577c593153b29a5de54c98ed999187666be0bf944a9e633dc1bff"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers103.png",
+      "source_path": "images/hard_hat_workers103.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers103.png?datasetVersionNumber=1",
+      "bytes": 175207,
+      "sha256": "c8d82b0b9d2f26357344d7ab3d223d3981cb241e72b058b818c57bd37cf954a6"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers1030.png",
+      "source_path": "images/hard_hat_workers1030.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers1030.png?datasetVersionNumber=1",
+      "bytes": 256602,
+      "sha256": "f7ffd7282fcd9a9d1843af8d0d5596e44524d4c749bd72da715d421ac6b312c7"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers1031.png",
+      "source_path": "images/hard_hat_workers1031.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers1031.png?datasetVersionNumber=1",
+      "bytes": 249344,
+      "sha256": "41dc406a41b7dfac41ceea17a3ed7316427e0e4841e645df11860a2a9e3ce150"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers1032.png",
+      "source_path": "images/hard_hat_workers1032.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers1032.png?datasetVersionNumber=1",
+      "bytes": 209370,
+      "sha256": "7cce3a38ad051fdcb7b6dbb8f43addd6375a485c6786e28e4674ceeec545b009"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers1033.png",
+      "source_path": "images/hard_hat_workers1033.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers1033.png?datasetVersionNumber=1",
+      "bytes": 419218,
+      "sha256": "1f3f8d9d8014b5f4fc5b9e93040f0e0fda9d1d1a209c59aadd5ef6f8573a6e27"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers1034.png",
+      "source_path": "images/hard_hat_workers1034.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers1034.png?datasetVersionNumber=1",
+      "bytes": 245130,
+      "sha256": "8a563cd8cdfe93646d53dfc950203499daebe07a36f88ac574dfcece2368813b"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers1035.png",
+      "source_path": "images/hard_hat_workers1035.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers1035.png?datasetVersionNumber=1",
+      "bytes": 244926,
+      "sha256": "dbb88991d92082eed12aa1e5b212aeb04aa5b77d74ed471b83fbf714191fb874"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers1036.png",
+      "source_path": "images/hard_hat_workers1036.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers1036.png?datasetVersionNumber=1",
+      "bytes": 293595,
+      "sha256": "280626678b19d41efce709a1b3a2e617dc6b5b30559bc947105e42a060ef83e4"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers1037.png",
+      "source_path": "images/hard_hat_workers1037.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers1037.png?datasetVersionNumber=1",
+      "bytes": 295529,
+      "sha256": "1ba32bcdc019148e93d0b2a4f430fff88291a67a1fad4ef89a31589dee5bd9e0"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers1038.png",
+      "source_path": "images/hard_hat_workers1038.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers1038.png?datasetVersionNumber=1",
+      "bytes": 263245,
+      "sha256": "75ced6b122970c5b1ed0c87b66fa20339dce2c2377d4c095aaca49a37edeae73"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers1039.png",
+      "source_path": "images/hard_hat_workers1039.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers1039.png?datasetVersionNumber=1",
+      "bytes": 235348,
+      "sha256": "41aa93bbb20396f8c0545f62b080db31970b5a6fe94c9e32a6c3fb8e1997f6d4"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers104.png",
+      "source_path": "images/hard_hat_workers104.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers104.png?datasetVersionNumber=1",
+      "bytes": 172291,
+      "sha256": "7daa2de7eaefaaa74b6a969c0500625f160525e9301868f2dac2f66e5314a980"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers1040.png",
+      "source_path": "images/hard_hat_workers1040.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers1040.png?datasetVersionNumber=1",
+      "bytes": 293661,
+      "sha256": "d8dbecca99b0d8d6929df323ca8d3a267c16e3192c04d8a5e72b6d3ac796f46b"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers1041.png",
+      "source_path": "images/hard_hat_workers1041.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers1041.png?datasetVersionNumber=1",
+      "bytes": 270440,
+      "sha256": "bdfbef46d2184dc8cd895209755ad76e15d54fafa3410e3122124783e8e52c39"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers1042.png",
+      "source_path": "images/hard_hat_workers1042.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers1042.png?datasetVersionNumber=1",
+      "bytes": 240300,
+      "sha256": "81ec1f5c431fd00a2708aa2e8c286e5873ff8e0002d9213bc33b9dcf64467d8d"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers1043.png",
+      "source_path": "images/hard_hat_workers1043.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers1043.png?datasetVersionNumber=1",
+      "bytes": 161135,
+      "sha256": "e2e16e0c1afbca3632eef904e3b7c4624946a38561a7917a119744d94dd69c84"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers1044.png",
+      "source_path": "images/hard_hat_workers1044.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers1044.png?datasetVersionNumber=1",
+      "bytes": 285054,
+      "sha256": "fe343d0aeb443e2600641185a47324ad9e05ee94c458ff736fcafc4aa26526db"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers1045.png",
+      "source_path": "images/hard_hat_workers1045.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers1045.png?datasetVersionNumber=1",
+      "bytes": 216704,
+      "sha256": "935832e777ae09b0e9f8c3900eee3b280c9139f84bbd5d2b6584ca17907ee422"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers1046.png",
+      "source_path": "images/hard_hat_workers1046.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers1046.png?datasetVersionNumber=1",
+      "bytes": 365734,
+      "sha256": "1d6f2d6c59d32563e5f0e14fbed76dddc256dc8e6affe6c3c23a10a7e7cd8693"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers1047.png",
+      "source_path": "images/hard_hat_workers1047.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers1047.png?datasetVersionNumber=1",
+      "bytes": 266844,
+      "sha256": "90b28adb0684a35124f8c7d6714779b0397b1634128996a6e28e523749739651"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers1048.png",
+      "source_path": "images/hard_hat_workers1048.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers1048.png?datasetVersionNumber=1",
+      "bytes": 349744,
+      "sha256": "6c1aed2c2feeb7d84a00b3f4450433b1a72fab14d86c065b010143c3f2aa712f"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers1049.png",
+      "source_path": "images/hard_hat_workers1049.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers1049.png?datasetVersionNumber=1",
+      "bytes": 181812,
+      "sha256": "8e22d16c8d842ad09d27d7680b85c9d05d6f3ca23d564426e100a12a517edaa5"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers105.png",
+      "source_path": "images/hard_hat_workers105.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers105.png?datasetVersionNumber=1",
+      "bytes": 318814,
+      "sha256": "db5c75dfe541ed8f393dc5977e0e3995ef1b655897dc97190574ae58659d5ca4"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers1050.png",
+      "source_path": "images/hard_hat_workers1050.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers1050.png?datasetVersionNumber=1",
+      "bytes": 306334,
+      "sha256": "4fe237f5c9d2c827324f47d1b26d8738b9f141a828d03e45f4338c2a05744930"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers1051.png",
+      "source_path": "images/hard_hat_workers1051.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers1051.png?datasetVersionNumber=1",
+      "bytes": 240447,
+      "sha256": "9e96e07b4b6fe4bc236b6f30f5fe84cd7efda18ebca75f8aa03a23556f9d9bbf"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers1052.png",
+      "source_path": "images/hard_hat_workers1052.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers1052.png?datasetVersionNumber=1",
+      "bytes": 284114,
+      "sha256": "237b9d983c171ceb524ac3c1b798075cae39ad384f514f102ec8c59fe328a864"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers1053.png",
+      "source_path": "images/hard_hat_workers1053.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers1053.png?datasetVersionNumber=1",
+      "bytes": 251360,
+      "sha256": "62679072846c2d62aac3634689a380ff21182c1095436fb1f773721548862a6f"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers1054.png",
+      "source_path": "images/hard_hat_workers1054.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers1054.png?datasetVersionNumber=1",
+      "bytes": 215863,
+      "sha256": "c8169352d9275267aec54370a357b6045d7e17de8b7c78ce8434054e6a1488aa"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers1055.png",
+      "source_path": "images/hard_hat_workers1055.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers1055.png?datasetVersionNumber=1",
+      "bytes": 331744,
+      "sha256": "f064905a14633f4f1de586724ddd25e6484ac9d70306ef1df6e52e3e7bc7df26"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers1056.png",
+      "source_path": "images/hard_hat_workers1056.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers1056.png?datasetVersionNumber=1",
+      "bytes": 236611,
+      "sha256": "7b3a9ffada19dba68a2fa462586392312662bc495b0488d3629775b63dca1ba3"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers1057.png",
+      "source_path": "images/hard_hat_workers1057.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers1057.png?datasetVersionNumber=1",
+      "bytes": 273517,
+      "sha256": "1ad79973ab3be5b83cc143ad95b35d287f58b7049485ab04953c1e9d0ecf8d29"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers1058.png",
+      "source_path": "images/hard_hat_workers1058.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers1058.png?datasetVersionNumber=1",
+      "bytes": 240475,
+      "sha256": "86e88ef589b6c613ba5a0c5e32556230a9f223fb76395fa1ee9c2a00efbc5478"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers1059.png",
+      "source_path": "images/hard_hat_workers1059.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers1059.png?datasetVersionNumber=1",
+      "bytes": 193766,
+      "sha256": "2f247ea4e4156cf6d49bce8520fea39459b84d1b34d56a852581b3088e0ec1d1"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers106.png",
+      "source_path": "images/hard_hat_workers106.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers106.png?datasetVersionNumber=1",
+      "bytes": 217410,
+      "sha256": "9441abd5f528d11429b22ca94c6e5ed9db15e3b8c0ea095a4ee2f614abcde80b"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers1060.png",
+      "source_path": "images/hard_hat_workers1060.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers1060.png?datasetVersionNumber=1",
+      "bytes": 301533,
+      "sha256": "730a2b71df9f43271bf5ac9a01a09841411b1413d958482c69cd40e078d61546"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers1061.png",
+      "source_path": "images/hard_hat_workers1061.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers1061.png?datasetVersionNumber=1",
+      "bytes": 205241,
+      "sha256": "6dfc5d8852668880d96afbcc5fd3a7385e805f0647148cd58e0dacb221c056f9"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers1062.png",
+      "source_path": "images/hard_hat_workers1062.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers1062.png?datasetVersionNumber=1",
+      "bytes": 264772,
+      "sha256": "7c223864fc8f40a1c63d5f81f20f8c357b99e57b0e47cb1135030530626edfea"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers1063.png",
+      "source_path": "images/hard_hat_workers1063.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers1063.png?datasetVersionNumber=1",
+      "bytes": 349573,
+      "sha256": "5a1e18ea1b5dc833e6482f7fd2ba1ee3094cdb17da800075c657ccdbb84bd8c7"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers1064.png",
+      "source_path": "images/hard_hat_workers1064.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers1064.png?datasetVersionNumber=1",
+      "bytes": 301196,
+      "sha256": "0af1797eabe6c0df23f9d69da4eb6e5cfd44bca57eb1bae979b68517e6164747"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers1065.png",
+      "source_path": "images/hard_hat_workers1065.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers1065.png?datasetVersionNumber=1",
+      "bytes": 305963,
+      "sha256": "cee171d12ed25969ea2b5303e840e49716d0e6878931907c7ee2b1a51fad3955"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers1066.png",
+      "source_path": "images/hard_hat_workers1066.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers1066.png?datasetVersionNumber=1",
+      "bytes": 223043,
+      "sha256": "8bc72d095b97f101d28a9e46b359646558e911977e290bcefb09f02c3b5d90f7"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers1067.png",
+      "source_path": "images/hard_hat_workers1067.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers1067.png?datasetVersionNumber=1",
+      "bytes": 302468,
+      "sha256": "9b87a9dc8871f977f156458a5990f8f8e9e03552dfc48f719191dfcd780b0797"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers1068.png",
+      "source_path": "images/hard_hat_workers1068.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers1068.png?datasetVersionNumber=1",
+      "bytes": 184702,
+      "sha256": "d1a083c043c20c3d5f20870331a8a5554c110bd1414667c0cc77851ffd31061e"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers1069.png",
+      "source_path": "images/hard_hat_workers1069.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers1069.png?datasetVersionNumber=1",
+      "bytes": 248892,
+      "sha256": "00b8fd169226f150a66043d4a5b3d6be640d40dfd7dcc983c919c0d871482c18"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers107.png",
+      "source_path": "images/hard_hat_workers107.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers107.png?datasetVersionNumber=1",
+      "bytes": 225265,
+      "sha256": "eb0b03c49d0b1beda3c9ce6589a052347cffae0f8c8c2e5f5b267521686755b7"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers1070.png",
+      "source_path": "images/hard_hat_workers1070.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers1070.png?datasetVersionNumber=1",
+      "bytes": 291377,
+      "sha256": "e7e262a0439efd2987a03354d01eea94f84e85f36d94e2eea05aba1b280cc327"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers1071.png",
+      "source_path": "images/hard_hat_workers1071.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers1071.png?datasetVersionNumber=1",
+      "bytes": 230642,
+      "sha256": "caefe6c1656b4962986750d1d335b87318a43754d8c61f321dfae00589b4a7cc"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers1072.png",
+      "source_path": "images/hard_hat_workers1072.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers1072.png?datasetVersionNumber=1",
+      "bytes": 200221,
+      "sha256": "d61f62351e069d262d2ac18e39918764ae0e9ae4867f8ff6bbe7dc463b6aadef"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers1073.png",
+      "source_path": "images/hard_hat_workers1073.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers1073.png?datasetVersionNumber=1",
+      "bytes": 274038,
+      "sha256": "647c4fbe7819f39931aba21d26137e5618efef3838cccef7a6ccfa05f3ad9342"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers1074.png",
+      "source_path": "images/hard_hat_workers1074.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers1074.png?datasetVersionNumber=1",
+      "bytes": 199892,
+      "sha256": "62a3262af6768004f08f520889728e7052e235f369dc42b7ebc51f6ab487333b"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers1075.png",
+      "source_path": "images/hard_hat_workers1075.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers1075.png?datasetVersionNumber=1",
+      "bytes": 262342,
+      "sha256": "21ff2be4b20654dce87c1524dc8a16a2e2da2aafd668a3b520ded8367043d679"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers1076.png",
+      "source_path": "images/hard_hat_workers1076.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers1076.png?datasetVersionNumber=1",
+      "bytes": 287788,
+      "sha256": "a373fd92d73e9ea44268973b83e9a07cabeb96c35b2672320fd0b103b0e2ea19"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers1077.png",
+      "source_path": "images/hard_hat_workers1077.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers1077.png?datasetVersionNumber=1",
+      "bytes": 267596,
+      "sha256": "bda8ec56689eb9501a2350ed635f49d86a04e2f2bae0b29899c48ea31a926f5d"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers1078.png",
+      "source_path": "images/hard_hat_workers1078.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers1078.png?datasetVersionNumber=1",
+      "bytes": 119020,
+      "sha256": "e6b4ec2b029a102b41066359940532e167cdebf3e0dc054e6eef671c4f0f8882"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers1079.png",
+      "source_path": "images/hard_hat_workers1079.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers1079.png?datasetVersionNumber=1",
+      "bytes": 259179,
+      "sha256": "b7e2b1db55f1fb93e65c63999f4a35a556bbdbe6188c641bf6ccaeb1ee6d03b6"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers108.png",
+      "source_path": "images/hard_hat_workers108.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers108.png?datasetVersionNumber=1",
+      "bytes": 267607,
+      "sha256": "e03f4944b8763b723df3de47d700ec5b9216cfba9a0d34517f3602d2cff0789a"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers1080.png",
+      "source_path": "images/hard_hat_workers1080.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers1080.png?datasetVersionNumber=1",
+      "bytes": 258195,
+      "sha256": "ed43c35c58941466b6bb3a5442da3e06f3904306c13c8055d25083a12c2ca1be"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers1081.png",
+      "source_path": "images/hard_hat_workers1081.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers1081.png?datasetVersionNumber=1",
+      "bytes": 180393,
+      "sha256": "8a601f194601bef5f72566205eed4d65c03775d1497278ecce55e7c28ca850e8"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers1082.png",
+      "source_path": "images/hard_hat_workers1082.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers1082.png?datasetVersionNumber=1",
+      "bytes": 225272,
+      "sha256": "5bfe052d4df4f8bc308d8ddfadf285b657fca24ed994a64f4853883ebc3723ea"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers1083.png",
+      "source_path": "images/hard_hat_workers1083.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers1083.png?datasetVersionNumber=1",
+      "bytes": 227170,
+      "sha256": "f7e650ea7bced8487e89cc1760ed5c3efa86635c63ce099147728b2d8315c349"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers1084.png",
+      "source_path": "images/hard_hat_workers1084.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers1084.png?datasetVersionNumber=1",
+      "bytes": 256577,
+      "sha256": "9e43e859aaea845b6de493dc1098ad5cfaec77fe92caff1e16abd56297b2b490"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers1085.png",
+      "source_path": "images/hard_hat_workers1085.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers1085.png?datasetVersionNumber=1",
+      "bytes": 279294,
+      "sha256": "4b908d27b9b37f68e2e7e9398cef066781a8903f61b9d0b7f65b45b466d94b67"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers1086.png",
+      "source_path": "images/hard_hat_workers1086.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers1086.png?datasetVersionNumber=1",
+      "bytes": 252103,
+      "sha256": "bcd4d00f84c1a2cfb125453a263d96baa5647b94442ee1e4ddd74f28c3789388"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers1087.png",
+      "source_path": "images/hard_hat_workers1087.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers1087.png?datasetVersionNumber=1",
+      "bytes": 266400,
+      "sha256": "18b44f0088712b026a92bddec0614889ccdb429f7f160baabfb1c638458a162d"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers1088.png",
+      "source_path": "images/hard_hat_workers1088.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers1088.png?datasetVersionNumber=1",
+      "bytes": 310617,
+      "sha256": "b20a97f35c17f88ea4250a552d7527066cecf63ac0bcd0dffe9863d8baf7e44f"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers1089.png",
+      "source_path": "images/hard_hat_workers1089.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers1089.png?datasetVersionNumber=1",
+      "bytes": 270392,
+      "sha256": "a8cb10fef1105b2d5542ccaf6b1d83b965a7089ae1ec6cb34efc8fa0a2778dd3"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers109.png",
+      "source_path": "images/hard_hat_workers109.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers109.png?datasetVersionNumber=1",
+      "bytes": 288453,
+      "sha256": "db4692510945aeb185e9136e11c9944e8fb75a2e672bfd65853f744d180170cf"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers1090.png",
+      "source_path": "images/hard_hat_workers1090.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers1090.png?datasetVersionNumber=1",
+      "bytes": 311978,
+      "sha256": "4cd23863ff65602d23c474136ca3a937100f2ff9c0752dc1967d61922844f9f4"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers1091.png",
+      "source_path": "images/hard_hat_workers1091.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers1091.png?datasetVersionNumber=1",
+      "bytes": 259349,
+      "sha256": "38537c4ce06e5e930bfabe7cbe8ebbc86706d6a3eed36380b20355cbfcdf9b62"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers1092.png",
+      "source_path": "images/hard_hat_workers1092.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers1092.png?datasetVersionNumber=1",
+      "bytes": 298834,
+      "sha256": "ab3f0a51a205e65e895e11076a99c5ca8cdc1dd7a4cf1b0823a2ba5afdc32474"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers1093.png",
+      "source_path": "images/hard_hat_workers1093.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers1093.png?datasetVersionNumber=1",
+      "bytes": 250020,
+      "sha256": "f1ac00380c247b838004416ecb8254e89bc4c2fd74df188f7665acadec4c5b00"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers1094.png",
+      "source_path": "images/hard_hat_workers1094.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers1094.png?datasetVersionNumber=1",
+      "bytes": 218749,
+      "sha256": "9f4dfd6fbbc9bd6dae20b05616a905cce086a7e979aa746d485a46c78fe074f4"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers1095.png",
+      "source_path": "images/hard_hat_workers1095.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers1095.png?datasetVersionNumber=1",
+      "bytes": 197475,
+      "sha256": "9258fd21f31c47876a4878f1b06fcdb3afedaa1db0facdfc5a8504cc4c6c86ed"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers1096.png",
+      "source_path": "images/hard_hat_workers1096.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers1096.png?datasetVersionNumber=1",
+      "bytes": 233888,
+      "sha256": "39dc88d8e3c32b5b45f16f8e701e980ef8bcafd0683b437a81421582eb87cfb9"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers1097.png",
+      "source_path": "images/hard_hat_workers1097.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers1097.png?datasetVersionNumber=1",
+      "bytes": 306694,
+      "sha256": "de95ec99e58882254dce2df55427c77415c3639abb34ff084e796a94da1215e0"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers1098.png",
+      "source_path": "images/hard_hat_workers1098.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers1098.png?datasetVersionNumber=1",
+      "bytes": 258674,
+      "sha256": "52002df82c4be1d83fc7f031b5f687623dcdbc65969df46c164ffae7e2bb4a12"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers1099.png",
+      "source_path": "images/hard_hat_workers1099.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers1099.png?datasetVersionNumber=1",
+      "bytes": 243530,
+      "sha256": "0cb46c0ff608471de4c6a88e04fa8e098a22c1a5cfc0b5ae075b30d329aeb700"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers11.png",
+      "source_path": "images/hard_hat_workers11.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers11.png?datasetVersionNumber=1",
+      "bytes": 270865,
+      "sha256": "3250e5239f26d7686de2d56b17e1992eb8a1166d4f039fb0794dd923bb6277b7"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers110.png",
+      "source_path": "images/hard_hat_workers110.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers110.png?datasetVersionNumber=1",
+      "bytes": 242749,
+      "sha256": "ad93db0be14d7f8467cc679e4e8591b90c5618ad3fd11838fe07087325a98130"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers1100.png",
+      "source_path": "images/hard_hat_workers1100.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers1100.png?datasetVersionNumber=1",
+      "bytes": 284830,
+      "sha256": "6a1e291ba421c16b437ef1e76b72b8a8be97441ef9b29d8d2f0df5733a7db796"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers1101.png",
+      "source_path": "images/hard_hat_workers1101.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers1101.png?datasetVersionNumber=1",
+      "bytes": 192719,
+      "sha256": "a07d87c6528331819b47540530bc40e73f6a3e3bff39a721056fbc0967911a77"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers1102.png",
+      "source_path": "images/hard_hat_workers1102.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers1102.png?datasetVersionNumber=1",
+      "bytes": 222574,
+      "sha256": "f859000f1a8f472ce2d52b588d5c0e5b76192b60e3fe9d61da52307fcbf4b78b"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers1103.png",
+      "source_path": "images/hard_hat_workers1103.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers1103.png?datasetVersionNumber=1",
+      "bytes": 242147,
+      "sha256": "2062d793570a205fb642f70792fe83e9da8c4116d920e53497cae8ee71bc1700"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers1104.png",
+      "source_path": "images/hard_hat_workers1104.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers1104.png?datasetVersionNumber=1",
+      "bytes": 218193,
+      "sha256": "0b09eb107bc75acdd3e6675936387c7ca30a190dba29cc530e6a748ca590f826"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers1105.png",
+      "source_path": "images/hard_hat_workers1105.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers1105.png?datasetVersionNumber=1",
+      "bytes": 246413,
+      "sha256": "67a607ddda7d91f2dd8e1038590cafa5f0e0f8edef50ef2460b0daefbbc64334"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers1106.png",
+      "source_path": "images/hard_hat_workers1106.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers1106.png?datasetVersionNumber=1",
+      "bytes": 286587,
+      "sha256": "6c9bbe8480cb2777401124b19f60d03e0ff046e0e8dcf0b6285807cb762b482f"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers1107.png",
+      "source_path": "images/hard_hat_workers1107.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers1107.png?datasetVersionNumber=1",
+      "bytes": 330154,
+      "sha256": "9a7fd30d42b734a005849507479ff9de515f06f0c2a31b6b198d23df56ccab53"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers1108.png",
+      "source_path": "images/hard_hat_workers1108.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers1108.png?datasetVersionNumber=1",
+      "bytes": 233975,
+      "sha256": "a3dafb83093653523121dd331f1ca96d068722b141ad9b470a3348924574b2b9"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers1109.png",
+      "source_path": "images/hard_hat_workers1109.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers1109.png?datasetVersionNumber=1",
+      "bytes": 304323,
+      "sha256": "e6bb71450d2f64b0abf00cc0664070bceab6084446b054c984f74d52691a8e34"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers111.png",
+      "source_path": "images/hard_hat_workers111.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers111.png?datasetVersionNumber=1",
+      "bytes": 329712,
+      "sha256": "eee000889b2d216660e7942d2f63079fb15b4abd4b09727970350e7ecf614175"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers1110.png",
+      "source_path": "images/hard_hat_workers1110.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers1110.png?datasetVersionNumber=1",
+      "bytes": 193873,
+      "sha256": "35fe787bd5fad8436f6e3f86caa89daed61871858e53b4213091b5e6aa7739d4"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers1111.png",
+      "source_path": "images/hard_hat_workers1111.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers1111.png?datasetVersionNumber=1",
+      "bytes": 319725,
+      "sha256": "75dac1852b7223300cf4ac6ef2123084c94a0a03534a827e86c21a195907d5b4"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers1112.png",
+      "source_path": "images/hard_hat_workers1112.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers1112.png?datasetVersionNumber=1",
+      "bytes": 323924,
+      "sha256": "de09e4188cce045c3d9363b0f11731b6086a2d1eed72bdd8021d3ebc9b0dd043"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers1113.png",
+      "source_path": "images/hard_hat_workers1113.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers1113.png?datasetVersionNumber=1",
+      "bytes": 269189,
+      "sha256": "24393e3e32ccc76092d5706a7c875348f22e3cdda66e183ab32d54215144ad43"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers1114.png",
+      "source_path": "images/hard_hat_workers1114.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers1114.png?datasetVersionNumber=1",
+      "bytes": 284254,
+      "sha256": "175a395469f98e4d7a71d8ab05457f6d8ef9899552152c6091eed9e7c04f8481"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers1115.png",
+      "source_path": "images/hard_hat_workers1115.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers1115.png?datasetVersionNumber=1",
+      "bytes": 238739,
+      "sha256": "8cb211870206e5b85de3dd4a12e44bb08984bfdfdfdab3caa840f2cc07dec0a3"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers1116.png",
+      "source_path": "images/hard_hat_workers1116.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers1116.png?datasetVersionNumber=1",
+      "bytes": 287894,
+      "sha256": "fe0c627e800e7c3f393d1b2c52c1ea920b4a8fa70f302dde987882ce74366eae"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers1117.png",
+      "source_path": "images/hard_hat_workers1117.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers1117.png?datasetVersionNumber=1",
+      "bytes": 258746,
+      "sha256": "572b7a749d841f94c9d0754f2017904c42e88f5e386fb14b00eb9017a8310ba7"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers1118.png",
+      "source_path": "images/hard_hat_workers1118.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers1118.png?datasetVersionNumber=1",
+      "bytes": 288024,
+      "sha256": "ad6706733c95de162be1960d2270db9b518e8d88691fc6fcb17de381131a3e51"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers1119.png",
+      "source_path": "images/hard_hat_workers1119.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers1119.png?datasetVersionNumber=1",
+      "bytes": 193579,
+      "sha256": "d8cfc1fea568c0878cb3e00e060a30ffac600836177774ea05cf42e2df1b871a"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers112.png",
+      "source_path": "images/hard_hat_workers112.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers112.png?datasetVersionNumber=1",
+      "bytes": 202538,
+      "sha256": "3789a03b3a5678fcb58a71a2cd0fa11721ad4bc05b23f14d157bf101b02c18a7"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers1120.png",
+      "source_path": "images/hard_hat_workers1120.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers1120.png?datasetVersionNumber=1",
+      "bytes": 330052,
+      "sha256": "ffc35aa7e8735bb12a4cb9b4ea6def248bb28b179d7e8da1cf97e32ea05c2700"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers1121.png",
+      "source_path": "images/hard_hat_workers1121.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers1121.png?datasetVersionNumber=1",
+      "bytes": 320105,
+      "sha256": "2cc9385cca80697f4cff07d920c0fb677c924cc96e91f2d93a8cc86a78895d5d"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers1122.png",
+      "source_path": "images/hard_hat_workers1122.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers1122.png?datasetVersionNumber=1",
+      "bytes": 262768,
+      "sha256": "1e838c9476e78ca86d0ed1e8a865768803da56832b2677ec34f485ceb4510bd1"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers1123.png",
+      "source_path": "images/hard_hat_workers1123.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers1123.png?datasetVersionNumber=1",
+      "bytes": 246717,
+      "sha256": "b97cd9f3ce5c646b40850648ea4c2b93e70207cedb01b3134c261e0d00fb2876"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers1124.png",
+      "source_path": "images/hard_hat_workers1124.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers1124.png?datasetVersionNumber=1",
+      "bytes": 261086,
+      "sha256": "1fce56953fa9644e185c158cf26e0491b5a9a44e109e3e84ec66d98c9dd5c4a8"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers1125.png",
+      "source_path": "images/hard_hat_workers1125.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers1125.png?datasetVersionNumber=1",
+      "bytes": 279718,
+      "sha256": "cb9af4f15e5c758fd63d23d7205d159f8c22f01a4a9bb3a0f5887a06e3a23bfb"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers1126.png",
+      "source_path": "images/hard_hat_workers1126.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers1126.png?datasetVersionNumber=1",
+      "bytes": 301882,
+      "sha256": "85fc0dc13bb233f3b0cfdb712eb044abacc9fee94bc454ca04a5c650e0b7f2bd"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers1127.png",
+      "source_path": "images/hard_hat_workers1127.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers1127.png?datasetVersionNumber=1",
+      "bytes": 278566,
+      "sha256": "17170d36435043a391823903676d352f188ed8fa119a80a43143fd266963e3fe"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers1128.png",
+      "source_path": "images/hard_hat_workers1128.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers1128.png?datasetVersionNumber=1",
+      "bytes": 223027,
+      "sha256": "ead33176a449a58ce50fcb999916e43e4d03a02c8c6fc827019106410862ef20"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers1129.png",
+      "source_path": "images/hard_hat_workers1129.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers1129.png?datasetVersionNumber=1",
+      "bytes": 177557,
+      "sha256": "8242141fd566ca400f8142e2f111905f7ef31d1ccdcdf09e25f1b12ffe7f6b9c"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers113.png",
+      "source_path": "images/hard_hat_workers113.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers113.png?datasetVersionNumber=1",
+      "bytes": 208828,
+      "sha256": "e214608fce40a18e922a20cdb15e6681729d876c3e5a7b4408ebdc36af036756"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers1130.png",
+      "source_path": "images/hard_hat_workers1130.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers1130.png?datasetVersionNumber=1",
+      "bytes": 263145,
+      "sha256": "d5fa12bc40b07978f4ef138b8b4f0a885439bafda52f3037a265c53c3756a81d"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers1131.png",
+      "source_path": "images/hard_hat_workers1131.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers1131.png?datasetVersionNumber=1",
+      "bytes": 295465,
+      "sha256": "ac502ad0b8821033a847df8b282800e99a8266a25e32c7e8adea0bedf1ed6c29"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers1132.png",
+      "source_path": "images/hard_hat_workers1132.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers1132.png?datasetVersionNumber=1",
+      "bytes": 254041,
+      "sha256": "53de6e5a0040e188e8dbbdcce43a5937ec4d0dbd1a2bd16f57a813f45d719aa6"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers1133.png",
+      "source_path": "images/hard_hat_workers1133.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers1133.png?datasetVersionNumber=1",
+      "bytes": 266140,
+      "sha256": "5403c59ff8fbf1df1a700d8f8b97f7d07238446d81fbc9e64b880e527aca6942"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers1134.png",
+      "source_path": "images/hard_hat_workers1134.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers1134.png?datasetVersionNumber=1",
+      "bytes": 327633,
+      "sha256": "1afc573a6541842606ef0b25ba6495d846978041748ebfbe939ecf121c7079ea"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers1135.png",
+      "source_path": "images/hard_hat_workers1135.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers1135.png?datasetVersionNumber=1",
+      "bytes": 257931,
+      "sha256": "d7e1bdd17b0a95463b5a345aec7e716cee7f288636a8da6396d3e530f469185c"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers1136.png",
+      "source_path": "images/hard_hat_workers1136.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers1136.png?datasetVersionNumber=1",
+      "bytes": 272326,
+      "sha256": "357edbc8f86656e45ddcd45927f4f5662a4f229988863ede3cbdf3b7572c739b"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers1137.png",
+      "source_path": "images/hard_hat_workers1137.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers1137.png?datasetVersionNumber=1",
+      "bytes": 222813,
+      "sha256": "516fb0a4a20eed71c1993f0607539e034eda083a02b6d265c5fb9af2fda9bd88"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers1138.png",
+      "source_path": "images/hard_hat_workers1138.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers1138.png?datasetVersionNumber=1",
+      "bytes": 194580,
+      "sha256": "de97cf4b2891bd00c687dd6f4296bac8d0ba0d697cba520995511dbc99b79ad4"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers1139.png",
+      "source_path": "images/hard_hat_workers1139.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers1139.png?datasetVersionNumber=1",
+      "bytes": 200765,
+      "sha256": "5ccdd27a984b1492a828be5cdbc133889aff004300b8b70650961e5726568af5"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers114.png",
+      "source_path": "images/hard_hat_workers114.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers114.png?datasetVersionNumber=1",
+      "bytes": 272121,
+      "sha256": "ccd0f497ba704a1eae78ea9299f7ccd02ac546e4bf23d2f264b47dfabe558781"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers1140.png",
+      "source_path": "images/hard_hat_workers1140.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers1140.png?datasetVersionNumber=1",
+      "bytes": 261282,
+      "sha256": "f568f32b983cabbf1e1a83ba6c4d33edc07096afa32cfbcc53c27cdb1fb7c8ff"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers1141.png",
+      "source_path": "images/hard_hat_workers1141.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers1141.png?datasetVersionNumber=1",
+      "bytes": 256187,
+      "sha256": "eb530dbd5b68aaf5e84a29da010c8157779331959b2d1350a9bc4002870440ff"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers1142.png",
+      "source_path": "images/hard_hat_workers1142.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers1142.png?datasetVersionNumber=1",
+      "bytes": 264085,
+      "sha256": "e83cb6381300de313fc0a9b63ae960883d9eb78b95c20aa960359d6366b7fad3"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers1143.png",
+      "source_path": "images/hard_hat_workers1143.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers1143.png?datasetVersionNumber=1",
+      "bytes": 295812,
+      "sha256": "e25ba99b6ced30602fd571c19cc0b70beec3894eea3faeb20a051a71ed9477b3"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers1144.png",
+      "source_path": "images/hard_hat_workers1144.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers1144.png?datasetVersionNumber=1",
+      "bytes": 234759,
+      "sha256": "3526b800a0ae08ac43723ce8959158e0415f1e606efb9d60d82ff1cdf6c9cadf"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers1145.png",
+      "source_path": "images/hard_hat_workers1145.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers1145.png?datasetVersionNumber=1",
+      "bytes": 214207,
+      "sha256": "021e76d1d6ca7a07b79fac1ccf178a8fbbcc3740085576e801028b2e8dc3d8cb"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers1146.png",
+      "source_path": "images/hard_hat_workers1146.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers1146.png?datasetVersionNumber=1",
+      "bytes": 301710,
+      "sha256": "ea5573bef87008609242a9d5216fa3859c00366c206e09d664536a2f6cde38fd"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers1147.png",
+      "source_path": "images/hard_hat_workers1147.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers1147.png?datasetVersionNumber=1",
+      "bytes": 237634,
+      "sha256": "26dd8c4f8f863cd6efe92d9b6c0bcd144d10cf88f162d1f8a4d10a49b54919ee"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers1148.png",
+      "source_path": "images/hard_hat_workers1148.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers1148.png?datasetVersionNumber=1",
+      "bytes": 258152,
+      "sha256": "8c0e3876205f1802d02908bf544bf7e4f134e0e27409ee1f94bd700a4229386d"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers1149.png",
+      "source_path": "images/hard_hat_workers1149.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers1149.png?datasetVersionNumber=1",
+      "bytes": 342830,
+      "sha256": "39ba8b8febe8bd90247766c280c32bd6484dfadb5dd886324e6d92a67080ce99"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers115.png",
+      "source_path": "images/hard_hat_workers115.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers115.png?datasetVersionNumber=1",
+      "bytes": 269688,
+      "sha256": "d1d5e5caaab25c94bd64a64fbc5f6aa4ca23b6cf73fb9fa4cf91e2156e181041"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers1150.png",
+      "source_path": "images/hard_hat_workers1150.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers1150.png?datasetVersionNumber=1",
+      "bytes": 197660,
+      "sha256": "8a65afe018c2568adf7d511c0da9d74d378295d26d8135c602d948838dff9276"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers1151.png",
+      "source_path": "images/hard_hat_workers1151.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers1151.png?datasetVersionNumber=1",
+      "bytes": 250820,
+      "sha256": "944296a0e07c1c33e41925a748a762532fe6aeb64eadd6a095678ad033f93b3f"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers1152.png",
+      "source_path": "images/hard_hat_workers1152.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers1152.png?datasetVersionNumber=1",
+      "bytes": 228748,
+      "sha256": "17ae4eda9d1844978a44ac8e04e4cdf371de9521e49a11e380d08b259a500a52"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers1153.png",
+      "source_path": "images/hard_hat_workers1153.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers1153.png?datasetVersionNumber=1",
+      "bytes": 259323,
+      "sha256": "8e9ede21212e9dc901fcfccb64a6a91cbd31b9fd8abaf2f4af5d7f04e5014850"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers1154.png",
+      "source_path": "images/hard_hat_workers1154.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers1154.png?datasetVersionNumber=1",
+      "bytes": 243913,
+      "sha256": "c8bedf68b838bf3ecccd17fb73a6f50a361244d413d005369d9714dca3631acd"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers1155.png",
+      "source_path": "images/hard_hat_workers1155.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers1155.png?datasetVersionNumber=1",
+      "bytes": 278021,
+      "sha256": "fb5dfcdfa014301b5efecceb0c828313406d896c5c3ded5d8c62c5deb728730c"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers1156.png",
+      "source_path": "images/hard_hat_workers1156.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers1156.png?datasetVersionNumber=1",
+      "bytes": 246102,
+      "sha256": "e52962f7cbe6cc507714f04c1477f5efc5f57cbdda29dc6fcc3413e6a0da0811"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers1157.png",
+      "source_path": "images/hard_hat_workers1157.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers1157.png?datasetVersionNumber=1",
+      "bytes": 292702,
+      "sha256": "49a0534876915ba0b921626c138881a33040e9dd2d36b0fcfd679ca42e4f824e"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers1158.png",
+      "source_path": "images/hard_hat_workers1158.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers1158.png?datasetVersionNumber=1",
+      "bytes": 332955,
+      "sha256": "617a1b0cc853e29515bd16b595be82d41d3bb3dd6cfb445796fca08725184cd5"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers1159.png",
+      "source_path": "images/hard_hat_workers1159.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers1159.png?datasetVersionNumber=1",
+      "bytes": 348647,
+      "sha256": "a5eb4783b21d44e608d42a507488f92acfd1f156d637197eeb5b1ecab6a38480"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers116.png",
+      "source_path": "images/hard_hat_workers116.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers116.png?datasetVersionNumber=1",
+      "bytes": 317348,
+      "sha256": "685608d1dbdfb97fb4da93aa7297bd6adbeccf4f89b9aad60e9a66e78322fcd5"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers1160.png",
+      "source_path": "images/hard_hat_workers1160.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers1160.png?datasetVersionNumber=1",
+      "bytes": 227538,
+      "sha256": "76f579ed14cc2deb13d31711417b91f5d108cdccb9a459aa193b463c4b9706a2"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers1161.png",
+      "source_path": "images/hard_hat_workers1161.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers1161.png?datasetVersionNumber=1",
+      "bytes": 204040,
+      "sha256": "1e94f816de48a7626b148040607a222831eec0259317c9e753a7996c8845d8fa"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers1162.png",
+      "source_path": "images/hard_hat_workers1162.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers1162.png?datasetVersionNumber=1",
+      "bytes": 282522,
+      "sha256": "cad64ac82408fa1e867b7eaa23585354083438097de221f0d8f6bf4bda9a7f10"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers1163.png",
+      "source_path": "images/hard_hat_workers1163.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers1163.png?datasetVersionNumber=1",
+      "bytes": 275625,
+      "sha256": "1469f03206f4c2903fed56ed10be2de7675e93f942fe8ccf34aa9bd46c2c10a4"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers1164.png",
+      "source_path": "images/hard_hat_workers1164.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers1164.png?datasetVersionNumber=1",
+      "bytes": 262172,
+      "sha256": "9e3a41a7160bca6eae841a86b51e1e7505d53540883892d36ad5257d9af374c0"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers1165.png",
+      "source_path": "images/hard_hat_workers1165.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers1165.png?datasetVersionNumber=1",
+      "bytes": 282913,
+      "sha256": "f82d9d34d9dcfea5448060b38a8b87ff82e657ea7861bfae3c58c0ee2369536c"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers1166.png",
+      "source_path": "images/hard_hat_workers1166.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers1166.png?datasetVersionNumber=1",
+      "bytes": 310659,
+      "sha256": "ceb5590080081b631be86edecf03986d7c3d95c3090bf9116788a3166773acae"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers1167.png",
+      "source_path": "images/hard_hat_workers1167.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers1167.png?datasetVersionNumber=1",
+      "bytes": 307957,
+      "sha256": "207e16d990c93fdf301b7b98b1e165eb6b10c2d6abebb20bdd9b54e3ff6e1bce"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers1168.png",
+      "source_path": "images/hard_hat_workers1168.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers1168.png?datasetVersionNumber=1",
+      "bytes": 153726,
+      "sha256": "73e910df5876550b5c17696800b217d8220466f1ea5de9cf19ddd89827a652b8"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers1169.png",
+      "source_path": "images/hard_hat_workers1169.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers1169.png?datasetVersionNumber=1",
+      "bytes": 290330,
+      "sha256": "27e4ae7d2ad5c5590b5e4bce0477f0321f80f1c3ddf1027746d322e6f1875e99"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers117.png",
+      "source_path": "images/hard_hat_workers117.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers117.png?datasetVersionNumber=1",
+      "bytes": 285546,
+      "sha256": "9d5638be85ef0ddd31cf4315fa6bf305afeb99b1aaccecd95ece7bac9c5d20ab"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers1170.png",
+      "source_path": "images/hard_hat_workers1170.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers1170.png?datasetVersionNumber=1",
+      "bytes": 303453,
+      "sha256": "d327c550186392b5a58f38e8a7524d6e9c2ece679914517b7aaea92d9cffdbaa"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers1171.png",
+      "source_path": "images/hard_hat_workers1171.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers1171.png?datasetVersionNumber=1",
+      "bytes": 339235,
+      "sha256": "7121c3e11b362384b6d996e2c44c18043e9dc8fe5f0f2aa0da64751e7d6680c3"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers1172.png",
+      "source_path": "images/hard_hat_workers1172.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers1172.png?datasetVersionNumber=1",
+      "bytes": 229486,
+      "sha256": "9d484e5f83ab3a3b911883fdb3464db7d9444a3b2837a1d94b1e721db7c536c1"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers1173.png",
+      "source_path": "images/hard_hat_workers1173.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers1173.png?datasetVersionNumber=1",
+      "bytes": 217243,
+      "sha256": "f0e635f48f0966208f0b6d7e4cf3e3a81310e91b20101b004707dbd3a7103ecd"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers1174.png",
+      "source_path": "images/hard_hat_workers1174.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers1174.png?datasetVersionNumber=1",
+      "bytes": 301689,
+      "sha256": "849cbfb6b4601b906c69776c76276406c7184f6575a7074e90f681823b1da1c9"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers1175.png",
+      "source_path": "images/hard_hat_workers1175.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers1175.png?datasetVersionNumber=1",
+      "bytes": 378973,
+      "sha256": "762acaba6bae23a7960d4822bfaccf9d59930aaa2855781393160ce768134308"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers1176.png",
+      "source_path": "images/hard_hat_workers1176.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers1176.png?datasetVersionNumber=1",
+      "bytes": 385649,
+      "sha256": "870796d6baa7895e9aab0c7a9d51d849baf0f8be41123a5eb1701a37655ff024"
+    },
+    {
+      "path": "datasets/raw/hard-hat-workers/images/hard_hat_workers1177.png",
+      "source_path": "images/hard_hat_workers1177.png",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/hard-hat-detection/images%2Fhard_hat_workers1177.png?datasetVersionNumber=1",
+      "bytes": 248752,
+      "sha256": "2fcaa5f64ceb663c7d395a5e6346ee46046b55a964296e3b65bdb776d4021ee0"
+    }
+  ]
+}

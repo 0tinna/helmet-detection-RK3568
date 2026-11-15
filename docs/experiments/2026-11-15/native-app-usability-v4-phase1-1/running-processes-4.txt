@@ -1,0 +1,3 @@
+ 9672  9671  9668  9668 S          00:03 /usr/bin/python3 app/launch.py --root /userdata/helmet-validation/20261115-native-app-v2 --tab detection
+ 9688  9672  9668  9668 Sl         00:02 /usr/bin/python3 /userdata/helmet-validation/20261115-native-app-v2/src/app/service.py --root /userdata/helmet-validation/20261115-native-app-v2 --port 0 --token-file /userdata/helmet-validation/20261115-native-app-v2/app-state/session-4ipakpi7/token --ready-file /userdata/helmet-validation/20261115-native-app-v2/app-state/session-4ipakpi7/ready.json
+ 9760  9672  9668  9668 Rl         00:01 /usr/bin/qmlscene /userdata/helmet-validation/20261115-native-app-v2/app-state/session-4ipakpi7/App.qml

@@ -1,0 +1,1104 @@
+{
+  "passed": true,
+  "errors": [],
+  "metrics": {
+    "capture_to_output_ms": {
+      "count": 133,
+      "mean": 135.11511239127336,
+      "p50": 125.69174201053102,
+      "p95": 202.88220840157007,
+      "p99": 249.24940952507322
+    },
+    "sink_ms": {
+      "count": 133,
+      "mean": 42.092890548694854,
+      "p50": 37.330213002860546,
+      "p95": 76.68662820360619,
+      "p99": 90.46385832014494
+    },
+    "capture_to_sink_complete_ms": {
+      "count": 133,
+      "mean": 177.4397106997448,
+      "p50": 170.985535994987,
+      "p95": 258.34656360384525,
+      "p99": 327.12131963809986
+    },
+    "prep_ms": {
+      "count": 134,
+      "mean": 15.062956276493939,
+      "p50": 13.949609492556192,
+      "p95": 23.389207544823872,
+      "p99": 27.360348456422784
+    },
+    "infer_ms": {
+      "count": 134,
+      "mean": 46.71405511919093,
+      "p50": 44.28037149773445,
+      "p95": 63.75520890433108,
+      "p99": 72.13362342590695
+    },
+    "post_ms": {
+      "count": 134,
+      "mean": 24.83297077669161,
+      "p50": 16.763974002969917,
+      "p95": 50.61381404811981,
+      "p99": 60.1896406484593
+    }
+  },
+  "timeline": {
+    "policy": {
+      "startup_allowance_seconds": 10.0,
+      "finalization_allowance_seconds": 5.0,
+      "session_event_agreement_seconds": 1.0,
+      "duration_rounding_seconds": 0.1,
+      "resource_interval_seconds": 1.0,
+      "resource_gap_periods": 3.0,
+      "frame_gap_periods": 5.0,
+      "minimum_frame_gap_seconds": 1.0,
+      "timing_rounding_ms": 0.02
+    },
+    "streams": {
+      "detector capture": {
+        "count": 134,
+        "first": 70823.07055583,
+        "last": 70834.872667173,
+        "start_offset_seconds": 0.07666335300018545,
+        "end_offset_seconds": 0.16889685600472149,
+        "max_gap_seconds": 0.20885563699994236,
+        "allowed_gap_seconds": 1.0
+      },
+      "detector processed": {
+        "count": 134,
+        "first": 70823.174719975,
+        "last": 70835.022200363,
+        "start_offset_seconds": 0.18082749799941666,
+        "end_offset_seconds": 0.019363665996934287,
+        "max_gap_seconds": 0.2161086999985855,
+        "allowed_gap_seconds": 1.0
+      },
+      "output dispatch": {
+        "count": 133,
+        "first": 70823.185093076,
+        "last": 70834.923953121,
+        "start_offset_seconds": 0.19120059900160413,
+        "end_offset_seconds": 0.11761090799700469,
+        "max_gap_seconds": 0.2203572250000434,
+        "allowed_gap_seconds": 1.0
+      },
+      "sink completion": {
+        "count": 133,
+        "first": 70823.210171223,
+        "last": 70834.957276313,
+        "start_offset_seconds": 0.21627874601108488,
+        "end_offset_seconds": 0.08428771600301843,
+        "max_gap_seconds": 0.22019797199754976,
+        "allowed_gap_seconds": 1.0
+      },
+      "resources": {
+        "count": 16,
+        "first": 70819.844099105,
+        "last": 70835.520463049,
+        "start_offset_seconds": -3.149793371994747,
+        "end_offset_seconds": -0.4788990200031549,
+        "max_gap_seconds": 1.161898136997479,
+        "allowed_gap_seconds": 3.0
+      },
+      "resource cpu_percent": {
+        "count": 16,
+        "first": 70819.844099105,
+        "last": 70835.520463049,
+        "start_offset_seconds": -3.149793371994747,
+        "end_offset_seconds": -0.4788990200031549,
+        "max_gap_seconds": 1.161898136997479,
+        "allowed_gap_seconds": 3.0
+      },
+      "resource rss_bytes": {
+        "count": 16,
+        "first": 70819.844099105,
+        "last": 70835.520463049,
+        "start_offset_seconds": -3.149793371994747,
+        "end_offset_seconds": -0.4788990200031549,
+        "max_gap_seconds": 1.161898136997479,
+        "allowed_gap_seconds": 3.0
+      },
+      "resource temperature_c": {
+        "count": 16,
+        "first": 70819.844099105,
+        "last": 70835.520463049,
+        "start_offset_seconds": -3.149793371994747,
+        "end_offset_seconds": -0.4788990200031549,
+        "max_gap_seconds": 1.161898136997479,
+        "allowed_gap_seconds": 3.0
+      },
+      "resource npu_frequency_hz": {
+        "count": 16,
+        "first": 70819.844099105,
+        "last": 70835.520463049,
+        "start_offset_seconds": -3.149793371994747,
+        "end_offset_seconds": -0.4788990200031549,
+        "max_gap_seconds": 1.161898136997479,
+        "allowed_gap_seconds": 3.0
+      }
+    },
+    "active_start": 70822.993892477,
+    "active_stop": 70835.041564029,
+    "observed_active_seconds": 12.04767155200534
+  },
+  "cleanup_evidence": {
+    "direct_recorded": true,
+    "accepted": true,
+    "errors": [],
+    "record": {
+      "engine_initialized": true,
+      "source_initialized": true,
+      "engine_released": true,
+      "source_released": true,
+      "capture_worker_alive": false,
+      "detect_worker_alive": false,
+      "shutdown_timeout": false,
+      "sdk_resources": [
+        {
+          "created": true,
+          "released": true,
+          "release_error": null
+        }
+      ]
+    }
+  },
+  "observed_rates": {
+    "captured_fps": 18.925719973090256,
+    "detected_fps": 11.123010861377606,
+    "output_fps": 11.040003317635982,
+    "displayed_fps": 0.0
+  },
+  "throughput_target_met": true,
+  "actual_thresholds": {
+    "conf": 0.35,
+    "nms": 0.45,
+    "skip": 0
+  },
+  "scope": "continuity, original-frame inventory, freshness and automatic native render; fixed 10 FPS is separate; no physical camera, human display/touch, WiFi switching or independent 85% accuracy acceptance",
+  "snapshot_integrity": {
+    "pairs": [
+      {
+        "image": "snapshots/alarm_12_1794690664615919892_bf627510.jpg",
+        "metadata": "snapshots/alarm_12_1794690664615919892_bf627510.json",
+        "saved_at": 70823.897705915,
+        "reason": "alarm",
+        "frame_id": 12
+      }
+    ],
+    "periodic_count": 0,
+    "errors": []
+  },
+  "physical_camera_tested": false,
+  "ssh_survival": "not_observed",
+  "public_target_fps": 10.0,
+  "requested_replay_fps": 20.0,
+  "requested_supply_target_met": false,
+  "http": {
+    "decoded_previews": 3,
+    "active_observations": 3,
+    "wifi_status_available": false,
+    "wifi_status_receipts": [
+      {
+        "status": 200,
+        "failure": null
+      }
+    ],
+    "coverage": {
+      "first": 70823.54496915,
+      "last": 70833.552187821,
+      "count": 3,
+      "allowed_gap_seconds": 8.0,
+      "poll_jitter_allowance_seconds": 0.1,
+      "active_start": 70822.993892477,
+      "active_stop": 70835.041564029,
+      "minimum_count": 1
+    },
+    "latency_ms": {
+      "count": 16,
+      "mean": 157.47035612730542,
+      "p50": 42.20788050588453,
+      "p95": 538.5894447535975,
+      "p99": 1389.3142137530954
+    },
+    "errors": []
+  },
+  "native_gui_verified": true,
+  "thirty_minute_app_passed": false,
+  "artifact_inventory": {
+    "resources.jsonl": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-smoke-4/resources.jsonl",
+      "sha256": "37b9138f519d0c57909c7f3427eb5cc0351886e206af84adad4343166cdaa00b",
+      "bytes": 9412
+    },
+    "events.jsonl": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-smoke-4/events.jsonl",
+      "sha256": "9d0a0408aa73879eafd9aaf1a946cde84fab3c386c7123b6d25f0abb47f5d29c",
+      "bytes": 3401
+    },
+    "screen.png": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-smoke-4/screen.png",
+      "sha256": "7224bf9c69b797ac543c7b66c11a6c88dc9fe7da15a603912d2b5177a321a1d2",
+      "bytes": 410382
+    },
+    "session.json": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-smoke-4/session.json",
+      "sha256": "04c26dbd891e3585671ffffb64307642e48bf4741ba794588a1c35ceae43f627",
+      "bytes": 9658
+    },
+    "gui-control.json": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-smoke-4/gui-control.json",
+      "sha256": "6dca3613c39d0958f8fadb79695f52214000e3ace05f908da17f5a08ae5cd968",
+      "bytes": 24
+    },
+    "cleanup.json": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-smoke-4/cleanup.json",
+      "sha256": "a8c9d2888deafb40df666b37661c9bdb738c8987534e0feb35071b678583ff25",
+      "bytes": 1162
+    },
+    "http.jsonl": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-smoke-4/http.jsonl",
+      "sha256": "678b878ead09e134954b3501773b216b3340694263beb4588829232fdb5fb826",
+      "bytes": 1082100
+    },
+    "frames.jsonl.resources.jsonl": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-smoke-4/frames.jsonl.resources.jsonl",
+      "sha256": "765e7bc56963b9044a594376fad458983cc6b4545c1a75661d5f3c8a671497af",
+      "bytes": 3737
+    },
+    "frames.jsonl": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-smoke-4/frames.jsonl",
+      "sha256": "88d47b04e7c5383488cc62a703bc1845fa90dd7dc3d3712a7be561b9a91e48d2",
+      "bytes": 503645
+    },
+    "gui.log": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-smoke-4/gui.log",
+      "sha256": "de9100a3a87c98313bedd070936016c25af5f4b577eaa7a5f9d47ab3bf89a86b",
+      "bytes": 12432
+    },
+    "qt-cache/qtshadercache-arm64-little_endian-lp64/7d5f9fc417d36376dbfbebf864483aca3a25ac1a": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-smoke-4/qt-cache/qtshadercache-arm64-little_endian-lp64/7d5f9fc417d36376dbfbebf864483aca3a25ac1a",
+      "sha256": "9983adf86597e29dd8816b32a05bb884a43dcde040a8577561ad38ff48473d1f",
+      "bytes": 2784
+    },
+    "qt-cache/qtshadercache-arm64-little_endian-lp64/cba8d1ceb9482bf7ad559bc702b71beca94f54a3": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-smoke-4/qt-cache/qtshadercache-arm64-little_endian-lp64/cba8d1ceb9482bf7ad559bc702b71beca94f54a3",
+      "sha256": "4079c7d29f1f6bcdb15d1dc01125bbfe1eeab706563b6e765f300f0a2d1c76b3",
+      "bytes": 2832
+    },
+    "qt-cache/qtshadercache-arm64-little_endian-lp64/5cc098bc5354d98253495e89cc26ca4ba78a3a15": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-smoke-4/qt-cache/qtshadercache-arm64-little_endian-lp64/5cc098bc5354d98253495e89cc26ca4ba78a3a15",
+      "sha256": "d6653e6359fb175411ffab091b36f78d69f8d309edbff71f955c86f2c287caac",
+      "bytes": 4432
+    },
+    "qt-cache/qtshadercache-arm64-little_endian-lp64/3c597a80b51a24c02510e986e8c27bdb62e99ba6": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-smoke-4/qt-cache/qtshadercache-arm64-little_endian-lp64/3c597a80b51a24c02510e986e8c27bdb62e99ba6",
+      "sha256": "eb6ffb16e7da6379f98417a3fa51c0aab30513ebf26dd2a69c07905d81d3365c",
+      "bytes": 2304
+    },
+    "qt-cache/qtshadercache-arm64-little_endian-lp64/d358096b1c9ad1aa59bd4602c6364cc5509d0fd2": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-smoke-4/qt-cache/qtshadercache-arm64-little_endian-lp64/d358096b1c9ad1aa59bd4602c6364cc5509d0fd2",
+      "sha256": "477c25e7a5b286f090bf7113f1296ffcb41a40fe07b7390915e068d11ea46b0a",
+      "bytes": 3824
+    },
+    "qt-cache/qtshadercache-arm64-little_endian-lp64/60e5c4afb5659975001c08fc1721ef35235bdf6a": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-smoke-4/qt-cache/qtshadercache-arm64-little_endian-lp64/60e5c4afb5659975001c08fc1721ef35235bdf6a",
+      "sha256": "2d1558a6ddaa20fdb597fd5c6a0b8588be51213d074803748266b7e24431235a",
+      "bytes": 4132
+    },
+    "qt-cache/qtshadercache-arm64-little_endian-lp64/151d848f668e8d50cfb6460d73b3d589a041764b": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-smoke-4/qt-cache/qtshadercache-arm64-little_endian-lp64/151d848f668e8d50cfb6460d73b3d589a041764b",
+      "sha256": "4c2967562a75377d0084d40c51c0b668114a735f3486bd9d8d40b05c69a41a7f",
+      "bytes": 3008
+    },
+    "previews/probe-000007.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-smoke-4/previews/probe-000007.jpg",
+      "sha256": "3a60dbf194250f862fe11c851388dcf04dcd79fade241f08fad188f443ce53c0",
+      "bytes": 131855
+    },
+    "previews/probe-000010.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-smoke-4/previews/probe-000010.jpg",
+      "sha256": "93befcc686d6d8fdfc485bc9e55daed795d569308dc75968f354b0b50c1f6c44",
+      "bytes": 132042
+    },
+    "previews/probe-000004.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-smoke-4/previews/probe-000004.jpg",
+      "sha256": "60f694b2dd09e6c3ac2fddcaed9d5b07c633ac5af680310908336d2710fbfe80",
+      "bytes": 125753
+    },
+    "snapshots/alarm_12_1794690664615919892_bf627510.jpg": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-smoke-4/snapshots/alarm_12_1794690664615919892_bf627510.jpg",
+      "sha256": "ccf7643787b3efe55a6eaa88a8cb6e0600257de54e4764eff19ac44710a57cd1",
+      "bytes": 132026
+    },
+    "snapshots/alarm_12_1794690664615919892_bf627510.json": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-smoke-4/snapshots/alarm_12_1794690664615919892_bf627510.json",
+      "sha256": "57345771bfdb2b736c091da17f4978723aff67f5042d25bd926ab3e250be821d",
+      "bytes": 3024
+    },
+    "provenance/model/helmet_416x416.rknn": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-smoke-4/provenance/model/helmet_416x416.rknn",
+      "sha256": "7e0eefe4bfe86627bb6b58161cacca10912e0dbe1ba2513f58d091c40b26cd48",
+      "bytes": 8110065
+    },
+    "provenance/sources/verify_native_runtime.py": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-smoke-4/provenance/sources/verify_native_runtime.py",
+      "sha256": "222d07022ba746d5fd9bcdb2c5a8924c2b383473585311cf0dce5b0d9fc93997",
+      "bytes": 66884
+    },
+    "provenance/sources/yolo_post.py": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-smoke-4/provenance/sources/yolo_post.py",
+      "sha256": "fae57bbfa1d47d5ab16ef444096fab4fe8e14701c5ec10d87b1ec518282b0505",
+      "bytes": 7811
+    },
+    "provenance/sources/dump_dets.py": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-smoke-4/provenance/sources/dump_dets.py",
+      "sha256": "c21b4a1d1c4ee4e0428cb19d16b560c9c7dfdef2c34b52f62195b836fca90e3f",
+      "bytes": 8619
+    },
+    "provenance/sources/helmet_realtime.py": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-smoke-4/provenance/sources/helmet_realtime.py",
+      "sha256": "15794ebc40fdd1736d9c80d5504d17aa91e1de972bb92bb30a9eeb026309e46d",
+      "bytes": 5503
+    },
+    "provenance/sources/alarm.py": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-smoke-4/provenance/sources/alarm.py",
+      "sha256": "d3e6d68c7b17f5508f0d697e96998f556f224f9f5067169d66c35972b3a023d2",
+      "bytes": 4207
+    },
+    "provenance/sources/benchmark.py": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-smoke-4/provenance/sources/benchmark.py",
+      "sha256": "15dcff515fc9c7332dd5eefd40502f38b0a02e6ab6a62e1d0ec50ce593ab4859",
+      "bytes": 15588
+    },
+    "provenance/sources/telemetry.py": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-smoke-4/provenance/sources/telemetry.py",
+      "sha256": "da4522206053712484a21f80bb26d6424649a263f606f35fa16070be51a83b9e",
+      "bytes": 14670
+    },
+    "provenance/sources/output_sinks.py": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-smoke-4/provenance/sources/output_sinks.py",
+      "sha256": "c2f65642d38f8994200503b242ca93c8f0af105dc5ad3b13650e9ff83c7003cf",
+      "bytes": 23464
+    },
+    "provenance/sources/verify_runtime.py": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-smoke-4/provenance/sources/verify_runtime.py",
+      "sha256": "fdc94bf540d83e8f9a8367d9004d171e60127bb798ba8a6c113999ed888b6217",
+      "bytes": 86641
+    },
+    "provenance/sources/sources.py": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-smoke-4/provenance/sources/sources.py",
+      "sha256": "ea89d66fdefb2bc429ca74efa0437a3c0a8aab672a856078fc15afccfe3b31c9",
+      "bytes": 6717
+    },
+    "provenance/sources/pipeline_runtime.py": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-smoke-4/provenance/sources/pipeline_runtime.py",
+      "sha256": "dee30d6b71c9e8d3e697657fb309fb22e8fb47fafd366d60b555466cf56152e9",
+      "bytes": 35055
+    },
+    "provenance/sources/validate_comparison.py": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-smoke-4/provenance/sources/validate_comparison.py",
+      "sha256": "3b65f9e561084aa7f6199cc7cd413b6426f6ac962f39729ac0668e50350c2860",
+      "bytes": 1819
+    },
+    "provenance/sources/app/launch.py": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-smoke-4/provenance/sources/app/launch.py",
+      "sha256": "8db80c3cdb10519812b4d2b943f1542042a75c9bb67f74a2bfa374ee56ebe2ac",
+      "bytes": 6500
+    },
+    "provenance/sources/app/service.py": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-smoke-4/provenance/sources/app/service.py",
+      "sha256": "9a2f7454db6fb48ebcf7f5fd301a831817374c2be2fc5c9036af60feb40df1f7",
+      "bytes": 29859
+    },
+    "provenance/sources/app/install.py": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-smoke-4/provenance/sources/app/install.py",
+      "sha256": "229e351cf73b6d49ff5ae1bf445e86585b9af22dbbe89cf70759fbf1fdc71ae7",
+      "bytes": 4676
+    },
+    "provenance/sources/app/__init__.py": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-smoke-4/provenance/sources/app/__init__.py",
+      "sha256": "3ca294319d48aa183e5822b0c08426253434101d7c1fc85ae21b74b756784cd1",
+      "bytes": 55
+    },
+    "provenance/sources/app/wifi.py": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-smoke-4/provenance/sources/app/wifi.py",
+      "sha256": "1e998474293b5499e0cedf5fa57317416ac49dab7a2b9f36fd93b97ec30c20fb",
+      "bytes": 24915
+    },
+    "provenance/sources/app/qml/Main.qml": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-smoke-4/provenance/sources/app/qml/Main.qml",
+      "sha256": "6ac6b2e30c2e7ca29a9bc3f1ecb112ac4cc907b33a573664ed7476aeb11d504c",
+      "bytes": 20791
+    },
+    "provenance/input/construction-replay.avi": {
+      "path": "/userdata/helmet-validation/20261115-native-runtime-tools/native-smoke-4/provenance/input/construction-replay.avi",
+      "sha256": "f22897e1ebb40cc919caab335ee4b436d28ebaf0a138eb8b16c63166184af5cc",
+      "bytes": 82400444
+    }
+  },
+  "raw_counts": {
+    "frame_rows": 267,
+    "resource_rows": 16,
+    "pipeline_resource_rows": 12,
+    "event_rows": 5,
+    "http_rows": 16
+  },
+  "app_resources": {
+    "rss_start_bytes": 76640256,
+    "rss_end_bytes": 288350208,
+    "rss_peak_bytes": 326070272,
+    "rss_growth_bytes": 211709952
+  },
+  "evidence_configuration": {
+    "duration": 12.0,
+    "full_jsonl": true,
+    "session_json": true,
+    "save_interval_seconds": 30.0,
+    "additional_load": [
+      "resource-monitor thread",
+      "HTTP observation every 5 seconds",
+      "Qt stdout reader when GUI enabled",
+      "full per-frame disk logs",
+      "periodic annotated saves",
+      "GUI wrapper local control-file poll every .5 seconds",
+      "read-only GUI preview observations every .5 seconds",
+      "ready-signal capture attempts only in final five active seconds"
+    ],
+    "default_app_has_full_logs": false
+  },
+  "actual_source": {
+    "kind": "VideoSource",
+    "is_file": true,
+    "header_fps": 10.0,
+    "header_frame_count": 1200.0,
+    "decoded_image_size": [
+      640,
+      480
+    ],
+    "requested_replay_fps": 20.0
+  },
+  "display_evidence": {
+    "qml_preview_request_hz": 5,
+    "qml_status_poll_hz": 2,
+    "actual_display_fps": null,
+    "screen_status_frame_is_exact_preview_identity": false,
+    "gui_observations": {
+      "sample_count": 27,
+      "ready_visible_samples": 22,
+      "unavailable_samples": 5,
+      "malformed_rows": 0,
+      "sampling_interval_seconds": 0.5,
+      "sampled_unavailable_spans": [
+        {
+          "first_unavailable_sample_wall_ms": 1794690662821,
+          "next_available_sample_wall_ms": 1794690664839
+        },
+        {
+          "first_unavailable_sample_wall_ms": 1794690674333,
+          "next_available_sample_wall_ms": 1794690674835
+        }
+      ],
+      "observations": [
+        {
+          "observed_wall_ms": 1794690662821,
+          "phase": "starting",
+          "imageExists": true,
+          "imageType": "QQuickImage(0x55d34632f0)",
+          "status": 0,
+          "ready": false,
+          "visible": false,
+          "sourceKind": "unavailable",
+          "sourceSize": [
+            0,
+            0
+          ],
+          "valid": false,
+          "running": false,
+          "uiSelection": {}
+        },
+        {
+          "observed_wall_ms": 1794690663304,
+          "phase": "starting",
+          "imageExists": true,
+          "imageType": "QQuickImage(0x55d34632f0)",
+          "status": 0,
+          "ready": false,
+          "visible": false,
+          "sourceKind": "unavailable",
+          "sourceSize": [
+            0,
+            0
+          ],
+          "valid": false,
+          "running": false,
+          "uiSelection": {}
+        },
+        {
+          "observed_wall_ms": 1794690663869,
+          "phase": "running",
+          "imageExists": true,
+          "imageType": "QQuickImage(0x55d34632f0)",
+          "status": 0,
+          "ready": false,
+          "visible": false,
+          "sourceKind": "unavailable",
+          "sourceSize": [
+            0,
+            0
+          ],
+          "valid": false,
+          "running": true,
+          "generation": "66676ff60c3243889379367b9d99b2c3",
+          "uiSelection": {
+            "model": "helmet_416x416.rknn",
+            "source": "construction-replay.avi",
+            "profile": "responsive"
+          }
+        },
+        {
+          "observed_wall_ms": 1794690664348,
+          "phase": "running",
+          "imageExists": true,
+          "imageType": "QQuickImage(0x55d34632f0)",
+          "status": 0,
+          "ready": false,
+          "visible": false,
+          "sourceKind": "unavailable",
+          "sourceSize": [
+            0,
+            0
+          ],
+          "valid": false,
+          "running": true,
+          "generation": "66676ff60c3243889379367b9d99b2c3",
+          "uiSelection": {
+            "model": "helmet_416x416.rknn",
+            "source": "construction-replay.avi",
+            "profile": "responsive"
+          }
+        },
+        {
+          "observed_wall_ms": 1794690664839,
+          "phase": "running",
+          "imageExists": true,
+          "imageType": "QQuickImage(0x55d34632f0)",
+          "status": 1,
+          "ready": true,
+          "visible": true,
+          "sourceKind": "inline-jpeg",
+          "sourceSize": [
+            640,
+            480
+          ],
+          "valid": true,
+          "running": true,
+          "generation": "66676ff60c3243889379367b9d99b2c3",
+          "uiSelection": {
+            "model": "helmet_416x416.rknn",
+            "source": "construction-replay.avi",
+            "profile": "responsive"
+          }
+        },
+        {
+          "observed_wall_ms": 1794690665331,
+          "phase": "running",
+          "imageExists": true,
+          "imageType": "QQuickImage(0x55d34632f0)",
+          "status": 1,
+          "ready": true,
+          "visible": true,
+          "sourceKind": "inline-jpeg",
+          "sourceSize": [
+            640,
+            480
+          ],
+          "valid": true,
+          "running": true,
+          "generation": "66676ff60c3243889379367b9d99b2c3",
+          "uiSelection": {
+            "model": "helmet_416x416.rknn",
+            "source": "construction-replay.avi",
+            "profile": "responsive"
+          }
+        },
+        {
+          "observed_wall_ms": 1794690665827,
+          "phase": "running",
+          "imageExists": true,
+          "imageType": "QQuickImage(0x55d34632f0)",
+          "status": 1,
+          "ready": true,
+          "visible": true,
+          "sourceKind": "inline-jpeg",
+          "sourceSize": [
+            640,
+            480
+          ],
+          "valid": true,
+          "running": true,
+          "generation": "66676ff60c3243889379367b9d99b2c3",
+          "uiSelection": {
+            "model": "helmet_416x416.rknn",
+            "source": "construction-replay.avi",
+            "profile": "responsive"
+          }
+        },
+        {
+          "observed_wall_ms": 1794690666324,
+          "phase": "running",
+          "imageExists": true,
+          "imageType": "QQuickImage(0x55d34632f0)",
+          "status": 1,
+          "ready": true,
+          "visible": true,
+          "sourceKind": "inline-jpeg",
+          "sourceSize": [
+            640,
+            480
+          ],
+          "valid": true,
+          "running": true,
+          "generation": "66676ff60c3243889379367b9d99b2c3",
+          "uiSelection": {
+            "model": "helmet_416x416.rknn",
+            "source": "construction-replay.avi",
+            "profile": "responsive"
+          }
+        },
+        {
+          "observed_wall_ms": 1794690666826,
+          "phase": "running",
+          "imageExists": true,
+          "imageType": "QQuickImage(0x55d34632f0)",
+          "status": 1,
+          "ready": true,
+          "visible": true,
+          "sourceKind": "inline-jpeg",
+          "sourceSize": [
+            640,
+            480
+          ],
+          "valid": true,
+          "running": true,
+          "generation": "66676ff60c3243889379367b9d99b2c3",
+          "uiSelection": {
+            "model": "helmet_416x416.rknn",
+            "source": "construction-replay.avi",
+            "profile": "responsive"
+          }
+        },
+        {
+          "observed_wall_ms": 1794690667326,
+          "phase": "running",
+          "imageExists": true,
+          "imageType": "QQuickImage(0x55d34632f0)",
+          "status": 1,
+          "ready": true,
+          "visible": true,
+          "sourceKind": "inline-jpeg",
+          "sourceSize": [
+            640,
+            480
+          ],
+          "valid": true,
+          "running": true,
+          "generation": "66676ff60c3243889379367b9d99b2c3",
+          "uiSelection": {
+            "model": "helmet_416x416.rknn",
+            "source": "construction-replay.avi",
+            "profile": "responsive"
+          }
+        },
+        {
+          "observed_wall_ms": 1794690667834,
+          "phase": "running",
+          "imageExists": true,
+          "imageType": "QQuickImage(0x55d34632f0)",
+          "status": 1,
+          "ready": true,
+          "visible": true,
+          "sourceKind": "inline-jpeg",
+          "sourceSize": [
+            640,
+            480
+          ],
+          "valid": true,
+          "running": true,
+          "generation": "66676ff60c3243889379367b9d99b2c3",
+          "uiSelection": {
+            "model": "helmet_416x416.rknn",
+            "source": "construction-replay.avi",
+            "profile": "responsive"
+          }
+        },
+        {
+          "observed_wall_ms": 1794690668332,
+          "phase": "running",
+          "imageExists": true,
+          "imageType": "QQuickImage(0x55d34632f0)",
+          "status": 1,
+          "ready": true,
+          "visible": true,
+          "sourceKind": "inline-jpeg",
+          "sourceSize": [
+            640,
+            480
+          ],
+          "valid": true,
+          "running": true,
+          "generation": "66676ff60c3243889379367b9d99b2c3",
+          "uiSelection": {
+            "model": "helmet_416x416.rknn",
+            "source": "construction-replay.avi",
+            "profile": "responsive"
+          }
+        },
+        {
+          "observed_wall_ms": 1794690668831,
+          "phase": "running",
+          "imageExists": true,
+          "imageType": "QQuickImage(0x55d34632f0)",
+          "status": 1,
+          "ready": true,
+          "visible": true,
+          "sourceKind": "inline-jpeg",
+          "sourceSize": [
+            640,
+            480
+          ],
+          "valid": true,
+          "running": true,
+          "generation": "66676ff60c3243889379367b9d99b2c3",
+          "uiSelection": {
+            "model": "helmet_416x416.rknn",
+            "source": "construction-replay.avi",
+            "profile": "responsive"
+          }
+        },
+        {
+          "observed_wall_ms": 1794690669323,
+          "phase": "running",
+          "imageExists": true,
+          "imageType": "QQuickImage(0x55d34632f0)",
+          "status": 1,
+          "ready": true,
+          "visible": true,
+          "sourceKind": "inline-jpeg",
+          "sourceSize": [
+            640,
+            480
+          ],
+          "valid": true,
+          "running": true,
+          "generation": "66676ff60c3243889379367b9d99b2c3",
+          "uiSelection": {
+            "model": "helmet_416x416.rknn",
+            "source": "construction-replay.avi",
+            "profile": "responsive"
+          }
+        },
+        {
+          "observed_wall_ms": 1794690669825,
+          "phase": "running",
+          "imageExists": true,
+          "imageType": "QQuickImage(0x55d34632f0)",
+          "status": 1,
+          "ready": true,
+          "visible": true,
+          "sourceKind": "inline-jpeg",
+          "sourceSize": [
+            640,
+            480
+          ],
+          "valid": true,
+          "running": true,
+          "generation": "66676ff60c3243889379367b9d99b2c3",
+          "uiSelection": {
+            "model": "helmet_416x416.rknn",
+            "source": "construction-replay.avi",
+            "profile": "responsive"
+          }
+        },
+        {
+          "observed_wall_ms": 1794690670329,
+          "phase": "running",
+          "imageExists": true,
+          "imageType": "QQuickImage(0x55d34632f0)",
+          "status": 1,
+          "ready": true,
+          "visible": true,
+          "sourceKind": "inline-jpeg",
+          "sourceSize": [
+            640,
+            480
+          ],
+          "valid": true,
+          "running": true,
+          "generation": "66676ff60c3243889379367b9d99b2c3",
+          "uiSelection": {
+            "model": "helmet_416x416.rknn",
+            "source": "construction-replay.avi",
+            "profile": "responsive"
+          }
+        },
+        {
+          "observed_wall_ms": 1794690670828,
+          "phase": "running",
+          "imageExists": true,
+          "imageType": "QQuickImage(0x55d34632f0)",
+          "status": 1,
+          "ready": true,
+          "visible": true,
+          "sourceKind": "inline-jpeg",
+          "sourceSize": [
+            640,
+            480
+          ],
+          "valid": true,
+          "running": true,
+          "generation": "66676ff60c3243889379367b9d99b2c3",
+          "uiSelection": {
+            "model": "helmet_416x416.rknn",
+            "source": "construction-replay.avi",
+            "profile": "responsive"
+          }
+        },
+        {
+          "observed_wall_ms": 1794690671389,
+          "phase": "running",
+          "imageExists": true,
+          "imageType": "QQuickImage(0x55d34632f0)",
+          "status": 1,
+          "ready": true,
+          "visible": true,
+          "sourceKind": "inline-jpeg",
+          "sourceSize": [
+            640,
+            480
+          ],
+          "valid": true,
+          "running": true,
+          "generation": "66676ff60c3243889379367b9d99b2c3",
+          "uiSelection": {
+            "model": "helmet_416x416.rknn",
+            "source": "construction-replay.avi",
+            "profile": "responsive"
+          }
+        },
+        {
+          "observed_wall_ms": 1794690671824,
+          "phase": "running",
+          "imageExists": true,
+          "imageType": "QQuickImage(0x55d34632f0)",
+          "status": 1,
+          "ready": true,
+          "visible": true,
+          "sourceKind": "inline-jpeg",
+          "sourceSize": [
+            640,
+            480
+          ],
+          "valid": true,
+          "running": true,
+          "generation": "66676ff60c3243889379367b9d99b2c3",
+          "uiSelection": {
+            "model": "helmet_416x416.rknn",
+            "source": "construction-replay.avi",
+            "profile": "responsive"
+          }
+        },
+        {
+          "observed_wall_ms": 1794690672333,
+          "phase": "running",
+          "imageExists": true,
+          "imageType": "QQuickImage(0x55d34632f0)",
+          "status": 1,
+          "ready": true,
+          "visible": true,
+          "sourceKind": "inline-jpeg",
+          "sourceSize": [
+            640,
+            480
+          ],
+          "valid": true,
+          "running": true,
+          "generation": "66676ff60c3243889379367b9d99b2c3",
+          "uiSelection": {
+            "model": "helmet_416x416.rknn",
+            "source": "construction-replay.avi",
+            "profile": "responsive"
+          }
+        },
+        {
+          "observed_wall_ms": 1794690672822,
+          "phase": "running",
+          "imageExists": true,
+          "imageType": "QQuickImage(0x55d34632f0)",
+          "status": 1,
+          "ready": true,
+          "visible": true,
+          "sourceKind": "inline-jpeg",
+          "sourceSize": [
+            640,
+            480
+          ],
+          "valid": true,
+          "running": true,
+          "generation": "66676ff60c3243889379367b9d99b2c3",
+          "uiSelection": {
+            "model": "helmet_416x416.rknn",
+            "source": "construction-replay.avi",
+            "profile": "responsive"
+          }
+        },
+        {
+          "observed_wall_ms": 1794690673333,
+          "phase": "running",
+          "imageExists": true,
+          "imageType": "QQuickImage(0x55d34632f0)",
+          "status": 1,
+          "ready": true,
+          "visible": true,
+          "sourceKind": "inline-jpeg",
+          "sourceSize": [
+            640,
+            480
+          ],
+          "valid": true,
+          "running": true,
+          "generation": "66676ff60c3243889379367b9d99b2c3",
+          "uiSelection": {
+            "model": "helmet_416x416.rknn",
+            "source": "construction-replay.avi",
+            "profile": "responsive"
+          }
+        },
+        {
+          "observed_wall_ms": 1794690673828,
+          "phase": "running",
+          "imageExists": true,
+          "imageType": "QQuickImage(0x55d34632f0)",
+          "status": 1,
+          "ready": true,
+          "visible": true,
+          "sourceKind": "inline-jpeg",
+          "sourceSize": [
+            640,
+            480
+          ],
+          "valid": true,
+          "running": true,
+          "generation": "66676ff60c3243889379367b9d99b2c3",
+          "uiSelection": {
+            "model": "helmet_416x416.rknn",
+            "source": "construction-replay.avi",
+            "profile": "responsive"
+          }
+        },
+        {
+          "observed_wall_ms": 1794690674333,
+          "phase": "running",
+          "imageExists": true,
+          "imageType": "QQuickImage(0x55d34632f0)",
+          "status": 2,
+          "ready": false,
+          "visible": false,
+          "sourceKind": "inline-jpeg",
+          "sourceSize": [
+            0,
+            0
+          ],
+          "valid": true,
+          "running": true,
+          "generation": "66676ff60c3243889379367b9d99b2c3",
+          "uiSelection": {
+            "model": "helmet_416x416.rknn",
+            "source": "construction-replay.avi",
+            "profile": "responsive"
+          }
+        },
+        {
+          "observed_wall_ms": 1794690674835,
+          "phase": "running",
+          "imageExists": true,
+          "imageType": "QQuickImage(0x55d34632f0)",
+          "status": 1,
+          "ready": true,
+          "visible": true,
+          "sourceKind": "inline-jpeg",
+          "sourceSize": [
+            640,
+            480
+          ],
+          "valid": true,
+          "running": true,
+          "generation": "66676ff60c3243889379367b9d99b2c3",
+          "uiSelection": {
+            "model": "helmet_416x416.rknn",
+            "source": "construction-replay.avi",
+            "profile": "responsive"
+          }
+        },
+        {
+          "observed_wall_ms": 1794690675332,
+          "phase": "running",
+          "imageExists": true,
+          "imageType": "QQuickImage(0x55d34632f0)",
+          "status": 1,
+          "ready": true,
+          "visible": true,
+          "sourceKind": "inline-jpeg",
+          "sourceSize": [
+            640,
+            480
+          ],
+          "valid": true,
+          "running": true,
+          "generation": "66676ff60c3243889379367b9d99b2c3",
+          "uiSelection": {
+            "model": "helmet_416x416.rknn",
+            "source": "construction-replay.avi",
+            "profile": "responsive"
+          }
+        },
+        {
+          "observed_wall_ms": 1794690675833,
+          "phase": "running",
+          "imageExists": true,
+          "imageType": "QQuickImage(0x55d34632f0)",
+          "status": 1,
+          "ready": true,
+          "visible": true,
+          "sourceKind": "inline-jpeg",
+          "sourceSize": [
+            640,
+            480
+          ],
+          "valid": true,
+          "running": true,
+          "generation": "66676ff60c3243889379367b9d99b2c3",
+          "uiSelection": {
+            "model": "helmet_416x416.rknn",
+            "source": "construction-replay.avi",
+            "profile": "responsive"
+          }
+        }
+      ],
+      "scope": "read-only sampled preview availability; samples do not establish continuous visibility or actual display FPS"
+    },
+    "capture_scope": "one ready visible rendered screen in the final five active seconds; does not establish continuous display quality"
+  },
+  "verifier": {
+    "path": "/userdata/helmet-validation/20261115-native-runtime-tools/verify_native_runtime.py",
+    "sha256": "222d07022ba746d5fd9bcdb2c5a8924c2b383473585311cf0dce5b0d9fc93997",
+    "bytes": 66884
+  },
+  "shared_verifier": {
+    "path": "/userdata/helmet-validation/2026-11-14/verify_runtime.py",
+    "sha256": "fdc94bf540d83e8f9a8367d9004d171e60127bb798ba8a6c113999ed888b6217",
+    "bytes": 86641
+  }
+}

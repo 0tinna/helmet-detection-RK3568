@@ -1,0 +1,2 @@
+ 6593  6568  6563  6563 Sl         00:30 /usr/bin/python3 /userdata/helmet-validation/20261115-native-app-v2/src/app/service.py --root /userdata/helmet-validation/20261115-native-app-v2 --port 0 --token-file /userdata/helmet-validation/20261115-native-app-v2/app-state/session-gsz6pdjw/token --ready-file /userdata/helmet-validation/20261115-native-app-v2/app-state/session-gsz6pdjw/ready.json
+ 6685  6568  6563  6563 Sl         00:28 /usr/bin/qmlscene /userdata/helmet-validation/20261115-native-app-v2/app-state/session-gsz6pdjw/App.qml

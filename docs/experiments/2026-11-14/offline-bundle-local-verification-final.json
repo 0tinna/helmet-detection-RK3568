@@ -1,0 +1,111 @@
+{
+  "checks": [
+    {
+      "command": [
+        "D:\\Workplace\\RK3568\\.venv\\Scripts\\python.exe",
+        "D:\\Workplace\\RK3568\\dist\\verified-offline-final\\verify_bundle.py",
+        "verify",
+        "D:\\Workplace\\RK3568\\dist\\verified-offline-final"
+      ],
+      "exit": 0,
+      "stdout": "{\n  \"status\": \"verified\",\n  \"files\": 32,\n  \"models\": 6,\n  \"directory\": \"D:\\\\Workplace\\\\RK3568\\\\dist\\\\verified-offline-final\",\n  \"manifest_sha256\": \"96c0b592b72773b4392f3bbb664a533a5bfc0b8725e3c040cbd7d21482a29e6e\"\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "D:\\Workplace\\RK3568\\.venv\\Scripts\\python.exe",
+        "-m",
+        "compileall",
+        "-q",
+        "D:\\Workplace\\RK3568\\dist\\verified-offline-final\\src"
+      ],
+      "exit": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "D:\\Workplace\\RK3568\\.venv\\Scripts\\python.exe",
+        "D:\\Workplace\\RK3568\\dist\\verified-offline-final\\src\\helmet_realtime.py",
+        "--help"
+      ],
+      "exit": 0,
+      "stdout": "usage: helmet_realtime.py [-h] [--source SOURCE] [--model MODEL] [--conf CONF]\n                          [--nms NMS] [--skip SKIP] [--cam-w CAM_W]\n                          [--cam-h CAM_H] [--no-display] [--save-dir SAVE_DIR]\n                          [--save-interval SAVE_INTERVAL] [--alarm-beep]\n                          [--duration DURATION] [--replay-fps REPLAY_FPS]\n                          [--result-ttl RESULT_TTL]\n                          [--shutdown-timeout SHUTDOWN_TIMEOUT]\n                          [--alarm-dwell ALARM_DWELL]\n                          [--alarm-cooldown ALARM_COOLDOWN]\n                          [--alarm-clear ALARM_CLEAR]\n                          [--audio-timeout AUDIO_TIMEOUT] [--jsonl JSONL]\n                          [--session-json SESSION_JSON]\n                          [--stats-window STATS_WINDOW]\n                          [--sample-interval SAMPLE_INTERVAL]\n                          [--web-host WEB_HOST] [--web-port WEB_PORT]\n                          [--clip-dir CLIP_DIR] [--clip-pre CLIP_PRE]\n                          [--clip-post CLIP_POST] [--clip-fps CLIP_FPS]\n                          [--clip-encoder {opencv,mpp}]\n\nRK3568 helmet detection pipeline\n\noptions:\n  -h, --help            show this help message and exit\n  --source SOURCE       camera /dev/videoN, video, image/image folder, glob,\n                        or RTSP URL\n  --model MODEL\n  --conf CONF\n  --nms NMS\n  --skip SKIP           detect every N+1 consumed frames\n  --cam-w CAM_W\n  --cam-h CAM_H\n  --no-display\n  --save-dir SAVE_DIR\n  --save-interval SAVE_INTERVAL\n                        save fresh results every N seconds\n  --alarm-beep\n  --duration DURATION   stop after N seconds, 0 runs continuously\n  --replay-fps REPLAY_FPS\n                        controlled image/video replay rate\n  --result-ttl RESULT_TTL\n                        maximum capture-to-output age in seconds\n  --shutdown-timeout SHUTDOWN_TIMEOUT\n  --alarm-dwell ALARM_DWELL\n  --alarm-cooldown ALARM_COOLDOWN\n  --alarm-clear ALARM_CLEAR\n  --audio-timeout AUDIO_TIMEOUT\n  --jsonl JSONL         exclusive per-frame JSONL output path\n  --session-json SESSION_JSON\n                        session counters, quantiles and runtime samples\n  --stats-window STATS_WINDOW\n  --sample-interval SAMPLE_INTERVAL\n  --web-host WEB_HOST   preview bind address; LAN use 0.0.0.0\n  --web-port WEB_PORT   HTTP preview port, 0 disables\n  --clip-dir CLIP_DIR   event clips and coverage metadata directory\n  --clip-pre CLIP_PRE\n  --clip-post CLIP_POST\n  --clip-fps CLIP_FPS\n  --clip-encoder {opencv,mpp}\n",
+      "stderr": ""
+    }
+  ],
+  "archive_sha256": "480e7b1cc2c2f37697890e80d44defbc084275610506817043e3bed46853fb2b",
+  "manifest_sha256": "96c0b592b72773b4392f3bbb664a533a5bfc0b8725e3c040cbd7d21482a29e6e",
+  "source_comparison": {
+    "src/alarm.py": {
+      "repository_path": "helmet/alarm.py",
+      "sha256": "d3e6d68c7b17f5508f0d697e96998f556f224f9f5067169d66c35972b3a023d2",
+      "matches_current_source": true
+    },
+    "src/benchmark.py": {
+      "repository_path": "helmet/benchmark.py",
+      "sha256": "15dcff515fc9c7332dd5eefd40502f38b0a02e6ab6a62e1d0ec50ce593ab4859",
+      "matches_current_source": true
+    },
+    "src/dump_dets.py": {
+      "repository_path": "helmet/dump_dets.py",
+      "sha256": "c21b4a1d1c4ee4e0428cb19d16b560c9c7dfdef2c34b52f62195b836fca90e3f",
+      "matches_current_source": true
+    },
+    "src/helmet_realtime.py": {
+      "repository_path": "helmet/helmet_realtime.py",
+      "sha256": "15794ebc40fdd1736d9c80d5504d17aa91e1de972bb92bb30a9eeb026309e46d",
+      "matches_current_source": true
+    },
+    "src/output_sinks.py": {
+      "repository_path": "helmet/output_sinks.py",
+      "sha256": "c2f65642d38f8994200503b242ca93c8f0af105dc5ad3b13650e9ff83c7003cf",
+      "matches_current_source": true
+    },
+    "src/pc/analyze_errors.py": {
+      "repository_path": "helmet/pc/analyze_errors.py",
+      "sha256": "863b7115d31d599eb72c5a74748852f39b116e629827a2b9091e16a5be02bc90",
+      "matches_current_source": true
+    },
+    "src/pc/convert.py": {
+      "repository_path": "helmet/pc/convert.py",
+      "sha256": "86d6fa0e865123995b122edec3d490ccf005467c28ca244cda0493621b718c7b",
+      "matches_current_source": true
+    },
+    "src/pc/dataset_tools.py": {
+      "repository_path": "helmet/pc/dataset_tools.py",
+      "sha256": "921281aa3e5bd9eb6dc441861bfb2d75c9ea6bb18969e8abf24fe5f122aade19",
+      "matches_current_source": true
+    },
+    "src/pc/eval_map.py": {
+      "repository_path": "helmet/pc/eval_map.py",
+      "sha256": "81ac033ef0dd61eaacd5c740fbc1e875aa3b43ce98ebfc63e5f59498a9bf1ec8",
+      "matches_current_source": true
+    },
+    "src/pipeline_runtime.py": {
+      "repository_path": "helmet/pipeline_runtime.py",
+      "sha256": "dee30d6b71c9e8d3e697657fb309fb22e8fb47fafd366d60b555466cf56152e9",
+      "matches_current_source": true
+    },
+    "src/sources.py": {
+      "repository_path": "helmet/sources.py",
+      "sha256": "ea89d66fdefb2bc429ca74efa0437a3c0a8aab672a856078fc15afccfe3b31c9",
+      "matches_current_source": true
+    },
+    "src/telemetry.py": {
+      "repository_path": "helmet/telemetry.py",
+      "sha256": "da4522206053712484a21f80bb26d6424649a263f606f35fa16070be51a83b9e",
+      "matches_current_source": true
+    },
+    "src/validate_comparison.py": {
+      "repository_path": "helmet/validate_comparison.py",
+      "sha256": "3b65f9e561084aa7f6199cc7cd413b6426f6ac962f39729ac0668e50350c2860",
+      "matches_current_source": true
+    },
+    "src/yolo_post.py": {
+      "repository_path": "helmet/yolo_post.py",
+      "sha256": "fae57bbfa1d47d5ab16ef444096fab4fe8e14701c5ec10d87b1ec518282b0505",
+      "matches_current_source": true
+    }
+  }
+}

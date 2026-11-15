@@ -1,0 +1,41 @@
+test_dhcp_timeout_terminates_late_hook_child_in_owned_process_group (test_app_wifi.UnixControlBehavior) ... ok
+test_private_socket_command_timeout_and_cleanup (test_app_wifi.UnixControlBehavior) ... ok
+test_bad_credentials_and_interface_are_rejected_without_control_effects (test_app_wifi.WifiBehavior) ... ok
+test_cancel_during_address_work_rolls_back_before_worker_returns (test_app_wifi.WifiBehavior) ... ok
+test_close_prevents_later_mutation_jobs (test_app_wifi.WifiBehavior) ... ok
+test_configuration_failure_removes_own_network_and_restores_all_old_flags (test_app_wifi.WifiBehavior) ... ok
+test_connection_timeout_rolls_back_without_secret_errors (test_app_wifi.WifiBehavior) ... ok
+test_ctrl_exceptions_never_echo_response_or_secret (test_app_wifi.WifiBehavior) ... ok
+test_default_budget_accepts_fourteen_second_scan_without_selection_changes (test_app_wifi.WifiBehavior) ... ok
+test_dhcp_failure_uses_only_named_interface_and_rolls_back (test_app_wifi.WifiBehavior) ... ok
+test_dhcp_runner_bounds_only_interface_argv_and_suppresses_output (test_app_wifi.WifiBehavior) ... ok
+test_dhcp_runner_timeout_returns_failure (test_app_wifi.WifiBehavior) ... ok
+test_disconnect_during_new_network_setup_reconnects_control_for_rollback (test_app_wifi.WifiBehavior) ... ok
+test_lost_save_acknowledgement_restores_persistent_snapshot (test_app_wifi.WifiBehavior) ... ok
+test_malformed_existing_network_snapshot_prevents_add (test_app_wifi.WifiBehavior) ... ok
+test_no_prior_selection_after_dhcp_cannot_claim_address_rollback (test_app_wifi.WifiBehavior) ... ok
+test_old_address_renew_failure_does_not_claim_complete_rollback (test_app_wifi.WifiBehavior) ... ok
+test_real_transition_flags_allow_only_advertised_strong_rsn_option (test_app_wifi.WifiBehavior) ... ok
+test_remember_success_is_only_explicit_persistent_write (test_app_wifi.WifiBehavior) ... ok
+test_rollback_failure_is_explicit_not_claimed_restored (test_app_wifi.WifiBehavior) ... ok
+test_save_failure_is_failed_transaction_and_restores_previous_network (test_app_wifi.WifiBehavior) ... ok
+test_scan_decodes_utf8_and_refuses_enterprise_and_wpa3_downgrade (test_app_wifi.WifiBehavior) ... ok
+test_scan_malformed_response_never_returns_partial_results (test_app_wifi.WifiBehavior) ... ok
+test_scan_no_advertised_flags_is_not_implicitly_open (test_app_wifi.WifiBehavior) ... ok
+test_scan_timeout_does_not_change_existing_selection (test_app_wifi.WifiBehavior) ... ok
+test_special_ssid_is_encoded_without_command_injection (test_app_wifi.WifiBehavior) ... ok
+test_status_and_busy_scan_remain_responsive_during_connection_worker (test_app_wifi.WifiBehavior) ... ok
+test_status_has_only_public_state_ssid_ip_and_safe_error (test_app_wifi.WifiBehavior) ... ok
+test_status_malformed_response_cannot_claim_connection (test_app_wifi.WifiBehavior) ... ok
+test_success_derives_known_wpa_psk_without_plaintext_commands (test_app_wifi.WifiBehavior) ... ok
+test_unknown_encryption_is_not_open (test_app_wifi.WifiBehavior) ... ok
+test_unknown_security_extension_refuses_psk_even_with_known_rsn_token (test_app_wifi.WifiBehavior) ... ok
+test_unspecified_or_loopback_address_is_not_wifi_connection_success (test_app_wifi.WifiBehavior) ... ok
+test_unsupported_security_changes_no_network (test_app_wifi.WifiBehavior) ... ok
+test_wrong_completed_network_is_not_success (test_app_wifi.WifiBehavior) ... ok
+System.Management.Automation.RemoteException
+----------------------------------------------------------------------
+Ran 35 tests in 1.651s
+System.Management.Automation.RemoteException
+OK
+exit_code=0

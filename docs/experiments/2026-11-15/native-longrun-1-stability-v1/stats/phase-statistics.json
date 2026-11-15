@@ -1,0 +1,854 @@
+{
+  "timeline": {
+    "available": true,
+    "warmup_exclusion_seconds": 60.0,
+    "tail_requested_seconds": 300.0,
+    "window_policy": "inclusive actual monotonic boundaries; short tails truncate to active start; an empty after-warmup window stays empty",
+    "active_start": 71506.736018384,
+    "active_stop": 73306.787084853,
+    "observed_active_seconds": 1800.0510664689937
+  },
+  "resources": {
+    "active": {
+      "start_monotonic": 71506.736018384,
+      "stop_monotonic": 73306.787084853,
+      "empty_requested_window": false,
+      "python": {
+        "sample_rows": 1728,
+        "invalid_timestamp_rows": 0,
+        "missing_or_invalid_rss_rows": 0,
+        "missing_or_invalid_cpu_rows": 0,
+        "identities": [
+          {
+            "pid": 8082,
+            "start_id": null
+          }
+        ],
+        "identity_consistent": true,
+        "rss": {
+          "count": 1728,
+          "rejected_count": 0,
+          "mean": 143173914.07407406,
+          "min": 130248704.0,
+          "max": 146821120.0,
+          "p50": 143052800.0,
+          "p95": 145197670.4,
+          "p99": 145408000.0,
+          "population_stddev": 1414047.7119855958,
+          "method": "all finite samples; equal-sample mean; linear quantile at (n-1)*q",
+          "start_bytes": 130248704,
+          "end_bytes": 144420864,
+          "peak_bytes": 146821120,
+          "growth_bytes": 14172160,
+          "slope_bytes_per_second": 2368.986154586109,
+          "slope_mib_per_minute": 0.13555447509304672,
+          "trend": {
+            "count": 1728,
+            "reference_time": 71506.895367899,
+            "span_seconds": 1799.361701455011,
+            "observed_change": 14172160,
+            "slope_per_second": 2368.986154586109,
+            "fitted_value_at_reference": 141042282.92804757,
+            "r_squared": 0.7581041978521526,
+            "method": "unweighted ordinary least squares against actual monotonic time; descriptive only"
+          }
+        },
+        "cpu_percent": {
+          "count": 1728,
+          "rejected_count": 0,
+          "mean": 144.18441378483396,
+          "min": 101.65739640817559,
+          "max": 151.7462192399917,
+          "p50": 144.20326914799415,
+          "p95": 148.4938978605226,
+          "p99": 150.16487508237236,
+          "population_stddev": 2.7379725061983446,
+          "method": "all finite samples; equal-sample mean; linear quantile at (n-1)*q"
+        }
+      },
+      "qt": {
+        "sample_rows": 1728,
+        "invalid_timestamp_rows": 0,
+        "missing_or_invalid_rss_rows": 0,
+        "missing_or_invalid_cpu_rows": 0,
+        "identities": [
+          {
+            "pid": 8095,
+            "start_id": "7150378"
+          }
+        ],
+        "identity_consistent": true,
+        "rss": {
+          "count": 1728,
+          "rejected_count": 0,
+          "mean": 181107868.44444445,
+          "min": 167055360.0,
+          "max": 191934464.0,
+          "p50": 177852416.0,
+          "p95": 187359232.0,
+          "p99": 187359232.0,
+          "population_stddev": 4653638.703711269,
+          "method": "all finite samples; equal-sample mean; linear quantile at (n-1)*q",
+          "start_bytes": 167055360,
+          "end_bytes": 174120960,
+          "peak_bytes": 191934464,
+          "growth_bytes": 7065600,
+          "slope_bytes_per_second": 7844.479130577989,
+          "slope_mib_per_minute": 0.44886469634502346,
+          "trend": {
+            "count": 1728,
+            "reference_time": 71506.909980778,
+            "span_seconds": 1799.4167488359963,
+            "observed_change": 7065600,
+            "slope_per_second": 7844.479130577989,
+            "fitted_value_at_reference": 174049201.74003208,
+            "r_squared": 0.7674930829106816,
+            "method": "unweighted ordinary least squares against actual monotonic time; descriptive only"
+          }
+        },
+        "cpu_percent": {
+          "count": 1728,
+          "rejected_count": 0,
+          "mean": 52.505512667236566,
+          "min": 30.409966161348414,
+          "max": 67.7768428386999,
+          "p50": 52.40085590688537,
+          "p95": 57.71164624350848,
+          "p99": 59.80187706489391,
+          "population_stddev": 3.0699231309041273,
+          "method": "all finite samples; equal-sample mean; linear quantile at (n-1)*q"
+        }
+      },
+      "temperature_c": {
+        "/sys/class/thermal/thermal_zone0/temp": {
+          "count": 1728,
+          "rejected_count": 0,
+          "mean": 67.7329710648148,
+          "min": 49.444,
+          "max": 71.666,
+          "p50": 68.75,
+          "p95": 70.0,
+          "p99": 70.555,
+          "population_stddev": 3.0643622628316094,
+          "method": "all finite samples; equal-sample mean; linear quantile at (n-1)*q"
+        },
+        "/sys/class/thermal/thermal_zone1/temp": {
+          "count": 1728,
+          "rejected_count": 0,
+          "mean": 63.27489525462963,
+          "min": 46.666,
+          "max": 65.625,
+          "p50": 64.444,
+          "p95": 65.0,
+          "p99": 65.625,
+          "population_stddev": 2.7073901323465526,
+          "method": "all finite samples; equal-sample mean; linear quantile at (n-1)*q"
+        }
+      },
+      "npu_frequency_hz": {
+        "/sys/class/devfreq/fde40000.npu/cur_freq": {
+          "count": 1728,
+          "rejected_count": 0,
+          "mean": 900000000.0,
+          "min": 900000000.0,
+          "max": 900000000.0,
+          "p50": 900000000.0,
+          "p95": 900000000.0,
+          "p99": 900000000.0,
+          "population_stddev": 0.0,
+          "method": "all finite samples; equal-sample mean; linear quantile at (n-1)*q"
+        }
+      }
+    },
+    "after_warmup": {
+      "start_monotonic": 71566.736018384,
+      "stop_monotonic": 73306.787084853,
+      "empty_requested_window": false,
+      "python": {
+        "sample_rows": 1670,
+        "invalid_timestamp_rows": 0,
+        "missing_or_invalid_rss_rows": 0,
+        "missing_or_invalid_cpu_rows": 0,
+        "identities": [
+          {
+            "pid": 8082,
+            "start_id": null
+          }
+        ],
+        "identity_consistent": true,
+        "rss": {
+          "count": 1670,
+          "rejected_count": 0,
+          "mean": 143271828.0814371,
+          "min": 139796480.0,
+          "max": 146821120.0,
+          "p50": 143159296.0,
+          "p95": 145201356.8,
+          "p99": 145409269.76,
+          "population_stddev": 1304230.8245517947,
+          "method": "all finite samples; equal-sample mean; linear quantile at (n-1)*q",
+          "start_bytes": 140849152,
+          "end_bytes": 144420864,
+          "peak_bytes": 146821120,
+          "growth_bytes": 3571712,
+          "slope_bytes_per_second": 2274.054182212106,
+          "slope_mib_per_minute": 0.13012242406151422,
+          "trend": {
+            "count": 1670,
+            "reference_time": 71567.211502981,
+            "span_seconds": 1739.04556637301,
+            "observed_change": 3571712,
+            "slope_per_second": 2274.054182212106,
+            "fitted_value_at_reference": 141294052.12212038,
+            "r_squared": 0.7669102966823271,
+            "method": "unweighted ordinary least squares against actual monotonic time; descriptive only"
+          }
+        },
+        "cpu_percent": {
+          "count": 1670,
+          "rejected_count": 0,
+          "mean": 144.21770962837968,
+          "min": 135.47444327958127,
+          "max": 151.7462192399917,
+          "p50": 144.21701861575832,
+          "p95": 148.47099271898415,
+          "p99": 150.15985081216894,
+          "population_stddev": 2.5306916844989926,
+          "method": "all finite samples; equal-sample mean; linear quantile at (n-1)*q"
+        }
+      },
+      "qt": {
+        "sample_rows": 1670,
+        "invalid_timestamp_rows": 0,
+        "missing_or_invalid_rss_rows": 0,
+        "missing_or_invalid_cpu_rows": 0,
+        "identities": [
+          {
+            "pid": 8095,
+            "start_id": "7150378"
+          }
+        ],
+        "identity_consistent": true,
+        "rss": {
+          "count": 1670,
+          "rejected_count": 0,
+          "mean": 181311586.10778442,
+          "min": 174120960.0,
+          "max": 191934464.0,
+          "p50": 177852416.0,
+          "p95": 187359232.0,
+          "p99": 187359232.0,
+          "population_stddev": 4595808.295171969,
+          "method": "all finite samples; equal-sample mean; linear quantile at (n-1)*q",
+          "start_bytes": 175747072,
+          "end_bytes": 174120960,
+          "peak_bytes": 191934464,
+          "growth_bytes": -1626112,
+          "slope_bytes_per_second": 7962.481613577917,
+          "slope_mib_per_minute": 0.4556168525835753,
+          "trend": {
+            "count": 1670,
+            "reference_time": 71567.248979038,
+            "span_seconds": 1739.0777505759906,
+            "observed_change": -1626112,
+            "slope_per_second": 7962.481613577917,
+            "fitted_value_at_reference": 174386540.0415129,
+            "r_squared": 0.7572240565192055,
+            "method": "unweighted ordinary least squares against actual monotonic time; descriptive only"
+          }
+        },
+        "cpu_percent": {
+          "count": 1670,
+          "rejected_count": 0,
+          "mean": 52.532697231748834,
+          "min": 42.02205644747747,
+          "max": 67.7768428386999,
+          "p50": 52.41560128999487,
+          "p95": 57.75447382701884,
+          "p99": 59.81804170493212,
+          "population_stddev": 3.0292269297923866,
+          "method": "all finite samples; equal-sample mean; linear quantile at (n-1)*q"
+        }
+      },
+      "temperature_c": {
+        "/sys/class/thermal/thermal_zone0/temp": {
+          "count": 1670,
+          "rejected_count": 0,
+          "mean": 68.12792634730539,
+          "min": 59.444,
+          "max": 71.666,
+          "p50": 68.75,
+          "p95": 70.0,
+          "p99": 70.555,
+          "population_stddev": 2.2062605942058027,
+          "method": "all finite samples; equal-sample mean; linear quantile at (n-1)*q"
+        },
+        "/sys/class/thermal/thermal_zone1/temp": {
+          "count": 1670,
+          "rejected_count": 0,
+          "mean": 63.638097604790424,
+          "min": 56.111,
+          "max": 65.625,
+          "p50": 64.444,
+          "p95": 65.0,
+          "p99": 65.625,
+          "population_stddev": 1.8611535855260362,
+          "method": "all finite samples; equal-sample mean; linear quantile at (n-1)*q"
+        }
+      },
+      "npu_frequency_hz": {
+        "/sys/class/devfreq/fde40000.npu/cur_freq": {
+          "count": 1670,
+          "rejected_count": 0,
+          "mean": 900000000.0,
+          "min": 900000000.0,
+          "max": 900000000.0,
+          "p50": 900000000.0,
+          "p95": 900000000.0,
+          "p99": 900000000.0,
+          "population_stddev": 0.0,
+          "method": "all finite samples; equal-sample mean; linear quantile at (n-1)*q"
+        }
+      }
+    },
+    "tail": {
+      "start_monotonic": 73006.787084853,
+      "stop_monotonic": 73306.787084853,
+      "empty_requested_window": false,
+      "python": {
+        "sample_rows": 288,
+        "invalid_timestamp_rows": 0,
+        "missing_or_invalid_rss_rows": 0,
+        "missing_or_invalid_cpu_rows": 0,
+        "identities": [
+          {
+            "pid": 8082,
+            "start_id": null
+          }
+        ],
+        "identity_consistent": true,
+        "rss": {
+          "count": 288,
+          "rejected_count": 0,
+          "mean": 144632419.55555555,
+          "min": 142585856.0,
+          "max": 146821120.0,
+          "p50": 144531456.0,
+          "p95": 145403904.0,
+          "p99": 145565491.2,
+          "population_stddev": 477487.3667166752,
+          "method": "all finite samples; equal-sample mean; linear quantile at (n-1)*q",
+          "start_bytes": 144658432,
+          "end_bytes": 144420864,
+          "peak_bytes": 146821120,
+          "growth_bytes": -237568,
+          "slope_bytes_per_second": -45.62714454279884,
+          "slope_mib_per_minute": -0.0026108061528853704,
+          "trend": {
+            "count": 288,
+            "reference_time": 73007.160683771,
+            "span_seconds": 299.09638558300503,
+            "observed_change": -237568,
+            "slope_per_second": -45.62714454279884,
+            "fitted_value_at_reference": 144639241.13565594,
+            "r_squared": 6.848775051881972e-05,
+            "method": "unweighted ordinary least squares against actual monotonic time; descriptive only"
+          }
+        },
+        "cpu_percent": {
+          "count": 288,
+          "rejected_count": 0,
+          "mean": 144.44178487166695,
+          "min": 135.85040192571708,
+          "max": 150.7914606811457,
+          "p50": 144.32818858369416,
+          "p95": 148.9402927926408,
+          "p99": 149.8234399938786,
+          "population_stddev": 2.6925253103111806,
+          "method": "all finite samples; equal-sample mean; linear quantile at (n-1)*q"
+        }
+      },
+      "qt": {
+        "sample_rows": 288,
+        "invalid_timestamp_rows": 0,
+        "missing_or_invalid_rss_rows": 0,
+        "missing_or_invalid_cpu_rows": 0,
+        "identities": [
+          {
+            "pid": 8095,
+            "start_id": "7150378"
+          }
+        ],
+        "identity_consistent": true,
+        "rss": {
+          "count": 288,
+          "rejected_count": 0,
+          "mean": 187061959.1111111,
+          "min": 174120960.0,
+          "max": 191934464.0,
+          "p50": 187351040.0,
+          "p95": 187359232.0,
+          "p99": 187920384.0,
+          "population_stddev": 1573106.20948862,
+          "method": "all finite samples; equal-sample mean; linear quantile at (n-1)*q",
+          "start_bytes": 187006976,
+          "end_bytes": 174120960,
+          "peak_bytes": 191934464,
+          "growth_bytes": -12886016,
+          "slope_bytes_per_second": -1711.2753819999987,
+          "slope_mib_per_minute": -0.09791996280670158,
+          "trend": {
+            "count": 288,
+            "reference_time": 73007.179256127,
+            "span_seconds": 299.14747348699893,
+            "observed_change": -12886016,
+            "slope_per_second": -1711.2753819999987,
+            "fitted_value_at_reference": 187317832.75767672,
+            "r_squared": 0.008876052835028791,
+            "method": "unweighted ordinary least squares against actual monotonic time; descriptive only"
+          }
+        },
+        "cpu_percent": {
+          "count": 288,
+          "rejected_count": 0,
+          "mean": 52.51917749975492,
+          "min": 42.02205644747747,
+          "max": 67.7768428386999,
+          "p50": 52.40054647087324,
+          "p95": 58.30362990783311,
+          "p99": 61.235301781038494,
+          "population_stddev": 3.387055150862236,
+          "method": "all finite samples; equal-sample mean; linear quantile at (n-1)*q"
+        }
+      },
+      "temperature_c": {
+        "/sys/class/thermal/thermal_zone0/temp": {
+          "count": 288,
+          "rejected_count": 0,
+          "mean": 69.76894444444446,
+          "min": 68.75,
+          "max": 71.666,
+          "p50": 70.0,
+          "p95": 70.555,
+          "p99": 70.555,
+          "population_stddev": 0.4655908175786774,
+          "method": "all finite samples; equal-sample mean; linear quantile at (n-1)*q"
+        },
+        "/sys/class/thermal/thermal_zone1/temp": {
+          "count": 288,
+          "rejected_count": 0,
+          "mean": 65.02071527777778,
+          "min": 64.444,
+          "max": 65.625,
+          "p50": 65.0,
+          "p95": 65.625,
+          "p99": 65.625,
+          "population_stddev": 0.21080258877266198,
+          "method": "all finite samples; equal-sample mean; linear quantile at (n-1)*q"
+        }
+      },
+      "npu_frequency_hz": {
+        "/sys/class/devfreq/fde40000.npu/cur_freq": {
+          "count": 288,
+          "rejected_count": 0,
+          "mean": 900000000.0,
+          "min": 900000000.0,
+          "max": 900000000.0,
+          "p50": 900000000.0,
+          "p95": 900000000.0,
+          "p99": 900000000.0,
+          "population_stddev": 0.0,
+          "method": "all finite samples; equal-sample mean; linear quantile at (n-1)*q"
+        }
+      }
+    }
+  },
+  "timings_ms": {
+    "all_logged": {
+      "prep_ms": {
+        "count": 19806,
+        "rejected_count": 0,
+        "mean": 15.112834658215279,
+        "min": 6.159284996101633,
+        "max": 124.15671400958672,
+        "p50": 14.34132999565918,
+        "p95": 23.77371024704189,
+        "p99": 28.71473069826607,
+        "population_stddev": 4.7088038779837476,
+        "method": "all finite samples; equal-sample mean; linear quantile at (n-1)*q",
+        "record_type": "detection",
+        "window_timestamp": "processed_at",
+        "unit": "ms"
+      },
+      "infer_ms": {
+        "count": 19806,
+        "rejected_count": 0,
+        "mean": 47.76173724831759,
+        "min": 30.677128001116216,
+        "max": 174.86804199870676,
+        "p50": 46.83194449171424,
+        "p95": 64.4069900008617,
+        "p99": 72.42294085008328,
+        "population_stddev": 9.833899242141994,
+        "method": "all finite samples; equal-sample mean; linear quantile at (n-1)*q",
+        "record_type": "detection",
+        "window_timestamp": "processed_at",
+        "unit": "ms"
+      },
+      "post_ms": {
+        "count": 19806,
+        "rejected_count": 0,
+        "mean": 24.76962657138924,
+        "min": 10.87828200252261,
+        "max": 113.93582599703223,
+        "p50": 19.469400504021905,
+        "p95": 50.789962504495634,
+        "p99": 67.51919985617863,
+        "population_stddev": 13.205022526812042,
+        "method": "all finite samples; equal-sample mean; linear quantile at (n-1)*q",
+        "record_type": "detection",
+        "window_timestamp": "processed_at",
+        "unit": "ms"
+      },
+      "capture_to_output_ms": {
+        "count": 19805,
+        "rejected_count": 0,
+        "mean": 137.02445506156798,
+        "min": 62.59824500011746,
+        "max": 360.6149400002323,
+        "p50": 133.4628420008812,
+        "p95": 191.80082359234802,
+        "p99": 254.99848232488134,
+        "population_stddev": 33.11209905420913,
+        "method": "all finite samples; equal-sample mean; linear quantile at (n-1)*q",
+        "record_type": "output",
+        "window_timestamp": "callback_finished_at",
+        "unit": "ms"
+      },
+      "sink_ms": {
+        "count": 19805,
+        "rejected_count": 0,
+        "mean": 44.22827252944504,
+        "min": 21.563768008491024,
+        "max": 146.11098999739625,
+        "p50": 40.59667600085959,
+        "p95": 75.09969360253307,
+        "p99": 90.19821676949503,
+        "population_stddev": 15.341012895440912,
+        "method": "all finite samples; equal-sample mean; linear quantile at (n-1)*q",
+        "record_type": "output",
+        "window_timestamp": "callback_finished_at",
+        "unit": "ms"
+      },
+      "capture_to_sink_complete_ms": {
+        "count": 19805,
+        "rejected_count": 0,
+        "mean": 181.4645634204367,
+        "min": 94.87375000026077,
+        "max": 424.09169500751887,
+        "p50": 176.60407999937888,
+        "p95": 244.68329459486995,
+        "p99": 323.6640497168989,
+        "population_stddev": 38.484953394316655,
+        "method": "all finite samples; equal-sample mean; linear quantile at (n-1)*q",
+        "record_type": "output",
+        "window_timestamp": "callback_finished_at",
+        "unit": "ms"
+      }
+    },
+    "active": {
+      "prep_ms": {
+        "count": 19806,
+        "rejected_count": 0,
+        "mean": 15.112834658215279,
+        "min": 6.159284996101633,
+        "max": 124.15671400958672,
+        "p50": 14.34132999565918,
+        "p95": 23.77371024704189,
+        "p99": 28.71473069826607,
+        "population_stddev": 4.7088038779837476,
+        "method": "all finite samples; equal-sample mean; linear quantile at (n-1)*q",
+        "record_type": "detection",
+        "window_timestamp": "processed_at",
+        "unit": "ms"
+      },
+      "infer_ms": {
+        "count": 19806,
+        "rejected_count": 0,
+        "mean": 47.76173724831759,
+        "min": 30.677128001116216,
+        "max": 174.86804199870676,
+        "p50": 46.83194449171424,
+        "p95": 64.4069900008617,
+        "p99": 72.42294085008328,
+        "population_stddev": 9.833899242141994,
+        "method": "all finite samples; equal-sample mean; linear quantile at (n-1)*q",
+        "record_type": "detection",
+        "window_timestamp": "processed_at",
+        "unit": "ms"
+      },
+      "post_ms": {
+        "count": 19806,
+        "rejected_count": 0,
+        "mean": 24.76962657138924,
+        "min": 10.87828200252261,
+        "max": 113.93582599703223,
+        "p50": 19.469400504021905,
+        "p95": 50.789962504495634,
+        "p99": 67.51919985617863,
+        "population_stddev": 13.205022526812042,
+        "method": "all finite samples; equal-sample mean; linear quantile at (n-1)*q",
+        "record_type": "detection",
+        "window_timestamp": "processed_at",
+        "unit": "ms"
+      },
+      "capture_to_output_ms": {
+        "count": 19805,
+        "rejected_count": 0,
+        "mean": 137.02445506156798,
+        "min": 62.59824500011746,
+        "max": 360.6149400002323,
+        "p50": 133.4628420008812,
+        "p95": 191.80082359234802,
+        "p99": 254.99848232488134,
+        "population_stddev": 33.11209905420913,
+        "method": "all finite samples; equal-sample mean; linear quantile at (n-1)*q",
+        "record_type": "output",
+        "window_timestamp": "callback_finished_at",
+        "unit": "ms"
+      },
+      "sink_ms": {
+        "count": 19805,
+        "rejected_count": 0,
+        "mean": 44.22827252944504,
+        "min": 21.563768008491024,
+        "max": 146.11098999739625,
+        "p50": 40.59667600085959,
+        "p95": 75.09969360253307,
+        "p99": 90.19821676949503,
+        "population_stddev": 15.341012895440912,
+        "method": "all finite samples; equal-sample mean; linear quantile at (n-1)*q",
+        "record_type": "output",
+        "window_timestamp": "callback_finished_at",
+        "unit": "ms"
+      },
+      "capture_to_sink_complete_ms": {
+        "count": 19805,
+        "rejected_count": 0,
+        "mean": 181.4645634204367,
+        "min": 94.87375000026077,
+        "max": 424.09169500751887,
+        "p50": 176.60407999937888,
+        "p95": 244.68329459486995,
+        "p99": 323.6640497168989,
+        "population_stddev": 38.484953394316655,
+        "method": "all finite samples; equal-sample mean; linear quantile at (n-1)*q",
+        "record_type": "output",
+        "window_timestamp": "callback_finished_at",
+        "unit": "ms"
+      }
+    },
+    "after_warmup": {
+      "prep_ms": {
+        "count": 19147,
+        "rejected_count": 0,
+        "mean": 15.114902053631793,
+        "min": 6.159284996101633,
+        "max": 124.15671400958672,
+        "p50": 14.33870499022305,
+        "p95": 23.782910496811386,
+        "p99": 28.72025171644055,
+        "population_stddev": 4.717352357667629,
+        "method": "all finite samples; equal-sample mean; linear quantile at (n-1)*q",
+        "record_type": "detection",
+        "window_timestamp": "processed_at",
+        "unit": "ms"
+      },
+      "infer_ms": {
+        "count": 19147,
+        "rejected_count": 0,
+        "mean": 47.76693788808291,
+        "min": 30.677128001116216,
+        "max": 165.3116100060288,
+        "p50": 46.861836992320605,
+        "p95": 64.39213120465865,
+        "p99": 72.35906729358251,
+        "population_stddev": 9.786137730312003,
+        "method": "all finite samples; equal-sample mean; linear quantile at (n-1)*q",
+        "record_type": "detection",
+        "window_timestamp": "processed_at",
+        "unit": "ms"
+      },
+      "post_ms": {
+        "count": 19147,
+        "rejected_count": 0,
+        "mean": 24.753812155416274,
+        "min": 10.87828200252261,
+        "max": 113.93582599703223,
+        "p50": 19.459920993540436,
+        "p95": 50.76563579204962,
+        "p99": 67.68589696410372,
+        "population_stddev": 13.201900779106781,
+        "method": "all finite samples; equal-sample mean; linear quantile at (n-1)*q",
+        "record_type": "detection",
+        "window_timestamp": "processed_at",
+        "unit": "ms"
+      },
+      "capture_to_output_ms": {
+        "count": 19147,
+        "rejected_count": 0,
+        "mean": 136.9970276622514,
+        "min": 62.59824500011746,
+        "max": 360.6149400002323,
+        "p50": 133.4619599947473,
+        "p95": 191.79977539461106,
+        "p99": 255.8704083613703,
+        "population_stddev": 33.098460054516615,
+        "method": "all finite samples; equal-sample mean; linear quantile at (n-1)*q",
+        "record_type": "output",
+        "window_timestamp": "callback_finished_at",
+        "unit": "ms"
+      },
+      "sink_ms": {
+        "count": 19147,
+        "rejected_count": 0,
+        "mean": 44.26056996646748,
+        "min": 21.563768008491024,
+        "max": 146.11098999739625,
+        "p50": 40.61184600868728,
+        "p95": 75.15908219647828,
+        "p99": 90.21662769577235,
+        "population_stddev": 15.360967813768104,
+        "method": "all finite samples; equal-sample mean; linear quantile at (n-1)*q",
+        "record_type": "output",
+        "window_timestamp": "callback_finished_at",
+        "unit": "ms"
+      },
+      "capture_to_sink_complete_ms": {
+        "count": 19147,
+        "rejected_count": 0,
+        "mean": 181.46855414272866,
+        "min": 94.87375000026077,
+        "max": 424.09169500751887,
+        "p50": 176.57898500328884,
+        "p95": 244.6989643998677,
+        "p99": 323.6873269957141,
+        "population_stddev": 38.49701115864717,
+        "method": "all finite samples; equal-sample mean; linear quantile at (n-1)*q",
+        "record_type": "output",
+        "window_timestamp": "callback_finished_at",
+        "unit": "ms"
+      }
+    },
+    "tail": {
+      "prep_ms": {
+        "count": 3306,
+        "rejected_count": 0,
+        "mean": 15.163303202615044,
+        "min": 6.182618002640083,
+        "max": 42.5468089961214,
+        "p50": 14.34424600302009,
+        "p95": 24.168052004824858,
+        "p99": 29.378681457455965,
+        "population_stddev": 4.771463086401627,
+        "method": "all finite samples; equal-sample mean; linear quantile at (n-1)*q",
+        "record_type": "detection",
+        "window_timestamp": "processed_at",
+        "unit": "ms"
+      },
+      "infer_ms": {
+        "count": 3306,
+        "rejected_count": 0,
+        "mean": 47.686605095901974,
+        "min": 31.080221000593156,
+        "max": 165.3116100060288,
+        "p50": 46.75391799537465,
+        "p95": 64.04509524509194,
+        "p99": 71.21258010156451,
+        "population_stddev": 9.867268433144465,
+        "method": "all finite samples; equal-sample mean; linear quantile at (n-1)*q",
+        "record_type": "detection",
+        "window_timestamp": "processed_at",
+        "unit": "ms"
+      },
+      "post_ms": {
+        "count": 3306,
+        "rejected_count": 0,
+        "mean": 24.762236358038617,
+        "min": 11.008660003426485,
+        "max": 92.2664699901361,
+        "p50": 19.12828649074072,
+        "p95": 51.632679998874664,
+        "p99": 66.67862124158998,
+        "population_stddev": 13.287372719848397,
+        "method": "all finite samples; equal-sample mean; linear quantile at (n-1)*q",
+        "record_type": "detection",
+        "window_timestamp": "processed_at",
+        "unit": "ms"
+      },
+      "capture_to_output_ms": {
+        "count": 3306,
+        "rejected_count": 0,
+        "mean": 136.7078137655549,
+        "min": 62.59824500011746,
+        "max": 316.6601919947425,
+        "p50": 133.52087050589034,
+        "p95": 192.078187748848,
+        "p99": 261.98402580266685,
+        "population_stddev": 33.56913315537151,
+        "method": "all finite samples; equal-sample mean; linear quantile at (n-1)*q",
+        "record_type": "output",
+        "window_timestamp": "callback_finished_at",
+        "unit": "ms"
+      },
+      "sink_ms": {
+        "count": 3306,
+        "rejected_count": 0,
+        "mean": 44.46354866101093,
+        "min": 23.27297700685449,
+        "max": 146.11098999739625,
+        "p50": 40.920724502939265,
+        "p95": 75.08613000391051,
+        "p99": 90.55556850071297,
+        "population_stddev": 15.391820551659768,
+        "method": "all finite samples; equal-sample mean; linear quantile at (n-1)*q",
+        "record_type": "output",
+        "window_timestamp": "callback_finished_at",
+        "unit": "ms"
+      },
+      "capture_to_sink_complete_ms": {
+        "count": 3306,
+        "rejected_count": 0,
+        "mean": 181.38044793316348,
+        "min": 96.22682399640325,
+        "max": 410.3736580000259,
+        "p50": 176.98966099851532,
+        "p95": 243.4544139978243,
+        "p99": 325.12831165149686,
+        "population_stddev": 38.774672965711495,
+        "method": "all finite samples; equal-sample mean; linear quantile at (n-1)*q",
+        "record_type": "output",
+        "window_timestamp": "callback_finished_at",
+        "unit": "ms"
+      }
+    }
+  },
+  "gui_ratios": {
+    "all_samples": {
+      "sample_count": 3604,
+      "ready_visible_inline_samples": 3443,
+      "healthy_ready_visible_inline_samples": 3443,
+      "unavailable_samples": 161,
+      "ready_visible_inline_ratio": 0.9553274139844617,
+      "healthy_ready_visible_inline_ratio": 0.9553274139844617
+    },
+    "control_phase_running": {
+      "sample_count": 3601,
+      "ready_visible_inline_samples": 3443,
+      "healthy_ready_visible_inline_samples": 3443,
+      "unavailable_samples": 158,
+      "ready_visible_inline_ratio": 0.9561232990835878,
+      "healthy_ready_visible_inline_ratio": 0.9561232990835878
+    }
+  }
+}

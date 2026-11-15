@@ -1,0 +1,42 @@
+{
+  "session": "d9fce8dd35d54c8e9f00ef2219b8a12f",
+  "manager": {
+    "pid": 10681,
+    "starttime": 10136567,
+    "uid": 0
+  },
+  "service": {
+    "pid": 10683,
+    "starttime": 10136643,
+    "uid": 0
+  },
+  "ui": {
+    "pid": 10707,
+    "starttime": 10136858,
+    "uid": 0
+  },
+  "phase": "running",
+  "ack": {
+    "frame_decodes": 0,
+    "frame_requests": 0,
+    "preview_presentations": 0,
+    "qt": {
+      "pid": 10707,
+      "starttime": 10136858,
+      "uid": 0
+    },
+    "received_at": 101385.377298816,
+    "sequence": 2,
+    "tab": "detection",
+    "ui_instance": "e1739a10544f4d42ad3904187803a032",
+    "visible": true
+  },
+  "code_id": "7cad142a4c5610dca2110fe7c22342c870317e322f28817ee1ccf9199b312302",
+  "lease": {
+    "device": 45832,
+    "inode": 2820946,
+    "service_alive": true,
+    "service_inherited": true
+  },
+  "root": "/userdata/helmet-validation/20261115-native-app-v4-r2-local-2"
+}

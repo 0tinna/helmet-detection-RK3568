@@ -1,0 +1,52 @@
+{
+  "frame_id": 127,
+  "source": "/dev/video10",
+  "captured_at": 87819.063146023,
+  "processed_at": 87819.134398628,
+  "output_at": 87819.137535297,
+  "captured_wall_time": "2026-11-15T01:54:19.793322+00:00",
+  "output_wall_time": "2026-11-15T01:54:19.866254+00:00",
+  "model": "/userdata/helmet-validation/20261115-native-app-v4/models/helmet_416x416.rknn",
+  "model_sha256": "7e0eefe4bfe86627bb6b58161cacca10912e0dbe1ba2513f58d091c40b26cd48",
+  "input_size": [
+    416,
+    416
+  ],
+  "image_size": [
+    640,
+    480
+  ],
+  "class_order": [
+    "person",
+    "hat"
+  ],
+  "classes": [],
+  "class_names": [],
+  "scores": [],
+  "boxes": [],
+  "wearing": [],
+  "conf": 0.35,
+  "nms": 0.45,
+  "skip": 0,
+  "state": "no-detection",
+  "valid": true,
+  "valid_at_dispatch": true,
+  "alarm_state": "unknown",
+  "source_epoch": 0,
+  "expires_at": 87820.063146023,
+  "alarm_triggered": false,
+  "prep_ms": 9.62351199996192,
+  "infer_ms": 36.3400300120702,
+  "post_ms": 5.099346992210485,
+  "capture_to_output_ms": 74.38927399925888,
+  "presentation_checked_at": 87819.163643382,
+  "callback_finished_at": 87819.137808888,
+  "sink_ms": 0.007876005838625133,
+  "capture_to_sink_complete_ms": 74.66286499402486,
+  "valid_at_sink_complete": true,
+  "sink_error": null,
+  "reason": "periodic",
+  "snapshot": "/userdata/helmet-validation/20261115-camera-npu-short-1/screens/periodic_127_1794707659869051078_4a8bbea9.jpg",
+  "saved_at": 87819.163702884,
+  "snapshot_age_ms": 100.55686099804007
+}

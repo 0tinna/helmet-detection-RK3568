@@ -1,0 +1,36 @@
+{
+  "old_session": "d9fce8dd35d54c8e9f00ef2219b8a12f",
+  "new_session": "cce9979a86c5499fb43d456353290f75",
+  "session_changed": true,
+  "new_manager": {
+    "pid": 12880,
+    "starttime": 10160956,
+    "uid": 0
+  },
+  "new_service": {
+    "pid": 12882,
+    "starttime": 10161039,
+    "uid": 0
+  },
+  "new_ui": {
+    "pid": 12906,
+    "starttime": 10161265,
+    "uid": 0
+  },
+  "phase": "running",
+  "ack": {
+    "frame_decodes": 0,
+    "frame_requests": 0,
+    "preview_presentations": 0,
+    "qt": {
+      "pid": 12906,
+      "starttime": 10161265,
+      "uid": 0
+    },
+    "received_at": 101628.498767138,
+    "sequence": 2,
+    "tab": "detection",
+    "ui_instance": "24f2d57f7ccd40598fb3731c6f85d0a6",
+    "visible": true
+  }
+}

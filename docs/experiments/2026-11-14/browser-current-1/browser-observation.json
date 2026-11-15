@@ -1,0 +1,159 @@
+{
+  "browser": {
+    "protocolVersion": "1.3",
+    "product": "Chrome/157.0.8103.78",
+    "revision": "@4b3d0dabb8250b6f152d2d85d79e7706e309d087",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36",
+    "jsVersion": "15.7.112.43"
+  },
+  "url": "http://192.168.1.3:8091/",
+  "observations": [
+    {
+      "at": 1794664263047,
+      "readyState": "complete",
+      "visibility": null,
+      "events": []
+    },
+    {
+      "at": 1794664265588,
+      "readyState": "complete",
+      "visibility": null,
+      "events": []
+    },
+    {
+      "at": 1794664266107,
+      "readyState": "complete",
+      "visibility": null,
+      "events": []
+    },
+    {
+      "at": 1794664266620,
+      "readyState": "complete",
+      "visibility": null,
+      "events": []
+    },
+    {
+      "at": 1794664267133,
+      "readyState": "complete",
+      "visibility": null,
+      "events": []
+    },
+    {
+      "at": 1794664267645,
+      "readyState": "complete",
+      "visibility": null,
+      "events": []
+    },
+    {
+      "at": 1794664268162,
+      "readyState": "complete",
+      "visibility": null,
+      "events": []
+    },
+    {
+      "at": 1794664268676,
+      "readyState": "complete",
+      "visibility": null,
+      "events": []
+    },
+    {
+      "at": 1794664269190,
+      "readyState": "complete",
+      "visibility": null,
+      "events": []
+    },
+    {
+      "at": 1794664269704,
+      "readyState": "complete",
+      "visibility": null,
+      "events": []
+    },
+    {
+      "at": 1794664270219,
+      "readyState": "complete",
+      "visibility": null,
+      "events": []
+    },
+    {
+      "at": 1794664273456,
+      "readyState": "complete",
+      "visibility": null,
+      "events": []
+    },
+    {
+      "at": 1794664273963,
+      "readyState": "complete",
+      "visibility": null,
+      "events": []
+    },
+    {
+      "at": 1794664274472,
+      "readyState": "complete",
+      "visibility": null,
+      "events": []
+    },
+    {
+      "at": 1794664274988,
+      "readyState": "complete",
+      "visibility": null,
+      "events": []
+    },
+    {
+      "at": 1794664275503,
+      "readyState": "complete",
+      "visibility": null,
+      "events": []
+    },
+    {
+      "at": 1794664276020,
+      "readyState": "complete",
+      "visibility": null,
+      "events": []
+    },
+    {
+      "at": 1794664276535,
+      "readyState": "complete",
+      "visibility": null,
+      "events": []
+    },
+    {
+      "at": 1794664277047,
+      "readyState": "complete",
+      "visibility": null,
+      "events": []
+    },
+    {
+      "at": 1794664277563,
+      "readyState": "complete",
+      "visibility": null,
+      "events": []
+    },
+    {
+      "at": 1794664278079,
+      "readyState": "complete",
+      "visibility": null,
+      "events": []
+    },
+    {
+      "at": 1794664278595,
+      "readyState": "complete",
+      "visibility": null,
+      "events": []
+    },
+    {
+      "at": 1794664279110,
+      "readyState": "complete",
+      "visibility": null,
+      "events": []
+    },
+    {
+      "at": 1794664279627,
+      "readyState": "complete",
+      "visibility": null,
+      "events": []
+    }
+  ],
+  "validWithVisibleImage": false,
+  "validButHidden": 0,
+  "scope": "Actual headless Chromium current PAGE over host LAN; no human/phone observation"
+}

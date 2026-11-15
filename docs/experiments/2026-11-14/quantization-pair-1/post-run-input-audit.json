@@ -1,0 +1,8 @@
+{
+  "audit_time_epoch": 1794649128.9063754,
+  "scope": "post-run read-only input identity audit; not contemporaneous measurement stamp",
+  "path": "/userdata/helmet-validation/20261114/input/1.jpg",
+  "sha256": "a672e54b698710b9ff3081273fced9b32c671976203f568a3ef505dce1c5936e",
+  "bytes": 176224,
+  "governor_readback_now": "rknpu_ondemand"
+}

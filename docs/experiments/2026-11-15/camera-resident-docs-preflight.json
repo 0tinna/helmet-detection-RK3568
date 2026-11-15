@@ -1,0 +1,48 @@
+{
+  "passed": true,
+  "failures": [],
+  "checked": [
+    {
+      "path": "docs/阅读导航.md",
+      "local_links": 38,
+      "sha256": "6a476ed65f56d153f3370b6f010d1a094e7c05d25689f3ebabf546db11ec165f"
+    },
+    {
+      "path": "docs/experiments/2026-11-15/摄像头到位与接入准备记录.md",
+      "local_links": 5,
+      "sha256": "4f4131fd69b958b333a3bab27871f5abc0cc6361159328b5d12d9d531ffb3ff3"
+    },
+    {
+      "path": "docs/experiments/2026-11-15/正常App入口固定配置短验证报告.md",
+      "local_links": 7,
+      "sha256": "46cf91ac9d4f9cfe4fc89bf83aa1ce210889a33c5283300232c2569c8f7b5b9a"
+    },
+    {
+      "path": "docs/superpowers/specs/2026-11-15-resident-board-app.md",
+      "local_links": 0,
+      "sha256": "4a4ca5f373c6bf35c4f34b5d6617d8b4d9525697ccd40958a16cda7dd228884e"
+    },
+    {
+      "path": "docs/superpowers/plans/2026-11-15-resident-board-app.md",
+      "local_links": 1,
+      "sha256": "b92f85397e1b0b7e356fedc3621ed3b318371fda95f88b12a310909585d5d4c2"
+    },
+    {
+      "path": "docs/superpowers/plans/2026-11-15-normal-launcher-validation.md",
+      "local_links": 3,
+      "sha256": "718ae5ba6e2b3f932082878f16762026610bc767baa1a1919cc49a48af724ca7"
+    },
+    {
+      "path": "docs/app/板端App后台运行手册-v4.md",
+      "local_links": 11,
+      "sha256": "e0fc74c4fd9b8b7fc4653d8abfe9980ad1a421ea12d460c4b797b69d460e4b77"
+    },
+    {
+      "path": "docs/app/离线更新与图标安装-v4.md",
+      "local_links": 6,
+      "sha256": "6b18ee23dfa2ace55cd6acc3fc868f61f5c1609ed0ef466ebf03e33af9e1eb81"
+    }
+  ],
+  "frozen_identity_checks": 3,
+  "scope": "new/updated documentation UTF8/local-file links and immutable v3 artifacts, not resident hardware acceptance"
+}

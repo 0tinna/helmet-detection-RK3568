@@ -1,0 +1,5 @@
+temporary_board_only=true
+source=/userdata/helmet-validation/native-app-usability-v4-phase1-1/Main-double-buffer.qml
+target=/userdata/helmet-validation/20261115-native-app-v2/src/app/qml/Main.qml
+sha256=48758ebc76e72f7a03e77c6489fb0c8b7581a2522031bfea582224cb68db1636
+previous_sha256=fd5db38aefbf2f6f60e5f950b1005726d7b25a5d9d85f05885979fd932f17626

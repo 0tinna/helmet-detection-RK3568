@@ -1,0 +1,133 @@
+{
+  "before": {
+    "state": "COMPLETED",
+    "ssid": "CU_2fUQ_5G",
+    "ip": "192.168.1.3",
+    "error": null
+  },
+  "production_scan": {
+    "networks": [],
+    "error": "WiFi scan failed or timed out"
+  },
+  "production_elapsed": 8.035351601007278,
+  "records": [
+    {
+      "at": 0.024966446013422683,
+      "request": "ATTACH",
+      "result": "OK\n"
+    },
+    {
+      "at": 8.035351601007278,
+      "kind": "production-scan-return",
+      "result": {
+        "networks": [],
+        "error": "WiFi scan failed or timed out"
+      }
+    },
+    {
+      "at": 8.035925325006247,
+      "event": "<3>CTRL-EVENT-SCAN-STARTED "
+    },
+    {
+      "at": 9.037610958010191,
+      "wait_error": "WiFi command timed out"
+    },
+    {
+      "at": 10.03973752001184,
+      "wait_error": "WiFi command timed out"
+    },
+    {
+      "at": 11.041696535001392,
+      "wait_error": "WiFi command timed out"
+    },
+    {
+      "at": 12.043872890004423,
+      "wait_error": "WiFi command timed out"
+    },
+    {
+      "at": 13.045990326005267,
+      "wait_error": "WiFi command timed out"
+    },
+    {
+      "at": 13.86941428600403,
+      "event": "<3>CTRL-EVENT-BSS-ADDED 111 ee:e7:c2:cc:7e:71"
+    },
+    {
+      "at": 13.869962634009426,
+      "event": "<3>CTRL-EVENT-BSS-ADDED 112 78:26:a6:d5:5f:c1"
+    },
+    {
+      "at": 13.870249058003537,
+      "event": "<3>CTRL-EVENT-BSS-ADDED 113 ee:e7:c2:cc:ae:21"
+    },
+    {
+      "at": 13.870433979012887,
+      "event": "<3>CTRL-EVENT-BSS-ADDED 114 54:b2:9d:62:cd:76"
+    },
+    {
+      "at": 13.870603150004172,
+      "event": "<3>CTRL-EVENT-BSS-ADDED 115 44:a3:c7:7f:93:13"
+    },
+    {
+      "at": 13.870769405009924,
+      "event": "<3>CTRL-EVENT-BSS-ADDED 116 78:26:a6:d5:5f:c0"
+    },
+    {
+      "at": 13.87093478400493,
+      "event": "<3>CTRL-EVENT-BSS-ADDED 117 ec:e7:c2:ec:7e:71"
+    },
+    {
+      "at": 13.871108039005776,
+      "event": "<3>CTRL-EVENT-BSS-ADDED 118 8a:ce:3f:5c:ca:0c"
+    },
+    {
+      "at": 13.871277793004992,
+      "event": "<3>CTRL-EVENT-BSS-ADDED 119 ec:e7:c2:ec:ae:21"
+    },
+    {
+      "at": 13.871454256004654,
+      "event": "<3>CTRL-EVENT-BSS-ADDED 120 54:b2:9d:62:cd:75"
+    },
+    {
+      "at": 13.871697804002906,
+      "event": "<3>CTRL-EVENT-BSS-ADDED 121 78:26:a6:d5:5a:60"
+    },
+    {
+      "at": 13.871866975008743,
+      "event": "<3>CTRL-EVENT-BSS-ADDED 122 ee:e7:c2:cc:a6:11"
+    },
+    {
+      "at": 13.872030896003707,
+      "event": "<3>CTRL-EVENT-BSS-ADDED 123 8a:ce:3f:5c:ca:08"
+    },
+    {
+      "at": 13.872200067009544,
+      "event": "<3>CTRL-EVENT-BSS-ADDED 124 8c:ee:fd:08:47:0c"
+    },
+    {
+      "at": 13.872367197007407,
+      "event": "<3>CTRL-EVENT-BSS-ADDED 125 ec:e7:c2:ec:a6:11"
+    },
+    {
+      "at": 13.87253607599996,
+      "event": "<3>CTRL-EVENT-SCAN-RESULTS "
+    },
+    {
+      "at": 13.872556785005145,
+      "request": "SCAN_RESULTS",
+      "result": "bssid / frequency / signal level / flags / ssid\n78:26:a6:d5:5a:61\t5240\t-47\t[WPA-PSK-CCMP][WPA2-PSK-CCMP][ESS]\tCU_2fUQ_5G\nee:e7:c2:cc:7e:71\t5180\t-43\t[WPA-PSK-CCMP+TKIP][WPA2-PSK-CCMP+TKIP][WPS][ESS]\tCMCC-em2t-5G\n78:26:a6:d5:5f:c1\t5240\t-44\t[WPA-PSK-CCMP][WPA2-PSK-CCMP][ESS]\tCU_NUzY_5G\nee:e7:c2:cc:ae:21\t5180\t-50\t[WPA-PSK-CCMP+TKIP][WPA2-PSK-CCMP+TKIP][WPS][ESS]\tCMCC-7hxp-5G\n54:b2:9d:62:cd:76\t5745\t-67\t[WPA2-PSK-CCMP+TKIP][WPS][ESS]\tCU_zAxX_5G\n44:a3:c7:7f:93:13\t5200\t-74\t[WPA-PSK-CCMP+TKIP][WPA2-PSK-CCMP+TKIP][ESS]\tCMCC-7e32-5G\n78:26:a6:d5:5f:c0\t2422\t-65\t[WPA-PSK-CCMP][WPA2-PSK-CCMP][ESS]\tCU_NUzY\nec:e7:c2:ec:7e:71\t2437\t-67\t[WPA-PSK-CCMP+TKIP][WPA2-PSK-CCMP+TKIP][WPS][ESS]\tCMCC-em2t\n8a:ce:3f:5c:ca:0c\t5200\t-80\t[WPA-PSK-CCMP+TKIP][WPA2-PSK-CCMP+TKIP][WPS][ESS]\tCMCC-Rmdg-5G\nec:e7:c2:ec:ae:21\t2437\t-71\t[WPA-PSK-CCMP+TKIP][WPA2-PSK-CCMP+TKIP][WPS][ESS]\tCMCC-7hxp\n54:b2:9d:62:cd:75\t2412\t-74\t[WPA2-PSK-CCMP+TKIP][WPS][ESS]\tCU_zAxX\n78:26:a6:d5:5a:60\t2452\t-76\t[WPA-PSK-CCMP][WPA2-PSK-CCMP][ESS]\tCU_2fUQ\nee:e7:c2:cc:a6:11\t5180\t-86\t[WPA-PSK-CCMP+TKIP][WPA2-PSK-CCMP+TKIP][WPS][ESS]\tCMCC-2207B-5G\n8a:ce:3f:5c:ca:08\t2412\t-81\t[WPA-PSK-CCMP+TKIP][WPA2-PSK-CCMP+TKIP][WPS][ESS]\tCMCC-Rmdg\n8c:ee:fd:08:47:0c\t5240\t-93\t[WPA-PSK-CCMP][WPA2-PSK-CCMP][ESS]\tChinaNet-yQs4-5G\nec:e7:c2:ec:a6:11\t2437\t-85\t[WPA-PSK-CCMP+TKIP][WPA2-PSK-CCMP+TKIP][WPS][ESS]\tCMCC-2207B\n"
+    },
+    {
+      "at": 13.873975197013351,
+      "request": "DETACH",
+      "result": "OK\n"
+    }
+  ],
+  "after": {
+    "state": "COMPLETED",
+    "ssid": "CU_2fUQ_5G",
+    "ip": "192.168.1.3",
+    "error": null
+  },
+  "connect_attempted": false
+}

@@ -1,0 +1,33 @@
+{
+  "wrapper_exit": 0,
+  "exit_receipt": {
+    "service_exit": 0,
+    "ui_exit": 0,
+    "cleanup_completed": true
+  },
+  "private_files_remaining": [],
+  "processes": {
+    "launcher": {
+      "pid": 23297,
+      "starttime": 8287642,
+      "alive": false,
+      "current": null
+    },
+    "service": {
+      "pid": 23298,
+      "starttime": 8287672,
+      "alive": false,
+      "current": null
+    },
+    "ui": {
+      "pid": 23300,
+      "starttime": 8287887,
+      "alive": false,
+      "current": null
+    }
+  },
+  "uinput_remaining": [],
+  "governor_before": "rknpu_ondemand",
+  "governor_after": "rknpu_ondemand",
+  "stop_confirmed": false
+}

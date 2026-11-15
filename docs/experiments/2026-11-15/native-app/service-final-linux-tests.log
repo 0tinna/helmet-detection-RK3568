@@ -1,0 +1,25 @@
+test_an_installed_directory_cannot_redirect_outside_app_root (test_app_service.AppServiceTests) ... ok
+test_cached_jpeg_is_rejected_after_ttl_fault_or_epoch_change (test_app_service.AppServiceTests) ... ok
+test_close_rejects_new_wifi_work_and_reports_busy_timeout (test_app_service.AppServiceTests) ... ok
+test_close_requests_backend_cancellation_before_waiting (test_app_service.AppServiceTests) ... ok
+test_control_requires_token_and_rejects_cross_origin (test_app_service.AppServiceTests) ... ok
+test_invalid_and_oversized_body_do_not_start_detection (test_app_service.AppServiceTests) ... ok
+test_malformed_json_and_dns_rebinding_host_are_rejected (test_app_service.AppServiceTests) ... ok
+test_model_and_source_symlink_escape_is_rejected (test_app_service.AppServiceTests) ... ok
+test_native_worker_still_alive_after_run_error_blocks_restart (test_app_service.AppServiceTests) ... ok
+test_new_run_generation_distinguishes_same_epoch_and_frame_id (test_app_service.AppServiceTests) ... ok
+test_preview_json_binds_encoded_image_to_frame_and_remaining_ttl (test_app_service.AppServiceTests) ... ok
+test_private_session_file_does_not_overwrite_previous_secret (test_app_service.AppServiceTests) ... ok
+test_real_pipeline_outputs_and_stops_with_device_boundary_cleanup (test_app_service.AppServiceTests) ... ok
+test_real_windows_junction_snapshot_escape_is_rejected_before_start (test_app_service.AppServiceTests) ... skipped 'Windows junction behavior'
+test_result_expiring_during_encoding_is_not_published (test_app_service.AppServiceTests) ... ok
+test_snapshot_output_directory_cannot_redirect_outside_app_root (test_app_service.AppServiceTests) ... ok
+test_status_reveals_missed_invalid_epoch_and_rejects_previous_frame (test_app_service.AppServiceTests) ... ok
+test_stop_timeout_keeps_exclusive_ownership_and_cleanup (test_app_service.AppServiceTests) ... ok
+test_wifi_dependency_exception_never_echoes_password (test_app_service.AppServiceTests) ... ok
+test_wifi_operations_are_async_busy_and_results_hide_secrets (test_app_service.AppServiceTests) ... ok
+
+----------------------------------------------------------------------
+Ran 20 tests in 3.331s
+
+OK (skipped=1)

@@ -1,0 +1,5 @@
+temporary_board_only=true
+source=/userdata/helmet-validation/native-app-usability-v4-phase1-1/board-service-minimal-camera.py
+target=/userdata/helmet-validation/20261115-native-app-v2/src/app/service.py
+sha256=3518e26632c9cea72523829a16d5bdc451d5aad5adfa6e0e443059cfa26c681c
+old_sha256=9a2f7454db6fb48ebcf7f5fd301a831817374c2be2fc5c9036af60feb40df1f7

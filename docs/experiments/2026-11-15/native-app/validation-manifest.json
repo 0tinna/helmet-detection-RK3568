@@ -1,0 +1,220 @@
+{
+  "kind": "native-app-board-validation",
+  "root": "/userdata/helmet-validation/20261114-native-app",
+  "browser_required": false,
+  "internet_required_for_local_detection": false,
+  "actual_wifi_connection_changed": false,
+  "source": "local sample image replay",
+  "physical_camera_tested": false,
+  "qt_window_launch": true,
+  "qt_native_keyboard_render": true,
+  "real_rknn_preview_render": true,
+  "source_epoch_and_run_generation": true,
+  "icon_install": {
+    "installed": true,
+    "command": "python3 src/app/install.py --root /userdata/helmet-validation/20261114-native-app --vendor-icons",
+    "config": "/opt/ui/src/ATK-DLRK3568/apk3.cfg",
+    "entries": [
+      {
+        "name": "安全帽检测",
+        "command": "/opt/ui/src/apps/helmet_app"
+      },
+      {
+        "name": "无线网络",
+        "command": "/opt/ui/src/apps/helmet_wifi"
+      }
+    ],
+    "backup": "/userdata/helmet-validation/20261114-native-app/vendor-entry/apk3-20261114T172638777625Z.cfg",
+    "vendor_entry_execution_exit": 0,
+    "actual_human_icon_tap": false,
+    "desktop_restarted": false,
+    "requires_vendor_home_reload": true
+  },
+  "tests": {
+    "host_main": {
+      "ran": 215,
+      "passed": 211,
+      "skipped": 4,
+      "log": "local-main-tests.log"
+    },
+    "host_legacy": {
+      "ran": 25,
+      "passed": 24,
+      "skipped": 1,
+      "log": "local-legacy-tests.log"
+    },
+    "linux_wifi": {
+      "ran": 34,
+      "passed": 34,
+      "skipped": 0,
+      "log": "wifi-final-linux-tests.log",
+      "scope": "real Linux process and Unix socket protocol fixtures; no actual network switching"
+    },
+    "linux_service": {
+      "ran": 20,
+      "passed": 19,
+      "skipped": 1,
+      "log": "service-final-linux-tests.log",
+      "scope": "service and real Pipeline with SDK boundary double; Windowsjunctiononly skip"
+    }
+  },
+  "direct_cleanup_smoke": {
+    "path": "../receipts-smoke-1/manifest.json",
+    "sdk_released": true,
+    "calls": 151,
+    "detected_fps": 12.503902207036145,
+    "duration": 12,
+    "not_longrun": true
+  },
+  "limits": [
+    "Actual screen taps, disconnecting USB, WiFi authentication/DHCP/persistence not yet manually observed",
+    "Compatible preinstalled Qt/Linux/RKNN runtime required",
+    "Native app combines detection/JPEG/snapshots; MPP/Web combined longrun remains separate",
+    "Independent85 target and final model remain unqualified"
+  ],
+  "code": {
+    "helmet/app/service.py": {
+      "sha256": "f602a63928319b1baf4b9272690116d9a536aa65834ce85adbcf5f98c877f588",
+      "bytes": 29071
+    },
+    "helmet/app/wifi.py": {
+      "sha256": "1e998474293b5499e0cedf5fa57317416ac49dab7a2b9f36fd93b97ec30c20fb",
+      "bytes": 24915
+    },
+    "helmet/app/launch.py": {
+      "sha256": "8db80c3cdb10519812b4d2b943f1542042a75c9bb67f74a2bfa374ee56ebe2ac",
+      "bytes": 6500
+    },
+    "helmet/app/install.py": {
+      "sha256": "229e351cf73b6d49ff5ae1bf445e86585b9af22dbbe89cf70759fbf1fdc71ae7",
+      "bytes": 4676
+    },
+    "helmet/app/qml/Main.qml": {
+      "sha256": "6ac6b2e30c2e7ca29a9bc3f1ecb112ac4cc907b33a573664ed7476aeb11d504c",
+      "bytes": 20791
+    }
+  },
+  "offline": {
+    "command": [
+      "python3",
+      "/userdata/helmet-validation/20261114-native-app/src/app/launch.py",
+      "--root",
+      "/userdata/helmet-validation/20261114-native-app",
+      "--auto-demo",
+      "--smoke-seconds",
+      "12"
+    ],
+    "network_namespace_isolated": true,
+    "interfaces": [
+      {
+        "ifindex": 1,
+        "ifname": "lo",
+        "flags": [
+          "LOOPBACK",
+          "UP",
+          "LOWER_UP"
+        ],
+        "mtu": 65536,
+        "qdisc": "noqueue",
+        "operstate": "UNKNOWN",
+        "linkmode": "DEFAULT",
+        "group": "default",
+        "txqlen": 1000,
+        "link_type": "loopback",
+        "address": "00:00:00:00:00:00",
+        "broadcast": "00:00:00:00:00:00"
+      }
+    ],
+    "exit_code": 0,
+    "physical_camera_tested": false,
+    "human_display_verified": false,
+    "preview_png": "offline-detection-screen.png"
+  },
+  "test_mode": "current host main215, legacy25 and board owned WiFi34/service20; hardware preview independent of injected SDK tests",
+  "artifacts": {
+    "detection-screen-final.png": {
+      "sha256": "7d7c3dc3dcfb583087ab6f6870f648bbc9499f0181d269aa99b72c62e6bc4d6d",
+      "bytes": 398811
+    },
+    "detection-screen.png": {
+      "sha256": "85d40a4d007ab2b0ea93605c636e1b9c7ea753e7c673330668abe35952aac0d3",
+      "bytes": 400680
+    },
+    "icon-evidence.json": {
+      "sha256": "dfde36a46e029bf1ab58f4826c94ba72029c5fc34c2489ffbb659fb2b0f4bcef",
+      "bytes": 635
+    },
+    "icon-install.log": {
+      "sha256": "254c95e602c63df61c12ffb59abe7a5a1857d7bb252453d1e73c22c838bb6364",
+      "bytes": 531
+    },
+    "local-legacy-tests.log": {
+      "sha256": "5699c9d7008b60844d2f96e317708edc033080088ab1e206a4dc8a234a9415cd",
+      "bytes": 5302
+    },
+    "local-main-tests.log": {
+      "sha256": "e24c5995ef6a253816c23b314a899c221821ef5ecaaadad60be9b493553fc15f",
+      "bytes": 47034
+    },
+    "native-offline.json": {
+      "sha256": "37484ca012b31caa6195766d46b2b4a49f43fea8d309eb49ab23a9d9e17c555e",
+      "bytes": 773
+    },
+    "offline-detection-screen.png": {
+      "sha256": "96bd6cdaaef483c8378bb8cd055c6cc40cdf3fa95a298750e7c5c8a19cfe35a9",
+      "bytes": 399456
+    },
+    "wifi-base-with-new-tests.log": {
+      "sha256": "1246b1aae08431efdd43ca5463f63c9e9d192303ff9c529243b688763be104b0",
+      "bytes": 5955
+    },
+    "wifi-current-linux-tests.log": {
+      "sha256": "70f8ed107077f06d7ad5cfd234faaa4abd08625871f6e9508d56399c0df79425",
+      "bytes": 3230
+    },
+    "wifi-keyboard-screen-final.png": {
+      "sha256": "b550cba427a16aed59f4d6cb0b75305a2018b020072aa77b2e0d73ac1f49e2be",
+      "bytes": 108266
+    },
+    "wifi-keyboard-screen.png": {
+      "sha256": "6da7588a1d35aa5ee3e6fdff7156ecf8561bebf68191a891ef2fe82bc1673fad",
+      "bytes": 104288
+    },
+    "wifi-readonly-current.json": {
+      "sha256": "9237fb6fb9970ede356a16fd8e4d14af2028b1302960cc222502c98c423243e0",
+      "bytes": 2422
+    },
+    "wifi-readonly.json": {
+      "sha256": "d5cd065e5215b463a85c7d3e502040a3b76d26c2ba9438bf4b055d5fd6f166bd",
+      "bytes": 2482
+    },
+    "wifi-scan-raw.txt": {
+      "sha256": "01eb7c4b72d43698457a48886d3a9da2e6ba49f5d919eb7fa79f08110d6bf29b",
+      "bytes": 1274
+    },
+    "wifi-scan-screen-final.png": {
+      "sha256": "c712b3cc3186d81c2ecd35fd8f47ea831310821293c9de1a97c0b168c0d5a5e2",
+      "bytes": 108775
+    },
+    "wifi-scan-screen.png": {
+      "sha256": "45dd9e6f5447fa163caaf20720e185bf9627c219dd20e57c3a9dffb5f68d7546",
+      "bytes": 103681
+    },
+    "wifi-final-linux-tests.log": {
+      "sha256": "84d8bfc414deec29ba7c25364a36944f8b5a8b6789c99df23639759d9ef48267",
+      "bytes": 3333
+    },
+    "service-final-linux-tests.log": {
+      "sha256": "bf950e36a484c19218a4dda96828b4f60341e2863192b187cef86c5f2ec88c24",
+      "bytes": 2173
+    }
+  },
+  "bundle": {
+    "path": "dist/helmet-native-app-20261115.zip",
+    "sha256": "22585661da80c449fbf85ba65978ba851c73935819298ee2a5de48907824e679",
+    "bytes": 39192392,
+    "files": 28,
+    "board_copy_sha256": "22585661da80c449fbf85ba65978ba851c73935819298ee2a5de48907824e679",
+    "verified_all_payload_hashes": true
+  }
+}

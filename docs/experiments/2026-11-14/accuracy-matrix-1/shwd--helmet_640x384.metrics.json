@@ -1,0 +1,277 @@
+{
+  "person": {
+    "ap50": 0.6430733264429273,
+    "npos": 212,
+    "precision": 0.673469387755102,
+    "recall": 0.6226415094339622,
+    "f1": 0.6470588235294118,
+    "true_positives": 132,
+    "false_positives": 64,
+    "false_negatives": 80,
+    "ignored_predictions": 0,
+    "predictions": 1347,
+    "defined": true
+  },
+  "hat": {
+    "ap50": 0.8522034306403642,
+    "npos": 786,
+    "precision": 0.8308080808080808,
+    "recall": 0.8371501272264631,
+    "f1": 0.8339670468948035,
+    "true_positives": 658,
+    "false_positives": 134,
+    "false_negatives": 128,
+    "ignored_predictions": 0,
+    "predictions": 3084,
+    "defined": true
+  },
+  "mAP50": 0.7476383785416457,
+  "classes_with_gt": [
+    "person",
+    "hat"
+  ],
+  "images": 200,
+  "dataset": {
+    "class_mapping": {
+      "no-hardhat": 0,
+      "hardhat": 1
+    },
+    "model_semantics": {
+      "person": "bare head (no helmet)",
+      "hat": "head wearing a helmet"
+    },
+    "recognized_annotations": 998,
+    "ignored_annotations": 0,
+    "unknown_categories": [],
+    "dimensions_available": true,
+    "evaluation_rules": {
+      "difficult_policy": "include-as-normal",
+      "difficult_definition": "explicit diagnostic normalization: mapped difficult objects remain normal GT and may be TP/FN; original flags preserved; not standard VOC difficult-ignore"
+    },
+    "annotation_sha256": "f2ba2731fb7c80faaccbed341cf87ad0c38241063a95faefdf806ad9e2f4dcaa",
+    "manifest_sha256": "d4a2e3309f3c8200781691fcce586bdcf031a76f244de8840584b23dc8876395",
+    "provenance": {
+      "source_url": "https://github.com/njvisionpower/Safety-Helmet-Wearing-Dataset",
+      "license": "SHWD repository MIT; constituent SCUT-HEAD academic research use; underlying image rights not blanket MIT",
+      "origin": "first 200 IDs of original VOC2028 ImageSets/Main/test.txt, fixed before inference",
+      "independence": "unknown",
+      "interpretation": "same-distribution diagnostic; community model likely trained on SHWD; not certified holdout",
+      "scene_evidence": "no scene IDs; original test sample held as one unknown-scene group; no artificial scene split"
+    },
+    "total_images": 200
+  },
+  "areas": {
+    "small": {
+      "person": {
+        "ap50": 0.4915791578319184,
+        "npos": 122,
+        "precision": 0.5631067961165048,
+        "recall": 0.47540983606557374,
+        "f1": 0.5155555555555555,
+        "true_positives": 58,
+        "false_positives": 45,
+        "false_negatives": 64,
+        "ignored_predictions": 304,
+        "predictions": 1347,
+        "defined": true
+      },
+      "hat": {
+        "ap50": 0.6552332761761595,
+        "npos": 316,
+        "precision": 0.6941580756013745,
+        "recall": 0.6392405063291139,
+        "f1": 0.6655683690280064,
+        "true_positives": 202,
+        "false_positives": 89,
+        "false_negatives": 114,
+        "ignored_predictions": 1064,
+        "predictions": 3084,
+        "defined": true
+      },
+      "mAP50": 0.5734062170040389,
+      "classes_with_gt": [
+        "person",
+        "hat"
+      ],
+      "ap_coverage": {
+        "status": "project-floor",
+        "confidence_floor": 0.001,
+        "project_confidence_floor": 0.001,
+        "comparable_project_ap": true,
+        "full_score_range": false,
+        "limitation": "Predictions below the declared floor are unavailable; AP may change with lower confidence coverage."
+      },
+      "metric_definition": {
+        "metric_version": "helmet-all-point-ap50-v1",
+        "ap50": "Project all-point AP50 at retained-score floor .001; not full-score-range AP or official COCO AP",
+        "iou": 0.5,
+        "interpolation": "all-point",
+        "gt_matching": "highest-IoU available same-class GT; in-range GT before ignored other-area GT",
+        "class_mean": "mean over classes with GT; absent classes null",
+        "coco_ap50_95": null,
+        "coco_status": "not computed; requires official COCO evaluator",
+        "area_rules": "bbox area in source pixels: small [0,1024), medium [1024,9216), large [9216,infinity); other-area matches/unmatched predictions ignored"
+      }
+    },
+    "medium": {
+      "person": {
+        "ap50": 0.8577864564798325,
+        "npos": 62,
+        "precision": 0.7464788732394366,
+        "recall": 0.8548387096774194,
+        "f1": 0.7969924812030075,
+        "true_positives": 53,
+        "false_positives": 18,
+        "false_negatives": 9,
+        "ignored_predictions": 1104,
+        "predictions": 1347,
+        "defined": true
+      },
+      "hat": {
+        "ap50": 0.9628943076126601,
+        "npos": 315,
+        "precision": 0.9014925373134328,
+        "recall": 0.9587301587301588,
+        "f1": 0.9292307692307693,
+        "true_positives": 302,
+        "false_positives": 33,
+        "false_negatives": 13,
+        "ignored_predictions": 2373,
+        "predictions": 3084,
+        "defined": true
+      },
+      "mAP50": 0.9103403820462463,
+      "classes_with_gt": [
+        "person",
+        "hat"
+      ],
+      "ap_coverage": {
+        "status": "project-floor",
+        "confidence_floor": 0.001,
+        "project_confidence_floor": 0.001,
+        "comparable_project_ap": true,
+        "full_score_range": false,
+        "limitation": "Predictions below the declared floor are unavailable; AP may change with lower confidence coverage."
+      },
+      "metric_definition": {
+        "metric_version": "helmet-all-point-ap50-v1",
+        "ap50": "Project all-point AP50 at retained-score floor .001; not full-score-range AP or official COCO AP",
+        "iou": 0.5,
+        "interpolation": "all-point",
+        "gt_matching": "highest-IoU available same-class GT; in-range GT before ignored other-area GT",
+        "class_mean": "mean over classes with GT; absent classes null",
+        "coco_ap50_95": null,
+        "coco_status": "not computed; requires official COCO evaluator",
+        "area_rules": "bbox area in source pixels: small [0,1024), medium [1024,9216), large [9216,infinity); other-area matches/unmatched predictions ignored"
+      }
+    },
+    "large": {
+      "person": {
+        "ap50": 0.8060780834072759,
+        "npos": 28,
+        "precision": 0.9545454545454546,
+        "recall": 0.75,
+        "f1": 0.84,
+        "true_positives": 21,
+        "false_positives": 1,
+        "false_negatives": 7,
+        "ignored_predictions": 1286,
+        "predictions": 1347,
+        "defined": true
+      },
+      "hat": {
+        "ap50": 0.9842296558579828,
+        "npos": 155,
+        "precision": 0.927710843373494,
+        "recall": 0.9935483870967742,
+        "f1": 0.9595015576323986,
+        "true_positives": 154,
+        "false_positives": 12,
+        "false_negatives": 1,
+        "ignored_predictions": 2731,
+        "predictions": 3084,
+        "defined": true
+      },
+      "mAP50": 0.8951538696326293,
+      "classes_with_gt": [
+        "person",
+        "hat"
+      ],
+      "ap_coverage": {
+        "status": "project-floor",
+        "confidence_floor": 0.001,
+        "project_confidence_floor": 0.001,
+        "comparable_project_ap": true,
+        "full_score_range": false,
+        "limitation": "Predictions below the declared floor are unavailable; AP may change with lower confidence coverage."
+      },
+      "metric_definition": {
+        "metric_version": "helmet-all-point-ap50-v1",
+        "ap50": "Project all-point AP50 at retained-score floor .001; not full-score-range AP or official COCO AP",
+        "iou": 0.5,
+        "interpolation": "all-point",
+        "gt_matching": "highest-IoU available same-class GT; in-range GT before ignored other-area GT",
+        "class_mean": "mean over classes with GT; absent classes null",
+        "coco_ap50_95": null,
+        "coco_status": "not computed; requires official COCO evaluator",
+        "area_rules": "bbox area in source pixels: small [0,1024), medium [1024,9216), large [9216,infinity); other-area matches/unmatched predictions ignored"
+      }
+    }
+  },
+  "ap_coverage": {
+    "status": "project-floor",
+    "confidence_floor": 0.001,
+    "project_confidence_floor": 0.001,
+    "comparable_project_ap": true,
+    "full_score_range": false,
+    "limitation": "Predictions below the declared floor are unavailable; AP may change with lower confidence coverage."
+  },
+  "config": {
+    "op_conf": 0.25,
+    "iou": 0.5,
+    "conf_min": 0.001,
+    "nms_iou": 0.45,
+    "limit": 0
+  },
+  "metric_definition": {
+    "metric_version": "helmet-all-point-ap50-v1",
+    "ap50": "Project all-point AP50 at retained-score floor .001; not full-score-range AP or official COCO AP",
+    "iou": 0.5,
+    "interpolation": "all-point",
+    "gt_matching": "highest-IoU available same-class GT; in-range GT before ignored other-area GT",
+    "class_mean": "mean over classes with GT; absent classes null",
+    "coco_ap50_95": null,
+    "coco_status": "not computed; requires official COCO evaluator",
+    "area_rules": "bbox area in source pixels: small [0,1024), medium [1024,9216), large [9216,infinity); other-area matches/unmatched predictions ignored"
+  },
+  "inference": {
+    "backend": "dets",
+    "status": "complete",
+    "legacy_missing_predictions": false,
+    "dataset_identity_verified": true,
+    "image_hashes_verified": true,
+    "detections_sha256": "b0614ee8238795cd47791001f2193a60ad5fdb20e8886a7b7a564131f48935e4",
+    "dump_config": {
+      "size": [
+        640,
+        384
+      ],
+      "conf_min": 0.001,
+      "op_conf": 0.25,
+      "nms_iou": 0.45,
+      "max_det": 300,
+      "class_order": [
+        "person",
+        "hat"
+      ],
+      "input_layout": "NHWC RGB uint8 batch=1",
+      "clipped_box_policy": "discard-finite-zero-area-after-shared-postprocess-with-trace",
+      "postprocess_sha256": "b708fa95f4d71dd9b4ecb656d9626ac9fd2c78f4a7b46add3091ae5ed38e6903"
+    }
+  },
+  "accuracy_target_pass": null,
+  "model": {
+    "name": "helmet_640x384.rknn",
+    "sha256": "ba951c5b824e66a660c08daa6f6779cf4119130c4c2106f365ee337e3c92f272"
+  }
+}

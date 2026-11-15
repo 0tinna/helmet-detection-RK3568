@@ -1,0 +1,11 @@
+{
+  "kind": "wifi-only-v3-revision",
+  "board_root": "/userdata/helmet-validation/20261115-native-app-v2",
+  "previous_wifi_sha256": "1e998474293b5499e0cedf5fa57317416ac49dab7a2b9f36fd93b97ec30c20fb",
+  "wifi_sha256": "648b714137b18538f8f8e6a355565b07aec8fb01270c3deed5c01eba30249468",
+  "backup": "/userdata/helmet-validation/20261115-native-app-v2/vendor-entry/wifi-before-v3.py",
+  "change": "default overall scan wait8to20seconds",
+  "service_pipeline_qml_changed": false,
+  "old_longrun_relabelled": false,
+  "wifi_connect_attempted": false
+}

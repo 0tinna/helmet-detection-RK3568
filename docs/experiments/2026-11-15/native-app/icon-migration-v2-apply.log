@@ -1,0 +1,2197 @@
+{
+  "kind": "native-v2-owned-icon-migration",
+  "applied": true,
+  "release": {
+    "sha256": "f8957945cb90084f8c32cff789b07e0e4ca1c08690c493c5ed3593eacb4a4989",
+    "bytes": 39195268,
+    "payload_files": 28,
+    "files": {
+      "docs/板端App使用手册.md": {
+        "sha256": "9dd70dc7dfffb2a453b15f4a6da78ed7dbddd2193e457eceb1f46ed0bbfd2a19",
+        "bytes": 15487
+      },
+      "docs/离线更新与图标安装.md": {
+        "sha256": "5642e68e6fffb3beb39dc7faa6b20edc0026af9471540294b081b663b86ebcec",
+        "bytes": 10739
+      },
+      "input/1.jpg": {
+        "sha256": "a672e54b698710b9ff3081273fced9b32c671976203f568a3ef505dce1c5936e",
+        "bytes": 176224
+      },
+      "models/helmet-640-640.rknn": {
+        "sha256": "23dac43065664447272b8a032f7c35a00269e5b7d63e210ae10d8181a7a3bb32",
+        "bytes": 7808448
+      },
+      "models/helmet_416x416.rknn": {
+        "sha256": "7e0eefe4bfe86627bb6b58161cacca10912e0dbe1ba2513f58d091c40b26cd48",
+        "bytes": 8110065
+      },
+      "models/helmet_512x288.rknn": {
+        "sha256": "4b8d428aede96897590ed143200412beed882908e3b30ec63a5eae38f0deb6af",
+        "bytes": 8118576
+      },
+      "models/helmet_512x512.rknn": {
+        "sha256": "82e43f1fe1dc755ab8d421c819fdef311efdd1b64a7b1913901f6aef2b9460d3",
+        "bytes": 8279345
+      },
+      "models/helmet_640x384.rknn": {
+        "sha256": "ba951c5b824e66a660c08daa6f6779cf4119130c4c2106f365ee337e3c92f272",
+        "bytes": 8261425
+      },
+      "models/helmet_640x640.rknn": {
+        "sha256": "2c0df64c4e12440e4e84c16294df53e440c263d9570f4447b2d26b0f5916edf3",
+        "bytes": 8439921
+      },
+      "src/alarm.py": {
+        "sha256": "d3e6d68c7b17f5508f0d697e96998f556f224f9f5067169d66c35972b3a023d2",
+        "bytes": 4207
+      },
+      "src/app/__init__.py": {
+        "sha256": "3ca294319d48aa183e5822b0c08426253434101d7c1fc85ae21b74b756784cd1",
+        "bytes": 55
+      },
+      "src/app/deploy.ps1": {
+        "sha256": "e326f3db3dddc1197c7376c069e16c8f305d1b45d0cf5e00bc1cce69f4db767b",
+        "bytes": 1560
+      },
+      "src/app/icons/helmet.svg": {
+        "sha256": "10274b399ae404d159fcd9b2d0f2464e5f8f37b13399c4a8c42c04c7ede08bc1",
+        "bytes": 435
+      },
+      "src/app/icons/wifi.svg": {
+        "sha256": "ffe6f812764ecc8730863294ac89a2b5c1dcd8f6e7902b57950c6169088f2e3d",
+        "bytes": 353
+      },
+      "src/app/install.py": {
+        "sha256": "229e351cf73b6d49ff5ae1bf445e86585b9af22dbbe89cf70759fbf1fdc71ae7",
+        "bytes": 4676
+      },
+      "src/app/launch.py": {
+        "sha256": "8db80c3cdb10519812b4d2b943f1542042a75c9bb67f74a2bfa374ee56ebe2ac",
+        "bytes": 6500
+      },
+      "src/app/qml/Main.qml": {
+        "sha256": "6ac6b2e30c2e7ca29a9bc3f1ecb112ac4cc907b33a573664ed7476aeb11d504c",
+        "bytes": 20791
+      },
+      "src/app/service.py": {
+        "sha256": "9a2f7454db6fb48ebcf7f5fd301a831817374c2be2fc5c9036af60feb40df1f7",
+        "bytes": 29859
+      },
+      "src/app/wifi.py": {
+        "sha256": "1e998474293b5499e0cedf5fa57317416ac49dab7a2b9f36fd93b97ec30c20fb",
+        "bytes": 24915
+      },
+      "src/benchmark.py": {
+        "sha256": "15dcff515fc9c7332dd5eefd40502f38b0a02e6ab6a62e1d0ec50ce593ab4859",
+        "bytes": 15588
+      },
+      "src/dump_dets.py": {
+        "sha256": "c21b4a1d1c4ee4e0428cb19d16b560c9c7dfdef2c34b52f62195b836fca90e3f",
+        "bytes": 8619
+      },
+      "src/helmet_realtime.py": {
+        "sha256": "15794ebc40fdd1736d9c80d5504d17aa91e1de972bb92bb30a9eeb026309e46d",
+        "bytes": 5503
+      },
+      "src/output_sinks.py": {
+        "sha256": "c2f65642d38f8994200503b242ca93c8f0af105dc5ad3b13650e9ff83c7003cf",
+        "bytes": 23464
+      },
+      "src/pipeline_runtime.py": {
+        "sha256": "dee30d6b71c9e8d3e697657fb309fb22e8fb47fafd366d60b555466cf56152e9",
+        "bytes": 35055
+      },
+      "src/sources.py": {
+        "sha256": "ea89d66fdefb2bc429ca74efa0437a3c0a8aab672a856078fc15afccfe3b31c9",
+        "bytes": 6717
+      },
+      "src/telemetry.py": {
+        "sha256": "da4522206053712484a21f80bb26d6424649a263f606f35fa16070be51a83b9e",
+        "bytes": 14670
+      },
+      "src/validate_comparison.py": {
+        "sha256": "3b65f9e561084aa7f6199cc7cd413b6426f6ac962f39729ac0668e50350c2860",
+        "bytes": 1819
+      },
+      "src/yolo_post.py": {
+        "sha256": "fae57bbfa1d47d5ab16ef444096fab4fe8e14701c5ec10d87b1ec518282b0505",
+        "bytes": 7811
+      }
+    }
+  },
+  "run": {
+    "run_id": "native-longrun-1",
+    "status": "completed",
+    "exit_code": 0,
+    "thirty_minute_app_passed": true,
+    "owned_processes": [
+      {
+        "role": "runner/direct-service-workers",
+        "pid": 8082,
+        "recorded_start_id": null,
+        "observed": null,
+        "outcome": "absent"
+      },
+      {
+        "role": "gui",
+        "pid": 8095,
+        "recorded_start_id": "7150378",
+        "observed": null,
+        "outcome": "absent"
+      }
+    ],
+    "npu_idle": {
+      "npu_load": "NPU load:  0%",
+      "processes": [
+        {
+          "pid": 1,
+          "start_id": "0",
+          "command": [
+            "init"
+          ]
+        },
+        {
+          "pid": 2,
+          "start_id": "0",
+          "command": []
+        },
+        {
+          "pid": 3,
+          "start_id": "0",
+          "command": []
+        },
+        {
+          "pid": 4,
+          "start_id": "0",
+          "command": []
+        },
+        {
+          "pid": 8,
+          "start_id": "0",
+          "command": []
+        },
+        {
+          "pid": 9,
+          "start_id": "0",
+          "command": []
+        },
+        {
+          "pid": 10,
+          "start_id": "0",
+          "command": []
+        },
+        {
+          "pid": 11,
+          "start_id": "0",
+          "command": []
+        },
+        {
+          "pid": 12,
+          "start_id": "0",
+          "command": []
+        },
+        {
+          "pid": 13,
+          "start_id": "0",
+          "command": []
+        },
+        {
+          "pid": 14,
+          "start_id": "0",
+          "command": []
+        },
+        {
+          "pid": 15,
+          "start_id": "0",
+          "command": []
+        },
+        {
+          "pid": 16,
+          "start_id": "0",
+          "command": []
+        },
+        {
+          "pid": 19,
+          "start_id": "1",
+          "command": []
+        },
+        {
+          "pid": 20,
+          "start_id": "1",
+          "command": []
+        },
+        {
+          "pid": 21,
+          "start_id": "1",
+          "command": []
+        },
+        {
+          "pid": 24,
+          "start_id": "1",
+          "command": []
+        },
+        {
+          "pid": 25,
+          "start_id": "1",
+          "command": []
+        },
+        {
+          "pid": 26,
+          "start_id": "1",
+          "command": []
+        },
+        {
+          "pid": 29,
+          "start_id": "2",
+          "command": []
+        },
+        {
+          "pid": 30,
+          "start_id": "4",
+          "command": []
+        },
+        {
+          "pid": 35,
+          "start_id": "12",
+          "command": []
+        },
+        {
+          "pid": 36,
+          "start_id": "12",
+          "command": []
+        },
+        {
+          "pid": 76,
+          "start_id": "12",
+          "command": []
+        },
+        {
+          "pid": 77,
+          "start_id": "12",
+          "command": []
+        },
+        {
+          "pid": 78,
+          "start_id": "13",
+          "command": []
+        },
+        {
+          "pid": 79,
+          "start_id": "13",
+          "command": []
+        },
+        {
+          "pid": 80,
+          "start_id": "14",
+          "command": []
+        },
+        {
+          "pid": 81,
+          "start_id": "14",
+          "command": []
+        },
+        {
+          "pid": 84,
+          "start_id": "53",
+          "command": []
+        },
+        {
+          "pid": 86,
+          "start_id": "53",
+          "command": []
+        },
+        {
+          "pid": 87,
+          "start_id": "53",
+          "command": []
+        },
+        {
+          "pid": 88,
+          "start_id": "54",
+          "command": []
+        },
+        {
+          "pid": 108,
+          "start_id": "54",
+          "command": []
+        },
+        {
+          "pid": 109,
+          "start_id": "54",
+          "command": []
+        },
+        {
+          "pid": 110,
+          "start_id": "55",
+          "command": []
+        },
+        {
+          "pid": 111,
+          "start_id": "55",
+          "command": []
+        },
+        {
+          "pid": 113,
+          "start_id": "58",
+          "command": []
+        },
+        {
+          "pid": 116,
+          "start_id": "58",
+          "command": []
+        },
+        {
+          "pid": 117,
+          "start_id": "58",
+          "command": []
+        },
+        {
+          "pid": 119,
+          "start_id": "59",
+          "command": []
+        },
+        {
+          "pid": 120,
+          "start_id": "59",
+          "command": []
+        },
+        {
+          "pid": 121,
+          "start_id": "59",
+          "command": []
+        },
+        {
+          "pid": 122,
+          "start_id": "59",
+          "command": []
+        },
+        {
+          "pid": 123,
+          "start_id": "59",
+          "command": []
+        },
+        {
+          "pid": 124,
+          "start_id": "59",
+          "command": []
+        },
+        {
+          "pid": 125,
+          "start_id": "59",
+          "command": []
+        },
+        {
+          "pid": 126,
+          "start_id": "59",
+          "command": []
+        },
+        {
+          "pid": 127,
+          "start_id": "59",
+          "command": []
+        },
+        {
+          "pid": 128,
+          "start_id": "59",
+          "command": []
+        },
+        {
+          "pid": 129,
+          "start_id": "61",
+          "command": []
+        },
+        {
+          "pid": 133,
+          "start_id": "63",
+          "command": []
+        },
+        {
+          "pid": 134,
+          "start_id": "63",
+          "command": []
+        },
+        {
+          "pid": 135,
+          "start_id": "63",
+          "command": []
+        },
+        {
+          "pid": 136,
+          "start_id": "63",
+          "command": []
+        },
+        {
+          "pid": 137,
+          "start_id": "63",
+          "command": []
+        },
+        {
+          "pid": 138,
+          "start_id": "63",
+          "command": []
+        },
+        {
+          "pid": 139,
+          "start_id": "64",
+          "command": []
+        },
+        {
+          "pid": 142,
+          "start_id": "77",
+          "command": []
+        },
+        {
+          "pid": 144,
+          "start_id": "108",
+          "command": []
+        },
+        {
+          "pid": 145,
+          "start_id": "108",
+          "command": []
+        },
+        {
+          "pid": 146,
+          "start_id": "112",
+          "command": []
+        },
+        {
+          "pid": 147,
+          "start_id": "132",
+          "command": []
+        },
+        {
+          "pid": 148,
+          "start_id": "132",
+          "command": []
+        },
+        {
+          "pid": 149,
+          "start_id": "200",
+          "command": []
+        },
+        {
+          "pid": 150,
+          "start_id": "200",
+          "command": []
+        },
+        {
+          "pid": 152,
+          "start_id": "201",
+          "command": []
+        },
+        {
+          "pid": 153,
+          "start_id": "201",
+          "command": []
+        },
+        {
+          "pid": 154,
+          "start_id": "201",
+          "command": []
+        },
+        {
+          "pid": 155,
+          "start_id": "204",
+          "command": []
+        },
+        {
+          "pid": 157,
+          "start_id": "204",
+          "command": []
+        },
+        {
+          "pid": 158,
+          "start_id": "204",
+          "command": []
+        },
+        {
+          "pid": 162,
+          "start_id": "208",
+          "command": []
+        },
+        {
+          "pid": 164,
+          "start_id": "213",
+          "command": []
+        },
+        {
+          "pid": 165,
+          "start_id": "225",
+          "command": []
+        },
+        {
+          "pid": 166,
+          "start_id": "225",
+          "command": []
+        },
+        {
+          "pid": 167,
+          "start_id": "225",
+          "command": []
+        },
+        {
+          "pid": 168,
+          "start_id": "226",
+          "command": []
+        },
+        {
+          "pid": 169,
+          "start_id": "226",
+          "command": []
+        },
+        {
+          "pid": 171,
+          "start_id": "228",
+          "command": []
+        },
+        {
+          "pid": 172,
+          "start_id": "228",
+          "command": []
+        },
+        {
+          "pid": 173,
+          "start_id": "228",
+          "command": []
+        },
+        {
+          "pid": 174,
+          "start_id": "228",
+          "command": []
+        },
+        {
+          "pid": 175,
+          "start_id": "228",
+          "command": []
+        },
+        {
+          "pid": 176,
+          "start_id": "228",
+          "command": []
+        },
+        {
+          "pid": 177,
+          "start_id": "228",
+          "command": []
+        },
+        {
+          "pid": 179,
+          "start_id": "264",
+          "command": []
+        },
+        {
+          "pid": 185,
+          "start_id": "271",
+          "command": []
+        },
+        {
+          "pid": 186,
+          "start_id": "271",
+          "command": []
+        },
+        {
+          "pid": 336,
+          "start_id": "349",
+          "command": []
+        },
+        {
+          "pid": 337,
+          "start_id": "349",
+          "command": []
+        },
+        {
+          "pid": 384,
+          "start_id": "369",
+          "command": []
+        },
+        {
+          "pid": 385,
+          "start_id": "369",
+          "command": []
+        },
+        {
+          "pid": 393,
+          "start_id": "375",
+          "command": [
+            "/sbin/syslogd",
+            "-n"
+          ]
+        },
+        {
+          "pid": 397,
+          "start_id": "377",
+          "command": [
+            "/sbin/klogd",
+            "-n"
+          ]
+        },
+        {
+          "pid": 420,
+          "start_id": "391",
+          "command": [
+            "/sbin/udevd",
+            "-d"
+          ]
+        },
+        {
+          "pid": 470,
+          "start_id": "432",
+          "command": [
+            "/usr/sbin/irqbalance",
+            "--policyscript=/etc/irqbalance.d"
+          ]
+        },
+        {
+          "pid": 497,
+          "start_id": "442",
+          "command": [
+            "dbus-daemon",
+            "--system"
+          ]
+        },
+        {
+          "pid": 503,
+          "start_id": "444",
+          "command": [
+            "/usr/sbin/rpcbind"
+          ]
+        },
+        {
+          "pid": 611,
+          "start_id": "470",
+          "command": [
+            "/bin/sh",
+            "/usr/bin/wifibt-init.sh",
+            "start"
+          ]
+        },
+        {
+          "pid": 619,
+          "start_id": "472",
+          "command": [
+            "/usr/libexec/bluetooth/bluetoothd",
+            "-n"
+          ]
+        },
+        {
+          "pid": 662,
+          "start_id": "487",
+          "command": [
+            "/usr/sbin/ntpd",
+            "-g",
+            "-p",
+            "/var/run/ntpd.pid"
+          ]
+        },
+        {
+          "pid": 671,
+          "start_id": "490",
+          "command": []
+        },
+        {
+          "pid": 677,
+          "start_id": "493",
+          "command": [
+            "/usr/bin/weston"
+          ]
+        },
+        {
+          "pid": 686,
+          "start_id": "499",
+          "command": [
+            "nginx: master process /usr/sbin/nginx"
+          ]
+        },
+        {
+          "pid": 687,
+          "start_id": "499",
+          "command": [
+            "nginx: worker process"
+          ]
+        },
+        {
+          "pid": 690,
+          "start_id": "500",
+          "command": [
+            "/usr/bin/pulseaudio"
+          ]
+        },
+        {
+          "pid": 704,
+          "start_id": "508",
+          "command": [
+            "sshd: /usr/sbin/sshd [listener] 0 of 10-100 startups"
+          ]
+        },
+        {
+          "pid": 708,
+          "start_id": "520",
+          "command": []
+        },
+        {
+          "pid": 721,
+          "start_id": "538",
+          "command": [
+            "/usr/libexec/pulse/gsettings-helper"
+          ]
+        },
+        {
+          "pid": 733,
+          "start_id": "575",
+          "command": [
+            "/usr/libexec/weston-keyboard"
+          ]
+        },
+        {
+          "pid": 734,
+          "start_id": "576",
+          "command": [
+            "/usr/libexec/weston-desktop-shell"
+          ]
+        },
+        {
+          "pid": 735,
+          "start_id": "582",
+          "command": [
+            "/opt/ui/src/apps/sysvolume"
+          ]
+        },
+        {
+          "pid": 736,
+          "start_id": "583",
+          "command": [
+            "/opt/ui/systemui"
+          ]
+        },
+        {
+          "pid": 753,
+          "start_id": "593",
+          "command": []
+        },
+        {
+          "pid": 885,
+          "start_id": "640",
+          "command": [
+            "/bin/sh",
+            "/usr/bin/usbdevice",
+            "start"
+          ]
+        },
+        {
+          "pid": 887,
+          "start_id": "640",
+          "command": [
+            "/usr/bin/adbd"
+          ]
+        },
+        {
+          "pid": 891,
+          "start_id": "643",
+          "command": [
+            "rtk_hciattach",
+            "-n",
+            "-s",
+            "115200",
+            "/dev/ttyS8",
+            "rtk_h5"
+          ]
+        },
+        {
+          "pid": 894,
+          "start_id": "645",
+          "command": []
+        },
+        {
+          "pid": 911,
+          "start_id": "656",
+          "command": []
+        },
+        {
+          "pid": 931,
+          "start_id": "664",
+          "command": [
+            "rpc.statd"
+          ]
+        },
+        {
+          "pid": 945,
+          "start_id": "673",
+          "command": [
+            "/usr/sbin/vsftpd"
+          ]
+        },
+        {
+          "pid": 950,
+          "start_id": "679",
+          "command": [
+            "/bin/sh",
+            "/bin/start_rknn.sh"
+          ]
+        },
+        {
+          "pid": 956,
+          "start_id": "682",
+          "command": [
+            "input-event-daemon"
+          ]
+        },
+        {
+          "pid": 965,
+          "start_id": "780",
+          "command": [
+            "rknn_server"
+          ]
+        },
+        {
+          "pid": 975,
+          "start_id": "821",
+          "command": []
+        },
+        {
+          "pid": 976,
+          "start_id": "821",
+          "command": []
+        },
+        {
+          "pid": 977,
+          "start_id": "821",
+          "command": []
+        },
+        {
+          "pid": 978,
+          "start_id": "821",
+          "command": []
+        },
+        {
+          "pid": 979,
+          "start_id": "821",
+          "command": []
+        },
+        {
+          "pid": 983,
+          "start_id": "833",
+          "command": [
+            "wpa_supplicant",
+            "-B",
+            "-i",
+            "wlan0",
+            "-c",
+            "/etc/wpa_supplicant.conf",
+            "-D",
+            "nl80211"
+          ]
+        },
+        {
+          "pid": 1029,
+          "start_id": "1673",
+          "command": [
+            "-/bin/sh"
+          ]
+        },
+        {
+          "pid": 1373,
+          "start_id": "1379592",
+          "command": [
+            "/opt/ui/src/apps/dashboard"
+          ]
+        },
+        {
+          "pid": 1378,
+          "start_id": "1379615",
+          "command": []
+        },
+        {
+          "pid": 1860,
+          "start_id": "1930864",
+          "command": []
+        },
+        {
+          "pid": 2929,
+          "start_id": "2847237",
+          "command": []
+        },
+        {
+          "pid": 3985,
+          "start_id": "3949012",
+          "command": []
+        },
+        {
+          "pid": 3991,
+          "start_id": "3949691",
+          "command": [
+            "/opt/ui/src/apps/calendar"
+          ]
+        },
+        {
+          "pid": 3996,
+          "start_id": "3949706",
+          "command": []
+        },
+        {
+          "pid": 4005,
+          "start_id": "3949964",
+          "command": [
+            "/opt/ui/src/apps/brightness"
+          ]
+        },
+        {
+          "pid": 4010,
+          "start_id": "3949985",
+          "command": []
+        },
+        {
+          "pid": 4020,
+          "start_id": "3950401",
+          "command": [
+            "/opt/ui/src/apps/led"
+          ]
+        },
+        {
+          "pid": 4025,
+          "start_id": "3950419",
+          "command": []
+        },
+        {
+          "pid": 4040,
+          "start_id": "3950951",
+          "command": []
+        },
+        {
+          "pid": 4042,
+          "start_id": "3950963",
+          "command": [
+            "/opt/ui/src/apps/udpchat"
+          ]
+        },
+        {
+          "pid": 4047,
+          "start_id": "3950980",
+          "command": []
+        },
+        {
+          "pid": 4056,
+          "start_id": "3951183",
+          "command": [
+            "/opt/ui/src/apps/recorder"
+          ]
+        },
+        {
+          "pid": 4061,
+          "start_id": "3951201",
+          "command": []
+        },
+        {
+          "pid": 4072,
+          "start_id": "3951405",
+          "command": [
+            "/opt/ui/src/apps/weather"
+          ]
+        },
+        {
+          "pid": 4077,
+          "start_id": "3951433",
+          "command": []
+        },
+        {
+          "pid": 5025,
+          "start_id": "4966639",
+          "command": []
+        },
+        {
+          "pid": 5923,
+          "start_id": "5220549",
+          "command": []
+        },
+        {
+          "pid": 7155,
+          "start_id": "6120567",
+          "command": []
+        },
+        {
+          "pid": 7219,
+          "start_id": "6262319",
+          "command": []
+        },
+        {
+          "pid": 7881,
+          "start_id": "6927919",
+          "command": []
+        },
+        {
+          "pid": 7922,
+          "start_id": "7080498",
+          "command": []
+        },
+        {
+          "pid": 9416,
+          "start_id": "7167621",
+          "command": []
+        },
+        {
+          "pid": 12488,
+          "start_id": "7207856",
+          "command": []
+        },
+        {
+          "pid": 16452,
+          "start_id": "7259780",
+          "command": []
+        },
+        {
+          "pid": 20280,
+          "start_id": "7310043",
+          "command": []
+        },
+        {
+          "pid": 21861,
+          "start_id": "7331781",
+          "command": []
+        },
+        {
+          "pid": 21862,
+          "start_id": "7332961",
+          "command": []
+        },
+        {
+          "pid": 21883,
+          "start_id": "7340646",
+          "command": []
+        },
+        {
+          "pid": 21910,
+          "start_id": "7392077",
+          "command": []
+        },
+        {
+          "pid": 21911,
+          "start_id": "7408415",
+          "command": []
+        },
+        {
+          "pid": 21913,
+          "start_id": "7443221",
+          "command": []
+        },
+        {
+          "pid": 21914,
+          "start_id": "7454842",
+          "command": []
+        },
+        {
+          "pid": 21934,
+          "start_id": "7476121",
+          "command": []
+        },
+        {
+          "pid": 21935,
+          "start_id": "7486840",
+          "command": []
+        },
+        {
+          "pid": 21969,
+          "start_id": "7502966",
+          "command": [
+            "sshd: root@notty"
+          ]
+        },
+        {
+          "pid": 21971,
+          "start_id": "7502992",
+          "command": [
+            "python3",
+            "/userdata/helmet-validation/switch_native_v2_icons.py",
+            "--bundle",
+            "/userdata/helmet-validation/helmet-native-app-20261115-v2.zip",
+            "--manifest",
+            "/userdata/helmet-validation/bundle-manifest-v2.json",
+            "--apply"
+          ]
+        }
+      ],
+      "observation": "read-only proc stat/cmdline/maps/fd/fdinfo plus NPU load; no process was stopped"
+    }
+  },
+  "links": [
+    {
+      "path": "/opt/ui/src/apps/helmet_app",
+      "old_target": "/userdata/helmet-validation/20261114-native-app/vendor-entry/helmet_app",
+      "new_target": "/userdata/helmet-validation/20261115-native-app-v2/vendor-entry/helmet_app"
+    },
+    {
+      "path": "/opt/ui/src/apps/helmet_wifi",
+      "old_target": "/userdata/helmet-validation/20261114-native-app/vendor-entry/helmet_wifi",
+      "new_target": "/userdata/helmet-validation/20261115-native-app-v2/vendor-entry/helmet_wifi"
+    },
+    {
+      "path": "/opt/ui/src/appicons/helmet_app.svg",
+      "old_target": "/userdata/helmet-validation/20261114-native-app/src/app/icons/helmet.svg",
+      "new_target": "/userdata/helmet-validation/20261115-native-app-v2/src/app/icons/helmet.svg"
+    },
+    {
+      "path": "/opt/ui/src/appicons/helmet_wifi.svg",
+      "old_target": "/userdata/helmet-validation/20261114-native-app/src/app/icons/wifi.svg",
+      "new_target": "/userdata/helmet-validation/20261115-native-app-v2/src/app/icons/wifi.svg"
+    }
+  ],
+  "vendor_config_sha256_before": "f64a8e2f751ff777b98a36a13a0ad062e0812f2bd6ebd7914a512b772f507b11",
+  "desktop_restarted": false,
+  "detection_started": false,
+  "wifi_changed": false,
+  "human_icon_tap": false,
+  "desktop_before": {
+    "helmet-detection.desktop": {
+      "device": 45830,
+      "inode": 123331,
+      "mode": 420,
+      "uid": 0,
+      "gid": 0,
+      "mtime_ns": 1794677198771562887,
+      "ctime_ns": 1794677198771562887,
+      "bytes": 342,
+      "sha256": "d083e2048362065eda7ed5c6d04c39fd1f4302f301fa33fff8fdddb9e793c0fa",
+      "atime_ns": 1794694854037752581
+    },
+    "helmet-wifi.desktop": {
+      "device": 45830,
+      "inode": 123332,
+      "mode": 420,
+      "uid": 0,
+      "gid": 0,
+      "mtime_ns": 1794677198771562887,
+      "ctime_ns": 1794677198771562887,
+      "bytes": 332,
+      "sha256": "ae2f5b115f5e7dbd9de36aa93a8782735a7d13721bef78062f3ba43c5e4d8ae9",
+      "atime_ns": 1794694854037752581
+    }
+  },
+  "desktop_expected_sha256": {
+    "helmet-detection.desktop": "19a6129bd875629cb98ebfbe74ecf000546c515e8226d97b334f42f92a231477",
+    "helmet-wifi.desktop": "85cc3fb210d91de4bdd1659d20fd1ae54355bebd5510598993a4a073daed3e34"
+  },
+  "backup_directory": "/userdata/helmet-validation/20261115-native-app-v2/vendor-entry/migration-20261114T222113212364Z",
+  "run_before_system_write": {
+    "run_id": "native-longrun-1",
+    "status": "completed",
+    "exit_code": 0,
+    "thirty_minute_app_passed": true,
+    "owned_processes": [
+      {
+        "role": "runner/direct-service-workers",
+        "pid": 8082,
+        "recorded_start_id": null,
+        "observed": null,
+        "outcome": "absent"
+      },
+      {
+        "role": "gui",
+        "pid": 8095,
+        "recorded_start_id": "7150378",
+        "observed": null,
+        "outcome": "absent"
+      }
+    ],
+    "npu_idle": {
+      "npu_load": "NPU load:  0%",
+      "processes": [
+        {
+          "pid": 1,
+          "start_id": "0",
+          "command": [
+            "init"
+          ]
+        },
+        {
+          "pid": 2,
+          "start_id": "0",
+          "command": []
+        },
+        {
+          "pid": 3,
+          "start_id": "0",
+          "command": []
+        },
+        {
+          "pid": 4,
+          "start_id": "0",
+          "command": []
+        },
+        {
+          "pid": 8,
+          "start_id": "0",
+          "command": []
+        },
+        {
+          "pid": 9,
+          "start_id": "0",
+          "command": []
+        },
+        {
+          "pid": 10,
+          "start_id": "0",
+          "command": []
+        },
+        {
+          "pid": 11,
+          "start_id": "0",
+          "command": []
+        },
+        {
+          "pid": 12,
+          "start_id": "0",
+          "command": []
+        },
+        {
+          "pid": 13,
+          "start_id": "0",
+          "command": []
+        },
+        {
+          "pid": 14,
+          "start_id": "0",
+          "command": []
+        },
+        {
+          "pid": 15,
+          "start_id": "0",
+          "command": []
+        },
+        {
+          "pid": 16,
+          "start_id": "0",
+          "command": []
+        },
+        {
+          "pid": 19,
+          "start_id": "1",
+          "command": []
+        },
+        {
+          "pid": 20,
+          "start_id": "1",
+          "command": []
+        },
+        {
+          "pid": 21,
+          "start_id": "1",
+          "command": []
+        },
+        {
+          "pid": 24,
+          "start_id": "1",
+          "command": []
+        },
+        {
+          "pid": 25,
+          "start_id": "1",
+          "command": []
+        },
+        {
+          "pid": 26,
+          "start_id": "1",
+          "command": []
+        },
+        {
+          "pid": 29,
+          "start_id": "2",
+          "command": []
+        },
+        {
+          "pid": 30,
+          "start_id": "4",
+          "command": []
+        },
+        {
+          "pid": 35,
+          "start_id": "12",
+          "command": []
+        },
+        {
+          "pid": 36,
+          "start_id": "12",
+          "command": []
+        },
+        {
+          "pid": 76,
+          "start_id": "12",
+          "command": []
+        },
+        {
+          "pid": 77,
+          "start_id": "12",
+          "command": []
+        },
+        {
+          "pid": 78,
+          "start_id": "13",
+          "command": []
+        },
+        {
+          "pid": 79,
+          "start_id": "13",
+          "command": []
+        },
+        {
+          "pid": 80,
+          "start_id": "14",
+          "command": []
+        },
+        {
+          "pid": 81,
+          "start_id": "14",
+          "command": []
+        },
+        {
+          "pid": 84,
+          "start_id": "53",
+          "command": []
+        },
+        {
+          "pid": 86,
+          "start_id": "53",
+          "command": []
+        },
+        {
+          "pid": 87,
+          "start_id": "53",
+          "command": []
+        },
+        {
+          "pid": 88,
+          "start_id": "54",
+          "command": []
+        },
+        {
+          "pid": 108,
+          "start_id": "54",
+          "command": []
+        },
+        {
+          "pid": 109,
+          "start_id": "54",
+          "command": []
+        },
+        {
+          "pid": 110,
+          "start_id": "55",
+          "command": []
+        },
+        {
+          "pid": 111,
+          "start_id": "55",
+          "command": []
+        },
+        {
+          "pid": 113,
+          "start_id": "58",
+          "command": []
+        },
+        {
+          "pid": 116,
+          "start_id": "58",
+          "command": []
+        },
+        {
+          "pid": 117,
+          "start_id": "58",
+          "command": []
+        },
+        {
+          "pid": 119,
+          "start_id": "59",
+          "command": []
+        },
+        {
+          "pid": 120,
+          "start_id": "59",
+          "command": []
+        },
+        {
+          "pid": 121,
+          "start_id": "59",
+          "command": []
+        },
+        {
+          "pid": 122,
+          "start_id": "59",
+          "command": []
+        },
+        {
+          "pid": 123,
+          "start_id": "59",
+          "command": []
+        },
+        {
+          "pid": 124,
+          "start_id": "59",
+          "command": []
+        },
+        {
+          "pid": 125,
+          "start_id": "59",
+          "command": []
+        },
+        {
+          "pid": 126,
+          "start_id": "59",
+          "command": []
+        },
+        {
+          "pid": 127,
+          "start_id": "59",
+          "command": []
+        },
+        {
+          "pid": 128,
+          "start_id": "59",
+          "command": []
+        },
+        {
+          "pid": 129,
+          "start_id": "61",
+          "command": []
+        },
+        {
+          "pid": 133,
+          "start_id": "63",
+          "command": []
+        },
+        {
+          "pid": 134,
+          "start_id": "63",
+          "command": []
+        },
+        {
+          "pid": 135,
+          "start_id": "63",
+          "command": []
+        },
+        {
+          "pid": 136,
+          "start_id": "63",
+          "command": []
+        },
+        {
+          "pid": 137,
+          "start_id": "63",
+          "command": []
+        },
+        {
+          "pid": 138,
+          "start_id": "63",
+          "command": []
+        },
+        {
+          "pid": 139,
+          "start_id": "64",
+          "command": []
+        },
+        {
+          "pid": 142,
+          "start_id": "77",
+          "command": []
+        },
+        {
+          "pid": 144,
+          "start_id": "108",
+          "command": []
+        },
+        {
+          "pid": 145,
+          "start_id": "108",
+          "command": []
+        },
+        {
+          "pid": 146,
+          "start_id": "112",
+          "command": []
+        },
+        {
+          "pid": 147,
+          "start_id": "132",
+          "command": []
+        },
+        {
+          "pid": 148,
+          "start_id": "132",
+          "command": []
+        },
+        {
+          "pid": 149,
+          "start_id": "200",
+          "command": []
+        },
+        {
+          "pid": 150,
+          "start_id": "200",
+          "command": []
+        },
+        {
+          "pid": 152,
+          "start_id": "201",
+          "command": []
+        },
+        {
+          "pid": 153,
+          "start_id": "201",
+          "command": []
+        },
+        {
+          "pid": 154,
+          "start_id": "201",
+          "command": []
+        },
+        {
+          "pid": 155,
+          "start_id": "204",
+          "command": []
+        },
+        {
+          "pid": 157,
+          "start_id": "204",
+          "command": []
+        },
+        {
+          "pid": 158,
+          "start_id": "204",
+          "command": []
+        },
+        {
+          "pid": 162,
+          "start_id": "208",
+          "command": []
+        },
+        {
+          "pid": 164,
+          "start_id": "213",
+          "command": []
+        },
+        {
+          "pid": 165,
+          "start_id": "225",
+          "command": []
+        },
+        {
+          "pid": 166,
+          "start_id": "225",
+          "command": []
+        },
+        {
+          "pid": 167,
+          "start_id": "225",
+          "command": []
+        },
+        {
+          "pid": 168,
+          "start_id": "226",
+          "command": []
+        },
+        {
+          "pid": 169,
+          "start_id": "226",
+          "command": []
+        },
+        {
+          "pid": 171,
+          "start_id": "228",
+          "command": []
+        },
+        {
+          "pid": 172,
+          "start_id": "228",
+          "command": []
+        },
+        {
+          "pid": 173,
+          "start_id": "228",
+          "command": []
+        },
+        {
+          "pid": 174,
+          "start_id": "228",
+          "command": []
+        },
+        {
+          "pid": 175,
+          "start_id": "228",
+          "command": []
+        },
+        {
+          "pid": 176,
+          "start_id": "228",
+          "command": []
+        },
+        {
+          "pid": 177,
+          "start_id": "228",
+          "command": []
+        },
+        {
+          "pid": 179,
+          "start_id": "264",
+          "command": []
+        },
+        {
+          "pid": 185,
+          "start_id": "271",
+          "command": []
+        },
+        {
+          "pid": 186,
+          "start_id": "271",
+          "command": []
+        },
+        {
+          "pid": 336,
+          "start_id": "349",
+          "command": []
+        },
+        {
+          "pid": 337,
+          "start_id": "349",
+          "command": []
+        },
+        {
+          "pid": 384,
+          "start_id": "369",
+          "command": []
+        },
+        {
+          "pid": 385,
+          "start_id": "369",
+          "command": []
+        },
+        {
+          "pid": 393,
+          "start_id": "375",
+          "command": [
+            "/sbin/syslogd",
+            "-n"
+          ]
+        },
+        {
+          "pid": 397,
+          "start_id": "377",
+          "command": [
+            "/sbin/klogd",
+            "-n"
+          ]
+        },
+        {
+          "pid": 420,
+          "start_id": "391",
+          "command": [
+            "/sbin/udevd",
+            "-d"
+          ]
+        },
+        {
+          "pid": 470,
+          "start_id": "432",
+          "command": [
+            "/usr/sbin/irqbalance",
+            "--policyscript=/etc/irqbalance.d"
+          ]
+        },
+        {
+          "pid": 497,
+          "start_id": "442",
+          "command": [
+            "dbus-daemon",
+            "--system"
+          ]
+        },
+        {
+          "pid": 503,
+          "start_id": "444",
+          "command": [
+            "/usr/sbin/rpcbind"
+          ]
+        },
+        {
+          "pid": 611,
+          "start_id": "470",
+          "command": [
+            "/bin/sh",
+            "/usr/bin/wifibt-init.sh",
+            "start"
+          ]
+        },
+        {
+          "pid": 619,
+          "start_id": "472",
+          "command": [
+            "/usr/libexec/bluetooth/bluetoothd",
+            "-n"
+          ]
+        },
+        {
+          "pid": 662,
+          "start_id": "487",
+          "command": [
+            "/usr/sbin/ntpd",
+            "-g",
+            "-p",
+            "/var/run/ntpd.pid"
+          ]
+        },
+        {
+          "pid": 671,
+          "start_id": "490",
+          "command": []
+        },
+        {
+          "pid": 677,
+          "start_id": "493",
+          "command": [
+            "/usr/bin/weston"
+          ]
+        },
+        {
+          "pid": 686,
+          "start_id": "499",
+          "command": [
+            "nginx: master process /usr/sbin/nginx"
+          ]
+        },
+        {
+          "pid": 687,
+          "start_id": "499",
+          "command": [
+            "nginx: worker process"
+          ]
+        },
+        {
+          "pid": 690,
+          "start_id": "500",
+          "command": [
+            "/usr/bin/pulseaudio"
+          ]
+        },
+        {
+          "pid": 704,
+          "start_id": "508",
+          "command": [
+            "sshd: /usr/sbin/sshd [listener] 0 of 10-100 startups"
+          ]
+        },
+        {
+          "pid": 708,
+          "start_id": "520",
+          "command": []
+        },
+        {
+          "pid": 721,
+          "start_id": "538",
+          "command": [
+            "/usr/libexec/pulse/gsettings-helper"
+          ]
+        },
+        {
+          "pid": 733,
+          "start_id": "575",
+          "command": [
+            "/usr/libexec/weston-keyboard"
+          ]
+        },
+        {
+          "pid": 734,
+          "start_id": "576",
+          "command": [
+            "/usr/libexec/weston-desktop-shell"
+          ]
+        },
+        {
+          "pid": 735,
+          "start_id": "582",
+          "command": [
+            "/opt/ui/src/apps/sysvolume"
+          ]
+        },
+        {
+          "pid": 736,
+          "start_id": "583",
+          "command": [
+            "/opt/ui/systemui"
+          ]
+        },
+        {
+          "pid": 753,
+          "start_id": "593",
+          "command": []
+        },
+        {
+          "pid": 885,
+          "start_id": "640",
+          "command": [
+            "/bin/sh",
+            "/usr/bin/usbdevice",
+            "start"
+          ]
+        },
+        {
+          "pid": 887,
+          "start_id": "640",
+          "command": [
+            "/usr/bin/adbd"
+          ]
+        },
+        {
+          "pid": 891,
+          "start_id": "643",
+          "command": [
+            "rtk_hciattach",
+            "-n",
+            "-s",
+            "115200",
+            "/dev/ttyS8",
+            "rtk_h5"
+          ]
+        },
+        {
+          "pid": 894,
+          "start_id": "645",
+          "command": []
+        },
+        {
+          "pid": 911,
+          "start_id": "656",
+          "command": []
+        },
+        {
+          "pid": 931,
+          "start_id": "664",
+          "command": [
+            "rpc.statd"
+          ]
+        },
+        {
+          "pid": 945,
+          "start_id": "673",
+          "command": [
+            "/usr/sbin/vsftpd"
+          ]
+        },
+        {
+          "pid": 950,
+          "start_id": "679",
+          "command": [
+            "/bin/sh",
+            "/bin/start_rknn.sh"
+          ]
+        },
+        {
+          "pid": 956,
+          "start_id": "682",
+          "command": [
+            "input-event-daemon"
+          ]
+        },
+        {
+          "pid": 965,
+          "start_id": "780",
+          "command": [
+            "rknn_server"
+          ]
+        },
+        {
+          "pid": 975,
+          "start_id": "821",
+          "command": []
+        },
+        {
+          "pid": 976,
+          "start_id": "821",
+          "command": []
+        },
+        {
+          "pid": 977,
+          "start_id": "821",
+          "command": []
+        },
+        {
+          "pid": 978,
+          "start_id": "821",
+          "command": []
+        },
+        {
+          "pid": 979,
+          "start_id": "821",
+          "command": []
+        },
+        {
+          "pid": 983,
+          "start_id": "833",
+          "command": [
+            "wpa_supplicant",
+            "-B",
+            "-i",
+            "wlan0",
+            "-c",
+            "/etc/wpa_supplicant.conf",
+            "-D",
+            "nl80211"
+          ]
+        },
+        {
+          "pid": 1029,
+          "start_id": "1673",
+          "command": [
+            "-/bin/sh"
+          ]
+        },
+        {
+          "pid": 1373,
+          "start_id": "1379592",
+          "command": [
+            "/opt/ui/src/apps/dashboard"
+          ]
+        },
+        {
+          "pid": 1378,
+          "start_id": "1379615",
+          "command": []
+        },
+        {
+          "pid": 1860,
+          "start_id": "1930864",
+          "command": []
+        },
+        {
+          "pid": 2929,
+          "start_id": "2847237",
+          "command": []
+        },
+        {
+          "pid": 3985,
+          "start_id": "3949012",
+          "command": []
+        },
+        {
+          "pid": 3991,
+          "start_id": "3949691",
+          "command": [
+            "/opt/ui/src/apps/calendar"
+          ]
+        },
+        {
+          "pid": 3996,
+          "start_id": "3949706",
+          "command": []
+        },
+        {
+          "pid": 4005,
+          "start_id": "3949964",
+          "command": [
+            "/opt/ui/src/apps/brightness"
+          ]
+        },
+        {
+          "pid": 4010,
+          "start_id": "3949985",
+          "command": []
+        },
+        {
+          "pid": 4020,
+          "start_id": "3950401",
+          "command": [
+            "/opt/ui/src/apps/led"
+          ]
+        },
+        {
+          "pid": 4025,
+          "start_id": "3950419",
+          "command": []
+        },
+        {
+          "pid": 4040,
+          "start_id": "3950951",
+          "command": []
+        },
+        {
+          "pid": 4042,
+          "start_id": "3950963",
+          "command": [
+            "/opt/ui/src/apps/udpchat"
+          ]
+        },
+        {
+          "pid": 4047,
+          "start_id": "3950980",
+          "command": []
+        },
+        {
+          "pid": 4056,
+          "start_id": "3951183",
+          "command": [
+            "/opt/ui/src/apps/recorder"
+          ]
+        },
+        {
+          "pid": 4061,
+          "start_id": "3951201",
+          "command": []
+        },
+        {
+          "pid": 4072,
+          "start_id": "3951405",
+          "command": [
+            "/opt/ui/src/apps/weather"
+          ]
+        },
+        {
+          "pid": 4077,
+          "start_id": "3951433",
+          "command": []
+        },
+        {
+          "pid": 5025,
+          "start_id": "4966639",
+          "command": []
+        },
+        {
+          "pid": 5923,
+          "start_id": "5220549",
+          "command": []
+        },
+        {
+          "pid": 7155,
+          "start_id": "6120567",
+          "command": []
+        },
+        {
+          "pid": 7219,
+          "start_id": "6262319",
+          "command": []
+        },
+        {
+          "pid": 7881,
+          "start_id": "6927919",
+          "command": []
+        },
+        {
+          "pid": 7922,
+          "start_id": "7080498",
+          "command": []
+        },
+        {
+          "pid": 9416,
+          "start_id": "7167621",
+          "command": []
+        },
+        {
+          "pid": 12488,
+          "start_id": "7207856",
+          "command": []
+        },
+        {
+          "pid": 16452,
+          "start_id": "7259780",
+          "command": []
+        },
+        {
+          "pid": 20280,
+          "start_id": "7310043",
+          "command": []
+        },
+        {
+          "pid": 21861,
+          "start_id": "7331781",
+          "command": []
+        },
+        {
+          "pid": 21862,
+          "start_id": "7332961",
+          "command": []
+        },
+        {
+          "pid": 21883,
+          "start_id": "7340646",
+          "command": []
+        },
+        {
+          "pid": 21910,
+          "start_id": "7392077",
+          "command": []
+        },
+        {
+          "pid": 21911,
+          "start_id": "7408415",
+          "command": []
+        },
+        {
+          "pid": 21913,
+          "start_id": "7443221",
+          "command": []
+        },
+        {
+          "pid": 21914,
+          "start_id": "7454842",
+          "command": []
+        },
+        {
+          "pid": 21934,
+          "start_id": "7476121",
+          "command": []
+        },
+        {
+          "pid": 21935,
+          "start_id": "7486840",
+          "command": []
+        },
+        {
+          "pid": 21969,
+          "start_id": "7502966",
+          "command": [
+            "sshd: root@notty"
+          ]
+        },
+        {
+          "pid": 21971,
+          "start_id": "7502992",
+          "command": [
+            "python3",
+            "/userdata/helmet-validation/switch_native_v2_icons.py",
+            "--bundle",
+            "/userdata/helmet-validation/helmet-native-app-20261115-v2.zip",
+            "--manifest",
+            "/userdata/helmet-validation/bundle-manifest-v2.json",
+            "--apply"
+          ]
+        }
+      ],
+      "observation": "read-only proc stat/cmdline/maps/fd/fdinfo plus NPU load; no process was stopped"
+    }
+  },
+  "vendor_config_sha256_after": "f64a8e2f751ff777b98a36a13a0ad062e0812f2bd6ebd7914a512b772f507b11",
+  "wrappers": {
+    "helmet_app": "cf5523c368fd518ba879e15e68bef1be20462ecb3fec802d72bf34679fb98c40",
+    "helmet_wifi": "c155f609cfde0d881fae281599a2352e3e03ffaf2eb08d9b28bbdc4b25a5b796"
+  },
+  "desktop_files": {
+    "helmet-detection.desktop": {
+      "device": 45830,
+      "inode": 123331,
+      "mode": 420,
+      "uid": 0,
+      "gid": 0,
+      "mtime_ns": 1794694874254948459,
+      "ctime_ns": 1794694874258281880,
+      "bytes": 351,
+      "sha256": "19a6129bd875629cb98ebfbe74ecf000546c515e8226d97b334f42f92a231477"
+    },
+    "helmet-wifi.desktop": {
+      "device": 45830,
+      "inode": 123332,
+      "mode": 420,
+      "uid": 0,
+      "gid": 0,
+      "mtime_ns": 1794694874261615300,
+      "ctime_ns": 1794694874264948721,
+      "bytes": 341,
+      "sha256": "85cc3fb210d91de4bdd1659d20fd1ae54355bebd5510598993a4a073daed3e34"
+    }
+  }
+}
+exit_code=0

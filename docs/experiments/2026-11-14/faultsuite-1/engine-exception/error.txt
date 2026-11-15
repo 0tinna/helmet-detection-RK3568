@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "/userdata/helmet-validation/20261114/verify_runtime_final.py", line 450, in run_fault_case
+    pipeline.run()
+  File "/userdata/helmet-validation/20261114/src/pipeline_runtime.py", line 728, in run
+    raise failure
+pipeline_runtime.PipelineError: detection worker: injected inference failure after real RKNN calls

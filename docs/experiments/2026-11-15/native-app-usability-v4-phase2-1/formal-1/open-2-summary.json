@@ -1,0 +1,39 @@
+{
+  "session": "d9fce8dd35d54c8e9f00ef2219b8a12f",
+  "manager": {
+    "pid": 10681,
+    "starttime": 10136567,
+    "uid": 0
+  },
+  "service": {
+    "pid": 10683,
+    "starttime": 10136643,
+    "uid": 0
+  },
+  "ui": {
+    "pid": 10707,
+    "starttime": 10136858,
+    "uid": 0
+  },
+  "visible": true,
+  "tab": "detection",
+  "sequence": 4,
+  "ack": {
+    "frame_decodes": 217,
+    "frame_requests": 218,
+    "preview_presentations": 217,
+    "qt": {
+      "pid": 10707,
+      "starttime": 10136858,
+      "uid": 0
+    },
+    "received_at": 101558.028168151,
+    "sequence": 4,
+    "tab": "detection",
+    "ui_instance": "e1739a10544f4d42ad3904187803a032",
+    "visible": true
+  },
+  "frame_id": 2674,
+  "running": true,
+  "valid": true
+}

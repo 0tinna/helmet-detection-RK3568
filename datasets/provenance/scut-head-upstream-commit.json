@@ -1,0 +1,101 @@
+﻿{
+    "sha":  "f4e42c1060722b1ae5366269bb0aa28dd3057234",
+    "node_id":  "MDY6Q29tbWl0MTE3NjI1MjA5OmY0ZTQyYzEwNjA3MjJiMWFlNTM2NjI2OWJiMGFhMjhkZDMwNTcyMzQ=",
+    "commit":  {
+                   "author":  {
+                                  "name":  "HCIILAB",
+                                  "email":  "SCUTHCIILAB@GMAIL.COM",
+                                  "date":  "2018-10-23T13:33:23Z"
+                              },
+                   "committer":  {
+                                     "name":  "GitHub",
+                                     "email":  "noreply@github.com",
+                                     "date":  "2018-10-23T13:33:23Z"
+                                 },
+                   "message":  "Update README.md",
+                   "tree":  {
+                                "sha":  "42bbb6bbb4c59aa627ec222b76693dea94fe7f70",
+                                "url":  "https://api.github.com/repos/HCIILAB/SCUT-HEAD-Dataset-Release/git/trees/42bbb6bbb4c59aa627ec222b76693dea94fe7f70"
+                            },
+                   "url":  "https://api.github.com/repos/HCIILAB/SCUT-HEAD-Dataset-Release/git/commits/f4e42c1060722b1ae5366269bb0aa28dd3057234",
+                   "comment_count":  0,
+                   "verification":  {
+                                        "verified":  true,
+                                        "reason":  "valid",
+                                        "signature":  "-----BEGIN PGP SIGNATURE-----\n\nwsBcBAABCAAQBQJbzyMjCRBK7hj4Ov3rIwAAdHIIABCBmjF2pDsHhAy4gMgzf2xC\nrV50s1/hj8jlcaVun2yDoYHtBMQZzwGC3566d5CtzxjWENvSxEe/G4e41HiCIlhW\n9/9rdxLmw4GgaGqyCvEzVdRO0piisEDcwB1ONAjRqomJypdtxKXQyLZ+VFLjChhj\nyDKrcC2VSZyChhwkkjviAg1bRm9PWInsgl9Bs09mZexm08m6oUeo/B2gVQMcjiHt\nKRJh22O0DaqHOUFf7uswwlb1CMlDa/BtNO92w2EDhWxBlw7SIV4DTqQVog6CwTxw\nxKZ3MbJW1miZveWXVqpwFyKuITNzKM5gExoImcOZstFlZ00ddTx2RnwcaxqOV90=\n=dcIU\n-----END PGP SIGNATURE-----\n",
+                                        "payload":  "tree 42bbb6bbb4c59aa627ec222b76693dea94fe7f70\nparent 07e49362ea8ef4c24bbef9cdce486a5235b38e01\nauthor HCIILAB \u003cSCUTHCIILAB@GMAIL.COM\u003e 1540301603 +0800\ncommitter GitHub \u003cnoreply@github.com\u003e 1540301603 +0800\n\nUpdate README.md",
+                                        "verified_at":  "2024-11-14T06:23:18Z"
+                                    }
+               },
+    "url":  "https://api.github.com/repos/HCIILAB/SCUT-HEAD-Dataset-Release/commits/f4e42c1060722b1ae5366269bb0aa28dd3057234",
+    "html_url":  "https://github.com/HCIILAB/SCUT-HEAD-Dataset-Release/commit/f4e42c1060722b1ae5366269bb0aa28dd3057234",
+    "comments_url":  "https://api.github.com/repos/HCIILAB/SCUT-HEAD-Dataset-Release/commits/f4e42c1060722b1ae5366269bb0aa28dd3057234/comments",
+    "author":  {
+                   "login":  "HCIILAB",
+                   "id":  10395226,
+                   "node_id":  "MDQ6VXNlcjEwMzk1MjI2",
+                   "avatar_url":  "https://avatars.githubusercontent.com/u/10395226?v=4",
+                   "gravatar_id":  "",
+                   "url":  "https://api.github.com/users/HCIILAB",
+                   "html_url":  "https://github.com/HCIILAB",
+                   "followers_url":  "https://api.github.com/users/HCIILAB/followers",
+                   "following_url":  "https://api.github.com/users/HCIILAB/following{/other_user}",
+                   "gists_url":  "https://api.github.com/users/HCIILAB/gists{/gist_id}",
+                   "starred_url":  "https://api.github.com/users/HCIILAB/starred{/owner}{/repo}",
+                   "subscriptions_url":  "https://api.github.com/users/HCIILAB/subscriptions",
+                   "organizations_url":  "https://api.github.com/users/HCIILAB/orgs",
+                   "repos_url":  "https://api.github.com/users/HCIILAB/repos",
+                   "events_url":  "https://api.github.com/users/HCIILAB/events{/privacy}",
+                   "received_events_url":  "https://api.github.com/users/HCIILAB/received_events",
+                   "type":  "User",
+                   "user_view_type":  "public",
+                   "site_admin":  false
+               },
+    "committer":  {
+                      "login":  "web-flow",
+                      "id":  19864447,
+                      "node_id":  "MDQ6VXNlcjE5ODY0NDQ3",
+                      "avatar_url":  "https://avatars.githubusercontent.com/u/19864447?v=4",
+                      "gravatar_id":  "",
+                      "url":  "https://api.github.com/users/web-flow",
+                      "html_url":  "https://github.com/web-flow",
+                      "followers_url":  "https://api.github.com/users/web-flow/followers",
+                      "following_url":  "https://api.github.com/users/web-flow/following{/other_user}",
+                      "gists_url":  "https://api.github.com/users/web-flow/gists{/gist_id}",
+                      "starred_url":  "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+                      "subscriptions_url":  "https://api.github.com/users/web-flow/subscriptions",
+                      "organizations_url":  "https://api.github.com/users/web-flow/orgs",
+                      "repos_url":  "https://api.github.com/users/web-flow/repos",
+                      "events_url":  "https://api.github.com/users/web-flow/events{/privacy}",
+                      "received_events_url":  "https://api.github.com/users/web-flow/received_events",
+                      "type":  "User",
+                      "user_view_type":  "public",
+                      "site_admin":  false
+                  },
+    "parents":  [
+                    {
+                        "sha":  "07e49362ea8ef4c24bbef9cdce486a5235b38e01",
+                        "url":  "https://api.github.com/repos/HCIILAB/SCUT-HEAD-Dataset-Release/commits/07e49362ea8ef4c24bbef9cdce486a5235b38e01",
+                        "html_url":  "https://github.com/HCIILAB/SCUT-HEAD-Dataset-Release/commit/07e49362ea8ef4c24bbef9cdce486a5235b38e01"
+                    }
+                ],
+    "stats":  {
+                  "total":  10,
+                  "additions":  4,
+                  "deletions":  6
+              },
+    "files":  [
+                  {
+                      "sha":  "7b1d53284d8f02134a35e99ae5050061e8a4daaa",
+                      "filename":  "README.md",
+                      "status":  "modified",
+                      "additions":  4,
+                      "deletions":  6,
+                      "changes":  10,
+                      "blob_url":  "https://github.com/HCIILAB/SCUT-HEAD-Dataset-Release/blob/f4e42c1060722b1ae5366269bb0aa28dd3057234/README.md",
+                      "raw_url":  "https://github.com/HCIILAB/SCUT-HEAD-Dataset-Release/raw/f4e42c1060722b1ae5366269bb0aa28dd3057234/README.md",
+                      "contents_url":  "https://api.github.com/repos/HCIILAB/SCUT-HEAD-Dataset-Release/contents/README.md?ref=f4e42c1060722b1ae5366269bb0aa28dd3057234",
+                      "patch":  "@@ -49,23 +49,21 @@ HolleywoodHeads dataset is a head detection datset. HollywoodHeads dataset conta\n [**Brainwash dataset**](https://exhibits.stanford.edu/data/catalog/sx925dc9385) \n Brainwash dataset is related for face detection. Brainwash dataset contains 11917 images with 91146 labeled people.\n \n-# Citation and Contact\n-\n-Please consider to cite our paper when you use our database:\n+# Citation\n \n ```\n @article{peng2018detecting,\n   title={Detecting Heads using Feature Refine Net and Cascaded Multi-scale Architecture},\n   author={Peng, Dezhi and Sun, Zikai and Chen, Zirong and Cai, Zirui and Xie, Lele and Jin, Lianwen},\n-  journal={International Confernence on Pattern Recognition, 2018},\n+  journal={arXiv preprint arXiv:1803.09256},\n   year={2018}\n }\n ```\n \n # Remark\n \n-The SCUT-Head database is free to the academic community for research purpose usage only.\n+The SCUT-HEAD database is free to the academic community for research purpose usage only.\n \n # Contact\n \n-For any questions about this database please contact the authors by sending email to dezhi.peng@foxmail.com and eelwjin@scut.edu.cn.\n+For any questions about this database please contact the authors by sending email to eelwjin@scut.edu.cn and dezhi.peng@foxmail.com."
+                  }
+              ]
+}

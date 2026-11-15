@@ -1,0 +1,35 @@
+{
+  "baseline_local_before_changes": {
+    "helmet/app/qml/Main.qml": "c680484fa88a21cebf244f8a0846ed165dd2489ea38b19c006ed378feeabcced",
+    "helmet/app/service.py": "d22000a1060a8c4a584661719b3825715a19b855267ab7772b376f3ad43e8c8f",
+    "helmet/app/resident.py": "a8490e30eff245158b789b824b6c76f8653b70debc04fdda52fb41d4e431ce3b",
+    "helmet/app/launch.py": "4428774d243396a4c2994a13460ec5f46ec9c2c1f8542a2d182f3f74c642fc52"
+  },
+  "final_local": {
+    "helmet/app/qml/Main.qml": "7ed2edc4c37cd5067e1785dc4f06d8c7ecc6d716c9cdfaebf1aa7e92951bb93e",
+    "helmet/app/service.py": "d22000a1060a8c4a584661719b3825715a19b855267ab7772b376f3ad43e8c8f",
+    "helmet/app/resident.py": "a8490e30eff245158b789b824b6c76f8653b70debc04fdda52fb41d4e431ce3b",
+    "helmet/app/launch.py": "4428774d243396a4c2994a13460ec5f46ec9c2c1f8542a2d182f3f74c642fc52"
+  },
+  "changed_local_files": [
+    "helmet/app/qml/Main.qml"
+  ],
+  "host_only_test_files": [
+    "tests/test_native_app_usability.py",
+    "tests/test_app_resident.py"
+  ],
+  "phase1_board_v2_temporary": {
+    "src/app/qml/Main.qml": "7ed2edc4c37cd5067e1785dc4f06d8c7ecc6d716c9cdfaebf1aa7e92951bb93e",
+    "src/app/service.py": "3518e26632c9cea72523829a16d5bdc451d5aad5adfa6e0e443059cfa26c681c",
+    "src/app/resident.py": "ABSENT",
+    "src/app/launch.py": "8db80c3cdb10519812b4d2b943f1542042a75c9bb67f74a2bfa374ee56ebe2ac",
+    "note": "?????????????"
+  },
+  "v4_archive": {
+    "path": "dist/helmet-native-app-20261115-v4.zip",
+    "sha256": "b5adcd71f2252997d0831f317e3891aa138fcc3d5987f854bb24ca748ea70654",
+    "bytes": 39226506,
+    "code_identity": "3134e8672cf03c410404c8c5a3c577346b8600be9cff19c92adffe597e78e42b"
+  },
+  "cfg_sha256": "f64a8e2f751ff777b98a36a13a0ad062e0812f2bd6ebd7914a512b772f507b11"
+}

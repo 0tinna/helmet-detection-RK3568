@@ -1,0 +1,41 @@
+{
+  "started": 1794649228.4522784,
+  "source": "host LAN to 192.168.1.3:8086",
+  "phone_tested": false,
+  "observations": [
+    {
+      "monotonic": 161263.843,
+      "error": "HTTPConnectionPool(host='192.168.1.3', port=8086): Max retries exceeded with url: /status.json (Caused by ConnectTimeoutError(<HTTPConnection(host='192.168.1.3', port=8086) at 0x2003d5a99f0>, 'Connection to 192.168.1.3 timed out. (connect timeout=2)'))"
+    },
+    {
+      "monotonic": 161266.109,
+      "error": "HTTPConnectionPool(host='192.168.1.3', port=8086): Max retries exceeded with url: /status.json (Caused by ConnectTimeoutError(<HTTPConnection(host='192.168.1.3', port=8086) at 0x2003d5a9e70>, 'Connection to 192.168.1.3 timed out. (connect timeout=2)'))"
+    },
+    {
+      "monotonic": 161268.375,
+      "error": "HTTPConnectionPool(host='192.168.1.3', port=8086): Max retries exceeded with url: /status.json (Caused by ConnectTimeoutError(<HTTPConnection(host='192.168.1.3', port=8086) at 0x2003d5aa1a0>, 'Connection to 192.168.1.3 timed out. (connect timeout=2)'))"
+    },
+    {
+      "monotonic": 161270.64,
+      "error": "HTTPConnectionPool(host='192.168.1.3', port=8086): Max retries exceeded with url: /status.json (Caused by ConnectTimeoutError(<HTTPConnection(host='192.168.1.3', port=8086) at 0x2003d5aa4d0>, 'Connection to 192.168.1.3 timed out. (connect timeout=2)'))"
+    },
+    {
+      "monotonic": 161272.906,
+      "error": "HTTPConnectionPool(host='192.168.1.3', port=8086): Max retries exceeded with url: /status.json (Caused by ConnectTimeoutError(<HTTPConnection(host='192.168.1.3', port=8086) at 0x2003d5aa800>, 'Connection to 192.168.1.3 timed out. (connect timeout=2)'))"
+    },
+    {
+      "monotonic": 161275.171,
+      "error": "HTTPConnectionPool(host='192.168.1.3', port=8086): Max retries exceeded with url: /status.json (Caused by ConnectTimeoutError(<HTTPConnection(host='192.168.1.3', port=8086) at 0x2003d5aa590>, 'Connection to 192.168.1.3 timed out. (connect timeout=2)'))"
+    },
+    {
+      "monotonic": 161277.453,
+      "error": "HTTPConnectionPool(host='192.168.1.3', port=8086): Max retries exceeded with url: /status.json (Caused by ConnectTimeoutError(<HTTPConnection(host='192.168.1.3', port=8086) at 0x2003d5aa290>, 'Connection to 192.168.1.3 timed out. (connect timeout=2)'))"
+    },
+    {
+      "monotonic": 161279.718,
+      "error": "HTTPConnectionPool(host='192.168.1.3', port=8086): Max retries exceeded with url: /status.json (Caused by ConnectTimeoutError(<HTTPConnection(host='192.168.1.3', port=8086) at 0x2003d5a9f60>, 'Connection to 192.168.1.3 timed out. (connect timeout=2)'))"
+    }
+  ],
+  "completed": 1794649246.6023839,
+  "successful": 0
+}

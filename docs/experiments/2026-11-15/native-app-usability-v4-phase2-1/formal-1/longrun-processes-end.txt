@@ -1,0 +1,180 @@
+  PID  PPID   SID STAT     ELAPSED COMMAND
+    1     0     1 Ss    1-04:17:53 init
+    2     0     0 S     1-04:17:53 [kthreadd]
+    3     2     0 I<    1-04:17:53 [rcu_gp]
+    4     2     0 I<    1-04:17:53 [rcu_par_gp]
+    8     2     0 I<    1-04:17:53 [mm_percpu_wq]
+    9     2     0 S     1-04:17:53 [rcu_tasks_rude_]
+   10     2     0 S     1-04:17:53 [ksoftirqd/0]
+   11     2     0 I     1-04:17:53 [rcu_sched]
+   12     2     0 S     1-04:17:53 [migration/0]
+   13     2     0 S     1-04:17:53 [cpuhp/0]
+   14     2     0 S     1-04:17:53 [cpuhp/1]
+   15     2     0 S     1-04:17:53 [migration/1]
+   16     2     0 S     1-04:17:53 [ksoftirqd/1]
+   19     2     0 S     1-04:17:53 [cpuhp/2]
+   20     2     0 S     1-04:17:53 [migration/2]
+   21     2     0 S     1-04:17:53 [ksoftirqd/2]
+   24     2     0 S     1-04:17:53 [cpuhp/3]
+   25     2     0 S     1-04:17:53 [migration/3]
+   26     2     0 S     1-04:17:53 [ksoftirqd/3]
+   29     2     0 S     1-04:17:53 [kdevtmpfs]
+   30     2     0 I<    1-04:17:53 [netns]
+   35     2     0 S     1-04:17:53 [oom_reaper]
+   36     2     0 I<    1-04:17:53 [writeback]
+   76     2     0 I<    1-04:17:53 [kblockd]
+   77     2     0 S     1-04:17:53 [kconsole]
+   78     2     0 I<    1-04:17:53 [tpm_dev_wq]
+   79     2     0 I<    1-04:17:53 [edac-poller]
+   80     2     0 I<    1-04:17:53 [devfreq_wq]
+   81     2     0 S     1-04:17:53 [watchdogd]
+   84     2     0 I<    1-04:17:53 [rpciod]
+   86     2     0 I<    1-04:17:53 [xprtiod]
+   87     2     0 I<    1-04:17:53 [cfg80211]
+   88     2     0 S     1-04:17:53 [irq/84-rockchip]
+  108     2     0 S     1-04:17:53 [kswapd0]
+  109     2     0 I<    1-04:17:53 [nfsiod]
+  110     2     0 I<    1-04:17:53 [xfsalloc]
+  111     2     0 I<    1-04:17:53 [xfs_mru_cache]
+  113     2     0 S     1-04:17:53 [irq/86-rockchip]
+  116     2     0 S     1-04:17:53 [irq/87-rockchip]
+  119     2     0 S     1-04:17:53 [queue_work0]
+  120     2     0 S     1-04:17:53 [queue_work1]
+  121     2     0 S     1-04:17:53 [queue_work2]
+  122     2     0 S     1-04:17:53 [queue_work3]
+  123     2     0 S     1-04:17:53 [queue_work4]
+  124     2     0 S     1-04:17:53 [queue_work5]
+  125     2     0 S     1-04:17:53 [irq/29-fdea0400]
+  126     2     0 S     1-04:17:53 [irq/34-fdee0000]
+  127     2     0 S     1-04:17:53 [irq/36-fdef0000]
+  128     2     0 S     1-04:17:53 [irq/32-fded0000]
+  129     2     0 S     1-04:17:53 [hwrng]
+  133     2     0 SN    1-04:17:53 [dmabuf-deferred]
+  134     2     0 I<    1-04:17:53 [nvme-wq]
+  135     2     0 I<    1-04:17:53 [nvme-reset-wq]
+  136     2     0 I<    1-04:17:53 [nvme-delete-wq]
+  137     2     0 S     1-04:17:53 [scsi_eh_0]
+  138     2     0 I<    1-04:17:53 [scsi_tmf_0]
+  139     2     0 I<    1-04:17:53 [stmmac_wq]
+  142     2     0 I<    1-04:17:53 [stmmac_wq]
+  144     2     0 I<    1-04:17:52 [uas]
+  145     2     0 I<    1-04:17:52 [goodix_wq]
+  146     2     0 S     1-04:17:52 [irq/97-rk817]
+  147     2     0 S     1-04:17:52 [irq/122-gt9xx]
+  148     2     0 S     1-04:17:52 [irq/123-rtc-pcf]
+  149     2     0 S     1-04:17:51 [cfinteractive]
+  150     2     0 S     1-04:17:51 [sugov:0]
+  152     2     0 I<    1-04:17:51 [sdhci]
+  153     2     0 S     1-04:17:51 [irq/64-mmc0]
+  154     2     0 I<    1-04:17:51 [cryptodev_queue]
+  155     2     0 S     1-04:17:51 [irq/124-headset]
+  157     2     0 I<    1-04:17:51 [ipv6_addrconf]
+  158     2     0 S<    1-04:17:51 [krfcommd]
+  162     2     0 I<    1-04:17:51 [mmc_complete]
+  164     2     0 S     1-04:17:51 [irq/31-rga2]
+  165     2     0 I<    1-04:17:51 [iommu_wq]
+  166     2     0 S     1-04:17:51 [irq/37-fdf40000]
+  167     2     0 I<    1-04:17:51 [gpu_power_off_w]
+  168     2     0 I<    1-04:17:51 [free_pages_work]
+  169     2     0 I<    1-04:17:51 [kbase_job_fault]
+  171     2     0 I<    1-04:17:51 [hpd_queue]
+  172     2     0 S     1-04:17:51 [irq/52-fe0a0000]
+  173     2     0 S     1-04:17:51 [cec-dw_hdmi]
+  174     2     0 S     1-04:17:51 [irq/52-dw-hdmi-]
+  175     2     0 S     1-04:17:51 [card0-crtc0]
+  176     2     0 S     1-04:17:51 [card0-crtc1]
+  177     2     0 S     1-04:17:51 [card0-crtc2]
+  179     2     0 I<    1-04:17:51 [rknpu_power_off]
+  185     2     0 S     1-04:17:51 [jbd2/mmcblk0p6-]
+  186     2     0 I<    1-04:17:51 [ext4-rsv-conver]
+  336     2     0 S     1-04:17:50 [jbd2/mmcblk0p7-]
+  337     2     0 I<    1-04:17:50 [ext4-rsv-conver]
+  384     2     0 S     1-04:17:50 [jbd2/mmcblk0p8-]
+  385     2     0 I<    1-04:17:50 [ext4-rsv-conver]
+  393     1   392 S     1-04:17:50 /sbin/syslogd -n
+  397     1   396 S     1-04:17:50 /sbin/klogd -n
+  420     1   420 Ss    1-04:17:50 /sbin/udevd -d
+  470     1   470 Ssl   1-04:17:49 /usr/sbin/irqbalance --policyscript=/etc/irqbalance.d
+  503     1   503 Ss    1-04:17:49 /usr/sbin/rpcbind
+  611     1   202 S     1-04:17:49 /bin/sh /usr/bin/wifibt-init.sh start
+  619     1   618 S     1-04:17:49 /usr/libexec/bluetooth/bluetoothd -n
+  662     1   662 Ss    1-04:17:49 /usr/sbin/ntpd -g -p /var/run/ntpd.pid
+  671     2     0 S     1-04:17:49 [rtw_sdio_tx]
+  677     1   202 Sl    1-04:17:49 /usr/bin/weston
+  686     1   686 Ss    1-04:17:49 nginx: master process /usr/sbin/nginx
+  690     1   202 S<l   1-04:17:48 /usr/bin/pulseaudio
+  704     1   704 Ss    1-04:17:48 sshd: /usr/sbin/sshd [listener] 0 of 10-100 startups
+  708     2     0 I<    1-04:17:48 [kbase_event]
+  721   690   202 Sl    1-04:17:48 /usr/libexec/pulse/gsettings-helper
+  733   677   733 Ss    1-04:17:48 /usr/libexec/weston-keyboard
+  734   677   734 Ss    1-04:17:48 /usr/libexec/weston-desktop-shell
+  735     1   202 Sl    1-04:17:48 /opt/ui/src/apps/sysvolume
+  753     2     0 I<    1-04:17:48 [btfwwork]
+  885     1   743 S     1-04:17:47 /bin/sh /usr/bin/usbdevice start
+  887   885   743 Sl    1-04:17:47 /usr/bin/adbd
+  891   611   202 S     1-04:17:47 rtk_hciattach -n -s 115200 /dev/ttyS8 rtk_h5
+  894     2     0 I<    1-04:17:47 [kbase_event]
+  931     1   931 Ss    1-04:17:47 rpc.statd
+  945     1   944 S     1-04:17:47 /usr/sbin/vsftpd
+  950     1   202 S     1-04:17:47 /bin/sh /bin/start_rknn.sh
+  956     1   956 Ss    1-04:17:47 input-event-daemon
+  965   950   202 Sl    1-04:17:46 rknn_server
+  975     2     0 S     1-04:17:45 [test_thread]
+  976     2     0 S     1-04:17:45 [disp_eng_share_]
+  977     2     0 S     1-04:17:45 [msg_notify_thre]
+  978     2     0 S     1-04:17:45 [RTW_RX_CB_THREA]
+  979     2     0 S     1-04:17:45 [RTW_TX_CB_THREA]
+  983     1   983 Ss    1-04:17:45 wpa_supplicant -B -i wlan0 -c /etc/wpa_supplicant.conf -D nl80211
+ 2109     2     0 I          32:09 [kworker/0:0-events]
+ 2442     2     0 I<         31:28 [kworker/1:2H-kblockd]
+ 3235     2     0 I          29:43 [kworker/u8:0-events_unbound]
+ 4924     2     0 I          26:08 [kworker/2:1-events]
+ 5089     1  5084 S          25:45 python3 /userdata/helmet-validation/native-app-usability-v4-phase2-1/persistent-pointer.py --socket /userdata/helmet-validation/native-app-usability-v4-phase2-1/persistent-pointer-1/pointer.sock --receipts /userdata/helmet-validation/native-app-usability-v4-phase2-1/persistent-pointer-1/pointer-events.jsonl --ready /userdata/helmet-validation/native-app-usability-v4-phase2-1/persistent-pointer-1/ready.json
+ 5101     2     0 I<      02:07:47 [kworker/3:2H-kblockd]
+ 5109 24545 24541 Sl      02:07:43 /opt/ui/src/apps/brightness
+ 5115     2     0 I<      02:07:43 [kbase_event]
+ 5132 24545 24541 Sl      02:07:40 /opt/ui/src/apps/dashboard
+ 5137     2     0 I<      02:07:39 [kbase_event]
+ 5729     2     0 I          24:36 [kworker/u8:3-events_unbound]
+ 7497     2     0 I<         19:45 [kworker/2:1H-kblockd]
+ 7564     2     0 I<         19:34 [kworker/u9:1-uvcvideo]
+ 8109     2     0 I          18:08 [kworker/u8:1-devfreq_wq]
+ 8234     2     0 I<         17:50 [kworker/3:0H-kblockd]
+ 8298     2     0 I<         17:39 [kworker/0:1H-kblockd]
+ 8403     1  8344 S          17:30 python3 /userdata/helmet-validation/native-app-usability-v4-phase2-1/persistent-touchscreen.py --socket /userdata/helmet-validation/native-app-usability-v4-phase2-1/persistent-touch-3/touch.sock --receipts /userdata/helmet-validation/native-app-usability-v4-phase2-1/persistent-touch-3/touch-events.jsonl --ready /userdata/helmet-validation/native-app-usability-v4-phase2-1/persistent-touch-3/ready.json
+ 9684     2     0 I<         14:20 [kworker/u9:2-kbase_pm_poweroff_wait]
+10383     2     0 I<         09:48 [kworker/2:0H]
+10531     2     0 I<         09:07 [kworker/u9:0-uvcvideo]
+10684     2     0 I          08:27 [kworker/0:2-events]
+11199     2     0 I          07:37 [kworker/3:2]
+11227     2     0 I          07:33 [kworker/1:1]
+11451     2     0 I<         07:01 [kworker/1:1H-kblockd]
+11544     2     0 I<         06:49 [kworker/0:0H-kblockd]
+11587     2     0 I<         06:44 [kworker/u9:3-uvcvideo]
+12190     2     0 I          05:25 [kworker/2:0-events_freezable]
+12566     2     0 I<         04:54 [kworker/u9:4-mali_jd]
+12880     1 12880 Dsl        04:24 /usr/bin/python3 /userdata/helmet-validation/20261115-native-app-v4-r2-local-2/src/app/resident.py --root /userdata/helmet-validation/20261115-native-app-v4-r2-local-2 --tab detection
+12882 12880 12880 Rl         04:23 /usr/bin/python3 /userdata/helmet-validation/20261115-native-app-v4-r2-local-2/src/app/service.py --root /userdata/helmet-validation/20261115-native-app-v4-r2-local-2 --port 0 --token-file /userdata/helmet-validation/20261115-native-app-v4-r2-local-2/app-state/session-cce9979a86c5499fb43d456353290f75/token --ready-file /userdata/helmet-validation/20261115-native-app-v4-r2-local-2/app-state/session-cce9979a86c5499fb43d456353290f75/ready.json --lifecycle-file /userdata/helmet-validation/20261115-native-app-v4-r2-local-2/app-state/session-cce9979a86c5499fb43d456353290f75/service-state.json --lease-fd 5 --lease-dir /userdata/helmet-validation/resident-state --resident-session cce9979a86c5499fb43d456353290f75 --resident-dir /userdata/helmet-validation/resident-state
+12906 12880 12880 Rl         04:21 /usr/bin/qmlscene /userdata/helmet-validation/20261115-native-app-v4-r2-local-2/app-state/session-cce9979a86c5499fb43d456353290f75/Ui-24f2d57f7ccd40598fb3731c6f85d0a6.qml
+12912     2     0 I<         04:21 [kbase_event]
+13416     2     0 I<         03:31 [kworker/2:2H-kblockd]
+13596   704 13596 Ss         03:19 sshd: root@notty
+13600 13596 13600 Ss         03:19 bash -c echo c2V0IC1ldQpleHA9L3VzZXJkYXRhL2hlbG1ldC12YWxpZGF0aW9uL25hdGl2ZS1hcHAtdXNhYmlsaXR5LXY0LXBoYXNlMi0xL2Zvcm1hbC0xCnB5dGhvbjMgLSAiJGV4cCIgPDwnUFknCmltcG9ydCBqc29uLG9zLHRpbWUsdXJsbGliLnJlcXVlc3QKZnJvbSBwYXRobGliIGltcG9ydCBQYXRoCm91dD1QYXRoKCcvdXNlcmRhdGEvaGVsbWV0LXZhbGlkYXRpb24vbmF0aXZlLWFwcC11c2FiaWxpdHktdjQtcGhhc2UyLTEvZm9ybWFsLTEnKQpyZWM9anNvbi5sb2FkcyhQYXRoKCcvdXNlcmRhdGEvaGVsbWV0LXZhbGlkYXRpb24vcmVzaWRlbnQtc3RhdGUvcmVjb3JkLmpzb24nKS5yZWFkX3RleHQoKSk7IGFwcD1yZWNbJ2FwcGxpY2F0aW9uJ107IHNlc3Npb249YXBwWydzZXNzaW9uJ107IHBpZHM9eydtYW5hZ2VyJzpyZWNbJ21hbmFnZXInXVsncGlkJ10sJ3NlcnZpY2UnOnJlY1snc2VydmljZSddWydwaWQnXSwndWknOnJlY1sndWknXVsncGlkJ119CnM9UGF0aChyZWNbJ3Jvb3QnXSkvJ2FwcC1zdGF0ZScvKCdzZXNzaW9uLScrc2Vzc2lvbik7IHJlYWR5PWpzb24ubG9hZHMoKHMvJ3JlYWR5Lmpzb24nKS5yZWFkX3RleHQoKSk7IHRva2VuPShzLyd0b2tlbicpLnJlYWRfdGV4dCgpLnN0cmlwKCkKcm93cz1bXTsgb3JpZ2luPXRpbWUubW9ub3RvbmljKCkKZm9yIGluZGV4IGluIHJhbmdlKDE4MSk6CiByZXE9dXJsbGliLnJlcXVlc3QuUmVxdWVzdChmImh0dHA6Ly8xMjcuMC4wLjE6e3JlYWR5Wydwb3J0J119L2FwaS9zdGF0dXMiLGhlYWRlcnM9eydYLUhlbG1ldC1Ub2tlbic6dG9rZW59KQogd2l0aCB1cmxsaWIucmVxdWVzdC51cmxvcGVuKHJlcSx0aW1lb3V0PTUpIGFzIHJlczogYm9keT1qc29uLmxvYWQocmVzKQogZD1ib2R5WydkZXRlY3Rpb24nXTsgcm93cy5hcHBlbmQoeydpbmRleCc6aW5kZXgsJ21vbm90b25pYyc6dGltZS5tb25vdG9uaWMoKSwnZWxhcHNlZCc6dGltZS5tb25vdG9uaWMoKS1vcmlnaW4sJ3J1bm5pbmcnOmQuZ2V0KCdydW5uaW5nJyksJ3ZhbGlkJzpkLmdldCgndmFsaWQnKSwnc3RhdGUnOmQuZ2V0KCdzdGF0ZScpLCdmcmFtZV9pZCc6ZC5nZXQoJ2ZyYW1lX2lkJyksJ2dlbmVyYXRpb24nOmQuZ2V0KCdnZW5lcmF0aW9uJyksJ3NvdXJjZV9lcG9jaCc6ZC5nZXQoJ3NvdXJjZV9lcG9jaCcpLCdzZWxlY3Rpb24nOmQuZ2V0KCdzZWxlY3Rpb24nKSwncHJvY2Vzc19hbGl2ZSc6e25hbWU6b3MucGF0aC5leGlzdHMoJy9wcm9jLycrc3RyKHBpZCkpIGZvciBuYW1lLHBpZCBpbiBwaWRzLml0ZW1zKCl9fSkKIGlmIGluZGV4IGFuZCBpbmRleCUzMD09MDogcHJpbnQoJ1BST0dSRVNTJyxpbmRleCxkLmdldCgnZnJhbWVfaWQnKSxmbHVzaD1UcnVlKQogdGltZS5zbGVlcCgxKQoob3V0Lydsb25ncnVuLXNhbXBsZXMtMTgxcy5qc29ubCcpLndyaXRlX3RleHQoJycuam9pbihqc29uLmR1bXBzKHJvdyxzZXBhcmF0b3JzPSgnLCcsJzonKSkrJ1xuJyBmb3Igcm93IGluIHJvd3MpLGVuY29kaW5nPSd1dGYtOCcpCmZyYW1lcz1bcm93WydmcmFtZV9pZCddIGZvciByb3cgaW4gcm93cyBpZiB0eXBlKHJvd1snZnJhbWVfaWQnXSkgaXMgaW50XQpwcm9jZXNzX2NoYW5nZXM9c3VtKHJvd1sncHJvY2Vzc19hbGl2ZSddIT1yb3dzWzBdWydwcm9jZXNzX2FsaXZlJ10gZm9yIHJvdyBpbiByb3dzKQpzdW1tYXJ5PXsnc2Vzc2lvbic6c2Vzc2lvbiwnc2FtcGxlcyc6bGVuKHJvd3MpLCdlbGFwc2VkX3NlY29uZHMnOnJvd3NbLTFdWydlbGFwc2VkJ10tcm93c1swXVsnZWxhcHNlZCddLCdmcmFtZV9zdGFydCc6ZnJhbWVzWzBdIGlmIGZyYW1lcyBlbHNlIE5vbmUsJ2ZyYW1lX2VuZCc6ZnJhbWVzWy0xXSBpZiBmcmFtZXMgZWxzZSBOb25lLCdmcmFtZV9kZWNyZWFzZXMnOnN1bShiPGEgZm9yIGEsYiBpbiB6aXAoZnJhbWVzLGZyYW1lc1sxOl0pKSwncnVubmluZ19mYWxzZSc6c3VtKG5vdCByb3dbJ3J1bm5pbmcnXSBmb3Igcm93IGluIHJvd3MpLCd2YWxpZF9mYWxzZSc6c3VtKG5vdCByb3dbJ3ZhbGlkJ10gZm9yIHJvdyBpbiByb3dzKSwnZ2VuZXJhdGlvbl92YWx1ZXMnOnNvcnRlZCh7c3RyKHJvd1snZ2VuZXJhdGlvbiddKSBmb3Igcm93IGluIHJvd3N9KSwnc291cmNlX2Vwb2NoX3ZhbHVlcyc6c29ydGVkKHtzdHIocm93Wydzb3VyY2VfZXBvY2gnXSkgZm9yIHJvdyBpbiByb3dzfSksJ3Byb2Nlc3NfYWxpdmVfc3RhcnQnOnJvd3NbMF1bJ3Byb2Nlc3NfYWxpdmUnXSwncHJvY2Vzc19jaGFuZ2VzJzpwcm9jZXNzX2NoYW5nZXMsJ21hbmFnZXInOnJlY1snbWFuYWdlciddLCdzZXJ2aWNlJzpyZWNbJ3NlcnZpY2UnXSwndWknOnJlY1sndWknXX0KKG91dC8nbG9uZ3J1bi1zdW1tYXJ5Lmpzb24nKS53cml0ZV90ZXh0KGpzb24uZHVtcHMoc3VtbWFyeSxlbnN1cmVfYXNjaWk9RmFsc2UsaW5kZW50PTIpKydcbicsZW5jb2Rpbmc9J3V0Zi04JykKcHJpbnQoJ1NVTU1BUlknLGpzb24uZHVtcHMoc3VtbWFyeSxlbnN1cmVfYXNjaWk9RmFsc2Usc2VwYXJhdG9ycz0oJywnLCc6JykpKQpQWQpjcCAvdXNlcmRhdGEvaGVsbWV0LXZhbGlkYXRpb24vcmVzaWRlbnQtc3RhdGUvcmVjb3JkLmpzb24gIiRleHAvbG9uZ3J1bi1yZWNvcmQtZW5kLmpzb24iCnBzIC1vIHBpZCxwcGlkLHNpZCxzdGF0LGV0aW1lLGFyZ3MgPiAiJGV4cC9sb25ncnVuLXByb2Nlc3Nlcy1lbmQudHh0IgpmZm1wZWcgLWhpZGVfYmFubmVyIC1sb2dsZXZlbCBlcnJvciAtZiBrbXNncmFiIC1pIC0gLWZyYW1lczp2IDEgLXZmICdod2Rvd25sb2FkLGZvcm1hdD1iZ3IwJyAteSAiJGV4cC9sb25ncnVuLXNjcmVlbi1lbmQucG5nIgplY2hvIE5QVT0kKGNhdCAvc3lzL2tlcm5lbC9kZWJ1Zy9ya25wdS9sb2FkIDI+L2Rldi9udWxsIHx8IGVjaG8gdW5hdmFpbGFibGUp | base64 -d | sh
+13603 13600 13600 S          03:19 sh
+13662     2     0 I          03:14 [kworker/0:1-events]
+13818     2     0 I          03:03 [kworker/u8:2-events_unbound]
+14949     2     0 I<         01:42 [kworker/0:2H-kblockd]
+15966     2     0 I<         00:27 [kworker/3:1H]
+16340 13603 13600 R          00:00 ps -o pid,ppid,sid,stat,etime,args
+22527     2     0 I       01:27:31 [kworker/3:1-events]
+24231     1   202 Sl      04:16:32 /opt/ui/src/apps/reminders
+24236     2     0 I<      04:16:32 [kbase_event]
+24544     1 24541 Sl      03:39:09 /opt/ui/src/apps/sysvolume
+24545     1 24541 Sl      03:39:09 /opt/ui/systemui
+24554     2     0 I<      03:39:09 [kbase_event]
+24563     2     0 I<      03:39:09 [kbase_event]
+28495 24545 24541 Sl      03:12:32 /opt/ui/src/apps/calendar
+28500     2     0 I<      03:12:32 [kbase_event]
+30916 24545 24541 Sl         48:37 /opt/ui/src/apps/calculator
+30921     2     0 I<         48:37 [kbase_event]
+32048     2     0 I          37:09 [kworker/1:0-mm_percpu_wq]

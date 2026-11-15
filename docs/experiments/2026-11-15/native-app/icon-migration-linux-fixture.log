@@ -1,0 +1,31 @@
+test_desktop_symlink_does_not_touch_external_file (__main__.Preconditions) ... ok
+test_exclusive_creation_preserves_existing_wrapper (__main__.Preconditions) ... ok
+test_failed_write_with_unowned_content_is_preserved_and_reported (__main__.Preconditions) ... ok
+test_failure_restores_owned_write_but_preserves_third_party_desktop (__main__.Preconditions) ... ok
+test_flush_error_after_real_write_restores_registered_desktop (__main__.Preconditions) ... ok
+test_inside_root_target_requires_verified_hash (__main__.Preconditions) ... ok
+test_missing_desktop_refuses_before_owned_changes (__main__.Preconditions) ... ok
+test_new_target_outside_release_root_refuses (__main__.Preconditions) ... ok
+test_partial_write_failure_is_restored (__main__.Preconditions) ... ok
+test_read_only_plan_does_not_create_vendor_outputs (__main__.Preconditions) ... ok
+test_success_updates_only_owned_desktops_and_records_hashes (__main__.Preconditions) ... ok
+test_unrelated_desktop_refuses_before_owned_changes (__main__.Preconditions) ... ok
+test_vendor_directory_regular_file_refuses (__main__.Preconditions) ... ok
+test_vendor_directory_symlink_does_not_write_outside_root (__main__.Preconditions) ... ok
+test_active_npu_load_refuses (__main__.ShutdownGate) ... ok
+test_hidden_process_inventory_refuses (__main__.ShutdownGate) ... ok
+test_live_recorded_gui_refuses_even_when_runner_is_gone (__main__.ShutdownGate) ... ok
+test_live_recorded_runner_refuses (__main__.ShutdownGate) ... ok
+test_live_state_transition_preserves_start_identity (__main__.ShutdownGate) ... ok
+test_npu_handle_refuses_without_runtime_mapping (__main__.ShutdownGate) ... ok
+test_reused_gui_pid_is_not_mistaken_for_old_gui (__main__.ShutdownGate) ... ok
+test_rknn_mapping_refuses_idle_load (__main__.ShutdownGate) ... ok
+test_terminal_cleanup_and_empty_npu_handles_pass (__main__.ShutdownGate) ... ok
+test_unreadable_live_process_evidence_refuses (__main__.ShutdownGate) ... ok
+test_unrelated_detection_job_refuses (__main__.ShutdownGate) ... ok
+System.Management.Automation.RemoteException
+----------------------------------------------------------------------
+Ran 25 tests in 1.250s
+System.Management.Automation.RemoteException
+OK
+exit_code=0

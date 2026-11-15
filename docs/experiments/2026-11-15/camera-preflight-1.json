@@ -1,0 +1,94 @@
+{
+  "schema_version": 1,
+  "created_at_unix": 1794702462.2654927,
+  "purpose": "read-only camera presence preflight after user reports camera available; no video open or NPU execution",
+  "active_app_processes": [],
+  "video_nodes": [
+    {
+      "node": "/dev/video0",
+      "name": "rkisp_mainpath",
+      "device": "/sys/devices/platform/rkisp-vir0"
+    },
+    {
+      "node": "/dev/video1",
+      "name": "rkisp_selfpath",
+      "device": "/sys/devices/platform/rkisp-vir0"
+    },
+    {
+      "node": "/dev/video2",
+      "name": "rkisp_rawwr0",
+      "device": "/sys/devices/platform/rkisp-vir0"
+    },
+    {
+      "node": "/dev/video3",
+      "name": "rkisp_rawwr2",
+      "device": "/sys/devices/platform/rkisp-vir0"
+    },
+    {
+      "node": "/dev/video4",
+      "name": "rkisp_rawwr3",
+      "device": "/sys/devices/platform/rkisp-vir0"
+    },
+    {
+      "node": "/dev/video5",
+      "name": "rkisp_iqtool",
+      "device": "/sys/devices/platform/rkisp-vir0"
+    },
+    {
+      "node": "/dev/video6",
+      "name": "rkisp_rawrd0_m",
+      "device": "/sys/devices/platform/rkisp-vir0"
+    },
+    {
+      "node": "/dev/video7",
+      "name": "rkisp_rawrd2_s",
+      "device": "/sys/devices/platform/rkisp-vir0"
+    },
+    {
+      "node": "/dev/video8",
+      "name": "rkisp-statistics",
+      "device": "/sys/devices/platform/rkisp-vir0"
+    },
+    {
+      "node": "/dev/video9",
+      "name": "rkisp-input-params",
+      "device": "/sys/devices/platform/rkisp-vir0"
+    }
+  ],
+  "commands": {
+    "v4l2_devices": {
+      "argv": [
+        "v4l2-ctl",
+        "--list-devices"
+      ],
+      "returncode": 0,
+      "stdout": "rkisp-statistics (platform: rkisp):\n\t/dev/video8\n\t/dev/video9\n\nrkisp_mainpath (platform:rkisp-vir0):\n\t/dev/video0\n\t/dev/video1\n\t/dev/video2\n\t/dev/video3\n\t/dev/video4\n\t/dev/video5\n\t/dev/video6\n\t/dev/video7\n\t/dev/media0\n\n",
+      "stderr": ""
+    },
+    "usb": {
+      "argv": [
+        "lsusb"
+      ],
+      "returncode": 0,
+      "stdout": "Bus 005 Device 001: ID 1d6b:0002\nBus 003 Device 001: ID 1d6b:0001\nBus 001 Device 001: ID 1d6b:0002\nBus 008 Device 001: ID 1d6b:0003\nBus 006 Device 001: ID 1d6b:0003\nBus 004 Device 001: ID 1d6b:0001\nBus 002 Device 001: ID 1d6b:0002\nBus 007 Device 001: ID 1d6b:0002\n",
+      "stderr": ""
+    },
+    "npu_load": "NPU load:  0%",
+    "npu_governor": "rknpu_ondemand"
+  },
+  "existing_probe_files": [
+    "exit.json",
+    "http.jsonl",
+    "input.jsonl",
+    "launcher.log",
+    "manifest.json",
+    "processes.json",
+    "ready.json",
+    "resources.jsonl",
+    "screen.png",
+    "service.log",
+    "terminal.json",
+    "ui.log",
+    "verification.json"
+  ]
+}

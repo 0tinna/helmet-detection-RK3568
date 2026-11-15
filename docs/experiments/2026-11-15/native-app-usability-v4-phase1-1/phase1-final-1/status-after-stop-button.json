@@ -1,0 +1,91 @@
+{
+  "detection": {
+    "state": "stop",
+    "reason": "session stopped",
+    "alarm_state": "unknown",
+    "frame_id": 3069,
+    "valid": false,
+    "model": "/userdata/helmet-validation/20261115-native-app-v2/models/helmet_416x416.rknn",
+    "model_sha256": "7e0eefe4bfe86627bb6b58161cacca10912e0dbe1ba2513f58d091c40b26cd48",
+    "source": "/dev/video10",
+    "monotonic": 96501.068828541,
+    "counters": {
+      "captured": 3074,
+      "consumed": 1503,
+      "detected": 1503,
+      "overwritten": 1570,
+      "active_skip": 0,
+      "read_failure": 0,
+      "displayed": 0,
+      "output": 1444,
+      "output_overwritten": 58,
+      "detection_failure": 0
+    },
+    "fps": {
+      "captured": 0.0,
+      "consumed": 0.0,
+      "detected": 0.0,
+      "displayed": 0.0,
+      "output": 0.0
+    },
+    "latency": {
+      "prep_ms": {
+        "count": 0,
+        "mean": null,
+        "p50": null,
+        "p95": null,
+        "p99": null
+      },
+      "infer_ms": {
+        "count": 0,
+        "mean": null,
+        "p50": null,
+        "p95": null,
+        "p99": null
+      },
+      "post_ms": {
+        "count": 0,
+        "mean": null,
+        "p50": null,
+        "p95": null,
+        "p99": null
+      },
+      "capture_to_output_ms": {
+        "count": 0,
+        "mean": null,
+        "p50": null,
+        "p95": null,
+        "p99": null
+      },
+      "sink_ms": {
+        "count": 0,
+        "mean": null,
+        "p50": null,
+        "p95": null,
+        "p99": null
+      },
+      "capture_to_sink_complete_ms": {
+        "count": 0,
+        "mean": null,
+        "p50": null,
+        "p95": null,
+        "p99": null
+      }
+    },
+    "source_epoch": 0,
+    "running": false,
+    "selection": {
+      "model": "helmet_416x416.rknn",
+      "source": "/dev/video10",
+      "profile": "responsive"
+    },
+    "generation": "402779107eb349fa8f2e2ed8d6b7c407"
+  },
+  "wifi_action": {
+    "id": 0,
+    "kind": null,
+    "busy": false,
+    "status": "idle",
+    "result": null
+  }
+}

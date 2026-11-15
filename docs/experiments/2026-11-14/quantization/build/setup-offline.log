@@ -1,0 +1,28 @@
+RECOVERED_COMPLETE_CACHED_WHEEL numpy-1.26.4-cp310-cp310-manylinux_2_17_x86_64.whl 18240889
+RECOVERED_COMPLETE_CACHED_WHEEL onnxruntime-1.20.1-cp310-cp310-manylinux_2_27_x86_64.whl 13330452
+RECOVERED_COMPLETE_CACHED_WHEEL onnx-1.16.1-cp310-cp310-manylinux_2_17_x86_64.whl 15924038
+Looking in links: ./wheels
+Processing ./wheels/numpy-1.26.4-cp310-cp310-manylinux_2_17_x86_64.whl
+Processing ./wheels/protobuf-4.25.4-cp37-abi3-manylinux2014_x86_64.whl
+Processing ./wheels/onnx-1.16.1-cp310-cp310-manylinux_2_17_x86_64.whl
+Processing ./wheels/onnxruntime-1.20.1-cp310-cp310-manylinux_2_27_x86_64.whl
+Processing ./wheels/scipy-1.15.3-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl
+Processing ./wheels/psutil-7.2.2-cp36-abi3-manylinux2010_x86_64.manylinux_2_12_x86_64.manylinux_2_28_x86_64.whl
+Processing ./wheels/ruamel_yaml-0.19.1-py3-none-any.whl
+Processing ./wheels/tqdm-4.70.1-py3-none-any.whl
+Processing ./wheels/opencv_python_headless-4.10.0.84-cp37-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl
+Processing ./wheels/fast_histogram-0.14-cp39-abi3-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl
+Processing ./wheels/coloredlogs-15.0.1-py2.py3-none-any.whl (from onnxruntime==1.20.1)
+Processing ./wheels/flatbuffers-25.12.19-py2.py3-none-any.whl (from onnxruntime==1.20.1)
+Processing ./wheels/packaging-26.3-py3-none-any.whl (from onnxruntime==1.20.1)
+Requirement already satisfied: sympy in ./venv/lib/python3.10/site-packages (from onnxruntime==1.20.1) (1.14.0)
+Processing ./wheels/humanfriendly-10.0-py2.py3-none-any.whl (from coloredlogs->onnxruntime==1.20.1)
+Requirement already satisfied: mpmath<1.4,>=1.1.0 in ./venv/lib/python3.10/site-packages (from sympy->onnxruntime==1.20.1) (1.3.0)
+Installing collected packages: flatbuffers, tqdm, ruamel.yaml, psutil, protobuf, packaging, numpy, humanfriendly, scipy, opencv-python-headless, onnx, fast-histogram, coloredlogs, onnxruntime
+
+Successfully installed coloredlogs-15.0.1 fast-histogram-0.14 flatbuffers-25.12.19 humanfriendly-10.0 numpy-1.26.4 onnx-1.16.1 onnxruntime-1.20.1 opencv-python-headless-4.10.0.84 packaging-26.3 protobuf-4.25.4 psutil-7.2.2 ruamel.yaml-0.19.1 scipy-1.15.3 tqdm-4.70.1
+Processing ./rknn_toolkit2-2.3.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl
+Installing collected packages: rknn-toolkit2
+Successfully installed rknn-toolkit2-2.3.2
+TOOLKIT_IMPORT_OK 1.16.1 1.26.4
+resume_guest_setup.sh: line 11:  4096 Illegal instruction     (core dumped) venv/bin/python convert_pair.py > fp16.log 2>&1

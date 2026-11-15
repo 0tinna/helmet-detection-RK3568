@@ -1,0 +1,10 @@
+W rknn-toolkit-lite2 version: 2.5.0
+W Query dynamic range failed. Ret code: RKNN_ERR_MODEL_INVALID. (If it is a static shape RKNN model, please ignore the above warning message.)
+complete: 200/200 images -> /userdata/helmet-validation/20261114/results/quantization-pair-1/shwd-fp16.dump.json
+I RKNN: [09:06:46.614] RKNN Runtime Information, librknnrt version: 2.3.2 (429f97ae6b@2025-04-09T09:09:27)
+I RKNN: [09:06:46.614] RKNN Driver Information, version: 0.9.2
+I RKNN: [09:06:46.615] RKNN Model Information, version: 6, toolkit version: 2.3.2(compiler version: 2.3.2 (e045de294f@2025-04-07T19:48:25)), target: RKNPU lite, target platform: rk3568, framework name: ONNX, framework layout: NCHW, model inference type: static_shape
+W RKNN: [09:06:46.698] query RKNN_QUERY_INPUT_DYNAMIC_RANGE error, rknn model is static shape type, please export rknn with dynamic_shapes
+person AP50=0.6235535747743159 P=0.6505 R=0.6320754716981132 F1=0.6411483253588518 gt=212
+hat AP50=0.8140653353074655 P=0.8266 R=0.806615776081425 F1=0.8164842240824212 gt=786
+mAP50=0.7188094550408908 (200 images; coverage=project-floor, score floor=0.001)

@@ -1,0 +1,129 @@
+{
+  "before_hide": {
+    "session": "d9fce8dd35d54c8e9f00ef2219b8a12f",
+    "phase": "running",
+    "visible": true,
+    "tab": "detection",
+    "sequence": 2,
+    "ack": {
+      "frame_decodes": 197,
+      "frame_requests": 197,
+      "preview_presentations": 197,
+      "qt": {
+        "pid": 10707,
+        "starttime": 10136858,
+        "uid": 0
+      },
+      "received_at": 101497.515359782,
+      "sequence": 2,
+      "tab": "detection",
+      "ui_instance": "e1739a10544f4d42ad3904187803a032",
+      "visible": true
+    },
+    "manager": {
+      "pid": 10681,
+      "starttime": 10136567,
+      "uid": 0
+    },
+    "service": {
+      "pid": 10683,
+      "starttime": 10136643,
+      "uid": 0
+    },
+    "ui": {
+      "pid": 10707,
+      "starttime": 10136858,
+      "uid": 0
+    }
+  },
+  "hidden_start": {
+    "session": "d9fce8dd35d54c8e9f00ef2219b8a12f",
+    "phase": "running",
+    "visible": false,
+    "tab": "detection",
+    "sequence": 3,
+    "ack": {
+      "frame_decodes": 203,
+      "frame_requests": 204,
+      "preview_presentations": 203,
+      "qt": {
+        "pid": 10707,
+        "starttime": 10136858,
+        "uid": 0
+      },
+      "received_at": 101499.747259206,
+      "sequence": 3,
+      "tab": "detection",
+      "ui_instance": "e1739a10544f4d42ad3904187803a032",
+      "visible": false
+    },
+    "manager": {
+      "pid": 10681,
+      "starttime": 10136567,
+      "uid": 0
+    },
+    "service": {
+      "pid": 10683,
+      "starttime": 10136643,
+      "uid": 0
+    },
+    "ui": {
+      "pid": 10707,
+      "starttime": 10136858,
+      "uid": 0
+    }
+  },
+  "hidden_end": {
+    "session": "d9fce8dd35d54c8e9f00ef2219b8a12f",
+    "phase": "running",
+    "visible": false,
+    "tab": "detection",
+    "sequence": 3,
+    "ack": {
+      "frame_decodes": 203,
+      "frame_requests": 204,
+      "preview_presentations": 203,
+      "qt": {
+        "pid": 10707,
+        "starttime": 10136858,
+        "uid": 0
+      },
+      "received_at": 101534.805403835,
+      "sequence": 3,
+      "tab": "detection",
+      "ui_instance": "e1739a10544f4d42ad3904187803a032",
+      "visible": false
+    },
+    "manager": {
+      "pid": 10681,
+      "starttime": 10136567,
+      "uid": 0
+    },
+    "service": {
+      "pid": 10683,
+      "starttime": 10136643,
+      "uid": 0
+    },
+    "ui": {
+      "pid": 10707,
+      "starttime": 10136858,
+      "uid": 0
+    }
+  },
+  "same_session": true,
+  "same_manager": true,
+  "same_service": true,
+  "same_ui": true,
+  "hidden_ack_frame_requests": [
+    204,
+    204
+  ],
+  "hidden_ack_frame_decodes": [
+    203,
+    203
+  ],
+  "hidden_ack_preview_presentations": [
+    203,
+    203
+  ]
+}

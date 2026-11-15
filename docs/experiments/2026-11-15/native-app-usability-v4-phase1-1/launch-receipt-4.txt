@@ -1,0 +1,3 @@
+launcher_pid=9672
+service_session=session-4ipakpi7
+ready=/userdata/helmet-validation/20261115-native-app-v2/app-state/session-4ipakpi7/ready.json

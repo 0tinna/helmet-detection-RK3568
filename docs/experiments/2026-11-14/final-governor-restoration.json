@@ -1,0 +1,8 @@
+{
+  "before": "performance",
+  "after": "rknpu_ondemand",
+  "expected": "rknpu_ondemand",
+  "verified": true,
+  "time": 1794655658.2406204,
+  "reason": "Final cleanup to original experimental-session policy from archived guards; standalone final benchmark correctly preserved its then-current performance policy"
+}

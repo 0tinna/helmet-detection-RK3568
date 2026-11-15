@@ -1,0 +1,7 @@
+W rknn-toolkit-lite2 version: 2.5.0
+W Query dynamic range failed. Ret code: RKNN_ERR_MODEL_INVALID. (If it is a static shape RKNN model, please ignore the above warning message.)
+{"run_dir": "/userdata/helmet-validation/20261114/faultsuite-1/source-interruption", "exit_code": 0, "validation": {"passed": true, "errors": [], "scenario": "source-interruption", "physical_camera_tested": false, "thread_termination_tested": false, "injection_method": "verification wrapper exception/read interruption; real delegation outside injection"}}
+I RKNN: [07:51:59.169] RKNN Runtime Information, librknnrt version: 2.3.2 (429f97ae6b@2025-04-09T09:09:27)
+I RKNN: [07:51:59.169] RKNN Driver Information, version: 0.9.2
+I RKNN: [07:51:59.171] RKNN Model Information, version: 6, toolkit version: 2.3.2(compiler version: 2.3.2 (e045de294f@2025-04-07T19:48:25)), target: RKNPU lite, target platform: rk3568, framework name: ONNX, framework layout: NCHW, model inference type: static_shape
+W RKNN: [07:51:59.219] query RKNN_QUERY_INPUT_DYNAMIC_RANGE error, rknn model is static shape type, please export rknn with dynamic_shapes

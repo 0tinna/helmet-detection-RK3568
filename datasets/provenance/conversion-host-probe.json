@@ -1,0 +1,11 @@
+{
+  "host": "Windows-10-10.0.26200-SP0",
+  "architecture": "AMD64",
+  "python_platform": "Windows",
+  "wsl_list_exit_code": 1,
+  "wsl_stdout": "",
+  "wsl_stderr": "未安装适用于 Linux 的 Windows 子系统。可通过运行 “wsl.exe --install” 进行安装。\r\r\n有关详细信息，请访问 https://aka.ms/wslinstall\r\r\n",
+  "docker_on_path": null,
+  "podman_on_path": null,
+  "docker_standard_path_exists": false
+}

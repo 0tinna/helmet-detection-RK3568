@@ -1,0 +1,8 @@
+{
+  "checked_members": 404,
+  "failures": [],
+  "checks": [
+    "original ZIP CRC32",
+    "acquisition SHA256"
+  ]
+}

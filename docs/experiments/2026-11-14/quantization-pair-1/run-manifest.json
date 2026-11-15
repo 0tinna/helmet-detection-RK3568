@@ -1,0 +1,56 @@
+{
+  "status": "complete",
+  "started": "2026-11-14T09:06:14.194631+00:00",
+  "original_governor": "rknpu_ondemand",
+  "models": {
+    "fp16": {
+      "name": "helmet_416x416_same_source_fp16.rknn",
+      "sha256": "517fb9113337436f89a5129e62beb73156a37122bc1ffac57fd3349600b1ad45",
+      "bytes": 15411133
+    },
+    "int8": {
+      "name": "helmet_416x416_same_source_int8.rknn",
+      "sha256": "c93359dc2b13370b3e5619cf6c27826ccbc6056850dbb8f963cc523996239195",
+      "bytes": 8110065
+    }
+  },
+  "sources": {
+    "benchmark.py": "2dc6426c077f524579942933422a619a9a1859feb1ff3a8eda843fc9b7bfc32c",
+    "dump_dets.py": "c21b4a1d1c4ee4e0428cb19d16b560c9c7dfdef2c34b52f62195b836fca90e3f",
+    "pc/eval_map.py": "89610e1f3ad99c47a581ee97ca31f21c222d13214bb8a66eca882cd58044a2f1",
+    "pc/dataset_tools.py": "921281aa3e5bd9eb6dc441861bfb2d75c9ea6bb18969e8abf24fe5f122aade19",
+    "yolo_post.py": "b708fa95f4d71dd9b4ecb656d9626ac9fd2c78f4a7b46add3091ae5ed38e6903"
+  },
+  "runs": [
+    {
+      "precision": "fp16",
+      "dataset": "shwd",
+      "status": "complete",
+      "dump_sha256": "33cb24b32c566dd0a7f1d5f6bb6391370755975e609b38ebe82be2787f5e0a3b",
+      "metrics_sha256": "80d328b7cbf93edf269d0aee5a247a3f1943f8d2751ae93da770de0532086fd5"
+    },
+    {
+      "precision": "fp16",
+      "dataset": "hardhat",
+      "status": "complete",
+      "dump_sha256": "29ea31680073c1b186d1d62a5598506a9c32a027d8b38807b2e4c79331b4fea9",
+      "metrics_sha256": "2ee543ecee87cfde4e39649952b17d36f7e2a0e49a7754ac400ae7b052d92119"
+    },
+    {
+      "precision": "int8",
+      "dataset": "shwd",
+      "status": "complete",
+      "dump_sha256": "1028766171f5527e509c6d5a3ba3d12ec463db12b7298ab313f1a0948d101633",
+      "metrics_sha256": "c9582d451d0533b14417c51f599425a7f8f5758256124f2d17aab9e90e2a0883"
+    },
+    {
+      "precision": "int8",
+      "dataset": "hardhat",
+      "status": "complete",
+      "dump_sha256": "09360e0b094cba552e97b207567a669ccc02f2e7819b5bc5f8a47b20c32e26a1",
+      "metrics_sha256": "8ee84a484863f43b74cfc550b313c69a4a77277005c8e2e903a873698e1f4797"
+    }
+  ],
+  "restored_governor": "rknpu_ondemand",
+  "finished": "2026-11-14T09:09:13.190328+00:00"
+}

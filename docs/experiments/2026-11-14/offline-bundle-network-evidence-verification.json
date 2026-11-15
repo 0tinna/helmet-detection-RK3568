@@ -1,0 +1,107 @@
+{
+  "status": "verified",
+  "scope": "real NPU sample replay in temporary network-denied child namespace; prepared existing board only",
+  "bundles": {
+    "helmet-offline-20261114.zip": {
+      "sha256": "ee3e446b85511b353cac101b9548c3edc53bdf0dab9c9535e66dd724b18a5c92",
+      "bytes": 39759444,
+      "manifest_sha256": "bfa210a69d6ebe8bcc18e8e9aad1116e24caac4385cdf65a5a8e2373f484dec3",
+      "files": 32
+    },
+    "helmet-offline-20261114-v2.zip": {
+      "sha256": "ee3e446b85511b353cac101b9548c3edc53bdf0dab9c9535e66dd724b18a5c92",
+      "bytes": 39759444,
+      "manifest_sha256": "bfa210a69d6ebe8bcc18e8e9aad1116e24caac4385cdf65a5a8e2373f484dec3",
+      "files": 32
+    }
+  },
+  "runtime_manifest_sha256": "05daebc3682938391ca526c0dc7131ef5be7c8e183bf7b0624c4800915d3ecb4",
+  "session_sha256": "9f5d504d03b4edfba8cc9fb4aee83d8f73615ffb340587149d49eaaec4543d95",
+  "frames_sha256": "a69346fbd217840a4abb6c3a6971062fa29cb6fc91a201834d84d0a2281659fb",
+  "network_namespace": "net:[4026532925]",
+  "interfaces": "lo               DOWN",
+  "host_network_changed": false,
+  "command_exits": [
+    0,
+    0,
+    0
+  ],
+  "counts": {
+    "captured": 77,
+    "consumed": 77,
+    "detected": 77,
+    "overwritten": 0,
+    "active_skip": 0,
+    "read_failure": 0,
+    "displayed": 0,
+    "output": 76,
+    "output_overwritten": 0,
+    "detection_failure": 0,
+    "pending_capture": 0,
+    "pending_output": 1
+  },
+  "record_counts": {
+    "detection": 77,
+    "output": 76
+  },
+  "snapshots": [
+    {
+      "file": "snapshots/alarm_6_1794648270190922066_27b0f5f5.json",
+      "sha256": "d89501ae8ab74be5bcb0224f9fdead4e493c081ed3e7a9a2d7ecec78ba9cdad0",
+      "image_sha256": "1cffa7327b32b15273fa4d82ba8ce24ee1489223d9352ba19ae54452a29ddca1",
+      "reason": "alarm",
+      "frame_id": 6
+    },
+    {
+      "file": "snapshots/periodic_1_1794648269669059612_8f0e22ca.json",
+      "sha256": "674dfa4d70741281eb42d1e89d9f783fcc17b213729a37a9f8e7f1a0ba255cf7",
+      "image_sha256": "2ad5945a7bb7b68e1ac8aaa0d8b796c41ff5a0ca040c22c61fb0c3871c9d1816",
+      "reason": "periodic",
+      "frame_id": 1
+    },
+    {
+      "file": "snapshots/periodic_22_1794648271796412673_8180ef1d.json",
+      "sha256": "6cfa8ffc7f190ba6e4eb1b7f9ea7c4bad74450e734bf8005546c9b2a2b28a28e",
+      "image_sha256": "860f4c156936ab99f2cceea2dfe0716cda4d5487bbf1972fc4c142e7e53022ee",
+      "reason": "periodic",
+      "frame_id": 22
+    },
+    {
+      "file": "snapshots/periodic_43_1794648273914530037_50aa4ba0.json",
+      "sha256": "3682d72ea32b96f97dd46ba528b3ec36cccef63174c7fae218e3bde7692dc36d",
+      "image_sha256": "33efc57bb7ca0a52653c4ac0b303dafa1332f8d5a384e6bf8a8fc8c038a74f36",
+      "reason": "periodic",
+      "frame_id": 43
+    },
+    {
+      "file": "snapshots/periodic_64_1794648276022873522_2a887de4.json",
+      "sha256": "5fb851d1e7ad19e18e41cff1fb77fefb7aae114ed880121ea79df5b5eed8679b",
+      "image_sha256": "320188b77959438277d20d384283db2cc77a33fcbb990a4b881bc1a03e8437bf",
+      "reason": "periodic",
+      "frame_id": 64
+    }
+  ],
+  "elapsed_seconds": 10.048181497000769,
+  "model_sha256": "7e0eefe4bfe86627bb6b58161cacca10912e0dbe1ba2513f58d091c40b26cd48",
+  "input_sha256": "a672e54b698710b9ff3081273fced9b32c671976203f568a3ef505dce1c5936e",
+  "source_sha256": {
+    "src/alarm.py": "d3e6d68c7b17f5508f0d697e96998f556f224f9f5067169d66c35972b3a023d2",
+    "src/benchmark.py": "2dc6426c077f524579942933422a619a9a1859feb1ff3a8eda843fc9b7bfc32c",
+    "src/dump_dets.py": "c21b4a1d1c4ee4e0428cb19d16b560c9c7dfdef2c34b52f62195b836fca90e3f",
+    "src/helmet_realtime.py": "15794ebc40fdd1736d9c80d5504d17aa91e1de972bb92bb30a9eeb026309e46d",
+    "src/output_sinks.py": "3b7ad99aef4170981fc8315ac90c21aae798f2678ce55d4f04a39afb4a32b664",
+    "src/pc/analyze_errors.py": "863b7115d31d599eb72c5a74748852f39b116e629827a2b9091e16a5be02bc90",
+    "src/pc/convert.py": "86d6fa0e865123995b122edec3d490ccf005467c28ca244cda0493621b718c7b",
+    "src/pc/dataset_tools.py": "921281aa3e5bd9eb6dc441861bfb2d75c9ea6bb18969e8abf24fe5f122aade19",
+    "src/pc/eval_map.py": "81ac033ef0dd61eaacd5c740fbc1e875aa3b43ce98ebfc63e5f59498a9bf1ec8",
+    "src/pipeline_runtime.py": "03bf7f4439b33069509d063cc2efc1e4a85776ae1097e531110f48981ab7a2cc",
+    "src/sources.py": "ea89d66fdefb2bc429ca74efa0437a3c0a8aab672a856078fc15afccfe3b31c9",
+    "src/telemetry.py": "0c9cf57fa3129432b78f2bac6c1bfa9ba091b50cd02760af9be848cf2e1c960e",
+    "src/validate_comparison.py": "3b65f9e561084aa7f6199cc7cd413b6426f6ac962f39729ac0668e50350c2860",
+    "src/yolo_post.py": "423e42d9274bd03c2cff2f332ffe76fd046ea677ecd8ff1a7b6f7e10943ac74d"
+  },
+  "offline_fresh_board_install_complete": false,
+  "physical_camera_accepted": false,
+  "display_exercised": false,
+  "longrun_accepted": false
+}

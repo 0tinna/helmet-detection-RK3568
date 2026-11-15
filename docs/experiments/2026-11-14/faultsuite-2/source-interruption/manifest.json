@@ -1,0 +1,222 @@
+{
+  "schema_version": 1,
+  "kind": "fault-case",
+  "status": "completed",
+  "run_id": "source-interruption",
+  "pid": 2718,
+  "host": "ATK-DLRK3568",
+  "platform": "Linux-5.10.160-aarch64-with-glibc2.37",
+  "python": "3.10.5 (main, Jul  5 2024, 11:06:31) [GCC 10.4.0]",
+  "command": [
+    "/usr/bin/python3",
+    "/userdata/helmet-validation/20261114/verify_runtime_final.py",
+    "_case",
+    "--scenario",
+    "source-interruption",
+    "--runtime-dir",
+    "/userdata/helmet-validation/20261114/src",
+    "--model",
+    "/userdata/helmet-validation/20261114/models/helmet_416x416.rknn",
+    "--source",
+    "/userdata/helmet-validation/20261114/input/construction-replay.avi",
+    "--output-root",
+    "/userdata/helmet-validation/20261114/faultsuite-2",
+    "--run-id",
+    "source-interruption",
+    "--duration",
+    "5.0",
+    "--replay-fps",
+    "10",
+    "--result-ttl",
+    "1",
+    "--fault-at",
+    "1.0",
+    "--recover-at",
+    "3.0",
+    "--input-description",
+    "file video replay; camera not tested"
+  ],
+  "started_wall_time": "2026-11-14T08:54:01.995110+00:00",
+  "started_monotonic": 26601.265866418,
+  "requested_duration_seconds": 5.0,
+  "replay_fps": 10.0,
+  "result_ttl": 1.0,
+  "source_kind": "video-replay",
+  "input_description": "file video replay; camera not tested",
+  "physical_camera_tested": false,
+  "backend": "rknnlite",
+  "exit_code": 0,
+  "governors": [
+    {
+      "path": "/sys/class/devfreq/fde40000.npu/governor",
+      "before": "rknpu_ondemand",
+      "requested": null,
+      "after": "rknpu_ondemand",
+      "restore_success": true
+    }
+  ],
+  "scenario": "source-interruption",
+  "thread_termination_tested": false,
+  "fault_at": 1.0,
+  "recover_at": 3.0,
+  "model": {
+    "path": "/userdata/helmet-validation/20261114/models/helmet_416x416.rknn",
+    "sha256": "7e0eefe4bfe86627bb6b58161cacca10912e0dbe1ba2513f58d091c40b26cd48",
+    "bytes": 8110065
+  },
+  "input": {
+    "path": "/userdata/helmet-validation/20261114/input/construction-replay.avi",
+    "sha256": "f22897e1ebb40cc919caab335ee4b436d28ebaf0a138eb8b16c63166184af5cc",
+    "bytes": 82400444
+  },
+  "baseline_model": {
+    "path": "/userdata/helmet-validation/20261114/models/helmet_416x416.rknn",
+    "sha256": "7e0eefe4bfe86627bb6b58161cacca10912e0dbe1ba2513f58d091c40b26cd48",
+    "bytes": 8110065
+  },
+  "baseline_input": {
+    "path": "/userdata/helmet-validation/20261114/input/construction-replay.avi",
+    "sha256": "f22897e1ebb40cc919caab335ee4b436d28ebaf0a138eb8b16c63166184af5cc",
+    "bytes": 82400444
+  },
+  "sources": {
+    "pipeline_runtime.py": {
+      "path": "/userdata/helmet-validation/20261114/src/pipeline_runtime.py",
+      "sha256": "03bf7f4439b33069509d063cc2efc1e4a85776ae1097e531110f48981ab7a2cc",
+      "bytes": 34944
+    },
+    "sources.py": {
+      "path": "/userdata/helmet-validation/20261114/src/sources.py",
+      "sha256": "ea89d66fdefb2bc429ca74efa0437a3c0a8aab672a856078fc15afccfe3b31c9",
+      "bytes": 6717
+    },
+    "telemetry.py": {
+      "path": "/userdata/helmet-validation/20261114/src/telemetry.py",
+      "sha256": "0c9cf57fa3129432b78f2bac6c1bfa9ba091b50cd02760af9be848cf2e1c960e",
+      "bytes": 9089
+    },
+    "alarm.py": {
+      "path": "/userdata/helmet-validation/20261114/src/alarm.py",
+      "sha256": "d3e6d68c7b17f5508f0d697e96998f556f224f9f5067169d66c35972b3a023d2",
+      "bytes": 4207
+    },
+    "yolo_post.py": {
+      "path": "/userdata/helmet-validation/20261114/src/yolo_post.py",
+      "sha256": "b708fa95f4d71dd9b4ecb656d9626ac9fd2c78f4a7b46add3091ae5ed38e6903",
+      "bytes": 5642
+    },
+    "verify_runtime.py": {
+      "path": "/userdata/helmet-validation/20261114/verify_runtime_final.py",
+      "sha256": "6d62949af89cd69247c01d4b9aae2847cf873d4d89d94b5f235c591725220be5",
+      "bytes": 82084
+    }
+  },
+  "input_size": [
+    416,
+    416
+  ],
+  "thresholds": {
+    "conf": 0.35,
+    "nms": 0.45,
+    "skip": 0
+  },
+  "class_order": [
+    "person",
+    "hat"
+  ],
+  "cleanup_errors": [],
+  "cleanup": {
+    "engine_initialized": true,
+    "source_initialized": true,
+    "engine_released": true,
+    "source_released": true,
+    "capture_worker_alive": false,
+    "detect_worker_alive": false,
+    "shutdown_timeout": false,
+    "sdk_resources": [
+      {
+        "created": true,
+        "released": true,
+        "release_error": null
+      }
+    ]
+  },
+  "actual_engine_calls": 31,
+  "injected_exceptions": 0,
+  "actual_source_reads": 32,
+  "actual_source_read_failures": 0,
+  "injected_read_failures": 74,
+  "recovered": true,
+  "finished_wall_time": "2026-11-14T08:54:10.882193+00:00",
+  "elapsed_seconds": 8.887159816997155,
+  "engine_started_monotonic": null,
+  "source_started_monotonic": 26605.065688654,
+  "artifacts": {
+    "frames.jsonl": {
+      "path": "/userdata/helmet-validation/20261114/faultsuite-2/source-interruption/frames.jsonl",
+      "sha256": "a428b83a86fe739b009733587f6ac290158c56915d4c150f5c63ee08c3816187",
+      "bytes": 113125
+    },
+    "events.jsonl": {
+      "path": "/userdata/helmet-validation/20261114/faultsuite-2/source-interruption/events.jsonl",
+      "sha256": "3d397df32de227aa5bcea5f77539fea50febda984b10f792934a1ed64076410f",
+      "bytes": 3592
+    },
+    "resources.jsonl": {
+      "path": "/userdata/helmet-validation/20261114/faultsuite-2/source-interruption/resources.jsonl",
+      "sha256": "957d6467b50ed35dbc18faba620dcc899763721e1d8fea872cb16ad82c07bbde",
+      "bytes": 2617
+    },
+    "session.json": {
+      "path": "/userdata/helmet-validation/20261114/faultsuite-2/source-interruption/session.json",
+      "sha256": "b16062ff1fe59edcfe87a5214a4d83618cb6d8e4bd20afe003f08e1fb8130e14",
+      "bytes": 5659
+    }
+  },
+  "validation": {
+    "passed": true,
+    "errors": [],
+    "scenario": "source-interruption",
+    "primary_fault_verified": true,
+    "cleanup_evidence": {
+      "direct_recorded": true,
+      "accepted": true,
+      "errors": [],
+      "record": {
+        "engine_initialized": true,
+        "source_initialized": true,
+        "engine_released": true,
+        "source_released": true,
+        "capture_worker_alive": false,
+        "detect_worker_alive": false,
+        "shutdown_timeout": false,
+        "sdk_resources": [
+          {
+            "created": true,
+            "released": true,
+            "release_error": null
+          }
+        ]
+      }
+    },
+    "startup_failure_stage": null,
+    "source_reaction_evidence": {
+      "contract": "producer-observed failed read / source epoch invalidation",
+      "injection_announced_at": 26606.120815769,
+      "producer_observed_failure_at": 26606.128282672,
+      "actual_recovered_read_at": 26608.10271861,
+      "reaction_ms": 7.466903000022285,
+      "announced_gap_zero_latency": true,
+      "announcement_violations": {
+        "output_frame_ids": [],
+        "alarm_timestamps": [],
+        "healthy_state_timestamps": []
+      },
+      "zero_latency_guaranteed": false,
+      "observed_failed_read_contract": true
+    },
+    "physical_camera_tested": false,
+    "thread_termination_tested": false,
+    "injection_method": "verification wrapper exception/read interruption; real delegation outside injection"
+  }
+}

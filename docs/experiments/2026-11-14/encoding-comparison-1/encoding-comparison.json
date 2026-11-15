@@ -1,0 +1,114 @@
+{
+  "status": "complete",
+  "runs": [
+    {
+      "encoder": "hardware-mpp",
+      "command": [
+        "gst-launch-1.0",
+        "-q",
+        "-e",
+        "videotestsrc",
+        "num-buffers=300",
+        "pattern=ball",
+        "!",
+        "video/x-raw,format=NV12,width=1280,height=720,framerate=30/1",
+        "!",
+        "mpph264enc",
+        "bps=2000000",
+        "gop=30",
+        "!",
+        "h264parse",
+        "!",
+        "mp4mux",
+        "!",
+        "filesink",
+        "location=/userdata/helmet-validation/20261114/results/encoding-comparison-1/hardware-mpp.mp4"
+      ],
+      "wall_seconds": 11.231647770000563,
+      "child_cpu_seconds": 11.727355,
+      "one_core_cpu_percent": 104.41348625019614,
+      "cpu_seconds_per_frame": 0.03909118333333333,
+      "pipeline_frames_per_second": 26.71023932937891,
+      "input": {
+        "width": 1280,
+        "height": 720,
+        "frames": 300,
+        "fps": 30,
+        "format": "NV12",
+        "pattern": "ball"
+      },
+      "ffprobe": {
+        "programs": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "width": 1280,
+            "height": 720,
+            "duration": "10.000000",
+            "nb_read_frames": "300"
+          }
+        ]
+      },
+      "sha256": "ba30dfaca158e57e4664158812a083a30fa9eb33e20dd2f15ba4688276384269",
+      "bytes": 80327
+    },
+    {
+      "encoder": "software-x264",
+      "command": [
+        "gst-launch-1.0",
+        "-q",
+        "-e",
+        "videotestsrc",
+        "num-buffers=300",
+        "pattern=ball",
+        "!",
+        "video/x-raw,format=NV12,width=1280,height=720,framerate=30/1",
+        "!",
+        "x264enc",
+        "bitrate=2000",
+        "speed-preset=ultrafast",
+        "tune=zerolatency",
+        "key-int-max=30",
+        "threads=1",
+        "!",
+        "h264parse",
+        "!",
+        "mp4mux",
+        "!",
+        "filesink",
+        "location=/userdata/helmet-validation/20261114/results/encoding-comparison-1/software-x264.mp4"
+      ],
+      "wall_seconds": 21.20539337900118,
+      "child_cpu_seconds": 21.291359999999997,
+      "one_core_cpu_percent": 100.40539979363903,
+      "cpu_seconds_per_frame": 0.0709712,
+      "pipeline_frames_per_second": 14.147344245784073,
+      "input": {
+        "width": 1280,
+        "height": 720,
+        "frames": 300,
+        "fps": 30,
+        "format": "NV12",
+        "pattern": "ball"
+      },
+      "ffprobe": {
+        "programs": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "width": 1280,
+            "height": 720,
+            "duration": "10.000000",
+            "nb_read_frames": "300"
+          }
+        ]
+      },
+      "sha256": "af773aec4b29e1720bc0f22303d638224935465957f282efebe1d0fa151846be",
+      "bytes": 219379
+    }
+  ],
+  "physical_camera_tested": false,
+  "comparison": "same synthetic raw NV12 input; requested2Mbps; software ultrafast one-thread",
+  "cpu_seconds_reduction_fraction": 0.4491965285449121,
+  "limits": "Pipeline CPU cost, not isolated encoder; bitrate/visual quality may differ; no production-camera claim"
+}

@@ -1,0 +1,142 @@
+{
+  "models": [
+    {
+      "id": "helmet-640-640.rknn",
+      "name": "helmet-640-640"
+    },
+    {
+      "id": "helmet_416x416.rknn",
+      "name": "helmet_416x416"
+    },
+    {
+      "id": "helmet_512x288.rknn",
+      "name": "helmet_512x288"
+    },
+    {
+      "id": "helmet_512x512.rknn",
+      "name": "helmet_512x512"
+    },
+    {
+      "id": "helmet_640x384.rknn",
+      "name": "helmet_640x384"
+    },
+    {
+      "id": "helmet_640x640.rknn",
+      "name": "helmet_640x640"
+    }
+  ],
+  "sources": [
+    {
+      "id": "1.jpg",
+      "name": "1.jpg（回放演示）",
+      "kind": "replay"
+    },
+    {
+      "id": "/dev/video10",
+      "name": "实时摄像头 UNIQUESKY_CAR_CAMERA: Integrate",
+      "kind": "camera"
+    }
+  ],
+  "profiles": [
+    {
+      "id": "replay",
+      "name": "录像回放演示 10 FPS"
+    },
+    {
+      "id": "responsive",
+      "name": "回放响应测试 20 FPS"
+    }
+  ],
+  "defaults": {
+    "model": "helmet-640-640.rknn",
+    "source": "1.jpg",
+    "profile": "replay"
+  },
+  "detection": {
+    "state": "no-detection",
+    "reason": "fresh detections",
+    "alarm_state": "unknown",
+    "frame_id": 169,
+    "valid": true,
+    "model": "/userdata/helmet-validation/20261115-native-app-v4-r2-local-2/models/helmet_416x416.rknn",
+    "model_sha256": "7e0eefe4bfe86627bb6b58161cacca10912e0dbe1ba2513f58d091c40b26cd48",
+    "source": "/dev/video10",
+    "monotonic": 101474.664383813,
+    "counters": {
+      "captured": 175,
+      "consumed": 73,
+      "detected": 72,
+      "overwritten": 101,
+      "active_skip": 0,
+      "read_failure": 0,
+      "displayed": 0,
+      "output": 70,
+      "output_overwritten": 1,
+      "detection_failure": 0
+    },
+    "fps": {
+      "captured": 29.0,
+      "consumed": 12.2,
+      "detected": 12.2,
+      "displayed": 0.0,
+      "output": 11.8
+    },
+    "latency": {
+      "prep_ms": {
+        "count": 61,
+        "mean": 15.447864638876215,
+        "p50": 14.207446001819335,
+        "p95": 22.63624499028083,
+        "p99": 29.91590620076749
+      },
+      "infer_ms": {
+        "count": 61,
+        "mean": 50.637572655954294,
+        "p50": 50.59408400848042,
+        "p95": 67.62931199045852,
+        "p99": 72.40845019987317
+      },
+      "post_ms": {
+        "count": 61,
+        "mean": 10.107053325942825,
+        "p50": 9.798792001674883,
+        "p95": 22.202234002179466,
+        "p99": 27.789601599215526
+      },
+      "capture_to_output_ms": {
+        "count": 59,
+        "mean": 128.7532668643122,
+        "p50": 126.250267989235,
+        "p95": 198.38795640825987,
+        "p99": 231.64524136082045
+      },
+      "sink_ms": {
+        "count": 59,
+        "mean": 53.651694389912535,
+        "p50": 50.74546398827806,
+        "p95": 90.50079150183592,
+        "p99": 103.24622230400566
+      },
+      "capture_to_sink_complete_ms": {
+        "count": 59,
+        "mean": 182.6261144740136,
+        "p50": 183.88886599859688,
+        "p95": 259.4737640043604,
+        "p99": 298.80179519503156
+      }
+    },
+    "source_epoch": 0,
+    "running": true,
+    "selection": {
+      "model": "helmet_416x416.rknn",
+      "source": "/dev/video10",
+      "profile": "responsive"
+    },
+    "generation": "f48c70597102449fbe3d7909635e7821"
+  },
+  "selection_available": {
+    "model": true,
+    "source": true,
+    "profile": true
+  }
+}

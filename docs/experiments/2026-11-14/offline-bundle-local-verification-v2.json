@@ -1,0 +1,167 @@
+{
+  "checks": [
+    {
+      "command": [
+        "D:\\Workplace\\RK3568\\.venv\\Scripts\\python.exe",
+        "D:\\Workplace\\RK3568\\dist\\offline-bundle-local-validation-v2\\verify_bundle.py",
+        "verify",
+        "D:\\Workplace\\RK3568\\dist\\offline-bundle-local-validation-v2"
+      ],
+      "exit": 0,
+      "stdout": "{\n  \"status\": \"verified\",\n  \"files\": 32,\n  \"models\": 6,\n  \"directory\": \"D:\\\\Workplace\\\\RK3568\\\\dist\\\\offline-bundle-local-validation-v2\",\n  \"manifest_sha256\": \"bfa210a69d6ebe8bcc18e8e9aad1116e24caac4385cdf65a5a8e2373f484dec3\"\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "D:\\Workplace\\RK3568\\.venv\\Scripts\\python.exe",
+        "-m",
+        "compileall",
+        "-q",
+        "D:\\Workplace\\RK3568\\dist\\offline-bundle-local-validation-v2\\src"
+      ],
+      "exit": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "D:\\Workplace\\RK3568\\.venv\\Scripts\\python.exe",
+        "D:\\Workplace\\RK3568\\dist\\offline-bundle-local-validation-v2\\src\\helmet_realtime.py",
+        "--help"
+      ],
+      "exit": 0,
+      "stdout": "usage: helmet_realtime.py [-h] [--source SOURCE] [--model MODEL] [--conf CONF]\n                          [--nms NMS] [--skip SKIP] [--cam-w CAM_W]\n                          [--cam-h CAM_H] [--no-display] [--save-dir SAVE_DIR]\n                          [--save-interval SAVE_INTERVAL] [--alarm-beep]\n                          [--duration DURATION] [--replay-fps REPLAY_FPS]\n                          [--result-ttl RESULT_TTL]\n                          [--shutdown-timeout SHUTDOWN_TIMEOUT]\n                          [--alarm-dwell ALARM_DWELL]\n                          [--alarm-cooldown ALARM_COOLDOWN]\n                          [--alarm-clear ALARM_CLEAR]\n                          [--audio-timeout AUDIO_TIMEOUT] [--jsonl JSONL]\n                          [--session-json SESSION_JSON]\n                          [--stats-window STATS_WINDOW]\n                          [--sample-interval SAMPLE_INTERVAL]\n                          [--web-host WEB_HOST] [--web-port WEB_PORT]\n                          [--clip-dir CLIP_DIR] [--clip-pre CLIP_PRE]\n                          [--clip-post CLIP_POST] [--clip-fps CLIP_FPS]\n                          [--clip-encoder {opencv,mpp}]\n\nRK3568 helmet detection pipeline\n\noptions:\n  -h, --help            show this help message and exit\n  --source SOURCE       camera /dev/videoN, video, image/image folder, glob,\n                        or RTSP URL\n  --model MODEL\n  --conf CONF\n  --nms NMS\n  --skip SKIP           detect every N+1 consumed frames\n  --cam-w CAM_W\n  --cam-h CAM_H\n  --no-display\n  --save-dir SAVE_DIR\n  --save-interval SAVE_INTERVAL\n                        save fresh results every N seconds\n  --alarm-beep\n  --duration DURATION   stop after N seconds, 0 runs continuously\n  --replay-fps REPLAY_FPS\n                        controlled image/video replay rate\n  --result-ttl RESULT_TTL\n                        maximum capture-to-output age in seconds\n  --shutdown-timeout SHUTDOWN_TIMEOUT\n  --alarm-dwell ALARM_DWELL\n  --alarm-cooldown ALARM_COOLDOWN\n  --alarm-clear ALARM_CLEAR\n  --audio-timeout AUDIO_TIMEOUT\n  --jsonl JSONL         exclusive per-frame JSONL output path\n  --session-json SESSION_JSON\n                        session counters, quantiles and runtime samples\n  --stats-window STATS_WINDOW\n  --sample-interval SAMPLE_INTERVAL\n  --web-host WEB_HOST   preview bind address; LAN use 0.0.0.0\n  --web-port WEB_PORT   HTTP preview port, 0 disables\n  --clip-dir CLIP_DIR   event clips and coverage metadata directory\n  --clip-pre CLIP_PRE\n  --clip-post CLIP_POST\n  --clip-fps CLIP_FPS\n  --clip-encoder {opencv,mpp}\n",
+      "stderr": ""
+    }
+  ],
+  "source_hashes": {
+    "README.md": {
+      "bytes": 3066,
+      "sha256": "cd1c4b292447a0c5b89625ac992f83821848640f7436a7da2b52068742f738ad"
+    },
+    "config.json": {
+      "bytes": 493,
+      "sha256": "7437a44976d164474429d32ff8f00e74e06e4d1f808f37282920830cbef29f76"
+    },
+    "dependency-status.json": {
+      "bytes": 2382,
+      "sha256": "a3fc1720d5827034e48ef49b4ef3ab260cb620a5ac4d920223c21e04ecd57e76"
+    },
+    "deps/rknn_toolkit_lite2-2.5.0-cp310-cp310-manylinux_2_17_aarch64.manylinux2014_aarch64.whl": {
+      "bytes": 574389,
+      "sha256": "57a5a1f967ff88a1f933abc15a64cf11db37fb406c00cb610f20a566ec231161"
+    },
+    "deps/wheel-provenance.json": {
+      "bytes": 953,
+      "sha256": "e34a9a1ef21f4faae95c3bc82c35e981e754845fd1dc106e57fddd378b402120"
+    },
+    "input/1.jpg": {
+      "bytes": 176224,
+      "sha256": "a672e54b698710b9ff3081273fced9b32c671976203f568a3ef505dce1c5936e"
+    },
+    "models/helmet-640-640.rknn": {
+      "bytes": 7808448,
+      "sha256": "23dac43065664447272b8a032f7c35a00269e5b7d63e210ae10d8181a7a3bb32"
+    },
+    "models/helmet_416x416.rknn": {
+      "bytes": 8110065,
+      "sha256": "7e0eefe4bfe86627bb6b58161cacca10912e0dbe1ba2513f58d091c40b26cd48"
+    },
+    "models/helmet_512x288.rknn": {
+      "bytes": 8118576,
+      "sha256": "4b8d428aede96897590ed143200412beed882908e3b30ec63a5eae38f0deb6af"
+    },
+    "models/helmet_512x512.rknn": {
+      "bytes": 8279345,
+      "sha256": "82e43f1fe1dc755ab8d421c819fdef311efdd1b64a7b1913901f6aef2b9460d3"
+    },
+    "models/helmet_640x384.rknn": {
+      "bytes": 8261425,
+      "sha256": "ba951c5b824e66a660c08daa6f6779cf4119130c4c2106f365ee337e3c92f272"
+    },
+    "models/helmet_640x640.rknn": {
+      "bytes": 8439921,
+      "sha256": "2c0df64c4e12440e4e84c16294df53e440c263d9570f4447b2d26b0f5916edf3"
+    },
+    "provenance/community-model-provenance.json": {
+      "bytes": 1942,
+      "sha256": "c8cbdf3e6e8548cea97951cbaefc8922ee037ad6510f5c0398427d39dc33ab0f"
+    },
+    "provenance/coordinate-and-mapping-contract.json": {
+      "bytes": 1995,
+      "sha256": "196a0031289e69f74478f523b2975135aa860c26af690621989d18e05a20f1e6"
+    },
+    "provenance/model-hashes.json": {
+      "bytes": 894,
+      "sha256": "3c4e25054525a4e79b0d207ba84fe603b84c3563fd851c9947cf09eeb4a0d7aa"
+    },
+    "requirements-board.txt": {
+      "bytes": 601,
+      "sha256": "a007108f5910d3fc93b76549fa334c71f392bcfd7def7937b96ead778b6fc158"
+    },
+    "requirements-host.txt": {
+      "bytes": 297,
+      "sha256": "743e49c4885dd1018cebe897192718366834370503d2c749dd8a3321b472d396"
+    },
+    "src/alarm.py": {
+      "bytes": 4207,
+      "sha256": "d3e6d68c7b17f5508f0d697e96998f556f224f9f5067169d66c35972b3a023d2"
+    },
+    "src/benchmark.py": {
+      "bytes": 5526,
+      "sha256": "2dc6426c077f524579942933422a619a9a1859feb1ff3a8eda843fc9b7bfc32c"
+    },
+    "src/dump_dets.py": {
+      "bytes": 8619,
+      "sha256": "c21b4a1d1c4ee4e0428cb19d16b560c9c7dfdef2c34b52f62195b836fca90e3f"
+    },
+    "src/helmet_realtime.py": {
+      "bytes": 5503,
+      "sha256": "15794ebc40fdd1736d9c80d5504d17aa91e1de972bb92bb30a9eeb026309e46d"
+    },
+    "src/output_sinks.py": {
+      "bytes": 22867,
+      "sha256": "3b7ad99aef4170981fc8315ac90c21aae798f2678ce55d4f04a39afb4a32b664"
+    },
+    "src/pc/analyze_errors.py": {
+      "bytes": 21047,
+      "sha256": "863b7115d31d599eb72c5a74748852f39b116e629827a2b9091e16a5be02bc90"
+    },
+    "src/pc/convert.py": {
+      "bytes": 4104,
+      "sha256": "86d6fa0e865123995b122edec3d490ccf005467c28ca244cda0493621b718c7b"
+    },
+    "src/pc/dataset_tools.py": {
+      "bytes": 24255,
+      "sha256": "921281aa3e5bd9eb6dc441861bfb2d75c9ea6bb18969e8abf24fe5f122aade19"
+    },
+    "src/pc/eval_map.py": {
+      "bytes": 28576,
+      "sha256": "81ac033ef0dd61eaacd5c740fbc1e875aa3b43ce98ebfc63e5f59498a9bf1ec8"
+    },
+    "src/pipeline_runtime.py": {
+      "bytes": 34944,
+      "sha256": "03bf7f4439b33069509d063cc2efc1e4a85776ae1097e531110f48981ab7a2cc"
+    },
+    "src/sources.py": {
+      "bytes": 6717,
+      "sha256": "ea89d66fdefb2bc429ca74efa0437a3c0a8aab672a856078fc15afccfe3b31c9"
+    },
+    "src/telemetry.py": {
+      "bytes": 9089,
+      "sha256": "0c9cf57fa3129432b78f2bac6c1bfa9ba091b50cd02760af9be848cf2e1c960e"
+    },
+    "src/validate_comparison.py": {
+      "bytes": 1819,
+      "sha256": "3b65f9e561084aa7f6199cc7cd413b6426f6ac962f39729ac0668e50350c2860"
+    },
+    "src/yolo_post.py": {
+      "bytes": 5739,
+      "sha256": "423e42d9274bd03c2cff2f332ffe76fd046ea677ecd8ff1a7b6f7e10943ac74d"
+    },
+    "verify_bundle.py": {
+      "bytes": 18683,
+      "sha256": "433120a006d1c171cab7a944b4dd9e1ded779d53e1800d6494493a8a0480ef64"
+    }
+  }
+}

@@ -1,0 +1,229 @@
+{
+  "kind": "normal-launcher-offline-verification-v1",
+  "directory": "/userdata/helmet-validation/normal-ui-probe-1",
+  "passed": true,
+  "failures": [],
+  "gates": {
+    "thirty_minutes_observed": false,
+    "normal_cleanup": true,
+    "native_render": true,
+    "probe_no_detection": true
+  },
+  "scope": "normal-launcher keyboard navigation probe; no NPU acceptance",
+  "run_id": "normal-ui-probe-1",
+  "mode": "probe",
+  "render": {
+    "sha256": "ce5a1f3af6a5c1d414b80c36a5cb36b310b036ba0d30a94675707b0fa2572b49",
+    "dimensions": [
+      720,
+      968
+    ],
+    "scope": "Qt screenRoot only; excludes header and physical display",
+    "receipt": {
+      "saved": true,
+      "tab": 0,
+      "valid": false,
+      "previewVisible": false,
+      "frameId": null,
+      "keyboardVisible": false,
+      "width": 720,
+      "height": 1120
+    }
+  },
+  "resources": {
+    "samples": 13,
+    "observed_max_sample_gap_seconds": 1.0222919609950623,
+    "scope": "descriptive process RSS/CPU/threads/FD; no leak threshold or acceptance claim",
+    "windows": {
+      "first_60_seconds": {
+        "samples": 13,
+        "observed_seconds": 11.97439491499972,
+        "roles": {
+          "launcher": {
+            "rss_bytes": {
+              "first": 10338304,
+              "last": 10338304,
+              "min": 10338304,
+              "max": 10338304
+            },
+            "threads": {
+              "first": 1,
+              "last": 1,
+              "min": 1,
+              "max": 1
+            },
+            "fds": {
+              "first": 6,
+              "last": 6,
+              "min": 6,
+              "max": 6
+            },
+            "cpu_ticks_delta": 6
+          },
+          "service": {
+            "rss_bytes": {
+              "first": 63787008,
+              "last": 63836160,
+              "min": 63787008,
+              "max": 63836160
+            },
+            "threads": {
+              "first": 2,
+              "last": 2,
+              "min": 2,
+              "max": 2
+            },
+            "fds": {
+              "first": 4,
+              "last": 4,
+              "min": 4,
+              "max": 4
+            },
+            "cpu_ticks_delta": 48
+          },
+          "ui": {
+            "rss_bytes": {
+              "first": 28270592,
+              "last": 149131264,
+              "min": 28270592,
+              "max": 149131264
+            },
+            "threads": {
+              "first": 1,
+              "last": 17,
+              "min": 1,
+              "max": 17
+            },
+            "fds": {
+              "first": 3,
+              "last": 32,
+              "min": 3,
+              "max": 32
+            },
+            "cpu_ticks_delta": 229
+          },
+          "observer": {
+            "rss_bytes": {
+              "first": 19083264,
+              "last": 19083264,
+              "min": 19083264,
+              "max": 19083264
+            },
+            "threads": {
+              "first": 1,
+              "last": 1,
+              "min": 1,
+              "max": 1
+            },
+            "fds": {
+              "first": 4,
+              "last": 4,
+              "min": 4,
+              "max": 4
+            },
+            "cpu_ticks_delta": 62
+          }
+        }
+      },
+      "last_300_seconds": {
+        "samples": 13,
+        "observed_seconds": 11.97439491499972,
+        "roles": {
+          "launcher": {
+            "rss_bytes": {
+              "first": 10338304,
+              "last": 10338304,
+              "min": 10338304,
+              "max": 10338304
+            },
+            "threads": {
+              "first": 1,
+              "last": 1,
+              "min": 1,
+              "max": 1
+            },
+            "fds": {
+              "first": 6,
+              "last": 6,
+              "min": 6,
+              "max": 6
+            },
+            "cpu_ticks_delta": 6
+          },
+          "service": {
+            "rss_bytes": {
+              "first": 63787008,
+              "last": 63836160,
+              "min": 63787008,
+              "max": 63836160
+            },
+            "threads": {
+              "first": 2,
+              "last": 2,
+              "min": 2,
+              "max": 2
+            },
+            "fds": {
+              "first": 4,
+              "last": 4,
+              "min": 4,
+              "max": 4
+            },
+            "cpu_ticks_delta": 48
+          },
+          "ui": {
+            "rss_bytes": {
+              "first": 28270592,
+              "last": 149131264,
+              "min": 28270592,
+              "max": 149131264
+            },
+            "threads": {
+              "first": 1,
+              "last": 17,
+              "min": 1,
+              "max": 17
+            },
+            "fds": {
+              "first": 3,
+              "last": 32,
+              "min": 3,
+              "max": 32
+            },
+            "cpu_ticks_delta": 229
+          },
+          "observer": {
+            "rss_bytes": {
+              "first": 19083264,
+              "last": 19083264,
+              "min": 19083264,
+              "max": 19083264
+            },
+            "threads": {
+              "first": 1,
+              "last": 1,
+              "min": 1,
+              "max": 1
+            },
+            "fds": {
+              "first": 4,
+              "last": 4,
+              "min": 4,
+              "max": 4
+            },
+            "cpu_ticks_delta": 62
+          }
+        }
+      }
+    }
+  },
+  "unverified": [
+    "physical camera",
+    "human touch",
+    "independent 85% accuracy",
+    "continuous physical display",
+    "WiFi authentication/DHCP/save",
+    "independent direct SDK release receipt",
+    "no-leak acceptance"
+  ]
+}

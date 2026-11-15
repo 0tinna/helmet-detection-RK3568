@@ -1,0 +1,32 @@
+{
+  "pid": 1995,
+  "alive": true,
+  "start_id": "2043493",
+  "wall_time": "2026-11-14T07:22:58.224030+00:00",
+  "monotonic": 21137.494809999,
+  "operator_asserted_disconnection": true,
+  "note": "fresh-SSH-after-launch-session-closed-PID1995",
+  "observed_command": [
+    "python3",
+    "/userdata/helmet-validation/20261114/verify_runtime.py",
+    "longrun",
+    "--runtime-dir",
+    "/userdata/helmet-validation/20261114/src",
+    "--model",
+    "/userdata/helmet-validation/20261114/models/helmet_416x416.rknn",
+    "--source",
+    "/userdata/helmet-validation/20261114/input/construction-replay.avi",
+    "--output-root",
+    "/userdata/helmet-validation/20261114",
+    "--run-id",
+    "longrun-1",
+    "--duration",
+    "1800",
+    "--replay-fps",
+    "10",
+    "--save-interval",
+    "30"
+  ],
+  "identity_command_matches_manifest": true,
+  "claim_scope": "operator observation; runner cannot observe SSH transport closure"
+}

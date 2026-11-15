@@ -1,0 +1,934 @@
+{
+  "elapsed_seconds": 60.08584123000037,
+  "counters": {
+    "captured": 1120,
+    "consumed": 784,
+    "detected": 784,
+    "overwritten": 335,
+    "active_skip": 0,
+    "read_failure": 0,
+    "displayed": 0,
+    "output": 783,
+    "output_overwritten": 0,
+    "detection_failure": 0,
+    "pending_capture": 1,
+    "pending_output": 1
+  },
+  "full_session": {
+    "prep_ms": {
+      "p50": 9.985002496250672,
+      "p95": 13.059036800768805,
+      "p99": 15.956065947830208,
+      "count": 784,
+      "mean": 10.3102798532894,
+      "mean_method": "all_samples",
+      "sample_count": 784,
+      "percentile_method": "exact_linear_disk_spool"
+    },
+    "infer_ms": {
+      "p50": 40.29658100262168,
+      "p95": 44.24661254888633,
+      "p99": 46.77093265367146,
+      "count": 784,
+      "mean": 40.37446253564946,
+      "mean_method": "all_samples",
+      "sample_count": 784,
+      "percentile_method": "exact_linear_disk_spool"
+    },
+    "post_ms": {
+      "p50": 21.049196999229025,
+      "p95": 27.349080245767244,
+      "p99": 30.973793854282114,
+      "count": 784,
+      "mean": 21.545067650568313,
+      "mean_method": "all_samples",
+      "sample_count": 784,
+      "percentile_method": "exact_linear_disk_spool"
+    },
+    "capture_to_output_ms": {
+      "p50": 119.15530700207455,
+      "p95": 142.10761589929461,
+      "p99": 153.3683246395958,
+      "count": 783,
+      "mean": 118.39734044717045,
+      "mean_method": "all_samples",
+      "sample_count": 783,
+      "percentile_method": "exact_linear_disk_spool"
+    },
+    "sink_ms": {
+      "p50": 26.252652001858223,
+      "p95": 33.244967403879855,
+      "p99": 37.170261299906976,
+      "count": 783,
+      "mean": 26.85371015829273,
+      "mean_method": "all_samples",
+      "sample_count": 783,
+      "percentile_method": "exact_linear_disk_spool"
+    },
+    "capture_to_sink_complete_ms": {
+      "p50": 145.46308600256452,
+      "p95": 171.7051182029536,
+      "p99": 180.75021528027713,
+      "count": 783,
+      "mean": 145.5258684573435,
+      "mean_method": "all_samples",
+      "sample_count": 783,
+      "percentile_method": "exact_linear_disk_spool"
+    }
+  },
+  "timing_retention": {
+    "method": "disk_spool",
+    "live_sample_limit_per_timing": 2048,
+    "reservoir_seed": 0,
+    "raw_log": "/userdata/helmet-validation/20261114-continuation/browser-current-2/frames.jsonl"
+  },
+  "full_session_fps": {
+    "captured": 18.639998659797296,
+    "consumed": 13.047999061858107,
+    "detected": 13.047999061858107,
+    "displayed": 0.0,
+    "output": 13.031356205911859
+  },
+  "sliding_window": {
+    "seconds": 5,
+    "observed_seconds": 5,
+    "fps": {
+      "captured": 19.2,
+      "consumed": 13.4,
+      "detected": 13.6,
+      "displayed": 0.0,
+      "output": 13.4
+    },
+    "timings": {
+      "prep_ms": {
+        "count": 68,
+        "mean": 10.313414000205846,
+        "p50": 10.153882001759484,
+        "p95": 12.742483250622172,
+        "p99": 14.355775431322396
+      },
+      "infer_ms": {
+        "count": 68,
+        "mean": 40.91147720518005,
+        "p50": 40.33362399786711,
+        "p95": 43.91804284568934,
+        "p99": 47.68320285096706
+      },
+      "post_ms": {
+        "count": 68,
+        "mean": 21.12471911823377,
+        "p50": 20.853484500548802,
+        "p95": 26.38437055029499,
+        "p99": 29.92998280162282
+      },
+      "capture_to_output_ms": {
+        "count": 67,
+        "mean": 116.11651201502667,
+        "p50": 115.62722700182348,
+        "p95": 138.94246449854109,
+        "p99": 147.9286782376585
+      },
+      "sink_ms": {
+        "count": 67,
+        "mean": 27.057352194122956,
+        "p50": 26.614618000166956,
+        "p95": 32.008097201469354,
+        "p99": 38.3503731223755
+      },
+      "capture_to_sink_complete_ms": {
+        "count": 67,
+        "mean": 143.44861183585704,
+        "p50": 141.9612550016609,
+        "p95": 170.54338579982868,
+        "p99": 176.04280443934843
+      }
+    }
+  },
+  "runtime_samples": [
+    {
+      "monotonic": 45135.19142041,
+      "cpu_percent": 100.21906995199087,
+      "rss_bytes": 68177920,
+      "temperature_c": {
+        "/sys/class/thermal/thermal_zone0/temp": 48.888,
+        "/sys/class/thermal/thermal_zone1/temp": 46.111
+      },
+      "npu_frequency_hz": {
+        "/sys/class/devfreq/fde40000.npu/cur_freq": 900000000
+      },
+      "npu_load": "NPU load:  0%"
+    },
+    {
+      "monotonic": 45136.999757487,
+      "cpu_percent": 98.2457156135356,
+      "rss_bytes": 118575104,
+      "temperature_c": {
+        "/sys/class/thermal/thermal_zone0/temp": 50.0,
+        "/sys/class/thermal/thermal_zone1/temp": 46.111
+      },
+      "npu_frequency_hz": {
+        "/sys/class/devfreq/fde40000.npu/cur_freq": 900000000
+      },
+      "npu_load": "NPU load:  0%"
+    },
+    {
+      "monotonic": 45138.00575345,
+      "cpu_percent": 142.69524320125754,
+      "rss_bytes": 130256896,
+      "temperature_c": {
+        "/sys/class/thermal/thermal_zone0/temp": 48.888,
+        "/sys/class/thermal/thermal_zone1/temp": 46.666
+      },
+      "npu_frequency_hz": {
+        "/sys/class/devfreq/fde40000.npu/cur_freq": 900000000
+      },
+      "npu_load": "NPU load: 26%"
+    },
+    {
+      "monotonic": 45139.012270635,
+      "cpu_percent": 151.9965094286807,
+      "rss_bytes": 130527232,
+      "temperature_c": {
+        "/sys/class/thermal/thermal_zone0/temp": 48.888,
+        "/sys/class/thermal/thermal_zone1/temp": 46.666
+      },
+      "npu_frequency_hz": {
+        "/sys/class/devfreq/fde40000.npu/cur_freq": 900000000
+      },
+      "npu_load": "NPU load: 40%"
+    },
+    {
+      "monotonic": 45140.017723504,
+      "cpu_percent": 160.11356192146255,
+      "rss_bytes": 131338240,
+      "temperature_c": {
+        "/sys/class/thermal/thermal_zone0/temp": 49.444,
+        "/sys/class/thermal/thermal_zone1/temp": 47.222
+      },
+      "npu_frequency_hz": {
+        "/sys/class/devfreq/fde40000.npu/cur_freq": 900000000
+      },
+      "npu_load": "NPU load: 39%"
+    },
+    {
+      "monotonic": 45141.021570419,
+      "cpu_percent": 151.68918370463672,
+      "rss_bytes": 131608576,
+      "temperature_c": {
+        "/sys/class/thermal/thermal_zone0/temp": 49.444,
+        "/sys/class/thermal/thermal_zone1/temp": 47.777
+      },
+      "npu_frequency_hz": {
+        "/sys/class/devfreq/fde40000.npu/cur_freq": 900000000
+      },
+      "npu_load": "NPU load: 40%"
+    },
+    {
+      "monotonic": 45142.033745486,
+      "cpu_percent": 154.79268340831683,
+      "rss_bytes": 131461120,
+      "temperature_c": {
+        "/sys/class/thermal/thermal_zone0/temp": 50.0,
+        "/sys/class/thermal/thermal_zone1/temp": 47.777
+      },
+      "npu_frequency_hz": {
+        "/sys/class/devfreq/fde40000.npu/cur_freq": 900000000
+      },
+      "npu_load": "NPU load: 39%"
+    },
+    {
+      "monotonic": 45143.050270571,
+      "cpu_percent": 152.598098156499,
+      "rss_bytes": 131461120,
+      "temperature_c": {
+        "/sys/class/thermal/thermal_zone0/temp": 50.0,
+        "/sys/class/thermal/thermal_zone1/temp": 47.777
+      },
+      "npu_frequency_hz": {
+        "/sys/class/devfreq/fde40000.npu/cur_freq": 900000000
+      },
+      "npu_load": "NPU load: 44%"
+    },
+    {
+      "monotonic": 45144.05348114,
+      "cpu_percent": 155.17426950120444,
+      "rss_bytes": 132538368,
+      "temperature_c": {
+        "/sys/class/thermal/thermal_zone0/temp": 50.0,
+        "/sys/class/thermal/thermal_zone1/temp": 48.333
+      },
+      "npu_frequency_hz": {
+        "/sys/class/devfreq/fde40000.npu/cur_freq": 900000000
+      },
+      "npu_load": "NPU load: 36%"
+    },
+    {
+      "monotonic": 45145.068235476,
+      "cpu_percent": 155.10190458552134,
+      "rss_bytes": 131571712,
+      "temperature_c": {
+        "/sys/class/thermal/thermal_zone0/temp": 50.0,
+        "/sys/class/thermal/thermal_zone1/temp": 47.777
+      },
+      "npu_frequency_hz": {
+        "/sys/class/devfreq/fde40000.npu/cur_freq": 900000000
+      },
+      "npu_load": "NPU load: 42%"
+    },
+    {
+      "monotonic": 45146.087378332,
+      "cpu_percent": 148.91866248838605,
+      "rss_bytes": 131842048,
+      "temperature_c": {
+        "/sys/class/thermal/thermal_zone0/temp": 50.625,
+        "/sys/class/thermal/thermal_zone1/temp": 48.333
+      },
+      "npu_frequency_hz": {
+        "/sys/class/devfreq/fde40000.npu/cur_freq": 900000000
+      },
+      "npu_load": "NPU load: 42%"
+    },
+    {
+      "monotonic": 45147.088970031,
+      "cpu_percent": 154.27582132924437,
+      "rss_bytes": 130990080,
+      "temperature_c": {
+        "/sys/class/thermal/thermal_zone0/temp": 50.625,
+        "/sys/class/thermal/thermal_zone1/temp": 48.333
+      },
+      "npu_frequency_hz": {
+        "/sys/class/devfreq/fde40000.npu/cur_freq": 900000000
+      },
+      "npu_load": "NPU load: 43%"
+    },
+    {
+      "monotonic": 45148.104779727,
+      "cpu_percent": 148.98482382663383,
+      "rss_bytes": 131801088,
+      "temperature_c": {
+        "/sys/class/thermal/thermal_zone0/temp": 50.625,
+        "/sys/class/thermal/thermal_zone1/temp": 48.333
+      },
+      "npu_frequency_hz": {
+        "/sys/class/devfreq/fde40000.npu/cur_freq": 900000000
+      },
+      "npu_load": "NPU load: 41%"
+    },
+    {
+      "monotonic": 45149.131041457,
+      "cpu_percent": 156.40504094360426,
+      "rss_bytes": 132612096,
+      "temperature_c": {
+        "/sys/class/thermal/thermal_zone0/temp": 50.625,
+        "/sys/class/thermal/thermal_zone1/temp": 48.333
+      },
+      "npu_frequency_hz": {
+        "/sys/class/devfreq/fde40000.npu/cur_freq": 900000000
+      },
+      "npu_load": "NPU load: 39%"
+    },
+    {
+      "monotonic": 45150.135849149,
+      "cpu_percent": 149.2889684209381,
+      "rss_bytes": 132612096,
+      "temperature_c": {
+        "/sys/class/thermal/thermal_zone0/temp": 50.625,
+        "/sys/class/thermal/thermal_zone1/temp": 48.888
+      },
+      "npu_frequency_hz": {
+        "/sys/class/devfreq/fde40000.npu/cur_freq": 900000000
+      },
+      "npu_load": "NPU load: 40%"
+    },
+    {
+      "monotonic": 45151.1363952,
+      "cpu_percent": 150.4595198287188,
+      "rss_bytes": 132612096,
+      "temperature_c": {
+        "/sys/class/thermal/thermal_zone0/temp": 51.25,
+        "/sys/class/thermal/thermal_zone1/temp": 48.888
+      },
+      "npu_frequency_hz": {
+        "/sys/class/devfreq/fde40000.npu/cur_freq": 900000000
+      },
+      "npu_load": "NPU load: 40%"
+    },
+    {
+      "monotonic": 45152.152873913,
+      "cpu_percent": 156.1167851041108,
+      "rss_bytes": 132612096,
+      "temperature_c": {
+        "/sys/class/thermal/thermal_zone0/temp": 51.25,
+        "/sys/class/thermal/thermal_zone1/temp": 48.888
+      },
+      "npu_frequency_hz": {
+        "/sys/class/devfreq/fde40000.npu/cur_freq": 900000000
+      },
+      "npu_load": "NPU load: 42%"
+    },
+    {
+      "monotonic": 45153.196918975,
+      "cpu_percent": 154.876445074241,
+      "rss_bytes": 132612096,
+      "temperature_c": {
+        "/sys/class/thermal/thermal_zone0/temp": 51.25,
+        "/sys/class/thermal/thermal_zone1/temp": 49.444
+      },
+      "npu_frequency_hz": {
+        "/sys/class/devfreq/fde40000.npu/cur_freq": 900000000
+      },
+      "npu_load": "NPU load: 41%"
+    },
+    {
+      "monotonic": 45154.209907816,
+      "cpu_percent": 151.33848902866578,
+      "rss_bytes": 131842048,
+      "temperature_c": {
+        "/sys/class/thermal/thermal_zone0/temp": 51.25,
+        "/sys/class/thermal/thermal_zone1/temp": 49.444
+      },
+      "npu_frequency_hz": {
+        "/sys/class/devfreq/fde40000.npu/cur_freq": 900000000
+      },
+      "npu_load": "NPU load: 40%"
+    },
+    {
+      "monotonic": 45155.224377192,
+      "cpu_percent": 154.30882992069243,
+      "rss_bytes": 131842048,
+      "temperature_c": {
+        "/sys/class/thermal/thermal_zone0/temp": 51.25,
+        "/sys/class/thermal/thermal_zone1/temp": 49.444
+      },
+      "npu_frequency_hz": {
+        "/sys/class/devfreq/fde40000.npu/cur_freq": 900000000
+      },
+      "npu_load": "NPU load: 41%"
+    },
+    {
+      "monotonic": 45156.238751484,
+      "cpu_percent": 151.56725679254276,
+      "rss_bytes": 132653056,
+      "temperature_c": {
+        "/sys/class/thermal/thermal_zone0/temp": 51.25,
+        "/sys/class/thermal/thermal_zone1/temp": 49.444
+      },
+      "npu_frequency_hz": {
+        "/sys/class/devfreq/fde40000.npu/cur_freq": 900000000
+      },
+      "npu_load": "NPU load: 41%"
+    },
+    {
+      "monotonic": 45157.26998625,
+      "cpu_percent": 151.78549090923565,
+      "rss_bytes": 131842048,
+      "temperature_c": {
+        "/sys/class/thermal/thermal_zone0/temp": 51.875,
+        "/sys/class/thermal/thermal_zone1/temp": 49.444
+      },
+      "npu_frequency_hz": {
+        "/sys/class/devfreq/fde40000.npu/cur_freq": 900000000
+      },
+      "npu_load": "NPU load: 39%"
+    },
+    {
+      "monotonic": 45158.286227919,
+      "cpu_percent": 155.12648340342616,
+      "rss_bytes": 132653056,
+      "temperature_c": {
+        "/sys/class/thermal/thermal_zone0/temp": 51.875,
+        "/sys/class/thermal/thermal_zone1/temp": 49.444
+      },
+      "npu_frequency_hz": {
+        "/sys/class/devfreq/fde40000.npu/cur_freq": 900000000
+      },
+      "npu_load": "NPU load: 41%"
+    },
+    {
+      "monotonic": 45159.303747034,
+      "cpu_percent": 153.7924130303905,
+      "rss_bytes": 131842048,
+      "temperature_c": {
+        "/sys/class/thermal/thermal_zone0/temp": 51.875,
+        "/sys/class/thermal/thermal_zone1/temp": 49.444
+      },
+      "npu_frequency_hz": {
+        "/sys/class/devfreq/fde40000.npu/cur_freq": 900000000
+      },
+      "npu_load": "NPU load: 39%"
+    },
+    {
+      "monotonic": 45160.347410007,
+      "cpu_percent": 157.34813407003764,
+      "rss_bytes": 131842048,
+      "temperature_c": {
+        "/sys/class/thermal/thermal_zone0/temp": 51.875,
+        "/sys/class/thermal/thermal_zone1/temp": 49.444
+      },
+      "npu_frequency_hz": {
+        "/sys/class/devfreq/fde40000.npu/cur_freq": 900000000
+      },
+      "npu_load": "NPU load: 40%"
+    },
+    {
+      "monotonic": 45161.383936606,
+      "cpu_percent": 147.3646212724776,
+      "rss_bytes": 131842048,
+      "temperature_c": {
+        "/sys/class/thermal/thermal_zone0/temp": 51.875,
+        "/sys/class/thermal/thermal_zone1/temp": 50.0
+      },
+      "npu_frequency_hz": {
+        "/sys/class/devfreq/fde40000.npu/cur_freq": 900000000
+      },
+      "npu_load": "NPU load: 43%"
+    },
+    {
+      "monotonic": 45162.398424069,
+      "cpu_percent": 151.62380631627707,
+      "rss_bytes": 131842048,
+      "temperature_c": {
+        "/sys/class/thermal/thermal_zone0/temp": 52.5,
+        "/sys/class/thermal/thermal_zone1/temp": 50.0
+      },
+      "npu_frequency_hz": {
+        "/sys/class/devfreq/fde40000.npu/cur_freq": 900000000
+      },
+      "npu_load": "NPU load: 39%"
+    },
+    {
+      "monotonic": 45163.434536201,
+      "cpu_percent": 150.18472961930044,
+      "rss_bytes": 131842048,
+      "temperature_c": {
+        "/sys/class/thermal/thermal_zone0/temp": 52.5,
+        "/sys/class/thermal/thermal_zone1/temp": 50.0
+      },
+      "npu_frequency_hz": {
+        "/sys/class/devfreq/fde40000.npu/cur_freq": 900000000
+      },
+      "npu_load": "NPU load: 43%"
+    },
+    {
+      "monotonic": 45164.442492347,
+      "cpu_percent": 154.2508268012478,
+      "rss_bytes": 131969024,
+      "temperature_c": {
+        "/sys/class/thermal/thermal_zone0/temp": 51.875,
+        "/sys/class/thermal/thermal_zone1/temp": 50.0
+      },
+      "npu_frequency_hz": {
+        "/sys/class/devfreq/fde40000.npu/cur_freq": 900000000
+      },
+      "npu_load": "NPU load: 41%"
+    },
+    {
+      "monotonic": 45165.461948177,
+      "cpu_percent": 156.80759371413615,
+      "rss_bytes": 131969024,
+      "temperature_c": {
+        "/sys/class/thermal/thermal_zone0/temp": 51.875,
+        "/sys/class/thermal/thermal_zone1/temp": 50.0
+      },
+      "npu_frequency_hz": {
+        "/sys/class/devfreq/fde40000.npu/cur_freq": 900000000
+      },
+      "npu_load": "NPU load: 38%"
+    },
+    {
+      "monotonic": 45166.521217431,
+      "cpu_percent": 148.01713040168434,
+      "rss_bytes": 132780032,
+      "temperature_c": {
+        "/sys/class/thermal/thermal_zone0/temp": 52.5,
+        "/sys/class/thermal/thermal_zone1/temp": 50.0
+      },
+      "npu_frequency_hz": {
+        "/sys/class/devfreq/fde40000.npu/cur_freq": 900000000
+      },
+      "npu_load": "NPU load: 40%"
+    },
+    {
+      "monotonic": 45167.525328906,
+      "cpu_percent": 150.49645020763026,
+      "rss_bytes": 132780032,
+      "temperature_c": {
+        "/sys/class/thermal/thermal_zone0/temp": 52.5,
+        "/sys/class/thermal/thermal_zone1/temp": 50.0
+      },
+      "npu_frequency_hz": {
+        "/sys/class/devfreq/fde40000.npu/cur_freq": 900000000
+      },
+      "npu_load": "NPU load: 40%"
+    },
+    {
+      "monotonic": 45168.561408081,
+      "cpu_percent": 151.4344287444508,
+      "rss_bytes": 132780032,
+      "temperature_c": {
+        "/sys/class/thermal/thermal_zone0/temp": 52.5,
+        "/sys/class/thermal/thermal_zone1/temp": 50.0
+      },
+      "npu_frequency_hz": {
+        "/sys/class/devfreq/fde40000.npu/cur_freq": 900000000
+      },
+      "npu_load": "NPU load: 38%"
+    },
+    {
+      "monotonic": 45169.574071422,
+      "cpu_percent": 151.40654548434742,
+      "rss_bytes": 132780032,
+      "temperature_c": {
+        "/sys/class/thermal/thermal_zone0/temp": 52.5,
+        "/sys/class/thermal/thermal_zone1/temp": 50.625
+      },
+      "npu_frequency_hz": {
+        "/sys/class/devfreq/fde40000.npu/cur_freq": 900000000
+      },
+      "npu_load": "NPU load: 43%"
+    },
+    {
+      "monotonic": 45170.583419603,
+      "cpu_percent": 152.19248193261643,
+      "rss_bytes": 132034560,
+      "temperature_c": {
+        "/sys/class/thermal/thermal_zone0/temp": 52.5,
+        "/sys/class/thermal/thermal_zone1/temp": 50.625
+      },
+      "npu_frequency_hz": {
+        "/sys/class/devfreq/fde40000.npu/cur_freq": 900000000
+      },
+      "npu_load": "NPU load: 41%"
+    },
+    {
+      "monotonic": 45171.596984507,
+      "cpu_percent": 155.3786259549388,
+      "rss_bytes": 132034560,
+      "temperature_c": {
+        "/sys/class/thermal/thermal_zone0/temp": 52.5,
+        "/sys/class/thermal/thermal_zone1/temp": 50.625
+      },
+      "npu_frequency_hz": {
+        "/sys/class/devfreq/fde40000.npu/cur_freq": 900000000
+      },
+      "npu_load": "NPU load: 41%"
+    },
+    {
+      "monotonic": 45172.616649178,
+      "cpu_percent": 158.18137313845685,
+      "rss_bytes": 132034560,
+      "temperature_c": {
+        "/sys/class/thermal/thermal_zone0/temp": 52.5,
+        "/sys/class/thermal/thermal_zone1/temp": 50.625
+      },
+      "npu_frequency_hz": {
+        "/sys/class/devfreq/fde40000.npu/cur_freq": 900000000
+      },
+      "npu_load": "NPU load: 41%"
+    },
+    {
+      "monotonic": 45173.666086707,
+      "cpu_percent": 153.9384912734541,
+      "rss_bytes": 132034560,
+      "temperature_c": {
+        "/sys/class/thermal/thermal_zone0/temp": 52.5,
+        "/sys/class/thermal/thermal_zone1/temp": 50.625
+      },
+      "npu_frequency_hz": {
+        "/sys/class/devfreq/fde40000.npu/cur_freq": 900000000
+      },
+      "npu_load": "NPU load: 40%"
+    },
+    {
+      "monotonic": 45174.669275039,
+      "cpu_percent": 152.76826874063548,
+      "rss_bytes": 132034560,
+      "temperature_c": {
+        "/sys/class/thermal/thermal_zone0/temp": 52.5,
+        "/sys/class/thermal/thermal_zone1/temp": 50.625
+      },
+      "npu_frequency_hz": {
+        "/sys/class/devfreq/fde40000.npu/cur_freq": 900000000
+      },
+      "npu_load": "NPU load: 41%"
+    },
+    {
+      "monotonic": 45175.684063806,
+      "cpu_percent": 156.67145426686437,
+      "rss_bytes": 132034560,
+      "temperature_c": {
+        "/sys/class/thermal/thermal_zone0/temp": 53.125,
+        "/sys/class/thermal/thermal_zone1/temp": 50.625
+      },
+      "npu_frequency_hz": {
+        "/sys/class/devfreq/fde40000.npu/cur_freq": 900000000
+      },
+      "npu_load": "NPU load: 40%"
+    },
+    {
+      "monotonic": 45176.706728632,
+      "cpu_percent": 152.44831868312687,
+      "rss_bytes": 132034560,
+      "temperature_c": {
+        "/sys/class/thermal/thermal_zone0/temp": 53.125,
+        "/sys/class/thermal/thermal_zone1/temp": 50.625
+      },
+      "npu_frequency_hz": {
+        "/sys/class/devfreq/fde40000.npu/cur_freq": 900000000
+      },
+      "npu_load": "NPU load: 40%"
+    },
+    {
+      "monotonic": 45177.748606571,
+      "cpu_percent": 154.3993803670418,
+      "rss_bytes": 132034560,
+      "temperature_c": {
+        "/sys/class/thermal/thermal_zone0/temp": 53.125,
+        "/sys/class/thermal/thermal_zone1/temp": 50.625
+      },
+      "npu_frequency_hz": {
+        "/sys/class/devfreq/fde40000.npu/cur_freq": 900000000
+      },
+      "npu_load": "NPU load: 40%"
+    },
+    {
+      "monotonic": 45178.791464325,
+      "cpu_percent": 151.67353543119458,
+      "rss_bytes": 132034560,
+      "temperature_c": {
+        "/sys/class/thermal/thermal_zone0/temp": 53.125,
+        "/sys/class/thermal/thermal_zone1/temp": 50.625
+      },
+      "npu_frequency_hz": {
+        "/sys/class/devfreq/fde40000.npu/cur_freq": 900000000
+      },
+      "npu_load": "NPU load: 43%"
+    },
+    {
+      "monotonic": 45179.802699637,
+      "cpu_percent": 154.9993549860437,
+      "rss_bytes": 132845568,
+      "temperature_c": {
+        "/sys/class/thermal/thermal_zone0/temp": 52.5,
+        "/sys/class/thermal/thermal_zone1/temp": 50.625
+      },
+      "npu_frequency_hz": {
+        "/sys/class/devfreq/fde40000.npu/cur_freq": 900000000
+      },
+      "npu_load": "NPU load: 40%"
+    },
+    {
+      "monotonic": 45180.811542061,
+      "cpu_percent": 155.439479219214,
+      "rss_bytes": 132034560,
+      "temperature_c": {
+        "/sys/class/thermal/thermal_zone0/temp": 52.5,
+        "/sys/class/thermal/thermal_zone1/temp": 50.625
+      },
+      "npu_frequency_hz": {
+        "/sys/class/devfreq/fde40000.npu/cur_freq": 900000000
+      },
+      "npu_load": "NPU load: 38%"
+    },
+    {
+      "monotonic": 45181.867540496,
+      "cpu_percent": 155.92119679552306,
+      "rss_bytes": 132845568,
+      "temperature_c": {
+        "/sys/class/thermal/thermal_zone0/temp": 52.5,
+        "/sys/class/thermal/thermal_zone1/temp": 50.625
+      },
+      "npu_frequency_hz": {
+        "/sys/class/devfreq/fde40000.npu/cur_freq": 900000000
+      },
+      "npu_load": "NPU load: 40%"
+    },
+    {
+      "monotonic": 45182.880629686,
+      "cpu_percent": 149.18058339999638,
+      "rss_bytes": 132845568,
+      "temperature_c": {
+        "/sys/class/thermal/thermal_zone0/temp": 53.125,
+        "/sys/class/thermal/thermal_zone1/temp": 50.625
+      },
+      "npu_frequency_hz": {
+        "/sys/class/devfreq/fde40000.npu/cur_freq": 900000000
+      },
+      "npu_load": "NPU load: 41%"
+    },
+    {
+      "monotonic": 45183.8836506,
+      "cpu_percent": 150.36234179625373,
+      "rss_bytes": 132845568,
+      "temperature_c": {
+        "/sys/class/thermal/thermal_zone0/temp": 53.125,
+        "/sys/class/thermal/thermal_zone1/temp": 51.25
+      },
+      "npu_frequency_hz": {
+        "/sys/class/devfreq/fde40000.npu/cur_freq": 900000000
+      },
+      "npu_load": "NPU load: 41%"
+    },
+    {
+      "monotonic": 45184.922619392,
+      "cpu_percent": 155.99548643673143,
+      "rss_bytes": 132845568,
+      "temperature_c": {
+        "/sys/class/thermal/thermal_zone0/temp": 52.5,
+        "/sys/class/thermal/thermal_zone1/temp": 51.25
+      },
+      "npu_frequency_hz": {
+        "/sys/class/devfreq/fde40000.npu/cur_freq": 900000000
+      },
+      "npu_load": "NPU load: 39%"
+    },
+    {
+      "monotonic": 45185.940998956,
+      "cpu_percent": 152.74039601541676,
+      "rss_bytes": 132845568,
+      "temperature_c": {
+        "/sys/class/thermal/thermal_zone0/temp": 52.5,
+        "/sys/class/thermal/thermal_zone1/temp": 50.625
+      },
+      "npu_frequency_hz": {
+        "/sys/class/devfreq/fde40000.npu/cur_freq": 900000000
+      },
+      "npu_load": "NPU load: 40%"
+    },
+    {
+      "monotonic": 45186.948707064,
+      "cpu_percent": 153.541250657222,
+      "rss_bytes": 132845568,
+      "temperature_c": {
+        "/sys/class/thermal/thermal_zone0/temp": 53.125,
+        "/sys/class/thermal/thermal_zone1/temp": 51.25
+      },
+      "npu_frequency_hz": {
+        "/sys/class/devfreq/fde40000.npu/cur_freq": 900000000
+      },
+      "npu_load": "NPU load: 40%"
+    },
+    {
+      "monotonic": 45187.967778186,
+      "cpu_percent": 156.40565222517068,
+      "rss_bytes": 132845568,
+      "temperature_c": {
+        "/sys/class/thermal/thermal_zone0/temp": 52.5,
+        "/sys/class/thermal/thermal_zone1/temp": 50.625
+      },
+      "npu_frequency_hz": {
+        "/sys/class/devfreq/fde40000.npu/cur_freq": 900000000
+      },
+      "npu_load": "NPU load: 41%"
+    },
+    {
+      "monotonic": 45188.993650842,
+      "cpu_percent": 147.36857456525698,
+      "rss_bytes": 132124672,
+      "temperature_c": {
+        "/sys/class/thermal/thermal_zone0/temp": 53.75,
+        "/sys/class/thermal/thermal_zone1/temp": 51.25
+      },
+      "npu_frequency_hz": {
+        "/sys/class/devfreq/fde40000.npu/cur_freq": 900000000
+      },
+      "npu_load": "NPU load: 41%"
+    },
+    {
+      "monotonic": 45190.025881104,
+      "cpu_percent": 152.39549099796952,
+      "rss_bytes": 132124672,
+      "temperature_c": {
+        "/sys/class/thermal/thermal_zone0/temp": 53.75,
+        "/sys/class/thermal/thermal_zone1/temp": 51.25
+      },
+      "npu_frequency_hz": {
+        "/sys/class/devfreq/fde40000.npu/cur_freq": 900000000
+      },
+      "npu_load": "NPU load: 42%"
+    },
+    {
+      "monotonic": 45191.058313205,
+      "cpu_percent": 156.03879300460525,
+      "rss_bytes": 132055040,
+      "temperature_c": {
+        "/sys/class/thermal/thermal_zone0/temp": 53.125,
+        "/sys/class/thermal/thermal_zone1/temp": 51.25
+      },
+      "npu_frequency_hz": {
+        "/sys/class/devfreq/fde40000.npu/cur_freq": 900000000
+      },
+      "npu_load": "NPU load: 40%"
+    },
+    {
+      "monotonic": 45192.058610768,
+      "cpu_percent": 149.10008243250917,
+      "rss_bytes": 132055040,
+      "temperature_c": {
+        "/sys/class/thermal/thermal_zone0/temp": 53.125,
+        "/sys/class/thermal/thermal_zone1/temp": 51.25
+      },
+      "npu_frequency_hz": {
+        "/sys/class/devfreq/fde40000.npu/cur_freq": 900000000
+      },
+      "npu_load": "NPU load: 40%"
+    },
+    {
+      "monotonic": 45193.061948444,
+      "cpu_percent": 151.85928321445132,
+      "rss_bytes": 132055040,
+      "temperature_c": {
+        "/sys/class/thermal/thermal_zone0/temp": 53.75,
+        "/sys/class/thermal/thermal_zone1/temp": 51.25
+      },
+      "npu_frequency_hz": {
+        "/sys/class/devfreq/fde40000.npu/cur_freq": 900000000
+      },
+      "npu_load": "NPU load: 41%"
+    },
+    {
+      "monotonic": 45194.098110175,
+      "cpu_percent": 151.85768340291563,
+      "rss_bytes": 132055040,
+      "temperature_c": {
+        "/sys/class/thermal/thermal_zone0/temp": 53.75,
+        "/sys/class/thermal/thermal_zone1/temp": 51.25
+      },
+      "npu_frequency_hz": {
+        "/sys/class/devfreq/fde40000.npu/cur_freq": 900000000
+      },
+      "npu_load": "NPU load: 44%"
+    }
+  ],
+  "runtime_sample_retention": {
+    "method": "latest_samples",
+    "limit": 1024,
+    "total_count": 58,
+    "retained_count": 58,
+    "raw_log": "/userdata/helmet-validation/20261114-continuation/browser-current-2/frames.jsonl.resources.jsonl"
+  },
+  "state": "stop",
+  "reason": "session stopped",
+  "model": "/userdata/helmet-validation/20261114-continuation/models/helmet_416x416.rknn",
+  "model_sha256": "7e0eefe4bfe86627bb6b58161cacca10912e0dbe1ba2513f58d091c40b26cd48",
+  "source": "/userdata/helmet-validation/20261114-continuation/input/construction-replay.avi",
+  "class_order": [
+    "person",
+    "hat"
+  ],
+  "input_size": [
+    416,
+    416
+  ],
+  "thresholds": {
+    "conf": 0.35,
+    "nms": 0.45
+  },
+  "replay_fps": 20.0,
+  "result_ttl": 1,
+  "runtime": {
+    "python": "3.10.5 (main, Jul  5 2024, 11:06:31) [GCC 10.4.0]",
+    "opencv": "4.5.4",
+    "numpy": "1.21.2"
+  }
+}

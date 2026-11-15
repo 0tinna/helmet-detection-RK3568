@@ -1,0 +1,6 @@
+QStandardPaths: runtime directory '/var/run' is not a directory, but a symbolic link to a directory permissions 0755 owned by UID 0 GID 0
+qml: NATIVE_READY
+qml: NATIVE_SURFACE QQuickItem(0x558034dc50)
+qml: NATIVE_RENDER {"saved":true,"valid":true,"frameId":204,"generation":"2f9a00a769fb4d9291226d78ee68ad09","rendered_wall_ms":1794688116733,"surfaceWidth":720,"surfaceHeight":968,"previewVisible":false,"previewReady":false,"previewSourceKind":"unavailable","previewSourceSize":null,"uiSelection":{"model":"helmet_416x416.rknn","source":"construction-replay.avi","profile":"responsive"},"width":720,"height":1120}
+qml: NATIVE_EXIT pipeline-stopped
+arm_release_ver: g13p0-01eac0, rk_so_ver: 9

@@ -1,0 +1,14 @@
+{
+  "same_session": true,
+  "same_manager": true,
+  "same_service": true,
+  "same_ui": true,
+  "session": "d9fce8dd35d54c8e9f00ef2219b8a12f",
+  "wifi_intent_tab": "wifi",
+  "wifi_ack_tab": "wifi",
+  "detection_intent_tab": "detection",
+  "detection_ack_tab": "detection",
+  "frame_id": 3228,
+  "running": true,
+  "valid": true
+}

@@ -1,0 +1,32 @@
+﻿{
+  "rawvideoparse": {
+    "returncode": 255,
+    "summary": "",
+    "error": "No such element or plugin 'rawvideoparse'\n"
+  },
+  "appsrc": {
+    "returncode": 0,
+    "summary": "Factory Details:\n  Rank                     none (0)\n  Long-name                AppSrc\n  Klass                    Generic/Source\n  Description              Allow the application to feed buffers to a pipeline\n  Author                   David Schleef <ds@schleef.org>, Wim Taymans <wim.taymans@gmail.com>\n  Documentation            https://gstreamer.freedesktop.org/documentation/app/appsrc.html\n\nPlugin Details:\n  Name                     app\n  Description              Elements used to communicate with applications\n  Filename                 /lib/gstreamer-1.0/libgstapp.so\n  Version                  1.22.2\n  License                  LGPL\n  Source module            gst-plugins-base\n  Documentation            https://gstreamer.freedesktop.org/documentation/app/\n  Source release date      2023-04-11\n  Binary package           GStreamer Base Plug-ins source release\n  Origin URL               Unknown package origin\n\nGObject\n +----GInitiallyUnowned\n       +----GstObject\n             +----GstEleme",
+    "error": ""
+  },
+  "mpph264enc": {
+    "returncode": 0,
+    "summary": "Factory Details:\n  Rank                     primary + 1 (257)\n  Long-name                Rockchip Mpp H264 Encoder\n  Klass                    Codec/Encoder/Video\n  Description              Encode video streams via Rockchip Mpp\n  Author                   Randy Li <randy.li@rock-chips.com>, Jeffy Chen <jeffy.chen@rock-chips.com>\n\nPlugin Details:\n  Name                     rockchipmpp\n  Description              Rockchip Mpp Video Plugin\n  Filename                 /lib/gstreamer-1.0/libgstrockchipmpp.so\n  Version                  1.14.4\n  License                  LGPL\n  Source module            gst-rockchip\n  Binary package           GStreamer Rockchip Plug-ins\n  Origin URL               Unknown package origin\n\nGObject\n +----GInitiallyUnowned\n       +----GstObject\n             +----GstElement\n                   +----GstVideoEncoder\n                         +----GstMppEnc\n                               +----GstMppH264Enc\n\nImplemented Interfaces:\n  GstPreset\n\nPad Templates:\n  SINK template: ",
+    "error": "\n(gst-inspect-1.0:1620): GLib-GObject-CRITICAL **: 06:41:03.679: g_value_set_uint: assertion 'G_VALUE_HOLDS_UINT (value)' failed\n\n(gst-inspect-1.0:1620): GLib-GObject-CRITICAL **: 06:41:03.680: g_value_set_uint: assertion 'G_VALUE_HOLDS_UINT (value)' failed\n"
+  },
+  "waylandsink": {
+    "returncode": 0,
+    "summary": "Factory Details:\n  Rank                     primary (256)\n  Long-name                wayland video sink\n  Klass                    Sink/Video\n  Description              Output to wayland surface\n  Author                   Sreerenj Balachandran <sreerenj.balachandran@intel.com>, George Kiagiadakis <george.kiagiadakis@collabora.com>\n  Documentation            https://gstreamer.freedesktop.org/documentation/waylandsink/#waylandsink-page\n\nPlugin Details:\n  Name                     waylandsink\n  Description              Wayland Video Sink\n  Filename                 /lib/gstreamer-1.0/libgstwaylandsink.so\n  Version                  1.22.2\n  License                  LGPL\n  Source module            gst-plugins-bad\n  Documentation            https://gstreamer.freedesktop.org/documentation/waylandsink/\n  Source release date      2023-04-11\n  Binary package           GStreamer Bad Plug-ins source release\n  Origin URL               Unknown package origin\n\nGObject\n +----GInitiallyUnowned\n       +--",
+    "error": ""
+  },
+  "kmssink": {
+    "returncode": 0,
+    "summary": "Factory Details:\n  Rank                     secondary (128)\n  Long-name                KMS video sink\n  Klass                    Sink/Video\n  Description              Video sink using the Linux kernel mode setting API\n  Author                   V?ctor J?quez <vjaquez@igalia.com>\n  Documentation            https://gstreamer.freedesktop.org/documentation/kms/#kmssink-page\n\nPlugin Details:\n  Name                     kms\n  Description              Video sink using the Linux kernel mode setting API\n  Filename                 /lib/gstreamer-1.0/libgstkms.so\n  Version                  1.22.2\n  License                  LGPL\n  Source module            gst-plugins-bad\n  Documentation            https://gstreamer.freedesktop.org/documentation/kms/\n  Source release date      2023-04-11\n  Binary package           GStreamer Bad Plug-ins source release\n  Origin URL               Unknown package origin\n\nGObject\n +----GInitiallyUnowned\n       +----GstObject\n             +----GstElement\n                ",
+    "error": ""
+  },
+  "ximagesink": {
+    "returncode": 255,
+    "summary": "",
+    "error": "No such element or plugin 'ximagesink'\n"
+  }
+}
