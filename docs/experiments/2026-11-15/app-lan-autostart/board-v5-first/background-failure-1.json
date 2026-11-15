@@ -1,0 +1,116 @@
+{
+  "kind": "v5-first-background-failure",
+  "start": {
+    "application": {
+      "ack": null,
+      "applied": false,
+      "failure": null,
+      "intent": {
+        "preview_after": 0.0,
+        "sequence": 0,
+        "tab": "detection",
+        "visible": false
+      },
+      "last_render": null,
+      "phase": "running",
+      "progress": {
+        "cleanup_completed": false
+      },
+      "root": "/userdata/helmet-validation/20261115-native-app-v5-lan-1",
+      "service": {
+        "pid": 4819,
+        "starttime": 1155553,
+        "uid": 0
+      },
+      "session": "e4fe02d746e14bdaa24f35f86f87660d",
+      "ui": {
+        "alive": false,
+        "exit_code": null,
+        "identity": null,
+        "instance": null
+      },
+      "verification_enabled": false,
+      "version": "resident-v4"
+    },
+    "code_id": "230180c9634465aaad0bb6f939fbe452b68b0e72535f40b2c70def72acacfc95",
+    "kind": "resident-start-v4",
+    "lease": {
+      "device": 45832,
+      "inode": 2820946,
+      "service_alive": true,
+      "service_inherited": true
+    },
+    "manager": {
+      "pid": 4817,
+      "starttime": 1155466,
+      "uid": 0
+    },
+    "mode": "resident",
+    "phase": "running",
+    "protocol": 1,
+    "recorded_at": 11557.679139507,
+    "root": "/userdata/helmet-validation/20261115-native-app-v5-lan-1",
+    "service": {
+      "pid": 4819,
+      "starttime": 1155553,
+      "uid": 0
+    },
+    "session": "e4fe02d746e14bdaa24f35f86f87660d",
+    "ui": null,
+    "verification_enabled": false,
+    "version": "resident-v4",
+    "workspace": "/userdata/helmet-validation/20261115-native-app-v5-lan-1/app-state/session-e4fe02d746e14bdaa24f35f86f87660d"
+  },
+  "terminal": {
+    "cleanup_completed": true,
+    "code_id": "230180c9634465aaad0bb6f939fbe452b68b0e72535f40b2c70def72acacfc95",
+    "kind": "resident-terminal-v4",
+    "manager": {
+      "pid": 4817,
+      "starttime": 1155466,
+      "uid": 0
+    },
+    "normal_stop": "http_quit",
+    "phase": "failed",
+    "resource_lease_released": true,
+    "root": "/userdata/helmet-validation/20261115-native-app-v5-lan-1",
+    "service": {
+      "pid": 4819,
+      "starttime": 1155553,
+      "uid": 0
+    },
+    "service_exit": 0,
+    "session": "e4fe02d746e14bdaa24f35f86f87660d",
+    "terminal_at": 11701.485969379,
+    "ui": null,
+    "version": "resident-v4"
+  },
+  "lifecycle": {
+    "cleanup_completed": true,
+    "detection_alive": false,
+    "detection_stopped": true,
+    "http_alive": false,
+    "identity": {
+      "pid": 4819,
+      "starttime": 1155553,
+      "uid": 0
+    },
+    "lan_alive": false,
+    "lan_port": 8091,
+    "received_at": 11700.712980287,
+    "session": "e4fe02d746e14bdaa24f35f86f87660d",
+    "state": "stopping",
+    "wifi_alive": false,
+    "wifi_stopped": true
+  },
+  "logs": [
+    {
+      "name": "service.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "boot_id": "22011579-2e90-4b4a-8546-a522f7e23ca2",
+  "observed_monotonic": 12785.688866906,
+  "camera_180s_started": false
+}

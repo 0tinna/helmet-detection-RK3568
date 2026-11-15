@@ -1,0 +1,32 @@
+{
+  "kind": "installed-init-background-idle-180s",
+  "start": {
+    "started": true,
+    "session": "d310ec6484954255a65011b265b694e3",
+    "lan_port": 8091,
+    "detection": "manual",
+    "visible": false
+  },
+  "session": "d310ec6484954255a65011b265b694e3",
+  "identities": {
+    "manager": {
+      "pid": 11728,
+      "starttime": 1407136,
+      "uid": 0
+    },
+    "service": {
+      "pid": 11730,
+      "starttime": 1407218,
+      "uid": 0
+    },
+    "ui": null
+  },
+  "boot_id": "22011579-2e90-4b4a-8546-a522f7e23ca2",
+  "actual_reboot": false,
+  "elapsed": 181.17606513600003,
+  "samples": 36,
+  "owner_changes": 0,
+  "failed_samples": 0,
+  "ui_or_detection_started": 0,
+  "passed": true
+}

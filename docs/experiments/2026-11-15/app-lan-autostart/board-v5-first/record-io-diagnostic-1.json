@@ -1,0 +1,26 @@
+{
+  "kind": "isolated-private-record-I/O-diagnostic",
+  "npu_exercised": false,
+  "elapsed": 0.650750656001037,
+  "counts": {
+    "writes": 91,
+    "reads": 657
+  },
+  "metadata_events": [
+    {
+      "where": "_stat",
+      "name": "state.json",
+      "nlink": 0,
+      "inode": 2837897,
+      "uid": 0,
+      "mode": "0o100600",
+      "t": 12820.907638435
+    }
+  ],
+  "errors": [
+    {
+      "where": "reader",
+      "traceback": "Traceback (most recent call last):\n  File \"/userdata/helmet-validation/20261115-app-lan-validation-1/diagnose_record_io.py\", line 34, in <module>\n    reader.read_json('state.json'); counts['reads']+=1\n  File \"/userdata/helmet-validation/20261115-native-app-v5-lan-1/src/app/resident.py\", line 300, in read_json\n    with os.fdopen(self.open_file(name), 'rb') as stream:\n  File \"/userdata/helmet-validation/20261115-native-app-v5-lan-1/src/app/resident.py\", line 261, in open_file\n    raise ValueError('private files must be regular and singly linked')\nValueError: private files must be regular and singly linked\n"
+    }
+  ]
+}

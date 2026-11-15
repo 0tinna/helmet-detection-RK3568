@@ -1,0 +1,42 @@
+test_background_entry_cannot_mix_with_show_hide_or_verification_actions (test_app_boot.BackgroundLaunchTests) ... ok
+test_background_manager_waits_for_an_icon_before_creating_a_window (test_app_boot.BackgroundLaunchTests) ... ok
+test_absent_processes_without_actual_cleanup_receipt_are_not_success (test_app_boot.BootCleanupTests) ... ok
+test_accepted_quit_with_live_owner_cannot_report_success (test_app_boot.BootCleanupTests) ... ok
+test_complete_same_session_receipt_and_released_owners_confirm_shutdown (test_app_boot.BootCleanupTests) ... ok
+test_different_session_cannot_be_substituted_for_the_requested_shutdown (test_app_boot.BootCleanupTests) ... ok
+test_failed_cleanup_or_nonzero_service_exit_cannot_report_completed (test_app_boot.BootCleanupTests) ... ok
+test_repeated_stop_after_a_failed_owner_returns_nonzero_at_cli (test_app_boot.BootCleanupTests) ... FAIL
+test_repeated_stop_keeps_the_verified_terminal_session (test_app_boot.BootCleanupTests) ... FAIL
+test_repeated_stop_without_the_original_cleanup_receipt_is_unconfirmed (test_app_boot.BootCleanupTests) ... FAIL
+
+======================================================================
+FAIL: test_repeated_stop_after_a_failed_owner_returns_nonzero_at_cli (test_app_boot.BootCleanupTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Workplace\RK3568\tests\test_app_boot.py", line 116, in test_repeated_stop_after_a_failed_owner_returns_nonzero_at_cli
+    self.assertEqual(self.boot.main(['stop', '--root', str(self.root)]), 1)
+AssertionError: 0 != 1
+
+======================================================================
+FAIL: test_repeated_stop_keeps_the_verified_terminal_session (test_app_boot.BootCleanupTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Workplace\RK3568\tests\test_app_boot.py", line 127, in test_repeated_stop_keeps_the_verified_terminal_session
+    self.assertEqual(result['phase'], 'completed')
+AssertionError: 'absent' != 'completed'
+- absent
++ completed
+
+
+======================================================================
+FAIL: test_repeated_stop_without_the_original_cleanup_receipt_is_unconfirmed (test_app_boot.BootCleanupTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Workplace\RK3568\tests\test_app_boot.py", line 121, in test_repeated_stop_without_the_original_cleanup_receipt_is_unconfirmed
+    with self.assertRaises(TimeoutError):
+AssertionError: TimeoutError not raised
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.107s
+
+FAILED (failures=3)

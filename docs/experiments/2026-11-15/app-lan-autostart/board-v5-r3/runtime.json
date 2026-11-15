@@ -1,0 +1,13 @@
+{
+  "root": "/userdata/helmet-validation/20261115-native-app-v5-r3-lan-3",
+  "python": "3.10.5 (main, Jul  5 2024, 11:06:31) [GCC 10.4.0]",
+  "platform": "Linux-5.10.160-aarch64-with-glibc2.37",
+  "opencv": "4.5.4",
+  "numpy": "1.21.2",
+  "rknn_toolkit_lite2": "2.5.0",
+  "governors": {
+    "/sys/devices/system/cpu/cpufreq/policy0/scaling_governor": "schedutil"
+  },
+  "governor_changed_by_this_run": false,
+  "actual_reboot_executed": false
+}

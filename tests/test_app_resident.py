@@ -34,7 +34,7 @@ if not APP_DIR.is_dir():
         choices = (parent / 'src/app', parent / 'app')
         candidate = next((path for path in choices if (path / 'resident.py').is_file()), None)
         if candidate is not None:
-            APP_DIR, REPO, RESIDENT_MODULE = candidate, candidate.parent, 'app.resident'
+            APP_DIR, REPO, RESIDENT_MODULE = candidate.resolve(), candidate.resolve().parent, 'app.resident'
             break
 sys.path.insert(0, str(REPO))
 NODE = shutil.which('node')
@@ -950,6 +950,64 @@ class LinuxResidentFixtureTests(unittest.TestCase):
 
         self.assertTrue(replaced, 'the fixture must replace the entry after it is opened')
         self.assertEqual(value, {'sequence': 2})
+
+    def test_record_read_retries_when_atomic_replace_unlinks_the_stat_snapshot(self):
+        self.coordinator.write_json('service-state.json', {'sequence': 1})
+        self.coordinator.write_json('next.json', {'sequence': 2})
+        old_fd = self.coordinator.open_file('service-state.json')
+        real_stat = self.resident.os.stat
+        reads = 0
+        replaced = False
+
+        def replace_during_stat(name, *args, **kwargs):
+            nonlocal reads, replaced
+            row = real_stat(name, *args, **kwargs)
+            if name == 'service-state.json' and kwargs.get('dir_fd') == self.coordinator.descriptor:
+                reads += 1
+                if reads == 2:
+                    os.replace('next.json', 'service-state.json',
+                               src_dir_fd=self.coordinator.descriptor,
+                               dst_dir_fd=self.coordinator.descriptor)
+                    row = os.fstat(old_fd)
+                    self.assertEqual(row.st_nlink, 0)
+                    replaced = True
+            return row
+
+        try:
+            with patch.object(self.resident.os, 'stat', side_effect=replace_during_stat):
+                try:
+                    value = self.coordinator.read_json('service-state.json')
+                except ValueError as error:
+                    self.fail('an atomic replacement during stat must be reopened: ' + str(error))
+            self.assertTrue(replaced, 'the fixture must expose a real unlinked inode during stat')
+            self.assertEqual(value, {'sequence': 2})
+        finally:
+            os.close(old_fd)
+
+    def test_record_replacement_does_not_retry_an_unsafe_open_descriptor(self):
+        self.coordinator.write_json('service-state.json', {'sequence': 1})
+        self.coordinator.write_json('next.json', {'sequence': 2})
+        old_inode = (self.path / 'service-state.json').stat().st_ino
+        real_fstat = self.resident.os.fstat
+        replaced = False
+
+        def make_replaced_descriptor_unsafe(descriptor):
+            nonlocal replaced
+            row = real_fstat(descriptor)
+            if not replaced and row.st_ino == old_inode:
+                os.fchmod(descriptor, 0o644)
+                os.replace('next.json', 'service-state.json',
+                           src_dir_fd=self.coordinator.descriptor,
+                           dst_dir_fd=self.coordinator.descriptor)
+                replaced = True
+                row = real_fstat(descriptor)
+                self.assertEqual(row.st_nlink, 0)
+            return row
+
+        with patch.object(self.resident.os, 'fstat', side_effect=make_replaced_descriptor_unsafe):
+            with self.assertRaises(ValueError):
+                self.coordinator.read_json('service-state.json')
+        self.assertTrue(replaced)
 
     def test_pid_reuse_or_live_orphan_is_never_treated_as_a_free_installation(self):
         identity = self.resident.process_identity(os.getpid())

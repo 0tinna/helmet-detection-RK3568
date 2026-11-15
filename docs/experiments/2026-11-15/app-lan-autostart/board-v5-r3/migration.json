@@ -1,0 +1,50 @@
+{
+  "kind": "v5-r3-final-lan-boot-installation",
+  "root": "/userdata/helmet-validation/20261115-native-app-v5-r3-lan-3",
+  "backup": "/userdata/helmet-validation/20261115-app-lan-validation-3/migration-backup",
+  "before": {
+    "links": {
+      "/opt/ui/src/apps/helmet_app": "/userdata/helmet-validation/20261115-native-app-v5-r2-lan-2/vendor-entry/helmet_app",
+      "/opt/ui/src/apps/helmet_wifi": "/userdata/helmet-validation/20261115-native-app-v5-r2-lan-2/vendor-entry/helmet_wifi"
+    },
+    "desktops": {
+      "/root/.local/share/applications/helmet-detection.desktop": {
+        "sha256": "d5d11b709626077e18ae40aac689376d634f913d921485198a8ab92b813cc48c",
+        "mode": 420
+      },
+      "/root/.local/share/applications/helmet-wifi.desktop": {
+        "sha256": "f601e3f7b8f2151cc5bbb8e791e751a7d2194f66bf47db63e92f567a36d5fd70",
+        "mode": 420
+      }
+    },
+    "cfg_sha256": "f64a8e2f751ff777b98a36a13a0ad062e0812f2bd6ebd7914a512b772f507b11",
+    "systemui_pid": "740",
+    "init_target": "/userdata/helmet-validation/20261115-native-app-v5-r2-lan-2/src/app/autostart.sh"
+  },
+  "after": {
+    "links": {
+      "/opt/ui/src/apps/helmet_app": "/userdata/helmet-validation/20261115-native-app-v5-r3-lan-3/vendor-entry/helmet_app",
+      "/opt/ui/src/apps/helmet_wifi": "/userdata/helmet-validation/20261115-native-app-v5-r3-lan-3/vendor-entry/helmet_wifi"
+    },
+    "desktops": {
+      "/root/.local/share/applications/helmet-detection.desktop": {
+        "sha256": "1628627b135299959aba8cb6636149d3a905a9d391098d082d33d16a0eeddfcb",
+        "bytes": 378
+      },
+      "/root/.local/share/applications/helmet-wifi.desktop": {
+        "sha256": "06fbdda85fcec9b0ca3e85ccd6cd341ca55c50823a7bc0f59e0e884b7fea970a",
+        "bytes": 368
+      }
+    },
+    "cfg_sha256": "f64a8e2f751ff777b98a36a13a0ad062e0812f2bd6ebd7914a512b772f507b11",
+    "init_target": "/userdata/helmet-validation/20261115-native-app-v5-r3-lan-3/src/app/autostart.sh",
+    "systemui_pid": "740"
+  },
+  "payload_files_verified": 39,
+  "code_identity": "1e10f7e9b5712e330339b366d0495eb72e8f0210139f5f1e163a9459b8f2b9f8",
+  "systemui_restart_command_executed": false,
+  "modified_vendor_links": 2,
+  "modified_desktop_files": 2,
+  "modified_init_link": true,
+  "human_icon_tap": false
+}

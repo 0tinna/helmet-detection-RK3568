@@ -73,6 +73,14 @@ def stop(root, timeout=30):
     application = resident.client(root, command='quit')['application']
     if application.get('phase') == 'absent':
         # client() already checked both identities and kernel-held leases.
+        # A previous owner of this root still needs its terminal receipt.
+        coordinator = resident.Coordinator().prepare()
+        try:
+            record = coordinator.read_record()
+        finally:
+            coordinator.close()
+        if record is not None and record['root'] == str(Path(root)):
+            return wait_for_cleanup(root, record['session'], timeout)
         return {'stopped': True, 'phase': 'absent'}
     return wait_for_cleanup(root, application['session'], timeout)
 

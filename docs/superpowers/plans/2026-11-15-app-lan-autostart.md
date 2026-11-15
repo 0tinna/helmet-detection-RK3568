@@ -32,9 +32,9 @@
 
 **Interfaces:** `LanPreview(controller, host='0.0.0.0', port=8091, max_clients=4)` 提供 `start()/close()/snapshot()`；`LocalService(..., lan_port=None)` 在同一服务生命周期管理它，服务 CLI 默认 LAN8091/0禁用。`/api/preview` 返回同源 JSON 包与 JPEG base64，`/status.json` 为检测状态，`/frame.jpg` 与 `/stream.mjpg` 保留帧身份。
 
-- [ ] 先写并运行失败回归：无令牌公共只读、私有403、同 JPEG/帧号、TTL/epoch/stop、端口冲突、退出释放与流上限。
-- [ ] 实现只读 HTTP 与有界手机页计时，接入 LocalService；保持已有输出回调和 Qt 不变。
-- [ ] 执行 Node 网页脚本：迟到解码不恢复、挂起请求到期、请求耗时扣除、新代次隐藏；再运行 App 相关回归。
+- [x] 先写并运行失败回归：无令牌公共只读、私有403、同 JPEG/帧号、TTL/epoch/stop、端口冲突、退出释放与流上限。
+- [x] 实现只读 HTTP 与有界手机页计时，接入 LocalService；保持已有输出回调和 Qt 不变。
+- [x] 执行 Node 网页脚本：迟到解码不恢复、挂起请求到期、请求耗时扣除、新代次隐藏；再运行 App 相关回归。
 
 ### Task 2: Background Bootstrap And Confirmed Init Shutdown
 
@@ -42,17 +42,19 @@
 
 **Interfaces:** `launch.py --background` 仅确保后台存在；`resident.client(..., background=False)` 启动后台时发 status，不覆盖活实例意图。`boot.py start|stop|status --root ROOT` 提供有界 LAN ready/真实退出确认；init 脚本解析自身全路径找新根。
 
-- [ ] 先验证后台创建的失败测试，复用原 Linux fixture，确保后来 show 同 session。
-- [ ] 实现后台启动意图与按需 Qt；原 show/hide/quit 控制不变。
-- [ ] 先写退出受理/活 owner/失败收据不能成功的回归，再实现 boot 等待；运行 shell 语法与真实 fixture。
-- [ ] 主树与 legacy 树回归，明确平台/NPU skip。
+- [x] 先验证后台创建的失败测试，复用原 Linux fixture，确保后来 show 同 session。
+- [x] 实现后台启动意图与按需 Qt；原 show/hide/quit 控制不变。
+- [x] 先写退出受理/活 owner/失败收据不能成功的回归，再实现 boot 等待；运行 shell 语法与真实 fixture。
+- [x] 主树与 legacy 树回归，明确平台/NPU skip。
 
 ### Task 3: Complete Release, Board Validation And Save
 
 **Files:** 新 v5 整包、`docs/experiments/2026-11-15/app-lan-autostart/` 新报告/清单、当前 App/交付资料与 GitHub 保存规则。
 
-- [ ] 记录旧/新代码 SHA 与版本，完整构建 v5 包，逐项核验；整体部署至新 root。
-- [ ] 以一次检测实例验证内网状态/JPEG/浏览器、隐藏/复开/双入口、停止旧帧和完整退出，180 秒相机短跑。
-- [ ] 在终态备份旧入口/cfg/desktop，迁移项目自有入口和 init 链接，验证正常两图标启动。
+- [x] 记录旧/新代码 SHA 与版本，完整构建 v5 包，逐项核验；整体部署至新 root。
+- [x] 以一次检测实例验证内网状态/JPEG/浏览器、隐藏/复开/双入口、停止旧帧和完整退出，180 秒相机短跑。
+- [x] 在终态备份旧入口/cfg/desktop，迁移项目自有入口和 init 链接，验证正常两图标启动。
 - [ ] init start/重复 start/stop 证据；保存所有记录后检查一次重启的实际后台/端口/同实例图标接入。
 - [ ] 报告失败与未验，更新当前资料/HTML；验证后提交并同步 GitHub main。
+
+2026-11-15 收口：最终包为 v5-r3。主树423/15 skipped、legacy25/1 skipped、板端Linux fixture10通过；真实相机180.502秒、无窗口待机181.151秒。init及正常/重复退出已实测。最后观察实际boot ID改变与之后App使用/退出，但start记录已含人工show/Qt，纯自动后台先于人工图标仍未隔离，故重启完整gate保留未勾选。浏览器有4个可见样本及1个到期清空；5点持续可见断言失败，未延长TTL。用户追加版本管理，以 `native-app-v5-r3` annotated tag 保存最终提交及包身份。

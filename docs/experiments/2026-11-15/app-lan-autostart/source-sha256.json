@@ -1,0 +1,83 @@
+{
+  "baseline_commit": "379ce33d8fb0c11b1e343ecf7789b3fb08c1e612",
+  "final_bundle": "dist/helmet-native-app-20261115-v5-r3.zip",
+  "files": [
+    {
+      "path": "helmet/app/resident.py",
+      "before": "ccd64e9043005b27d9174f4fea0f79ab5796a95dc511e5b910daed260540d23f",
+      "after": "60e3f21929f46fff9084d39c3a558fda075bffc66785eb7ffbec70271e3f1e95",
+      "changed": true,
+      "bytes": 54589
+    },
+    {
+      "path": "helmet/app/launch.py",
+      "before": "4428774d243396a4c2994a13460ec5f46ec9c2c1f8542a2d182f3f74c642fc52",
+      "after": "6dd08e9b1ce0813b7d689aa690b3a2beb9501a3dfab08d9497f42ab5f7b96d9f",
+      "changed": true,
+      "bytes": 10769
+    },
+    {
+      "path": "helmet/app/service.py",
+      "before": "d22000a1060a8c4a584661719b3825715a19b855267ab7772b376f3ad43e8c8f",
+      "after": "f26df15c0530a42f6d713d8a355f90b801fce052a37769668ba944a0216f453c",
+      "changed": true,
+      "bytes": 44806
+    },
+    {
+      "path": "helmet/app/wifi.py",
+      "before": "648b714137b18538f8f8e6a355565b07aec8fb01270c3deed5c01eba30249468",
+      "after": "648b714137b18538f8f8e6a355565b07aec8fb01270c3deed5c01eba30249468",
+      "changed": false,
+      "bytes": 24916
+    },
+    {
+      "path": "helmet/app/qml/Main.qml",
+      "before": "7ed2edc4c37cd5067e1785dc4f06d8c7ecc6d716c9cdfaebf1aa7e92951bb93e",
+      "after": "7ed2edc4c37cd5067e1785dc4f06d8c7ecc6d716c9cdfaebf1aa7e92951bb93e",
+      "changed": false,
+      "bytes": 37906
+    },
+    {
+      "path": "helmet/pipeline_runtime.py",
+      "before": "dee30d6b71c9e8d3e697657fb309fb22e8fb47fafd366d60b555466cf56152e9",
+      "after": "dee30d6b71c9e8d3e697657fb309fb22e8fb47fafd366d60b555466cf56152e9",
+      "changed": false,
+      "bytes": 35055
+    },
+    {
+      "path": "helmet/yolo_post.py",
+      "before": "fae57bbfa1d47d5ab16ef444096fab4fe8e14701c5ec10d87b1ec518282b0505",
+      "after": "fae57bbfa1d47d5ab16ef444096fab4fe8e14701c5ec10d87b1ec518282b0505",
+      "changed": false,
+      "bytes": 7811
+    },
+    {
+      "path": "helmet/sources.py",
+      "before": "ea89d66fdefb2bc429ca74efa0437a3c0a8aab672a856078fc15afccfe3b31c9",
+      "after": "ea89d66fdefb2bc429ca74efa0437a3c0a8aab672a856078fc15afccfe3b31c9",
+      "changed": false,
+      "bytes": 6717
+    },
+    {
+      "path": "helmet/alarm.py",
+      "before": "d3e6d68c7b17f5508f0d697e96998f556f224f9f5067169d66c35972b3a023d2",
+      "after": "d3e6d68c7b17f5508f0d697e96998f556f224f9f5067169d66c35972b3a023d2",
+      "changed": false,
+      "bytes": 4207
+    },
+    {
+      "path": "helmet/output_sinks.py",
+      "before": "c2f65642d38f8994200503b242ca93c8f0af105dc5ad3b13650e9ff83c7003cf",
+      "after": "c2f65642d38f8994200503b242ca93c8f0af105dc5ad3b13650e9ff83c7003cf",
+      "changed": false,
+      "bytes": 23464
+    },
+    {
+      "path": "dist/helmet-native-app-20261115-v4-r2.zip",
+      "before": "14b56543f7aca0b26c61b663770f8bf54729d0ba61a1ac5069f4f1143e084251",
+      "after": "14b56543f7aca0b26c61b663770f8bf54729d0ba61a1ac5069f4f1143e084251",
+      "changed": false,
+      "bytes": 39227461
+    }
+  ]
+}

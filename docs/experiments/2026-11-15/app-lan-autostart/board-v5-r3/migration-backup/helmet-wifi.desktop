@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=Wi-Fi 设置
+Exec=/usr/bin/python3 "/userdata/helmet-validation/20261115-native-app-v5-r2-lan-2/src/app/launch.py" --root "/userdata/helmet-validation/20261115-native-app-v5-r2-lan-2" --tab wifi
+Icon=/userdata/helmet-validation/20261115-native-app-v5-r2-lan-2/src/app/icons/wifi.svg
+Terminal=false
+Categories=Utility;

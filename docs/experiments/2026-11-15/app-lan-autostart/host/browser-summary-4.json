@@ -1,0 +1,15 @@
+{
+  "scope": "actual desktop Chrome with mobile viewport; not a physical phone",
+  "url": "http://192.168.1.3:8091/",
+  "root": "/userdata/helmet-validation/20261115-native-app-v5-r3-lan-3",
+  "samples": [],
+  "last_observed": {
+    "width": 390,
+    "height": 844,
+    "sourceKey": null,
+    "now": 15520.200000017881,
+    "expires": null
+  },
+  "passed": false,
+  "error": "RuntimeError: live image not visible in Chrome"
+}

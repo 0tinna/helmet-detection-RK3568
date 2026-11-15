@@ -1,0 +1,108 @@
+{
+  "record": {
+    "application": {
+      "ack": null,
+      "applied": false,
+      "failure": "resident startup or supervision failed",
+      "intent": {
+        "preview_after": 12724.937763249,
+        "sequence": 6,
+        "tab": "detection",
+        "visible": true
+      },
+      "last_render": null,
+      "phase": "failed",
+      "progress": {
+        "cleanup_completed": true,
+        "detection_alive": false,
+        "detection_stopped": true,
+        "http_alive": false,
+        "received_at": 12945.099296488,
+        "state": "stopping",
+        "wifi_alive": false,
+        "wifi_stopped": true
+      },
+      "root": "/userdata/helmet-validation/20261115-native-app-v4-r2-local-2",
+      "service": {
+        "pid": 4910,
+        "starttime": 1270004,
+        "uid": 0
+      },
+      "session": "5c054835dd844b6abc22f48da53184c8",
+      "ui": {
+        "alive": false,
+        "exit_code": -15,
+        "identity": {
+          "pid": 4912,
+          "starttime": 1270226,
+          "uid": 0
+        },
+        "instance": "5153443fceac46598745952592e794ee"
+      },
+      "verification_enabled": false,
+      "version": "resident-v4"
+    },
+    "code_id": "7cad142a4c5610dca2110fe7c22342c870317e322f28817ee1ccf9199b312302",
+    "lease": {
+      "device": 45832,
+      "inode": 2820946,
+      "service_alive": false,
+      "service_inherited": true
+    },
+    "manager": {
+      "pid": 4908,
+      "starttime": 1269928,
+      "uid": 0
+    },
+    "mode": "resident",
+    "phase": "failed",
+    "protocol": 1,
+    "recorded_at": 12946.133551545,
+    "root": "/userdata/helmet-validation/20261115-native-app-v4-r2-local-2",
+    "service": {
+      "pid": 4910,
+      "starttime": 1270004,
+      "uid": 0
+    },
+    "session": "5c054835dd844b6abc22f48da53184c8",
+    "ui": {
+      "pid": 4912,
+      "starttime": 1270226,
+      "uid": 0
+    },
+    "verification_enabled": false,
+    "version": "resident-v4",
+    "workspace": "/userdata/helmet-validation/20261115-native-app-v4-r2-local-2/app-state/session-5c054835dd844b6abc22f48da53184c8"
+  },
+  "terminal": {
+    "cleanup_completed": true,
+    "code_id": "7cad142a4c5610dca2110fe7c22342c870317e322f28817ee1ccf9199b312302",
+    "kind": "resident-terminal-v4",
+    "manager": {
+      "pid": 4908,
+      "starttime": 1269928,
+      "uid": 0
+    },
+    "normal_stop": "http_quit",
+    "phase": "failed",
+    "resource_lease_released": true,
+    "root": "/userdata/helmet-validation/20261115-native-app-v4-r2-local-2",
+    "service": {
+      "pid": 4910,
+      "starttime": 1270004,
+      "uid": 0
+    },
+    "service_exit": 0,
+    "session": "5c054835dd844b6abc22f48da53184c8",
+    "terminal_at": 12946.298424332,
+    "ui": {
+      "pid": 4912,
+      "starttime": 1270226,
+      "uid": 0
+    },
+    "version": "resident-v4"
+  },
+  "all_owners_absent_and_locks_free": true,
+  "normal_exit_passed": false,
+  "note": "prior handover asserted completed and failed; preserved actual terminal, not successful exit"
+}

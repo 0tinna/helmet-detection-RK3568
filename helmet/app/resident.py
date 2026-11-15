@@ -219,6 +219,10 @@ class Lease:
         self.close()
 
 
+class _RecordReplaced(ValueError):
+    """An otherwise trusted inode lost its link during atomic publication."""
+
+
 class Coordinator:
     """All control/lock paths are fixed names relative to a verified dir FD."""
     def __init__(self, directory=COORDINATOR_ROOT):
@@ -257,6 +261,8 @@ class Coordinator:
     def open_file(self, name, flags=os.O_RDONLY, exclusive=False):
         name = self._name(name)
         row = self._stat(name)
+        if row is not None and stat.S_ISREG(row.st_mode) and row.st_nlink == 0:
+            raise _RecordReplaced('private record was replaced during stat')
         if row is not None and (not stat.S_ISREG(row.st_mode) or row.st_nlink != 1):
             raise ValueError('private files must be regular and singly linked')
         if exclusive:
@@ -270,8 +276,13 @@ class Coordinator:
             raise
         row = os.fstat(descriptor)
         if (not stat.S_ISREG(row.st_mode) or row.st_uid != os.geteuid()
-                or row.st_mode & 0o077 or row.st_nlink != 1):
+                or row.st_mode & 0o077):
             os.close(descriptor)
+            raise ValueError('unsafe private file descriptor')
+        if row.st_nlink != 1:
+            os.close(descriptor)
+            if row.st_nlink == 0:
+                raise _RecordReplaced('private record was replaced after open')
             raise ValueError('unsafe private file descriptor')
         return descriptor
 
@@ -300,12 +311,10 @@ class Coordinator:
                 with os.fdopen(self.open_file(name), 'rb') as stream:
                     raw = stream.read(maximum + 1)
                 break
-            except ValueError as error:
-                # write_json publishes with os.replace. If that happens between
-                # our open and fstat, the opened snapshot is valid but has no
-                # remaining directory link. Reopen the current entry.
-                if (str(error) != 'unsafe private file descriptor'
-                        or attempt == 2):
+            except _RecordReplaced:
+                # os.replace may unlink the inode during stat or after open.
+                # Reopen only this race; unsafe metadata must fail immediately.
+                if attempt == 2:
                     raise
         else:
             raise RuntimeError('private record replacement retry exhausted')

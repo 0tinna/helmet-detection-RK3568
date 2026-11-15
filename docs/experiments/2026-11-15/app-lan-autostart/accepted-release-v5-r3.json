@@ -1,0 +1,35 @@
+{
+  "version": "20261115-v5-r3",
+  "tag": "native-app-v5-r3",
+  "zip": "dist/helmet-native-app-20261115-v5-r3.zip",
+  "zip_sha256": "ce7dffe010f5da5828dfce8586bc6cf799dbd43b9ed3dcdbe71eb2042d030472",
+  "code_identity": "1e10f7e9b5712e330339b366d0495eb72e8f0210139f5f1e163a9459b8f2b9f8",
+  "models_match_v4_r2": true,
+  "host_main": {
+    "tests": 423,
+    "skipped": 15,
+    "seconds": 81.096
+  },
+  "host_legacy": {
+    "tests": 25,
+    "skipped": 1,
+    "seconds": 4.091
+  },
+  "linux_fixture": {
+    "tests": 10,
+    "skipped": 0,
+    "seconds": 6.105
+  },
+  "camera_session": "881496eecc3b4cbfbb797c049017b9dc",
+  "camera_180s_passed": true,
+  "idle_180s_passed": true,
+  "lan_live_decode_and_ttl_guard_verified": true,
+  "phone_display_continuity_accepted": false,
+  "physical_phone_tested": false,
+  "init_installed_and_manual_lifecycle_verified": true,
+  "actual_reboot_observed": true,
+  "automatic_background_before_manual_ui_verified": false,
+  "post_reboot_session": "37feafe205d94e62b690be8511ee425c",
+  "post_reboot_normal_exit_verified": true,
+  "physical_wifi_transaction_tested": false
+}

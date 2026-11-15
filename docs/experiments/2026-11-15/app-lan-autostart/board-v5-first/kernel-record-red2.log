@@ -1,0 +1,42 @@
+test_actual_client_startup_and_two_icons_share_one_detached_fixture_service (__main__.LinuxResidentFixtureTests) ... ok
+test_bad_permissions_symlink_record_and_symlink_socket_are_rejected (__main__.LinuxResidentFixtureTests) ... ok
+test_foreign_owner_rename_cannot_recreate_coordinator_while_inherited_lease_is_live (__main__.LinuxResidentFixtureTests) ... ok
+test_inherited_service_lease_blocks_restart_after_manager_fd_disappears (__main__.LinuxResidentFixtureTests) ... ok
+test_pid_reuse_or_live_orphan_is_never_treated_as_a_free_installation (__main__.LinuxResidentFixtureTests) ... ok
+test_real_socket_checks_server_peer_and_orders_concurrent_icon_controls (__main__.LinuxResidentFixtureTests) ... ok
+test_record_read_retries_when_atomic_replace_unlinks_the_open_snapshot (__main__.LinuxResidentFixtureTests) ... ok
+test_record_read_retries_when_atomic_replace_unlinks_the_stat_snapshot (__main__.LinuxResidentFixtureTests) ... FAIL
+test_record_replacement_does_not_retry_an_unsafe_open_descriptor (__main__.LinuxResidentFixtureTests) ... FAIL
+test_socket_rejects_bad_json_and_times_out_partial_clients (__main__.LinuxResidentFixtureTests) ... ok
+
+======================================================================
+FAIL: test_record_read_retries_when_atomic_replace_unlinks_the_stat_snapshot (__main__.LinuxResidentFixtureTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/userdata/helmet-validation/20261115-app-lan-validation-1/tests/test_app_resident_red2.py", line 979, in test_record_read_retries_when_atomic_replace_unlinks_the_stat_snapshot
+    value = self.coordinator.read_json('service-state.json')
+  File "/userdata/helmet-validation/20261115-native-app-v5-lan-1/src/app/resident.py", line 300, in read_json
+    with os.fdopen(self.open_file(name), 'rb') as stream:
+  File "/userdata/helmet-validation/20261115-native-app-v5-lan-1/src/app/resident.py", line 261, in open_file
+    raise ValueError('private files must be regular and singly linked')
+ValueError: private files must be regular and singly linked
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/userdata/helmet-validation/20261115-app-lan-validation-1/tests/test_app_resident_red2.py", line 981, in test_record_read_retries_when_atomic_replace_unlinks_the_stat_snapshot
+    self.fail('an atomic replacement during stat must be reopened: ' + str(error))
+AssertionError: an atomic replacement during stat must be reopened: private files must be regular and singly linked
+
+======================================================================
+FAIL: test_record_replacement_does_not_retry_an_unsafe_open_descriptor (__main__.LinuxResidentFixtureTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/userdata/helmet-validation/20261115-app-lan-validation-1/tests/test_app_resident_red2.py", line 1008, in test_record_replacement_does_not_retry_an_unsafe_open_descriptor
+    with self.assertRaises(ValueError):
+AssertionError: ValueError not raised
+
+----------------------------------------------------------------------
+Ran 10 tests in 6.456s
+
+FAILED (failures=2)

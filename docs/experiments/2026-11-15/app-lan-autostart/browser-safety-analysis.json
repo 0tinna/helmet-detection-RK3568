@@ -1,0 +1,15 @@
+{
+  "raw_record": "host/browser-summary-3.json",
+  "root": "/userdata/helmet-validation/20261115-native-app-v5-r3-lan-3",
+  "generation_epoch": "7956f38f9cab489c8a3d1bc1835ddf50|0",
+  "live_samples": 4,
+  "expired_samples": 1,
+  "live_pixels_decoded": true,
+  "visible_samples_unexpired": true,
+  "same_generation_epoch": true,
+  "offline_hidden": true,
+  "layout_390x844": true,
+  "raw_five_samples_continuity_passed": false,
+  "physical_phone_tested": false,
+  "continuous_phone_display_accepted": false
+}

@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=安全帽检测
+Exec=/usr/bin/python3 "/userdata/helmet-validation/20261115-native-app-v4-r2-local-2/src/app/launch.py" --root "/userdata/helmet-validation/20261115-native-app-v4-r2-local-2" --tab detection
+Icon=/userdata/helmet-validation/20261115-native-app-v4-r2-local-2/src/app/icons/helmet.svg
+Terminal=false
+Categories=Utility;

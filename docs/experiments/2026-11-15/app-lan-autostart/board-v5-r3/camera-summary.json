@@ -1,0 +1,425 @@
+{
+  "scope": "v5-r3 actual App/USB camera; local authenticated start/stop API and normal icon wrappers; not human phone/touch",
+  "root": "/userdata/helmet-validation/20261115-native-app-v5-r3-lan-3",
+  "session": "881496eecc3b4cbfbb797c049017b9dc",
+  "boot_id": "22011579-2e90-4b4a-8546-a522f7e23ca2",
+  "zip_sha256": "ce7dffe010f5da5828dfce8586bc6cf799dbd43b9ed3dcdbe71eb2042d030472",
+  "code_identity": "1e10f7e9b5712e330339b366d0495eb72e8f0210139f5f1e163a9459b8f2b9f8",
+  "model_sha256": "7e0eefe4bfe86627bb6b58161cacca10912e0dbe1ba2513f58d091c40b26cd48",
+  "config": {
+    "model": "helmet_416x416.rknn",
+    "source": "/dev/video10",
+    "profile": "responsive",
+    "conf": 0.35,
+    "nms": 0.45,
+    "skip": 0,
+    "ttl": 1.0
+  },
+  "actions": [
+    {
+      "action": "hide",
+      "elapsed": 32.468548099001055,
+      "application": {
+        "session": "881496eecc3b4cbfbb797c049017b9dc",
+        "root": "/userdata/helmet-validation/20261115-native-app-v5-r3-lan-3",
+        "version": "resident-v4",
+        "phase": "running",
+        "intent": {
+          "sequence": 2,
+          "visible": false,
+          "tab": "detection",
+          "preview_after": 14836.535532143
+        },
+        "ack": {
+          "sequence": 2,
+          "visible": false,
+          "tab": "detection",
+          "ui_instance": "43912f00ef624ba9b85053a64de1eb33",
+          "qt": {
+            "pid": 16839,
+            "starttime": 1483657,
+            "uid": 0
+          },
+          "received_at": 14872.661071965,
+          "frame_decodes": 133,
+          "frame_requests": 151,
+          "preview_presentations": 132
+        },
+        "applied": true,
+        "ui": {
+          "alive": true,
+          "instance": "43912f00ef624ba9b85053a64de1eb33",
+          "identity": {
+            "pid": 16839,
+            "starttime": 1483657,
+            "uid": 0
+          },
+          "exit_code": null
+        },
+        "service": {
+          "pid": 16764,
+          "starttime": 1482858,
+          "uid": 0
+        },
+        "progress": {
+          "state": "running",
+          "detection_alive": true,
+          "wifi_alive": false,
+          "detection_stopped": false,
+          "wifi_stopped": false,
+          "http_alive": true,
+          "cleanup_completed": false,
+          "lan_alive": true,
+          "lan_port": 8091,
+          "received_at": 14872.911958243
+        },
+        "failure": null,
+        "verification_enabled": false,
+        "last_render": null
+      }
+    },
+    {
+      "action": "wifi",
+      "elapsed": 65.73328944400055,
+      "reply": {
+        "ok": true,
+        "accepted": true,
+        "duplicate": false,
+        "application": {
+          "session": "881496eecc3b4cbfbb797c049017b9dc",
+          "root": "/userdata/helmet-validation/20261115-native-app-v5-r3-lan-3",
+          "version": "resident-v4",
+          "phase": "running",
+          "intent": {
+            "sequence": 3,
+            "visible": true,
+            "tab": "wifi",
+            "preview_after": 14906.863474446
+          },
+          "ack": {
+            "sequence": 2,
+            "visible": false,
+            "tab": "detection",
+            "ui_instance": "43912f00ef624ba9b85053a64de1eb33",
+            "qt": {
+              "pid": 16839,
+              "starttime": 1483657,
+              "uid": 0
+            },
+            "received_at": 14905.868426099,
+            "frame_decodes": 133,
+            "frame_requests": 151,
+            "preview_presentations": 132
+          },
+          "applied": false,
+          "ui": {
+            "alive": true,
+            "instance": "43912f00ef624ba9b85053a64de1eb33",
+            "identity": {
+              "pid": 16839,
+              "starttime": 1483657,
+              "uid": 0
+            },
+            "exit_code": null
+          },
+          "service": {
+            "pid": 16764,
+            "starttime": 1482858,
+            "uid": 0
+          },
+          "progress": {
+            "detection_stopped": false,
+            "wifi_stopped": false,
+            "http_alive": true,
+            "cleanup_completed": false,
+            "detection_alive": true,
+            "wifi_alive": false,
+            "state": "running",
+            "received_at": 14906.728603956,
+            "lan_alive": true,
+            "lan_port": 8091
+          },
+          "failure": null,
+          "verification_enabled": false,
+          "last_render": null
+        }
+      }
+    },
+    {
+      "action": "reshow",
+      "elapsed": 70.3672932440004,
+      "reply": {
+        "ok": true,
+        "accepted": true,
+        "duplicate": false,
+        "application": {
+          "session": "881496eecc3b4cbfbb797c049017b9dc",
+          "root": "/userdata/helmet-validation/20261115-native-app-v5-r3-lan-3",
+          "version": "resident-v4",
+          "phase": "running",
+          "intent": {
+            "sequence": 4,
+            "visible": true,
+            "tab": "detection",
+            "preview_after": 14911.469108253
+          },
+          "ack": {
+            "sequence": 3,
+            "visible": true,
+            "tab": "wifi",
+            "ui_instance": "43912f00ef624ba9b85053a64de1eb33",
+            "qt": {
+              "pid": 16839,
+              "starttime": 1483657,
+              "uid": 0
+            },
+            "received_at": 14911.155674463,
+            "frame_decodes": 133,
+            "frame_requests": 151,
+            "preview_presentations": 132
+          },
+          "applied": false,
+          "ui": {
+            "alive": true,
+            "instance": "43912f00ef624ba9b85053a64de1eb33",
+            "identity": {
+              "pid": 16839,
+              "starttime": 1483657,
+              "uid": 0
+            },
+            "exit_code": null
+          },
+          "service": {
+            "pid": 16764,
+            "starttime": 1482858,
+            "uid": 0
+          },
+          "progress": {
+            "detection_stopped": false,
+            "wifi_stopped": false,
+            "http_alive": true,
+            "cleanup_completed": false,
+            "detection_alive": true,
+            "wifi_alive": false,
+            "state": "running",
+            "received_at": 14911.24724036,
+            "lan_alive": true,
+            "lan_port": 8091
+          },
+          "failure": null,
+          "verification_enabled": false,
+          "last_render": null
+        }
+      }
+    },
+    {
+      "action": "ensure",
+      "elapsed": 90.40953204800098,
+      "reply": {
+        "started": true,
+        "session": "881496eecc3b4cbfbb797c049017b9dc",
+        "lan_port": 8091,
+        "detection": "manual",
+        "visible": true
+      },
+      "visibility_unchanged": true
+    }
+  ],
+  "start": {
+    "started": true,
+    "model": "helmet_416x416.rknn",
+    "source": "/dev/video10",
+    "profile": "responsive"
+  },
+  "open": {
+    "ok": true,
+    "accepted": true,
+    "duplicate": false,
+    "application": {
+      "session": "881496eecc3b4cbfbb797c049017b9dc",
+      "root": "/userdata/helmet-validation/20261115-native-app-v5-r3-lan-3",
+      "version": "resident-v4",
+      "phase": "running",
+      "intent": {
+        "sequence": 1,
+        "visible": true,
+        "tab": "detection",
+        "preview_after": 14836.535532143
+      },
+      "ack": null,
+      "applied": false,
+      "ui": {
+        "alive": false,
+        "instance": null,
+        "identity": null,
+        "exit_code": null
+      },
+      "service": {
+        "pid": 16764,
+        "starttime": 1482858,
+        "uid": 0
+      },
+      "progress": {
+        "detection_stopped": false,
+        "wifi_stopped": false,
+        "http_alive": true,
+        "cleanup_completed": false,
+        "detection_alive": true,
+        "wifi_alive": false,
+        "state": "running",
+        "received_at": 14836.27808611,
+        "lan_alive": true,
+        "lan_port": 8091
+      },
+      "failure": null,
+      "verification_enabled": false,
+      "last_render": null
+    }
+  },
+  "identities": {
+    "manager": {
+      "pid": 16762,
+      "starttime": 1482780,
+      "uid": 0
+    },
+    "service": {
+      "pid": 16764,
+      "starttime": 1482858,
+      "uid": 0
+    },
+    "ui": {
+      "pid": 16839,
+      "starttime": 1483657,
+      "uid": 0
+    }
+  },
+  "manager_sid": 16762,
+  "camera_format": {
+    "exit": 0,
+    "text": "Format Video Capture:\n\tWidth/Height      : 640/480\n\tPixel Format      : 'MJPG' (Motion-JPEG)\n\tField             : None\n\tBytes per Line    : 0\n\tSize Image        : 614400\n\tColorspace        : sRGB\n\tTransfer Function : Rec. 709\n\tYCbCr/HSV Encoding: ITU-R 601\n\tQuantization      : Default (maps to Full Range)\n\tFlags             : \nStreaming Parameters Video Capture:\n\tCapabilities     : timeperframe\n\tFrames per second: 30.000 (30/1)\n\tRead buffers     : 0\n"
+  },
+  "first_lan_frame": {
+    "package": {
+      "state": "healthy",
+      "reason": "fresh detections",
+      "running": true,
+      "selection": {
+        "model": "helmet_416x416.rknn",
+        "source": "/dev/video10",
+        "profile": "responsive"
+      },
+      "fps": {
+        "captured": 19.0,
+        "consumed": 7.2,
+        "detected": 7.0,
+        "displayed": 0.0,
+        "output": 6.8
+      },
+      "alarm_state": "active",
+      "counters": {
+        "captured": 95,
+        "consumed": 36,
+        "detected": 35,
+        "overwritten": 58,
+        "active_skip": 0,
+        "read_failure": 0,
+        "displayed": 0,
+        "output": 34,
+        "output_overwritten": 0,
+        "detection_failure": 0
+      },
+      "generation": "7956f38f9cab489c8a3d1bc1835ddf50",
+      "source_epoch": 0,
+      "valid": true,
+      "frame_id": 87,
+      "remaining_ttl_ms": 471.74283399908745,
+      "captured_at": 14838.625960426,
+      "source_age_ms": 528.2571660009125
+    },
+    "sha256": "e0953c46ead6e0aa83be51c9ac697511dc7718bc657f50778a7fffd40e4bfc0c",
+    "shape": [
+      480,
+      640,
+      3
+    ]
+  },
+  "continuous": {
+    "elapsed": 180.5022230250015,
+    "samples": 138,
+    "first_frame": 127,
+    "last_frame": 4727,
+    "frame_regressions": 0,
+    "invalid": 0,
+    "not_running": 0,
+    "pid_changes": 0,
+    "generations": 1,
+    "hidden_samples": 28,
+    "hidden_first_frame": 935,
+    "hidden_last_frame": 1892
+  },
+  "stop_detection": {
+    "stopped": true,
+    "state": "stopped"
+  },
+  "after_stop": {
+    "http": 503,
+    "body": {
+      "state": "stop",
+      "reason": "session stopped",
+      "running": false,
+      "selection": {
+        "model": "helmet_416x416.rknn",
+        "source": "/dev/video10",
+        "profile": "responsive"
+      },
+      "fps": {
+        "captured": 26.0,
+        "consumed": 8.2,
+        "detected": 8.4,
+        "displayed": 0.0,
+        "output": 6.2
+      },
+      "alarm_state": "unknown",
+      "counters": {
+        "captured": 4765,
+        "consumed": 1542,
+        "detected": 1542,
+        "overwritten": 3222,
+        "active_skip": 0,
+        "read_failure": 0,
+        "displayed": 0,
+        "output": 1269,
+        "output_overwritten": 272,
+        "detection_failure": 0
+      },
+      "generation": "7956f38f9cab489c8a3d1bc1835ddf50",
+      "source_epoch": 0,
+      "valid": false,
+      "frame_id": null,
+      "remaining_ttl_ms": 0
+    }
+  },
+  "quit": {
+    "stopped": true,
+    "phase": "completed",
+    "session": "881496eecc3b4cbfbb797c049017b9dc"
+  },
+  "repeat_quit": {
+    "stopped": true,
+    "phase": "completed",
+    "session": "881496eecc3b4cbfbb797c049017b9dc"
+  },
+  "hidden_preview_counts": {
+    "frame_requests": [
+      151
+    ],
+    "frame_decodes": [
+      133
+    ],
+    "preview_presentations": [
+      132
+    ]
+  },
+  "npu_after": "NPU load:  0%",
+  "passed": true
+}

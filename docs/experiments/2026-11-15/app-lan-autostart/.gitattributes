@@ -1,0 +1,2 @@
+# Retain the exact bytes of this run's copied records and raw logs.
+* -text whitespace=cr-at-eol

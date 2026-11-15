@@ -1,0 +1,1 @@
+{"cleanup_completed": true, "detection_alive": false, "detection_stopped": true, "http_alive": false, "identity": {"pid": 1579, "starttime": 5685, "uid": 0}, "lan_alive": false, "lan_port": 8091, "received_at": 172.985514114, "session": "37feafe205d94e62b690be8511ee425c", "state": "stopping", "wifi_alive": false, "wifi_stopped": true}

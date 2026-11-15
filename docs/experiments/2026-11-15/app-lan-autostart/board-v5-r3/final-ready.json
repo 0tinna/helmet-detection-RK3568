@@ -1,0 +1,127 @@
+{
+  "kind": "final-board-state",
+  "root": "/userdata/helmet-validation/20261115-native-app-v5-r3-lan-3",
+  "configured_url": "http://192.168.1.3:8091/",
+  "boot_id": "4b97345c-28ec-45e2-a391-d37b4ba6381e",
+  "session": "37feafe205d94e62b690be8511ee425c",
+  "phase": "completed",
+  "normal_exit_receipt": {
+    "cleanup_completed": true,
+    "code_id": "1e10f7e9b5712e330339b366d0495eb72e8f0210139f5f1e163a9459b8f2b9f8",
+    "kind": "resident-terminal-v4",
+    "manager": {
+      "pid": 1577,
+      "starttime": 5603,
+      "uid": 0
+    },
+    "normal_stop": "http_quit",
+    "phase": "completed",
+    "resource_lease_released": true,
+    "root": "/userdata/helmet-validation/20261115-native-app-v5-r3-lan-3",
+    "service": {
+      "pid": 1579,
+      "starttime": 5685,
+      "uid": 0
+    },
+    "service_exit": 0,
+    "session": "37feafe205d94e62b690be8511ee425c",
+    "terminal_at": 173.95405442,
+    "ui": {
+      "pid": 1582,
+      "starttime": 5901,
+      "uid": 0
+    },
+    "version": "resident-v4"
+  },
+  "complete_exit_preserved": true,
+  "automatic_respawn": false,
+  "start_required_for_access": true,
+  "post_boot_start_record": {
+    "application": {
+      "ack": null,
+      "applied": false,
+      "failure": null,
+      "intent": {
+        "preview_after": 56.910895285,
+        "sequence": 2,
+        "tab": "detection",
+        "visible": true
+      },
+      "last_render": null,
+      "phase": "running",
+      "progress": {
+        "cleanup_completed": false
+      },
+      "root": "/userdata/helmet-validation/20261115-native-app-v5-r3-lan-3",
+      "service": {
+        "pid": 1579,
+        "starttime": 5685,
+        "uid": 0
+      },
+      "session": "37feafe205d94e62b690be8511ee425c",
+      "ui": {
+        "alive": true,
+        "exit_code": null,
+        "identity": {
+          "pid": 1582,
+          "starttime": 5901,
+          "uid": 0
+        },
+        "instance": "d0ff334447594f4b97221d30a4e8742e"
+      },
+      "verification_enabled": false,
+      "version": "resident-v4"
+    },
+    "code_id": "1e10f7e9b5712e330339b366d0495eb72e8f0210139f5f1e163a9459b8f2b9f8",
+    "kind": "resident-start-v4",
+    "lease": {
+      "device": 45832,
+      "inode": 2820946,
+      "service_alive": true,
+      "service_inherited": true
+    },
+    "manager": {
+      "pid": 1577,
+      "starttime": 5603,
+      "uid": 0
+    },
+    "mode": "resident",
+    "phase": "running",
+    "protocol": 1,
+    "recorded_at": 59.03505279,
+    "root": "/userdata/helmet-validation/20261115-native-app-v5-r3-lan-3",
+    "service": {
+      "pid": 1579,
+      "starttime": 5685,
+      "uid": 0
+    },
+    "session": "37feafe205d94e62b690be8511ee425c",
+    "ui": {
+      "pid": 1582,
+      "starttime": 5901,
+      "uid": 0
+    },
+    "verification_enabled": false,
+    "version": "resident-v4",
+    "workspace": "/userdata/helmet-validation/20261115-native-app-v5-r3-lan-3/app-state/session-37feafe205d94e62b690be8511ee425c"
+  },
+  "post_boot_ready": {
+    "host": "127.0.0.1",
+    "port": 34557,
+    "lan_port": 8091,
+    "pid": 1579,
+    "ready": true,
+    "identity": {
+      "pid": 1579,
+      "starttime": 5685,
+      "uid": 0
+    },
+    "session": "37feafe205d94e62b690be8511ee425c",
+    "lease": {
+      "device": 45832,
+      "inode": 2820946
+    }
+  },
+  "automatic_background_before_manual_ui_verified": false,
+  "note": "Post-reboot start already had a visible UI/show intent. Actual reboot and normal App activity were observed; unattended startup was not isolated. Small monotonic timestamps do not assign every candidate workspace to this boot."
+}

@@ -1,0 +1,10 @@
+{
+  "boot_id": "22011579-2e90-4b4a-8546-a522f7e23ca2",
+  "monotonic": 13884.380081598,
+  "npu_load": "NPU load:  0%",
+  "init_link": "/userdata/helmet-validation/20261115-native-app-v5-r2-lan-2/src/app/autostart.sh",
+  "rcS": "#!/bin/sh\n\n\n# Start all init scripts in /etc/init.d\n# executing them in numerical order.\n#\nfor i in /etc/init.d/S??* ;do\n\n     # Ignore dangling symlinks (if any).\n     [ ! -f \"$i\" ] && continue\n\n     case \"$i\" in\n\t*.sh)\n\t    # Source shell script for speed.\n\t    (\n\t\ttrap - INT QUIT TSTP\n\t\tset start\n\t\t. $i\n\t    )\n\t    ;;\n\t*)\n\t    # No sh extension, so fork subprocess.\n\t    $i start\n\t    ;;\n    esac\ndone\n\n",
+  "app_session_terminal": "11e1b262c8e34896826abf4dd180e1f7",
+  "root": "/userdata/helmet-validation/20261115-native-app-v5-r2-lan-2",
+  "reboot_requested_after_saving": false
+}

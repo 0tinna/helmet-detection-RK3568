@@ -2,16 +2,16 @@
 
 更新日期：2026-11-15。版本与交付限制见[项目交付说明](../项目交付说明.md)。
 
-本 App 让 RK3568 直接在板屏上启动安全帽检测，并在需要联网时手动连接 WiFi。当前正式版本为 **v4-r2**：日常检测使用板端模型和摄像头，可以离线运行，无需板端浏览器、USB 连接电脑或电脑页面。
+本 App 让 RK3568 直接在板屏上启动安全帽检测，并在需要联网时手动连接 WiFi。当前版本为 **v5-r3**：日常检测使用板端模型和摄像头，可以离线运行；同一内网的手机还可通过 `http://板端IP:8091/` 查看同一实例。板屏操作无需浏览器或 USB 连接电脑。
 
-当前使用已安装的Qt、Python、OpenCV、NumPy和RKNNLite，不训练或微调模型。v4-r2已在真实USB摄像头`/dev/video10`、720×1280全屏、检测中拔线TTL、回桌面常驻、双图标复用、UI退出和180秒连续检测上验收。systemui重启后的手指图标操作、断USB独立供电及真实WiFi认证/DHCP仍保留现场验收。
+当前使用已安装的Qt、Python、OpenCV、NumPy和RKNNLite，不训练或微调模型。v4-r2 的历史证据覆盖真实 USB 摄像头、720×1280 全屏、物理拔线 TTL、常驻和短跑；本轮沿用相同 QML，内网与启动/退出记录见[本轮报告](../experiments/2026-11-15/app-lan-autostart/report.md)。实体手机、实际重启、手指图标、独立供电及 WiFi 认证/DHCP各按独立验收记录说明。
 
 ## 1 当前安装位置和入口
 
-本手册对应当前v4-r2。正式安装根：
+本手册对应 v5-r3 的完整安装布局：
 
 ```text
-/userdata/helmet-validation/20261115-native-app-v4-r2-local-2
+/userdata/helmet-validation/20261115-native-app-v5-r3-lan-3
   src/app/              本机服务 WiFi后端 Qt界面与启动器
   src/                  共用检测流水线与后处理
   models/               已有RKNN模型
@@ -21,9 +21,9 @@
   vendor-entry/         厂商桌面启动文件和配置备份
 ```
 
-点击“安全帽检测”进入检测页，点击“无线网络”或“Wi-Fi 设置”进入WiFi页。界面内也能在两个页签间切换。当前两个厂商入口和两个desktop已经指向v4-r2；`apk3.cfg`保持原SHA，`systemui`未重启。主界面下次重新加载后需人工确认图标仍显示并可手指点击，详见[图标安装与离线更新 v4](离线更新与图标安装-v4.md)。
+点击“安全帽检测”进入检测页，点击“无线网络”或“Wi-Fi 设置”进入 WiFi 页。固定入口为 `/opt/ui/src/apps/helmet_app` 和 `helmet_wifi`，两个 desktop 使用同一完整根；开机入口为 `/etc/init.d/S99zhelmet-app`。迁移与备份见[内网及开机指南](手机内网查看与开机启动-v5.md)，`systemui` 重载由人工决定。
 
-历史入口v1/v2/v3仍保留，不覆盖旧根、旧包或旧结果。v4-r2迁移收据与备份位于`/userdata/helmet-validation/20261115-native-app-v4-r2-local-2/vendor-entry/icon-migration-r2-*`。回退前必须先正常退出新实例，再核对备份内容和入口目标。
+历史入口 v1–v4-r2 和本轮候选包均保留原身份。v4-r2 迁移备份仍在旧根 `vendor-entry/icon-migration-r2-*`；本轮备份位于独立实验目录，实际路径以迁移收据为准。回退前先正常退出新实例，再核对备份及目标。
 
 当前启动器一次只允许一个resident会话。点“回到桌面”或关闭窗口只隐藏窗口，manager、service、Qt和检测继续运行；再次点任一图标复用同一session，只切换检测/WiFi页。点“退出应用”才请求完整清理。显示“仍在清理”时等待，不要为了重开强杀NPU或回滚网络的线程。
 
@@ -74,13 +74,15 @@ App当前没有屏上参数编辑、会话日志导出按钮、音量设置或�
 
 安装完成、兼容系统依赖已具备后，板端启动App和本地检测不需要电脑。U盘或电脑只用于首次复制、后续更新及排障；需要在线取文件时，在板屏先手动连接WiFi，再使用设备原有更新途径。
 
-当前未配置检测应用开机后台自启动。板卡启动后，通过主界面图标手动打开是目标使用方式；“图标存在”与“断USB后能自行打开并检测”的人工验收不同。保留供电、显示、触摸、输入设备条件，USB连电脑供电与板端独立电源也要现场核对。
+开机入口配置后台待机及 `8091` 监听，不自动检测。点图标后全屏显示已有实例，手动开始；关窗/回桌面保留检测与内网。最后已观察到实际重启及随后 App 使用，纯自动后台是否先于人工图标启动仍未隔离验收；独立供电仍需记录。
 
-当前运行包为[v4-r2 ZIP](../../dist/helmet-native-app-20261115-v4-r2.zip)，39,227,461B，SHA `14b56543f7aca0b26c61b663770f8bf54729d0ba61a1ac5069f4f1143e084251`；外部清单为[bundle-manifest-v4-r2.json](../experiments/2026-11-15/native-app/bundle-manifest-v4-r2.json)。复制前核对外部SHA，再整体解压到新根并逐文件校验。v4-r2 ZIP含35 entries；五文件`code_identity`为`7cad142a4c5610dca2110fe7c22342c870317e322f28817ee1ccf9199b312302`。兼容Qt/Linux/RKNN仍须预装。
+当前运行包为[v5-r3 ZIP](../../dist/helmet-native-app-20261115-v5-r3.zip)，精确字节数、SHA 和五文件身份见[外部清单](../experiments/2026-11-15/app-lan-autostart/bundle-manifest-v5-r3.json)。复制前核对外部 SHA，再整体解压到新根并逐文件校验。兼容 Qt/Linux/RKNN 仍须预装。
 
-具体复制、清单核验、全新根部署与图标迁移按[v4-r2 整包更新指南](离线更新与图标安装-v4.md)操作。历史包及其证据见[实验索引](../experiments/README.md)，旧 ZIP 的完整载荷仍在本机。
+当前配置和入口维护按[v5 内网及开机指南](手机内网查看与开机启动-v5.md)操作。[v4-r2 更新指南](离线更新与图标安装-v4.md)保留其旧版本身份。历史包与证据见[实验索引](../experiments/README.md)。
 
 ## 6 当前验证与交付限制
+
+本轮 v5-r3 的内网、常驻和 init 证据见[实验报告](../experiments/2026-11-15/app-lan-autostart/report.md)。下表保留 v4-r2 及更早运行的原始结论，不能用来填补新 run 的未验项。
 
 | 项目 | 已记录结果 | 原证据 |
 | --- | --- | --- |
@@ -92,11 +94,11 @@ App当前没有屏上参数编辑、会话日志导出按钮、音量设置或�
 | WiFi 继承功能 | 历史 v3 实际 Qt 列表与密码键盘、只读扫描；未连接新网络 | [v3 UI 记录](../experiments/2026-11-15/native-app/20261115-native-launch-checks/v3-wrapper-wifi-1/manifest.json)、[历史界面图（仅本机）](../experiments/2026-11-15/native-app/board-sessions/session-frbzytg2/screen.png) |
 | 历史 30 分钟回放 | v2 controller/service/私有 QML、单照片录像，11.0030 检测 FPS；GUI 采样与 RSS 限制保留 | [回放报告](../experiments/2026-11-15/原生App30分钟验证报告.md) |
 
-保留的未验项：systemui 重载后的实体图标与手指操作、独立供电、真实 WiFi 认证/DHCP/保存与失败恢复、v4-r2 1800 秒常驻、长期现场、连续显示/内存判据、可听性及业务事件质量。两套诊断集训练重叠未知、最高 mAP50 低于 0.85，独立质量和最终模型资格未通过。全部历史成功与失败继续按自己的 run 保存，见[实验索引](../experiments/README.md)。
+保留的未验项：无人提前开 App 的自动后台开机、实体手机、手指动作直接观察、独立供电、App WiFi事务、当前 App 1800秒、长期现场、显示/内存判据、可听性和事件质量。实际重启后的 App 使用/正常退出已观察。诊断集训练重叠未知、最高 mAP50低于0.85，独立质量与最终模型资格未通过。
 
 ## 7 常见问题
 
-**主界面没有新图标。** 厂商`apk3.cfg`在主界面启动时读取；v4-r2入口和desktop已迁移，但本轮没有重启`systemui`。用户可在方便时通过`sh /etc/init.d/S50systemui restart`人工重载，再检查两枚图标；执行前先确认当前没有未保存操作。
+**主界面没有新图标。** 厂商 `apk3.cfg` 在主界面启动时读取；迁移只修改项目入口，不自动重启 `systemui`。人工重载命令为 `sh /etc/init.d/S50systemui restart`，随后检查两枚图标。
 
 **再次打开或提示旧实例仍在。** 正常重复点击应唤回同一后台会话；若提示正在清理，等待完整退出，保留退出记录再排障。
 

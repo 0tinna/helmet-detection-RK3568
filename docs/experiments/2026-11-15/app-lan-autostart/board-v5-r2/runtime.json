@@ -1,0 +1,12 @@
+{
+  "python": "3.10.5 (main, Jul  5 2024, 11:06:31) [GCC 10.4.0]",
+  "platform": "Linux-5.10.160-aarch64-with-glibc2.37",
+  "opencv": "4.5.4",
+  "numpy": "1.21.2",
+  "rknn_toolkit_lite2": "2.5.0",
+  "governors": {
+    "/sys/devices/system/cpu/cpufreq/policy0/scaling_governor": "schedutil"
+  },
+  "governor_changed_by_this_run": false,
+  "v4_original_zip_sha256": "14b56543f7aca0b26c61b663770f8bf54729d0ba61a1ac5069f4f1143e084251"
+}

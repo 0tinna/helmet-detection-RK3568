@@ -1,8 +1,10 @@
 # 基于 RK3568 的离线安全帽检测与状态闭环系统
 
-**当前交付版本：v4-r2。工程代码已冻结并保存到 GitHub。** 本项目使用现成社区 YOLOv5 模型，在 ATK-DLRK3568 上完成本地安全帽头部检测、Qt 全屏界面、后台常驻、结果时效校验和可追溯评价。
+**当前交付版本：v5-r3，版本 tag：`native-app-v5-r3`。** 本项目使用现成社区 YOLOv5 模型，在 ATK-DLRK3568 上完成本地安全帽头部检测、Qt 全屏、后台常驻、原帧时效校验和可追溯评价。本版增加只读手机内网查看与 BusyBox 开机后台入口。
 
 日常检测使用板端模型与 USB 摄像头，不需要开发板浏览器、电脑页面或持续联网。项目范围不包含训练、微调、剪枝或蒸馏。
+
+手机连接同一可互通内网后，访问 **`http://192.168.1.3:8091/`**（按当前 IP 调整）。开机入口配置后台待机，图标打开后手动检测；回桌面保留内网查看，完整退出关闭监听。实际重启后的 App 使用有记录，无人提前打开 App 的纯自动后台开机、实体手机及持续无空档仍按[本轮报告](docs/experiments/2026-11-15/app-lan-autostart/report.md)说明。
 
 ## 从哪里开始
 
@@ -12,6 +14,7 @@
 | 初次了解项目的阅读顺序 | [阅读导航](docs/阅读导航.md) |
 | 查看系统蓝图、算法契约、部署、CLI 和评估 | [项目蓝图与完整手册](docs/项目蓝图与完整手册.md) |
 | 在板屏操作检测、常驻和 WiFi | [App 操作资料](docs/app/README.md) |
+| 手机访问、开机入口与版本回退 | [手机及 init 使用指南](docs/app/手机内网查看与开机启动-v5.md)、[Git 版本管理](docs/版本管理.md) |
 | 准备开题报告、论文与演讲 | [学术材料目录](docs/proposal/README.md) |
 | 直接阅读或演示 | [离线 HTML 手册](docs/deliverables/项目手册.html)、[HTML 演示](docs/deliverables/开题演示.html)、[当前 v7 PPT](docs/deliverables/开题报告-RK3568-v7.pptx) |
 | 核对真实实验和验收收据 | [实验报告索引](docs/experiments/README.md) |
@@ -23,6 +26,7 @@
 
 - Qt Quick 板端原生 App：720×1280 全屏、连续预览、模型/输入选择、开始/停止和报警截图。
 - 常驻生命周期：回到桌面继续检测，再点任一图标复用同一会话，两个入口只切换检测/WiFi 页面。
+- 内网查看与启动：只读 `8091` 页面共用现有 JPEG/NPU，BusyBox `S99zhelmet-app` 配置后台待机，重复启动复用实例。
 - 原帧与状态闭环：帧 ID、采集时间、generation/source epoch 和 1 秒 TTL 约束预览、报警与保存；停止和断流及时抑制旧结果。
 - WiFi 操作界面：状态、扫描、SSID 选择、屏幕密码键盘和手动连接入口。
 - 共用 CLI 与评价工具：JSONL/会话/资源记录、可选 Web/事件录像、六模型诊断及同源 FP16/INT8 对照。
@@ -33,14 +37,17 @@
 
 | 项目 | 当前值 |
 | --- | --- |
-| 运行包 | [helmet-native-app-20261115-v4-r2.zip](dist/helmet-native-app-20261115-v4-r2.zip) |
-| 发布清单 | [bundle-manifest-v4-r2.json](docs/experiments/2026-11-15/native-app/bundle-manifest-v4-r2.json) |
-| ZIP | 39,227,461 字节，35 entries |
-| ZIP SHA256 | `14b56543f7aca0b26c61b663770f8bf54729d0ba61a1ac5069f4f1143e084251` |
-| 板端安装根 | `/userdata/helmet-validation/20261115-native-app-v4-r2-local-2` |
+| 运行包 | [helmet-native-app-20261115-v5-r3.zip](dist/helmet-native-app-20261115-v5-r3.zip) |
+| 发布清单 | [bundle-manifest-v5-r3.json](docs/experiments/2026-11-15/app-lan-autostart/bundle-manifest-v5-r3.json) |
+| ZIP | 39,229,911 字节，40 entries |
+| ZIP SHA256 | `ce7dffe010f5da5828dfce8586bc6cf799dbd43b9ed3dcdbe71eb2042d030472` |
+| 板端安装根 | `/userdata/helmet-validation/20261115-native-app-v5-r3-lan-3` |
 | 正式入口 | `/opt/ui/src/apps/helmet_app`、`/opt/ui/src/apps/helmet_wifi` |
+| 开机入口 / tag | `/etc/init.d/S99zhelmet-app` / `native-app-v5-r3` |
 
-[Phase 1 报告](docs/experiments/2026-11-15/native-app-usability-v4-phase1-1/report.md)记录连续预览、全屏、停止提示和物理拔线 TTL。[Phase 2 报告](docs/experiments/2026-11-15/native-app-usability-v4-phase2-1/report.md)记录单实例常驻、双入口复用、完整退出和 196.67 秒真实 USB 相机短跑，帧号 `527→6312`、零倒退/零 invalid/零进程变化。该轮主树回归为 399 项，`OK (skipped=13)`。
+[v5-r3 报告](docs/experiments/2026-11-15/app-lan-autostart/report.md)记录 180.50 秒真实 USB 相机、帧号 `127→4727`、隐藏增加 957 帧、同 session/PID、正常及重复退出；主机主树 423 项（15 skipped）、legacy 25 项（1 skipped）、板端 Linux fixture 10 项通过。实际桌面 Chrome 手机尺寸加载了实时图像并到期/断网清除，5 点全部可见的连续性断言未通过。
+
+历史[Phase 1](docs/experiments/2026-11-15/native-app-usability-v4-phase1-1/report.md)保留全屏与物理拔线 TTL，历史[Phase 2](docs/experiments/2026-11-15/native-app-usability-v4-phase2-1/report.md)保留 v4-r2 常驻/196.67 秒相机短跑；它们各有自己的版本与计时范围。
 
 历史 30 分钟回放、相机短跑和诊断精度各有独立运行条件。详细计数、模型/代码身份及失败记录请按[实验索引](docs/experiments/README.md)进入对应报告。
 
@@ -55,7 +62,7 @@ WiFi 扫描与输入界面已有证据，真实认证、DHCP、保存与失败�
 ## 目录与代码入口
 
 ```text
-helmet/app/            Qt App、本机服务、WiFi 与 resident 生命周期
+helmet/app/            Qt App、本机/LAN 服务、WiFi、resident 与 BusyBox init
 helmet/                CLI、Pipeline、源、报警、输出、遥测与共享后处理
 helmet/pc/             转换、数据规范化、精度和错误分析
 helmet/models/         既有输入配置及成对量化模型
@@ -80,6 +87,6 @@ NPU gated 用例需要真实板端模型/运行环境；主机软件测试不代
 
 ## GitHub 保存范围
 
-GitHub 保存源码、测试、模型、当前 v4-r2 ZIP、Markdown/HTML/PPTX、实验清单及关键收据。`.runtime/`、`.venv/`、`.tmp/`、`.superpowers/`、`datasets/raw/`、外部数据图片、超大视频/JSONL、重复历史 ZIP 和个人学校模板保留在本机。
+GitHub 保存源码、测试、模型、v5-r3 与已归档 v4-r2 ZIP、Markdown/HTML/PPTX、实验清单及关键收据；正式版本以带说明的 tag 保存。`.runtime/`、`.venv/`、`.tmp/`、`.superpowers/`、`datasets/raw/`、外部数据图片、大视频/JSONL、重复候选 ZIP 和个人模板保留本机。
 
 历史报告中的本地引用代表原证据位置，克隆仓库时可能没有完整载荷。过期原稿与旧 PPT 的位置和 SHA 见[归档清单](docs/archive/archive-manifest.json)；本次整理说明见[资料整理记录](docs/资料整理记录.md)。

@@ -1,0 +1,35 @@
+{
+  "root": "/userdata/helmet-validation/20261115-native-app-v5-r3-lan-3",
+  "zip_sha256": "ce7dffe010f5da5828dfce8586bc6cf799dbd43b9ed3dcdbe71eb2042d030472",
+  "code_identity": "1e10f7e9b5712e330339b366d0495eb72e8f0210139f5f1e163a9459b8f2b9f8",
+  "kind": "installed-init-background-idle-180s",
+  "start": {
+    "started": true,
+    "session": "f4184798e52f49ad9a8d137ee01b956e",
+    "lan_port": 8091,
+    "detection": "manual",
+    "visible": false
+  },
+  "session": "f4184798e52f49ad9a8d137ee01b956e",
+  "identities": {
+    "manager": {
+      "pid": 19510,
+      "starttime": 1537093,
+      "uid": 0
+    },
+    "service": {
+      "pid": 19512,
+      "starttime": 1537172,
+      "uid": 0
+    },
+    "ui": null
+  },
+  "boot_id": "22011579-2e90-4b4a-8546-a522f7e23ca2",
+  "actual_reboot": false,
+  "elapsed": 181.1511803379999,
+  "samples": 36,
+  "owner_changes": 0,
+  "failed_samples": 0,
+  "ui_or_detection_started": 0,
+  "passed": true
+}

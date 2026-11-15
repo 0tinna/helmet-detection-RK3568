@@ -1,0 +1,15 @@
+test_actual_client_startup_and_two_icons_share_one_detached_fixture_service (__main__.LinuxResidentFixtureTests) ... ok
+test_bad_permissions_symlink_record_and_symlink_socket_are_rejected (__main__.LinuxResidentFixtureTests) ... ok
+test_foreign_owner_rename_cannot_recreate_coordinator_while_inherited_lease_is_live (__main__.LinuxResidentFixtureTests) ... ok
+test_inherited_service_lease_blocks_restart_after_manager_fd_disappears (__main__.LinuxResidentFixtureTests) ... ok
+test_pid_reuse_or_live_orphan_is_never_treated_as_a_free_installation (__main__.LinuxResidentFixtureTests) ... ok
+test_real_socket_checks_server_peer_and_orders_concurrent_icon_controls (__main__.LinuxResidentFixtureTests) ... ok
+test_record_read_retries_when_atomic_replace_unlinks_the_open_snapshot (__main__.LinuxResidentFixtureTests) ... ok
+test_record_read_retries_when_atomic_replace_unlinks_the_stat_snapshot (__main__.LinuxResidentFixtureTests) ... ok
+test_record_replacement_does_not_retry_an_unsafe_open_descriptor (__main__.LinuxResidentFixtureTests) ... ok
+test_socket_rejects_bad_json_and_times_out_partial_clients (__main__.LinuxResidentFixtureTests) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 6.105s
+
+OK

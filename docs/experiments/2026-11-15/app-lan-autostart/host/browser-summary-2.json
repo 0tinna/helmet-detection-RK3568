@@ -1,0 +1,84 @@
+{
+  "scope": "actual desktop Chrome with mobile viewport; not a physical phone",
+  "url": "http://192.168.1.3:8091/",
+  "samples": [
+    {
+      "width": 390,
+      "height": 844,
+      "visibility": "visible",
+      "naturalWidth": 640,
+      "naturalHeight": 480,
+      "state": "检测中",
+      "stats": "{\n  \"状态\": \"healthy\",\n  \"帧号\": 1657,\n  \"检测FPS\": 12.6,\n  \"配置\": {\n    \"model\": \"helmet_416x416.rknn\",\n    \"source\": \"/dev/video10\",\n    \"profile\": \"responsive\"\n  }\n}",
+      "now": 259.89999997615814,
+      "expires": 802.025815000452
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "visibility": "visible",
+      "naturalWidth": 640,
+      "naturalHeight": 480,
+      "state": "检测中",
+      "stats": "{\n  \"状态\": \"healthy\",\n  \"帧号\": 1661,\n  \"检测FPS\": 12.6,\n  \"配置\": {\n    \"model\": \"helmet_416x416.rknn\",\n    \"source\": \"/dev/video10\",\n    \"profile\": \"responsive\"\n  }\n}",
+      "now": 566.7999999821186,
+      "expires": 909.911131981964
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "visibility": "visible",
+      "naturalWidth": 640,
+      "naturalHeight": 480,
+      "state": "检测中",
+      "stats": "{\n  \"状态\": \"healthy\",\n  \"帧号\": 1670,\n  \"检测FPS\": 12.4,\n  \"配置\": {\n    \"model\": \"helmet_416x416.rknn\",\n    \"source\": \"/dev/video10\",\n    \"profile\": \"responsive\"\n  }\n}",
+      "now": 869,
+      "expires": 1240.8301309827075
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "visibility": "visible",
+      "naturalWidth": 640,
+      "naturalHeight": 480,
+      "state": "检测中",
+      "stats": "{\n  \"状态\": \"healthy\",\n  \"帧号\": 1688,\n  \"检测FPS\": 12.2,\n  \"配置\": {\n    \"model\": \"helmet_416x416.rknn\",\n    \"source\": \"/dev/video10\",\n    \"profile\": \"responsive\"\n  }\n}",
+      "now": 1175.199999988079,
+      "expires": 1839.187294012023
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "visibility": "visible",
+      "naturalWidth": 640,
+      "naturalHeight": 480,
+      "state": "检测中",
+      "stats": "{\n  \"状态\": \"healthy\",\n  \"帧号\": 1692,\n  \"检测FPS\": 12,\n  \"配置\": {\n    \"model\": \"helmet_416x416.rknn\",\n    \"source\": \"/dev/video10\",\n    \"profile\": \"responsive\"\n  }\n}",
+      "now": 1507.199999988079,
+      "expires": 1935.210210000194
+    }
+  ],
+  "last_observed": {
+    "width": 390,
+    "height": 844,
+    "visibility": "visible",
+    "naturalWidth": 640,
+    "naturalHeight": 480,
+    "state": "检测中",
+    "stats": "{\n  \"状态\": \"healthy\",\n  \"帧号\": 1657,\n  \"检测FPS\": 12.6,\n  \"配置\": {\n    \"model\": \"helmet_416x416.rknn\",\n    \"source\": \"/dev/video10\",\n    \"profile\": \"responsive\"\n  }\n}",
+    "now": 258.59999999403954,
+    "expires": 802.025815000452
+  },
+  "offline": {
+    "width": 390,
+    "height": 844,
+    "visibility": "hidden",
+    "naturalWidth": 640,
+    "naturalHeight": 480,
+    "state": "连接暂不可用，正在重试",
+    "stats": "{\n  \"状态\": \"healthy\",\n  \"帧号\": 1706,\n  \"检测FPS\": 12,\n  \"配置\": {\n    \"model\": \"helmet_416x416.rknn\",\n    \"source\": \"/dev/video10\",\n    \"profile\": \"responsive\"\n  }\n}",
+    "now": 2974.699999988079,
+    "expires": 0
+  },
+  "passed": true
+}

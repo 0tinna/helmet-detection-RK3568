@@ -1,5 +1,5 @@
 """Boot start/stop decisions with kernel ownership substituted at its boundary."""
-from contextlib import nullcontext, redirect_stderr
+from contextlib import nullcontext, redirect_stderr, redirect_stdout
 import importlib
 import io
 from pathlib import Path
@@ -108,6 +108,24 @@ class BootCleanupTests(unittest.TestCase):
         self.assertTrue(result['stopped'])
         self.assertEqual(result['session'], self.session)
         self.assertEqual(result['phase'], 'completed')
+
+    def test_repeated_stop_after_a_failed_owner_returns_nonzero_at_cli(self):
+        self.record['phase'] = self.receipt['phase'] = 'failed'
+        with patch.object(resident, 'client', return_value={'application': {'phase': 'absent'}}), \
+                redirect_stdout(io.StringIO()), redirect_stderr(io.StringIO()):
+            self.assertEqual(self.boot.main(['stop', '--root', str(self.root)]), 1)
+
+    def test_repeated_stop_without_the_original_cleanup_receipt_is_unconfirmed(self):
+        self.receipt = None
+        with patch.object(resident, 'client', return_value={'application': {'phase': 'absent'}}):
+            with self.assertRaises(TimeoutError):
+                self.boot.stop(self.root, timeout=.02)
+
+    def test_repeated_stop_keeps_the_verified_terminal_session(self):
+        with patch.object(resident, 'client', return_value={'application': {'phase': 'absent'}}):
+            result = self.boot.stop(self.root, timeout=.02)
+        self.assertEqual(result['phase'], 'completed')
+        self.assertEqual(result['session'], self.session)
 
     def test_different_session_cannot_be_substituted_for_the_requested_shutdown(self):
         self.record['session'] = 'b' * 32

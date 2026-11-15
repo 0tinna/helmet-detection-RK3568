@@ -1,0 +1,470 @@
+{
+  "boot_id_before": "22011579-2e90-4b4a-8546-a522f7e23ca2",
+  "boot_id_after": "4b97345c-28ec-45e2-a391-d37b4ba6381e",
+  "actual_boot_id_changed": true,
+  "reboot_command_issued_by_this_agent": false,
+  "observed_at": 538.064429426,
+  "post_boot_sessions": [
+    {
+      "session": "1878464d264f480bb808007c876fee2e",
+      "recorded_at": 13.577543265,
+      "manager": {
+        "pid": 996,
+        "starttime": 1018,
+        "uid": 0
+      },
+      "service": {
+        "pid": 1001,
+        "starttime": 1088,
+        "uid": 0
+      },
+      "ui": {
+        "pid": 1011,
+        "starttime": 1355,
+        "uid": 0
+      },
+      "intent": {
+        "preview_after": 10.901534579,
+        "sequence": 2,
+        "tab": "detection",
+        "visible": true
+      },
+      "start": {
+        "application": {
+          "ack": null,
+          "applied": false,
+          "failure": null,
+          "intent": {
+            "preview_after": 10.901534579,
+            "sequence": 2,
+            "tab": "detection",
+            "visible": true
+          },
+          "last_render": null,
+          "phase": "running",
+          "progress": {
+            "cleanup_completed": false
+          },
+          "root": "/userdata/helmet-validation/20261115-native-app-v5-r3-lan-3",
+          "service": {
+            "pid": 1001,
+            "starttime": 1088,
+            "uid": 0
+          },
+          "session": "1878464d264f480bb808007c876fee2e",
+          "ui": {
+            "alive": true,
+            "exit_code": null,
+            "identity": {
+              "pid": 1011,
+              "starttime": 1355,
+              "uid": 0
+            },
+            "instance": "50bd23b1e7a74d94a9e40fa68d467087"
+          },
+          "verification_enabled": false,
+          "version": "resident-v4"
+        },
+        "code_id": "1e10f7e9b5712e330339b366d0495eb72e8f0210139f5f1e163a9459b8f2b9f8",
+        "kind": "resident-start-v4",
+        "lease": {
+          "device": 45832,
+          "inode": 2820946,
+          "service_alive": true,
+          "service_inherited": true
+        },
+        "manager": {
+          "pid": 996,
+          "starttime": 1018,
+          "uid": 0
+        },
+        "mode": "resident",
+        "phase": "running",
+        "protocol": 1,
+        "recorded_at": 13.577543265,
+        "root": "/userdata/helmet-validation/20261115-native-app-v5-r3-lan-3",
+        "service": {
+          "pid": 1001,
+          "starttime": 1088,
+          "uid": 0
+        },
+        "session": "1878464d264f480bb808007c876fee2e",
+        "ui": {
+          "pid": 1011,
+          "starttime": 1355,
+          "uid": 0
+        },
+        "verification_enabled": false,
+        "version": "resident-v4",
+        "workspace": "/userdata/helmet-validation/20261115-native-app-v5-r3-lan-3/app-state/session-1878464d264f480bb808007c876fee2e"
+      },
+      "terminal": {
+        "cleanup_completed": true,
+        "code_id": "1e10f7e9b5712e330339b366d0495eb72e8f0210139f5f1e163a9459b8f2b9f8",
+        "kind": "resident-terminal-v4",
+        "manager": {
+          "pid": 996,
+          "starttime": 1018,
+          "uid": 0
+        },
+        "normal_stop": "http_quit",
+        "phase": "completed",
+        "resource_lease_released": true,
+        "root": "/userdata/helmet-validation/20261115-native-app-v5-r3-lan-3",
+        "service": {
+          "pid": 1001,
+          "starttime": 1088,
+          "uid": 0
+        },
+        "service_exit": 0,
+        "session": "1878464d264f480bb808007c876fee2e",
+        "terminal_at": 125.183924187,
+        "ui": {
+          "pid": 1011,
+          "starttime": 1355,
+          "uid": 0
+        },
+        "version": "resident-v4"
+      }
+    },
+    {
+      "session": "37feafe205d94e62b690be8511ee425c",
+      "recorded_at": 59.03505279,
+      "manager": {
+        "pid": 1577,
+        "starttime": 5603,
+        "uid": 0
+      },
+      "service": {
+        "pid": 1579,
+        "starttime": 5685,
+        "uid": 0
+      },
+      "ui": {
+        "pid": 1582,
+        "starttime": 5901,
+        "uid": 0
+      },
+      "intent": {
+        "preview_after": 56.910895285,
+        "sequence": 2,
+        "tab": "detection",
+        "visible": true
+      },
+      "start": {
+        "application": {
+          "ack": null,
+          "applied": false,
+          "failure": null,
+          "intent": {
+            "preview_after": 56.910895285,
+            "sequence": 2,
+            "tab": "detection",
+            "visible": true
+          },
+          "last_render": null,
+          "phase": "running",
+          "progress": {
+            "cleanup_completed": false
+          },
+          "root": "/userdata/helmet-validation/20261115-native-app-v5-r3-lan-3",
+          "service": {
+            "pid": 1579,
+            "starttime": 5685,
+            "uid": 0
+          },
+          "session": "37feafe205d94e62b690be8511ee425c",
+          "ui": {
+            "alive": true,
+            "exit_code": null,
+            "identity": {
+              "pid": 1582,
+              "starttime": 5901,
+              "uid": 0
+            },
+            "instance": "d0ff334447594f4b97221d30a4e8742e"
+          },
+          "verification_enabled": false,
+          "version": "resident-v4"
+        },
+        "code_id": "1e10f7e9b5712e330339b366d0495eb72e8f0210139f5f1e163a9459b8f2b9f8",
+        "kind": "resident-start-v4",
+        "lease": {
+          "device": 45832,
+          "inode": 2820946,
+          "service_alive": true,
+          "service_inherited": true
+        },
+        "manager": {
+          "pid": 1577,
+          "starttime": 5603,
+          "uid": 0
+        },
+        "mode": "resident",
+        "phase": "running",
+        "protocol": 1,
+        "recorded_at": 59.03505279,
+        "root": "/userdata/helmet-validation/20261115-native-app-v5-r3-lan-3",
+        "service": {
+          "pid": 1579,
+          "starttime": 5685,
+          "uid": 0
+        },
+        "session": "37feafe205d94e62b690be8511ee425c",
+        "ui": {
+          "pid": 1582,
+          "starttime": 5901,
+          "uid": 0
+        },
+        "verification_enabled": false,
+        "version": "resident-v4",
+        "workspace": "/userdata/helmet-validation/20261115-native-app-v5-r3-lan-3/app-state/session-37feafe205d94e62b690be8511ee425c"
+      },
+      "terminal": {
+        "cleanup_completed": true,
+        "code_id": "1e10f7e9b5712e330339b366d0495eb72e8f0210139f5f1e163a9459b8f2b9f8",
+        "kind": "resident-terminal-v4",
+        "manager": {
+          "pid": 1577,
+          "starttime": 5603,
+          "uid": 0
+        },
+        "normal_stop": "http_quit",
+        "phase": "completed",
+        "resource_lease_released": true,
+        "root": "/userdata/helmet-validation/20261115-native-app-v5-r3-lan-3",
+        "service": {
+          "pid": 1579,
+          "starttime": 5685,
+          "uid": 0
+        },
+        "service_exit": 0,
+        "session": "37feafe205d94e62b690be8511ee425c",
+        "terminal_at": 173.95405442,
+        "ui": {
+          "pid": 1582,
+          "starttime": 5901,
+          "uid": 0
+        },
+        "version": "resident-v4"
+      }
+    },
+    {
+      "session": "6db12388b3694aa79b3388e9eda20024",
+      "recorded_at": 134.059082162,
+      "manager": {
+        "pid": 2839,
+        "starttime": 13111,
+        "uid": 0
+      },
+      "service": {
+        "pid": 2841,
+        "starttime": 13187,
+        "uid": 0
+      },
+      "ui": {
+        "pid": 2844,
+        "starttime": 13403,
+        "uid": 0
+      },
+      "intent": {
+        "preview_after": 131.93586674,
+        "sequence": 2,
+        "tab": "detection",
+        "visible": true
+      },
+      "start": {
+        "application": {
+          "ack": null,
+          "applied": false,
+          "failure": null,
+          "intent": {
+            "preview_after": 131.93586674,
+            "sequence": 2,
+            "tab": "detection",
+            "visible": true
+          },
+          "last_render": null,
+          "phase": "running",
+          "progress": {
+            "cleanup_completed": false
+          },
+          "root": "/userdata/helmet-validation/20261115-native-app-v5-r3-lan-3",
+          "service": {
+            "pid": 2841,
+            "starttime": 13187,
+            "uid": 0
+          },
+          "session": "6db12388b3694aa79b3388e9eda20024",
+          "ui": {
+            "alive": true,
+            "exit_code": null,
+            "identity": {
+              "pid": 2844,
+              "starttime": 13403,
+              "uid": 0
+            },
+            "instance": "3b56de99b74142e38b64c3579691341f"
+          },
+          "verification_enabled": false,
+          "version": "resident-v4"
+        },
+        "code_id": "1e10f7e9b5712e330339b366d0495eb72e8f0210139f5f1e163a9459b8f2b9f8",
+        "kind": "resident-start-v4",
+        "lease": {
+          "device": 45832,
+          "inode": 2820946,
+          "service_alive": true,
+          "service_inherited": true
+        },
+        "manager": {
+          "pid": 2839,
+          "starttime": 13111,
+          "uid": 0
+        },
+        "mode": "resident",
+        "phase": "running",
+        "protocol": 1,
+        "recorded_at": 134.059082162,
+        "root": "/userdata/helmet-validation/20261115-native-app-v5-r3-lan-3",
+        "service": {
+          "pid": 2841,
+          "starttime": 13187,
+          "uid": 0
+        },
+        "session": "6db12388b3694aa79b3388e9eda20024",
+        "ui": {
+          "pid": 2844,
+          "starttime": 13403,
+          "uid": 0
+        },
+        "verification_enabled": false,
+        "version": "resident-v4",
+        "workspace": "/userdata/helmet-validation/20261115-native-app-v5-r3-lan-3/app-state/session-6db12388b3694aa79b3388e9eda20024"
+      },
+      "terminal": null
+    },
+    {
+      "session": "b28c83ea63ee429d8edc85160cd8f946",
+      "recorded_at": 15.14171488,
+      "manager": {
+        "pid": 1001,
+        "starttime": 1198,
+        "uid": 0
+      },
+      "service": {
+        "pid": 1007,
+        "starttime": 1266,
+        "uid": 0
+      },
+      "ui": {
+        "pid": 1021,
+        "starttime": 1511,
+        "uid": 0
+      },
+      "intent": {
+        "preview_after": 12.685290675,
+        "sequence": 2,
+        "tab": "detection",
+        "visible": true
+      },
+      "start": {
+        "application": {
+          "ack": null,
+          "applied": false,
+          "failure": null,
+          "intent": {
+            "preview_after": 12.685290675,
+            "sequence": 2,
+            "tab": "detection",
+            "visible": true
+          },
+          "last_render": null,
+          "phase": "running",
+          "progress": {
+            "cleanup_completed": false
+          },
+          "root": "/userdata/helmet-validation/20261115-native-app-v5-r3-lan-3",
+          "service": {
+            "pid": 1007,
+            "starttime": 1266,
+            "uid": 0
+          },
+          "session": "b28c83ea63ee429d8edc85160cd8f946",
+          "ui": {
+            "alive": true,
+            "exit_code": null,
+            "identity": {
+              "pid": 1021,
+              "starttime": 1511,
+              "uid": 0
+            },
+            "instance": "b353b571d8ad4cb893fc21e531759d9c"
+          },
+          "verification_enabled": false,
+          "version": "resident-v4"
+        },
+        "code_id": "1e10f7e9b5712e330339b366d0495eb72e8f0210139f5f1e163a9459b8f2b9f8",
+        "kind": "resident-start-v4",
+        "lease": {
+          "device": 45832,
+          "inode": 2820946,
+          "service_alive": true,
+          "service_inherited": true
+        },
+        "manager": {
+          "pid": 1001,
+          "starttime": 1198,
+          "uid": 0
+        },
+        "mode": "resident",
+        "phase": "running",
+        "protocol": 1,
+        "recorded_at": 15.14171488,
+        "root": "/userdata/helmet-validation/20261115-native-app-v5-r3-lan-3",
+        "service": {
+          "pid": 1007,
+          "starttime": 1266,
+          "uid": 0
+        },
+        "session": "b28c83ea63ee429d8edc85160cd8f946",
+        "ui": {
+          "pid": 1021,
+          "starttime": 1511,
+          "uid": 0
+        },
+        "verification_enabled": false,
+        "version": "resident-v4",
+        "workspace": "/userdata/helmet-validation/20261115-native-app-v5-r3-lan-3/app-state/session-b28c83ea63ee429d8edc85160cd8f946"
+      },
+      "terminal": {
+        "cleanup_completed": true,
+        "code_id": "1e10f7e9b5712e330339b366d0495eb72e8f0210139f5f1e163a9459b8f2b9f8",
+        "kind": "resident-terminal-v4",
+        "manager": {
+          "pid": 1001,
+          "starttime": 1198,
+          "uid": 0
+        },
+        "normal_stop": "http_quit",
+        "phase": "completed",
+        "resource_lease_released": true,
+        "root": "/userdata/helmet-validation/20261115-native-app-v5-r3-lan-3",
+        "service": {
+          "pid": 1007,
+          "starttime": 1266,
+          "uid": 0
+        },
+        "service_exit": 0,
+        "session": "b28c83ea63ee429d8edc85160cd8f946",
+        "terminal_at": 54.255369727,
+        "ui": {
+          "pid": 1021,
+          "starttime": 1511,
+          "uid": 0
+        },
+        "version": "resident-v4"
+      }
+    }
+  ]
+}

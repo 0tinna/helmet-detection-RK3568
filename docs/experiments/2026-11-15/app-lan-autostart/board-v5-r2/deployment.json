@@ -1,0 +1,48 @@
+{
+  "root": "/userdata/helmet-validation/20261115-native-app-v5-r2-lan-2",
+  "zip_sha256": "c8d07b0303b8673806cf718b7f7fe468abe8030db703cc26f6255b578177e10f",
+  "payload_files": 39,
+  "code_identity": "1e10f7e9b5712e330339b366d0495eb72e8f0210139f5f1e163a9459b8f2b9f8",
+  "compile_and_help": [
+    {
+      "command": [
+        "/usr/bin/python3",
+        "-m",
+        "compileall",
+        "-q",
+        "/userdata/helmet-validation/20261115-native-app-v5-r2-lan-2/src"
+      ],
+      "exit": 0,
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/usr/bin/python3",
+        "/userdata/helmet-validation/20261115-native-app-v5-r2-lan-2/src/app/launch.py",
+        "--help"
+      ],
+      "exit": 0,
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/usr/bin/python3",
+        "/userdata/helmet-validation/20261115-native-app-v5-r2-lan-2/src/app/boot.py",
+        "--help"
+      ],
+      "exit": 0,
+      "stderr": ""
+    },
+    {
+      "command": [
+        "sh",
+        "-n",
+        "/userdata/helmet-validation/20261115-native-app-v5-r2-lan-2/src/app/autostart.sh"
+      ],
+      "exit": 0,
+      "stderr": ""
+    }
+  ],
+  "old_entry": "/userdata/helmet-validation/20261115-native-app-v4-r2-local-2/vendor-entry/helmet_app",
+  "boot_id": "22011579-2e90-4b4a-8546-a522f7e23ca2"
+}

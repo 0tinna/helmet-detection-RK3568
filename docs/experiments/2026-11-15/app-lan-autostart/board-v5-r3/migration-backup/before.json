@@ -1,0 +1,19 @@
+{
+  "links": {
+    "/opt/ui/src/apps/helmet_app": "/userdata/helmet-validation/20261115-native-app-v5-r2-lan-2/vendor-entry/helmet_app",
+    "/opt/ui/src/apps/helmet_wifi": "/userdata/helmet-validation/20261115-native-app-v5-r2-lan-2/vendor-entry/helmet_wifi"
+  },
+  "desktops": {
+    "/root/.local/share/applications/helmet-detection.desktop": {
+      "sha256": "d5d11b709626077e18ae40aac689376d634f913d921485198a8ab92b813cc48c",
+      "mode": 420
+    },
+    "/root/.local/share/applications/helmet-wifi.desktop": {
+      "sha256": "f601e3f7b8f2151cc5bbb8e791e751a7d2194f66bf47db63e92f567a36d5fd70",
+      "mode": 420
+    }
+  },
+  "cfg_sha256": "f64a8e2f751ff777b98a36a13a0ad062e0812f2bd6ebd7914a512b772f507b11",
+  "systemui_pid": "740",
+  "init_target": "/userdata/helmet-validation/20261115-native-app-v5-r2-lan-2/src/app/autostart.sh"
+}
