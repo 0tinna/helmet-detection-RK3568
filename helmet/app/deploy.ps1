@@ -12,7 +12,7 @@ $repoRoot = (Resolve-Path (Join-Path $PSScriptRoot '..\..')).Path
 if ($LASTEXITCODE -ne 0) { throw 'Checked runtime deployment failed' }
 & ssh $Board "mkdir -p $RemoteRoot/src/app"
 if ($LASTEXITCODE -ne 0) { throw 'Application directory creation failed' }
-foreach ($name in @('__init__.py','wifi.py','service.py','resident.py','launch.py','install.py')) {
+foreach ($name in @('__init__.py','wifi.py','service.py','resident.py','launch.py','install.py','lan.py','boot.py','autostart.sh')) {
     & scp (Join-Path $PSScriptRoot $name) "${Board}:$RemoteRoot/src/app/$name"
     if ($LASTEXITCODE -ne 0) { throw "Application copy failed: $name" }
 }

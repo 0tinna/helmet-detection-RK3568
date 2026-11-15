@@ -828,7 +828,7 @@ def request_service_shutdown(service, identity, port, token, session=None):
 
 
 class ResidentManager:
-    def __init__(self, root, tab='detection', verification=False):
+    def __init__(self, root, tab='detection', verification=False, background=False):
         self.app = Path(__file__).resolve().parent
         self.root = validate_install(Path(root), self.app)
         self.code_id = code_identity(self.app)
@@ -837,7 +837,8 @@ class ResidentManager:
         self.manager_lease = self.resource_lease = None
         self.session = uuid.uuid4().hex
         self.application = ApplicationState(self.root, self.session, verification)
-        self.application.request('show', request_id='initial-' + self.session, tab=tab)
+        if not background:
+            self.application.request('show', request_id='initial-' + self.session, tab=tab)
         self.control = None
         self.service = self.ui = None
         self.service_identity = self.ui_identity = None
@@ -932,7 +933,7 @@ class ResidentManager:
         value = self.workspace.read_json('service-state.json', MAX_REPLY_BYTES)
         if value is not None and value.get('session') == self.session:
             fields = ('detection_stopped', 'wifi_stopped', 'http_alive', 'cleanup_completed',
-                      'detection_alive', 'wifi_alive', 'state', 'received_at')
+                      'detection_alive', 'wifi_alive', 'state', 'received_at', 'lan_alive', 'lan_port')
             with self.application.lock:
                 self.application.progress = {key: value.get(key) for key in fields}
             if value.get('state') == 'failed' and self.application.phase not in ('stopping', 'failed'):
@@ -982,7 +983,8 @@ class ResidentManager:
             self.publish()
             try:
                 self._start_service()
-                self._start_ui()
+                if self.application.needs_ui():
+                    self._start_ui()
                 self.workspace.write_json('start.json', {**self.record(), 'kind': 'resident-start-v4'})
                 while not self._tick():
                     time.sleep(.1)
@@ -1042,7 +1044,9 @@ class ResidentManager:
             self.coordinator.close()
 
 
-def client(root, tab='detection', command='show', verification=False):
+def client(root, tab='detection', command='show', verification=False, background=False):
+    if background and (command != 'show' or verification):
+        raise ValueError('background bootstrap cannot change controls or verification mode')
     app = Path(__file__).resolve().parent
     root = validate_install(Path(root), app)
     fingerprint = code_identity(app)
@@ -1067,6 +1071,8 @@ def client(root, tab='detection', command='show', verification=False):
                     args = [sys.executable, str(app / 'resident.py'), '--root', str(root), '--tab', tab]
                     if verification:
                         args.append('--verify-resident-ui')
+                    if background:
+                        args.append('--background')
                     manager = subprocess.Popen(args, start_new_session=True, stdin=subprocess.DEVNULL,
                                                stdout=log, stderr=subprocess.STDOUT, close_fds=True)
                 deadline = time.monotonic() + STARTUP_TIMEOUT
@@ -1089,6 +1095,8 @@ def client(root, tab='detection', command='show', verification=False):
                     time.sleep(.05)
                 else:
                     raise RuntimeError('resident startup budget elapsed; original owners remain protected')
+            if background:
+                command = 'status'
             fields = {} if command == 'status' else {'request_id': uuid.uuid4().hex}
             if command == 'show':
                 fields['tab'] = tab
@@ -1104,8 +1112,11 @@ def main(argv=None):
     parser.add_argument('--root', required=True)
     parser.add_argument('--tab', choices=TABS, default='detection')
     parser.add_argument('--verify-resident-ui', action='store_true')
+    parser.add_argument('--background', action='store_true')
     args = parser.parse_args(argv)
-    return ResidentManager(args.root, args.tab, args.verify_resident_ui).run()
+    if args.background and args.verify_resident_ui:
+        parser.error('background bootstrap cannot enable UI verification')
+    return ResidentManager(args.root, args.tab, args.verify_resident_ui, args.background).run()
 
 
 if __name__ == '__main__':

@@ -1,6 +1,7 @@
 """Token protected local controls for a Qt board application.
 
-The HTTP listener is loopback only. Detection resources belong to Pipeline;
+The control HTTP listener is loopback only; optional LAN preview is read-only.
+Detection resources belong to Pipeline;
 this controller requests stop and waits, never releases a running device.
 WiFi commands are implemented by the explicit backend, not by HTTP input.
 """
@@ -455,7 +456,8 @@ class WifiActions:
 
 
 class LocalService:
-    def __init__(self, controller, wifi, token=None, port=0, application=None):
+    def __init__(self, controller, wifi, token=None, port=0, application=None,
+                 lan_port=None, lan_host='0.0.0.0'):
         self.controller, self.wifi = controller, wifi
         self.token = token or secrets.token_urlsafe(32)
         self.actions = WifiActions(wifi)
@@ -465,6 +467,8 @@ class LocalService:
         self.close_lock = threading.RLock()
         self.shutdown_requested = threading.Event()
         self.thread = None
+        self.lan = None
+        self.lan_port, self.lan_host = lan_port, lan_host
         owner = self
 
         class Handler(BaseHTTPRequestHandler):
@@ -637,6 +641,13 @@ class LocalService:
     def start(self):
         if self.closed or self.thread is not None:
             raise RuntimeError('service cannot be started twice')
+        if self.lan_port is not None:
+            try:
+                from .lan import LanPreview
+            except ImportError:
+                from lan import LanPreview
+            self.lan = LanPreview(self.controller, host=self.lan_host, port=self.lan_port)
+            self.lan.start()
         self.thread = threading.Thread(target=self.server.serve_forever,
                                        kwargs={'poll_interval': .05}, name='helmet-app-http', daemon=True)
         self.thread.start()
@@ -724,6 +735,9 @@ class LocalService:
                 'wifi_stopped': self.stopping and not wifi_alive,
                 'http_alive': self.thread is not None and self.thread.is_alive() and not self.closed,
                 'cleanup_completed': self.closed and not detection_alive and not wifi_alive,
+                'lan_alive': self.lan is not None and self.lan.thread is not None
+                    and self.lan.thread.is_alive() and not self.lan.closed.is_set(),
+                'lan_port': self.lan.port if self.lan is not None else None,
                 'received_at': time.monotonic()}
 
     def begin_shutdown(self):
@@ -743,6 +757,8 @@ class LocalService:
             detection_stopped = self.controller.close(max(0, deadline - time.monotonic()))
             wifi_stopped = self.actions.close(max(0, deadline - time.monotonic()))
             if detection_stopped and wifi_stopped:
+                if self.lan is not None:
+                    self.lan.close()
                 self.closed = True
                 if self.thread is not None and self.thread.is_alive():
                     self.server.shutdown()
@@ -764,6 +780,8 @@ def main(argv=None):
     parser = argparse.ArgumentParser(description='Loopback-only board detection and WiFi controls')
     parser.add_argument('--root', required=True)
     parser.add_argument('--port', type=int, default=0)
+    parser.add_argument('--lan-port', type=int, default=8091,
+                        help='read-only LAN preview port; 0 disables it')
     parser.add_argument('--token-file', required=True)
     parser.add_argument('--ready-file', required=True)
     parser.add_argument('--wifi-interface', default='wlan0')
@@ -775,6 +793,8 @@ def main(argv=None):
     args = parser.parse_args(argv)
     if not 0 <= args.port <= 65535:
         parser.error('port must be within 0..65535')
+    if not 0 <= args.lan_port <= 65535:
+        parser.error('LAN port must be within 0..65535')
     if (args.lease_fd is None) != (args.lease_dir is None):
         parser.error('inherited resource descriptor and lease directory are paired')
     if args.lease_dir is not None and Path(args.lease_dir) != COORDINATOR_ROOT:
@@ -805,7 +825,7 @@ def main(argv=None):
     application = (ResidentConnection(root, args.resident_session, args.resident_dir)
                    if args.resident_session is not None else None)
     service = LocalService(DetectionController(root), WifiBackend(interface=args.wifi_interface),
-                           port=args.port, application=application)
+                           port=args.port, application=application, lan_port=args.lan_port or None)
     stopped = threading.Event()
     for number in (signal.SIGTERM, signal.SIGINT):
         signal.signal(number, lambda number, frame: stopped.set())
@@ -824,6 +844,7 @@ def main(argv=None):
         _private_file(args.token_file, service.token + '\n')
         service.start()
         _private_file(args.ready_file, json.dumps({'host': '127.0.0.1', 'port': service.port,
+                                                'lan_port': service.lan.port if service.lan else None,
                                                 'pid': os.getpid(), 'ready': True,
                                                 'identity': process_identity(os.getpid()),
                                                 'session': args.resident_session,

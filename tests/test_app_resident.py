@@ -1045,6 +1045,11 @@ class LinuxResidentFixtureTests(unittest.TestCase):
             first, second = (value['application'] for value in replies)
             self.assertEqual(first['session'], second['session'])
             self.assertEqual(first['service'], second['service'])
+            before_ensure = self.resident.client(install, command='status')['application']
+            preserved = self.resident.client(install, background=True)['application']
+            self.assertEqual(preserved['session'], second['session'])
+            self.assertEqual(preserved['service'], second['service'])
+            self.assertEqual(preserved['intent'], before_ensure['intent'], 'boot ensure must not change the open window')
             record = self.coordinator.read_record()
             self.assertEqual(os.getsid(record['manager']['pid']), record['manager']['pid'])
             self.assertTrue(self.resident.identity_alive(record['service']))

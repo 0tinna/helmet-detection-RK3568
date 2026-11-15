@@ -23,6 +23,8 @@ def parse_arguments(argv=None):
     parser.add_argument('--tab', choices=resident.TABS, default='detection')
     parser.add_argument('--control', choices=('show', 'status', 'hide', 'quit'),
                         help='bounded local resident control; default is show')
+    parser.add_argument('--background', action='store_true',
+                        help='ensure the resident service exists without changing window visibility')
     parser.add_argument('--smoke-seconds', type=int, default=0)
     parser.add_argument('--auto-demo', action='store_true', help='verification-only automatic replay start')
     parser.add_argument('--verify-keyboard', action='store_true', help='verification-only included touch keyboard')
@@ -30,6 +32,8 @@ def parse_arguments(argv=None):
     parser.add_argument('--verify-resident-ui', action='store_true',
                         help='native private capture per show on the normal resident path; no automatic start')
     args = parser.parse_args(argv)
+    if args.background and (args.control is not None or args.smoke_seconds or args.verify_resident_ui):
+        parser.error('background bootstrap cannot be mixed with controls or one-shot verification')
     if not 0 <= args.smoke_seconds <= 3600:
         parser.error('smoke duration must be 0..3600')
     automatic = args.auto_demo or args.verify_keyboard or args.verify_scan
@@ -95,6 +99,7 @@ def one_shot(args):
         ui_log = os.fdopen(workspace.open_file('ui.log', os.O_WRONLY, exclusive=True), 'wb')
         service = subprocess.Popen([
             sys.executable, str(app / 'service.py'), '--root', str(root), '--port', '0',
+            '--lan-port', '0',
             '--token-file', str(workspace.directory / 'token'),
             '--ready-file', str(workspace.directory / 'ready.json'),
             '--lifecycle-file', str(workspace.directory / 'service-state.json'),
@@ -195,7 +200,8 @@ def launch(argv=None):
     args = parse_arguments(argv)
     if args.mode == 'one-shot':
         return one_shot(args)
-    reply = resident.client(args.root, args.tab, args.control, args.verify_resident_ui)
+    reply = resident.client(args.root, args.tab, args.control, args.verify_resident_ui,
+                            background=args.background)
     # Accepted is a lifecycle intent; the separate Qt ACK records actual application.
     print(json.dumps(reply, ensure_ascii=False, allow_nan=False))
     return 0
