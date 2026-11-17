@@ -22,6 +22,8 @@ foreach ($name in @('qml','icons')) {
 }
 & ssh $Board "python3 -m compileall -q $RemoteRoot/src/app"
 if ($LASTEXITCODE -ne 0) { throw 'Application compilation failed' }
+& ssh $Board "chmod -R go-rwx $RemoteRoot/src/app; chmod -R u+rwX $RemoteRoot/src/app; chmod 700 $RemoteRoot/src/app/autostart.sh"
+if ($LASTEXITCODE -ne 0) { throw 'Application permission hardening failed' }
 $installArgs = if ($VendorIcons) { ' --vendor-icons' } else { '' }
 & ssh $Board "python3 $RemoteRoot/src/app/install.py --root $RemoteRoot$installArgs"
 if ($LASTEXITCODE -ne 0) { throw 'Application icon registration failed' }

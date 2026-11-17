@@ -326,13 +326,14 @@ class AppServiceTests(unittest.TestCase):
     def test_preview_json_binds_encoded_image_to_frame_and_remaining_ttl(self):
         controller = self.server()
         self.request('/api/start', {'model': 'helmet_416x416.rknn', 'source': 'demo.jpg'})
-        controller.pipeline.emit(age=.2)
+        controller.pipeline.emit(age=.25)
         code, body, _ = self.request('/api/preview?nonce=1')
         self.assertEqual(code, 200)
         package = json.loads(body)
         self.assertEqual(package['frame_id'], 1)
         self.assertEqual(package['source_epoch'], 0)
         self.assertTrue(package['valid'])
+        self.assertRegex(package['frame_token'], r'^[A-Za-z0-9_-]{16,64}$')
         self.assertGreaterEqual(package['source_age_ms'], 200)
         self.assertLessEqual(package['remaining_ttl_ms'], 800)
         image = cv2.imdecode(np.frombuffer(base64.b64decode(package['jpeg_base64']), np.uint8), cv2.IMREAD_COLOR)
@@ -340,6 +341,50 @@ class AppServiceTests(unittest.TestCase):
         self.assertEqual(self.request('/api/preview?token=test-secret', token=False)[0], 403)
         controller.pipeline.valid = False
         self.assertEqual(self.request('/api/preview')[0], 503)
+
+    def test_preview_token_returns_its_exact_frame_and_never_falls_back_to_latest(self):
+        controller = self.server()
+        self.request('/api/start', {'model': 'helmet_416x416.rknn', 'source': 'demo.jpg'})
+        controller.pipeline.emit(frame_id=7)
+        original = controller.preview_package()
+        controller.pipeline.emit(frame_id=8)
+        exact = controller.preview_package(frame_token=original['frame_token'])
+        self.assertIsNotNone(exact)
+        self.assertEqual(exact['frame_id'], 7)
+        self.assertNotEqual(exact['frame_token'], controller.preview_package()['frame_token'])
+        for frame_id in range(9, 13):
+            controller.pipeline.emit(frame_id=frame_id)
+        self.assertIsNone(controller.preview_package(frame_token=original['frame_token']))
+
+    def test_preview_meta_is_small_metadata_and_exact_binary_frame_is_public(self):
+        controller = self.server()
+        self.request('/api/start', {'model': 'helmet_416x416.rknn', 'source': 'demo.jpg'})
+        controller.pipeline.emit(frame_id=7)
+        code, body, _ = self.request('/api/preview-meta')
+        self.assertEqual(code, 200)
+        package = json.loads(body)
+        self.assertNotIn('jpeg', package)
+        self.assertNotIn('jpeg_base64', package)
+        self.assertRegex(package['frame_token'], r'^[A-Za-z0-9_-]{16,64}$')
+        code, image, headers = self.request(
+            '/api/frame?token=test-secret&frame_token=' + package['frame_token'], token=False)
+        self.assertEqual(code, 200)
+        self.assertEqual(headers['X-Helmet-Frame-Id'], '7')
+        decoded = cv2.imdecode(np.frombuffer(image, np.uint8), cv2.IMREAD_COLOR)
+        self.assertEqual(decoded.shape, (24, 32, 3))
+        self.assertEqual(self.request(
+            '/api/frame?token=test-secret&frame_token=invalid-token', token=False)[0], 400)
+
+    def test_expired_preview_token_is_cleared_and_cannot_reappear(self):
+        controller = self.server()
+        self.request('/api/start', {'model': 'helmet_416x416.rknn', 'source': 'demo.jpg'})
+        controller.pipeline.emit(age=.97, frame_id=7)
+        package = controller.preview_package()
+        token = package['frame_token']
+        time.sleep(.05)
+        self.assertIsNone(controller.preview_package(frame_token=token))
+        controller.pipeline.emit(frame_id=8)
+        self.assertIsNone(controller.preview_package(frame_token=token))
 
     def test_status_reveals_missed_invalid_epoch_and_rejects_previous_frame(self):
         controller = self.server()
@@ -823,6 +868,48 @@ class AppServiceTests(unittest.TestCase):
         self.assertEqual(self.request('/api/wifi/scan', {})[0], 409)
         self.assertIsNone(controller.pipeline)
         self.assertIsNone(self.service.actions.worker)
+
+
+class ReceiptCoalescerTests(unittest.TestCase):
+    def test_idle_receipts_are_bounded_while_state_changes_and_force_remain_immediate(self):
+        service = importlib.import_module('helmet.app.service')
+        clock = [10.0]
+        coalescer = service.ReceiptCoalescer(interval=1.0, clock=lambda: clock[0])
+        writes = []
+        value = {'state': 'running', 'cleanup_completed': False,
+                 'received_at': 10.0, 'identity': {'pid': 9}}
+
+        def write(item):
+            writes.append(dict(item))
+
+        self.assertTrue(coalescer.publish(value, write))
+        clock[0] = 10.8
+        value['received_at'] = clock[0]
+        self.assertFalse(coalescer.publish(value, write))
+        value['state'] = 'stopping'
+        self.assertTrue(coalescer.publish(value, write))
+        clock[0] = 11.7
+        self.assertFalse(coalescer.publish(value, write))
+        clock[0] = 11.81
+        self.assertTrue(coalescer.publish(value, write))
+        self.assertTrue(coalescer.publish(value, write, force=True))
+        self.assertEqual(len(writes), 4)
+        self.assertEqual(writes[-1]['state'], 'stopping')
+
+    def test_failed_receipt_write_is_retried_without_waiting_for_idle_interval(self):
+        service = importlib.import_module('helmet.app.service')
+        coalescer = service.ReceiptCoalescer(interval=60.0, clock=lambda: 1.0)
+        value = {'state': 'failed', 'received_at': 1.0}
+        attempts = []
+
+        def fail(item):
+            attempts.append(dict(item))
+            raise OSError('fixture unavailable')
+
+        with self.assertRaises(OSError):
+            coalescer.publish(value, fail)
+        coalescer.publish(value, lambda item: attempts.append(dict(item)))
+        self.assertEqual(len(attempts), 2)
 
 
 if __name__ == '__main__':

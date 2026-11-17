@@ -40,6 +40,7 @@ MAX_REPLY_BYTES = 8192
 MAX_RECORD_BYTES = 16384
 CONTROL_TIMEOUT = 1.0
 STARTUP_TIMEOUT = 12.0
+OWNER_RECORD_HEARTBEAT = 5.0
 IDEMPOTENCY_LIMIT = 128
 SAFE_ID = re.compile(r'^[A-Za-z0-9_-]{1,80}$')
 SESSION_ID = re.compile(r'^[0-9a-f]{32}$')
@@ -859,6 +860,8 @@ class ResidentManager:
         self.normal_stop = None
         self.qmlscene = shutil.which('qmlscene')
         self.previous_record = None
+        self._last_record_signature = None
+        self._last_record_published = 0.0
 
     def record(self):
         lease = os.fstat(self.resource_lease.fileno())
@@ -873,8 +876,33 @@ class ResidentManager:
                 'verification_enabled': self.application.verification,
                 'application': state, 'recorded_at': time.monotonic()}
 
-    def publish(self):
-        self.coordinator.write_record(self.record())
+    @staticmethod
+    def _record_signature(value):
+        stable = json.loads(json.dumps(value, allow_nan=False))
+        stable.pop('recorded_at', None)
+        application = stable.get('application')
+        if isinstance(application, dict):
+            # ACK/render telemetry is available on the private control channel.
+            # Persisting every receipt would turn a discovery record into an
+            # fsync-heavy telemetry log and compete with inference and Qt.
+            for key in ('ack', 'applied', 'last_render'):
+                application.pop(key, None)
+            progress = application.get('progress')
+            if isinstance(progress, dict):
+                progress.pop('received_at', None)
+        return json.dumps(stable, sort_keys=True, separators=(',', ':'), allow_nan=False)
+
+    def publish(self, force=False):
+        value = self.record()
+        signature = self._record_signature(value)
+        now = time.monotonic()
+        if (not force and signature == self._last_record_signature
+                and now - self._last_record_published < OWNER_RECORD_HEARTBEAT):
+            return False
+        self.coordinator.write_record(value)
+        self._last_record_signature = signature
+        self._last_record_published = now
+        return True
 
     def _start_service(self):
         self.service_log = os.fdopen(self.workspace.open_file('service.log', os.O_WRONLY, exclusive=True), 'wb')
@@ -989,7 +1017,7 @@ class ResidentManager:
             for number in (signal.SIGTERM, signal.SIGINT):
                 signal.signal(number, lambda number, frame: setattr(self, 'stop_requested', True))
             signal.signal(signal.SIGHUP, signal.SIG_IGN)
-            self.publish()
+            self.publish(force=True)
             try:
                 self._start_service()
                 if self.application.needs_ui():
@@ -1020,7 +1048,7 @@ class ResidentManager:
             with self.application.lock:
                 self.application.phase = 'failed' if failed else 'completed'
                 self.application.progress['cleanup_completed'] = True
-            self.publish()
+            self.publish(force=True)
             self.control.close()
             self.control = None
             for name in ('token',):

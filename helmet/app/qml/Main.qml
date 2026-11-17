@@ -252,6 +252,8 @@ ApplicationWindow {
                 && image.pendingGeneration === detection.generation
                 && image.pendingSourceEpoch === detection.source_epoch
                 && image.pendingCapturedAt >= minimumCaptureAt
+                && typeof image.pendingFrameToken === "string"
+                && /^[A-Za-z0-9_-]{16,64}$/.test(image.pendingFrameToken)
         if (!fresh) {
             image.opacity = 0
             image.z = 0
@@ -299,7 +301,7 @@ ApplicationWindow {
         var epoch = previewEpoch
         var started = Date.now()
         var target = preview === previewA ? previewB : previewA
-        frameRequest = request("GET", "/api/preview?after=" + minimumCaptureAt, null, function(ok, value) {
+        frameRequest = request("GET", "/api/preview-meta?after=" + minimumCaptureAt, null, function(ok, value) {
             if (epoch !== previewEpoch || serial !== frameSerial) return
             framePending = false
             frameRequest = null
@@ -307,7 +309,9 @@ ApplicationWindow {
             var remaining = Number(value.remaining_ttl_ms || 0) - (Date.now()-started)
             if (!ok || !value.valid || !detection.valid || !detection.running || remaining<=0
                     || value.generation !== detection.generation || value.source_epoch !== detection.source_epoch
-                    || typeof value.captured_at !== "number" || value.captured_at < minimumCaptureAt) {
+                    || typeof value.captured_at !== "number" || value.captured_at < minimumCaptureAt
+                    || typeof value.frame_token !== "string"
+                    || !/^[A-Za-z0-9_-]{16,64}$/.test(value.frame_token)) {
                 invalidatePreview()
                 return
             }
@@ -317,10 +321,12 @@ ApplicationWindow {
             target.pendingCapturedAt = value.captured_at
             target.pendingGeneration = value.generation
             target.pendingSourceEpoch = value.source_epoch
+            target.pendingFrameToken = value.frame_token
             target.pendingSelection = JSON.parse(JSON.stringify(detection.selection || {}))
             frameLoadPending = true
             previewLoadTarget = target
-            target.source = "data:image/jpeg;base64," + value.jpeg_base64
+            target.source = apiBase + "/api/frame?token=" + encodeURIComponent(apiToken)
+                    + "&frame_token=" + encodeURIComponent(value.frame_token)
         })
     }
     function invalidatePreview() {
@@ -504,25 +510,27 @@ ApplicationWindow {
                     Layout.fillWidth:true; Layout.preferredHeight:Math.min(window.height*0.34,400); color:"#07131d"; radius:10
                     Image {
                         id: previewA; anchors.fill:parent; anchors.margins:5; fillMode:Image.PreserveAspectFit
-                        asynchronous:true; cache:true; opacity:0
+                        asynchronous:true; cache:false; opacity:0
                         property int pendingEpoch: -1
                         property double pendingExpires: 0
                         property int pendingFrameId: -1
                         property double pendingCapturedAt: 0
                         property string pendingGeneration: ""
                         property var pendingSourceEpoch: null
+                        property string pendingFrameToken: ""
                         property var pendingSelection: ({})
                         onStatusChanged: settlePreview(previewA, status)
                     }
                     Image {
                         id: previewB; anchors.fill:parent; anchors.margins:5; fillMode:Image.PreserveAspectFit
-                        asynchronous:true; cache:true; opacity:0
+                        asynchronous:true; cache:false; opacity:0
                         property int pendingEpoch: -1
                         property double pendingExpires: 0
                         property int pendingFrameId: -1
                         property double pendingCapturedAt: 0
                         property string pendingGeneration: ""
                         property var pendingSourceEpoch: null
+                        property string pendingFrameToken: ""
                         property var pendingSelection: ({})
                         onStatusChanged: settlePreview(previewB, status)
                     }
@@ -629,8 +637,8 @@ ApplicationWindow {
         }
     }
     }
-    Timer { interval:window.visible ? 500 : 1500; repeat:true; running:true; onTriggered:poll() }
-    Timer { interval:window.visible ? 500 : 1000; repeat:true; running:residentMode; onTriggered:pollApplication() }
+    Timer { interval:window.visible ? 1000 : 1500; repeat:true; running:true; onTriggered:poll() }
+    Timer { interval:window.visible ? 1000 : 1500; repeat:true; running:residentMode; onTriggered:pollApplication() }
     Timer { interval:125; repeat:true; running:window.visible && tabs.currentIndex===0 && !appStopping; onTriggered:refreshFrame() }
     Timer {
         id: previewHideTimer; interval:100; repeat:false

@@ -79,6 +79,10 @@ class QmlPresentationContractTests(unittest.TestCase):
         self.assertRegex(text, r'\bImage\s*\{\s*id\s*:\s*previewB\b')
         self.assertRegex(text, r'onStatusChanged\s*:\s*settlePreview\(previewA,\s*status\)')
         self.assertRegex(text, r'onStatusChanged\s*:\s*settlePreview\(previewB,\s*status\)')
+        self.assertEqual(text.count('cache:false'), 2,
+                         'preview buffers must not retain every tokenized source')
+        self.assertEqual(text.count('property string pendingFrameToken: ""'), 2,
+                         'both Image buffers must declare the token property used by refreshFrame')
         self.assertIn('preview = image', text)
         self.assertIn('property bool previewVisible: false', text)
         self.assertIn('image.opacity = 1', text)
@@ -89,12 +93,25 @@ class QmlPresentationContractTests(unittest.TestCase):
             r'[^}]*onTriggered\s*:\s*finishPreviewSwap\(',
         )
 
+    def test_native_preview_uses_metadata_and_exact_binary_frame_url(self):
+        refresh = qml_function('refreshFrame')
+        settle = qml_function('settlePreview')
+        self.assertIn('/api/preview-meta?after=', refresh)
+        self.assertNotIn('/api/preview?after=', refresh)
+        self.assertNotIn('jpeg_base64', refresh)
+        self.assertIn('/api/frame?token=', refresh)
+        self.assertIn('frame_token=', refresh)
+        self.assertIn('encodeURIComponent(apiToken)', refresh)
+        self.assertIn('encodeURIComponent(value.frame_token)', refresh)
+        self.assertIn('pendingFrameToken', settle)
+
     @unittest.skipUnless(NODE, 'Node unavailable for shipped QML JavaScript checks')
     def test_replacing_the_source_does_not_hide_the_current_image_first(self):
         script = """
 const assert = require('assert');
 var Image={Ready:1,Error:2};
 var detection={running:true,valid:true,generation:'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa',source_epoch:4,selection:{}};
+var apiBase='http://127.0.0.1:9000', apiToken='private token';
 var window={visible:true,showFullScreen(){this.visible=true}};
 var tabs={currentIndex:0};
 var appStopping=false,capturePending=false,framePending=false,frameSerial=0,frameRequest=null;
@@ -104,7 +121,7 @@ var previewEpoch=0,frameExpires=0,minimumCaptureAt=0,lastStatus=Date.now();
 var previewFrameId=null,previewCapturedAt=0,previewGeneration='',previewSourceEpoch=null,previewSelection={};
 var frameRequests=0,frameDecodes=0,previewPresentations=0,requests=[];
 var previewVisible=true;
-var previewA={visible:true,opacity:1,z:0,source:'data:image/jpeg;base64,OLD',status:Image.Ready};
+var previewA={visible:true,opacity:1,z:0,source:'http://127.0.0.1:9000/api/frame?token=x&frame_token=OLD',status:Image.Ready};
 var previewB={visible:true,opacity:0,z:0,source:'',status:Image.Null};
 var preview=previewA;
 function request(method,route,payload,callback){
@@ -116,13 +133,16 @@ function captureShow(){}
         + qml_function('settlePreview') + '\n' + qml_function('finishPreviewSwap') + """
 refreshFrame();
 assert.equal(requests.length,1);
+assert.equal(requests[0].route,'/api/preview-meta?after=0');
 requests[0].callback(true,{valid:true,generation:detection.generation,source_epoch:4,
-  captured_at:Date.now(),remaining_ttl_ms:900,jpeg_base64:'NEW',frame_id:8});
-assert.equal(previewA.source,'data:image/jpeg;base64,OLD');
+          captured_at:Date.now(),remaining_ttl_ms:900,frame_token:'frame_NEW-token-0001',frame_id:8});
+assert.equal(previewA.source,'http://127.0.0.1:9000/api/frame?token=x&frame_token=OLD');
 assert.equal(previewA.opacity,1,
   'source replacement must leave the old image visible until Image.Ready validates the new frame');
-assert.equal(previewB.source,'data:image/jpeg;base64,NEW');
+assert.equal(previewB.source,
+  'http://127.0.0.1:9000/api/frame?token=private%20token&frame_token=frame_NEW-token-0001');
 assert.equal(previewB.opacity,0);
+assert.equal(previewB.pendingFrameToken,'frame_NEW-token-0001');
 assert.equal(frameLoadPending,true);
 refreshFrame();
 assert.equal(requests.length,1,'a decode must finish before the same buffer is overwritten');
@@ -149,7 +169,51 @@ assert.equal(previewB.z,0);
         completed = subprocess.run(
             [NODE, '-'],
             input="const vm=require('vm');\n"
-                  "var context={require:require,console:console};\n"
+                  "var context={require:require,console:console,encodeURIComponent:encodeURIComponent};\n"
+                  "context.global=context;\n"
+                  "vm.createContext(context);\n"
+                  "vm.runInContext(" + json.dumps(script) + ",context);\n",
+            capture_output=True,
+            text=True,
+            timeout=5,
+        )
+        self.assertEqual(completed.returncode, 0, completed.stderr)
+
+    @unittest.skipUnless(NODE, 'Node unavailable for shipped QML JavaScript checks')
+    def test_missing_or_invalid_frame_token_never_reuses_the_current_image(self):
+        script = """
+const assert = require('assert');
+var Image={Ready:1,Error:2};
+var detection={running:true,valid:true,generation:'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa',source_epoch:4,selection:{}};
+var apiBase='http://127.0.0.1:9000', apiToken='secret';
+var window={visible:true,showFullScreen(){this.visible=true}};
+var tabs={currentIndex:0};
+var appStopping=false,capturePending=false,framePending=false,frameSerial=0,frameRequest=null;
+var frameLoadPending=false,previewLoadTarget=null,previewSwapPending=false,previewSwapTarget=null,previewSwapSerial=0;
+var previewHideTimer={restart(){},stop(){}};
+var previewEpoch=0,frameExpires=0,minimumCaptureAt=0,lastStatus=Date.now();
+var previewFrameId=null,previewCapturedAt=0,previewGeneration='',previewSourceEpoch=null,previewSelection={};
+var frameRequests=0,frameDecodes=0,previewPresentations=0,requests=[];
+var previewVisible=true;
+var previewA={opacity:1,z:2,source:'http://127.0.0.1:9000/api/frame?token=secret&frame_token=OLD',status:Image.Ready};
+var previewB={opacity:0,z:0,source:'',status:Image.Null};
+var preview=previewA;
+function request(method,route,payload,callback){requests.push({route,callback});return {abort(){}}}
+function captureShow(){}
+""" + qml_function('invalidatePreview') + '\n' + qml_function('refreshFrame') + '\n' \
+        + qml_function('settlePreview') + '\n' + qml_function('finishPreviewSwap') + """
+refreshFrame();
+requests[0].callback(true,{valid:true,generation:detection.generation,source_epoch:4,
+  captured_at:Date.now(),remaining_ttl_ms:900,frame_id:8});
+assert.equal(requests.length,1);
+assert.equal(previewA.opacity,0);
+assert.equal(previewB.opacity,0);
+assert.equal(previewB.source,'');
+"""
+        completed = subprocess.run(
+            [NODE, '-'],
+            input="const vm=require('vm');\n"
+                  "var context={require:require,console:console,encodeURIComponent:encodeURIComponent};\n"
                   "context.global=context;\n"
                   "vm.createContext(context);\n"
                   "vm.runInContext(" + json.dumps(script) + ",context);\n",

@@ -18,9 +18,10 @@ class AppLanBrowserTests(unittest.TestCase):
         harness = r'''
 const vm=require('node:vm'), assert=require('node:assert/strict');
 let now=100, nextTimer=1; const timers=new Map(), images=[];
-const preview={src:'',style:{visibility:'hidden'}};
+const preview={style:{visibility:'hidden'},getContext:()=>({clearRect(){},drawImage(){}})};
 const elements={preview,state:{textContent:'',className:''},stats:{textContent:''},placeholder:{hidden:false}};
-class Picture{constructor(){images.push(this)} set src(value){this.url=value} get src(){return this.url}}
+class Picture{constructor(){this.naturalWidth=1280;this.naturalHeight=960;images.push(this)}
+ set src(value){this.url=value} get src(){return this.url}}
 const context={document:{querySelector:selector=>elements[selector.slice(1)]},Image:Picture,
  performance:{now:()=>now},AbortController,console,
  setTimeout:(fn,delay)=>{let id=nextTimer++;timers.set(id,{fn,at:now+delay});return id},
@@ -28,7 +29,7 @@ const context={document:{querySelector:selector=>elements[selector.slice(1)]},Im
 vm.createContext(context);
 function advance(amount){now+=amount;for(const [id,timer] of [...timers])if(timer.at<=now){timers.delete(id);timer.fn()}}
 const packet={valid:true,generation:'a'.repeat(32),source_epoch:0,frame_id:7,
- captured_at:1,remaining_ttl_ms:1000,jpeg_base64:'image-one',running:true,
+ captured_at:1,remaining_ttl_ms:1000,frame_token:'frame-one',running:true,
  state:'healthy',selection:{model:'helmet_416x416.rknn',source:'/dev/video10',profile:'responsive'}};
 '''
         program = harness + '\nvm.runInContext(' + json.dumps(script) + ',context);\n' + assertions
@@ -43,6 +44,15 @@ assert.equal(preview.style.visibility,'visible');
 advance(1001);
 assert.equal(preview.style.visibility,'hidden');
 assert.equal(elements.placeholder.hidden,false);
+''')
+
+    def test_binary_image_url_is_bound_to_the_exact_server_frame_token(self):
+        self.run_page(r'''
+context.showPacket(packet,now);
+assert.equal(images.at(-1).src,'/frame.jpg?frame_token=frame-one');
+assert.equal(JSON.stringify(packet).includes('jpeg_base64'),false);
+images.at(-1).onload();
+assert.equal(preview.style.visibility,'visible');
 ''')
 
     def test_late_image_decode_cannot_resurrect_expired_or_invalidated_frame(self):

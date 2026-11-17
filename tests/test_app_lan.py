@@ -101,6 +101,27 @@ class AppLanTests(unittest.TestCase):
         self.assertGreater(float(headers['X-Helmet-Remaining-Ttl-Ms']), 0)
         self.assertIs(self.controller.pipeline, self.service.controller.pipeline)
 
+    def test_lan_status_exposes_an_exact_token_for_binary_frame_loading(self):
+        self.start_detection()
+        code, body, _ = self.request('/status.json')
+        self.assertEqual(code, 200)
+        status = json.loads(body)
+        self.assertNotIn('jpeg_base64', status)
+        token = status['frame_token']
+        code, image, headers = self.request('/frame.jpg?frame_token=' + token)
+        self.assertEqual(code, 200)
+        self.assertEqual(headers['X-Helmet-Frame-Id'], '7')
+        self.assertEqual(image, self.controller.preview_package(frame_token=token)['jpeg'])
+
+    def test_lan_frame_token_never_falls_back_to_a_newer_frame(self):
+        self.start_detection()
+        old_token = json.loads(self.request('/status.json')[1])['frame_token']
+        for frame_id in range(8, 12):
+            self.controller.pipeline.emit(frame_id=frame_id)
+        self.assertEqual(self.request('/status.json')[0], 200)
+        self.assertEqual(self.request('/frame.jpg?frame_token=' + old_token)[0], 503)
+        self.assertEqual(self.request('/frame.jpg?frame_token=invalid-token')[0], 400)
+
     def test_fault_and_missed_epoch_transition_immediately_suppress_cached_jpeg(self):
         self.start_detection()
         pipeline = self.controller.pipeline

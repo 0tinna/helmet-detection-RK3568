@@ -7,6 +7,7 @@ WiFi commands are implemented by the explicit backend, not by HTTP input.
 """
 import argparse
 import base64
+from collections import OrderedDict
 from contextlib import nullcontext
 import hmac
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
@@ -45,12 +46,42 @@ except ImportError:
 
 
 MAX_BODY_BYTES = 8192
+MAX_PREVIEW_PACKAGES = 4
+PREVIEW_JPEG_QUALITY = 80
+PREVIEW_TOKEN = re.compile(r'^[A-Za-z0-9_-]{16,64}$')
+RECEIPT_HEARTBEAT = 1.0
 PROFILES = {
     'replay': {'name': '录像回放演示 10 FPS', 'replay_fps': 10.0},
     'responsive': {'name': '回放响应测试 20 FPS', 'replay_fps': 20.0},
 }
 MODEL_NAME = re.compile(r'^helmet(?:_\d+x\d+|-640-640)\.rknn$')
 SOURCE_SUFFIXES = {'.jpg', '.jpeg', '.png', '.bmp', '.webp', '.avi', '.mp4', '.mkv', '.mov'}
+
+
+class ReceiptCoalescer:
+    """Write lifecycle receipts on change, with a bounded idle heartbeat."""
+    def __init__(self, interval=RECEIPT_HEARTBEAT, clock=time.monotonic):
+        self.interval = interval
+        self.clock = clock
+        self.signature = None
+        self.published_at = 0.0
+
+    @staticmethod
+    def _signature(value):
+        stable = {key: item for key, item in value.items() if key != 'received_at'}
+        return json.dumps(stable, sort_keys=True, separators=(',', ':'), allow_nan=False)
+
+    def publish(self, value, writer, force=False):
+        signature = self._signature(value)
+        now = self.clock()
+        if not force and signature == self.signature and now - self.published_at < self.interval:
+            return False
+        # Commit only after the write succeeds so terminal cleanup retries a
+        # failed receipt instead of suppressing it for a full heartbeat.
+        writer(value)
+        self.signature = signature
+        self.published_at = now
+        return True
 
 
 def _inside(path, parent):
@@ -104,6 +135,7 @@ class DetectionController:
         self.error = None
         self.jpeg = None
         self.frame = None
+        self.preview_packages = OrderedDict()
         self.selection = None
 
     def configuration(self):
@@ -148,6 +180,10 @@ class DetectionController:
             raise ValueError('snapshot output path must be a directory')
         return snapshots
 
+    def _clear_preview(self):
+        self.jpeg = self.frame = None
+        self.preview_packages.clear()
+
     def _owned_workers_alive(self):
         if self.worker is not None and self.worker.is_alive():
             return True
@@ -171,7 +207,7 @@ class DetectionController:
                 raise RuntimeError('application is closing')
             if self._owned_workers_alive():
                 raise RuntimeError('detection worker still owns its devices')
-            self.jpeg = self.frame = None
+            self._clear_preview()
             self.error = None
             self.stopping = False
             generation = object()
@@ -199,7 +235,7 @@ class DetectionController:
                 finally:
                     with self.lock:
                         if self.generation is generation:
-                            self.jpeg = self.frame = None
+                            self._clear_preview()
                     # Pipeline can report a timed-out native worker. Retain a
                     # non-daemon owner until that worker exits; do not abandon
                     # SDK ownership merely because the UI has closed.
@@ -263,9 +299,11 @@ class DetectionController:
         try:
             if not self._fresh(packet, pipeline):
                 with self.lock:
-                    self.jpeg = self.frame = None
+                    self._clear_preview()
                 return
-            success, encoded = cv2.imencode('.jpg', packet.annotated_bgr)
+            success, encoded = cv2.imencode(
+                '.jpg', packet.annotated_bgr,
+                [cv2.IMWRITE_JPEG_QUALITY, PREVIEW_JPEG_QUALITY])
             if not success:
                 raise RuntimeError('JPEG encoding failed')
             jpeg = encoded.tobytes()
@@ -274,18 +312,38 @@ class DetectionController:
                 jpeg = None
         except BaseException:
             with self.lock:
-                self.jpeg = self.frame = None
+                self._clear_preview()
             raise
         with self.lock:
             if self.pipeline is pipeline and not self.closed and not self.stopping:
                 self.jpeg, self.frame = jpeg, packet if jpeg is not None else None
+                if jpeg is not None:
+                    token = secrets.token_urlsafe(18)
+                    self.preview_packages[token] = {
+                        'jpeg': jpeg,
+                        'packet': packet,
+                        'generation': self.run_uuid,
+                    }
+                    while len(self.preview_packages) > MAX_PREVIEW_PACKAGES:
+                        self.preview_packages.popitem(last=False)
 
-    def preview_package(self, after_capture=None):
+    def preview_package(self, after_capture=None, frame_token=None):
         if (after_capture is not None and (type(after_capture) not in (int, float)
                 or not math.isfinite(after_capture) or after_capture < 0)):
             raise ValueError('invalid preview capture boundary')
+        if frame_token is not None and not isinstance(frame_token, str):
+            raise ValueError('invalid preview token')
+        if isinstance(frame_token, str) and not PREVIEW_TOKEN.fullmatch(frame_token):
+            raise ValueError('invalid preview token')
         with self.lock:
             pipeline, packet, jpeg = self.pipeline, self.frame, self.jpeg
+            package_generation = self.run_uuid
+            if frame_token is not None:
+                entry = self.preview_packages.get(frame_token)
+                if entry is None:
+                    return None
+                packet, jpeg = entry['packet'], entry['jpeg']
+                package_generation = entry['generation']
             unavailable = self.closed or self.stopping or not self._owned_workers_alive()
         if unavailable or packet is None or jpeg is None:
             return None
@@ -298,12 +356,19 @@ class DetectionController:
             # never invalidate the new owner's cache from this old request.
             if self.pipeline is not pipeline or self.stopping or self.closed:
                 return None
-            if self.frame is not packet:
+            if frame_token is not None:
+                entry = self.preview_packages.get(frame_token)
+                if entry is None:
+                    return None
+                packet, jpeg = entry['packet'], entry['jpeg']
+                package_generation = entry['generation']
+            elif self.frame is not packet:
                 # Publication is normal, not an outage. Read the latest packet
                 # once while locked rather than clear it or spin until stable.
                 packet, jpeg = self.frame, self.jpeg
                 if packet is None or jpeg is None:
                     return None
+                package_generation = self.run_uuid
                 valid = True  # The old snapshot's verdict is irrelevant now.
             with getattr(pipeline, 'lock', nullcontext()):
                 try:
@@ -311,19 +376,28 @@ class DetectionController:
                 except BaseException:
                     valid = False
                 if not valid:
-                    self.jpeg = self.frame = None
+                    if frame_token is not None:
+                        self.preview_packages.pop(frame_token, None)
+                    elif self.frame is packet:
+                        self._clear_preview()
                     return None
                 age_ms = (time.monotonic() - packet.captured_at) * 1000.0
                 remaining = pipeline.args.result_ttl * 1000.0 - age_ms
                 if remaining <= 0:
-                    self.jpeg = self.frame = None
+                    if frame_token is not None:
+                        self.preview_packages.pop(frame_token, None)
+                    elif self.frame is packet:
+                        self._clear_preview()
                     return None
                 if after_capture is not None and packet.captured_at < after_capture:
                     return None
-                return {'jpeg': jpeg, 'frame_id': packet.frame_id, 'captured_at': packet.captured_at,
+                return {'jpeg': jpeg, 'frame_token': frame_token or next(
+                            (key for key, value in reversed(self.preview_packages.items())
+                             if value['packet'] is packet), None),
+                        'frame_id': packet.frame_id, 'captured_at': packet.captured_at,
                         'source_epoch': packet.metadata['source_epoch'], 'valid': True,
                         'source_age_ms': age_ms, 'remaining_ttl_ms': remaining,
-                        'generation': self.run_uuid}
+                        'generation': package_generation}
 
     def preview(self):
         package = self.preview_package()
@@ -332,7 +406,7 @@ class DetectionController:
     def stop(self, timeout=2.0):
         with self.lock:
             self.stopping = True
-            self.jpeg = self.frame = None
+            self._clear_preview()
             pipeline, worker = self.pipeline, self.worker
             if pipeline is not None:
                 pipeline.stop_event.set()
@@ -482,13 +556,15 @@ class LocalService:
                 super().setup()
                 self.connection.settimeout(2.0)
 
-            def send_bytes(self, code, body, content_type='application/json'):
+            def send_bytes(self, code, body, content_type='application/json', headers=None):
                 self.send_response(code)
                 self.send_header('Content-Type', content_type)
                 self.send_header('Content-Length', str(len(body)))
                 self.send_header('Cache-Control', 'no-store')
                 self.send_header('X-Content-Type-Options', 'nosniff')
                 self.send_header('Connection', 'close')
+                for name, value in (headers or {}).items():
+                    self.send_header(name, value)
                 self.end_headers()
                 self.close_connection = True
                 self.wfile.write(body)
@@ -577,12 +653,27 @@ class LocalService:
                                 self.send_json(503, {'error': 'fresh detection preview unavailable'})
                                 return
                             value['jpeg_base64'] = base64.b64encode(value.pop('jpeg')).decode('ascii')
+                        elif route == '/api/preview-meta':
+                            boundary = query.get('after')
+                            if boundary is not None and len(boundary) != 1:
+                                raise ValueError('one capture boundary is required')
+                            after = float(boundary[0]) if boundary is not None else None
+                            value = owner.controller.preview_package(after_capture=after)
+                            if value is None:
+                                self.send_json(503, {'error': 'fresh detection preview unavailable'})
+                                return
+                            value.pop('jpeg')
                         elif route in ('/api/frame', '/frame.jpg'):
-                            jpeg = owner.controller.preview()
-                            if jpeg is None:
+                            frame_token = query.get('frame_token')
+                            if frame_token is not None and len(frame_token) != 1:
+                                raise ValueError('one frame token is required')
+                            package = owner.controller.preview_package(
+                                frame_token=frame_token[0] if frame_token is not None else None)
+                            if package is None:
                                 self.send_json(503, {'error': 'fresh detection preview unavailable'})
                             else:
-                                self.send_bytes(200, jpeg, 'image/jpeg')
+                                self.send_bytes(200, package['jpeg'], 'image/jpeg',
+                                                owner.frame_headers(package))
                             return
                         else:
                             self.send_json(404, {'error': 'unknown endpoint'})
@@ -637,6 +728,14 @@ class LocalService:
         self.server = ThreadingHTTPServer(('127.0.0.1', port), Handler)
         self.server.daemon_threads = True
         self.port = self.server.server_address[1]
+
+    @staticmethod
+    def frame_headers(package):
+        return {'X-Helmet-Frame-Id': str(package['frame_id']),
+                'X-Helmet-Generation': package['generation'],
+                'X-Helmet-Source-Epoch': str(package['source_epoch']),
+                'X-Helmet-Captured-At': '%.9f' % package['captured_at'],
+                'X-Helmet-Remaining-Ttl-Ms': '%.3f' % package['remaining_ttl_ms']}
 
     def start(self):
         if self.closed or self.thread is not None:
@@ -832,13 +931,15 @@ def main(argv=None):
     signal.signal(signal.SIGHUP, signal.SIG_IGN)
     failed = False
     result = {'detection_stopped': False, 'wifi_stopped': False}
+    receipts = ReceiptCoalescer()
 
-    def receipt():
+    def receipt(force=False):
         if args.lifecycle_file is not None:
             value = service.progress()
             value.update(session=args.resident_session, identity=process_identity(os.getpid()),
                          state='failed' if failed else value['state'])
-            workspace.write_json('service-state.json', value)
+            receipts.publish(value, lambda item: workspace.write_json('service-state.json', item),
+                             force=force)
 
     try:
         _private_file(args.token_file, service.token + '\n')
@@ -870,6 +971,10 @@ def main(argv=None):
                 failed = True
             if not all(result.values()):
                 time.sleep(.05)
+        try:
+            receipt(force=True)
+        except (OSError, ValueError):
+            failed = True
         if workspace._stat('token') is not None:
             os.unlink('token', dir_fd=workspace.descriptor)
         lease.close()

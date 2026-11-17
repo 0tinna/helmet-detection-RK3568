@@ -174,6 +174,52 @@ class ResidentStateTests(unittest.TestCase):
         else:
             self.fail('deep JSON was accepted')
 
+    def test_owner_record_publishes_changes_immediately_and_idle_heartbeats_only(self):
+        manager = object.__new__(self.resident.ResidentManager)
+        writes, clock = [], [100.0]
+        manager.coordinator = SimpleNamespace(write_record=writes.append)
+        manager._last_record_signature = None
+        manager._last_record_published = 0.0
+        base = {
+            'protocol': self.resident.PROTOCOL, 'version': self.resident.APP_VERSION,
+            'code_id': 'f' * 64, 'root': self.root, 'session': self.session,
+            'mode': 'resident', 'workspace': self.root + '/app-state/session-' + self.session,
+            'phase': 'running', 'manager': {'pid': 10, 'starttime': 1, 'uid': 0},
+            'service': {'pid': 11, 'starttime': 2, 'uid': 0}, 'ui': None,
+            'lease': {'device': 1, 'inode': 2, 'service_inherited': True, 'service_alive': True},
+            'verification_enabled': False, 'recorded_at': 100.0,
+            'application': {
+                'session': self.session, 'root': self.root, 'version': self.resident.APP_VERSION,
+                'phase': 'running', 'intent': {'sequence': 1, 'visible': True, 'tab': 'detection',
+                                               'preview_after': 0.0},
+                'ack': {'sequence': 1}, 'applied': True,
+                'ui': {'alive': True, 'instance': 'b' * 32, 'identity': None, 'exit_code': None},
+                'service': {'pid': 11}, 'progress': {'state': 'running', 'received_at': 100.0},
+                'failure': None, 'verification_enabled': False, 'last_render': {'frame_id': 7},
+            },
+        }
+
+        def record():
+            return json.loads(json.dumps(base, allow_nan=False))
+
+        with patch.object(manager, 'record', side_effect=record), \
+                patch.object(self.resident.time, 'monotonic', side_effect=lambda: clock[0]):
+            self.assertTrue(manager.publish())
+            clock[0] = 101.0
+            base['recorded_at'] = clock[0]
+            base['application']['ack'] = {'sequence': 1, 'received_at': 101.0}
+            base['application']['last_render'] = {'frame_id': 8}
+            base['application']['progress']['received_at'] = clock[0]
+            self.assertFalse(manager.publish(), 'volatile receipts must not rewrite the owner record')
+            base['application']['intent']['sequence'] = 2
+            self.assertTrue(manager.publish(), 'show/hide intent must publish immediately')
+            clock[0] = 105.9
+            self.assertFalse(manager.publish())
+            clock[0] = 106.1
+            self.assertTrue(manager.publish(), 'idle ownership needs a bounded heartbeat')
+            self.assertTrue(manager.publish(force=True), 'terminal cleanup must force publication')
+        self.assertEqual(len(writes), 4)
+
 
 class LaunchArgumentsTests(unittest.TestCase):
     def launcher(self):
@@ -603,6 +649,7 @@ class QmlResidentTests(unittest.TestCase):
     def run_js(self, names, body, model_reset=False):
         prelude = """
 const assert = require('assert');
+var apiBase='http://127.0.0.1:9000', apiToken='secret';
 var modelChoices=[], sourceChoices=[], profileChoices=[], detection={}, haveConfig=false;
 var modelChoice={currentIndex:-1}, sourceChoice={currentIndex:-1}, profileChoice={currentIndex:-1};
 var message='', requests=[], previewEpoch=0, frameExpires=0, framePending=false, lastStatus=0;
@@ -631,7 +678,7 @@ function updateWifi(){}
         script = prelude + functions + '\n' + body
         context_setup = """
 const vm=require('vm');
-var context={require:require,console:console};context.global=context;
+var context={require:require,console:console,encodeURIComponent:encodeURIComponent};context.global=context;
 """
         if model_reset:
             context_setup += """
@@ -704,16 +751,16 @@ detection={running:true,valid:true,generation:'run-1',source_epoch:3};lastStatus
 refreshFrame();var old=requests.shift();assert.equal(old.route.indexOf('/api/preview'),0);
 applyApplication({session:appSession,phase:'running',intent:{sequence:1,visible:false,tab:'detection',preview_after:0}});
 assert.equal(window.visible,false);assert.equal(preview.source,'');
-old.callback(true,{valid:true,generation:'run-1',source_epoch:3,captured_at:12,remaining_ttl_ms:900,jpeg_base64:'OLD'});
+old.callback(true,{valid:true,generation:'run-1',source_epoch:3,captured_at:12,remaining_ttl_ms:900,frame_token:'frame_token_0000001'});
 assert.equal(preview.source,'');
 applyApplication({session:appSession,phase:'running',intent:{sequence:2,visible:true,tab:'detection',preview_after:20}});
 assert.equal(window.visible,true);assert.equal(configs,1);assert.equal(polls,1);assert.equal(minimumCaptureAt,20);
 lastStatus=Date.now();requests=[];refreshFrame();var fresh=requests.shift();
-fresh.callback(true,{valid:true,generation:'run-1',source_epoch:3,captured_at:19,remaining_ttl_ms:900,jpeg_base64:'OLD'});
+fresh.callback(true,{valid:true,generation:'run-1',source_epoch:3,captured_at:19,remaining_ttl_ms:900,frame_token:'frame_token_0000002'});
 assert.equal(preview.source,'','pre-show captures must stay hidden');
 lastStatus=Date.now();requests=[];refreshFrame();fresh=requests.shift();
-fresh.callback(true,{valid:true,generation:'run-1',source_epoch:3,captured_at:21,remaining_ttl_ms:900,jpeg_base64:'NEW'});
-assert.equal(previewB.source,'data:image/jpeg;base64,NEW');
+fresh.callback(true,{valid:true,generation:'run-1',source_epoch:3,captured_at:21,remaining_ttl_ms:900,frame_token:'frame_token_0000003'});
+assert.equal(previewB.source,'http://127.0.0.1:9000/api/frame?token=secret&frame_token=frame_token_0000003');
 assert.equal(detection.generation,'run-1');
 """)
 
