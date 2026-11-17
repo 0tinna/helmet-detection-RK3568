@@ -49,16 +49,41 @@ def qml_function(name):
 
 
 class QmlPresentationContractTests(unittest.TestCase):
-    def test_window_uses_the_physical_screen_full_screen(self):
+    def test_window_enters_fullscreen_through_one_visible_state_owner(self):
         text = qml_text()
         self.assertIn('import QtQuick.Window 2.15', text)
-        for pattern in (
-            r'\bwidth\s*:\s*Screen\.width\b',
-            r'\bheight\s*:\s*Screen\.height\b',
-            r'\bvisibility\s*:\s*Window\.FullScreen\b',
-        ):
-            with self.subTest(pattern=pattern):
-                self.assertRegex(text, pattern)
+        self.assertRegex(text, r'\bwidth\s*:\s*Screen\.width\b')
+        self.assertRegex(text, r'\bheight\s*:\s*Screen\.height\b')
+        self.assertRegex(text, r'\bvisible\s*:\s*false\b')
+        self.assertNotRegex(
+            text,
+            r'\bvisibility\s*:',
+            'Window.visible and Window.visibility must not both be bound',
+        )
+        present = qml_function('presentApplication')
+        self.assertIn('window.showFullScreen()', present)
+        self.assertIn('window.raise()', present)
+        self.assertIn('window.requestActivate()', present)
+        self.assertIn('presentApplication()', qml_function('applyApplication'))
+
+    def test_idle_source_poll_detects_camera_hotplug_without_disabling_start(self):
+        self.assertRegex(
+            qml_text(),
+            r'Timer\s*\{\s*interval\s*:\s*2000\s*;[^}]*running\s*:\s*window\.visible'
+            r'[^}]*!detection\.running[^}]*!sourceChoice\.popup\.visible'
+            r'[^}]*onTriggered\s*:\s*refreshSources\(\)',
+        )
+        refresh = qml_function('refreshSources')
+        self.assertNotIn('configPending = true', refresh)
+        self.assertIn('/api/config', refresh)
+
+    def test_source_notice_explains_when_a_live_camera_has_not_been_found(self):
+        text = qml_text()
+        self.assertIn('function cameraSourceFound()', text)
+        self.assertRegex(
+            text,
+            r'text\s*:\s*cameraSourceFound\(\)\s*\?[^:]+:',
+        )
 
     def test_detection_placeholder_is_hidden_while_detection_runs(self):
         self.assertRegex(

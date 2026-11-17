@@ -7,8 +7,7 @@ ApplicationWindow {
     id: window
     width: Screen.width
     height: Screen.height
-    visibility: Window.FullScreen
-    visible: !residentMode
+    visible: false
     title: "安全帽检测与 Wi-Fi"
     color: "#101e2a"
     property string apiBase: ""
@@ -34,6 +33,8 @@ ApplicationWindow {
     property string wifiMessage: "Wi-Fi 仅用于需要时联网，检测可以离线运行"
     property bool haveConfig: false
     property bool configPending: false
+    property bool sourceRefreshPending: false
+    property string preferredSourceId: ""
     property int configEpoch: 0
     property bool statusPending: false
     property bool framePending: false
@@ -97,6 +98,32 @@ ApplicationWindow {
     function chooseIndex(items, id) {
         for (var i = 0; i < items.length; i++) if (items[i].id === id) return i
         return -1
+    }
+    function cameraSourceFound() {
+        for (var i = 0; i < sourceChoices.length; i++)
+            if (sourceChoices[i].kind === "camera") return true
+        return false
+    }
+    function updateSourceChoices(items) {
+        if (sourceChoice.currentIndex >= 0 && sourceChoice.currentIndex < sourceChoices.length)
+            preferredSourceId = sourceChoices[sourceChoice.currentIndex].id
+        sourceChoices = items.slice()
+        var index = chooseIndex(sourceChoices, preferredSourceId)
+        sourceChoice.currentIndex = index
+        if (index >= 0) preferredSourceId = sourceChoices[index].id
+    }
+    function refreshSources() {
+        if (sourceRefreshPending || configPending || detection.running || appStopping) return
+        sourceRefreshPending = true
+        var epoch = configEpoch
+        request("GET", "/api/config", null, function(ok, value) {
+            if (epoch !== configEpoch) { sourceRefreshPending = false; return }
+            sourceRefreshPending = false
+            if (!ok) return
+            var items = (value.sources || []).slice()
+            if (JSON.stringify(items) !== JSON.stringify(sourceChoices))
+                updateSourceChoices(items)
+        })
     }
     function selectionIds() {
         return {
@@ -388,7 +415,7 @@ ApplicationWindow {
         tabs.currentIndex = intent.tab === "wifi" ? 1 : 0
         applyingIntent = false
         if (intent.visible && !appStopping) {
-            window.showFullScreen(); window.raise(); window.requestActivate()
+            presentApplication()
             configure(); poll()
             if (tabs.currentIndex === 1) updateWifi()
         } else {
@@ -396,6 +423,11 @@ ApplicationWindow {
             window.hide()
         }
         ackApplication()
+    }
+    function presentApplication() {
+        window.showFullScreen()
+        window.raise()
+        window.requestActivate()
     }
     function pollApplication() {
         if (!residentMode || appPending) return
@@ -547,7 +579,17 @@ ApplicationWindow {
                 Label { text:"模型"; color:"#a9c2d1"; font.pixelSize:18 }
                 ComboBox { id:modelChoice; model:modelChoices; textRole:"name"; Layout.fillWidth:true; implicitHeight:55; font.pixelSize:19; enabled:!detection.running && !appStopping }
                 Label { text:"输入源"; color:"#a9c2d1"; font.pixelSize:18 }
-                ComboBox { id:sourceChoice; model:sourceChoices; textRole:"name"; Layout.fillWidth:true; implicitHeight:55; font.pixelSize:19; enabled:!detection.running && !appStopping }
+                ComboBox {
+                    id:sourceChoice; model:sourceChoices; textRole:"name"; Layout.fillWidth:true; implicitHeight:55; font.pixelSize:19; enabled:!detection.running && !appStopping
+                    onCurrentIndexChanged:if(currentIndex>=0&&currentIndex<sourceChoices.length)preferredSourceId=sourceChoices[currentIndex].id
+                }
+                Label {
+                    text:cameraSourceFound() ? "已发现实时摄像头，可在“输入源”中选择。"
+                                             : "尚未发现 USB 实时摄像头；设备接入后约 2 秒自动刷新。"
+                    visible:!detection.running
+                    color:cameraSourceFound() ? "#91dfa9" : "#e5c594"
+                    wrapMode:Text.Wrap; Layout.fillWidth:true; font.pixelSize:17
+                }
                 ComboBox { id:profileChoice; model:profileChoices; textRole:"name"; Layout.fillWidth:true; implicitHeight:55; font.pixelSize:19; enabled:!detection.running && !appStopping }
                 Button { text:configPending ? "正在刷新输入…" : "刷新输入"; Layout.fillWidth:true; implicitHeight:52; font.pixelSize:20; enabled:!detection.running && !appStopping && !configPending; onClicked:configure() }
                 RowLayout {
@@ -650,6 +692,12 @@ ApplicationWindow {
     Timer { interval:smokeSeconds*1000; running:smokeSeconds>0; onTriggered:Qt.quit() }
     Timer { interval:1000; running:verificationScan; onTriggered:scanWifi() }
     Timer {
+        interval:2000; repeat:true
+        running:window.visible && tabs.currentIndex===0 && !detection.running
+                && !sourceRefreshPending && !sourceChoice.popup.visible && !appStopping
+        onTriggered:refreshSources()
+    }
+    Timer {
         interval:Math.max(1000,(smokeSeconds-2)*1000); running:smokeSeconds>2 && verificationDir.length>0
         onTriggered: {
             if(verificationKeyboard){keyboardTarget=password;keyboardOpen=true}
@@ -661,7 +709,7 @@ ApplicationWindow {
     }
     Component.onCompleted: {
         if (residentMode) pollApplication()
-        else { configure(); poll() }
+        else { presentApplication(); configure(); poll() }
     }
     onClosing: function(close) {
         if (residentMode) { close.accepted = false; hideApplication() }

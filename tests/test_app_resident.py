@@ -736,6 +736,28 @@ configPending=true;assert.equal(canStart(),false);assert.equal(sourceChoices[sou
 configPending=false;assert.equal(canStart(),true);
 """)
 
+    def test_idle_source_refresh_preserves_hotplug_choice_without_blocking_start(self):
+        self.run_js(['chooseIndex', 'updateSourceChoices', 'refreshSources'], """
+sourceRefreshPending=false;preferredSourceId='1.jpg';appStopping=false;detection={running:false};configPending=false;
+sourceChoices=[{id:'1.jpg',name:'replay',kind:'replay'}];sourceChoice.currentIndex=0;requests=[];
+refreshSources();
+assert.equal(requests.length,1);assert.equal(requests[0].route,'/api/config');
+assert.equal(sourceRefreshPending,true);assert.equal(configPending,false);
+requests[0].callback(true,{sources:[{id:'1.jpg',name:'replay',kind:'replay'},
+ {id:'/dev/video10',name:'camera',kind:'camera'}]});
+requests.shift();
+assert.equal(sourceRefreshPending,false);
+assert.equal(sourceChoices[sourceChoice.currentIndex].id,'1.jpg');
+assert.equal(sourceChoices.some(item=>item.kind==='camera'),true);
+sourceChoice.currentIndex=1;preferredSourceId='/dev/video10';
+refreshSources();requests.shift().callback(true,{sources:[{id:'1.jpg',name:'replay',kind:'replay'}]});
+assert.equal(sourceChoice.currentIndex,-1);
+refreshSources();requests.shift().callback(true,{sources:[{id:'1.jpg',name:'replay',kind:'replay'},
+ {id:'/dev/video10',name:'camera',kind:'camera'}]});
+assert.equal(sourceChoices[sourceChoice.currentIndex].id,'/dev/video10');
+detection={running:true};refreshSources();assert.equal(requests.length,0);
+""")
+
     def test_configuration_generation_or_epoch_change_invalidates_the_old_decoded_preview(self):
         self.run_js(['chooseIndex', 'selectionIds', 'applyConfiguration', 'canStart', 'invalidatePreview'], """
 detection={running:true,valid:true,generation:'old',source_epoch:0};preview.source='OLD';previewVisible=true;
@@ -745,7 +767,8 @@ assert.equal(preview.source,'');assert.equal(previewVisible,false);assert.equal(
 """)
 
     def test_hide_and_reshow_discard_inflight_preview_and_restore_without_start(self):
-        self.run_js(['nextRequestId', 'invalidatePreview', 'clearUiSecrets', 'ackApplication', 'applyApplication', 'refreshFrame'], """
+        self.run_js(['nextRequestId', 'invalidatePreview', 'clearUiSecrets', 'ackApplication',
+                     'presentApplication', 'applyApplication', 'refreshFrame'], """
 var configs=0,polls=0;function configure(){configs++} function poll(){polls++}
 detection={running:true,valid:true,generation:'run-1',source_epoch:3};lastStatus=Date.now();
 refreshFrame();var old=requests.shift();assert.equal(old.route.indexOf('/api/preview'),0);
