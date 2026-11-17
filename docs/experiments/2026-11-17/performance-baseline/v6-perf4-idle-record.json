@@ -1,0 +1,18 @@
+{
+  "session": "3a16b43e1e4848dfa7d02f28279bc3a9",
+  "roles": {
+    "manager": 9636,
+    "service": 9638,
+    "ui": 9643
+  },
+  "elapsed": 10.00118841199992,
+  "cpu_percent": {
+    "manager": 10.798716667552856,
+    "service": 17.397932408835153,
+    "ui": 7.499108796911705
+  },
+  "record_replacements": 2,
+  "record_replacements_per_second": 0.19997623458431213,
+  "service_state_replacements": 9,
+  "service_state_replacements_per_second": 0.8998930556294046
+}

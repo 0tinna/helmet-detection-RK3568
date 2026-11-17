@@ -6,6 +6,10 @@
 
 | 报告 | 可支持的结论 |
 | --- | --- |
+| [v6-r1：预览性能与运行收口](2026-11-17/performance-baseline/report.md) | 二进制精确 JPEG、双 Image、同条件检测/呈现/CPU、180 秒回放、常驻、LAN、完整退出、最终整包和入口迁移；物理相机与人工屏幕未验 |
+| [v6-r1 发布清单](2026-11-17/performance-baseline/bundle-manifest-v6-r1.json) | 39,234,949B/41 entries 完整 ZIP、40 个载荷及五文件身份 |
+| [v6 前后对照](2026-11-17/performance-baseline/before-after.json) | 基线、候选、状态写次数、常驻/LAN 机读汇总 |
+| [v6 入口验收](2026-11-17/performance-baseline/entry-acceptance.json) | init 后台待机、两图标复用、完整退出和再次启动新 session |
 | [v5-r3：内网与开机入口](2026-11-15/app-lan-autostart/report.md) | 只读 8091、共用 NPU/JPEG、180.50 秒相机、隐藏/复用、正常及重复退出、init 手动实测；实际重启/实体手机未验，手机持续显示采样未通过 |
 | [v5-r3 发布清单](2026-11-15/app-lan-autostart/bundle-manifest-v5-r3.json) | 最终完整 ZIP、39 项载荷、SHA 与封包时身份 |
 | [Phase 1：连续预览与全屏](2026-11-15/native-app-usability-v4-phase1-1/report.md) | 300 帧 DRM 预览无空白、停止提示、720×1280 全屏、物理拔线 TTL；v2 验证副本的临时偏差另列 |
@@ -28,6 +32,6 @@
 | [历史 CLI 离线包说明](2026-11-14/offline-bundle.md) | CLI 载荷与预装 OS/runtime 的边界 |
 | [11 月 14 日阶段记录](2026-11-14/项目阶段总结.md) | 当日实验历史，保留原始裁定 |
 
-旧 JSON、manifest、逐帧记录和报告保持原文件及运行身份。新增 v5 记录独立归档，未覆盖旧 run 或补写其验收。
+旧 JSON、manifest、逐帧记录和报告保持原文件及运行身份。新增 v6 记录独立归档，未覆盖旧 v5 run 或补写其验收。
 
 大视频、原始图和 JSONL 的完整载荷可能仅存本机/板端；GitHub 保存范围见[资料目录](../README.md)。引用缺少本地载荷时，依据已上传的清单了解身份，并向项目持有人取得原件，不把“没有下载”解释为“空检测”或“已通过”。

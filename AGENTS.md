@@ -4,12 +4,13 @@
 
 This project implements RK3568 helmet detection with existing community models. The approved [graduation scope](docs/superpowers/plans/2026-11-14-graduation-scope.md) supersedes older proposal training objectives: no training, fine-tuning, pruning or distillation. Preserve original proposals and experiment records as history; do not restore training as an implied pending requirement.
 
-The application code is frozen at the v4-r2 delivery. Use the [delivery statement](docs/项目交付说明.md), [current handbook](docs/项目蓝图与完整手册.md), [2026-11-15 stage record](docs/experiments/2026-11-15/阶段总结.md) and raw manifests to reconcile status. The [2026-11-14 summary](docs/experiments/2026-11-14/项目阶段总结.md) remains historical evidence. Replay, software tests, real NPU inference, physical camera capture, display, long runs and codec/quantization comparisons have distinct acceptance gates. Do not infer camera or 30-minute acceptance from a short replay. Documentation maintenance does not start new development or complete untested field gates.
+The application code is frozen at the v6-r1 delivery. Use the [delivery statement](docs/项目交付说明.md), [current handbook](docs/项目蓝图与完整手册.md), [2026-11-17 performance report](docs/experiments/2026-11-17/performance-baseline/report.md), and raw manifests to reconcile status. The 2026-11-15 and 2026-11-14 stage records remain historical evidence. Replay, software tests, real NPU inference, physical camera capture, display, long runs and codec/quantization comparisons have distinct acceptance gates. Do not infer physical-camera FPS, human-observed flicker or unplug TTL from the 2026-11-17 replay run. Documentation maintenance does not start new development or complete untested field gates.
 
 ## Project Structure & Module Organization
 
 - `helmet/`: `helmet_realtime.py` CLI; `pipeline_runtime.py`, `sources.py`, `alarm.py`, `telemetry.py`, `output_sinks.py`; shared `yolo_post.py`; benchmark, checked deployment and board detection dump.
 - `helmet/app/`: `launch.py`, `resident.py`, `service.py`, `wifi.py` and `qml/Main.qml` provide the native Qt application and resident lifecycle.
+- `helmet/app/lan.py`: read-only `8091` status/LAN viewer using exact frame tokens and the same resident service.
 - `helmet/pc/`: ONNX/RKNN conversion, `dataset_tools.py`, `eval_map.py`, `analyze_errors.py`.
 - `helmet/models/`: existing variants named `helmet_<width>x<height>.rknn`; `models/` contains the original baseline, samples and source-model provenance.
 - `tests/` and `helmet/tests/`: meaningful unittest regressions; `tools_ai/ref/test.py` is an upstream inference reference, not a test suite.
@@ -48,7 +49,7 @@ The current two 200-image sources have unknown training overlap and one confirme
 
 ## Commit & Pull Request Guidelines
 
-This checkout is Git-backed and saved to `0tinna/helmet-detection-RK3568`. Use imperative commit titles and keep documentation maintenance separate from runtime changes. For documentation-only work, verify code, models, dependencies, original experiment records and release packages remain byte-identical; record archive moves and fix current links. For implementation changes, describe the concrete behavior, bottleneck, reference, validation, before/after metrics and material acceptance limits. Attach annotated images for detection changes. Final model choice requires combined quality, real source/display and stability gates, not speed alone.
+This checkout is Git-backed and saved to `0tinna/helmet-detection-RK3568`. Use imperative commit titles and keep documentation maintenance separate from runtime changes. For documentation-only work, verify code, models, dependencies, original experiment records and release packages remain byte-identical; record archive moves and fix current links. For implementation changes, describe the concrete behavior, bottleneck, reference, validation, before/after metrics and material acceptance limits. Attach annotated images for detection changes. Final model choice requires combined quality, real source/display and stability gates, not speed alone. Preserve exact frame-token freshness, the double-Image no-blank invariant, forced terminal receipts and the distinction between replay measurements and physical camera/display acceptance.
 
 ## Experiment & Configuration Practices
 

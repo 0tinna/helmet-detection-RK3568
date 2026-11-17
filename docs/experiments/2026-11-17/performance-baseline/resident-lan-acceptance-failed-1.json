@@ -1,0 +1,345 @@
+{
+  "scope": "v6-perf7 normal launch/resident control path with local 1.jpg replay; not physical USB camera, not human screen/phone observation",
+  "root": "/userdata/helmet-validation/20261117-native-app-v6-perf-7",
+  "boot_id": "9455abe8-e13c-4870-980f-778a09bdff58",
+  "code_identity": "86f191feb7adf6c8b0bafc30198cf2be2f7aa1a0bcba0161c1e5b8240a59a453",
+  "actions": [],
+  "passed": false,
+  "preclean": {
+    "owner": {
+      "application": {
+        "ack": null,
+        "applied": false,
+        "failure": null,
+        "intent": {
+          "preview_after": 3882.139996773,
+          "sequence": 6,
+          "tab": "detection",
+          "visible": false
+        },
+        "last_render": null,
+        "phase": "completed",
+        "progress": {
+          "cleanup_completed": true,
+          "detection_alive": false,
+          "detection_stopped": true,
+          "http_alive": false,
+          "lan_alive": false,
+          "lan_port": 8091,
+          "received_at": 4308.10615351,
+          "state": "stopping",
+          "wifi_alive": false,
+          "wifi_stopped": true
+        },
+        "root": "/userdata/helmet-validation/20261117-native-app-v6-perf-7",
+        "service": {
+          "pid": 13310,
+          "starttime": 377943,
+          "uid": 0
+        },
+        "session": "da4ea6f494db46d28dcdc6f930826cfc",
+        "ui": {
+          "alive": false,
+          "exit_code": -15,
+          "identity": {
+            "pid": 13315,
+            "starttime": 378249,
+            "uid": 0
+          },
+          "instance": "f5d87abdbe0a45369e0504189478f924"
+        },
+        "verification_enabled": false,
+        "version": "resident-v4"
+      },
+      "code_id": "86f191feb7adf6c8b0bafc30198cf2be2f7aa1a0bcba0161c1e5b8240a59a453",
+      "lease": {
+        "device": 45832,
+        "inode": 2820946,
+        "service_alive": false,
+        "service_inherited": true
+      },
+      "manager": {
+        "pid": 13308,
+        "starttime": 377855,
+        "uid": 0
+      },
+      "mode": "resident",
+      "phase": "completed",
+      "protocol": 1,
+      "recorded_at": 4309.090540835,
+      "root": "/userdata/helmet-validation/20261117-native-app-v6-perf-7",
+      "service": {
+        "pid": 13310,
+        "starttime": 377943,
+        "uid": 0
+      },
+      "session": "da4ea6f494db46d28dcdc6f930826cfc",
+      "ui": {
+        "pid": 13315,
+        "starttime": 378249,
+        "uid": 0
+      },
+      "verification_enabled": false,
+      "version": "resident-v4",
+      "workspace": "/userdata/helmet-validation/20261117-native-app-v6-perf-7/app-state/session-da4ea6f494db46d28dcdc6f930826cfc"
+    },
+    "processes_before_start": ""
+  },
+  "first_open_reply": {
+    "ok": true,
+    "accepted": true,
+    "duplicate": false,
+    "application": {
+      "session": "b2e22a1accf046d8b5df79f2c53aa45c",
+      "root": "/userdata/helmet-validation/20261117-native-app-v6-perf-7",
+      "version": "resident-v4",
+      "phase": "starting",
+      "intent": {
+        "sequence": 2,
+        "visible": true,
+        "tab": "detection",
+        "preview_after": 4311.063559788
+      },
+      "ack": null,
+      "applied": false,
+      "ui": {
+        "alive": false,
+        "instance": null,
+        "identity": null,
+        "exit_code": null
+      },
+      "service": {
+        "pid": 17060,
+        "starttime": 431104,
+        "uid": 0
+      },
+      "progress": {
+        "cleanup_completed": false
+      },
+      "failure": null,
+      "verification_enabled": false,
+      "last_render": null
+    }
+  },
+  "first_open": {
+    "session": "b2e22a1accf046d8b5df79f2c53aa45c",
+    "identities": {
+      "manager": 17058,
+      "service": 17060,
+      "ui": 17063
+    },
+    "ui_instance": "3e3f0d2899284bb89471ea1fd15879c4",
+    "application": {
+      "ack": {
+        "frame_decodes": 0,
+        "frame_requests": 0,
+        "preview_presentations": 0,
+        "qt": {
+          "pid": 17063,
+          "starttime": 431326,
+          "uid": 0
+        },
+        "received_at": 4317.767232178,
+        "sequence": 2,
+        "tab": "detection",
+        "ui_instance": "3e3f0d2899284bb89471ea1fd15879c4",
+        "visible": true
+      },
+      "applied": true,
+      "failure": null,
+      "intent": {
+        "preview_after": 4311.063559788,
+        "sequence": 2,
+        "tab": "detection",
+        "visible": true
+      },
+      "last_render": null,
+      "phase": "running",
+      "progress": {
+        "cleanup_completed": false,
+        "detection_alive": false,
+        "detection_stopped": false,
+        "http_alive": true,
+        "lan_alive": true,
+        "lan_port": 8091,
+        "received_at": 4317.373277711,
+        "state": "running",
+        "wifi_alive": false,
+        "wifi_stopped": false
+      },
+      "root": "/userdata/helmet-validation/20261117-native-app-v6-perf-7",
+      "service": {
+        "pid": 17060,
+        "starttime": 431104,
+        "uid": 0
+      },
+      "session": "b2e22a1accf046d8b5df79f2c53aa45c",
+      "ui": {
+        "alive": true,
+        "exit_code": null,
+        "identity": {
+          "pid": 17063,
+          "starttime": 431326,
+          "uid": 0
+        },
+        "instance": "3e3f0d2899284bb89471ea1fd15879c4"
+      },
+      "verification_enabled": false,
+      "version": "resident-v4"
+    }
+  },
+  "start_detection": {
+    "started": true,
+    "model": "helmet_416x416.rknn",
+    "source": "1.jpg",
+    "profile": "responsive"
+  },
+  "detection_ready": {
+    "state": "healthy",
+    "reason": "fresh detections",
+    "alarm_state": "pending",
+    "frame_id": 4,
+    "valid": true,
+    "model": "/userdata/helmet-validation/20261117-native-app-v6-perf-7/models/helmet_416x416.rknn",
+    "model_sha256": "7e0eefe4bfe86627bb6b58161cacca10912e0dbe1ba2513f58d091c40b26cd48",
+    "source": "/userdata/helmet-validation/20261117-native-app-v6-perf-7/input/1.jpg",
+    "monotonic": 4321.545161383,
+    "counters": {
+      "captured": 7,
+      "consumed": 4,
+      "detected": 3,
+      "overwritten": 2,
+      "active_skip": 0,
+      "read_failure": 0,
+      "displayed": 0,
+      "output": 3,
+      "output_overwritten": 0,
+      "detection_failure": 0
+    },
+    "fps": {
+      "captured": 2.3768539748771165,
+      "consumed": 1.3582022713583521,
+      "detected": 1.018651703518764,
+      "displayed": 0.0,
+      "output": 1.018651703518764
+    },
+    "latency": {
+      "prep_ms": {
+        "count": 3,
+        "mean": 25.15072966646888,
+        "p50": 21.792482999444474,
+        "p95": 37.37413079943508,
+        "p99": 38.759166159434244
+      },
+      "infer_ms": {
+        "count": 3,
+        "mean": 53.63559433347594,
+        "p50": 55.88635100048123,
+        "p95": 59.966502800034505,
+        "p99": 60.329182959994796
+      },
+      "post_ms": {
+        "count": 3,
+        "mean": 22.71038400006849,
+        "p50": 23.970419000761467,
+        "p95": 30.179505499654624,
+        "p99": 30.731424299556238
+      },
+      "capture_to_output_ms": {
+        "count": 3,
+        "mean": 139.27588766697832,
+        "p50": 135.8131240003786,
+        "p95": 164.6282917001372,
+        "p99": 167.18963994011574
+      },
+      "sink_ms": {
+        "count": 3,
+        "mean": 58.752153666622085,
+        "p50": 56.941339999866614,
+        "p95": 75.75130130026082,
+        "p99": 77.42329786029586
+      },
+      "capture_to_sink_complete_ms": {
+        "count": 3,
+        "mean": 198.23950533342818,
+        "p50": 192.2699910001029,
+        "p95": 221.6771130003508,
+        "p99": 224.29107940037284
+      }
+    },
+    "source_epoch": 0,
+    "running": true,
+    "selection": {
+      "model": "helmet_416x416.rknn",
+      "source": "1.jpg",
+      "profile": "responsive"
+    },
+    "generation": "02c9e6315c72463081b93062d1e8cb68"
+  },
+  "lan_status_loopback": {
+    "host": "127.0.0.1",
+    "route": "/status.json",
+    "status": 200,
+    "content_type": "application/json; charset=utf-8",
+    "sha256": "89790430fc80bbc5801c33acda46846aaecaaf032d55e982b2bb1a6133574344",
+    "public": {
+      "state": "healthy",
+      "reason": "fresh detections",
+      "running": true,
+      "selection": {
+        "model": "helmet_416x416.rknn",
+        "source": "1.jpg",
+        "profile": "responsive"
+      },
+      "fps": {
+        "captured": 2.6862629305687475,
+        "consumed": 1.3431314652843738,
+        "detected": 1.0073485989632802,
+        "displayed": 0.0,
+        "output": 1.0073485989632802
+      },
+      "alarm_state": "pending",
+      "counters": {
+        "captured": 8,
+        "consumed": 4,
+        "detected": 3,
+        "overwritten": 3,
+        "active_skip": 0,
+        "read_failure": 0,
+        "displayed": 0,
+        "output": 3,
+        "output_overwritten": 0,
+        "detection_failure": 0
+      },
+      "generation": "02c9e6315c72463081b93062d1e8cb68",
+      "source_epoch": 0,
+      "valid": true,
+      "frame_id": 4,
+      "remaining_ttl_ms": 693.37540000015,
+      "frame_token": "5A01m3DnuH-5FKZq33ncBhlO",
+      "captured_at": 4321.317604864,
+      "source_age_ms": 306.62459999985003
+    }
+  },
+  "lan_status_wlan": {
+    "host": "192.168.1.3",
+    "route": "/status.json",
+    "status": 200,
+    "content_type": "application/json; charset=utf-8",
+    "sha256": "694e8bf502d565c0423febb428c3140a7d5a4c0a86f676a00b676706218dd702"
+  },
+  "lan_exact_frame": {
+    "frame_token": "5A01m3DnuH-5FKZq33ncBhlO",
+    "status": 200,
+    "content_type": "image/jpeg",
+    "bytes": 190701,
+    "sha256": "433c4e03f604d4381ddc5610f6a38a4e15a101142ddba46580f4967bfab77bb9",
+    "jpeg_markers": true
+  },
+  "error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)",
+  "cleanup_after_error": {
+    "stopped": true,
+    "phase": "completed",
+    "session": "b2e22a1accf046d8b5df79f2c53aa45c"
+  }
+}

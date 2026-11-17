@@ -1,0 +1,15 @@
+﻿{
+  "passed": true,
+  "root": "/userdata/helmet-validation/20261117-native-app-v6-r1",
+  "manifest_version": "20261117-v6-r1",
+  "release_tag": "native-app-v6-r1",
+  "payload_files": 40,
+  "code_identity": "86f191feb7adf6c8b0bafc30198cf2be2f7aa1a0bcba0161c1e5b8240a59a453",
+  "files": {
+    "src/app/resident.py": "13b34f7fcfe2eaed6b390a447f0923e61a1937685fbcc67b73bfa5d3893ab6bc",
+    "src/app/launch.py": "6dd08e9b1ce0813b7d689aa690b3a2beb9501a3dfab08d9497f42ab5f7b96d9f",
+    "src/app/service.py": "db0c579d93c8d60dc48e755471e7649e9c1411a53c1237afbff2cc47044edc3a",
+    "src/app/wifi.py": "648b714137b18538f8f8e6a355565b07aec8fb01270c3deed5c01eba30249468",
+    "src/app/qml/Main.qml": "945a2816b88fc9f8880c13bd1ee424d1d6552f5b8927159f01fc3061dfe84c6a"
+  }
+}

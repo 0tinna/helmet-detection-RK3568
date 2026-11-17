@@ -1,0 +1,52 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>安全帽检测 · 内网查看</title><style>
+*{box-sizing:border-box}body{margin:0;background:#10202b;color:#edf6fc;font:16px system-ui,sans-serif}
+main{max-width:1000px;margin:auto;padding:20px}h1{font-size:25px;margin:0 0 10px}
+p{line-height:1.7;color:#bed1de}.fault{color:#f6c788}.viewer{position:relative;background:#08131c;
+min-height:220px;border-radius:10px;overflow:hidden}canvas{width:100%;max-height:70vh;object-fit:contain;
+display:block;visibility:hidden}#placeholder{position:absolute;inset:0;display:grid;place-items:center;
+padding:24px;color:#a5bfce}#placeholder[hidden]{display:none}pre{white-space:pre-wrap;overflow-wrap:anywhere;
+background:#182d3b;padding:14px;border-radius:8px;font-size:14px;line-height:1.6}
+</style></head><body><main><h1>安全帽检测 · 内网查看</h1>
+<p id="state">正在连接开发板…</p><div class="viewer"><canvas id="preview" role="img" aria-label="当前有效检测画面"></canvas>
+<div id="placeholder">待机或暂无新鲜画面</div></div><pre id="stats"></pre>
+<p>在开发板 App 选择摄像头和模型，再点击“开始检测”。回到桌面后检测继续。
+此页显示同一检测实例；空检测不能说明全员戴帽，断流或过期时清除旧画面。</p></main>
+<script>
+const preview=document.querySelector('#preview'), context=preview.getContext('2d'),
+ placeholder=document.querySelector('#placeholder');
+let previewSerial=0, sourceKey=null, expires=0, expiryTimer=null;
+function clearPreview(){previewSerial++;expires=0;clearTimeout(expiryTimer);
+ context.clearRect(0,0,preview.width,preview.height);preview.style.visibility='hidden';
+ placeholder.hidden=false;}
+function expirePreview(){if(expires&&performance.now()>=expires){clearPreview();
+ document.querySelector('#state').textContent='画面已过期，等待新鲜结果';}}
+function showPacket(packet,started){
+ const remaining=Number(packet.remaining_ttl_ms)-(performance.now()-started);
+ if(packet.valid!==true||typeof packet.frame_token!=='string'||!packet.frame_token
+   ||!Number.isFinite(remaining)||remaining<=0){clearPreview();return;}
+ const key=packet.generation+'|'+packet.source_epoch;
+ if(key!==sourceKey){clearPreview();sourceKey=key;}
+ const ticket=++previewSerial, deadline=performance.now()+remaining, picture=new Image();
+ picture.onload=()=>{const width=Number(picture.naturalWidth)||0,height=Number(picture.naturalHeight)||0;
+  if(ticket!==previewSerial||key!==sourceKey||performance.now()>=deadline||width<=0||height<=0)return;
+  preview.width=width;preview.height=height;context.drawImage(picture,0,0,width,height);
+  preview.style.visibility='visible';placeholder.hidden=true;
+  expires=deadline;clearTimeout(expiryTimer);expiryTimer=setTimeout(expirePreview,Math.max(0,deadline-performance.now()));};
+ picture.onerror=()=>{if(ticket===previewSerial)clearPreview();};
+ picture.src='/frame.jpg?frame_token='+encodeURIComponent(packet.frame_token);
+}
+async function poll(){const started=performance.now(),abort=new AbortController();
+ const timeout=setTimeout(()=>abort.abort(),1500);
+ try{const response=await fetch('/status.json',{cache:'no-store',signal:abort.signal});const packet=await response.json();
+  const status=packet.state||'idle';document.querySelector('#state').textContent=
+   packet.running?(packet.valid?'检测中':'检测不可用 / '+(packet.reason||status)):'待机：请在板端开始检测';
+  document.querySelector('#state').className=packet.valid?'':'fault';
+  document.querySelector('#stats').textContent=JSON.stringify({状态:status,帧号:packet.frame_id,
+   检测FPS:packet.fps&&packet.fps.detected,配置:packet.selection},null,2);
+  if(response.ok)showPacket(packet,started);else clearPreview();
+ }catch(error){clearPreview();document.querySelector('#state').textContent='连接暂不可用，正在重试';}
+ finally{clearTimeout(timeout);setTimeout(poll,125);}}
+poll();
+</script></body></html>
