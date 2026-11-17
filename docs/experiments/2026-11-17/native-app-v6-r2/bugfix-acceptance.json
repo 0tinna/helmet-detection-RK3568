@@ -1,0 +1,1303 @@
+{
+  "kind": "native-app-v6-r2-final-acceptance",
+  "ok": true,
+  "initial_ui": {
+    "session": "e2398cb4ea804019a2f09bc29058a1dd",
+    "ui_instance": "1c6c90ed4d174c83a9ce9e60dccb7070",
+    "ui_pid": 27158,
+    "manager_pid": 27153,
+    "service_pid": 27155,
+    "qt_pid": 27158,
+    "code_identity": "c40bbf1b2868f51b1d95b32492b7ec3ecafcf9e3432cc2c82e1e938251916d0b"
+  },
+  "configuration_sources": [
+    {
+      "id": "1.jpg",
+      "name": "1.jpg（回放演示）",
+      "kind": "replay"
+    }
+  ],
+  "start_response": {
+    "started": true,
+    "model": "helmet_416x416.rknn",
+    "source": "1.jpg",
+    "profile": "responsive"
+  },
+  "running": {
+    "state": "healthy",
+    "reason": "fresh detections",
+    "alarm_state": "pending",
+    "frame_id": 1,
+    "valid": true,
+    "model": "/userdata/helmet-validation/20261117-native-app-v6-r2/models/helmet_416x416.rknn",
+    "model_sha256": "7e0eefe4bfe86627bb6b58161cacca10912e0dbe1ba2513f58d091c40b26cd48",
+    "source": "/userdata/helmet-validation/20261117-native-app-v6-r2/input/1.jpg",
+    "monotonic": 7278.387949197,
+    "counters": {
+      "captured": 4,
+      "consumed": 2,
+      "detected": 1,
+      "overwritten": 1,
+      "active_skip": 0,
+      "read_failure": 0,
+      "displayed": 0,
+      "output": 1,
+      "output_overwritten": 0,
+      "detection_failure": 0
+    },
+    "fps": {
+      "captured": 1.5562527061895517,
+      "consumed": 0.7781263530947758,
+      "detected": 0.3890631765473879,
+      "displayed": 0.0,
+      "output": 0.3890631765473879
+    },
+    "latency": {
+      "prep_ms": {
+        "count": 1,
+        "mean": 45.240313000249444,
+        "p50": 45.240313000249444,
+        "p95": 45.240313000249444,
+        "p99": 45.240313000249444
+      },
+      "infer_ms": {
+        "count": 1,
+        "mean": 60.770469999624765,
+        "p50": 60.770469999624765,
+        "p95": 60.770469999624765,
+        "p99": 60.770469999624765
+      },
+      "post_ms": {
+        "count": 1,
+        "mean": 18.88031900034548,
+        "p50": 18.88031900034548,
+        "p95": 18.88031900034548,
+        "p99": 18.88031900034548
+      },
+      "capture_to_output_ms": {
+        "count": 0,
+        "mean": null,
+        "p50": null,
+        "p95": null,
+        "p99": null
+      },
+      "sink_ms": {
+        "count": 0,
+        "mean": null,
+        "p50": null,
+        "p95": null,
+        "p99": null
+      },
+      "capture_to_sink_complete_ms": {
+        "count": 0,
+        "mean": null,
+        "p50": null,
+        "p95": null,
+        "p99": null
+      }
+    },
+    "source_epoch": 0,
+    "running": true,
+    "selection": {
+      "model": "helmet_416x416.rknn",
+      "source": "1.jpg",
+      "profile": "responsive"
+    },
+    "generation": "096e207148254d0e9ba6005e8d3c364e"
+  },
+  "cycles": [
+    {
+      "cycle": 1,
+      "hidden": {
+        "state": "healthy",
+        "reason": "fresh detections",
+        "alarm_state": "active",
+        "frame_id": 51,
+        "valid": true,
+        "model": "/userdata/helmet-validation/20261117-native-app-v6-r2/models/helmet_416x416.rknn",
+        "model_sha256": "7e0eefe4bfe86627bb6b58161cacca10912e0dbe1ba2513f58d091c40b26cd48",
+        "source": "/userdata/helmet-validation/20261117-native-app-v6-r2/input/1.jpg",
+        "monotonic": 7280.935090898,
+        "counters": {
+          "captured": 54,
+          "consumed": 35,
+          "detected": 34,
+          "overwritten": 18,
+          "active_skip": 0,
+          "read_failure": 0,
+          "displayed": 0,
+          "output": 34,
+          "output_overwritten": 0,
+          "detection_failure": 0
+        },
+        "fps": {
+          "captured": 10.8,
+          "consumed": 7.0,
+          "detected": 6.8,
+          "displayed": 0.0,
+          "output": 6.8
+        },
+        "latency": {
+          "prep_ms": {
+            "count": 34,
+            "mean": 16.328612911767028,
+            "p50": 14.865140999972937,
+            "p95": 22.02940104957633,
+            "p99": 38.45635747019518
+          },
+          "infer_ms": {
+            "count": 34,
+            "mean": 44.858418323575975,
+            "p50": 42.148573999838845,
+            "p95": 59.22042905035595,
+            "p99": 60.74958297991543
+          },
+          "post_ms": {
+            "count": 34,
+            "mean": 16.213968000021637,
+            "p50": 12.919679000333417,
+            "p95": 28.57528389963589,
+            "p99": 39.97219368026892
+          },
+          "capture_to_output_ms": {
+            "count": 33,
+            "mean": 116.3420273637023,
+            "p50": 114.43402299937588,
+            "p95": 153.6280024000007,
+            "p99": 163.06761896015814
+          },
+          "sink_ms": {
+            "count": 33,
+            "mean": 49.64460999996266,
+            "p50": 47.95579399979033,
+            "p95": 59.82334800046374,
+            "p99": 62.28269168052066
+          },
+          "capture_to_sink_complete_ms": {
+            "count": 33,
+            "mean": 166.1624634849211,
+            "p50": 165.41009600041434,
+            "p95": 205.75682779999622,
+            "p99": 216.7193536400373
+          }
+        },
+        "source_epoch": 0,
+        "running": true,
+        "selection": {
+          "model": "helmet_416x416.rknn",
+          "source": "1.jpg",
+          "profile": "responsive"
+        },
+        "generation": "096e207148254d0e9ba6005e8d3c364e"
+      },
+      "hidden_ack_before": {
+        "sequence": 2,
+        "visible": false,
+        "tab": "detection",
+        "ui_instance": "1c6c90ed4d174c83a9ce9e60dccb7070",
+        "qt": {
+          "pid": 27158,
+          "starttime": 727385,
+          "uid": 0
+        },
+        "received_at": 7279.374006373,
+        "frame_requests": 0,
+        "preview_presentations": 0,
+        "frame_decodes": 0
+      },
+      "hidden_ack_after": {
+        "sequence": 2,
+        "visible": false,
+        "tab": "detection",
+        "ui_instance": "1c6c90ed4d174c83a9ce9e60dccb7070",
+        "qt": {
+          "pid": 27158,
+          "starttime": 727385,
+          "uid": 0
+        },
+        "received_at": 7279.374006373,
+        "frame_requests": 0,
+        "preview_presentations": 0,
+        "frame_decodes": 0
+      },
+      "shown": {
+        "state": "healthy",
+        "reason": "fresh detections",
+        "alarm_state": "active",
+        "frame_id": 84,
+        "valid": true,
+        "model": "/userdata/helmet-validation/20261117-native-app-v6-r2/models/helmet_416x416.rknn",
+        "model_sha256": "7e0eefe4bfe86627bb6b58161cacca10912e0dbe1ba2513f58d091c40b26cd48",
+        "source": "/userdata/helmet-validation/20261117-native-app-v6-r2/input/1.jpg",
+        "monotonic": 7282.773333523,
+        "counters": {
+          "captured": 88,
+          "consumed": 56,
+          "detected": 55,
+          "overwritten": 31,
+          "active_skip": 0,
+          "read_failure": 0,
+          "displayed": 0,
+          "output": 54,
+          "output_overwritten": 0,
+          "detection_failure": 0
+        },
+        "fps": {
+          "captured": 17.6,
+          "consumed": 11.2,
+          "detected": 11.0,
+          "displayed": 0.0,
+          "output": 10.8
+        },
+        "latency": {
+          "prep_ms": {
+            "count": 55,
+            "mean": 15.821660472697245,
+            "p50": 14.88001699999586,
+            "p95": 21.057632299743997,
+            "p99": 34.139294860160604
+          },
+          "infer_ms": {
+            "count": 55,
+            "mean": 46.05053469094855,
+            "p50": 43.54977399998461,
+            "p95": 60.72616420024133,
+            "p99": 67.50037635978515
+          },
+          "post_ms": {
+            "count": 55,
+            "mean": 19.0868023090595,
+            "p50": 13.673071000084747,
+            "p95": 45.53391210019979,
+            "p99": 60.114554339997994
+          },
+          "capture_to_output_ms": {
+            "count": 54,
+            "mean": 119.56979962968506,
+            "p50": 115.57038350019866,
+            "p95": 159.28356695021643,
+            "p99": 207.0538687001771
+          },
+          "sink_ms": {
+            "count": 54,
+            "mean": 53.43171574068711,
+            "p50": 50.253159499789035,
+            "p95": 76.52969335022118,
+            "p99": 99.34166545949665
+          },
+          "capture_to_sink_complete_ms": {
+            "count": 54,
+            "mean": 173.18428125926638,
+            "p50": 166.83054599980096,
+            "p95": 232.21766930000732,
+            "p99": 297.6245463599206
+          }
+        },
+        "source_epoch": 0,
+        "running": true,
+        "selection": {
+          "model": "helmet_416x416.rknn",
+          "source": "1.jpg",
+          "profile": "responsive"
+        },
+        "generation": "096e207148254d0e9ba6005e8d3c364e"
+      },
+      "ui_instance": "1c6c90ed4d174c83a9ce9e60dccb7070",
+      "ui_pid": 27158
+    },
+    {
+      "cycle": 2,
+      "hidden": {
+        "state": "healthy",
+        "reason": "fresh detections",
+        "alarm_state": "active",
+        "frame_id": 132,
+        "valid": true,
+        "model": "/userdata/helmet-validation/20261117-native-app-v6-r2/models/helmet_416x416.rknn",
+        "model_sha256": "7e0eefe4bfe86627bb6b58161cacca10912e0dbe1ba2513f58d091c40b26cd48",
+        "source": "/userdata/helmet-validation/20261117-native-app-v6-r2/input/1.jpg",
+        "monotonic": 7285.350260933,
+        "counters": {
+          "captured": 135,
+          "consumed": 85,
+          "detected": 84,
+          "overwritten": 50,
+          "active_skip": 0,
+          "read_failure": 0,
+          "displayed": 0,
+          "output": 82,
+          "output_overwritten": 1,
+          "detection_failure": 0
+        },
+        "fps": {
+          "captured": 18.6,
+          "consumed": 11.6,
+          "detected": 11.6,
+          "displayed": 0.0,
+          "output": 11.2
+        },
+        "latency": {
+          "prep_ms": {
+            "count": 58,
+            "mean": 15.468301758589625,
+            "p50": 14.928142999906413,
+            "p95": 22.13036380067024,
+            "p99": 25.755273570121062
+          },
+          "infer_ms": {
+            "count": 58,
+            "mean": 47.58835075861121,
+            "p50": 45.095788999788056,
+            "p95": 64.9119429498569,
+            "p99": 71.53310404964031
+          },
+          "post_ms": {
+            "count": 58,
+            "mean": 22.60888186204064,
+            "p50": 16.00923050000347,
+            "p95": 57.17339165012163,
+            "p99": 63.8566644898674
+          },
+          "capture_to_output_ms": {
+            "count": 56,
+            "mean": 138.5518870536251,
+            "p50": 117.29913249973833,
+            "p95": 264.56844874974195,
+            "p99": 332.0634219501245
+          },
+          "sink_ms": {
+            "count": 56,
+            "mean": 62.33630385712071,
+            "p50": 52.03018149950367,
+            "p95": 103.23485375010932,
+            "p99": 162.14663469991143
+          },
+          "capture_to_sink_complete_ms": {
+            "count": 56,
+            "mean": 201.08136737501678,
+            "p50": 169.56644349966155,
+            "p95": 352.0302540000557,
+            "p99": 456.34304589989387
+          }
+        },
+        "source_epoch": 0,
+        "running": true,
+        "selection": {
+          "model": "helmet_416x416.rknn",
+          "source": "1.jpg",
+          "profile": "responsive"
+        },
+        "generation": "096e207148254d0e9ba6005e8d3c364e"
+      },
+      "hidden_ack_before": {
+        "sequence": 4,
+        "visible": false,
+        "tab": "detection",
+        "ui_instance": "1c6c90ed4d174c83a9ce9e60dccb7070",
+        "qt": {
+          "pid": 27158,
+          "starttime": 727385,
+          "uid": 0
+        },
+        "received_at": 7283.783077801,
+        "frame_requests": 5,
+        "preview_presentations": 4,
+        "frame_decodes": 4
+      },
+      "hidden_ack_after": {
+        "sequence": 4,
+        "visible": false,
+        "tab": "detection",
+        "ui_instance": "1c6c90ed4d174c83a9ce9e60dccb7070",
+        "qt": {
+          "pid": 27158,
+          "starttime": 727385,
+          "uid": 0
+        },
+        "received_at": 7283.783077801,
+        "frame_requests": 5,
+        "preview_presentations": 4,
+        "frame_decodes": 4
+      },
+      "shown": {
+        "state": "healthy",
+        "reason": "fresh detections",
+        "alarm_state": "active",
+        "frame_id": 164,
+        "valid": true,
+        "model": "/userdata/helmet-validation/20261117-native-app-v6-r2/models/helmet_416x416.rknn",
+        "model_sha256": "7e0eefe4bfe86627bb6b58161cacca10912e0dbe1ba2513f58d091c40b26cd48",
+        "source": "/userdata/helmet-validation/20261117-native-app-v6-r2/input/1.jpg",
+        "monotonic": 7287.106261549,
+        "counters": {
+          "captured": 169,
+          "consumed": 105,
+          "detected": 104,
+          "overwritten": 63,
+          "active_skip": 0,
+          "read_failure": 0,
+          "displayed": 0,
+          "output": 103,
+          "output_overwritten": 1,
+          "detection_failure": 0
+        },
+        "fps": {
+          "captured": 18.6,
+          "consumed": 11.0,
+          "detected": 11.0,
+          "displayed": 0.0,
+          "output": 10.8
+        },
+        "latency": {
+          "prep_ms": {
+            "count": 55,
+            "mean": 15.734519072661483,
+            "p50": 15.040727999803494,
+            "p95": 24.462483500064987,
+            "p99": 27.058826760039665
+          },
+          "infer_ms": {
+            "count": 55,
+            "mean": 47.91973260000139,
+            "p50": 45.01747499944031,
+            "p95": 68.27330500009337,
+            "p99": 75.2895409798657
+          },
+          "post_ms": {
+            "count": 55,
+            "mean": 24.09806634543863,
+            "p50": 16.11058700018475,
+            "p95": 59.462605699991386,
+            "p99": 73.40024881992578
+          },
+          "capture_to_output_ms": {
+            "count": 53,
+            "mean": 145.62242009431876,
+            "p50": 122.66271699991194,
+            "p95": 269.64908059981093,
+            "p99": 333.0120492801142
+          },
+          "sink_ms": {
+            "count": 53,
+            "mean": 62.670271999950444,
+            "p50": 52.12701699929312,
+            "p95": 103.62366919998749,
+            "p99": 162.81116907986865
+          },
+          "capture_to_sink_complete_ms": {
+            "count": 53,
+            "mean": 208.48425554715573,
+            "p50": 172.21367299953272,
+            "p95": 352.25224679998064,
+            "p99": 458.30948835988215
+          }
+        },
+        "source_epoch": 0,
+        "running": true,
+        "selection": {
+          "model": "helmet_416x416.rknn",
+          "source": "1.jpg",
+          "profile": "responsive"
+        },
+        "generation": "096e207148254d0e9ba6005e8d3c364e"
+      },
+      "ui_instance": "1c6c90ed4d174c83a9ce9e60dccb7070",
+      "ui_pid": 27158
+    },
+    {
+      "cycle": 3,
+      "hidden": {
+        "state": "healthy",
+        "reason": "fresh detections",
+        "alarm_state": "active",
+        "frame_id": 212,
+        "valid": true,
+        "model": "/userdata/helmet-validation/20261117-native-app-v6-r2/models/helmet_416x416.rknn",
+        "model_sha256": "7e0eefe4bfe86627bb6b58161cacca10912e0dbe1ba2513f58d091c40b26cd48",
+        "source": "/userdata/helmet-validation/20261117-native-app-v6-r2/input/1.jpg",
+        "monotonic": 7289.500997434,
+        "counters": {
+          "captured": 214,
+          "consumed": 134,
+          "detected": 133,
+          "overwritten": 79,
+          "active_skip": 0,
+          "read_failure": 0,
+          "displayed": 0,
+          "output": 131,
+          "output_overwritten": 2,
+          "detection_failure": 0
+        },
+        "fps": {
+          "captured": 19.0,
+          "consumed": 12.0,
+          "detected": 12.0,
+          "displayed": 0.0,
+          "output": 12.0
+        },
+        "latency": {
+          "prep_ms": {
+            "count": 60,
+            "mean": 15.120340883261937,
+            "p50": 14.742346500042913,
+            "p95": 22.198002350069146,
+            "p99": 25.876070379890734
+          },
+          "infer_ms": {
+            "count": 60,
+            "mean": 46.20199521671869,
+            "p50": 43.89321949975056,
+            "p95": 67.25613725025141,
+            "p99": 79.15109121036949
+          },
+          "post_ms": {
+            "count": 60,
+            "mean": 19.729001266690222,
+            "p50": 14.097164999839151,
+            "p95": 43.21391170019523,
+            "p99": 64.31625179977335
+          },
+          "capture_to_output_ms": {
+            "count": 60,
+            "mean": 135.08815015005288,
+            "p50": 116.73824450008397,
+            "p95": 247.16280185007236,
+            "p99": 278.404195850353
+          },
+          "sink_ms": {
+            "count": 60,
+            "mean": 55.85850839996359,
+            "p50": 51.01049150016479,
+            "p95": 82.57431994975376,
+            "p99": 110.1899873695856
+          },
+          "capture_to_sink_complete_ms": {
+            "count": 60,
+            "mean": 191.134292099999,
+            "p50": 168.37408350011174,
+            "p95": 347.1338292493783,
+            "p99": 363.92483553016973
+          }
+        },
+        "source_epoch": 0,
+        "running": true,
+        "selection": {
+          "model": "helmet_416x416.rknn",
+          "source": "1.jpg",
+          "profile": "responsive"
+        },
+        "generation": "096e207148254d0e9ba6005e8d3c364e"
+      },
+      "hidden_ack_before": {
+        "sequence": 6,
+        "visible": false,
+        "tab": "detection",
+        "ui_instance": "1c6c90ed4d174c83a9ce9e60dccb7070",
+        "qt": {
+          "pid": 27158,
+          "starttime": 727385,
+          "uid": 0
+        },
+        "received_at": 7288.024521846,
+        "frame_requests": 9,
+        "preview_presentations": 8,
+        "frame_decodes": 8
+      },
+      "hidden_ack_after": {
+        "sequence": 6,
+        "visible": false,
+        "tab": "detection",
+        "ui_instance": "1c6c90ed4d174c83a9ce9e60dccb7070",
+        "qt": {
+          "pid": 27158,
+          "starttime": 727385,
+          "uid": 0
+        },
+        "received_at": 7288.024521846,
+        "frame_requests": 9,
+        "preview_presentations": 8,
+        "frame_decodes": 8
+      },
+      "shown": {
+        "state": "healthy",
+        "reason": "fresh detections",
+        "alarm_state": "active",
+        "frame_id": 218,
+        "valid": true,
+        "model": "/userdata/helmet-validation/20261117-native-app-v6-r2/models/helmet_416x416.rknn",
+        "model_sha256": "7e0eefe4bfe86627bb6b58161cacca10912e0dbe1ba2513f58d091c40b26cd48",
+        "source": "/userdata/helmet-validation/20261117-native-app-v6-r2/input/1.jpg",
+        "monotonic": 7289.997943494,
+        "counters": {
+          "captured": 221,
+          "consumed": 137,
+          "detected": 136,
+          "overwritten": 83,
+          "active_skip": 0,
+          "read_failure": 0,
+          "displayed": 0,
+          "output": 134,
+          "output_overwritten": 2,
+          "detection_failure": 0
+        },
+        "fps": {
+          "captured": 18.4,
+          "consumed": 11.4,
+          "detected": 11.4,
+          "displayed": 0.0,
+          "output": 11.2
+        },
+        "latency": {
+          "prep_ms": {
+            "count": 57,
+            "mean": 15.28720298236358,
+            "p50": 14.7298049996607,
+            "p95": 22.242264600390627,
+            "p99": 25.887506919898442
+          },
+          "infer_ms": {
+            "count": 57,
+            "mean": 47.274736386035535,
+            "p50": 44.73746800067602,
+            "p95": 67.3778090002088,
+            "p99": 79.20113364038116
+          },
+          "post_ms": {
+            "count": 57,
+            "mean": 22.01798908773574,
+            "p50": 15.233232999889879,
+            "p95": 53.77258039952717,
+            "p99": 72.28737452012861
+          },
+          "capture_to_output_ms": {
+            "count": 55,
+            "mean": 141.6846726545621,
+            "p50": 118.6977070001376,
+            "p95": 257.7664189001552,
+            "p99": 284.8409497401735
+          },
+          "sink_ms": {
+            "count": 55,
+            "mean": 58.283200581784264,
+            "p50": 50.8474460002617,
+            "p95": 91.70128079986166,
+            "p99": 127.85898591988372
+          },
+          "capture_to_sink_complete_ms": {
+            "count": 55,
+            "mean": 200.1575352181383,
+            "p50": 171.66561900012312,
+            "p95": 353.2423631006167,
+            "p99": 393.14114303986577
+          }
+        },
+        "source_epoch": 0,
+        "running": true,
+        "selection": {
+          "model": "helmet_416x416.rknn",
+          "source": "1.jpg",
+          "profile": "responsive"
+        },
+        "generation": "096e207148254d0e9ba6005e8d3c364e"
+      },
+      "ui_instance": "1c6c90ed4d174c83a9ce9e60dccb7070",
+      "ui_pid": 27158
+    },
+    {
+      "cycle": 4,
+      "hidden": {
+        "state": "healthy",
+        "reason": "fresh detections",
+        "alarm_state": "active",
+        "frame_id": 264,
+        "valid": true,
+        "model": "/userdata/helmet-validation/20261117-native-app-v6-r2/models/helmet_416x416.rknn",
+        "model_sha256": "7e0eefe4bfe86627bb6b58161cacca10912e0dbe1ba2513f58d091c40b26cd48",
+        "source": "/userdata/helmet-validation/20261117-native-app-v6-r2/input/1.jpg",
+        "monotonic": 7292.501871161,
+        "counters": {
+          "captured": 267,
+          "consumed": 166,
+          "detected": 165,
+          "overwritten": 100,
+          "active_skip": 0,
+          "read_failure": 0,
+          "displayed": 0,
+          "output": 162,
+          "output_overwritten": 3,
+          "detection_failure": 0
+        },
+        "fps": {
+          "captured": 18.2,
+          "consumed": 11.4,
+          "detected": 11.4,
+          "displayed": 0.0,
+          "output": 11.2
+        },
+        "latency": {
+          "prep_ms": {
+            "count": 57,
+            "mean": 15.598889368352262,
+            "p50": 15.087104000485851,
+            "p95": 22.20469640014926,
+            "p99": 24.907191959609904
+          },
+          "infer_ms": {
+            "count": 57,
+            "mean": 47.265556491223386,
+            "p50": 44.71530099999654,
+            "p95": 64.33297079947805,
+            "p99": 73.76143463985497
+          },
+          "post_ms": {
+            "count": 57,
+            "mean": 21.777481350973336,
+            "p50": 14.135375000478234,
+            "p95": 52.06757400010242,
+            "p99": 68.9220107603978
+          },
+          "capture_to_output_ms": {
+            "count": 55,
+            "mean": 141.74773269099785,
+            "p50": 120.67554599980213,
+            "p95": 259.5274560004327,
+            "p99": 276.04310773978796
+          },
+          "sink_ms": {
+            "count": 55,
+            "mean": 58.33002227278815,
+            "p50": 50.80194499987556,
+            "p95": 95.98570309981368,
+            "p99": 123.71049586017764
+          },
+          "capture_to_sink_complete_ms": {
+            "count": 55,
+            "mean": 200.29538583639805,
+            "p50": 173.19253100049536,
+            "p95": 346.9734538999546,
+            "p99": 398.28316667997575
+          }
+        },
+        "source_epoch": 0,
+        "running": true,
+        "selection": {
+          "model": "helmet_416x416.rknn",
+          "source": "1.jpg",
+          "profile": "responsive"
+        },
+        "generation": "096e207148254d0e9ba6005e8d3c364e"
+      },
+      "hidden_ack_before": {
+        "sequence": 8,
+        "visible": false,
+        "tab": "detection",
+        "ui_instance": "1c6c90ed4d174c83a9ce9e60dccb7070",
+        "qt": {
+          "pid": 27158,
+          "starttime": 727385,
+          "uid": 0
+        },
+        "received_at": 7290.990689044,
+        "frame_requests": 15,
+        "preview_presentations": 12,
+        "frame_decodes": 12
+      },
+      "hidden_ack_after": {
+        "sequence": 8,
+        "visible": false,
+        "tab": "detection",
+        "ui_instance": "1c6c90ed4d174c83a9ce9e60dccb7070",
+        "qt": {
+          "pid": 27158,
+          "starttime": 727385,
+          "uid": 0
+        },
+        "received_at": 7290.990689044,
+        "frame_requests": 15,
+        "preview_presentations": 12,
+        "frame_decodes": 12
+      },
+      "shown": {
+        "state": "healthy",
+        "reason": "fresh detections",
+        "alarm_state": "active",
+        "frame_id": 296,
+        "valid": true,
+        "model": "/userdata/helmet-validation/20261117-native-app-v6-r2/models/helmet_416x416.rknn",
+        "model_sha256": "7e0eefe4bfe86627bb6b58161cacca10912e0dbe1ba2513f58d091c40b26cd48",
+        "source": "/userdata/helmet-validation/20261117-native-app-v6-r2/input/1.jpg",
+        "monotonic": 7294.319268772,
+        "counters": {
+          "captured": 301,
+          "consumed": 186,
+          "detected": 185,
+          "overwritten": 113,
+          "active_skip": 0,
+          "read_failure": 0,
+          "displayed": 0,
+          "output": 182,
+          "output_overwritten": 3,
+          "detection_failure": 0
+        },
+        "fps": {
+          "captured": 18.0,
+          "consumed": 10.8,
+          "detected": 10.8,
+          "displayed": 0.0,
+          "output": 10.6
+        },
+        "latency": {
+          "prep_ms": {
+            "count": 54,
+            "mean": 15.620769944335835,
+            "p50": 14.839619499525725,
+            "p95": 21.50256574991544,
+            "p99": 27.06261286983135
+          },
+          "infer_ms": {
+            "count": 54,
+            "mean": 47.48057714821833,
+            "p50": 44.92603600010625,
+            "p95": 63.673540650006544,
+            "p99": 73.55696826014535
+          },
+          "post_ms": {
+            "count": 54,
+            "mean": 24.263542777808418,
+            "p50": 15.288359500118531,
+            "p95": 62.43195924989775,
+            "p99": 77.1548608601097
+          },
+          "capture_to_output_ms": {
+            "count": 52,
+            "mean": 140.9620395384256,
+            "p50": 122.90232700024717,
+            "p95": 260.5177605004428,
+            "p99": 276.6082048097633
+          },
+          "sink_ms": {
+            "count": 52,
+            "mean": 60.00791821160279,
+            "p50": 52.4004614999285,
+            "p95": 97.02640864975362,
+            "p99": 124.45474459018448
+          },
+          "capture_to_sink_complete_ms": {
+            "count": 52,
+            "mean": 201.33700651922481,
+            "p50": 177.9243504997794,
+            "p95": 348.08433634989336,
+            "p99": 399.6856759199728
+          }
+        },
+        "source_epoch": 0,
+        "running": true,
+        "selection": {
+          "model": "helmet_416x416.rknn",
+          "source": "1.jpg",
+          "profile": "responsive"
+        },
+        "generation": "096e207148254d0e9ba6005e8d3c364e"
+      },
+      "ui_instance": "1c6c90ed4d174c83a9ce9e60dccb7070",
+      "ui_pid": 27158
+    },
+    {
+      "cycle": 5,
+      "hidden": {
+        "state": "healthy",
+        "reason": "fresh detections",
+        "alarm_state": "active",
+        "frame_id": 345,
+        "valid": true,
+        "model": "/userdata/helmet-validation/20261117-native-app-v6-r2/models/helmet_416x416.rknn",
+        "model_sha256": "7e0eefe4bfe86627bb6b58161cacca10912e0dbe1ba2513f58d091c40b26cd48",
+        "source": "/userdata/helmet-validation/20261117-native-app-v6-r2/input/1.jpg",
+        "monotonic": 7296.824441602,
+        "counters": {
+          "captured": 348,
+          "consumed": 214,
+          "detected": 213,
+          "overwritten": 133,
+          "active_skip": 0,
+          "read_failure": 0,
+          "displayed": 0,
+          "output": 210,
+          "output_overwritten": 3,
+          "detection_failure": 0
+        },
+        "fps": {
+          "captured": 18.8,
+          "consumed": 11.4,
+          "detected": 11.4,
+          "displayed": 0.0,
+          "output": 11.4
+        },
+        "latency": {
+          "prep_ms": {
+            "count": 57,
+            "mean": 16.1343559122,
+            "p50": 14.803015000325104,
+            "p95": 24.817100399559415,
+            "p99": 30.215743759908932
+          },
+          "infer_ms": {
+            "count": 57,
+            "mean": 47.738794438708666,
+            "p50": 45.0501430004806,
+            "p95": 67.93618900028376,
+            "p99": 72.80966891983553
+          },
+          "post_ms": {
+            "count": 57,
+            "mean": 21.11409812277998,
+            "p50": 13.620570999592019,
+            "p95": 54.80323879946809,
+            "p99": 73.16687556012764
+          },
+          "capture_to_output_ms": {
+            "count": 57,
+            "mean": 137.59637168417964,
+            "p50": 121.80607300069823,
+            "p95": 239.12218140012524,
+            "p99": 380.1341395204508
+          },
+          "sink_ms": {
+            "count": 57,
+            "mean": 59.10547538597281,
+            "p50": 53.03324699980294,
+            "p95": 87.94265939995958,
+            "p99": 110.82891631962408
+          },
+          "capture_to_sink_complete_ms": {
+            "count": 57,
+            "mean": 197.02488829820172,
+            "p50": 178.40590400010115,
+            "p95": 313.9971082002371,
+            "p99": 465.8129927999469
+          }
+        },
+        "source_epoch": 0,
+        "running": true,
+        "selection": {
+          "model": "helmet_416x416.rknn",
+          "source": "1.jpg",
+          "profile": "responsive"
+        },
+        "generation": "096e207148254d0e9ba6005e8d3c364e"
+      },
+      "hidden_ack_before": {
+        "sequence": 10,
+        "visible": false,
+        "tab": "detection",
+        "ui_instance": "1c6c90ed4d174c83a9ce9e60dccb7070",
+        "qt": {
+          "pid": 27158,
+          "starttime": 727385,
+          "uid": 0
+        },
+        "received_at": 7295.35210806,
+        "frame_requests": 19,
+        "preview_presentations": 15,
+        "frame_decodes": 15
+      },
+      "hidden_ack_after": {
+        "sequence": 10,
+        "visible": false,
+        "tab": "detection",
+        "ui_instance": "1c6c90ed4d174c83a9ce9e60dccb7070",
+        "qt": {
+          "pid": 27158,
+          "starttime": 727385,
+          "uid": 0
+        },
+        "received_at": 7295.35210806,
+        "frame_requests": 19,
+        "preview_presentations": 15,
+        "frame_decodes": 15
+      },
+      "shown": {
+        "state": "healthy",
+        "reason": "fresh detections",
+        "alarm_state": "active",
+        "frame_id": 377,
+        "valid": true,
+        "model": "/userdata/helmet-validation/20261117-native-app-v6-r2/models/helmet_416x416.rknn",
+        "model_sha256": "7e0eefe4bfe86627bb6b58161cacca10912e0dbe1ba2513f58d091c40b26cd48",
+        "source": "/userdata/helmet-validation/20261117-native-app-v6-r2/input/1.jpg",
+        "monotonic": 7298.840553185,
+        "counters": {
+          "captured": 382,
+          "consumed": 236,
+          "detected": 235,
+          "overwritten": 146,
+          "active_skip": 0,
+          "read_failure": 0,
+          "displayed": 0,
+          "output": 231,
+          "output_overwritten": 3,
+          "detection_failure": 0
+        },
+        "fps": {
+          "captured": 18.0,
+          "consumed": 10.8,
+          "detected": 10.8,
+          "displayed": 0.0,
+          "output": 10.6
+        },
+        "latency": {
+          "prep_ms": {
+            "count": 54,
+            "mean": 16.927024611033158,
+            "p50": 15.81205950014919,
+            "p95": 26.305801700027576,
+            "p99": 37.72097613982622
+          },
+          "infer_ms": {
+            "count": 54,
+            "mean": 50.04837383345754,
+            "p50": 45.04576800036375,
+            "p95": 70.97421694984403,
+            "p99": 121.78021341045667
+          },
+          "post_ms": {
+            "count": 54,
+            "mean": 22.789683999942806,
+            "p50": 14.706908500102145,
+            "p95": 59.23903894986317,
+            "p99": 78.26726831946871
+          },
+          "capture_to_output_ms": {
+            "count": 52,
+            "mean": 143.91614901924535,
+            "p50": 126.03315150045091,
+            "p95": 270.200098099667,
+            "p99": 381.24811367043554
+          },
+          "sink_ms": {
+            "count": 52,
+            "mean": 58.86792928847102,
+            "p50": 52.75615699974878,
+            "p95": 93.22253364989584,
+            "p99": 111.49127771958777
+          },
+          "capture_to_sink_complete_ms": {
+            "count": 52,
+            "mean": 202.97000330769012,
+            "p50": 176.61838300000454,
+            "p95": 353.2385154996969,
+            "p99": 469.8595837999439
+          }
+        },
+        "source_epoch": 0,
+        "running": true,
+        "selection": {
+          "model": "helmet_416x416.rknn",
+          "source": "1.jpg",
+          "profile": "responsive"
+        },
+        "generation": "096e207148254d0e9ba6005e8d3c364e"
+      },
+      "ui_instance": "1c6c90ed4d174c83a9ce9e60dccb7070",
+      "ui_pid": 27158
+    }
+  ],
+  "frames": [
+    51,
+    132,
+    212,
+    264,
+    345,
+    377
+  ],
+  "frame_monotonic": true,
+  "same_ui_identity": true,
+  "hidden_preview_requests_frozen": true,
+  "ui_logs": {
+    "Ui-1c6c90ed4d174c83a9ce9e60dccb7070.log": "QStandardPaths: runtime directory '/var/run' is not a directory, but a symbolic link to a directory permissions 0755 owned by UID 0 GID 0\n"
+  },
+  "window_visibility_warning": false,
+  "ui_exit_files": [],
+  "final_detection": {
+    "state": "stop",
+    "reason": "session stopped",
+    "alarm_state": "unknown",
+    "frame_id": 379,
+    "valid": false,
+    "model": "/userdata/helmet-validation/20261117-native-app-v6-r2/models/helmet_416x416.rknn",
+    "model_sha256": "7e0eefe4bfe86627bb6b58161cacca10912e0dbe1ba2513f58d091c40b26cd48",
+    "source": "/userdata/helmet-validation/20261117-native-app-v6-r2/input/1.jpg",
+    "monotonic": 7299.048632787,
+    "counters": {
+      "captured": 384,
+      "consumed": 236,
+      "detected": 236,
+      "overwritten": 147,
+      "active_skip": 0,
+      "read_failure": 0,
+      "displayed": 0,
+      "output": 232,
+      "output_overwritten": 3,
+      "detection_failure": 0
+    },
+    "fps": {
+      "captured": 17.6,
+      "consumed": 10.4,
+      "detected": 10.6,
+      "displayed": 0.0,
+      "output": 10.4
+    },
+    "latency": {
+      "prep_ms": {
+        "count": 53,
+        "mean": 16.997021584842823,
+        "p50": 16.06917000026442,
+        "p95": 26.409520800007154,
+        "p99": 37.81129575982047
+      },
+      "infer_ms": {
+        "count": 53,
+        "mean": 50.67491271709617,
+        "p50": 45.538696000221535,
+        "p95": 71.07727979982883,
+        "p99": 122.80871844046456
+      },
+      "post_ms": {
+        "count": 53,
+        "mean": 23.75522366032182,
+        "p50": 14.801264999732666,
+        "p95": 63.82283400052983,
+        "p99": 78.30157787946517
+      },
+      "capture_to_output_ms": {
+        "count": 52,
+        "mean": 155.39156717311295,
+        "p50": 128.72311049977725,
+        "p95": 358.9084304004699,
+        "p99": 430.1604578901608
+      },
+      "sink_ms": {
+        "count": 52,
+        "mean": 60.87321282692616,
+        "p50": 52.87151399943468,
+        "p95": 104.9111025498405,
+        "p99": 123.98388807983795
+      },
+      "capture_to_sink_complete_ms": {
+        "count": 52,
+        "mean": 216.48663692308918,
+        "p50": 179.24577800022234,
+        "p95": 453.2692787500307,
+        "p99": 538.0645186500807
+      }
+    },
+    "source_epoch": 0,
+    "running": false,
+    "selection": {
+      "model": "helmet_416x416.rknn",
+      "source": "1.jpg",
+      "profile": "responsive"
+    },
+    "generation": "096e207148254d0e9ba6005e8d3c364e"
+  },
+  "camera_nodes": [],
+  "quit": {
+    "stopped": true,
+    "phase": "completed",
+    "session": "e2398cb4ea804019a2f09bc29058a1dd"
+  },
+  "exit_receipt": {
+    "cleanup_completed": true,
+    "code_id": "c40bbf1b2868f51b1d95b32492b7ec3ecafcf9e3432cc2c82e1e938251916d0b",
+    "kind": "resident-terminal-v4",
+    "manager": {
+      "pid": 27153,
+      "starttime": 727084,
+      "uid": 0
+    },
+    "normal_stop": "http_quit",
+    "phase": "completed",
+    "resource_lease_released": true,
+    "root": "/userdata/helmet-validation/20261117-native-app-v6-r2",
+    "service": {
+      "pid": 27155,
+      "starttime": 727168,
+      "uid": 0
+    },
+    "service_exit": 0,
+    "session": "e2398cb4ea804019a2f09bc29058a1dd",
+    "terminal_at": 7300.387155145,
+    "ui": {
+      "pid": 27158,
+      "starttime": 727385,
+      "uid": 0
+    },
+    "version": "resident-v4"
+  },
+  "remaining_processes": [],
+  "control_socket_absent": true,
+  "release": {
+    "version": "20261117-v6-r2",
+    "tag": "native-app-v6-r2",
+    "zip_sha256": "e66dc2983ca28258f28507c16a1be0b3aea637136166fce8c0c125b2a474c2bc",
+    "zip_bytes": 39236091,
+    "entries": 41,
+    "code_identity": "c40bbf1b2868f51b1d95b32492b7ec3ecafcf9e3432cc2c82e1e938251916d0b"
+  },
+  "video4linux": {
+    "kind": "video4linux-enumeration",
+    "nodes": [
+      {
+        "node": "/dev/video0",
+        "name": "rkisp_mainpath",
+        "is_rkisp": true
+      },
+      {
+        "node": "/dev/video1",
+        "name": "rkisp_selfpath",
+        "is_rkisp": true
+      },
+      {
+        "node": "/dev/video2",
+        "name": "rkisp_rawwr0",
+        "is_rkisp": true
+      },
+      {
+        "node": "/dev/video3",
+        "name": "rkisp_rawwr2",
+        "is_rkisp": true
+      },
+      {
+        "node": "/dev/video4",
+        "name": "rkisp_rawwr3",
+        "is_rkisp": true
+      },
+      {
+        "node": "/dev/video5",
+        "name": "rkisp_iqtool",
+        "is_rkisp": true
+      },
+      {
+        "node": "/dev/video6",
+        "name": "rkisp_rawrd0_m",
+        "is_rkisp": true
+      },
+      {
+        "node": "/dev/video7",
+        "name": "rkisp_rawrd2_s",
+        "is_rkisp": true
+      },
+      {
+        "node": "/dev/video8",
+        "name": "rkisp-statistics",
+        "is_rkisp": true
+      },
+      {
+        "node": "/dev/video9",
+        "name": "rkisp-input-params",
+        "is_rkisp": true
+      }
+    ],
+    "capture_candidates": []
+  }
+}

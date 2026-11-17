@@ -1,0 +1,227 @@
+{
+  "kind": "native-app-v6-r2-bugfix-acceptance",
+  "session": "24bad6d0f0d441b5ae6177c989ed3b93",
+  "same_ui_identity": true,
+  "frame_monotonic": true,
+  "frames": [
+    75,
+    119,
+    161,
+    200,
+    243,
+    284,
+    327,
+    370,
+    409,
+    453
+  ],
+  "cycles": [
+    {
+      "cycle": 1,
+      "hidden": {
+        "running": true,
+        "valid": true,
+        "frame_id": 75,
+        "generation": "566d2876186f4ad0a8b07450fd48b720",
+        "state": "healthy",
+        "session": "24bad6d0f0d441b5ae6177c989ed3b93",
+        "ui_instance": "94062faa3c3c48ada476670e5dc76923",
+        "ui_pid": 25739,
+        "visible": false,
+        "ack_visible": false,
+        "phase": "running"
+      },
+      "shown": {
+        "running": true,
+        "valid": true,
+        "frame_id": 119,
+        "generation": "566d2876186f4ad0a8b07450fd48b720",
+        "state": "healthy",
+        "session": "24bad6d0f0d441b5ae6177c989ed3b93",
+        "ui_instance": "94062faa3c3c48ada476670e5dc76923",
+        "ui_pid": 25739,
+        "visible": true,
+        "ack_visible": true,
+        "phase": "running"
+      }
+    },
+    {
+      "cycle": 2,
+      "hidden": {
+        "running": true,
+        "valid": true,
+        "frame_id": 161,
+        "generation": "566d2876186f4ad0a8b07450fd48b720",
+        "state": "healthy",
+        "session": "24bad6d0f0d441b5ae6177c989ed3b93",
+        "ui_instance": "94062faa3c3c48ada476670e5dc76923",
+        "ui_pid": 25739,
+        "visible": false,
+        "ack_visible": false,
+        "phase": "running"
+      },
+      "shown": {
+        "running": true,
+        "valid": true,
+        "frame_id": 200,
+        "generation": "566d2876186f4ad0a8b07450fd48b720",
+        "state": "healthy",
+        "session": "24bad6d0f0d441b5ae6177c989ed3b93",
+        "ui_instance": "94062faa3c3c48ada476670e5dc76923",
+        "ui_pid": 25739,
+        "visible": true,
+        "ack_visible": true,
+        "phase": "running"
+      }
+    },
+    {
+      "cycle": 3,
+      "hidden": {
+        "running": true,
+        "valid": true,
+        "frame_id": 243,
+        "generation": "566d2876186f4ad0a8b07450fd48b720",
+        "state": "healthy",
+        "session": "24bad6d0f0d441b5ae6177c989ed3b93",
+        "ui_instance": "94062faa3c3c48ada476670e5dc76923",
+        "ui_pid": 25739,
+        "visible": false,
+        "ack_visible": false,
+        "phase": "running"
+      },
+      "shown": {
+        "running": true,
+        "valid": true,
+        "frame_id": 284,
+        "generation": "566d2876186f4ad0a8b07450fd48b720",
+        "state": "healthy",
+        "session": "24bad6d0f0d441b5ae6177c989ed3b93",
+        "ui_instance": "94062faa3c3c48ada476670e5dc76923",
+        "ui_pid": 25739,
+        "visible": true,
+        "ack_visible": true,
+        "phase": "running"
+      }
+    },
+    {
+      "cycle": 4,
+      "hidden": {
+        "running": true,
+        "valid": true,
+        "frame_id": 327,
+        "generation": "566d2876186f4ad0a8b07450fd48b720",
+        "state": "healthy",
+        "session": "24bad6d0f0d441b5ae6177c989ed3b93",
+        "ui_instance": "94062faa3c3c48ada476670e5dc76923",
+        "ui_pid": 25739,
+        "visible": false,
+        "ack_visible": false,
+        "phase": "running"
+      },
+      "shown": {
+        "running": true,
+        "valid": true,
+        "frame_id": 370,
+        "generation": "566d2876186f4ad0a8b07450fd48b720",
+        "state": "healthy",
+        "session": "24bad6d0f0d441b5ae6177c989ed3b93",
+        "ui_instance": "94062faa3c3c48ada476670e5dc76923",
+        "ui_pid": 25739,
+        "visible": true,
+        "ack_visible": true,
+        "phase": "running"
+      }
+    },
+    {
+      "cycle": 5,
+      "hidden": {
+        "running": true,
+        "valid": true,
+        "frame_id": 409,
+        "generation": "566d2876186f4ad0a8b07450fd48b720",
+        "state": "healthy",
+        "session": "24bad6d0f0d441b5ae6177c989ed3b93",
+        "ui_instance": "94062faa3c3c48ada476670e5dc76923",
+        "ui_pid": 25739,
+        "visible": false,
+        "ack_visible": false,
+        "phase": "running"
+      },
+      "shown": {
+        "running": true,
+        "valid": true,
+        "frame_id": 453,
+        "generation": "566d2876186f4ad0a8b07450fd48b720",
+        "state": "healthy",
+        "session": "24bad6d0f0d441b5ae6177c989ed3b93",
+        "ui_instance": "94062faa3c3c48ada476670e5dc76923",
+        "ui_pid": 25739,
+        "visible": true,
+        "ack_visible": true,
+        "phase": "running"
+      }
+    }
+  ],
+  "ui_exit_files": [],
+  "ui_logs": {
+    "Ui-94062faa3c3c48ada476670e5dc76923.log": "QStandardPaths: runtime directory '/var/run' is not a directory, but a symbolic link to a directory permissions 0755 owned by UID 0 GID 0\n"
+  },
+  "window_visibility_warning": false,
+  "stop_requested": true,
+  "final": {
+    "running": false,
+    "valid": false,
+    "frame_id": 455,
+    "generation": "566d2876186f4ad0a8b07450fd48b720",
+    "state": "stop",
+    "session": "24bad6d0f0d441b5ae6177c989ed3b93",
+    "ui_instance": "94062faa3c3c48ada476670e5dc76923",
+    "ui_pid": 25739,
+    "visible": true,
+    "ack_visible": true,
+    "phase": "running"
+  },
+  "video4linux_nodes": [
+    {
+      "node": "/dev/video0",
+      "name": "rkisp_mainpath"
+    },
+    {
+      "node": "/dev/video1",
+      "name": "rkisp_selfpath"
+    },
+    {
+      "node": "/dev/video2",
+      "name": "rkisp_rawwr0"
+    },
+    {
+      "node": "/dev/video3",
+      "name": "rkisp_rawwr2"
+    },
+    {
+      "node": "/dev/video4",
+      "name": "rkisp_rawwr3"
+    },
+    {
+      "node": "/dev/video5",
+      "name": "rkisp_iqtool"
+    },
+    {
+      "node": "/dev/video6",
+      "name": "rkisp_rawrd0_m"
+    },
+    {
+      "node": "/dev/video7",
+      "name": "rkisp_rawrd2_s"
+    },
+    {
+      "node": "/dev/video8",
+      "name": "rkisp-statistics"
+    },
+    {
+      "node": "/dev/video9",
+      "name": "rkisp-input-params"
+    }
+  ],
+  "camera_capture_nodes": []
+}

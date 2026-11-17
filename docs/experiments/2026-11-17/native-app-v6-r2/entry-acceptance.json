@@ -1,0 +1,244 @@
+{
+  "kind": "native-app-v6-r2-entry-acceptance",
+  "ok": true,
+  "session": "4e0c7fdaf4314cf48fd076b360d5761c",
+  "start": {
+    "started": true,
+    "session": "4e0c7fdaf4314cf48fd076b360d5761c",
+    "lan_port": 8091,
+    "detection": "manual",
+    "visible": false
+  },
+  "first_status_session": "4e0c7fdaf4314cf48fd076b360d5761c",
+  "initial_show_request": {
+    "ok": true,
+    "accepted": true,
+    "duplicate": false,
+    "application": {
+      "session": "4e0c7fdaf4314cf48fd076b360d5761c",
+      "root": "/userdata/helmet-validation/20261117-native-app-v6-r2",
+      "version": "resident-v4",
+      "phase": "running",
+      "intent": {
+        "sequence": 1,
+        "visible": true,
+        "tab": "detection",
+        "preview_after": 7434.063783883
+      },
+      "ack": null,
+      "applied": false,
+      "ui": {
+        "alive": false,
+        "instance": null,
+        "identity": null,
+        "exit_code": null
+      },
+      "service": {
+        "pid": 27494,
+        "starttime": 743026,
+        "uid": 0
+      },
+      "progress": {
+        "detection_stopped": false,
+        "wifi_stopped": false,
+        "http_alive": true,
+        "cleanup_completed": false,
+        "detection_alive": false,
+        "wifi_alive": false,
+        "state": "running",
+        "received_at": 7433.417453365,
+        "lan_alive": true,
+        "lan_port": 8091
+      },
+      "failure": null,
+      "verification_enabled": false,
+      "last_render": null
+    }
+  },
+  "ui_instance": "7abb70a8f7e5423f91fd3202dec772a3",
+  "ui_pid": 27499,
+  "wifi_request": {
+    "ok": true,
+    "accepted": true,
+    "duplicate": false,
+    "application": {
+      "session": "4e0c7fdaf4314cf48fd076b360d5761c",
+      "root": "/userdata/helmet-validation/20261117-native-app-v6-r2",
+      "version": "resident-v4",
+      "phase": "running",
+      "intent": {
+        "sequence": 2,
+        "visible": true,
+        "tab": "wifi",
+        "preview_after": 7436.090085292
+      },
+      "ack": {
+        "sequence": 1,
+        "visible": true,
+        "tab": "detection",
+        "ui_instance": "7abb70a8f7e5423f91fd3202dec772a3",
+        "qt": {
+          "pid": 27499,
+          "starttime": 743410,
+          "uid": 0
+        },
+        "received_at": 7435.479907419,
+        "preview_presentations": 0,
+        "frame_requests": 0,
+        "frame_decodes": 0
+      },
+      "applied": false,
+      "ui": {
+        "alive": true,
+        "instance": "7abb70a8f7e5423f91fd3202dec772a3",
+        "identity": {
+          "pid": 27499,
+          "starttime": 743410,
+          "uid": 0
+        },
+        "exit_code": null
+      },
+      "service": {
+        "pid": 27494,
+        "starttime": 743026,
+        "uid": 0
+      },
+      "progress": {
+        "detection_stopped": false,
+        "wifi_stopped": false,
+        "http_alive": true,
+        "cleanup_completed": false,
+        "detection_alive": false,
+        "wifi_alive": false,
+        "state": "running",
+        "received_at": 7435.459361934,
+        "lan_alive": true,
+        "lan_port": 8091
+      },
+      "failure": null,
+      "verification_enabled": false,
+      "last_render": null
+    }
+  },
+  "detection_request": {
+    "ok": true,
+    "accepted": true,
+    "duplicate": false,
+    "application": {
+      "session": "4e0c7fdaf4314cf48fd076b360d5761c",
+      "root": "/userdata/helmet-validation/20261117-native-app-v6-r2",
+      "version": "resident-v4",
+      "phase": "running",
+      "intent": {
+        "sequence": 3,
+        "visible": true,
+        "tab": "detection",
+        "preview_after": 7437.185652008
+      },
+      "ack": {
+        "sequence": 2,
+        "visible": true,
+        "tab": "wifi",
+        "ui_instance": "7abb70a8f7e5423f91fd3202dec772a3",
+        "qt": {
+          "pid": 27499,
+          "starttime": 743410,
+          "uid": 0
+        },
+        "received_at": 7436.548186615,
+        "preview_presentations": 0,
+        "frame_requests": 0,
+        "frame_decodes": 0
+      },
+      "applied": false,
+      "ui": {
+        "alive": true,
+        "instance": "7abb70a8f7e5423f91fd3202dec772a3",
+        "identity": {
+          "pid": 27499,
+          "starttime": 743410,
+          "uid": 0
+        },
+        "exit_code": null
+      },
+      "service": {
+        "pid": 27494,
+        "starttime": 743026,
+        "uid": 0
+      },
+      "progress": {
+        "detection_stopped": false,
+        "wifi_stopped": false,
+        "http_alive": true,
+        "cleanup_completed": false,
+        "detection_alive": false,
+        "wifi_alive": false,
+        "state": "running",
+        "received_at": 7436.480665061,
+        "lan_alive": true,
+        "lan_port": 8091
+      },
+      "failure": null,
+      "verification_enabled": false,
+      "last_render": null
+    }
+  },
+  "wifi_same_session": true,
+  "wifi_same_ui_instance": true,
+  "wifi_same_ui_pid": true,
+  "detection_again_same_session": true,
+  "detection_again_same_ui_instance": true,
+  "detection_again_same_ui_pid": true,
+  "desktop_detection_targets_final_root": true,
+  "desktop_wifi_targets_final_root": true,
+  "link_targets": {
+    "helmet_app": "/userdata/helmet-validation/20261117-native-app-v6-r2/vendor-entry/helmet_app",
+    "helmet_wifi": "/userdata/helmet-validation/20261117-native-app-v6-r2/vendor-entry/helmet_wifi",
+    "init": "/userdata/helmet-validation/20261117-native-app-v6-r2/src/app/autostart.sh"
+  },
+  "apk3_cfg_sha_before": "f64a8e2f751ff777b98a36a13a0ad062e0812f2bd6ebd7914a512b772f507b11",
+  "apk3_cfg_sha_after": "f64a8e2f751ff777b98a36a13a0ad062e0812f2bd6ebd7914a512b772f507b11",
+  "apk3_cfg_unchanged": true,
+  "systemui_pid_before": "738",
+  "systemui_pid_after": "738",
+  "systemui_unchanged": true,
+  "ui_logs": {
+    "Ui-7abb70a8f7e5423f91fd3202dec772a3.log": "QStandardPaths: runtime directory '/var/run' is not a directory, but a symbolic link to a directory permissions 0755 owned by UID 0 GID 0\n"
+  },
+  "window_visibility_warning": false,
+  "stop": {
+    "stopped": true,
+    "phase": "completed",
+    "session": "4e0c7fdaf4314cf48fd076b360d5761c"
+  },
+  "exit_receipt": {
+    "cleanup_completed": true,
+    "code_id": "c40bbf1b2868f51b1d95b32492b7ec3ecafcf9e3432cc2c82e1e938251916d0b",
+    "kind": "resident-terminal-v4",
+    "manager": {
+      "pid": 27492,
+      "starttime": 742941,
+      "uid": 0
+    },
+    "normal_stop": "http_quit",
+    "phase": "completed",
+    "resource_lease_released": true,
+    "root": "/userdata/helmet-validation/20261117-native-app-v6-r2",
+    "service": {
+      "pid": 27494,
+      "starttime": 743026,
+      "uid": 0
+    },
+    "service_exit": 0,
+    "session": "4e0c7fdaf4314cf48fd076b360d5761c",
+    "terminal_at": 7439.150992064,
+    "ui": {
+      "pid": 27499,
+      "starttime": 743410,
+      "uid": 0
+    },
+    "version": "resident-v4"
+  },
+  "remaining_processes": [],
+  "control_socket_absent": true
+}

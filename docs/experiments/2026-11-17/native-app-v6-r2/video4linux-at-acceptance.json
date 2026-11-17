@@ -1,0 +1,56 @@
+{
+  "kind": "video4linux-enumeration",
+  "nodes": [
+    {
+      "node": "/dev/video0",
+      "name": "rkisp_mainpath",
+      "is_rkisp": true
+    },
+    {
+      "node": "/dev/video1",
+      "name": "rkisp_selfpath",
+      "is_rkisp": true
+    },
+    {
+      "node": "/dev/video2",
+      "name": "rkisp_rawwr0",
+      "is_rkisp": true
+    },
+    {
+      "node": "/dev/video3",
+      "name": "rkisp_rawwr2",
+      "is_rkisp": true
+    },
+    {
+      "node": "/dev/video4",
+      "name": "rkisp_rawwr3",
+      "is_rkisp": true
+    },
+    {
+      "node": "/dev/video5",
+      "name": "rkisp_iqtool",
+      "is_rkisp": true
+    },
+    {
+      "node": "/dev/video6",
+      "name": "rkisp_rawrd0_m",
+      "is_rkisp": true
+    },
+    {
+      "node": "/dev/video7",
+      "name": "rkisp_rawrd2_s",
+      "is_rkisp": true
+    },
+    {
+      "node": "/dev/video8",
+      "name": "rkisp-statistics",
+      "is_rkisp": true
+    },
+    {
+      "node": "/dev/video9",
+      "name": "rkisp-input-params",
+      "is_rkisp": true
+    }
+  ],
+  "capture_candidates": []
+}

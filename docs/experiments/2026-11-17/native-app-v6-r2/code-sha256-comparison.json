@@ -1,0 +1,43 @@
+{
+  "kind": "native-app-code-sha256-comparison",
+  "baseline_commit": "b24b024e3b58d280684a0ba20ac973c03e3055b2",
+  "baseline_code_identity": "86f191feb7adf6c8b0bafc30198cf2be2f7aa1a0bcba0161c1e5b8240a59a453",
+  "current_code_identity": "c40bbf1b2868f51b1d95b32492b7ec3ecafcf9e3432cc2c82e1e938251916d0b",
+  "files": [
+    {
+      "path": "helmet/app/resident.py",
+      "baseline_sha256": "13b34f7fcfe2eaed6b390a447f0923e61a1937685fbcc67b73bfa5d3893ab6bc",
+      "current_sha256": "13b34f7fcfe2eaed6b390a447f0923e61a1937685fbcc67b73bfa5d3893ab6bc",
+      "bytes": 55936,
+      "changed": false
+    },
+    {
+      "path": "helmet/app/launch.py",
+      "baseline_sha256": "6dd08e9b1ce0813b7d689aa690b3a2beb9501a3dfab08d9497f42ab5f7b96d9f",
+      "current_sha256": "6dd08e9b1ce0813b7d689aa690b3a2beb9501a3dfab08d9497f42ab5f7b96d9f",
+      "bytes": 10769,
+      "changed": false
+    },
+    {
+      "path": "helmet/app/service.py",
+      "baseline_sha256": "db0c579d93c8d60dc48e755471e7649e9c1411a53c1237afbff2cc47044edc3a",
+      "current_sha256": "db0c579d93c8d60dc48e755471e7649e9c1411a53c1237afbff2cc47044edc3a",
+      "bytes": 50014,
+      "changed": false
+    },
+    {
+      "path": "helmet/app/wifi.py",
+      "baseline_sha256": "648b714137b18538f8f8e6a355565b07aec8fb01270c3deed5c01eba30249468",
+      "current_sha256": "648b714137b18538f8f8e6a355565b07aec8fb01270c3deed5c01eba30249468",
+      "bytes": 24916,
+      "changed": false
+    },
+    {
+      "path": "helmet/app/qml/Main.qml",
+      "baseline_sha256": "945a2816b88fc9f8880c13bd1ee424d1d6552f5b8927159f01fc3061dfe84c6a",
+      "current_sha256": "04f6da85406ab2ee17495e78c17fdfdcf146aa8c8183045099efbb4e3390ce77",
+      "bytes": 40735,
+      "changed": true
+    }
+  ]
+}

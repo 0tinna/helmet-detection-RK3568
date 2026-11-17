@@ -1,10 +1,10 @@
 # 基于 RK3568 的离线安全帽检测与状态闭环系统
 
-**当前交付版本：v6-r1，版本 tag：`native-app-v6-r1`。** 本项目使用现成社区 YOLOv5 模型，在 ATK-DLRK3568 上完成本地安全帽头部检测、Qt 全屏、后台常驻、原帧时效校验和可追溯评价。v6-r1 在 v5-r3 的手机内网查看与 BusyBox 开机入口上，降低预览 CPU、消除 base64 热路径并合并重复常驻状态写入。
+**当前交付版本：v6-r2，版本 tag：`native-app-v6-r2`。** 本项目使用现成社区 YOLOv5 模型，在 ATK-DLRK3568 上完成本地安全帽头部检测、Qt 全屏、后台常驻、原帧时效校验和可追溯评价。v6-r2 在 v6-r1 的精确二进制预览、双 Image、`8091` 内网查看和 BusyBox 开机入口上，修复回桌面后再次点图标闪退，并让空闲页自动刷新输入源。
 
 日常检测使用板端模型与 USB 摄像头，不需要开发板浏览器、电脑页面或持续联网。项目范围不包含训练、微调、剪枝或蒸馏。
 
-手机连接同一可互通内网后，访问 **`http://192.168.1.3:8091/`**（按当前 IP 调整）。开机入口配置后台待机，图标打开后手动检测；回桌面保留内网查看，完整退出关闭监听。v6 同条件回放为可见态检测约 7.80 FPS、呈现约 4.40 FPS、Qt CPU 33.25%，并完成 180 秒回放与常驻/LAN 软件验收；物理摄像头、板屏人工连续性和实体手机仍按[性能报告](docs/experiments/2026-11-17/performance-baseline/report.md)保留未验。
+手机连接同一可互通内网后，访问 **`http://192.168.1.3:8091/`**（按当前 IP 调整）。开机入口配置后台待机，图标打开后手动检测；回桌面保留内网查看，完整退出关闭监听。v6-r2 完成窗口可见性冲突修复、输入源自动刷新、五轮程序化隐藏/唤回、双图标复用和完整退出；预览性能沿用 v6-r1 的可见态检测约 7.80 FPS、呈现约 4.40 FPS、Qt CPU 33.25%。物理摄像头热插拔、板屏人工连续性和实体手机仍按[v6-r2 报告](docs/experiments/2026-11-17/native-app-v6-r2/report.md)保留未验。
 
 ## 从哪里开始
 
@@ -37,15 +37,17 @@
 
 | 项目 | 当前值 |
 | --- | --- |
-| 运行包 | [helmet-native-app-20261117-v6-r1.zip](dist/helmet-native-app-20261117-v6-r1.zip) |
-| 发布清单 | [bundle-manifest-v6-r1.json](docs/experiments/2026-11-17/performance-baseline/bundle-manifest-v6-r1.json) |
-| ZIP | 39,234,949 字节，41 entries（40 payload 与内部 manifest） |
-| ZIP SHA256 | `8b51ab3dded637e02b543051a8f77427df91359b12fb6b42187d88b9a33aa726` |
-| 板端安装根 | `/userdata/helmet-validation/20261117-native-app-v6-r1` |
+| 运行包 | [helmet-native-app-20261117-v6-r2.zip](dist/helmet-native-app-20261117-v6-r2.zip) |
+| 发布清单 | [bundle-manifest-v6-r2.json](docs/experiments/2026-11-17/native-app-v6-r2/bundle-manifest-v6-r2.json) |
+| ZIP | 39,236,091 字节，41 entries（40 payload 与内部 manifest） |
+| ZIP SHA256 | `e66dc2983ca28258f28507c16a1be0b3aea637136166fce8c0c125b2a474c2bc` |
+| 板端安装根 | `/userdata/helmet-validation/20261117-native-app-v6-r2` |
 | 正式入口 | `/opt/ui/src/apps/helmet_app`、`/opt/ui/src/apps/helmet_wifi` |
-| 开机入口 / tag | `/etc/init.d/S99zhelmet-app` / `native-app-v6-r1` |
+| 开机入口 / tag | `/etc/init.d/S99zhelmet-app` / `native-app-v6-r2` |
 
-[v6-r1 报告](docs/experiments/2026-11-17/performance-baseline/report.md)记录同条件 20 秒性能和 180 秒回放：Qt CPU 从 56.50% 降至 33.25%，预览总载荷降低 56.25%，owner record 写速降低 97.56%；180 秒采样 180 次、约 8.08 检测 FPS、约 4.41 呈现 FPS，帧号 `39→3127`。主机主树 435 项通过（15 skipped）、legacy 25 项通过（1 skipped）；常驻/LAN/完整退出与重启通过。物理 USB 相机、板屏人工闪烁、拔线 TTL 和实体手机不在本轮回放结论内。
+[v6-r2 可用性修复报告](docs/experiments/2026-11-17/native-app-v6-r2/report.md)记录回桌面复开闪退修复、输入源自动刷新、五轮程序化隐藏/唤回、双图标复用和完整退出：主树 440 项通过（15 skipped）、legacy 25 项通过（1 skipped）；本次回放帧号 `51→132→212→264→345→377`，`session`、UI instance 与 Qt PID 均保持不变。当前板端没有 USB UVC 节点，因此真实热插拔仍待现场验证。
+
+[v6-r1 性能报告](docs/experiments/2026-11-17/performance-baseline/report.md)继续作为 v6-r2 沿用的性能基础：Qt CPU 从 56.50% 降至 33.25%，预览总载荷降低 56.25%，180 秒采样约 8.08 检测 FPS、约 4.41 呈现 FPS，帧号 `39→3127`。该成绩属于 v6-r1，不能改记为 v6-r2 新测量。
 
 历史 [v5-r3 报告](docs/experiments/2026-11-15/app-lan-autostart/report.md)保留 180.50 秒真实 USB 相机与 8091/init 证据；[Phase 1](docs/experiments/2026-11-15/native-app-usability-v4-phase1-1/report.md)保留全屏与物理拔线 TTL，[Phase 2](docs/experiments/2026-11-15/native-app-usability-v4-phase2-1/report.md)保留 v4-r2 常驻/196.67 秒相机短跑。它们各有自己的版本与计时范围。
 
@@ -87,6 +89,6 @@ NPU gated 用例需要真实板端模型/运行环境；主机软件测试不代
 
 ## GitHub 保存范围
 
-GitHub 保存源码、测试、模型、v6-r1 正确包与 wrapper 拒绝包、已归档 v5-r3/v4-r2 ZIP、Markdown/HTML/PPTX、实验清单及关键收据；正式版本以带说明的 tag 保存。`.runtime/`、`.venv/`、`.tmp/`、`.superpowers/`、`datasets/raw/`、外部数据图片、大视频/JSONL、其余重复候选 ZIP 和个人模板保留本机。
+GitHub 保存源码、测试、模型、v6-r2 当前包、v6-r1 历史正确包与 wrapper 拒绝包、已归档 v5-r3/v4-r2 ZIP、Markdown/HTML/PPTX、实验清单及关键收据；正式版本以带说明的 tag 保存。`.runtime/`、`.venv/`、`.tmp/`、`.superpowers/`、`datasets/raw/`、外部数据图片、大视频/JSONL、其余重复候选 ZIP 和个人模板保留本机。
 
 历史报告中的本地引用代表原证据位置，克隆仓库时可能没有完整载荷。过期原稿与旧 PPT 的位置和 SHA 见[归档清单](docs/archive/archive-manifest.json)；本次整理说明见[资料整理记录](docs/资料整理记录.md)。

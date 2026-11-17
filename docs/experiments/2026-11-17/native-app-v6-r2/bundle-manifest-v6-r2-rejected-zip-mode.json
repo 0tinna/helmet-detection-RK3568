@@ -1,0 +1,190 @@
+{
+  "kind": "native-app-release-manifest",
+  "version": "20261117-v6-r2",
+  "tag": "native-app-v6-r2",
+  "created_at": "2026-11-17T14:16:43.094862+00:00",
+  "path": "dist/helmet-native-app-20261117-v6-r2.zip",
+  "sha256": "1f6083aa7526c4bd1c8d25fd2b10f1fa26d6823d6b399fe49f585df74d53efe9",
+  "bytes": 39236091,
+  "entries": 41,
+  "payload_files": 40,
+  "deployment_root": "/userdata/helmet-validation/20261117-native-app-v6-r2",
+  "code_identity": "c40bbf1b2868f51b1d95b32492b7ec3ecafcf9e3432cc2c82e1e938251916d0b",
+  "manifest": {
+    "kind": "native-board-app",
+    "version": "20261117-v6-r2",
+    "release_tag": "native-app-v6-r2",
+    "requires_preinstalled_os_runtime": true,
+    "requires_browser": false,
+    "offline_daily_detection": true,
+    "lan_preview_port": 8091,
+    "lan_controls": false,
+    "boot_background_manual_detection": true,
+    "physical_camera_tested_this_version": false,
+    "human_touch_verified_this_version": false,
+    "wifi_connect_tested_this_version": false,
+    "code_identity": "c40bbf1b2868f51b1d95b32492b7ec3ecafcf9e3432cc2c82e1e938251916d0b",
+    "files": {
+      "README.txt": {
+        "sha256": "b971f09c18ede3e2c5ec22157acbf8b562a775ec9b8e4fa3ecba7f1b69afd762",
+        "bytes": 639
+      },
+      "docs/README.md": {
+        "sha256": "0c8b76bbdf5549f2277aedcc74712de329279ecba2f07c474787da1fcafa712a",
+        "bytes": 2142
+      },
+      "docs/手机内网查看与开机启动-v5.md": {
+        "sha256": "5a22b4e9450da5403dc3120199b5918d2d6abf9ad84cffe8bce842ea35e76be5",
+        "bytes": 3480
+      },
+      "docs/手机内网查看与开机启动-v6.md": {
+        "sha256": "0beb3b6d6f7b3e15a3dacb6bc0f88b7c6b554172f07d51eb23bdf77a5c37474f",
+        "bytes": 4374
+      },
+      "docs/板端App使用手册.md": {
+        "sha256": "25503cfb549bc768ef076d13263697ea078d5d3dc837e6094d1b8fe1598b96a3",
+        "bytes": 13962
+      },
+      "docs/板端App后台运行手册-v4.md": {
+        "sha256": "7164ec309eb1f23d4cccceea14bccaa21af56b5e2cb29f955d49fb7caacf5c95",
+        "bytes": 11042
+      },
+      "docs/离线更新与图标安装-v4.md": {
+        "sha256": "6309b0e2227243943ebcb4e621baa97da60cfe68ac02d18ad8cc354cfb37bdfd",
+        "bytes": 7991
+      },
+      "docs/离线更新与图标安装.md": {
+        "sha256": "df0144d15241ff7beb5a281307556c13929b046a320c93c8f40ff71280f9b93d",
+        "bytes": 747
+      },
+      "input/1.jpg": {
+        "sha256": "a672e54b698710b9ff3081273fced9b32c671976203f568a3ef505dce1c5936e",
+        "bytes": 176224
+      },
+      "models/helmet-640-640.rknn": {
+        "sha256": "23dac43065664447272b8a032f7c35a00269e5b7d63e210ae10d8181a7a3bb32",
+        "bytes": 7808448
+      },
+      "models/helmet_416x416.rknn": {
+        "sha256": "7e0eefe4bfe86627bb6b58161cacca10912e0dbe1ba2513f58d091c40b26cd48",
+        "bytes": 8110065
+      },
+      "models/helmet_512x288.rknn": {
+        "sha256": "4b8d428aede96897590ed143200412beed882908e3b30ec63a5eae38f0deb6af",
+        "bytes": 8118576
+      },
+      "models/helmet_512x512.rknn": {
+        "sha256": "82e43f1fe1dc755ab8d421c819fdef311efdd1b64a7b1913901f6aef2b9460d3",
+        "bytes": 8279345
+      },
+      "models/helmet_640x384.rknn": {
+        "sha256": "ba951c5b824e66a660c08daa6f6779cf4119130c4c2106f365ee337e3c92f272",
+        "bytes": 8261425
+      },
+      "models/helmet_640x640.rknn": {
+        "sha256": "2c0df64c4e12440e4e84c16294df53e440c263d9570f4447b2d26b0f5916edf3",
+        "bytes": 8439921
+      },
+      "src/alarm.py": {
+        "sha256": "d3e6d68c7b17f5508f0d697e96998f556f224f9f5067169d66c35972b3a023d2",
+        "bytes": 4207
+      },
+      "src/app/__init__.py": {
+        "sha256": "3ca294319d48aa183e5822b0c08426253434101d7c1fc85ae21b74b756784cd1",
+        "bytes": 55
+      },
+      "src/app/autostart.sh": {
+        "sha256": "47d8f807390f83d946b3276867dda8c78318e96d3863d9b76752dfa591e87026",
+        "bytes": 579
+      },
+      "src/app/boot.py": {
+        "sha256": "27765642ea9d86ee48173f3e2a002ec1c584f463b6ca99f2b7e526d6f9efe2eb",
+        "bytes": 4914
+      },
+      "src/app/deploy.ps1": {
+        "sha256": "7cb20102505e00b307fb37e5dc66636c33c6f1e6a790987da66250d40d6d4385",
+        "bytes": 1847
+      },
+      "src/app/icons/helmet.svg": {
+        "sha256": "10274b399ae404d159fcd9b2d0f2464e5f8f37b13399c4a8c42c04c7ede08bc1",
+        "bytes": 435
+      },
+      "src/app/icons/wifi.svg": {
+        "sha256": "ffe6f812764ecc8730863294ac89a2b5c1dcd8f6e7902b57950c6169088f2e3d",
+        "bytes": 353
+      },
+      "src/app/install.py": {
+        "sha256": "322494444cc6e1f40ed7ed329462b2a538db23d8f97ba2b7867dec27ebfa37a6",
+        "bytes": 4691
+      },
+      "src/app/lan.py": {
+        "sha256": "2f1e164a80323f41a9c27d85c345f554b08194eaebb2408926b745ec4ea77e56",
+        "bytes": 12099
+      },
+      "src/app/launch.py": {
+        "sha256": "6dd08e9b1ce0813b7d689aa690b3a2beb9501a3dfab08d9497f42ab5f7b96d9f",
+        "bytes": 10769
+      },
+      "src/app/qml/Main.qml": {
+        "sha256": "04f6da85406ab2ee17495e78c17fdfdcf146aa8c8183045099efbb4e3390ce77",
+        "bytes": 40735
+      },
+      "src/app/resident.py": {
+        "sha256": "13b34f7fcfe2eaed6b390a447f0923e61a1937685fbcc67b73bfa5d3893ab6bc",
+        "bytes": 55936
+      },
+      "src/app/service.py": {
+        "sha256": "db0c579d93c8d60dc48e755471e7649e9c1411a53c1237afbff2cc47044edc3a",
+        "bytes": 50014
+      },
+      "src/app/wifi.py": {
+        "sha256": "648b714137b18538f8f8e6a355565b07aec8fb01270c3deed5c01eba30249468",
+        "bytes": 24916
+      },
+      "src/benchmark.py": {
+        "sha256": "15dcff515fc9c7332dd5eefd40502f38b0a02e6ab6a62e1d0ec50ce593ab4859",
+        "bytes": 15588
+      },
+      "src/dump_dets.py": {
+        "sha256": "c21b4a1d1c4ee4e0428cb19d16b560c9c7dfdef2c34b52f62195b836fca90e3f",
+        "bytes": 8619
+      },
+      "src/helmet_realtime.py": {
+        "sha256": "15794ebc40fdd1736d9c80d5504d17aa91e1de972bb92bb30a9eeb026309e46d",
+        "bytes": 5503
+      },
+      "src/output_sinks.py": {
+        "sha256": "c2f65642d38f8994200503b242ca93c8f0af105dc5ad3b13650e9ff83c7003cf",
+        "bytes": 23464
+      },
+      "src/pipeline_runtime.py": {
+        "sha256": "dee30d6b71c9e8d3e697657fb309fb22e8fb47fafd366d60b555466cf56152e9",
+        "bytes": 35055
+      },
+      "src/sources.py": {
+        "sha256": "ea89d66fdefb2bc429ca74efa0437a3c0a8aab672a856078fc15afccfe3b31c9",
+        "bytes": 6717
+      },
+      "src/telemetry.py": {
+        "sha256": "da4522206053712484a21f80bb26d6424649a263f606f35fa16070be51a83b9e",
+        "bytes": 14670
+      },
+      "src/validate_comparison.py": {
+        "sha256": "3b65f9e561084aa7f6199cc7cd413b6426f6ac962f39729ac0668e50350c2860",
+        "bytes": 1819
+      },
+      "src/yolo_post.py": {
+        "sha256": "fae57bbfa1d47d5ab16ef444096fab4fe8e14701c5ec10d87b1ec518282b0505",
+        "bytes": 7811
+      },
+      "vendor-entry/helmet_app": {
+        "sha256": "ed822ef827d1a1e76892cb02f79a45260cbab2928357373bb22580e1512ad898",
+        "bytes": 186
+      },
+      "vendor-entry/helmet_wifi": {
+        "sha256": "6f303c0590b4b16839bb30e1f0ad37e683af38d56d0cb23ed9a914ab542f799c",
+        "bytes": 181
+      }
+    }
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "kind": "native-app-installed-release",
+  "version": "20261117-v6-r2",
+  "tag": "native-app-v6-r2",
+  "verified_at": "2026-11-17T14:25:49.367767+00:00",
+  "deployment_root": "/userdata/helmet-validation/20261117-native-app-v6-r2",
+  "archive": {
+    "path": "dist/helmet-native-app-20261117-v6-r2.zip",
+    "sha256": "e66dc2983ca28258f28507c16a1be0b3aea637136166fce8c0c125b2a474c2bc",
+    "bytes": 39236091,
+    "entries": 41,
+    "payload_files": 40,
+    "code_identity": "c40bbf1b2868f51b1d95b32492b7ec3ecafcf9e3432cc2c82e1e938251916d0b"
+  },
+  "board_archive": {
+    "path": "/userdata/helmet-validation/helmet-native-app-20261117-v6-r2.zip",
+    "sha256": "e66dc2983ca28258f28507c16a1be0b3aea637136166fce8c0c125b2a474c2bc",
+    "bytes": 39236091
+  },
+  "extraction": {
+    "method": "BusyBox root umask 077 + /usr/bin/unzip",
+    "regular_files": 41,
+    "payload_file_set_match": true,
+    "payload_sha256_and_size_match": true,
+    "internal_manifest_match": true,
+    "wrapper_unix_archive_mode": "0755",
+    "wrapper_extracted_mode": "0700",
+    "wrapper_executable": true,
+    "wrapper_targets_final_root": true
+  },
+  "entry_migration": {
+    "backup_root": "/userdata/helmet-validation/entry-backups/20261117-v6-r2-pre",
+    "helmet_app": "/userdata/helmet-validation/20261117-native-app-v6-r2/vendor-entry/helmet_app",
+    "helmet_wifi": "/userdata/helmet-validation/20261117-native-app-v6-r2/vendor-entry/helmet_wifi",
+    "init": "/userdata/helmet-validation/20261117-native-app-v6-r2/src/app/autostart.sh",
+    "desktop_detection_sha256": "ebd9597787f0ff28e20737ffcb766929faac0039b8004fad45786ca233126dbd",
+    "desktop_wifi_sha256": "59145a2ef09f230b3a63f119763d4bce9236958f8beb36ab6af57dd6b3e3ecd4",
+    "apk3_cfg_sha256": "f64a8e2f751ff777b98a36a13a0ad062e0812f2bd6ebd7914a512b772f507b11",
+    "apk3_cfg_unchanged": true,
+    "systemui_pid": 738,
+    "systemui_restarted_by_project": false
+  },
+  "retained_candidates": {
+    "pre_final_root": "/userdata/helmet-validation/20261117-native-app-v6-r2-candidate-pre-final",
+    "rejected_zip_mode_root": "/userdata/helmet-validation/20261117-native-app-v6-r2-candidate-rejected-zip-mode",
+    "rejected_zip_mode_archive": "/userdata/helmet-validation/helmet-native-app-20261117-v6-r2-rejected-zip-mode.zip",
+    "rejected_zip_mode_sha256": "1f6083aa7526c4bd1c8d25fd2b10f1fa26d6823d6b399fe49f585df74d53efe9"
+  },
+  "entry_acceptance": "entry-acceptance.json",
+  "resident_acceptance": "bugfix-acceptance.json",
+  "video4linux": "video4linux-at-acceptance.json"
+}

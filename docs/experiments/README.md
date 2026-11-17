@@ -6,7 +6,11 @@
 
 | 报告 | 可支持的结论 |
 | --- | --- |
-| [v6-r1：预览性能与运行收口](2026-11-17/performance-baseline/report.md) | 二进制精确 JPEG、双 Image、同条件检测/呈现/CPU、180 秒回放、常驻、LAN、完整退出、最终整包和入口迁移；物理相机与人工屏幕未验 |
+| [v6-r2：可用性修复与最终验收](2026-11-17/native-app-v6-r2/report.md) | 回桌面复开闪退修复、输入源自动刷新、五轮隐藏/唤回、双图标复用、完整退出、ZIP 模式修正；当前无 USB UVC 节点 |
+| [v6-r2 发布清单](2026-11-17/native-app-v6-r2/bundle-manifest-v6-r2.json) | 39,236,091B/41 entries 完整 ZIP、40 个载荷及五文件身份 |
+| [v6-r2 常驻验收](2026-11-17/native-app-v6-r2/bugfix-acceptance.json) | 同 session/UI/PID、帧号增长、隐藏预览冻结、退出收据 |
+| [v6-r2 入口验收](2026-11-17/native-app-v6-r2/entry-acceptance.json) | init 后台启动、两图标复用、cfg 不变、systemui 未重启、完整退出 |
+| [v6-r1：预览性能与运行收口](2026-11-17/performance-baseline/report.md) | 二进制精确 JPEG、双 Image、同条件检测/呈现/CPU、180 秒回放、常驻、LAN、完整退出和入口迁移；作为 v6-r2 性能历史基础 |
 | [v6-r1 发布清单](2026-11-17/performance-baseline/bundle-manifest-v6-r1.json) | 39,234,949B/41 entries 完整 ZIP、40 个载荷及五文件身份 |
 | [v6 前后对照](2026-11-17/performance-baseline/before-after.json) | 基线、候选、状态写次数、常驻/LAN 机读汇总 |
 | [v6 入口验收](2026-11-17/performance-baseline/entry-acceptance.json) | init 后台待机、两图标复用、完整退出和再次启动新 session |
