@@ -181,6 +181,7 @@ class AlertEventStoreTests(unittest.TestCase):
         self.assertEqual(stored['image'], record['image'])
         self.assertEqual(stored['count'], 1)
         self.assertNotIn('public_ip', stored)
+        self.assertNotIn('email', stored)
 
     def test_public_list_is_newest_first_and_hides_private_paths(self):
         store = self.store()
@@ -198,7 +199,23 @@ class AlertEventStoreTests(unittest.TestCase):
             self.assertNotIn('generation', row)
             self.assertNotIn('media_path', row)
             self.assertNotIn('public_ip', row)
+            self.assertNotIn('email', row)
             self.assertNotIn(str(self.root), json.dumps(row))
+
+    def test_historical_email_status_is_ignored_when_metadata_is_reloaded(self):
+        store = self.store()
+        record = self.publish(store)
+        metadata = Path(record['media_path']).with_suffix('.json')
+        value = json.loads(metadata.read_text(encoding='utf-8'))
+        value['email'] = {'state': 'failed', 'private': 'legacy-status'}
+        metadata.write_text(json.dumps(value), encoding='utf-8')
+        store.close()
+        reloaded = self.store()
+        self.addCleanup(reloaded.close)
+        events = reloaded.list_events()
+        self.assertEqual(len(events), 1)
+        self.assertNotIn('email', events[0])
+        self.assertNotIn('legacy-status', json.dumps(events[0]))
 
     def test_event_id_and_media_lookup_reject_invalid_or_outside_paths(self):
         store = self.store()

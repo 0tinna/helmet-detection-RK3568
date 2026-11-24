@@ -1,0 +1,35 @@
+{
+  "kind": "v7-r3-resident-hide-show",
+  "tested_at": "2026-11-24T12:44:03.878621+08:00",
+  "session": "96f7b07221fd4fd4bb94296dc6e6309f",
+  "service_pid": 22510,
+  "qt_pid": 22610,
+  "ui_instance": "260e6a24ea7f4b17b4a8c681d52b7854",
+  "source": "/dev/video10",
+  "model": "helmet_640x384.rknn",
+  "frames": {
+    "active_before_hide": 5122,
+    "hidden_three_seconds": 5246,
+    "increment_while_hidden": 124,
+    "active_after_wifi_and_detection_show": 5354
+  },
+  "replies": {
+    "hide_accepted": true,
+    "wifi_show_accepted": true,
+    "detection_show_accepted": true
+  },
+  "observations": {
+    "same_session": true,
+    "same_service_pid": true,
+    "same_qt_pid": true,
+    "same_ui_instance": true,
+    "hidden_ack_visible_false": true,
+    "detection_continued_while_hidden": true,
+    "wifi_then_detection_reused_same_instance": true,
+    "visible_at_end": true
+  },
+  "limits": [
+    "Qt acknowledgements and frame identity were programmatic; human touch and physical-screen continuity were not observed."
+  ],
+  "passed": true
+}

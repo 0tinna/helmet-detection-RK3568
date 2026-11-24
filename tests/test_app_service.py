@@ -119,8 +119,6 @@ class ControlledAlertHub:
             'events_created': len(self.observations),
             'last_error': None,
             'store': {'records': 0},
-            'mail': {'configured': False, 'state': 'not_configured',
-                     'worker_alive': False},
             'viewer': {'alive': bool(self.started) and not self.closed,
                        'port': 8092},
         }
@@ -721,7 +719,7 @@ class AppServiceTests(unittest.TestCase):
         self.assertGreaterEqual(hub.status_calls, 1)
         self.assertTrue(progress['alert_viewer_alive'])
         self.assertEqual(progress['alert_port'], 8092)
-        self.assertFalse(progress['mail']['configured'])
+        self.assertNotIn('mail', progress)
         result = self.service.close(timeout=1)
         self.assertTrue(result['alert_stopped'])
         self.assertEqual(len(hub.close_calls), 1)

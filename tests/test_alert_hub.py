@@ -1,9 +1,10 @@
-"""AlertHub composition, failure isolation and lifecycle contracts."""
+"""AlertHub composition, evidence publication and lifecycle contracts."""
 from pathlib import Path
 from types import SimpleNamespace
 import tempfile
 import time
 import unittest
+from unittest import mock
 
 
 class FakeTracker:
@@ -50,42 +51,10 @@ class FakeStore:
         self.close_calls += 1
 
 
-class FakeMailer:
+class FakeViewer:
     def __init__(self, fail=False, close_failures=0):
         self.fail = fail
         self.close_failures = close_failures
-        self.start_calls = 0
-        self.enqueue_calls = []
-        self.close_calls = 0
-
-    def start(self):
-        self.start_calls += 1
-
-    def enqueue(self, events):
-        self.enqueue_calls.append(events)
-        if self.fail:
-            raise OSError('private SMTP response')
-        return True
-
-    def status(self):
-        return {
-            'configured': True,
-            'state': 'failed' if self.fail else 'idle',
-            'pending_batches': 0,
-            'worker_alive': self.start_calls > self.close_calls,
-        }
-
-    def close(self, timeout=3.0):
-        self.close_calls += 1
-        if self.close_failures:
-            self.close_failures -= 1
-            return False
-        return True
-
-
-class FakeViewer:
-    def __init__(self, fail=False):
-        self.fail = fail
         self.start_calls = 0
         self.close_calls = 0
         self.thread = None
@@ -94,17 +63,15 @@ class FakeViewer:
     def start(self):
         self.start_calls += 1
         if self.fail:
-            raise OSError('public port is occupied')
+            raise OSError('event port is occupied')
         self.thread = SimpleNamespace(is_alive=lambda: self.close_calls == 0)
 
     def close(self):
         self.close_calls += 1
-
-
-class FakeAccessKey:
-    def url_path(self, lan_host, lan_port=8092, scheme='http', now=None):
-        return '%s://%s:%d/alerts?access=fixture-token' % (
-            scheme, lan_host, lan_port)
+        if self.close_failures:
+            self.close_failures -= 1
+            return False
+        return True
 
 
 class AlertHubTests(unittest.TestCase):
@@ -148,32 +115,27 @@ class AlertHubTests(unittest.TestCase):
             detections=[([10, 10, 50, 50], False, .9)],
         )
 
-    def hub(self, *, mailer=None, viewer=None, events=None, cleanup_interval=3600):
+    def hub(self, *, viewer=None, events=None, cleanup_interval=3600):
         module = self.module()
         self.store = FakeStore(events or [])
         self.tracker = FakeTracker(self.candidate)
-        self.mailer = mailer
         self.viewer = viewer
         return module.AlertHub(
             self.root,
             store=self.store,
             tracker=self.tracker,
-            mailer=self.mailer,
-            access_key=FakeAccessKey(),
             viewer=self.viewer,
             host='127.0.0.1',
             port=8092,
             cleanup_interval=cleanup_interval,
         )
 
-    def test_confirmed_candidate_is_published_before_mail_enqueue(self):
-        mailer = FakeMailer()
-        hub = self.hub(mailer=mailer)
+    def test_confirmed_candidate_is_saved_once_without_notification_side_effects(self):
+        hub = self.hub()
         hub.start()
         self.assertTrue(hub.observe(self.packet(), b'\xff\xd8event\xff\xd9', 'run-a'))
 
         self.assertEqual(self.store.cleanup_calls, 1)
-        self.assertEqual(mailer.start_calls, 1)
         self.assertEqual(len(self.tracker.calls), 1)
         candidate, jpeg, metadata = self.store.publish_calls[0]
         self.assertIs(candidate, self.candidate)
@@ -181,37 +143,18 @@ class AlertHubTests(unittest.TestCase):
         self.assertEqual(metadata['model'], 'helmet_416x416.rknn')
         self.assertEqual(metadata['selection'],
                          {'source': '/dev/video10', 'profile': 'responsive'})
-        self.assertEqual(len(mailer.enqueue_calls), 1)
-        self.assertEqual(mailer.enqueue_calls[0][0]['event_id'], 'event-1')
-        self.assertEqual(hub.status()['events_created'], 1)
+        status = hub.status()
+        self.assertEqual(status['events_created'], 1)
+        self.assertNotIn('mail', status)
 
-    def test_store_failure_is_contained_and_mail_is_not_enqueued(self):
-        mailer = FakeMailer()
-        hub = self.hub(mailer=mailer, events=[OSError('disk fixture')])
+    def test_store_failure_is_contained(self):
+        hub = self.hub(events=[OSError('disk fixture')])
         hub.start()
         self.assertFalse(hub.observe(self.packet(), b'jpeg', 'run-a'))
-        self.assertEqual(mailer.enqueue_calls, [])
         status = hub.status()
         self.assertEqual(status['last_error'], 'event_store_failed')
         self.assertEqual(status['events_created'], 0)
         self.assertNotIn('disk fixture', str(status))
-
-    def test_absent_mail_configuration_does_not_block_saved_evidence(self):
-        hub = self.hub(mailer=None)
-        hub.start()
-        self.assertTrue(hub.observe(self.packet(), b'jpeg', 'run-a'))
-        self.assertEqual(len(self.store.publish_calls), 1)
-        self.assertFalse(hub.status()['mail']['configured'])
-
-    def test_mail_failure_does_not_raise_or_remove_published_event(self):
-        mailer = FakeMailer(fail=True)
-        hub = self.hub(mailer=mailer)
-        hub.start()
-        self.assertTrue(hub.observe(self.packet(), b'jpeg', 'run-a'))
-        self.assertEqual(len(self.store.publish_calls), 1)
-        self.assertEqual(hub.status()['events_created'], 1)
-        self.assertEqual(hub.status()['last_error'], 'mail_enqueue_failed')
-        self.assertNotIn('private SMTP response', str(hub.status()))
 
     def test_reset_clears_tracker_and_records_generation(self):
         hub = self.hub()
@@ -230,51 +173,33 @@ class AlertHubTests(unittest.TestCase):
         self.assertEqual(self.store.publish_calls, [])
 
     def test_start_and_close_order_is_explicit_and_close_is_idempotent(self):
-        mailer = FakeMailer()
         viewer = FakeViewer()
-        hub = self.hub(mailer=mailer, viewer=viewer)
+        hub = self.hub(viewer=viewer)
         hub.start()
-        self.assertEqual((self.store.cleanup_calls, mailer.start_calls,
-                          viewer.start_calls), (1, 1, 1))
+        self.assertEqual((self.store.cleanup_calls, viewer.start_calls), (1, 1))
         self.assertTrue(hub.status()['viewer']['alive'])
         self.assertTrue(hub.close(timeout=1))
-        self.assertEqual((viewer.close_calls, mailer.close_calls,
-                          self.store.close_calls), (1, 1, 1))
+        self.assertEqual((viewer.close_calls, self.store.close_calls), (1, 1))
         self.assertTrue(hub.close(timeout=1))
-        self.assertEqual((viewer.close_calls, mailer.close_calls,
-                          self.store.close_calls), (1, 1, 1))
+        self.assertEqual((viewer.close_calls, self.store.close_calls), (1, 1))
         self.assertFalse(hub.status()['viewer']['alive'])
 
-    def test_viewer_start_failure_rolls_back_already_started_owners(self):
-        mailer = FakeMailer()
+    def test_viewer_start_failure_rolls_back_started_owners(self):
         viewer = FakeViewer(fail=True)
-        hub = self.hub(mailer=mailer, viewer=viewer)
+        hub = self.hub(viewer=viewer)
         with self.assertRaises(OSError):
             hub.start()
-        self.assertEqual(mailer.close_calls, 1)
         self.assertEqual(viewer.close_calls, 1)
         self.assertEqual(self.store.close_calls, 1)
         self.assertFalse(hub.status()['started'])
 
-    def test_failed_start_rollback_does_not_report_an_alive_mailer_as_closed(self):
-        mailer = FakeMailer(close_failures=2)
-        viewer = FakeViewer(fail=True)
-        hub = self.hub(mailer=mailer, viewer=viewer)
-        with self.assertRaises(OSError):
-            hub.start()
-        self.assertEqual(mailer.close_calls, 1)
-        self.assertFalse(hub.close(timeout=1))
-        self.assertEqual(mailer.close_calls, 2)
-        self.assertTrue(hub.close(timeout=1))
-        self.assertEqual(mailer.close_calls, 3)
-
-    def test_close_can_retry_after_a_mail_worker_timeout(self):
-        mailer = FakeMailer(close_failures=1)
-        hub = self.hub(mailer=mailer)
+    def test_close_can_retry_after_viewer_cleanup_is_not_confirmed(self):
+        viewer = FakeViewer(close_failures=1)
+        hub = self.hub(viewer=viewer)
         hub.start()
         self.assertFalse(hub.close(timeout=.01))
         self.assertTrue(hub.close(timeout=1))
-        self.assertEqual(mailer.close_calls, 2)
+        self.assertEqual(viewer.close_calls, 2)
 
     def test_cleanup_runs_periodically_while_the_hub_is_open(self):
         hub = self.hub(cleanup_interval=.02)
@@ -303,22 +228,47 @@ class AlertHubTests(unittest.TestCase):
         self.assertFalse(hub.status()['viewer']['alive'])
         self.assertEqual(hub.status()['viewer']['port'], None)
         self.assertFalse((self.root / 'app-state' / 'event-access.key').exists())
+        self.assertFalse((self.root / 'app-state' / 'mail.json').exists())
 
-    def test_lan_url_builder_uses_current_interface_address_and_port(self):
-        hub = self.hub()
-        self.assertEqual(
-            hub.lan_url('192.168.1.10'),
-            'http://192.168.1.10:8092/alerts?access=fixture-token',
-        )
+    def test_from_root_builds_the_direct_viewer_without_credentials(self):
+        module = self.module()
+        viewer = FakeViewer()
+        with mock.patch.object(module, 'LanEventServer', return_value=viewer) as server:
+            hub = module.AlertHub.from_root(self.root, port=8092)
+            self.addCleanup(hub.close, 1)
+            hub.start()
+        server.assert_called_once()
+        args, kwargs = server.call_args
+        self.assertIs(args[0], hub.store)
+        self.assertEqual(args[1].__self__, hub)
+        self.assertEqual(kwargs, {'host': '0.0.0.0', 'port': 8092})
+        self.assertEqual(viewer.start_calls, 1)
+        self.assertFalse((self.root / 'app-state').exists())
 
-    def test_bound_detection_provider_is_exposed_without_public_address_state(self):
+    def test_direct_lan_url_contains_no_invitation_or_secret(self):
         hub = self.hub()
-        hub.bind_status_provider(
-            lambda: {'running': True, 'valid': True, 'state': 'running'})
+        self.assertEqual(hub.lan_url('192.168.1.10'), 'http://192.168.1.10:8092/')
+        with self.assertRaises(ValueError):
+            hub.lan_url('8.8.8.8')
+
+    def test_bound_detection_provider_exposes_current_alarm_state_only(self):
+        hub = self.hub()
+        hub.bind_status_provider(lambda: {
+            'state': 'healthy',
+            'running': True,
+            'valid': True,
+            'generation': 'run-a',
+            'alarm_state': 'active',
+            'frame_id': 42,
+            'source_epoch': 3,
+            'public_ip': '203.0.113.10',
+        })
         hub.start()
         status = hub.status()
-        self.assertEqual(status['detection']['running'], True)
+        self.assertEqual(status['detection']['alarm_state'], 'active')
+        self.assertEqual(status['detection']['frame_id'], 42)
         self.assertNotIn('public_ip', status)
+        self.assertNotIn('mail', status)
         self.assertEqual(status['viewer']['scope'], 'lan')
 
 

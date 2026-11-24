@@ -311,7 +311,6 @@ class AlertEventStore:
                 'retention_days': self.retention_days,
                 'model': metadata.get('model'),
                 'selection': metadata.get('selection'),
-                'email': metadata.get('email', {'state': 'pending'}),
             }
             payload = (json.dumps(record, ensure_ascii=False, allow_nan=False,
                                   indent=2) + '\n').encode('utf-8')
@@ -343,7 +342,7 @@ class AlertEventStore:
         keys = ('schema', 'event_id', 'captured_wall_time', 'captured_at',
                 'frame_id', 'source_epoch', 'trigger_track_ids',
                 'visible_no_hat_track_ids', 'count', 'detections', 'image',
-                'retention_days', 'model', 'selection', 'email')
+                'retention_days', 'model', 'selection')
         return {key: record[key] for key in keys if key in record}
 
     def list_events(self, limit=50, before=None, day=None):

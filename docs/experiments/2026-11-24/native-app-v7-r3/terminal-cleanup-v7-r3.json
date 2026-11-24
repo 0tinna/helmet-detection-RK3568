@@ -1,0 +1,131 @@
+{
+  "kind": "v7-r3-terminal-cleanup",
+  "started_at": "2026-11-24T12:45:18.705127+08:00",
+  "ended_at": "2026-11-24T12:45:30.512898+08:00",
+  "session": "96f7b07221fd4fd4bb94296dc6e6309f",
+  "manager_pid": 22508,
+  "service_pid": 22510,
+  "qt_pid": 22610,
+  "quit_reply": {
+    "ok": true,
+    "accepted": true,
+    "duplicate": false,
+    "application": {
+      "session": "96f7b07221fd4fd4bb94296dc6e6309f",
+      "root": "/userdata/helmet-validation/20261124-native-app-v7-r3",
+      "version": "resident-v4",
+      "phase": "stopping",
+      "intent": {
+        "sequence": 16,
+        "visible": true,
+        "tab": "detection",
+        "preview_after": 9989.68689422
+      },
+      "ack": {
+        "sequence": 16,
+        "visible": true,
+        "tab": "detection",
+        "ui_instance": "260e6a24ea7f4b17b4a8c681d52b7854",
+        "qt": {
+          "pid": 22610,
+          "starttime": 971781,
+          "uid": 0
+        },
+        "received_at": 10066.246254985,
+        "preview_presentations": 1256,
+        "frame_requests": 1260,
+        "frame_decodes": 1256
+      },
+      "applied": true,
+      "ui": {
+        "alive": true,
+        "instance": "260e6a24ea7f4b17b4a8c681d52b7854",
+        "identity": {
+          "pid": 22610,
+          "starttime": 971781,
+          "uid": 0
+        },
+        "exit_code": null
+      },
+      "service": {
+        "pid": 22510,
+        "starttime": 961830,
+        "uid": 0
+      },
+      "progress": {
+        "detection_stopped": false,
+        "wifi_stopped": false,
+        "alert_stopped": false,
+        "alert_viewer_alive": true,
+        "alert_port": 8092,
+        "http_alive": true,
+        "cleanup_completed": false,
+        "detection_alive": true,
+        "wifi_alive": false,
+        "state": "running",
+        "received_at": 10065.524468708,
+        "lan_alive": true,
+        "lan_port": 8091
+      },
+      "failure": null,
+      "verification_enabled": false,
+      "last_render": null
+    }
+  },
+  "poll_count": 2,
+  "final_observation": {
+    "at": "2026-11-24T04:45:26.494721+00:00",
+    "processes": {
+      "manager": false,
+      "service": false,
+      "qt": false
+    },
+    "ports": {
+      "8091": false,
+      "8092": false
+    },
+    "control_socket": false
+  },
+  "exit_receipt": {
+    "cleanup_completed": true,
+    "code_id": "0ab9946fb6c73822ace68c4aaacedbba52ff5adbf6a603b77b45702a7febf0bb",
+    "kind": "resident-terminal-v4",
+    "manager": {
+      "pid": 22508,
+      "starttime": 961742,
+      "uid": 0
+    },
+    "normal_stop": "http_quit",
+    "phase": "completed",
+    "resource_lease_released": true,
+    "root": "/userdata/helmet-validation/20261124-native-app-v7-r3",
+    "service": {
+      "pid": 22510,
+      "starttime": 961830,
+      "uid": 0
+    },
+    "service_exit": 0,
+    "session": "96f7b07221fd4fd4bb94296dc6e6309f",
+    "terminal_at": 10067.971564831,
+    "ui": {
+      "pid": 22610,
+      "starttime": 971781,
+      "uid": 0
+    },
+    "version": "resident-v4"
+  },
+  "checks": {
+    "quit_accepted": true,
+    "manager_gone": true,
+    "service_gone": true,
+    "qt_gone": true,
+    "port_8091_closed": true,
+    "port_8092_closed": true,
+    "control_socket_gone": true,
+    "terminal_receipt_exists": true,
+    "cleanup_completed": true,
+    "resource_lease_released": true,
+    "service_exit_zero": true
+  },
+  "passed": true
+}

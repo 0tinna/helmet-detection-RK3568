@@ -1,4 +1,4 @@
-"""Compose no-hat tracking, evidence storage, mail and LAN event access."""
+"""Compose no-hat tracking with durable evidence and a LAN event viewer."""
 from pathlib import Path
 import math
 import threading
@@ -6,20 +6,17 @@ import time
 
 try:
     from .alert_events import AlertEventStore, NoHatTrackTracker
-    from .alert_mail import LanAddressResolver, load_mailer
-    from .alert_viewer import AlertAccessKey, LanEventServer
+    from .alert_viewer import LanEventServer, _is_lan_client
 except ImportError:
     from alert_events import AlertEventStore, NoHatTrackTracker
-    from alert_mail import LanAddressResolver, load_mailer
-    from alert_viewer import AlertAccessKey, LanEventServer
+    from alert_viewer import LanEventServer, _is_lan_client
 
 
 class AlertHub:
     """One event owner whose failures never escape into detection."""
 
-    def __init__(self, root, *, store, tracker, mailer, access_key,
-                 host='0.0.0.0', port=8092, viewer=None, viewer_factory=None,
-                 cleanup_interval=3600):
+    def __init__(self, root, *, store, tracker, host='0.0.0.0', port=8092,
+                 viewer=None, viewer_factory=None, cleanup_interval=3600):
         self.root = Path(root).resolve()
         if not isinstance(host, str) or not host:
             raise ValueError('alert viewer host is required')
@@ -31,8 +28,6 @@ class AlertHub:
             raise ValueError('alert cleanup interval must be positive')
         self.store = store
         self.tracker = tracker
-        self.mailer = mailer
-        self.access_key = access_key
         self.host = host
         self.port = port
         self.cleanup_interval = float(cleanup_interval)
@@ -54,44 +49,36 @@ class AlertHub:
         self._last_close_result = None
         self._close_attempt = 0
         self._viewer_closed = viewer is None
-        self._mailer_closed = mailer is None
         self._store_closed = False
         self._status_provider = None
 
     @classmethod
-    def from_root(cls, root, port=8092, host='0.0.0.0', lan_resolver=None):
+    def from_root(cls, root, port=8092, host='0.0.0.0'):
         root = Path(root).resolve()
-        resolver = lan_resolver or LanAddressResolver()
         hub = cls(
             root,
             store=AlertEventStore(root),
             tracker=NoHatTrackTracker(),
-            mailer=None,
-            access_key=None,
             host=host,
             port=port,
-            viewer=None,
         )
         if port:
-            hub.access_key = AlertAccessKey.load_or_create(
-                root / 'app-state' / 'event-access.key')
             hub.viewer_factory = lambda: LanEventServer(
                 hub.store,
-                hub.access_key,
                 hub.status,
                 host=hub.host,
                 port=hub.port,
             )
-            hub.mailer = load_mailer(
-                root, hub.lan_url, resolver=resolver)
         return hub
 
     def lan_url(self, lan_host):
         with self._state_lock:
-            key, port = self.access_key, self.port
-        if key is None or not port:
+            port = self.port
+        if not port:
             return None
-        return key.url_path(lan_host, lan_port=port, scheme='http')
+        if not _is_lan_client(lan_host):
+            raise ValueError('LAN event host is invalid')
+        return 'http://%s:%d/' % (lan_host, port)
 
     def bind_status_provider(self, provider):
         if not callable(provider):
@@ -114,12 +101,11 @@ class AlertHub:
                 daemon=True,
             )
             self._cleanup_thread.start()
-            if self.mailer is not None:
-                self.mailer.start()
             if viewer is None and self.port and self.viewer_factory is not None:
                 viewer = self.viewer_factory()
             if viewer is not None:
                 viewer.start()
+                self._viewer_closed = False
             with self._state_lock:
                 self.viewer = viewer
                 self._started = True
@@ -128,20 +114,13 @@ class AlertHub:
             with self._state_lock:
                 self._closed = True
                 self._started = False
-            if self.mailer is not None:
-                try:
-                    mailer_closed = bool(self.mailer.close(3.0))
-                except BaseException:
-                    pass
-                else:
-                    self._mailer_closed = mailer_closed
             if viewer is not None and not self._viewer_closed:
                 try:
-                    viewer.close()
+                    closed = viewer.close()
                 except BaseException:
                     pass
                 else:
-                    self._viewer_closed = True
+                    self._viewer_closed = closed is not False
             try:
                 self.store.close()
             except BaseException:
@@ -239,12 +218,6 @@ class AlertHub:
                 self._events_created += 1
                 self._last_event_at = event.get('captured_wall_time')
                 self._generation = generation
-            if self.mailer is not None:
-                try:
-                    self.mailer.enqueue([event])
-                except BaseException:
-                    with self._state_lock:
-                        self._last_error = 'mail_enqueue_failed'
             return True
 
     def status(self):
@@ -266,26 +239,12 @@ class AlertHub:
                 nested = observed.get('detection')
                 source = nested if isinstance(nested, dict) else observed
                 detection = {key: source.get(key) for key in
-                             ('state', 'running', 'valid', 'generation')}
+                             ('state', 'running', 'valid', 'generation',
+                              'alarm_state', 'frame_id', 'source_epoch')}
         try:
             store = self.store.status()
         except BaseException:
             store = {'state': 'unavailable'}
-        if self.mailer is None:
-            mail = {
-                'configured': False,
-                'state': 'not_configured',
-                'last_result': None,
-                'pending_batches': 0,
-                'dropped_batches': 0,
-                'worker_alive': False,
-            }
-        else:
-            try:
-                mail = self.mailer.status()
-            except BaseException:
-                mail = {'configured': True, 'state': 'unavailable',
-                        'worker_alive': False}
         alive = bool(
             viewer is not None
             and viewer.thread is not None
@@ -301,7 +260,6 @@ class AlertHub:
             'last_error': last_error,
             'detection': detection,
             'store': store,
-            'mail': mail,
             'viewer': {
                 'alive': alive,
                 'port': port if port else None,
@@ -325,23 +283,15 @@ class AlertHub:
             self._closed = True
             self._close_attempt += 1
             viewer = self.viewer
-            mailer = self.mailer
         result = True
-        if (viewer is not None and not self._viewer_closed):
+        if viewer is not None and not self._viewer_closed:
             try:
-                viewer.close()
+                closed = viewer.close()
             except BaseException:
                 result = False
             else:
-                self._viewer_closed = True
-        if (mailer is not None and not self._mailer_closed):
-            try:
-                mailer_closed = bool(mailer.close(timeout))
-            except BaseException:
-                result = False
-            else:
-                self._mailer_closed = mailer_closed
-                result = mailer_closed and result
+                self._viewer_closed = closed is not False
+                result = self._viewer_closed and result
         if not self._stop_cleanup_thread(timeout):
             result = False
         if not self._store_closed:

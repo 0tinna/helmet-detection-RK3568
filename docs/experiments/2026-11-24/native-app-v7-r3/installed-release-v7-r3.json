@@ -1,0 +1,44 @@
+{
+  "kind": "v7-r3-installed-release",
+  "recorded_at": "2026-11-24T12:57:27.571944+08:00",
+  "board": {
+    "hostname": "ATK-DLRK3568",
+    "address": "192.168.1.10",
+    "architecture": "aarch64"
+  },
+  "root": "/userdata/helmet-validation/20261124-native-app-v7-r3",
+  "archive_sha256": "553667bec091d565b46557f533b546145d2e0e5ae47af0c03506c140ce8d9df8",
+  "manifest_verification": "passed on host and on the board staging root before atomic move",
+  "code_identity": "0ab9946fb6c73822ace68c4aaacedbba52ff5adbf6a603b77b45702a7febf0bb",
+  "alert_feature_identity": "79d2052d3057b93e326e5c95d0db516f17b77ff309ff7116ca46221e5ffb6ffd",
+  "final_live_session": {
+    "session": "9e61e9f4a4844302ab7e9a597f264b9e",
+    "manager_pid": 26796,
+    "service_pid": 26798,
+    "qt_pid": null,
+    "phase": "running",
+    "visible": false,
+    "lan_preview_port": 8091,
+    "lan_event_port": 8092,
+    "detection": "idle; manual start required"
+  },
+  "previous_session_final_cleanup": {
+    "sessions": [
+      "96f7b07221fd4fd4bb94296dc6e6309f",
+      "cdfe3449863e4bd6a2220eb581ae0fff",
+      "5951db129f474227822271fbf70fe951",
+      "04e791c565b64324ab04ea25603da180"
+    ],
+    "cleanup_completed": true,
+    "resource_lease_released": true,
+    "service_exit": 0,
+    "manager_service_qt_gone": true,
+    "ports_closed": true,
+    "control_socket_gone": true
+  },
+  "preserved_pre_doc_refresh_root": "/userdata/helmet-validation/20261124-native-app-v7-r3-pre-doc-refresh",
+  "preserved_pre_link_fix_root": "/userdata/helmet-validation/20261124-native-app-v7-r3-pre-link-fix",
+  "limits": [
+    "The final background session intentionally has no Qt UI until an icon is opened."
+  ]
+}

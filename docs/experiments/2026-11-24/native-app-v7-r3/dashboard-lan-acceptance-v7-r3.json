@@ -1,0 +1,81 @@
+{
+  "kind": "v7-r3-lan-dashboard-acceptance",
+  "tested_at": "2026-11-24T12:42:34.449757+08:00",
+  "client": {
+    "kind": "Windows host on the same LAN",
+    "local_ip": "192.168.1.6"
+  },
+  "board": {
+    "hostname": "ATK-DLRK3568",
+    "ip": "192.168.1.10",
+    "root": "/userdata/helmet-validation/20261124-native-app-v7-r3"
+  },
+  "http": {
+    "root": {
+      "status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 19098,
+      "set_cookie": false
+    },
+    "health": {
+      "status": 200,
+      "body": "ok"
+    },
+    "alerts_compatibility": {
+      "status": 302,
+      "location": "/"
+    },
+    "post_events": {
+      "status": 405
+    },
+    "content_security_policy": "default-src 'none'; img-src 'self' data:; style-src 'unsafe-inline'; script-src 'unsafe-inline'; connect-src 'self'; base-uri 'none'; frame-ancestors 'none'; form-action 'none'",
+    "x_content_type_options": "nosniff"
+  },
+  "page_contract": {
+    "danger_marker": true,
+    "clear_marker": true,
+    "watch_marker": true,
+    "unknown_marker": true,
+    "traceable_record_label": true
+  },
+  "current_status": {
+    "store": {
+      "records": 0,
+      "bytes": 0,
+      "corrupt_records": 0,
+      "retention_days": 7,
+      "max_bytes": 268435456,
+      "max_events": 5000,
+      "closed": false
+    },
+    "detection": {
+      "state": "no-detection",
+      "running": true,
+      "valid": true,
+      "generation": "f18bbe06ec264c7aaa724ccef60339bc",
+      "alarm_state": "unknown",
+      "frame_id": 2701,
+      "source_epoch": 0
+    },
+    "viewer": {
+      "alive": true,
+      "port": 8092,
+      "scope": "lan"
+    },
+    "events_created": 0,
+    "last_event_at": null
+  },
+  "events": {
+    "events": [],
+    "next_before": null,
+    "day": null
+  },
+  "media": {
+    "tested": false,
+    "reason": "the live archive truthfully contained zero records during this run"
+  },
+  "limits": [
+    "No physical phone was used.",
+    "The camera remained connected and continued producing valid frames, but no bare head was present; no live no-hat event was fabricated."
+  ]
+}

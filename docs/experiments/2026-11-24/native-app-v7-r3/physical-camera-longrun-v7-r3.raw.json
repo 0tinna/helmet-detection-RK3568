@@ -1,0 +1,190 @@
+{
+  "kind": "v7-r3-board-longrun",
+  "session": "96f7b07221fd4fd4bb94296dc6e6309f",
+  "started_at": "2026-11-24T04:41:36.187266+00:00",
+  "ended_at": "2026-11-24T04:44:36.599386+00:00",
+  "requested_seconds": 180,
+  "sample_count": 13,
+  "service": {
+    "pid": 22510,
+    "state": "S",
+    "starttime": 961830
+  },
+  "ui": {
+    "pid": 22610,
+    "starttime": 971781,
+    "uid": 0
+  },
+  "frame_id_start": 1005,
+  "frame_id_end": 6317,
+  "frame_growth": 5312,
+  "checks": {
+    "duration_at_least_180": true,
+    "frames_monotonic": true,
+    "frame_growth_positive": true,
+    "running_all_samples": true,
+    "viewer_alive_all_samples": true,
+    "service_identity_stable": true,
+    "ui_identity_stable": true,
+    "dashboard_matches_private": false
+  },
+  "passed": false,
+  "samples": [
+    {
+      "at": "2026-11-24T04:41:36.404458+00:00",
+      "state": "no-detection",
+      "running": true,
+      "valid": true,
+      "alarm_state": "unknown",
+      "frame_id": 1005,
+      "source_epoch": 0,
+      "dashboard_alarm_state": "unknown",
+      "dashboard_frame_id": 1009,
+      "viewer_alive": true
+    },
+    {
+      "at": "2026-11-24T04:41:51.670893+00:00",
+      "state": "no-detection",
+      "running": true,
+      "valid": true,
+      "alarm_state": "unknown",
+      "frame_id": 1453,
+      "source_epoch": 0,
+      "dashboard_alarm_state": "unknown",
+      "dashboard_frame_id": 1456,
+      "viewer_alive": true
+    },
+    {
+      "at": "2026-11-24T04:42:06.826375+00:00",
+      "state": "no-detection",
+      "running": true,
+      "valid": true,
+      "alarm_state": "unknown",
+      "frame_id": 1903,
+      "source_epoch": 0,
+      "dashboard_alarm_state": "unknown",
+      "dashboard_frame_id": 1903,
+      "viewer_alive": true
+    },
+    {
+      "at": "2026-11-24T04:42:21.991684+00:00",
+      "state": "no-detection",
+      "running": true,
+      "valid": true,
+      "alarm_state": "unknown",
+      "frame_id": 2347,
+      "source_epoch": 0,
+      "dashboard_alarm_state": "unknown",
+      "dashboard_frame_id": 2351,
+      "viewer_alive": true
+    },
+    {
+      "at": "2026-11-24T04:42:37.145233+00:00",
+      "state": "no-detection",
+      "running": true,
+      "valid": true,
+      "alarm_state": "unknown",
+      "frame_id": 2797,
+      "source_epoch": 0,
+      "dashboard_alarm_state": "unknown",
+      "dashboard_frame_id": 2800,
+      "viewer_alive": true
+    },
+    {
+      "at": "2026-11-24T04:42:52.307618+00:00",
+      "state": "no-detection",
+      "running": true,
+      "valid": true,
+      "alarm_state": "unknown",
+      "frame_id": 3244,
+      "source_epoch": 0,
+      "dashboard_alarm_state": "unknown",
+      "dashboard_frame_id": 3246,
+      "viewer_alive": true
+    },
+    {
+      "at": "2026-11-24T04:43:07.669779+00:00",
+      "state": "no-detection",
+      "running": true,
+      "valid": true,
+      "alarm_state": "unknown",
+      "frame_id": 3685,
+      "source_epoch": 0,
+      "dashboard_alarm_state": "unknown",
+      "dashboard_frame_id": 3686,
+      "viewer_alive": true
+    },
+    {
+      "at": "2026-11-24T04:43:22.777159+00:00",
+      "state": "no-detection",
+      "running": true,
+      "valid": true,
+      "alarm_state": "unknown",
+      "frame_id": 4138,
+      "source_epoch": 0,
+      "dashboard_alarm_state": "unknown",
+      "dashboard_frame_id": 4141,
+      "viewer_alive": true
+    },
+    {
+      "at": "2026-11-24T04:43:37.978179+00:00",
+      "state": "no-detection",
+      "running": true,
+      "valid": true,
+      "alarm_state": "unknown",
+      "frame_id": 4587,
+      "source_epoch": 0,
+      "dashboard_alarm_state": "unknown",
+      "dashboard_frame_id": 4590,
+      "viewer_alive": true
+    },
+    {
+      "at": "2026-11-24T04:43:53.132749+00:00",
+      "state": "no-detection",
+      "running": true,
+      "valid": true,
+      "alarm_state": "unknown",
+      "frame_id": 5033,
+      "source_epoch": 0,
+      "dashboard_alarm_state": "unknown",
+      "dashboard_frame_id": 5039,
+      "viewer_alive": true
+    },
+    {
+      "at": "2026-11-24T04:44:08.260675+00:00",
+      "state": "no-detection",
+      "running": true,
+      "valid": true,
+      "alarm_state": "unknown",
+      "frame_id": 5483,
+      "source_epoch": 0,
+      "dashboard_alarm_state": "unknown",
+      "dashboard_frame_id": 5486,
+      "viewer_alive": true
+    },
+    {
+      "at": "2026-11-24T04:44:23.347676+00:00",
+      "state": "no-detection",
+      "running": true,
+      "valid": true,
+      "alarm_state": "unknown",
+      "frame_id": 5935,
+      "source_epoch": 0,
+      "dashboard_alarm_state": "unknown",
+      "dashboard_frame_id": 5935,
+      "viewer_alive": true
+    },
+    {
+      "at": "2026-11-24T04:44:36.338236+00:00",
+      "state": "no-detection",
+      "running": true,
+      "valid": true,
+      "alarm_state": "unknown",
+      "frame_id": 6317,
+      "source_epoch": 0,
+      "dashboard_alarm_state": "unknown",
+      "dashboard_frame_id": 6317,
+      "viewer_alive": true
+    }
+  ]
+}

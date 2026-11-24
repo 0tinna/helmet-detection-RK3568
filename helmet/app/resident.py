@@ -1007,7 +1007,7 @@ class ResidentManager:
         value = self.workspace.read_json('service-state.json', MAX_REPLY_BYTES)
         if value is not None and value.get('session') == self.session:
             fields = ('detection_stopped', 'wifi_stopped', 'alert_stopped',
-                      'alert_viewer_alive', 'alert_port', 'mail', 'http_alive',
+                      'alert_viewer_alive', 'alert_port', 'http_alive',
                       'cleanup_completed', 'detection_alive', 'wifi_alive',
                       'state', 'received_at', 'lan_alive', 'lan_port')
             with self.application.lock:

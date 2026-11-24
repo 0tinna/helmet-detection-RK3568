@@ -1,0 +1,48 @@
+{
+  "kind": "v7-r3-vendor-and-boot-entry-migration",
+  "recorded_at": "2026-11-24T12:46:42.765286+08:00",
+  "backup_root": "/userdata/helmet-validation/vendor-backups/20261124-v7-r3",
+  "backup_files": [
+    "apk3.cfg.before",
+    "apk3.sha256.before",
+    "helmet_app.link",
+    "helmet_wifi.link",
+    "helmet_app.svg.link",
+    "helmet_wifi.svg.link",
+    "helmet-detection.desktop.before",
+    "helmet-wifi.desktop.before",
+    "S99zhelmet-app.link",
+    "init-target.before"
+  ],
+  "vendor_config": {
+    "path": "/opt/ui/src/ATK-DLRK3568/apk3.cfg",
+    "sha256_before": "f64a8e2f751ff777b98a36a13a0ad062e0812f2bd6ebd7914a512b772f507b11",
+    "changed": false,
+    "contains_existing_entries": [
+      "helmet_app",
+      "helmet_wifi"
+    ]
+  },
+  "current_targets": {
+    "/opt/ui/src/apps/helmet_app": "/userdata/helmet-validation/20261124-native-app-v7-r3/vendor-entry/helmet_app",
+    "/opt/ui/src/apps/helmet_wifi": "/userdata/helmet-validation/20261124-native-app-v7-r3/vendor-entry/helmet_wifi",
+    "/opt/ui/src/appicons/helmet_app.svg": "/userdata/helmet-validation/20261124-native-app-v7-r3/src/app/icons/helmet.svg",
+    "/opt/ui/src/appicons/helmet_wifi.svg": "/userdata/helmet-validation/20261124-native-app-v7-r3/src/app/icons/wifi.svg",
+    "/etc/init.d/S99zhelmet-app": "/userdata/helmet-validation/20261124-native-app-v7-r3/src/app/autostart.sh"
+  },
+  "desktop_entries_updated": [
+    "/root/.local/share/applications/helmet-detection.desktop",
+    "/root/.local/share/applications/helmet-wifi.desktop"
+  ],
+  "programmatic_checks": {
+    "both_vendor_wrappers_reused_the_same_session": true,
+    "wifi_then_detection_switched_tabs_without_restarting_qt": true,
+    "init_status_reused_the_running_session": true
+  },
+  "systemui_restarted": false,
+  "whole_board_rebooted": false,
+  "limits": [
+    "The vendor launcher reads apk3.cfg at systemui start. A human must decide whether to restart systemui so a newly added tile list is refreshed.",
+    "The existing two helmet entries were already present, so this migration changed links and desktop Exec targets without needing an apk3.cfg byte change."
+  ]
+}

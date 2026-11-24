@@ -1,0 +1,47 @@
+{
+  "kind": "v7-r3-longrun-derived-analysis",
+  "analyzed_at": "2026-11-24T12:45:04.399744+08:00",
+  "source": "physical-camera-longrun-v7-r3.raw.json",
+  "source_raw_passed": false,
+  "raw_failed_check": "dashboard_matches_private",
+  "raw_failure_reason": "The raw check required exact frame_id equality across two sequential HTTP requests made several milliseconds apart while detection continued.",
+  "elapsed_seconds": 180.41212,
+  "sample_count": 13,
+  "frame_id_start": 1005,
+  "frame_id_end": 6317,
+  "frame_growth": 5312,
+  "approximate_frame_id_cadence_per_second": 29.44369812848494,
+  "dashboard_minus_private_frame_deltas": [
+    4,
+    3,
+    0,
+    4,
+    3,
+    2,
+    1,
+    3,
+    3,
+    6,
+    3,
+    0,
+    0
+  ],
+  "dashboard_absolute_frame_lag_max": 6,
+  "checks": {
+    "duration_at_least_180": true,
+    "frames_monotonic": true,
+    "running_all_samples": true,
+    "valid_all_samples": true,
+    "viewer_alive_all_samples": true,
+    "alarm_state_matches_between_interfaces": true,
+    "dashboard_frame_lag_bounded_10": true,
+    "service_identity_stable": true,
+    "ui_identity_stable": true
+  },
+  "passed": true,
+  "limits": [
+    "The cadence is status frame-id growth, not a separately measured NPU inference FPS claim.",
+    "No bare head was present, so this run did not create or validate a no-hat event.",
+    "This is physical UVC input but not human observation of the physical screen."
+  ]
+}

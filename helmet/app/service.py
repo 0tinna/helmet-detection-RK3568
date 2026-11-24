@@ -341,8 +341,8 @@ class DetectionController:
             try:
                 self.alert_hub.observe(packet, alert_jpeg, alert_generation)
             except BaseException:
-                # Event evidence and notification failures never fault the
-                # detector or erase an otherwise valid preview.
+                # Event evidence failures never fault the detector or erase
+                # an otherwise valid preview.
                 pass
 
     def preview_package(self, after_capture=None, frame_token=None):
@@ -871,8 +871,6 @@ class LocalService:
         wifi_alive = worker is not None and worker.is_alive()
         if self.alert_hub is None:
             alert_status = {
-                'mail': {'configured': False, 'state': 'disabled',
-                         'worker_alive': False},
                 'viewer': {'alive': False, 'port': None},
             }
         else:
@@ -880,14 +878,8 @@ class LocalService:
                 alert_status = self.alert_hub.status()
             except BaseException:
                 alert_status = {
-                    'mail': {'configured': False, 'state': 'unavailable',
-                             'worker_alive': False},
                     'viewer': {'alive': False, 'port': None},
                 }
-        mail = alert_status.get('mail')
-        if not isinstance(mail, dict):
-            mail = {'configured': False, 'state': 'unavailable',
-                    'worker_alive': False}
         viewer = alert_status.get('viewer')
         if not isinstance(viewer, dict):
             viewer = {'alive': False, 'port': None}
@@ -900,7 +892,6 @@ class LocalService:
                 'alert_viewer_alive': alert_viewer_alive,
                 'alert_port': alert_port,
                 'alert_stopped': self.alert_stopped,
-                'mail': mail,
                 'http_alive': self.thread is not None and self.thread.is_alive() and not self.closed,
                 'cleanup_completed': (self.closed and not detection_alive and not wifi_alive
                                       and self.alert_stopped),

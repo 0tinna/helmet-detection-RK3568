@@ -1,74 +1,11 @@
-"""Authenticated LAN-only event archive HTTP delivery."""
-from datetime import datetime, timedelta, timezone
+"""Direct LAN-only event archive HTTP delivery."""
 import http.client
 import importlib
 import json
-import os
 from pathlib import Path
-import stat
 import tempfile
 import unittest
 from urllib.parse import parse_qs, urlsplit
-
-
-class AlertAccessKeyTests(unittest.TestCase):
-    def module(self):
-        try:
-            return importlib.import_module('helmet.app.alert_viewer')
-        except ImportError as error:
-            self.fail('public event viewer is not implemented: ' + str(error))
-
-    def test_private_key_mode_rejects_group_or_world_permissions(self):
-        module = self.module()
-        self.assertTrue(module._private_key_mode(0o100600))
-        self.assertFalse(module._private_key_mode(0o100644))
-        self.assertFalse(module._private_key_mode(0o100660))
-
-    def key_path(self):
-        directory = tempfile.TemporaryDirectory()
-        self.addCleanup(directory.cleanup)
-        return Path(directory.name) / 'private' / 'event-access.key'
-
-    def test_key_file_is_private_and_never_overwritten(self):
-        module = self.module()
-        path = self.key_path()
-        first = module.AlertAccessKey.load_or_create(path)
-        first_bytes = path.read_bytes()
-        second = module.AlertAccessKey.load_or_create(path)
-        self.assertEqual(first_bytes, path.read_bytes())
-        self.assertGreaterEqual(len(first_bytes), 32)
-        if os.name != 'nt':
-            self.assertEqual(stat.S_IMODE(path.stat().st_mode), 0o600)
-        token = first.make_invite()
-        self.assertTrue(first.verify_invite(token))
-        self.assertTrue(second.verify_invite(token))
-
-    def test_invite_rejects_tampering_expiration_and_another_key(self):
-        module = self.module()
-        first = module.AlertAccessKey.load_or_create(self.key_path())
-        second = module.AlertAccessKey.load_or_create(self.key_path())
-        now = datetime(2026, 11, 24, 12, 0, tzinfo=timezone.utc)
-        token = first.make_invite(now=now, ttl=60)
-        self.assertTrue(first.verify_invite(token, now=now + timedelta(seconds=59)))
-        self.assertFalse(first.verify_invite(token + 'x', now=now))
-        self.assertFalse(first.verify_invite(token, now=now + timedelta(seconds=61)))
-        self.assertFalse(second.verify_invite(token, now=now))
-
-    def test_cookie_value_is_bound_to_hmac_and_url_encodes_invite(self):
-        module = self.module()
-        key = module.AlertAccessKey.load_or_create(self.key_path())
-        now = datetime(2026, 11, 24, 12, 0, tzinfo=timezone.utc)
-        cookie = key.cookie_value(now=now)
-        self.assertTrue(key.verify_cookie(cookie, now=now))
-        self.assertFalse(key.verify_cookie(cookie + 'x', now=now))
-        original = key.make_invite
-        key.make_invite = lambda now=None: 'invite&value'
-        url = key.url_path('192.168.1.10', lan_port=18092,
-                           scheme='https', now=now)
-        key.make_invite = original
-        self.assertEqual(url, 'https://192.168.1.10:18092/alerts?access=invite%26value')
-        with self.assertRaises(ValueError):
-            key.url_path('203.0.113.10', lan_port=8092, now=now)
 
 
 class LanEventServerTests(unittest.TestCase):
@@ -84,12 +21,22 @@ class LanEventServerTests(unittest.TestCase):
             '2026-11-23T10:00:00.000+08:00', b'first-jpeg')
         self.second = self.publish(
             '2026-11-24T10:00:00.000+08:00', b'second-jpeg')
-        self.key = self.module.AlertAccessKey.load_or_create(
-            self.root / 'app-state' / 'event-access.key')
         self.server = self.module.LanEventServer(
-            self.store, self.key,
-            lambda: {'detection': 'running', 'mail': {'state': 'idle'},
-                     'viewer': {'alive': True, 'scope': 'lan'}},
+            self.store,
+            lambda: {
+                'events_created': 2,
+                'last_event_at': self.second['captured_wall_time'],
+                'detection': {
+                    'state': 'healthy',
+                    'running': True,
+                    'valid': True,
+                    'generation': 'run-a',
+                    'alarm_state': 'active',
+                    'frame_id': 42,
+                    'source_epoch': 3,
+                },
+                'viewer': {'alive': True, 'scope': 'lan'},
+            },
             host='127.0.0.1', port=0, max_clients=1)
         self.addCleanup(self.server.close)
         self.server.start()
@@ -100,7 +47,7 @@ class LanEventServerTests(unittest.TestCase):
             return importlib.import_module('helmet.app.alert_viewer')
         except ImportError as error:
             raise AssertionError(
-                'public event viewer is not implemented: ' + str(error))
+                'LAN event viewer is not implemented: ' + str(error))
 
     def candidate(self, wall_time):
         return self.events.EventCandidate(
@@ -131,129 +78,134 @@ class LanEventServerTests(unittest.TestCase):
         finally:
             connection.close()
 
-    def login(self):
-        path = self.key.url_path('127.0.0.1', lan_port=self.server.port)
-        parsed = urlsplit(path)
-        token = parse_qs(parsed.query)['access'][0]
-        code, _, headers = self.request('/alerts?access=' + token)
-        self.assertEqual(code, 302)
-        return headers['Set-Cookie'].split(';', 1)[0]
-
-    def test_event_data_and_media_require_a_valid_access_cookie(self):
-        for route in ('/events', '/api/events', '/api/status',
+    def test_dashboard_api_and_media_are_directly_available(self):
+        for route in ('/', '/events', '/api/events',
+                      '/api/status',
                       '/events/%s.jpg' % self.second['event_id']):
             with self.subTest(route=route):
-                self.assertEqual(self.request(route)[0], 403)
-        code, body, headers = self.request('/alerts?access=bad')
-        self.assertEqual(code, 403)
-        self.assertNotIn('Set-Cookie', headers)
-        cookie = self.login()
-        code, body, _ = self.request('/api/events?limit=1',
-                                     headers={'Cookie': cookie})
-        self.assertEqual(code, 200)
+                code, _, headers = self.request(route)
+                self.assertEqual(code, 200)
+                self.assertNotIn('Set-Cookie', headers)
+        code, body, _ = self.request('/api/events?limit=1')
         value = json.loads(body)
         self.assertEqual(len(value['events']), 1)
-        self.assertEqual(value['events'][0]['event_id'], self.second['event_id'])
+        self.assertEqual(value['events'][0]['event_id'],
+                         self.second['event_id'])
         self.assertNotIn('generation', value['events'][0])
+        self.assertNotIn('email', value['events'][0])
         code, body, _ = self.request(
-            '/events/%s.jpg' % self.second['event_id'],
-            headers={'Cookie': cookie})
-        self.assertEqual(code, 200)
-        self.assertEqual(body, b'second-jpeg')
+            '/events/%s.jpg' % self.second['event_id'])
+        self.assertEqual((code, body), (200, b'second-jpeg'))
 
-    def test_access_redirect_sets_strict_httponly_cookie(self):
-        path = self.key.url_path('127.0.0.1', lan_port=self.server.port)
-        token = parse_qs(urlsplit(path).query)['access'][0]
-        code, _, headers = self.request('/alerts?access=' + token)
+    def test_old_alerts_bookmark_redirects_without_authentication(self):
+        code, _, headers = self.request('/alerts?access=old-token')
         self.assertEqual(code, 302)
-        self.assertEqual(headers['Location'], '/events')
-        cookie = headers['Set-Cookie']
-        self.assertIn('HttpOnly', cookie)
-        self.assertIn('SameSite=Strict', cookie)
-        self.assertIn('Path=/', cookie)
+        self.assertEqual(headers['Location'], '/')
+        self.assertNotIn('Set-Cookie', headers)
 
-    def test_root_is_a_data_free_entry_page_without_refresh_loop(self):
+    def test_root_is_the_read_only_dashboard_and_has_no_notification_ui(self):
         code, body, headers = self.request('/')
         self.assertEqual(code, 200)
-        self.assertIn('同一 Wi-Fi/局域网'.encode('utf-8'), body)
-        self.assertNotIn('公网 IP'.encode('utf-8'), body)
-        self.assertNotIn(b'/api/status', body)
-        self.assertNotIn(self.second['event_id'].encode('ascii'), body)
+        text = body.decode('utf-8')
+        self.assertIn('HELMET SAFETY GRID', text)
+        self.assertIn('当前告警', text)
+        self.assertIn('可追溯报警记录', text)
+        self.assertIn('href="#content"', text)
+        self.assertNotIn('access=', text)
+        self.assertNotIn('邀请', text)
+        self.assertNotIn('邮件', text)
+        self.assertNotIn('公网 IP', text)
         self.assertEqual(headers['Cache-Control'], 'no-store')
 
     def test_pagination_filters_and_public_metadata(self):
-        cookie = self.login()
         code, body, _ = self.request(
-            '/api/events?limit=1&before=' + self.second['event_id'],
-            headers={'Cookie': cookie})
+            '/api/events?limit=1&before=' + self.second['event_id'])
         self.assertEqual(code, 200)
         value = json.loads(body)
         self.assertEqual([row['event_id'] for row in value['events']],
                          [self.first['event_id']])
-        code, body, _ = self.request(
-            '/api/events?day=2026-11-24', headers={'Cookie': cookie})
+        code, body, _ = self.request('/api/events?day=2026-11-24')
         self.assertEqual(code, 200)
         self.assertEqual([row['event_id'] for row in json.loads(body)['events']],
                          [self.second['event_id']])
+        for route in ('/api/events?limit=no', '/api/events?day=nope',
+                      '/api/events?limit=1&limit=2'):
+            with self.subTest(route=route):
+                self.assertEqual(self.request(route)[0], 400)
 
     def test_no_live_or_control_routes_are_exposed(self):
-        cookie = self.login()
-        headers = {'Cookie': cookie}
         for route in ('/frame.jpg', '/stream.mjpg', '/status.json',
-                      '/api/start', '/api/stop'):
+                      '/api/start', '/api/stop', '/api/wifi'):
             with self.subTest(route=route):
-                self.assertEqual(self.request(route, headers=headers)[0], 404)
-        for method in ('POST', 'PUT', 'DELETE', 'PATCH'):
+                self.assertEqual(self.request(route)[0], 404)
+        for method in ('POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS'):
             with self.subTest(method=method):
-                self.assertEqual(self.request('/api/events', method, headers)[0], 405)
+                self.assertEqual(self.request('/api/events', method)[0], 405)
 
-    def test_security_headers_and_cookie_surface(self):
-        cookie = self.login()
-        code, body, headers = self.request('/events', headers={'Cookie': cookie})
+    def test_security_headers_are_present_without_a_cookie_surface(self):
+        code, body, headers = self.request('/')
         self.assertEqual(code, 200)
-        self.assertIn(b'<h1', body)
+        self.assertIn(b'<main', body)
         self.assertEqual(headers['Cache-Control'], 'no-store')
         self.assertEqual(headers['X-Content-Type-Options'], 'nosniff')
         self.assertEqual(headers['X-Frame-Options'], 'DENY')
         self.assertEqual(headers['Referrer-Policy'], 'no-referrer')
         self.assertIn("default-src 'none'", headers['Content-Security-Policy'])
         self.assertNotIn('unsafe-eval', headers['Content-Security-Policy'])
+        self.assertNotIn('Set-Cookie', headers)
 
-    def test_status_does_not_publish_public_ip_or_remote_address_metrics(self):
-        cookie = self.login()
-        code, body, _ = self.request('/api/status', headers={'Cookie': cookie})
+    def test_status_exposes_current_alarm_state_without_private_metrics(self):
+        code, body, _ = self.request('/api/status')
         self.assertEqual(code, 200)
         value = json.loads(body)
-        self.assertNotIn('public_ip', value)
+        self.assertEqual(value['detection']['alarm_state'], 'active')
+        self.assertEqual(value['detection']['frame_id'], 42)
+        self.assertEqual(value['last_event_at'],
+                         self.second['captured_wall_time'])
         self.assertEqual(value['viewer']['scope'], 'lan')
+        self.assertNotIn('mail', value)
+        self.assertNotIn('public_ip', value)
         self.assertNotIn('192.168.1.10', body.decode('utf-8'))
 
     def test_lan_client_guard_rejects_public_or_cgnat_sources(self):
         module = self.module
         self.assertTrue(module._is_lan_client('127.0.0.1'))
         self.assertTrue(module._is_lan_client('192.168.1.10'))
+        self.assertTrue(module._is_lan_client('10.0.0.8'))
         self.assertFalse(module._is_lan_client('8.8.8.8'))
         self.assertFalse(module._is_lan_client('100.64.0.1'))
+        self.assertFalse(module._is_lan_client('2001:db8::1'))
         self.assertFalse(module._is_lan_client('not-an-address'))
 
     def test_health_is_minimal_and_media_capacity_is_bounded(self):
         code, body, _ = self.request('/healthz')
-        self.assertEqual(code, 200)
-        self.assertEqual(body, b'ok')
-        cookie = self.login()
+        self.assertEqual((code, body), (200, b'ok'))
         self.server.media_slots.acquire()
         try:
             code, _, _ = self.request(
-                '/events/%s.jpg' % self.second['event_id'],
-                headers={'Cookie': cookie})
+                '/events/%s.jpg' % self.second['event_id'])
             self.assertEqual(code, 503)
         finally:
             self.server.media_slots.release()
 
+    def test_direct_lan_url_has_no_query_or_token(self):
+        self.assertEqual(
+            self.server.url_path('192.168.1.10'),
+            'http://192.168.1.10:8092/')
+        with self.assertRaises(ValueError):
+            self.server.url_path('8.8.8.8')
+
+    def test_direct_viewer_creates_no_access_key(self):
+        self.assertFalse((self.root / 'app-state').exists())
+        parsed = urlsplit(self.server.url_path('127.0.0.1'))
+        self.assertEqual(parse_qs(parsed.query), {})
+        self.assertEqual(parsed.path, '/')
+
     def test_close_releases_listener(self):
         port = self.server.port
         self.server.close()
-        connection = http.client.HTTPConnection('127.0.0.1', port, timeout=.5)
+        connection = http.client.HTTPConnection(
+            '127.0.0.1', port, timeout=.5)
         try:
             with self.assertRaises(OSError):
                 connection.request('GET', '/')

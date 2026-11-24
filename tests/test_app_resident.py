@@ -307,8 +307,6 @@ class LaunchArgumentsTests(unittest.TestCase):
             'alert_stopped': True,
             'alert_viewer_alive': False,
             'alert_port': None,
-            'mail': {'configured': False, 'state': 'stopped',
-                     'worker_alive': False},
             'http_alive': True,
             'cleanup_completed': False,
             'detection_alive': False,
@@ -321,8 +319,9 @@ class LaunchArgumentsTests(unittest.TestCase):
         manager.application = SimpleNamespace(
             lock=threading.RLock(), progress={}, phase='stopping')
         manager._progress()
-        for name in ('alert_stopped', 'alert_viewer_alive', 'alert_port', 'mail'):
+        for name in ('alert_stopped', 'alert_viewer_alive', 'alert_port'):
             self.assertIn(name, manager.application.progress)
+        self.assertNotIn('mail', manager.application.progress)
 
 
 class OneShotJournalFailureTests(unittest.TestCase):

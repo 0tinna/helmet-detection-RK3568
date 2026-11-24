@@ -1,0 +1,29 @@
+{
+  "kind": "v7-r3-busybox-boot-adapter-lifecycle",
+  "recorded_at": "2026-11-24T12:46:42.765286+08:00",
+  "adapter": "/etc/init.d/S99zhelmet-app",
+  "adapter_target": "/userdata/helmet-validation/20261124-native-app-v7-r3/src/app/autostart.sh",
+  "stop": {
+    "command": "sh /etc/init.d/S99zhelmet-app stop",
+    "result": "stopped=true, phase=completed",
+    "session": "cdfe3449863e4bd6a2220eb581ae0fff"
+  },
+  "start": {
+    "command": "sh /etc/init.d/S99zhelmet-app start",
+    "result": "started=true, detection=manual, visible=false",
+    "session": "5951db129f474227822271fbf70fe951",
+    "lan_port": 8091
+  },
+  "status": {
+    "command": "sh /etc/init.d/S99zhelmet-app status",
+    "phase": "running",
+    "detection_visible": false,
+    "lan_alive": true,
+    "alert_viewer_alive": true,
+    "alert_port": 8092
+  },
+  "passed": true,
+  "limits": [
+    "The BusyBox adapter was exercised directly. A full-board reboot and systemui restart were not performed."
+  ]
+}

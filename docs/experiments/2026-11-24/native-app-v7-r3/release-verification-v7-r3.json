@@ -1,0 +1,45 @@
+{
+  "kind": "v7-r3-host-release-verification",
+  "verified_at": "2026-11-24T12:57:27.571944+08:00",
+  "archive": {
+    "path": "dist/helmet-native-app-20261124-v7-r3.zip",
+    "bytes": 39257948,
+    "sha256": "553667bec091d565b46557f533b546145d2e0e5ae47af0c03506c140ce8d9df8",
+    "entries": 45,
+    "payload_files": 44
+  },
+  "identity": {
+    "code_identity": "0ab9946fb6c73822ace68c4aaacedbba52ff5adbf6a603b77b45702a7febf0bb",
+    "alert_feature_identity": "79d2052d3057b93e326e5c95d0db516f17b77ff309ff7116ca46221e5ffb6ffd"
+  },
+  "checks": {
+    "archive_sha_matches_manifest": true,
+    "sidecar_matches_archive": true,
+    "entry_count": true,
+    "unique_entries": true,
+    "internal_manifest_matches_external": true,
+    "payload_hashes_match": true,
+    "no_forbidden_members": true,
+    "no_runtime_state_or_cache": true,
+    "current_v7_r3_doc_only": true,
+    "vendor_entry_modes": true,
+    "runtime_payload_identical_to_pre_link_fix": true
+  },
+  "pre_link_fix_comparison": {
+    "archive_sha256": "c08a82b001cac1620712ba756c6779d96dd5e01114c39752b05792f48f8e4c39",
+    "runtime_file_differences": [],
+    "documentation_file_differences": [
+      "docs/未戴安全帽告警与内网事件站-v7-r3.md"
+    ]
+  },
+  "board_staging_verification": {
+    "verified": true,
+    "state": "final-link-fixed-package-verified-in-staging-and-atomically-installed",
+    "root": "/userdata/helmet-validation/20261124-native-app-v7-r3",
+    "files": 45,
+    "payload_files": 44,
+    "forbidden_members": 0,
+    "manifest_verified": true
+  },
+  "passed": true
+}

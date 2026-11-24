@@ -65,11 +65,8 @@ def install(argv=None):
     required_files = (
         'alert_events.py',
         'alert_hub.py',
-        'alert_mail.py',
         'alert_viewer.py',
         'launch.py',
-        'mail.example.json',
-        'mail_probe.py',
         'resident.py',
         'service.py',
         'wifi.py',

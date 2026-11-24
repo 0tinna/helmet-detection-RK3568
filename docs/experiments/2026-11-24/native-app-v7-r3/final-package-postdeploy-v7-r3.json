@@ -1,0 +1,54 @@
+{
+  "kind": "v7-r3-final-package-postdeploy",
+  "recorded_at": "2026-11-24T12:57:27.571944+08:00",
+  "archive": {
+    "sha256": "553667bec091d565b46557f533b546145d2e0e5ae47af0c03506c140ce8d9df8",
+    "bytes": 39257948,
+    "entries": 45
+  },
+  "root": "/userdata/helmet-validation/20261124-native-app-v7-r3",
+  "preserved_pre_doc_root": "/userdata/helmet-validation/20261124-native-app-v7-r3-pre-doc-refresh",
+  "preserved_pre_link_fix_root": "/userdata/helmet-validation/20261124-native-app-v7-r3-pre-link-fix",
+  "manifest_verified_on_board": true,
+  "code_identity": "0ab9946fb6c73822ace68c4aaacedbba52ff5adbf6a603b77b45702a7febf0bb",
+  "alert_feature_identity": "79d2052d3057b93e326e5c95d0db516f17b77ff309ff7116ca46221e5ffb6ffd",
+  "session": {
+    "id": "9e61e9f4a4844302ab7e9a597f264b9e",
+    "manager_pid": 26796,
+    "service_pid": 26798,
+    "qt_pid": null,
+    "phase": "running",
+    "visible": false
+  },
+  "http": {
+    "8092_health": {
+      "status": 200,
+      "body": "ok"
+    },
+    "8092_status": {
+      "status": 200,
+      "state": "idle",
+      "alarm_state": "unknown",
+      "viewer_alive": true,
+      "scope": "lan"
+    },
+    "8092_events": {
+      "status": 200,
+      "count": 0
+    },
+    "8091_status": {
+      "status": 200,
+      "state": "idle",
+      "alarm_state": "unknown"
+    }
+  },
+  "entries": {
+    "/opt/ui/src/apps/helmet_app": "v7-r3 same resident reused",
+    "/opt/ui/src/apps/helmet_wifi": "v7-r3 same resident reused",
+    "/etc/init.d/S99zhelmet-app": "v7-r3 background start succeeded"
+  },
+  "passed": true,
+  "limits": [
+    "No entity phone, real no-hat person event, physical unplug, human screen inspection, systemui restart or whole-board reboot was performed in this postdeploy check."
+  ]
+}

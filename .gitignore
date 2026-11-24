@@ -78,11 +78,15 @@ docs/experiments/**/*.bmp
 !docs/experiments/2026-11-15/native-app-usability-v4-phase2-1/formal-1/post-migration-link-detection.png
 !docs/experiments/2026-11-15/native-app-usability-v4-phase2-1/formal-1/post-migration-link-retry-screen.png
 !docs/experiments/2026-11-15/app-lan-autostart/host/offline-mobile-3.png
+!docs/experiments/2026-11-24/native-app-v7-r3/dashboard-host-edge.png
 
-# Release artifacts: retain the current v7-r2 candidate, the accepted v6-r2,
+# Release artifacts: retain the current v7-r3 candidate, the prior v7-r2,
+# the accepted v6-r2,
 # the superseded v6-r1 and its rejected wrapper candidate, and the archived
 # accepted v5-r3/v4-r2. Pre-review candidates remain local evidence.
 dist/*
+!dist/helmet-native-app-20261124-v7-r3.zip
+!dist/helmet-native-app-20261124-v7-r3.zip.sha256
 !dist/helmet-native-app-20261124-v7-r2.zip
 !dist/helmet-native-app-20261124-v7-r2.zip.sha256
 !dist/helmet-native-app-20261124-v7-r1.zip
@@ -102,3 +106,7 @@ dist/*
 !dist/helmet-offline-20261114-final.zip.sha256
 !dist/helmet-offline-20261114-v2.zip.sha256
 !dist/helmet-offline-20261114.zip.sha256
+
+# Local presentation workspace and school deck; never include in the app release.
+/ppt_pic/
+/开题答辩PPT-李灏轩-基于RK3568的离线安全帽检测与状态闭环系统.pptx
