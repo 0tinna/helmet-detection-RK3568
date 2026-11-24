@@ -1,4 +1,4 @@
-"""Authenticated public event-only HTTP delivery."""
+"""Authenticated LAN-only event archive HTTP delivery."""
 from datetime import datetime, timedelta, timezone
 import http.client
 import importlib
@@ -27,7 +27,7 @@ class AlertAccessKeyTests(unittest.TestCase):
     def key_path(self):
         directory = tempfile.TemporaryDirectory()
         self.addCleanup(directory.cleanup)
-        return Path(directory.name) / 'private' / 'public-access.key'
+        return Path(directory.name) / 'private' / 'event-access.key'
 
     def test_key_file_is_private_and_never_overwritten(self):
         module = self.module()
@@ -63,13 +63,15 @@ class AlertAccessKeyTests(unittest.TestCase):
         self.assertFalse(key.verify_cookie(cookie + 'x', now=now))
         original = key.make_invite
         key.make_invite = lambda now=None: 'invite&value'
-        url = key.url_path('203.0.113.10', public_port=18092,
+        url = key.url_path('192.168.1.10', lan_port=18092,
                            scheme='https', now=now)
         key.make_invite = original
-        self.assertEqual(url, 'https://203.0.113.10:18092/alerts?access=invite%26value')
+        self.assertEqual(url, 'https://192.168.1.10:18092/alerts?access=invite%26value')
+        with self.assertRaises(ValueError):
+            key.url_path('203.0.113.10', lan_port=8092, now=now)
 
 
-class PublicEventServerTests(unittest.TestCase):
+class LanEventServerTests(unittest.TestCase):
     def setUp(self):
         self.temp = tempfile.TemporaryDirectory()
         self.addCleanup(self.temp.cleanup)
@@ -83,11 +85,11 @@ class PublicEventServerTests(unittest.TestCase):
         self.second = self.publish(
             '2026-11-24T10:00:00.000+08:00', b'second-jpeg')
         self.key = self.module.AlertAccessKey.load_or_create(
-            self.root / 'app-state' / 'public-access.key')
-        self.server = self.module.PublicEventServer(
+            self.root / 'app-state' / 'event-access.key')
+        self.server = self.module.LanEventServer(
             self.store, self.key,
             lambda: {'detection': 'running', 'mail': {'state': 'idle'},
-                     'public_ip': {'address': '203.0.113.10', 'stale': False}},
+                     'viewer': {'alive': True, 'scope': 'lan'}},
             host='127.0.0.1', port=0, max_clients=1)
         self.addCleanup(self.server.close)
         self.server.start()
@@ -130,7 +132,7 @@ class PublicEventServerTests(unittest.TestCase):
             connection.close()
 
     def login(self):
-        path = self.key.url_path('127.0.0.1', public_port=self.server.port)
+        path = self.key.url_path('127.0.0.1', lan_port=self.server.port)
         parsed = urlsplit(path)
         token = parse_qs(parsed.query)['access'][0]
         code, _, headers = self.request('/alerts?access=' + token)
@@ -160,7 +162,7 @@ class PublicEventServerTests(unittest.TestCase):
         self.assertEqual(body, b'second-jpeg')
 
     def test_access_redirect_sets_strict_httponly_cookie(self):
-        path = self.key.url_path('127.0.0.1', public_port=self.server.port)
+        path = self.key.url_path('127.0.0.1', lan_port=self.server.port)
         token = parse_qs(urlsplit(path).query)['access'][0]
         code, _, headers = self.request('/alerts?access=' + token)
         self.assertEqual(code, 302)
@@ -173,7 +175,8 @@ class PublicEventServerTests(unittest.TestCase):
     def test_root_is_a_data_free_entry_page_without_refresh_loop(self):
         code, body, headers = self.request('/')
         self.assertEqual(code, 200)
-        self.assertIn('使用邮件中的访问链接'.encode('utf-8'), body)
+        self.assertIn('同一 Wi-Fi/局域网'.encode('utf-8'), body)
+        self.assertNotIn('公网 IP'.encode('utf-8'), body)
         self.assertNotIn(b'/api/status', body)
         self.assertNotIn(self.second['event_id'].encode('ascii'), body)
         self.assertEqual(headers['Cache-Control'], 'no-store')
@@ -215,6 +218,23 @@ class PublicEventServerTests(unittest.TestCase):
         self.assertEqual(headers['Referrer-Policy'], 'no-referrer')
         self.assertIn("default-src 'none'", headers['Content-Security-Policy'])
         self.assertNotIn('unsafe-eval', headers['Content-Security-Policy'])
+
+    def test_status_does_not_publish_public_ip_or_remote_address_metrics(self):
+        cookie = self.login()
+        code, body, _ = self.request('/api/status', headers={'Cookie': cookie})
+        self.assertEqual(code, 200)
+        value = json.loads(body)
+        self.assertNotIn('public_ip', value)
+        self.assertEqual(value['viewer']['scope'], 'lan')
+        self.assertNotIn('192.168.1.10', body.decode('utf-8'))
+
+    def test_lan_client_guard_rejects_public_or_cgnat_sources(self):
+        module = self.module
+        self.assertTrue(module._is_lan_client('127.0.0.1'))
+        self.assertTrue(module._is_lan_client('192.168.1.10'))
+        self.assertFalse(module._is_lan_client('8.8.8.8'))
+        self.assertFalse(module._is_lan_client('100.64.0.1'))
+        self.assertFalse(module._is_lan_client('not-an-address'))
 
     def test_health_is_minimal_and_media_capacity_is_bounded(self):
         code, body, _ = self.request('/healthz')

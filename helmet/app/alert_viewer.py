@@ -1,10 +1,10 @@
-"""Read-only authenticated public viewer for persisted helmet events."""
+"""Read-only authenticated LAN viewer for persisted helmet events."""
 import hashlib
 import hmac
+import ipaddress
 import json
 import os
 from pathlib import Path
-import re
 import secrets
 import stat
 import threading
@@ -17,9 +17,11 @@ from urllib.parse import parse_qs, urlencode, urlsplit
 
 COOKIE_NAME = 'helmet_alert_access'
 INVITE_TTL = 2592000
-HOST_NAME = re.compile(r'^(?:[A-Za-z0-9.-]+|\[[0-9A-Fa-f:]+\])$')
-
-
+LAN_NETWORKS = tuple(ipaddress.ip_network(value) for value in (
+    '10.0.0.0/8',
+    '172.16.0.0/12',
+    '192.168.0.0/16',
+))
 PAGE = '''<!doctype html>
 <html lang="zh-CN">
 <head>
@@ -89,14 +91,15 @@ transition-duration:.01ms!important}}
   <div>
     <div class="eyebrow">RK3568 / SAFETY GRID <span>// EVENT ARCHIVE</span></div>
     <h1>现场安全事件</h1>
-    <p class="subtitle">这里只展示已保存的未戴安全帽证据，不提供实时摄像头或控制入口。
+    <p class="subtitle">这里只展示已保存的未戴安全帽证据，仅限与开发板处于同一
+    Wi-Fi/局域网的设备查看，不提供实时摄像头、公网入口或控制功能。
     告警表示模型未识别到安全帽，不作为个人身份判断。</p>
   </div>
 </header>
 <section class="summary" aria-label="事件摘要">
   <div class="metric"><b id="eventCount">--</b><span>当前页事件</span></div>
   <div class="metric"><b id="latestState">检测中</b><span>检测状态</span></div>
-  <div class="metric"><b id="publicState">查询中</b><span>公网地址</span></div>
+  <div class="metric"><b id="accessScope">仅限内网</b><span>访问范围</span></div>
   <div class="metric"><b id="storageState">--</b><span>事件存储</span></div>
 </section>
 <section class="toolbar" aria-label="事件筛选">
@@ -185,9 +188,8 @@ function renderStatus(status){
  text('mailState',labels[mail.state]||'邮件状态未知');
  const mailNode=document.querySelector('#mailState');
  if(mailNode)mailNode.className=mail.state==='failed'?'fault':'ok';
- const address=status.public_ip||{};
- text('publicState',address.address?
-  (address.stale?'公网地址可能已变化':'公网地址可用'):'公网地址暂不可用');
+ const viewer=status.viewer||{};
+ text('accessScope',viewer.alive?'LAN · ONLINE':'LAN · OFFLINE');
  const store=status.store||{};
  text('storageState',(Number(store.records)||0)+' 条 / '+
   Math.round((Number(store.bytes)||0)/1024)+' KiB');
@@ -250,8 +252,8 @@ border:1px solid #1f5264;background:rgba(10,26,37,.9);border-radius:8px}
 h1{font-size:clamp(28px,7vw,46px);line-height:1.05;text-wrap:balance}p{color:#9bb6c2}
 code{color:#52e7d6;overflow-wrap:anywhere}.focus:focus-visible{outline:3px solid #ffbd59}
 </style></head><body><main><h1>现场安全事件</h1>
-<p>使用邮件中的访问链接进入。此入口只展示已保存的历史告警照片，
-不提供实时摄像头、检测控制或网络设置。</p>
+<p>请让手机与开发板连接同一 Wi-Fi/局域网，再使用告警邮件中的访问链接进入。
+此入口只展示已保存的历史告警照片，不提供实时摄像头、公网入口、检测控制或网络设置。</p>
 <p>访问链接包含临时访问密钥，请勿转发给无关人员。若链接已过期，
 请从新告警邮件获取最新链接。</p></main></body></html>'''.encode('utf-8')
 
@@ -266,6 +268,16 @@ def _utc_now(value=None):
 
 def _private_key_mode(mode):
     return stat.S_ISREG(mode) and stat.S_IMODE(mode) & 0o077 == 0
+
+
+def _is_lan_client(address):
+    try:
+        value = ipaddress.ip_address(str(address))
+    except ValueError:
+        return False
+    return (value.version == 4
+            and (value.is_loopback
+                 or any(value in network for network in LAN_NETWORKS)))
 
 
 class AlertAccessKey:
@@ -342,22 +354,22 @@ class AlertAccessKey:
     def verify_cookie(self, value, now=None):
         return self._verify(value, 'cookie', now=now)
 
-    def url_path(self, public_host, public_port=8092, scheme='http', now=None):
-        if not isinstance(public_host, str) or not HOST_NAME.fullmatch(public_host):
-            raise ValueError('public event host is invalid')
-        if type(public_port) is not int or not 1 <= public_port <= 65535:
-            raise ValueError('public event port is invalid')
+    def url_path(self, lan_host, lan_port=8092, scheme='http', now=None):
+        if not _is_lan_client(lan_host):
+            raise ValueError('LAN event host is invalid')
+        if type(lan_port) is not int or not 1 <= lan_port <= 65535:
+            raise ValueError('LAN event port is invalid')
         if scheme not in ('http', 'https'):
-            raise ValueError('public event scheme is invalid')
+            raise ValueError('LAN event scheme is invalid')
         query = urlencode({'access': self.make_invite(now=now)})
-        return '%s://%s:%d/alerts?%s' % (scheme, public_host, public_port, query)
+        return '%s://%s:%d/alerts?%s' % (scheme, lan_host, lan_port, query)
 
 
-class PublicEventServer:
+class LanEventServer:
     def __init__(self, store, access_key, status_provider,
                  host='0.0.0.0', port=8092, max_clients=8):
         if type(max_clients) is not int or max_clients <= 0:
-            raise ValueError('public media client limit must be positive')
+            raise ValueError('LAN media client limit must be positive')
         self.store = store
         self.access_key = access_key
         self.status_provider = status_provider
@@ -429,7 +441,7 @@ class PublicEventServer:
                     owner._failures[client] = values
                     return len(values) > 10
 
-            def public_status(self):
+            def lan_status(self):
                 try:
                     raw = owner.status_provider() if owner.status_provider else {}
                 except BaseException:
@@ -438,7 +450,7 @@ class PublicEventServer:
                     raw = {}
                 detection = raw.get('detection')
                 mail = raw.get('mail')
-                address = raw.get('public_ip')
+                viewer = raw.get('viewer')
                 return {
                     'store': owner.store.status(),
                     'detection': ({key: detection.get(key) for key in
@@ -448,9 +460,17 @@ class PublicEventServer:
                               ('configured', 'state', 'last_result', 'pending_batches',
                                'dropped_batches')}
                              if isinstance(mail, dict) else {}),
-                    'public_ip': ({key: address.get(key) for key in
-                                   ('address', 'checked_at', 'stale')}
-                                  if isinstance(address, dict) else {}),
+                    'viewer': ({
+                        'alive': owner.thread is not None
+                                 and owner.thread.is_alive()
+                                 and not owner.closed.is_set(),
+                        'port': owner.port,
+                        'scope': 'lan',
+                    } if isinstance(viewer, dict) else {
+                        'alive': False,
+                        'port': None,
+                        'scope': 'lan',
+                    }),
                 }
 
             def do_GET(self):
@@ -465,6 +485,9 @@ class PublicEventServer:
             do_PUT = do_DELETE = do_PATCH = do_OPTIONS = do_POST
 
             def dispatch(self):
+                if not _is_lan_client(self.client_address[0]):
+                    self.json(403, {'error': 'LAN access required'})
+                    return
                 url = urlsplit(self.path)
                 route = url.path
                 query = parse_qs(url.query, max_num_fields=8)
@@ -530,7 +553,7 @@ class PublicEventServer:
                     if not self.cookie_valid():
                         self.forbidden()
                     else:
-                        self.json(200, self.public_status())
+                        self.json(200, self.lan_status())
                     return
                 if route.startswith('/events/') and route.endswith('.jpg'):
                     if not self.cookie_valid():
@@ -564,7 +587,7 @@ class PublicEventServer:
 
     def start(self):
         if self.closed.is_set() or self.thread is not None:
-            raise RuntimeError('public event viewer cannot be started twice')
+            raise RuntimeError('LAN event viewer cannot be started twice')
         self.thread = threading.Thread(
             target=self.server.serve_forever,
             kwargs={'poll_interval': .05},
@@ -573,9 +596,9 @@ class PublicEventServer:
         )
         self.thread.start()
 
-    def url_path(self, public_host, public_port=8092, scheme='http', now=None):
+    def url_path(self, lan_host, lan_port=8092, scheme='http', now=None):
         return self.access_key.url_path(
-            public_host, public_port=public_port, scheme=scheme, now=now)
+            lan_host, lan_port=lan_port, scheme=scheme, now=now)
 
     def close(self):
         if self.closed.is_set():

@@ -69,6 +69,7 @@ def install(argv=None):
         'alert_viewer.py',
         'launch.py',
         'mail.example.json',
+        'mail_probe.py',
         'resident.py',
         'service.py',
         'wifi.py',

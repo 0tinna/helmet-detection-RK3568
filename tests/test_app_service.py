@@ -94,7 +94,7 @@ class ControlledAlertHub:
         self.close_calls = []
         self.closed = False
         self.status_providers = []
-        self.status_refresh_flags = []
+        self.status_calls = 0
 
     def start(self):
         self.started += 1
@@ -111,8 +111,8 @@ class ControlledAlertHub:
     def bind_status_provider(self, provider):
         self.status_providers.append(provider)
 
-    def status(self, refresh_public_ip=True):
-        self.status_refresh_flags.append(refresh_public_ip)
+    def status(self):
+        self.status_calls += 1
         return {
             'started': bool(self.started),
             'closed': self.closed,
@@ -718,7 +718,7 @@ class AppServiceTests(unittest.TestCase):
         self.assertIn('running',
                       hub.status_providers[0]())
         progress = self.service.progress()
-        self.assertIn(False, hub.status_refresh_flags)
+        self.assertGreaterEqual(hub.status_calls, 1)
         self.assertTrue(progress['alert_viewer_alive'])
         self.assertEqual(progress['alert_port'], 8092)
         self.assertFalse(progress['mail']['configured'])

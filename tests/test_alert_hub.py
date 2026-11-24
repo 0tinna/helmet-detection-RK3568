@@ -102,22 +102,9 @@ class FakeViewer:
 
 
 class FakeAccessKey:
-    def url_path(self, public_host, public_port=8092, scheme='http', now=None):
+    def url_path(self, lan_host, lan_port=8092, scheme='http', now=None):
         return '%s://%s:%d/alerts?access=fixture-token' % (
-            scheme, public_host, public_port)
-
-
-class FakeResolver:
-    def __init__(self):
-        self.calls = 0
-
-    def resolve(self):
-        self.calls += 1
-        return {
-            'address': '203.0.113.10',
-            'checked_at': '2026-11-24T04:00:00+00:00',
-            'stale': False,
-        }
+            scheme, lan_host, lan_port)
 
 
 class AlertHubTests(unittest.TestCase):
@@ -167,13 +154,11 @@ class AlertHubTests(unittest.TestCase):
         self.tracker = FakeTracker(self.candidate)
         self.mailer = mailer
         self.viewer = viewer
-        self.resolver = FakeResolver()
         return module.AlertHub(
             self.root,
             store=self.store,
             tracker=self.tracker,
             mailer=self.mailer,
-            resolver=self.resolver,
             access_key=FakeAccessKey(),
             viewer=self.viewer,
             host='127.0.0.1',
@@ -310,44 +295,31 @@ class AlertHubTests(unittest.TestCase):
         self.assertFalse(hub.observe(self.packet(), b'jpeg', 'run-a'))
         self.assertEqual(self.store.publish_calls, [])
 
-    def test_from_root_port_zero_needs_no_public_key_or_mail_configuration(self):
+    def test_from_root_port_zero_needs_no_event_key_or_mail_configuration(self):
         module = self.module()
         hub = module.AlertHub.from_root(self.root, port=0)
         self.addCleanup(hub.close, 1)
         hub.start()
         self.assertFalse(hub.status()['viewer']['alive'])
         self.assertEqual(hub.status()['viewer']['port'], None)
-        self.assertFalse((self.root / 'app-state' / 'public-access.key').exists())
+        self.assertFalse((self.root / 'app-state' / 'event-access.key').exists())
 
-    def test_public_url_builder_uses_dynamic_address_and_configured_port(self):
+    def test_lan_url_builder_uses_current_interface_address_and_port(self):
         hub = self.hub()
         self.assertEqual(
-            hub.access_url('203.0.113.10'),
-            'http://203.0.113.10:8092/alerts?access=fixture-token',
+            hub.lan_url('192.168.1.10'),
+            'http://192.168.1.10:8092/alerts?access=fixture-token',
         )
 
-    def test_bound_detection_provider_is_exposed_with_the_public_address(self):
+    def test_bound_detection_provider_is_exposed_without_public_address_state(self):
         hub = self.hub()
         hub.bind_status_provider(
             lambda: {'running': True, 'valid': True, 'state': 'running'})
         hub.start()
         status = hub.status()
         self.assertEqual(status['detection']['running'], True)
-        self.assertEqual(status['public_ip']['address'], '203.0.113.10')
-        self.assertFalse(status['public_ip']['stale'])
-
-    def test_repeated_status_reads_reuse_the_public_address_query(self):
-        hub = self.hub()
-        first = hub.status()
-        second = hub.status()
-        self.assertEqual(first['public_ip'], second['public_ip'])
-        self.assertEqual(self.resolver.calls, 1)
-
-    def test_status_can_read_cached_public_address_without_network(self):
-        hub = self.hub()
-        status = hub.status(refresh_public_ip=False)
-        self.assertIsNone(status['public_ip']['address'])
-        self.assertEqual(self.resolver.calls, 0)
+        self.assertNotIn('public_ip', status)
+        self.assertEqual(status['viewer']['scope'], 'lan')
 
 
 if __name__ == '__main__':

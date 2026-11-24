@@ -1,10 +1,10 @@
 # 基于 RK3568 的离线安全帽检测与状态闭环系统
 
-**当前交付版本：v6-r2，版本 tag：`native-app-v6-r2`。** 本项目使用现成社区 YOLOv5 模型，在 ATK-DLRK3568 上完成本地安全帽头部检测、Qt 全屏、后台常驻、原帧时效校验和可追溯评价。v6-r2 在 v6-r1 的精确二进制预览、双 Image、`8091` 内网查看和 BusyBox 开机入口上，修复回桌面后再次点图标闪退，并让空闲页自动刷新输入源。
+**现场稳定版本：v6-r2，tag `native-app-v6-r2`；当前软件与板端核心链路候选：v7-r2。** 本项目使用现成社区 YOLOv5 模型，在 ATK-DLRK3568 上完成本地安全帽头部检测、Qt 全屏、后台常驻、原帧时效校验和可追溯评价。v6-r2 在 v6-r1 的精确二进制预览、双 Image、`8091` 内网查看和 BusyBox 开机入口上，修复回桌面后再次点图标闪退，并让空闲页自动刷新输入源。v7-r2 增加未戴帽事件照片、SMTP 告警和鉴权 `8092` 内网事件页；主机回归、板端回放事件、程序化隐藏/唤回、180 秒物理摄像头、UVC 断流 TTL、完整退出和重启已通过，真实邮件、实体手机、人工屏幕与物理多人事件仍待现场验收。
 
 日常检测使用板端模型与 USB 摄像头，不需要开发板浏览器、电脑页面或持续联网。项目范围不包含训练、微调、剪枝或蒸馏。
 
-手机连接同一可互通内网后，访问 **`http://192.168.1.3:8091/`**（按当前 IP 调整）。开机入口配置后台待机，图标打开后手动检测；回桌面保留内网查看，完整退出关闭监听。v6-r2 完成窗口可见性冲突修复、输入源自动刷新、五轮程序化隐藏/唤回、双图标复用和完整退出；预览性能沿用 v6-r1 的可见态检测约 7.80 FPS、呈现约 4.40 FPS、Qt CPU 33.25%。物理摄像头热插拔、板屏人工连续性和实体手机仍按[v6-r2 报告](docs/experiments/2026-11-17/native-app-v6-r2/report.md)保留未验。
+手机连接同一可互通内网后，访问 **`http://板端当前IP:8091/`** 查看实时只读状态；v7-r2 另提供需要邀请令牌的 **`http://板端当前IP:8092/`**，只展示已保存的未戴帽事件照片和元数据。两个入口都只用于可信局域网。v7-r2 已移除动态公网 IP 查询、路由器端口映射、手机热点转发和蜂窝网络访问设计。v6-r2 完成窗口可见性冲突修复、输入源自动刷新、五轮程序化隐藏/唤回、双图标复用和完整退出；预览性能沿用 v6-r1 的可见态检测约 7.80 FPS、呈现约 4.40 FPS、Qt CPU 33.25%。物理摄像头热插拔、板屏人工连续性和实体手机仍按[v6-r2 报告](docs/experiments/2026-11-17/native-app-v6-r2/report.md)保留未验。
 
 ## 从哪里开始
 
@@ -18,6 +18,7 @@
 | 准备开题报告、论文与演讲 | [学术材料目录](docs/proposal/README.md) |
 | 直接阅读或演示 | [离线 HTML 手册](docs/deliverables/项目手册.html)、[HTML 演示](docs/deliverables/开题演示.html)、[可编辑 v7 PPT 底稿](docs/deliverables/开题报告-RK3568-v7.pptx) |
 | 核对真实实验和验收收据 | [实验报告索引](docs/experiments/README.md) |
+| 查看已完成、待现场验收和延后功能 | [v7-r2 待办与验收清单](docs/项目待办与验收清单-v7-r2.md) |
 | 查找过期初步文档、原开题与旧 PPT | [历史资料归档](docs/archive/README.md) |
 
 全部资料的目录职责见 [docs/README.md](docs/README.md)。
@@ -27,6 +28,7 @@
 - Qt Quick 板端原生 App：720×1280 全屏、双 Image 连续预览、模型/输入选择、开始/停止和报警截图。
 - 常驻生命周期：回到桌面继续检测，再点任一图标复用同一会话，两个入口只切换检测/WiFi 页面。
 - 内网查看与启动：只读 `8091` 页面共用现有 JPEG/NPU，BusyBox `S99zhelmet-app` 配置后台待机，重复启动复用实例。
+- 未戴帽事件闭环：新轨迹原子保存带框图与 JSON，5 秒聚合 SMTP 告警；鉴权 `8092` 内网事件页支持照片、时间、状态、分页和日期筛选。
 - 原帧与状态闭环：帧 ID、采集时间、generation/source epoch 和 1 秒 TTL 约束预览、报警与保存；停止和断流及时抑制旧结果。
 - WiFi 操作界面：状态、扫描、SSID 选择、屏幕密码键盘和手动连接入口。
 - 共用 CLI 与评价工具：JSONL/会话/资源记录、可选 Web/事件录像、六模型诊断及同源 FP16/INT8 对照。
@@ -37,13 +39,16 @@
 
 | 项目 | 当前值 |
 | --- | --- |
-| 运行包 | [helmet-native-app-20261117-v6-r2.zip](dist/helmet-native-app-20261117-v6-r2.zip) |
-| 发布清单 | [bundle-manifest-v6-r2.json](docs/experiments/2026-11-17/native-app-v6-r2/bundle-manifest-v6-r2.json) |
-| ZIP | 39,236,091 字节，41 entries（40 payload 与内部 manifest） |
-| ZIP SHA256 | `e66dc2983ca28258f28507c16a1be0b3aea637136166fce8c0c125b2a474c2bc` |
-| 板端安装根 | `/userdata/helmet-validation/20261117-native-app-v6-r2` |
+| v7-r2 软件候选包 | [helmet-native-app-20261124-v7-r2.zip](dist/helmet-native-app-20261124-v7-r2.zip) |
+| v7-r2 发布清单 | [bundle-manifest-v7-r2.json](docs/experiments/2026-11-24/native-app-v7-r2/bundle-manifest-v7-r2.json) |
+| v7-r2 ZIP | 39,267,375 字节，48 entries（47 payload 与内部 manifest） |
+| v7-r2 SHA256 | `4d040f6c2c162df8125c41cc002e8d14510f567704262a465d8935a3905a4f4b` |
+| v6-r2 现场稳定包 | [helmet-native-app-20261117-v6-r2.zip](dist/helmet-native-app-20261117-v6-r2.zip)，39,236,091 字节，SHA `e66dc2983ca28258f28507c16a1be0b3aea637136166fce8c0c125b2a474c2bc` |
+| 板端安装根 | v7-r2 候选 `/userdata/helmet-validation/20261124-native-app-v7-r2`；稳定版 `/userdata/helmet-validation/20261117-native-app-v6-r2` |
 | 正式入口 | `/opt/ui/src/apps/helmet_app`、`/opt/ui/src/apps/helmet_wifi` |
-| 开机入口 / tag | `/etc/init.d/S99zhelmet-app` / `native-app-v6-r2` |
+| 开机入口 / tags | `/etc/init.d/S99zhelmet-app` / `native-app-v6-r2`、`native-app-v7-r2` |
+
+[v7-r2 板端核心验收](docs/experiments/2026-11-24/native-app-v7-r2/board-validation.md)记录回放事件、鉴权页面、同一 session/UI/PID 隐藏唤回、180 秒物理摄像头、UVC sysfs 断流 TTL、完整退出和重启；[最终安装收据](docs/experiments/2026-11-24/native-app-v7-r2/installed-release-v7-r2.json)记录 47 个载荷哈希、可执行位、常驻进程和 `8091`/`8092` HTTP 边界。[主机验证](docs/experiments/2026-11-24/native-app-v7-r2/host-validation.md)记录主树 531 项通过（15 skipped）、legacy 25 项通过（1 skipped）、Python 编译、PowerShell 语法解析和整包哈希核验。manifest 明确标记事件站为 LAN-only，ZIP 不包含 SMTP 凭据、访问密钥、事件照片或运行状态；真实 SMTP、实体手机、人工屏幕和物理多人事件仍为 `not-run`。
 
 [v6-r2 可用性修复报告](docs/experiments/2026-11-17/native-app-v6-r2/report.md)记录回桌面复开闪退修复、输入源自动刷新、五轮程序化隐藏/唤回、双图标复用和完整退出：主树 440 项通过（15 skipped）、legacy 25 项通过（1 skipped）；本次回放帧号 `51→132→212→264→345→377`，`session`、UI instance 与 Qt PID 均保持不变。当前板端没有 USB UVC 节点，因此真实热插拔仍待现场验证。
 
@@ -89,6 +94,6 @@ NPU gated 用例需要真实板端模型/运行环境；主机软件测试不代
 
 ## GitHub 保存范围
 
-GitHub 保存源码、测试、模型、v6-r2 当前包、v6-r1 历史正确包与 wrapper 拒绝包、已归档 v5-r3/v4-r2 ZIP、Markdown/HTML/PPTX、实验清单及关键收据；正式版本以带说明的 tag 保存。`.runtime/`、`.venv/`、`.tmp/`、`.superpowers/`、`datasets/raw/`、外部数据图片、大视频/JSONL、其余重复候选 ZIP 和个人模板保留本机。
+GitHub 保存源码、测试、模型、v7-r2 软件候选包、v6-r2 现场稳定包、v7-r1 与 v6-r1 历史包、已归档 v5-r3/v4-r2 ZIP、Markdown/HTML/PPTX、实验清单及关键收据；正式版本以带说明的 tag 保存。`.runtime/`、`.venv/`、`.tmp/`、`.superpowers/`、`datasets/raw/`、外部数据图片、大视频/JSONL、其余重复候选 ZIP 和个人模板保留本机。
 
 历史报告中的本地引用代表原证据位置，克隆仓库时可能没有完整载荷。过期原稿与旧 PPT 的位置和 SHA 见[归档清单](docs/archive/archive-manifest.json)；本次整理说明见[资料整理记录](docs/资料整理记录.md)。

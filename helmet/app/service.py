@@ -877,8 +877,7 @@ class LocalService:
             }
         else:
             try:
-                    alert_status = self.alert_hub.status(
-                        refresh_public_ip=False)
+                alert_status = self.alert_hub.status()
             except BaseException:
                 alert_status = {
                     'mail': {'configured': False, 'state': 'unavailable',

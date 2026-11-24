@@ -1,0 +1,59 @@
+{
+  "schema": 1,
+  "kind": "v7-r2-board-event-viewer-acceptance",
+  "date": "2026-11-24",
+  "fixture": {
+    "source": "hard_hat_workers1006.png",
+    "source_sha256": "27239ab95298c0b9569c8b3411c4ebaa519b8a3219d4bbce9ca404639e6a979f",
+    "source_kind": "archived replay image, not a physical camera event",
+    "model": "helmet_416x416.rknn",
+    "model_sha256": "7e0eefe4bfe86627bb6b58161cacca10912e0dbe1ba2513f58d091c40b26cd48"
+  },
+  "event": {
+    "event_id": "20261124T035229265519Z-c517a41b",
+    "captured_wall_time": "2026-11-24T11:52:29.264+08:00",
+    "frame_id": 2,
+    "source_epoch": 0,
+    "trigger_track_ids": [1, 2, 3, 4, 5, 6, 7, 8],
+    "visible_no_hat_track_ids": [1, 2, 3, 4, 5, 6, 7, 8],
+    "count": 8,
+    "email_state": "pending",
+    "jpeg_bytes": 40443,
+    "jpeg_sha256": "e8e96fd68c29731b3a1e8dca8478913178fa107b4e29790ab3c971ae3a54d6ab"
+  },
+  "http": {
+    "root": {"status": 200, "content_type": "text/html; charset=utf-8", "bytes": 1168},
+    "health": {"status": 200, "body": "ok"},
+    "events_without_cookie": {"status": 403, "bytes": 34},
+    "api_events_without_cookie": {"status": 403, "bytes": 34},
+    "media_without_cookie": {"status": 403, "bytes": 34},
+    "invite_redirect": {
+      "status": 200,
+      "final_path": "/events",
+      "cookie_count": 1,
+      "contains_safety_grid": true,
+      "bytes": 11968
+    },
+    "api_events": {"status": 200, "event_count": 1},
+    "api_events_date_filter": {"status": 200, "event_count": 1},
+    "api_status": {
+      "status": 200,
+      "scope": "lan",
+      "viewer_alive": true,
+      "store_records": 1,
+      "contains_public_ip": false
+    },
+    "authorized_jpeg": {
+      "status": 200,
+      "content_type": "image/jpeg",
+      "bytes": 40443,
+      "jpeg_signature": true
+    },
+    "post": {"status": 405}
+  },
+  "limits": [
+    "The request was made from the board's same-LAN address, not a physical phone.",
+    "The event image came from replay; physical one-person/multi-person/reentry event capture remains not-run.",
+    "Authentication and viewer behavior passed, but human visual inspection of the cyber UI remains not-run."
+  ]
+}

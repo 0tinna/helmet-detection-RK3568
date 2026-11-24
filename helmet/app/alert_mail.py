@@ -1,7 +1,6 @@
-"""Bounded SMTP alert delivery and dynamic public-address resolution."""
+"""Bounded SMTP alert delivery and local-network address resolution."""
 from collections import deque
 from dataclasses import dataclass, field
-from datetime import datetime, timedelta, timezone
 from email.message import EmailMessage
 from email.utils import parseaddr
 import ipaddress
@@ -10,15 +9,19 @@ import math
 import os
 from pathlib import Path
 import smtplib
+import socket
 import ssl
 import stat
 import threading
 import time
-from urllib.request import urlopen
 
 
 MAX_SETTINGS_BYTES = 64 * 1024
-SHANGHAI = timezone(timedelta(hours=8))
+LAN_NETWORKS = tuple(ipaddress.ip_network(value) for value in (
+    '10.0.0.0/8',
+    '172.16.0.0/12',
+    '192.168.0.0/16',
+))
 
 
 def _valid_email(value):
@@ -108,57 +111,32 @@ class MailSettings:
         )
 
 
-def _default_http_get(url, timeout):
-    with urlopen(url, timeout=timeout) as response:
-        return response.read(1024)
+def _default_lan_address():
+    """Ask the OS which IPv4 source the current route would use."""
+    probe = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+    try:
+        probe.settimeout(.5)
+        # UDP connect only selects a route; it does not send application data.
+        probe.connect(('192.0.2.1', 9))
+        return probe.getsockname()[0]
+    finally:
+        probe.close()
 
 
-class PublicAddressResolver:
-    def __init__(self, url='https://ifconfig.me/ip', timeout=3.0,
-                 cache_seconds=1800, http_get=None):
-        if not isinstance(url, str) or not url.startswith(('https://', 'http://')):
-            raise ValueError('public address endpoint must be HTTP(S)')
-        if (type(timeout) not in (int, float) or not math.isfinite(timeout)
-                or timeout <= 0):
-            raise ValueError('public address timeout must be positive')
-        if type(cache_seconds) not in (int, float) or cache_seconds <= 0:
-            raise ValueError('public address cache must be positive')
-        self.url, self.timeout = url, float(timeout)
-        self.cache_seconds = float(cache_seconds)
-        self.http_get = http_get or _default_http_get
-        self._address = None
-        self._checked_at = None
+class LanAddressResolver:
+    """Resolve one private IPv4 address without contacting an external service."""
+    def __init__(self, address_getter=None):
+        self.address_getter = address_getter or _default_lan_address
 
-    @staticmethod
-    def _now(value=None):
-        if value is None:
-            return datetime.now(timezone.utc)
-        if not isinstance(value, datetime):
-            raise ValueError('public address time must be a datetime')
-        return value.replace(tzinfo=timezone.utc) if value.tzinfo is None else value
-
-    def resolve(self, now=None):
-        observed = self._now(now)
+    def resolve(self):
         try:
-            raw = self.http_get(self.url, self.timeout)
-            if not isinstance(raw, bytes):
-                raise ValueError('public address response must be bytes')
-            text = raw.decode('ascii').strip()
-            lines = text.splitlines()
-            if len(lines) != 1:
-                raise ValueError('public address response is ambiguous')
-            address = str(ipaddress.ip_address(lines[0].strip()))
-        except (OSError, ValueError, UnicodeError):
-            if self._address is None:
-                return {'address': None, 'source': 'unavailable',
-                        'checked_at': None, 'stale': True}
-            age = max(0.0, (observed - self._checked_at).total_seconds())
-            return {'address': self._address, 'source': 'cache',
-                    'checked_at': self._checked_at.isoformat(),
-                    'stale': age > self.cache_seconds}
-        self._address, self._checked_at = address, observed
-        return {'address': address, 'source': 'network',
-                'checked_at': observed.isoformat(), 'stale': False}
+            address = ipaddress.ip_address(str(self.address_getter()).strip())
+            if (address.version != 4
+                    or not any(address in network for network in LAN_NETWORKS)):
+                raise ValueError('address is not a private IPv4 interface')
+            return {'address': str(address), 'source': 'local_interface'}
+        except (OSError, ValueError, TypeError):
+            return {'address': None, 'source': 'unavailable'}
 
 
 @dataclass
@@ -177,8 +155,8 @@ class SmtpAlertMailer:
             raise TypeError('mail settings are required')
         if not callable(access_url_builder):
             raise ValueError('access URL builder is required')
-        if not isinstance(resolver, PublicAddressResolver):
-            raise TypeError('public address resolver is required')
+        if not isinstance(resolver, LanAddressResolver):
+            raise TypeError('LAN address resolver is required')
         self.settings = settings
         self.access_url_builder = access_url_builder
         self.resolver = resolver
@@ -345,22 +323,19 @@ class SmtpAlertMailer:
         message['Subject'] = '[RK3568安全帽告警] 发现 %d 名未戴安全帽人员' % people
         message['From'] = self.settings.sender
         message['To'] = self.settings.recipient
-        observer = ('最近查询于 ' + address['checked_at']
-                    if address.get('checked_at') else '公网地址暂不可用')
-        if address.get('stale'):
-            observer += '（可能已变化）'
-        link = access_url or '公网查看地址暂不可用；请检查公网 IP 和路由器 8092 端口映射'
+        link = (access_url
+                or '内网地址暂不可用；请让手机连接与开发板相同的 Wi-Fi/局域网，'
+                   '然后打开开发板当前 IPv4 的 8092 端口。')
         message.set_content(
             'RK3568 安全帽检测告警\n'
             '发生时间：%s\n'
             '本批人数：%d\n'
             '本批事件：%d\n'
-            '公网 IP：%s\n'
-            '状态：%s\n'
-            '查看事件：%s\n'
+            '内网查看：%s\n'
+            '访问要求：手机与开发板处于同一 Wi-Fi/局域网\n'
             '事件照片默认保留 7 天后自动删除。\n'
             % (first_time, people, len(batch.events),
-               address.get('address') or '未知', observer, link))
+               link))
         if batch.attachment:
             message.add_attachment(
                 batch.attachment, maintype='image', subtype='jpeg',
@@ -378,6 +353,50 @@ class SmtpAlertMailer:
                 connection.quit()
             except (OSError, RuntimeError):
                 pass
+
+    def probe(self):
+        """Send one synchronous configuration test without an event queue."""
+        if not self._configured:
+            raise RuntimeError('SMTP is disabled')
+        address = self.resolver.resolve()
+        access_url = None
+        if address.get('address'):
+            try:
+                access_url = self.access_url_builder(address['address'])
+            except (OSError, ValueError, TypeError):
+                access_url = None
+        link = access_url or (
+            'http://开发板内网IP:8092/'
+            '（请让手机与开发板连接同一 Wi-Fi/局域网）')
+        message = EmailMessage()
+        message['Subject'] = '[RK3568安全帽告警] SMTP自检'
+        message['From'] = self.settings.sender
+        message['To'] = self.settings.recipient
+        message.set_content(
+            '这是一封 RK3568 安全帽告警邮件链路自检。\n'
+            '收到本邮件表示 SMTP 配置可以发送到目标邮箱。\n'
+            '内网事件站：%s\n'
+            '访问要求：手机与开发板处于同一 Wi-Fi/局域网\n'
+            '本邮件不是安全帽检测告警，不包含事件照片。\n'
+            % link)
+        connection = None
+        try:
+            connection = self._connection()
+            connection.login(self.settings.username, self.settings.password)
+            connection.send_message(message)
+        except (OSError, RuntimeError, ValueError, smtplib.SMTPException):
+            raise OSError('SMTP probe failed') from None
+        finally:
+            if connection is not None:
+                try:
+                    connection.quit()
+                except (OSError, RuntimeError):
+                    pass
+        return {
+            'sent': True,
+            'recipient': self.settings.recipient,
+            'lan_address_available': access_url is not None,
+        }
 
     def _send_with_retry(self, batch):
         attempts = len(self.retry_delays) + 1
@@ -439,6 +458,6 @@ def load_mailer(root, access_url_builder, resolver=None, smtp_factory=None):
     return SmtpAlertMailer(
         MailSettings.load(path),
         access_url_builder,
-        resolver or PublicAddressResolver(),
+        resolver or LanAddressResolver(),
         smtp_factory=smtp_factory,
     )

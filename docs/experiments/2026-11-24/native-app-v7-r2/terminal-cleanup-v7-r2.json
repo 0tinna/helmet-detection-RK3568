@@ -1,0 +1,33 @@
+{
+  "schema": 1,
+  "kind": "v7-r2-terminal-cleanup-and-reopen",
+  "date": "2026-11-24",
+  "closed_session": "1c137b50ca8f4a8187ed4b5a10c10190",
+  "previous_session": "3887721c8310416e9263884130b7b8e7",
+  "reopen_created_new_session": true,
+  "before": {
+    "processes": {
+      "manager_pid": 15818,
+      "service_pid": 15820,
+      "qt_pid": 15825
+    },
+    "lan_8091": true,
+    "event_8092": true,
+    "control_socket_exists": true,
+    "resource_lock_available": false
+  },
+  "quit_accepted": true,
+  "elapsed_seconds": 1.103,
+  "after": {
+    "processes": {},
+    "lan_8091": false,
+    "event_8092": false,
+    "control_socket_exists": false,
+    "resource_lock_available": true
+  },
+  "pass": true,
+  "notes": [
+    "The first cleanup attempt also stopped all owners and released the lock, but its pre-quit port capture was ordered after shutdown and was not retained as evidence.",
+    "This record comes from the corrected second run and is the only terminal-cleanup receipt used."
+  ]
+}

@@ -24,6 +24,7 @@ foreach ($name in @(
     'lan.py',
     'launch.py',
     'mail.example.json',
+    'mail_probe.py',
     'resident.py',
     'service.py',
     'wifi.py'

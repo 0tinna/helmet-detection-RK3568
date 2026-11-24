@@ -1,4 +1,4 @@
-"""Compose no-hat tracking, evidence storage, mail and public event access."""
+"""Compose no-hat tracking, evidence storage, mail and LAN event access."""
 from pathlib import Path
 import math
 import threading
@@ -6,18 +6,18 @@ import time
 
 try:
     from .alert_events import AlertEventStore, NoHatTrackTracker
-    from .alert_mail import PublicAddressResolver, load_mailer
-    from .alert_viewer import AlertAccessKey, PublicEventServer
+    from .alert_mail import LanAddressResolver, load_mailer
+    from .alert_viewer import AlertAccessKey, LanEventServer
 except ImportError:
     from alert_events import AlertEventStore, NoHatTrackTracker
-    from alert_mail import PublicAddressResolver, load_mailer
-    from alert_viewer import AlertAccessKey, PublicEventServer
+    from alert_mail import LanAddressResolver, load_mailer
+    from alert_viewer import AlertAccessKey, LanEventServer
 
 
 class AlertHub:
     """One event owner whose failures never escape into detection."""
 
-    def __init__(self, root, *, store, tracker, mailer, resolver, access_key,
+    def __init__(self, root, *, store, tracker, mailer, access_key,
                  host='0.0.0.0', port=8092, viewer=None, viewer_factory=None,
                  cleanup_interval=3600):
         self.root = Path(root).resolve()
@@ -32,7 +32,6 @@ class AlertHub:
         self.store = store
         self.tracker = tracker
         self.mailer = mailer
-        self.resolver = resolver
         self.access_key = access_key
         self.host = host
         self.port = port
@@ -42,7 +41,6 @@ class AlertHub:
         self._state_lock = threading.RLock()
         self._state_condition = threading.Condition(self._state_lock)
         self._event_lock = threading.Lock()
-        self._public_ip_lock = threading.Lock()
         self._cleanup_stop = threading.Event()
         self._cleanup_thread = None
         self._started = False
@@ -59,19 +57,16 @@ class AlertHub:
         self._mailer_closed = mailer is None
         self._store_closed = False
         self._status_provider = None
-        self._public_ip_cache = None
-        self._public_ip_refresh_at = 0.0
 
     @classmethod
-    def from_root(cls, root, port=8092, host='0.0.0.0'):
+    def from_root(cls, root, port=8092, host='0.0.0.0', lan_resolver=None):
         root = Path(root).resolve()
-        resolver = PublicAddressResolver()
+        resolver = lan_resolver or LanAddressResolver()
         hub = cls(
             root,
             store=AlertEventStore(root),
             tracker=NoHatTrackTracker(),
             mailer=None,
-            resolver=resolver,
             access_key=None,
             host=host,
             port=port,
@@ -79,8 +74,8 @@ class AlertHub:
         )
         if port:
             hub.access_key = AlertAccessKey.load_or_create(
-                root / 'app-state' / 'public-access.key')
-            hub.viewer_factory = lambda: PublicEventServer(
+                root / 'app-state' / 'event-access.key')
+            hub.viewer_factory = lambda: LanEventServer(
                 hub.store,
                 hub.access_key,
                 hub.status,
@@ -88,42 +83,21 @@ class AlertHub:
                 port=hub.port,
             )
             hub.mailer = load_mailer(
-                root, hub.access_url, resolver=resolver)
+                root, hub.lan_url, resolver=resolver)
         return hub
 
-    def access_url(self, public_host):
+    def lan_url(self, lan_host):
         with self._state_lock:
             key, port = self.access_key, self.port
         if key is None or not port:
             return None
-        return key.url_path(public_host, public_port=port, scheme='http')
+        return key.url_path(lan_host, lan_port=port, scheme='http')
 
     def bind_status_provider(self, provider):
         if not callable(provider):
             raise ValueError('alert status provider is required')
         with self._state_lock:
             self._status_provider = provider
-
-    def _public_address_status(self, refresh):
-        now = time.monotonic()
-        with self._public_ip_lock:
-            if not refresh:
-                if self._public_ip_cache is not None:
-                    return dict(self._public_ip_cache)
-                return {'address': None, 'checked_at': None, 'stale': True}
-            if (self._public_ip_cache is not None
-                    and now < self._public_ip_refresh_at):
-                return dict(self._public_ip_cache)
-            try:
-                observed = self.resolver.resolve()
-                if not isinstance(observed, dict):
-                    raise TypeError('public address status is invalid')
-                public_ip = dict(observed)
-            except BaseException:
-                public_ip = {'address': None, 'checked_at': None, 'stale': True}
-            self._public_ip_cache = dict(public_ip)
-            self._public_ip_refresh_at = now + 60.0
-            return public_ip
 
     def start(self):
         with self._state_lock:
@@ -256,7 +230,6 @@ class AlertHub:
                 event = self.store.publish(candidate, jpeg, {
                     'model': metadata.get('model'),
                     'selection': selection,
-                    'public_ip': None,
                 })
             except BaseException:
                 with self._state_lock:
@@ -274,9 +247,7 @@ class AlertHub:
                         self._last_error = 'mail_enqueue_failed'
             return True
 
-    def status(self, refresh_public_ip=True):
-        if type(refresh_public_ip) is not bool:
-            raise ValueError('public address refresh must be boolean')
+    def status(self):
         with self._state_lock:
             viewer = self.viewer
             started, closed, generation = self._started, self._closed, self._generation
@@ -296,7 +267,6 @@ class AlertHub:
                 source = nested if isinstance(nested, dict) else observed
                 detection = {key: source.get(key) for key in
                              ('state', 'running', 'valid', 'generation')}
-        public_ip = self._public_address_status(refresh_public_ip)
         try:
             store = self.store.status()
         except BaseException:
@@ -330,12 +300,12 @@ class AlertHub:
             'last_event_at': last_event_at,
             'last_error': last_error,
             'detection': detection,
-            'public_ip': public_ip,
             'store': store,
             'mail': mail,
             'viewer': {
                 'alive': alive,
                 'port': port if port else None,
+                'scope': 'lan',
             },
             'received_at': time.monotonic(),
         }

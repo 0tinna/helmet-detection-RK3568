@@ -6,6 +6,8 @@ import tempfile
 import unittest
 from unittest import mock
 
+import numpy as np
+
 
 class NoHatTrackTrackerTests(unittest.TestCase):
     def module(self):
@@ -35,6 +37,16 @@ class NoHatTrackTrackerTests(unittest.TestCase):
             self.assertIsNone(tracker.observe(
                 frame_id, 10.0 + frame_id / 10,
                 0, 'run-a', [self.detection([12, 11, 52, 50])]))
+
+    def test_pipeline_numpy_boxes_create_a_track_event(self):
+        tracker = self.tracker()
+        first = self.detection(np.array([10, 10, 50, 50], dtype=np.float32))
+        second = self.detection(np.array([11, 10, 51, 50], dtype=np.float32))
+        self.assertIsNone(tracker.observe(1, 10.0, 0, 'run-a', [first]))
+        event = tracker.observe(2, 10.1, 0, 'run-a', [second])
+        self.assertIsNotNone(event)
+        self.assertEqual(event.trigger_track_ids, [1])
+        self.assertEqual(event.detections[0]['box'], [11.0, 10.0, 51.0, 50.0])
 
     def test_two_simultaneous_heads_create_one_candidate_with_two_tracks(self):
         tracker = self.tracker()
@@ -149,7 +161,8 @@ class AlertEventStoreTests(unittest.TestCase):
             candidate or self.candidate(),
             jpeg,
             {'model': 'helmet_416x416.rknn',
-             'selection': {'source': '/dev/video10', 'profile': 'responsive'}},
+             'selection': {'source': '/dev/video10', 'profile': 'responsive'},
+             'public_ip': '203.0.113.10'},
         )
 
     def test_publish_creates_a_dated_jpeg_and_metadata_pair(self):
@@ -167,6 +180,7 @@ class AlertEventStoreTests(unittest.TestCase):
         self.assertEqual(stored['event_id'], record['event_id'])
         self.assertEqual(stored['image'], record['image'])
         self.assertEqual(stored['count'], 1)
+        self.assertNotIn('public_ip', stored)
 
     def test_public_list_is_newest_first_and_hides_private_paths(self):
         store = self.store()
@@ -183,6 +197,7 @@ class AlertEventStoreTests(unittest.TestCase):
         for row in events:
             self.assertNotIn('generation', row)
             self.assertNotIn('media_path', row)
+            self.assertNotIn('public_ip', row)
             self.assertNotIn(str(self.root), json.dumps(row))
 
     def test_event_id_and_media_lookup_reject_invalid_or_outside_paths(self):

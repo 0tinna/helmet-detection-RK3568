@@ -1,0 +1,57 @@
+{
+  "kind": "native-app-installed-release-receipt",
+  "ok": true,
+  "verified_date": "2026-11-24",
+  "board": "ATK-DLRK3568",
+  "board_address": "192.168.1.10",
+  "zip": "helmet-native-app-20261124-v7-r2.zip",
+  "zip_sha256": "4d040f6c2c162df8125c41cc002e8d14510f567704262a465d8935a3905a4f4b",
+  "zip_bytes": 39267375,
+  "uploaded_sha256": "4d040f6c2c162df8125c41cc002e8d14510f567704262a465d8935a3905a4f4b",
+  "deployment_root": "/userdata/helmet-validation/20261124-native-app-v7-r2",
+  "installation_method": "verified-staging-then-whole-root-replacement",
+  "manifest_version": "20261124-v7-r2",
+  "manifest_payload_files_verified": 47,
+  "manifest_hashes_verified": true,
+  "executable_modes_verified": true,
+  "code_identity": "6d1a88d5a822c6846c98aad06356e436417514c903c43b046d326338c75ee7ea",
+  "alert_feature_identity": "75c47b78025ac0d66ee273e92d4b46c549ae3cd6883ad1c40b4ce6d451a88ba1",
+  "session": "4372bd00d7f94daabf6aa3b728cc3a75",
+  "manager_pid": 16669,
+  "service_pid": 16671,
+  "qt_pid": 16682,
+  "ui_instance": "7f92a49dfecf4b54b83b8922764d71e9",
+  "matching_process_count": 3,
+  "ports": {
+    "8091_root_http_status": 200,
+    "8092_root_http_status": 200,
+    "8092_health_http_status": 200,
+    "8092_events_without_cookie_http_status": 403
+  },
+  "runtime_access_key_mode": "600",
+  "mail_config_present": false,
+  "mail_state": "not_configured",
+  "hide_show_reuse": {
+    "hide_sequence": 2,
+    "wifi_show_sequence": 3,
+    "detection_show_sequence": 4,
+    "same_session": true,
+    "same_service_pid": true,
+    "same_qt_pid": true,
+    "same_ui_instance": true,
+    "final_ack": {
+      "visible": true,
+      "tab": "detection",
+      "applied": true
+    }
+  },
+  "still_not_run": [
+    "real SMTP authentication and school-mailbox delivery",
+    "physical phone access to the LAN event viewer",
+    "human screen, touch and icon observation",
+    "physical people generating no-hat events",
+    "physical cable removal instead of UVC sysfs unbind",
+    "manual Wi-Fi authentication and failure recovery",
+    "physical retention cleanup over time"
+  ]
+}

@@ -1,4 +1,4 @@
-"""Execute the public event page at browser timer/fetch boundaries."""
+"""Execute the LAN event page at browser timer/fetch boundaries."""
 import importlib
 import json
 import re
@@ -13,7 +13,7 @@ class AlertViewerBrowserTests(unittest.TestCase):
         try:
             page = importlib.import_module('helmet.app.alert_viewer').PAGE.decode('utf-8')
         except (ImportError, AttributeError) as error:
-            self.fail('public event page is not implemented: ' + str(error))
+            self.fail('LAN event page is not implemented: ' + str(error))
         script = re.search(r'<script>([\s\S]*?)</script>', page).group(1)
         harness = r'''
 const vm=require('node:vm'), assert=require('node:assert/strict');
@@ -29,7 +29,7 @@ class Node{
  setAttribute(name,value){this.attributes[name]=value}
 }
 const selectors=['events','emptyState','connectionState','eventCount','latestState','storageState',
- 'mailState','publicState','dayFilter','applyFilter','loadMore','emptyTitle','emptyHint'];
+ 'mailState','accessScope','dayFilter','applyFilter','loadMore','emptyTitle','emptyHint'];
 const elements={};for(const id of selectors)elements['#'+id]=new Node();
 const document={querySelector:selector=>elements[selector]||new Node(),
  createElement:tag=>new Node(tag),addEventListener:(name,fn)=>{document.ready=fn}};
@@ -75,19 +75,20 @@ assert.match(elements['#connectionState'].textContent,/重试/);
 assert.equal(elements['#connectionState'].textContent.includes('private network detail'),false);
 ''')
 
-    def test_stale_public_address_and_mail_failure_are_visible(self):
+    def test_lan_scope_and_mail_failure_are_visible(self):
         self.run_page(r'''
 renderStatus({
  detection:{state:'running'},
  mail:{state:'failed'},
- public_ip:{address:'203.0.113.10',stale:true},
+ viewer:{alive:true,scope:'lan'},
  store:{records:4,bytes:8192}
 });
-assert.match(elements['#publicState'].textContent,/可能已变化/);
+assert.match(elements['#accessScope'].textContent,/ONLINE/);
 assert.match(elements['#mailState'].textContent,/失败/);
 assert.match(elements['#storageState'].textContent,/4/);
 renderStatus({detection:{state:'idle'},mail:{state:'not_configured'},
- public_ip:{address:null,stale:true},store:{records:0,bytes:0}});
+ viewer:{alive:false,scope:'lan'},store:{records:0,bytes:0}});
+assert.match(elements['#accessScope'].textContent,/OFFLINE/);
 assert.match(elements['#mailState'].textContent,/未配置/);
 ''')
 

@@ -1,0 +1,36 @@
+{
+  "schema": 1,
+  "kind": "v7-r2-uvc-unbind-ttl",
+  "date": "2026-11-24",
+  "session": "3887721c8310416e9263884130b7b8e7",
+  "method": "Linux uvcvideo sysfs unbind/rebind; not a physical cable unplug",
+  "interfaces": ["2-1:1.1", "2-1:1.0"],
+  "before": {
+    "state": "healthy",
+    "valid": true,
+    "frame_id": 9,
+    "preview_status": 200
+  },
+  "after_unbind": {
+    "state": "degraded",
+    "valid": false,
+    "frame_id": 24,
+    "source_epoch": 46,
+    "read_failure": 46,
+    "invalidated_after_seconds": 0.116,
+    "preview_status": 503,
+    "old_frame_remained_available": false
+  },
+  "stop": {"stopped": true, "state": "stopped"},
+  "rebind": {
+    "camera_source": "/dev/video10",
+    "recovered_state": "healthy",
+    "recovered_frame_id": 5,
+    "recovered_valid": true,
+    "stop_receipt": "stopped"
+  },
+  "limits": [
+    "This exercises the same source interruption/freshness path used by removal.",
+    "A physical cable unplug on the final installed screen remains not-run."
+  ]
+}

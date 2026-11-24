@@ -105,6 +105,13 @@ class NoHatTrackTracker:
             if not isinstance(item, (list, tuple)) or len(item) != 3:
                 raise ValueError('invalid detection row')
             box, wearing, score = item
+            # Pipeline detections carry NumPy coordinates; persist and track
+            # plain Python numbers instead of silently dropping every box.
+            if not isinstance(box, (list, tuple)) and callable(getattr(box, 'tolist', None)):
+                try:
+                    box = box.tolist()
+                except (TypeError, ValueError):
+                    continue
             if wearing or not _valid_box(box):
                 continue
             if type(score) not in (int, float) or not math.isfinite(score):
@@ -304,7 +311,6 @@ class AlertEventStore:
                 'retention_days': self.retention_days,
                 'model': metadata.get('model'),
                 'selection': metadata.get('selection'),
-                'public_ip': metadata.get('public_ip'),
                 'email': metadata.get('email', {'state': 'pending'}),
             }
             payload = (json.dumps(record, ensure_ascii=False, allow_nan=False,
@@ -337,7 +343,7 @@ class AlertEventStore:
         keys = ('schema', 'event_id', 'captured_wall_time', 'captured_at',
                 'frame_id', 'source_epoch', 'trigger_track_ids',
                 'visible_no_hat_track_ids', 'count', 'detections', 'image',
-                'retention_days', 'model', 'selection', 'public_ip', 'email')
+                'retention_days', 'model', 'selection', 'email')
         return {key: record[key] for key in keys if key in record}
 
     def list_events(self, limit=50, before=None, day=None):

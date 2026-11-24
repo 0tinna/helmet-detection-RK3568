@@ -6,6 +6,10 @@
 
 | 报告 | 可支持的结论 |
 | --- | --- |
+| [v7-r2：主机与板端核心验收](2026-11-24/native-app-v7-r2/board-validation.md) | 完整包解压、回放事件、`8092` 鉴权、程序化常驻、180 秒物理摄像头、UVC 断流 TTL、完整退出和重启均通过；真实 SMTP、实体手机、人工屏幕与物理多人事件仍为 `not-run` |
+| [v7-r2：内网事件站主机验证](2026-11-24/native-app-v7-r2/host-validation.md) | 已移除动态公网 IP、公网入口与 NAT/蜂窝设计；531 项主树回归、SMTP fake、事件存储与发布构建通过，并汇总板端核心结论 |
+| [v7-r2 发布清单](2026-11-24/native-app-v7-r2/bundle-manifest-v7-r2.json) | 39,267,375 B / 48 entries 完整 ZIP、47 个载荷、五文件与告警身份、LAN-only 标志及 secret 排除 |
+| [v7-r2 最终安装收据](2026-11-24/native-app-v7-r2/installed-release-v7-r2.json) | 最终 ZIP 在板端洁净 root 安装，47 个载荷、身份、三个进程、session/UI 复用和 `8091`/`8092` HTTP 边界通过 |
 | [v6-r2：可用性修复与最终验收](2026-11-17/native-app-v6-r2/report.md) | 回桌面复开闪退修复、输入源自动刷新、五轮隐藏/唤回、双图标复用、完整退出、ZIP 模式修正；当前无 USB UVC 节点 |
 | [v6-r2 发布清单](2026-11-17/native-app-v6-r2/bundle-manifest-v6-r2.json) | 39,236,091B/41 entries 完整 ZIP、40 个载荷及五文件身份 |
 | [v6-r2 常驻验收](2026-11-17/native-app-v6-r2/bugfix-acceptance.json) | 同 session/UI/PID、帧号增长、隐藏预览冻结、退出收据 |

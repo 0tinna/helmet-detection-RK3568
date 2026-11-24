@@ -1,11 +1,14 @@
-"""SMTP alert batching, retry and dynamic public-address behavior."""
-from datetime import datetime, timedelta, timezone
+"""SMTP alert batching, retry and LAN-address behavior."""
+from contextlib import redirect_stdout
+import importlib
+import io
 import json
 from pathlib import Path
 import smtplib
 import tempfile
 import time
 import unittest
+from unittest.mock import patch
 
 
 class MailSettingsTests(unittest.TestCase):
@@ -77,56 +80,39 @@ class MailSettingsTests(unittest.TestCase):
         self.assertFalse(module._private_file_mode(0o100660))
 
 
-class PublicAddressResolverTests(unittest.TestCase):
+class LanAddressResolverTests(unittest.TestCase):
     def module(self):
         try:
             from helmet.app import alert_mail
         except ImportError as error:
-            self.fail('public address resolver is not implemented: ' + str(error))
+            self.fail('LAN address resolver is not implemented: ' + str(error))
         return alert_mail
 
-    def test_accepts_one_public_ip_and_rejects_arbitrary_text(self):
+    def test_accepts_one_private_ipv4_interface_address(self):
         module = self.module()
-        resolver = module.PublicAddressResolver(http_get=lambda url, timeout: b'203.0.113.10\n')
+        resolver = module.LanAddressResolver(
+            address_getter=lambda: '192.168.1.10')
         result = resolver.resolve()
-        self.assertEqual(result['address'], '203.0.113.10')
-        self.assertEqual(result['source'], 'network')
-        self.assertFalse(result['stale'])
-        bad = module.PublicAddressResolver(
-            http_get=lambda url, timeout: b'203.0.113.10\nexception text')
-        self.assertIsNone(bad.resolve()['address'])
+        self.assertEqual(result['address'], '192.168.1.10')
+        self.assertEqual(result['source'], 'local_interface')
 
-    def test_cached_address_survives_network_failure_and_marks_stale(self):
+    def test_rejects_loopback_public_ipv6_and_malformed_values(self):
         module = self.module()
-        now = datetime(2026, 11, 24, 12, 0, tzinfo=timezone.utc)
-        calls = [b'203.0.113.10']
+        for value in ('127.0.0.1', '8.8.8.8', '2001:db8::1', 'not-an-ip'):
+            with self.subTest(value=value):
+                resolver = module.LanAddressResolver(
+                    address_getter=lambda value=value: value)
+                result = resolver.resolve()
+                self.assertIsNone(result['address'])
+                self.assertEqual(result['source'], 'unavailable')
 
-        def fetch(url, timeout):
-            value = calls.pop(0) if calls else OSError('endpoint unavailable')
-            if isinstance(value, Exception):
-                raise value
-            return value
-
-        resolver = module.PublicAddressResolver(http_get=fetch, cache_seconds=1800)
-        first = resolver.resolve(now=now)
-        self.assertFalse(first['stale'])
-        calls.append(OSError('secret endpoint response'))
-        cached = resolver.resolve(now=now + timedelta(minutes=10))
-        self.assertEqual(cached['address'], '203.0.113.10')
-        self.assertEqual(cached['source'], 'cache')
-        self.assertFalse(cached['stale'])
-        stale = resolver.resolve(now=now + timedelta(minutes=31))
-        self.assertTrue(stale['stale'])
-        self.assertNotIn('secret endpoint response', json.dumps(stale))
-
-    def test_first_network_failure_is_truthfully_unavailable(self):
+    def test_interface_lookup_failure_is_truthfully_unavailable(self):
         module = self.module()
-        resolver = module.PublicAddressResolver(
-            http_get=lambda url, timeout: (_ for _ in ()).throw(OSError('private')))
+        resolver = module.LanAddressResolver(
+            address_getter=lambda: (_ for _ in ()).throw(OSError('private')))
         result = resolver.resolve()
         self.assertIsNone(result['address'])
         self.assertEqual(result['source'], 'unavailable')
-        self.assertTrue(result['stale'])
         self.assertNotIn('private', json.dumps(result))
 
 
@@ -213,13 +199,14 @@ class SmtpAlertMailerTests(unittest.TestCase):
             'media_path': str(image),
         }
 
-    def resolver(self, address='203.0.113.10'):
+    def resolver(self, address='192.168.1.10'):
         module = self.module()
-        return module.PublicAddressResolver(
-            http_get=lambda url, timeout: (address + '\n').encode('ascii'))
+        return module.LanAddressResolver(
+            address_getter=lambda: address)
 
     def mailer(self, **updates):
         module = self.module()
+        resolver = updates.pop('resolver', self.resolver())
         kwargs = {
             'batch_seconds': .02,
             'retry_delays': (0, 0, 0),
@@ -228,7 +215,7 @@ class SmtpAlertMailerTests(unittest.TestCase):
         mailer = module.SmtpAlertMailer(
             self.settings(),
             lambda address: 'http://%s:8092/alerts?access=test-token' % address,
-            self.resolver(),
+            resolver,
             smtp_factory=FakeSMTP,
             **kwargs,
         )
@@ -260,14 +247,51 @@ class SmtpAlertMailerTests(unittest.TestCase):
         self.assertEqual(message['To'], '230010044@mail.szpu.edu.cn')
         self.assertIn('[RK3568安全帽告警]', message['Subject'])
         body = message.get_body(preferencelist=('plain',)).get_content()
-        self.assertIn('203.0.113.10', body)
-        self.assertIn('http://203.0.113.10:8092/alerts?access=test-token', body)
+        self.assertIn('内网查看', body)
+        self.assertIn('192.168.1.10', body)
+        self.assertIn(
+            'http://192.168.1.10:8092/alerts?access=test-token', body)
+        self.assertNotIn('公网 IP', body)
         self.assertIn('2', message['Subject'])
         attachments = list(message.iter_attachments())
         self.assertEqual(len(attachments), 1)
         self.assertEqual(attachments[0].get_filename(),
                          self.event(1)['event_id'] + '.jpg')
         self.assertTrue(mailer.close())
+
+    def test_missing_lan_address_is_reported_without_a_fake_link(self):
+        module = self.module()
+        resolver = module.LanAddressResolver(
+            address_getter=lambda: (_ for _ in ()).throw(OSError('offline')))
+        mailer = self.mailer(resolver=resolver)
+        mailer.start()
+        mailer.enqueue([self.event()])
+        status = self.wait_idle(mailer)
+        self.assertEqual(status['last_result'], 'sent')
+        message = FakeSMTP.instances[0].messages[0]
+        body = message.get_body(preferencelist=('plain',)).get_content()
+        self.assertIn('内网地址暂不可用', body)
+        self.assertIn('同一 Wi-Fi/局域网', body)
+        self.assertNotIn('http://203.0.113.10', body)
+        self.assertNotIn('公网 IP', body)
+        self.assertTrue(mailer.close())
+
+    def test_smtp_probe_sends_one_short_message_without_an_event(self):
+        mailer = self.mailer()
+        result = mailer.probe()
+        self.assertTrue(result['sent'])
+        self.assertTrue(result['lan_address_available'])
+        self.assertEqual(len(FakeSMTP.instances), 1)
+        smtp = FakeSMTP.instances[0]
+        self.assertEqual(len(smtp.messages), 1)
+        message = smtp.messages[0]
+        self.assertEqual(message['To'], '230010044@mail.szpu.edu.cn')
+        self.assertIn('SMTP自检', message['Subject'])
+        self.assertEqual(list(message.iter_attachments()), [])
+        body = message.get_body(preferencelist=('plain',)).get_content()
+        self.assertIn('192.168.1.10', body)
+        self.assertIn('同一 Wi-Fi/局域网', body)
+        self.assertNotIn('private-auth-code', body)
 
     def test_failure_retries_three_times_then_reports_without_secret_text(self):
         FakeSMTP.failures_remaining = 10
@@ -358,6 +382,59 @@ class SmtpAlertMailerTests(unittest.TestCase):
         self.assertFalse(mailer.enqueue([self.event()]))
         self.assertEqual(FakeSMTP.instances, [])
         self.assertTrue(mailer.close())
+
+
+class MailProbeCliTests(unittest.TestCase):
+    class ProbeMailer:
+        def __init__(self, error=None):
+            self.error = error
+            self.closed = False
+
+        def probe(self):
+            if self.error is not None:
+                raise self.error
+            return {
+                'sent': True,
+                'recipient': '230010044@mail.szpu.edu.cn',
+                'lan_address_available': True,
+            }
+
+        def close(self, timeout=3):
+            self.closed = True
+            return True
+
+    def module(self):
+        return importlib.import_module('helmet.app.mail_probe')
+
+    def run_main(self, mailer):
+        module = self.module()
+        output = io.StringIO()
+        with patch.object(module, 'build_mailer', return_value=mailer):
+            with redirect_stdout(output):
+                code = module.main(['--root', 'unused'])
+        return code, output.getvalue()
+
+    def test_success_is_machine_readable_and_closes_the_mailer(self):
+        mailer = self.ProbeMailer()
+        code, output = self.run_main(mailer)
+        self.assertEqual(code, 0)
+        self.assertEqual(json.loads(output), {
+            'ok': True,
+            'sent': True,
+            'recipient': '230010044@mail.szpu.edu.cn',
+            'lan_address_available': True,
+        })
+        self.assertTrue(mailer.closed)
+
+    def test_failure_is_sanitized_and_still_closes_the_mailer(self):
+        mailer = self.ProbeMailer(OSError('private SMTP response body'))
+        code, output = self.run_main(mailer)
+        self.assertEqual(code, 1)
+        value = json.loads(output)
+        self.assertFalse(value['ok'])
+        self.assertEqual(value['error'], 'mail_probe_failed')
+        self.assertNotIn('private SMTP response body', output)
+        self.assertTrue(mailer.closed)
 
 
 if __name__ == '__main__':

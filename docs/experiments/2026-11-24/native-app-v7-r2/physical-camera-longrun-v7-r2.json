@@ -1,0 +1,53 @@
+{
+  "schema": 1,
+  "kind": "v7-r2-physical-camera-180s",
+  "date": "2026-11-24",
+  "session": "3887721c8310416e9263884130b7b8e7",
+  "manager_pid": 12789,
+  "service_pid": 12791,
+  "qt_pid": 12850,
+  "source": "/dev/video10",
+  "model": "helmet_416x416.rknn",
+  "model_sha256": "7e0eefe4bfe86627bb6b58161cacca10912e0dbe1ba2513f58d091c40b26cd48",
+  "profile": "responsive",
+  "duration_target_seconds": 180,
+  "elapsed_seconds": 184.465,
+  "samples": 37,
+  "frame_start": 13,
+  "frame_end": 5345,
+  "frame_increment": 5332,
+  "frame_monotonic": true,
+  "fps": {
+    "captured": 28.6,
+    "detected": 9.8,
+    "output": 9.8,
+    "displayed": 0.0
+  },
+  "counters": {
+    "captured": 5353,
+    "consumed": 1796,
+    "detected": 1795,
+    "detection_failure": 0,
+    "read_failure": 0,
+    "output": 1754,
+    "output_overwritten": 40
+  },
+  "latency_ms": {
+    "infer_mean": 56.62268763258834,
+    "infer_p95": 77.03293780014062,
+    "capture_to_output_mean": 176.47578791831842,
+    "capture_to_output_p95": 292.88235039985005,
+    "capture_to_sink_complete_mean": 237.01686671433797,
+    "capture_to_sink_complete_p95": 381.5136862005601
+  },
+  "processes": {
+    "initial_count": 3,
+    "final_count": 3,
+    "no_accumulation": true
+  },
+  "stop": {"stopped": true, "state": "stopped"},
+  "limits": [
+    "The 180-second run proves continuous source/detection/process stability.",
+    "It does not alone prove physical no-hat event quality, human-observed flicker-free display, or SMTP delivery."
+  ]
+}
