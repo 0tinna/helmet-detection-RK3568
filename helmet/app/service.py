@@ -37,6 +37,11 @@ except ImportError:
                           validate_install)
 
 try:
+    from .alert_hub import AlertHub
+except ImportError:
+    from alert_hub import AlertHub
+
+try:
     from ..pipeline_runtime import Pipeline
 except ImportError:
     # Allows app/service.py to run in the existing flat board src tree.
@@ -122,9 +127,10 @@ def _camera_sources(device_root=Path('/dev'), sysfs_root=Path('/sys/class/video4
 
 
 class DetectionController:
-    def __init__(self, root, pipeline_factory=Pipeline):
+    def __init__(self, root, pipeline_factory=Pipeline, alert_hub=None):
         self.root = Path(root).resolve()
         self.pipeline_factory = pipeline_factory
+        self.alert_hub = alert_hub
         self.lock = threading.RLock()
         self.pipeline = None
         self.worker = None
@@ -217,10 +223,13 @@ class DetectionController:
                                    no_display=True, duration=0, shutdown_timeout=2.0,
                                    save_dir=str(snapshots),
                                    save_interval=0)
+            run_uuid = uuid.uuid4().hex
+            if self.alert_hub is not None:
+                self.alert_hub.reset(run_uuid)
             pipeline = self.pipeline_factory(args, output_callback=lambda p: self.on_packet(p, generation),
                                              event_callback=lambda event: None)
             self.pipeline, self.generation = pipeline, generation
-            self.run_uuid = uuid.uuid4().hex
+            self.run_uuid = run_uuid
             self.selection = {'model': model, 'source': source, 'profile': profile}
 
             def run():
@@ -314,6 +323,7 @@ class DetectionController:
             with self.lock:
                 self._clear_preview()
             raise
+        alert_jpeg = alert_generation = None
         with self.lock:
             if self.pipeline is pipeline and not self.closed and not self.stopping:
                 self.jpeg, self.frame = jpeg, packet if jpeg is not None else None
@@ -326,6 +336,14 @@ class DetectionController:
                     }
                     while len(self.preview_packages) > MAX_PREVIEW_PACKAGES:
                         self.preview_packages.popitem(last=False)
+                    alert_jpeg, alert_generation = jpeg, self.run_uuid
+        if alert_jpeg is not None and self.alert_hub is not None:
+            try:
+                self.alert_hub.observe(packet, alert_jpeg, alert_generation)
+            except BaseException:
+                # Event evidence and notification failures never fault the
+                # detector or erase an otherwise valid preview.
+                pass
 
     def preview_package(self, after_capture=None, frame_token=None):
         if (after_capture is not None and (type(after_capture) not in (int, float)
@@ -531,7 +549,7 @@ class WifiActions:
 
 class LocalService:
     def __init__(self, controller, wifi, token=None, port=0, application=None,
-                 lan_port=None, lan_host='0.0.0.0'):
+                 lan_port=None, lan_host='0.0.0.0', alert_hub=None):
         self.controller, self.wifi = controller, wifi
         self.token = token or secrets.token_urlsafe(32)
         self.actions = WifiActions(wifi)
@@ -543,6 +561,12 @@ class LocalService:
         self.thread = None
         self.lan = None
         self.lan_port, self.lan_host = lan_port, lan_host
+        self.alert_hub = alert_hub
+        self.alert_stopped = alert_hub is None
+        if alert_hub is not None:
+            bind_status = getattr(alert_hub, 'bind_status_provider', None)
+            if bind_status is not None:
+                bind_status(self.controller.status)
         owner = self
 
         class Handler(BaseHTTPRequestHandler):
@@ -740,16 +764,33 @@ class LocalService:
     def start(self):
         if self.closed or self.thread is not None:
             raise RuntimeError('service cannot be started twice')
-        if self.lan_port is not None:
-            try:
-                from .lan import LanPreview
-            except ImportError:
-                from lan import LanPreview
-            self.lan = LanPreview(self.controller, host=self.lan_host, port=self.lan_port)
-            self.lan.start()
-        self.thread = threading.Thread(target=self.server.serve_forever,
-                                       kwargs={'poll_interval': .05}, name='helmet-app-http', daemon=True)
-        self.thread.start()
+        try:
+            if self.alert_hub is not None:
+                self.alert_hub.start()
+                self.alert_stopped = False
+            if self.lan_port is not None:
+                try:
+                    from .lan import LanPreview
+                except ImportError:
+                    from lan import LanPreview
+                self.lan = LanPreview(self.controller, host=self.lan_host, port=self.lan_port)
+                self.lan.start()
+            self.thread = threading.Thread(
+                target=self.server.serve_forever,
+                kwargs={'poll_interval': .05}, name='helmet-app-http', daemon=True)
+            self.thread.start()
+        except BaseException:
+            if self.lan is not None:
+                try:
+                    self.lan.close()
+                except BaseException:
+                    pass
+            if self.alert_hub is not None:
+                try:
+                    self.alert_stopped = self.alert_hub.close(3.0)
+                except BaseException:
+                    self.alert_stopped = False
+            raise
 
     def application_snapshot(self):
         if self.application is None:
@@ -828,12 +869,42 @@ class LocalService:
         detection_alive = self.controller.status()['running']
         worker = self.actions.worker
         wifi_alive = worker is not None and worker.is_alive()
+        if self.alert_hub is None:
+            alert_status = {
+                'mail': {'configured': False, 'state': 'disabled',
+                         'worker_alive': False},
+                'viewer': {'alive': False, 'port': None},
+            }
+        else:
+            try:
+                    alert_status = self.alert_hub.status(
+                        refresh_public_ip=False)
+            except BaseException:
+                alert_status = {
+                    'mail': {'configured': False, 'state': 'unavailable',
+                             'worker_alive': False},
+                    'viewer': {'alive': False, 'port': None},
+                }
+        mail = alert_status.get('mail')
+        if not isinstance(mail, dict):
+            mail = {'configured': False, 'state': 'unavailable',
+                    'worker_alive': False}
+        viewer = alert_status.get('viewer')
+        if not isinstance(viewer, dict):
+            viewer = {'alive': False, 'port': None}
+        alert_viewer_alive = viewer.get('alive') is True
+        alert_port = viewer.get('port')
         return {'state': 'stopping' if self.stopping else 'running',
                 'detection_alive': detection_alive, 'wifi_alive': wifi_alive,
                 'detection_stopped': self.stopping and not detection_alive,
                 'wifi_stopped': self.stopping and not wifi_alive,
+                'alert_viewer_alive': alert_viewer_alive,
+                'alert_port': alert_port,
+                'alert_stopped': self.alert_stopped,
+                'mail': mail,
                 'http_alive': self.thread is not None and self.thread.is_alive() and not self.closed,
-                'cleanup_completed': self.closed and not detection_alive and not wifi_alive,
+                'cleanup_completed': (self.closed and not detection_alive and not wifi_alive
+                                      and self.alert_stopped),
                 'lan_alive': self.lan is not None and self.lan.thread is not None
                     and self.lan.thread.is_alive() and not self.lan.closed.is_set(),
                 'lan_port': self.lan.port if self.lan is not None else None,
@@ -855,7 +926,15 @@ class LocalService:
             deadline = time.monotonic() + max(0, timeout)
             detection_stopped = self.controller.close(max(0, deadline - time.monotonic()))
             wifi_stopped = self.actions.close(max(0, deadline - time.monotonic()))
-            if detection_stopped and wifi_stopped:
+            if detection_stopped and self.alert_hub is not None:
+                try:
+                    self.alert_stopped = self.alert_hub.close(
+                        max(0, deadline - time.monotonic()))
+                except BaseException:
+                    self.alert_stopped = False
+            elif detection_stopped:
+                self.alert_stopped = True
+            if detection_stopped and wifi_stopped and self.alert_stopped:
                 if self.lan is not None:
                     self.lan.close()
                 self.closed = True
@@ -863,7 +942,9 @@ class LocalService:
                     self.server.shutdown()
                     self.thread.join(max(0, deadline - time.monotonic()))
                 self.server.server_close()
-            return {'detection_stopped': detection_stopped, 'wifi_stopped': wifi_stopped}
+            return {'detection_stopped': detection_stopped,
+                    'wifi_stopped': wifi_stopped,
+                    'alert_stopped': self.alert_stopped}
 
 
 def _private_file(path, text):
@@ -881,6 +962,8 @@ def main(argv=None):
     parser.add_argument('--port', type=int, default=0)
     parser.add_argument('--lan-port', type=int, default=8091,
                         help='read-only LAN preview port; 0 disables it')
+    parser.add_argument('--alert-port', type=int, default=8092,
+                        help='authenticated event-only public port; 0 disables alerts')
     parser.add_argument('--token-file', required=True)
     parser.add_argument('--ready-file', required=True)
     parser.add_argument('--wifi-interface', default='wlan0')
@@ -894,6 +977,8 @@ def main(argv=None):
         parser.error('port must be within 0..65535')
     if not 0 <= args.lan_port <= 65535:
         parser.error('LAN port must be within 0..65535')
+    if not 0 <= args.alert_port <= 65535:
+        parser.error('alert port must be within 0..65535')
     if (args.lease_fd is None) != (args.lease_dir is None):
         parser.error('inherited resource descriptor and lease directory are paired')
     if args.lease_dir is not None and Path(args.lease_dir) != COORDINATOR_ROOT:
@@ -913,6 +998,7 @@ def main(argv=None):
         parser.error('lifecycle receipt must use the fixed private session file')
     if args.resident_session is not None and token_path.parent.name != 'session-' + args.resident_session:
         parser.error('private workspace must match the resident session')
+    alert_hub = AlertHub.from_root(root, port=args.alert_port) if args.alert_port else None
     coordinator = Coordinator().prepare()
     lease = (retain_resource_lease(args.lease_fd, args.lease_dir) if args.lease_fd is not None
              else coordinator.acquire('resource.lock'))
@@ -923,14 +1009,21 @@ def main(argv=None):
         from wifi import WifiBackend
     application = (ResidentConnection(root, args.resident_session, args.resident_dir)
                    if args.resident_session is not None else None)
-    service = LocalService(DetectionController(root), WifiBackend(interface=args.wifi_interface),
-                           port=args.port, application=application, lan_port=args.lan_port or None)
+    service = LocalService(
+        DetectionController(root, alert_hub=alert_hub),
+        WifiBackend(interface=args.wifi_interface),
+        port=args.port,
+        application=application,
+        lan_port=args.lan_port or None,
+        alert_hub=alert_hub,
+    )
     stopped = threading.Event()
     for number in (signal.SIGTERM, signal.SIGINT):
         signal.signal(number, lambda number, frame: stopped.set())
     signal.signal(signal.SIGHUP, signal.SIG_IGN)
     failed = False
-    result = {'detection_stopped': False, 'wifi_stopped': False}
+    result = {'detection_stopped': False, 'wifi_stopped': False,
+              'alert_stopped': alert_hub is None}
     receipts = ReceiptCoalescer()
 
     def receipt(force=False):
@@ -946,6 +1039,8 @@ def main(argv=None):
         service.start()
         _private_file(args.ready_file, json.dumps({'host': '127.0.0.1', 'port': service.port,
                                                 'lan_port': service.lan.port if service.lan else None,
+                                                'alert_port': service.progress()['alert_port'],
+                                                'alert_viewer_alive': service.progress()['alert_viewer_alive'],
                                                 'pid': os.getpid(), 'ready': True,
                                                 'identity': process_identity(os.getpid()),
                                                 'session': args.resident_session,

@@ -46,12 +46,13 @@ class ControlledPipeline:
                 'frame_id': self.frame_id, 'fps': {'detected': 11.0},
                 'alarm_state': 'unknown' if not self.valid else 'active'}
 
-    def emit(self, age=0, epoch=0, frame_id=1):
+    def emit(self, age=0, epoch=0, frame_id=1, detections=None):
         self.state, self.valid, self.frame_id = 'healthy', True, frame_id
         captured = time.monotonic() - age
         packet = SimpleNamespace(frame_id=frame_id, captured_at=captured,
                                  original_bgr=np.zeros((24, 32, 3), np.uint8),
                                  annotated_bgr=np.full((24, 32, 3), 70, np.uint8),
+                                 detections=list(detections or []),
                                  metadata={'valid': True, 'source_epoch': epoch,
                                            'expires_at': captured + self.args.result_ttl})
         self.output_callback(packet)
@@ -83,6 +84,53 @@ class ControlledWifi:
                 'password': password, 'nested': {'psk': password}}
 
 
+class ControlledAlertHub:
+    def __init__(self, fail_start=False, fail_close=False):
+        self.fail_start = fail_start
+        self.fail_close = fail_close
+        self.started = 0
+        self.resets = []
+        self.observations = []
+        self.close_calls = []
+        self.closed = False
+        self.status_providers = []
+        self.status_refresh_flags = []
+
+    def start(self):
+        self.started += 1
+        if self.fail_start:
+            raise OSError('public alert port unavailable')
+
+    def reset(self, generation):
+        self.resets.append(generation)
+
+    def observe(self, packet, jpeg, generation):
+        self.observations.append((packet, jpeg, generation))
+        return True
+
+    def bind_status_provider(self, provider):
+        self.status_providers.append(provider)
+
+    def status(self, refresh_public_ip=True):
+        self.status_refresh_flags.append(refresh_public_ip)
+        return {
+            'started': bool(self.started),
+            'closed': self.closed,
+            'events_created': len(self.observations),
+            'last_error': None,
+            'store': {'records': 0},
+            'mail': {'configured': False, 'state': 'not_configured',
+                     'worker_alive': False},
+            'viewer': {'alive': bool(self.started) and not self.closed,
+                       'port': 8092},
+        }
+
+    def close(self, timeout=3.0):
+        self.close_calls.append(timeout)
+        self.closed = True
+        return not self.fail_close
+
+
 class AppServiceTests(unittest.TestCase):
     def module(self):
         try:
@@ -112,14 +160,17 @@ class AppServiceTests(unittest.TestCase):
             controller.close(timeout=1)
         self.temp.cleanup()
 
-    def controller(self):
-        controller = self.module().DetectionController(self.root, pipeline_factory=ControlledPipeline)
+    def controller(self, alert_hub=None):
+        controller = self.module().DetectionController(
+            self.root, pipeline_factory=ControlledPipeline, alert_hub=alert_hub)
         self.controllers.append(controller)
         return controller
 
-    def server(self):
-        controller = self.controller()
-        self.service = self.module().LocalService(controller, self.wifi, token='test-secret', port=0)
+    def server(self, alert_hub=None):
+        controller = self.controller(alert_hub=alert_hub)
+        self.service = self.module().LocalService(
+            controller, self.wifi, token='test-secret', port=0,
+            alert_hub=alert_hub)
         self.service.start()
         return controller
 
@@ -624,6 +675,82 @@ class AppServiceTests(unittest.TestCase):
         with patch.object(self.module().cv2, 'imencode', side_effect=interrupted):
             controller.pipeline.emit()
         self.assertIsNone(controller.preview())
+
+    def test_fresh_encoded_packet_is_forwarded_to_alert_hub_once(self):
+        hub = ControlledAlertHub()
+        controller = self.controller(alert_hub=hub)
+        controller.start('helmet_416x416.rknn', 'demo.jpg', 'replay')
+        detection = ([10, 10, 30, 28], False, .9)
+        controller.pipeline.emit(frame_id=7, detections=[detection])
+        self.assertEqual(len(hub.observations), 1)
+        packet, jpeg, generation = hub.observations[0]
+        self.assertEqual(packet.frame_id, 7)
+        self.assertEqual(packet.detections, [detection])
+        self.assertEqual(jpeg[:2], b'\xff\xd8')
+        self.assertEqual(generation, controller.run_uuid)
+        self.assertEqual(hub.resets, [controller.run_uuid])
+
+    def test_expired_stale_stopping_and_failed_jpeg_packets_never_reach_alert_hub(self):
+        hub = ControlledAlertHub()
+        controller = self.controller(alert_hub=hub)
+        controller.start('helmet_416x416.rknn', 'demo.jpg', 'replay')
+        controller.pipeline.emit(age=1.5)
+        controller.pipeline.emit(epoch=1)
+        with controller.lock:
+            controller.stopping = True
+        controller.pipeline.emit()
+        with controller.lock:
+            controller.stopping = False
+        with patch.object(self.module().cv2, 'imencode', return_value=(False, None)):
+            with self.assertRaises(RuntimeError):
+                controller.pipeline.emit()
+        self.assertEqual(hub.observations, [])
+
+    def test_local_service_starts_and_stops_alert_hub_with_real_progress(self):
+        hub = ControlledAlertHub()
+        controller = self.controller(alert_hub=hub)
+        self.service = self.module().LocalService(
+            controller, self.wifi, token='test-secret', port=0,
+            alert_hub=hub)
+        self.service.start()
+        self.assertEqual(hub.started, 1)
+        self.assertEqual(len(hub.status_providers), 1)
+        self.assertIn('running',
+                      hub.status_providers[0]())
+        progress = self.service.progress()
+        self.assertIn(False, hub.status_refresh_flags)
+        self.assertTrue(progress['alert_viewer_alive'])
+        self.assertEqual(progress['alert_port'], 8092)
+        self.assertFalse(progress['mail']['configured'])
+        result = self.service.close(timeout=1)
+        self.assertTrue(result['alert_stopped'])
+        self.assertEqual(len(hub.close_calls), 1)
+        terminal = self.service.progress()
+        self.assertFalse(terminal['alert_viewer_alive'])
+        self.assertTrue(terminal['cleanup_completed'])
+
+    def test_alert_start_failure_prevents_service_from_claiming_readiness(self):
+        hub = ControlledAlertHub(fail_start=True)
+        controller = self.controller(alert_hub=hub)
+        self.service = self.module().LocalService(
+            controller, self.wifi, token='test-secret', port=0,
+            alert_hub=hub)
+        with self.assertRaises(OSError):
+            self.service.start()
+        self.assertIsNone(controller.pipeline)
+        self.assertIsNone(self.service.thread)
+        self.assertFalse(self.service.progress()['http_alive'])
+
+    def test_alert_close_failure_is_not_reported_as_completed(self):
+        hub = ControlledAlertHub(fail_close=True)
+        controller = self.controller(alert_hub=hub)
+        self.service = self.module().LocalService(
+            controller, self.wifi, token='test-secret', port=0,
+            alert_hub=hub)
+        self.service.start()
+        result = self.service.close(timeout=1)
+        self.assertFalse(result['alert_stopped'])
+        self.assertFalse(self.service.progress()['cleanup_completed'])
 
     def test_real_pipeline_outputs_and_stops_with_device_boundary_cleanup(self):
         from helmet.pipeline_runtime import Pipeline

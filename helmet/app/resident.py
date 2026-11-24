@@ -65,6 +65,31 @@ def require_linux():
         raise RuntimeError('resident ownership requires Linux flock, proc and Unix peer credentials')
 
 
+def service_arguments(app, root, workspace, lease_fd, *, alert_port=8092,
+                      lan_port=None, resident_session=None):
+    if type(alert_port) is not int or not 0 <= alert_port <= 65535:
+        raise ValueError('alert port is invalid')
+    if lan_port is not None and (type(lan_port) is not int or not 0 <= lan_port <= 65535):
+        raise ValueError('LAN port is invalid')
+    workspace = Path(workspace)
+    arguments = [
+        sys.executable, str(Path(app) / 'service.py'),
+        '--root', str(root), '--port', '0', '--alert-port', str(alert_port),
+        '--token-file', str(workspace / 'token'),
+        '--ready-file', str(workspace / 'ready.json'),
+        '--lifecycle-file', str(workspace / 'service-state.json'),
+        '--lease-fd', str(lease_fd), '--lease-dir', str(COORDINATOR_ROOT),
+    ]
+    if lan_port is not None:
+        arguments.extend(('--lan-port', str(lan_port)))
+    if resident_session is not None:
+        if not SESSION_ID.fullmatch(resident_session):
+            raise ValueError('resident session is invalid')
+        arguments.extend(('--resident-session', resident_session,
+                          '--resident-dir', str(COORDINATOR_ROOT)))
+    return arguments
+
+
 def _integer(value, low=0, high=2147483647):
     return type(value) is int and low <= value <= high
 
@@ -787,7 +812,7 @@ def write_qml_wrapper(workspace, name, app, properties):
     return workspace.directory / name
 
 
-def service_ready(workspace, service, session=None):
+def service_ready(workspace, service, session=None, expected_alert_port=None):
     value = workspace.read_json('ready.json', MAX_REPLY_BYTES)
     if value is None:
         return None
@@ -796,6 +821,19 @@ def service_ready(workspace, service, session=None):
             or (session is not None and value.get('session') != session)
             or value.get('identity') != process_identity(service.pid)):
         raise ValueError('service readiness does not match the actual owner')
+    if expected_alert_port is not None:
+        if type(expected_alert_port) is not int or not 0 <= expected_alert_port <= 65535:
+            raise ValueError('expected alert port is invalid')
+        alert_port = value.get('alert_port')
+        alert_alive = value.get('alert_viewer_alive')
+        valid = ((expected_alert_port > 0
+                  and alert_port == expected_alert_port
+                  and alert_alive is True)
+                 or (expected_alert_port == 0
+                     and alert_port in (None, 0)
+                     and alert_alive is False))
+        if not valid:
+            raise ValueError('service alert readiness does not match configuration')
     return value
 
 
@@ -906,14 +944,11 @@ class ResidentManager:
 
     def _start_service(self):
         self.service_log = os.fdopen(self.workspace.open_file('service.log', os.O_WRONLY, exclusive=True), 'wb')
-        self.service = subprocess.Popen([
-            sys.executable, str(self.app / 'service.py'), '--root', str(self.root), '--port', '0',
-            '--token-file', str(self.workspace.directory / 'token'),
-            '--ready-file', str(self.workspace.directory / 'ready.json'),
-            '--lifecycle-file', str(self.workspace.directory / 'service-state.json'),
-            '--lease-fd', str(self.resource_lease.fileno()), '--lease-dir', str(COORDINATOR_ROOT),
-            '--resident-session', self.session, '--resident-dir', str(COORDINATOR_ROOT),
-        ], pass_fds=(self.resource_lease.fileno(),), stdin=subprocess.DEVNULL,
+        self.service = subprocess.Popen(service_arguments(
+            self.app, self.root, self.workspace.directory,
+            self.resource_lease.fileno(), alert_port=8092,
+            resident_session=self.session,
+        ), pass_fds=(self.resource_lease.fileno(),), stdin=subprocess.DEVNULL,
             stdout=self.service_log, stderr=subprocess.STDOUT)
         self.service_identity = process_identity(self.service.pid)
         if self.service_identity is None:
@@ -924,7 +959,9 @@ class ResidentManager:
         while time.monotonic() < deadline:
             if self.service.poll() is not None or self.stop_requested:
                 raise RuntimeError('service failed to become ready')
-            ready = service_ready(self.workspace, self.service, self.session)
+            ready = service_ready(
+                self.workspace, self.service, self.session,
+                expected_alert_port=8092)
             if ready is not None:
                 self.port, self.token = ready['port'], service_token(self.workspace)
                 self.application.mark_running()
@@ -969,8 +1006,10 @@ class ResidentManager:
     def _progress(self):
         value = self.workspace.read_json('service-state.json', MAX_REPLY_BYTES)
         if value is not None and value.get('session') == self.session:
-            fields = ('detection_stopped', 'wifi_stopped', 'http_alive', 'cleanup_completed',
-                      'detection_alive', 'wifi_alive', 'state', 'received_at', 'lan_alive', 'lan_port')
+            fields = ('detection_stopped', 'wifi_stopped', 'alert_stopped',
+                      'alert_viewer_alive', 'alert_port', 'mail', 'http_alive',
+                      'cleanup_completed', 'detection_alive', 'wifi_alive',
+                      'state', 'received_at', 'lan_alive', 'lan_port')
             with self.application.lock:
                 self.application.progress = {key: value.get(key) for key in fields}
             if value.get('state') == 'failed' and self.application.phase not in ('stopping', 'failed'):

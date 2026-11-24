@@ -79,13 +79,24 @@ docs/experiments/**/*.bmp
 !docs/experiments/2026-11-15/native-app-usability-v4-phase2-1/formal-1/post-migration-link-retry-screen.png
 !docs/experiments/2026-11-15/app-lan-autostart/host/offline-mobile-3.png
 
-# Release artifacts: retain the current v6-r2, the superseded v6-r1 and its
-# rejected wrapper candidate, and the archived accepted v5-r3/v4-r2.
+# Release artifacts: retain the current v7-r1 candidate, the accepted v6-r2,
+# the superseded v6-r1 and its rejected wrapper candidate, and the archived
+# accepted v5-r3/v4-r2. Pre-review candidates remain local evidence.
 dist/*
+!dist/helmet-native-app-20261124-v7-r1.zip
+!dist/helmet-native-app-20261124-v7-r1.zip.sha256
 !dist/helmet-native-app-20261117-v6-r2.zip
 !dist/helmet-native-app-20261117-v6-r2-rejected-zip-mode.zip
 !dist/helmet-native-app-20261117-v6-r1.zip
 !dist/helmet-native-app-20261117-v6-r1-rejected-wrapper.zip
 !dist/helmet-native-app-20261115-v4-r2.zip
 !dist/helmet-native-app-20261115-v5-r3.zip
-!dist/*.sha256
+!dist/helmet-native-app-20261124-v7-r1.zip.sha256
+!dist/helmet-native-app-20261117-v6-r2.zip.sha256
+!dist/helmet-native-app-20261117-v6-r2-rejected-zip-mode.zip.sha256
+!dist/helmet-native-app-20261117-v6-r1.zip.sha256
+!dist/helmet-native-app-20261117-v6-r1-rejected-wrapper.zip.sha256
+!dist/helmet-native-app-20261115-v5-r3.zip.sha256
+!dist/helmet-offline-20261114-final.zip.sha256
+!dist/helmet-offline-20261114-v2.zip.sha256
+!dist/helmet-offline-20261114.zip.sha256

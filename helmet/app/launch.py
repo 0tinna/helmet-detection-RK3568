@@ -44,6 +44,7 @@ def parse_arguments(argv=None):
     if args.verify_resident_ui and args.control not in (None, 'show'):
         parser.error('native resident capture is enabled only when opening the application')
     args.mode = 'one-shot' if args.smoke_seconds else 'resident'
+    args.alert_port = 0 if args.mode == 'one-shot' else 8092
     args.control = args.control or 'show'
     return args
 
@@ -97,14 +98,10 @@ def one_shot(args):
             coordinator.write_record(record())
         service_log = os.fdopen(workspace.open_file('service.log', os.O_WRONLY, exclusive=True), 'wb')
         ui_log = os.fdopen(workspace.open_file('ui.log', os.O_WRONLY, exclusive=True), 'wb')
-        service = subprocess.Popen([
-            sys.executable, str(app / 'service.py'), '--root', str(root), '--port', '0',
-            '--lan-port', '0',
-            '--token-file', str(workspace.directory / 'token'),
-            '--ready-file', str(workspace.directory / 'ready.json'),
-            '--lifecycle-file', str(workspace.directory / 'service-state.json'),
-            '--lease-fd', str(resource_lease.fileno()), '--lease-dir', str(resident.COORDINATOR_ROOT),
-        ], pass_fds=(resource_lease.fileno(),), stdin=subprocess.DEVNULL,
+        service = subprocess.Popen(resident.service_arguments(
+            app, root, workspace.directory, resource_lease.fileno(),
+            alert_port=args.alert_port, lan_port=0,
+        ), pass_fds=(resource_lease.fileno(),), stdin=subprocess.DEVNULL,
             stdout=service_log, stderr=subprocess.STDOUT)
         service_id = resident.process_identity(service.pid)
         coordinator.write_record(record())
@@ -112,7 +109,8 @@ def one_shot(args):
         while time.monotonic() < deadline:
             if service.poll() is not None or stopped:
                 raise RuntimeError('local service failed to become ready')
-            ready = resident.service_ready(workspace, service)
+            ready = resident.service_ready(
+                workspace, service, expected_alert_port=args.alert_port)
             if ready is not None:
                 port, token = ready['port'], resident.service_token(workspace)
                 break

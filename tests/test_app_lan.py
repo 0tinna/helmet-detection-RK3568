@@ -12,7 +12,10 @@ import unittest
 import cv2
 import numpy as np
 
-from test_app_service import ControlledPipeline, ControlledWifi
+try:
+    from .test_app_service import ControlledPipeline, ControlledWifi
+except ImportError:
+    from test_app_service import ControlledPipeline, ControlledWifi
 
 
 class AppLanTests(unittest.TestCase):

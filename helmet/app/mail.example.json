@@ -1,0 +1,12 @@
+{
+  "enabled": true,
+  "smtp_host": "smtp.example.edu.cn",
+  "smtp_port": 465,
+  "security": "ssl",
+  "username": "sender@example.edu.cn",
+  "password": "REPLACE_WITH_SMTP_AUTH_CODE",
+  "sender": "sender@example.edu.cn",
+  "recipient": "230010044@mail.szpu.edu.cn",
+  "timeout_seconds": 8,
+  "batch_seconds": 5
+}

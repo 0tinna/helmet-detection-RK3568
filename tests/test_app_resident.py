@@ -233,11 +233,13 @@ class LaunchArgumentsTests(unittest.TestCase):
         self.assertEqual(args.mode, 'resident')
         self.assertEqual(args.control, 'show')
         self.assertEqual(args.tab, 'wifi')
+        self.assertEqual(args.alert_port, 8092)
 
     def test_verification_flags_require_bounded_distinct_one_shot_dispatch(self):
         launcher = self.launcher()
         args = launcher.parse_arguments(['--smoke-seconds', '10', '--auto-demo', '--verify-keyboard'])
         self.assertEqual(args.mode, 'one-shot')
+        self.assertEqual(args.alert_port, 0)
         for argv in (['--auto-demo'], ['--verify-scan'], ['--smoke-seconds', '-1'],
                      ['--smoke-seconds', '3601'], ['--smoke-seconds', '10', '--control', 'quit'],
                      ['--smoke-seconds', '10', '--verify-resident-ui']):
@@ -250,6 +252,77 @@ class LaunchArgumentsTests(unittest.TestCase):
         self.assertEqual(args.mode, 'resident')
         self.assertFalse(args.auto_demo)
         self.assertFalse(args.verify_scan)
+        self.assertEqual(args.alert_port, 8092)
+
+    def test_service_arguments_atomically_enable_or_disable_alert_feature(self):
+        resident = module(self)
+        one_shot = resident.service_arguments(
+            APP_DIR, '/userdata/helmet-validation/v7',
+            '/userdata/helmet-validation/v7/app-state/session-' + 'a' * 32,
+            9, alert_port=0, lan_port=0)
+        self.assertEqual(one_shot[one_shot.index('--alert-port') + 1], '0')
+        self.assertEqual(one_shot[one_shot.index('--lan-port') + 1], '0')
+
+        resident_command = resident.service_arguments(
+            APP_DIR, '/userdata/helmet-validation/v7',
+            '/userdata/helmet-validation/v7/app-state/session-' + 'a' * 32,
+            9, alert_port=8092, resident_session='a' * 32)
+        self.assertEqual(
+            resident_command[resident_command.index('--alert-port') + 1], '8092')
+        self.assertEqual(
+            resident_command[resident_command.index('--resident-session') + 1],
+            'a' * 32)
+        self.assertEqual(
+            resident_command[resident_command.index('--resident-dir') + 1],
+            str(resident.COORDINATOR_ROOT))
+
+    def test_service_readiness_binds_the_declared_alert_listener_state(self):
+        resident = module(self)
+        process = SimpleNamespace(pid=73)
+        base = {
+            'ready': True, 'host': '127.0.0.1', 'port': 4567, 'pid': 73,
+            'identity': {'pid': 73, 'starttime': 1, 'uid': 0},
+            'alert_port': 8092, 'alert_viewer_alive': True,
+        }
+        workspace = SimpleNamespace(read_json=lambda *args: dict(base))
+        with patch.object(resident, 'process_identity', return_value=base['identity']):
+            self.assertIsNotNone(resident.service_ready(
+                workspace, process, expected_alert_port=8092))
+            base['alert_port'] = 0
+            base['alert_viewer_alive'] = False
+            self.assertIsNotNone(resident.service_ready(
+                workspace, process, expected_alert_port=0))
+            with self.assertRaises(ValueError):
+                resident.service_ready(
+                    workspace, process, expected_alert_port=8092)
+
+    def test_resident_progress_retains_alert_cleanup_evidence(self):
+        resident = module(self)
+        manager = object.__new__(resident.ResidentManager)
+        manager.session = 'a' * 32
+        manager.workspace = SimpleNamespace(read_json=lambda *args: {
+            'session': manager.session,
+            'detection_stopped': True,
+            'wifi_stopped': True,
+            'alert_stopped': True,
+            'alert_viewer_alive': False,
+            'alert_port': None,
+            'mail': {'configured': False, 'state': 'stopped',
+                     'worker_alive': False},
+            'http_alive': True,
+            'cleanup_completed': False,
+            'detection_alive': False,
+            'wifi_alive': False,
+            'state': 'stopping',
+            'received_at': 10.0,
+            'lan_alive': False,
+            'lan_port': None,
+        })
+        manager.application = SimpleNamespace(
+            lock=threading.RLock(), progress={}, phase='stopping')
+        manager._progress()
+        for name in ('alert_stopped', 'alert_viewer_alive', 'alert_port', 'mail'):
+            self.assertIn(name, manager.application.progress)
 
 
 class OneShotJournalFailureTests(unittest.TestCase):

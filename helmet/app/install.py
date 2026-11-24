@@ -62,7 +62,21 @@ def install(argv=None):
     if not str(root).startswith('/userdata/') or any(c in str(root) for c in '\n\r"\\'):
         parser.error('installation must be in a clean /userdata path')
     app = root / 'src' / 'app'
-    for required in ('launch.py', 'resident.py', 'service.py', 'wifi.py', 'qml/Main.qml', 'icons/helmet.svg', 'icons/wifi.svg'):
+    required_files = (
+        'alert_events.py',
+        'alert_hub.py',
+        'alert_mail.py',
+        'alert_viewer.py',
+        'launch.py',
+        'mail.example.json',
+        'resident.py',
+        'service.py',
+        'wifi.py',
+        'qml/Main.qml',
+        'icons/helmet.svg',
+        'icons/wifi.svg',
+    )
+    for required in required_files:
         if not (app / required).is_file():
             parser.error('missing deployed application file: ' + required)
     desktop = Path.home() / '.local' / 'share' / 'applications'
